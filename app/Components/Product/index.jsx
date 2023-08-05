@@ -4,14 +4,25 @@ import Footer from '../Footer';
 import {MediaFile, Money, ShopPayButton} from '@shopify/hydrogen-react';
 import ProductCarousal from './ProductCarousal';
 import {BuyNowButton} from '@shopify/hydrogen-react';
+import {CartForm} from '@shopify/hydrogen';
 
 import ProductOptions from './ProductOptions';
+
+function ProductForm({variantId}) {
+  const lines = [{merchandiseId: variantId, quantity: 1}];
+
+  return (
+    <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>
+      <button className="btn">Add to Cart</button>
+    </CartForm>
+  );
+}
 
 const Product = ({data}) => {
   const {product, selectedVariant, storeDomain, orderable} = data;
 
   useEffect(() => {
-    console.log(product.options);
+    console.log(product.media);
   }, []);
 
   return (
@@ -23,7 +34,7 @@ const Product = ({data}) => {
             <div className="row">
               {/* image column  */}
               <div className="col-sm-4 mx-4">
-                <ProductCarousal />
+                <ProductCarousal media={product.media.nodes} />
               </div>
               {/* middle column  */}
               <div className="col-sm-4">
@@ -77,7 +88,7 @@ const Product = ({data}) => {
                     </p>
                     {/* show now btn  */}
                     <div className="shopbtn mt-4">
-                      <button className="btn">Add to Cart</button>
+                      <ProductForm variantId={selectedVariant?.id} />
                       {orderable && (
                         <ShopPayButton
                           storeDomain={storeDomain}
@@ -85,7 +96,7 @@ const Product = ({data}) => {
                           className="btn mx-3"
                         />
                       )}
-                      <BuyNowButton variantId={[selectedVariant?.id]} />
+                      {/* <BuyNowButton variantId={[selectedVariant?.id]} /> */}
                     </div>
                   </div>
                 </div>

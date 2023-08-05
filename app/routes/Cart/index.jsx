@@ -1,10 +1,46 @@
-import React from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
-
+import {Link, useLoaderData} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+import {CartForm} from '@shopify/hydrogen';
+import {CartLineItems, CartSummary} from '~/Components/Cart';
 import {useState} from 'react';
 
+export async function action({request, context}) {
+  const {cart} = context;
+
+  const formData = await request.formData();
+  const {action, inputs} = CartForm.getFormInput(formData);
+
+  let result;
+
+  switch (action) {
+    case CartForm.ACTIONS.LinesAdd:
+      result = await cart.addLines(inputs.lines);
+      break;
+    case CartForm.ACTIONS.LinesUpdate:
+      result = await cart.updateLines(inputs.lines);
+      break;
+    case CartForm.ACTIONS.LinesRemove:
+      result = await cart.removeLines(inputs.lineIds);
+      break;
+    default:
+      invariant(false, `${action} cart action is not defined`);
+  }
+
+  // The Cart ID might change after each mutation, so update it each time.
+  const headers = cart.setCartId(result.cart.id);
+
+  return json(result, {status: 200, headers});
+}
+export async function loader({context}) {
+  const {cart} = context;
+  return json({cart: await cart.get()});
+}
+
 const Cart = () => {
+  const {cart} = useLoaderData();
+
   const [btnClass, setBtnClass] = useState('transparent');
   function toggleColor() {
     // const [btnClass, setBtnClass] = useState('blue-color');
@@ -50,91 +86,11 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              <div className="all-info d-flex mt-5">
-                <img
-                  src="/img/protien.png"
-                  alt=""
-                  className="w-25 protien-image"
-                />
-                {/* PROTIEN INFO */}
-                <div className="protien-info">
-                  <p className="text-start " id="protien-name">
-                    MB Fuel One Whey Protein 4.4 lb Chocolate
-                  </p>
-                  <p className="text-start mt-1">
-                    {' '}
-                    £5,099{' '}
-                    <span className="ml-2" id="fixed-price">
-                      {' '}
-                      3,500{' '}
-                    </span>{' '}
-                    <sup id="savings">[Saved 21,5991]</sup>{' '}
-                  </p>
-                  <p className="text-startr text-success mt-1">
-                    Delivery by June 26th
-                  </p>
-                  <p
-                    className="text-start mt-1 d-flex justify-content-between"
-                    id="cashback"
-                  >
-                    Get Rs 70 © MB Cash{' '}
-                    <i
-                      className="fa-solid fa-trash "
-                      onClick={() => removeItem()}
-                    ></i>
-                  </p>
-                  <p className="text-start mt-3">
-                    {' '}
-                    <i
-                      className={`${btnClass} fa-regular fa-heart `}
-                      onClick={toggleColor}
-                    ></i>
-                    Add to Wishlist{' '}
-                  </p>
-                </div>
-                <div className="add-to-cart  ml-lg-2 ml-md-2">
-                  <span className="minus" onClick={decNum}>
-                    -
-                  </span>
-                  <span className="num">{num}</span>
-                  <span className="plus" onClick={incNum}>
-                    +
-                  </span>
-                </div>
-              </div>
-              {/* END OF PROTIEN INFO */}
+              <CartLineItems linesObj={cart.lines} />
             </div>
 
             <div className="col  h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 px-5">
-              <div className="card-1 px-4 py-2">
-                <p className="text-start mt-2" id="order">
-                  My Order Summary
-                </p>
-                <p
-                  className="text-start d-flex justify-content-between mt-4"
-                  id="mrp"
-                >
-                  Total Mrp <span>Rs 16,097</span>
-                </p>
-                <p className="text-start d-flex justify-content-between text-secondary mt-2">
-                  Total Discount{' '}
-                  <span className="text-success">-Rs 16,097</span>{' '}
-                </p>
-                <hr className="bg-light mt-3 " />
-                <p className="text-start d-flex justify-content-between  text-secondary ">
-                  Total <span>Rs 11,698</span>{' '}
-                </p>
-                <hr className="bg-light mt-3 " />
-                <a
-                  href="/address"
-                  className="btn btn-warning w-100 text-dark font-weight-bold"
-                >
-                  Checkout
-                </a>
-                <p className="text-center mt-3 py-1 " id="savings-2">
-                  You will save 4,399 & earn 2234 MB Cash * on this order
-                </p>
-              </div>
+              <CartSummary cost={cart.cost} checkoutUrl={cart.checkoutUrl} />
 
               <div className="card-1 p-1 mt-3 px-2 font-weight-bold">
                 <div className="col h-100 mt-2">
@@ -261,3 +217,32 @@ const Cart = () => {
 };
 
 export default Cart;
+
+// export default function Cart() {
+
+//   if (cart?.totalQuantity > 0)
+//     return (
+//       <div className="w-full max-w-6xl mx-auto pb-12 grid md:grid-cols-2 md:items-start gap-8 md:gap-8 lg:gap-12">
+//         <div className="flex-grow md:translate-y-4">
+//           <CartLineItems linesObj={cart.lines} />
+//         </div>
+//         <div className="fixed left-0 right-0 bottom-0 md:sticky md:top-[65px] grid gap-6 p-4 md:px-6 md:translate-y-4 bg-gray-100 rounded-md w-full">
+//           <CartSummary cost={cart.cost} />
+//           <CartActions checkoutUrl={cart.checkoutUrl} />
+//         </div>
+//       </div>
+//     );
+//   return (
+//     <div className="flex flex-col space-y-7 justify-center items-center md:py-8 md:px-12 px-4 py-6 h-screen">
+//       <h2 className="whitespace-pre-wrap max-w-prose font-bold text-4xl">
+//         Your cart is empty
+//       </h2>
+//       <Link
+//         to="/"
+//         className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full"
+//       >
+//         Continue shopping
+//       </Link>
+//     </div>
+//   );
+// }
