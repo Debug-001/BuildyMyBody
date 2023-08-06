@@ -1242,3 +1242,174 @@ hr {
   width: 20%;
   border: 2px solid #2caae2;
 }
+// ALL PRODUCTS PAGE
+
+.card-img-all {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #6c6c6c;
+  border-radius: 6px;
+}
+
+.card-img-all img {
+  width: 100%;
+}
+
+#all-products h1 {
+  font-weight: 900 !important;
+  color: #ff2828;
+}
+
+.all-btn a {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 10px 10px 10px;
+  border-radius: 4px;
+}
+
+.all-btn a:hover {
+  // filter: invert(100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.buy-button {
+  margin-left: 1rem;
+  background-color: #ff2828 !important;
+  color: white !important;
+}
+
+.card-filter {
+  padding-top: 1rem;
+  background-color: #e2e2e2;
+  border-radius: 6px;
+}
+
+.card-filter h3 {
+  padding-left: 10px;
+}
+// bmi
+#bmi {
+  background-color: #171717;
+}
+
+#bmi h1 {
+  display: none;
+  color: #ff2828;
+  font-weight: 900;
+}
+
+.calc label {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.analysis {
+  display: flex !important;
+}
+
+.result {
+  margin-left: 2rem;
+  color: white;
+}
+
+.place-text input::placeholder {
+  color: rgb(255, 255, 255) !important;
+}
+
+.bmi-result {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 3px solid #ff2828;
+}
+
+.line-hr {
+  border: 2px solid #242424;
+}
+
+::placeholder {
+  text-align: start;
+}
+
+.calc input {
+  color: white !important;
+  width: 60%;
+  padding-left: 0;
+  padding-bottom: 10px;
+  background-color: #171717;
+  border: 2px solid #4d4d4d;
+  border-radius: 2px;
+}
+
+.btn-reset {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.4rem;
+  background-color: #ff2828;
+  border: 2px solid #ff2828;
+  color: white;
+  border-radius: 2px;
+  // margin-left: 1.5rem;
+}
+
+.underline {
+  text-decoration: underline 2px !important;
+  text-decoration-color: #ff2828 !important;
+}
+
+.btn-reset:hover {
+  background-color: #242424;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #fff;
+}
+
+.calc {
+  display: flex;
+  flex-direction: row !important;
+}
+
+#bmi-tabs {
+  background-color: #171717;
+}
+
+#bmi-tab {
+  border: 1px solid #ff2828 !important;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#recom-tab,
+#diet-tab,
+#work-tab {
+  color: #d4d4d4;
+}
+
+#recom-tab:hover,
+#diet-tab:hover,
+#work-tab:hover {
+  color: #ff2828;
+}
+
+#work,
+#diet,
+#recom {
+  color: white;
+}
+
+.blog-img p {
+  color: white;
+  margin-top: 1rem;
+}
+
+.blog-img p:hover {
+  color: #ff2828;
+}
+
+.blog-img img {
+  margin-top: 3rem;
+  width: 100%;
+}
