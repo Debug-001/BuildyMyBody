@@ -48,42 +48,7 @@ const ProductCarousal = ({media}) => {
             },
           };
           return (
-            <div className="">
-              <MediaFile
-                tabIndex="0"
-                data={data}
-                style={{
-                  margin: '0 auto',
-                  width: '100%',
-                }}
-                {...extraProps}
-              />
-            </div>
-          );
-        })}
-        {media.map((med, i) => {
-          let extraProps = {};
-
-          if (med.mediaContentType === 'MODEL_3D') {
-            extraProps = {
-              interactionPromptThreshold: '0',
-              ar: true,
-              loading: 'eager',
-              disableZoom: true,
-            };
-          }
-
-          const data = {
-            ...med,
-            __typename:
-              typeNameMap[med.mediaContentType] || typeNameMap['IMAGE'],
-            image: {
-              ...med.image,
-              altText: med.alt || 'Product image',
-            },
-          };
-          return (
-            <div className="">
+            <div className="" key={i}>
               <MediaFile
                 tabIndex="0"
                 data={data}

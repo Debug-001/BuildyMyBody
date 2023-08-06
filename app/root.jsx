@@ -8,6 +8,7 @@ import {
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
 import favicon from '../public/favicon.svg';
+import {Seo} from '@shopify/hydrogen';
 
 export const links = () => {
   return [
@@ -53,6 +54,7 @@ export default function App() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <Seo />
         <Meta />
         <Links />
       </head>

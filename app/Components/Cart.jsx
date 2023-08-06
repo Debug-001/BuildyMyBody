@@ -125,12 +125,12 @@ export function CartSummary({cost, checkoutUrl}) {
           </span>{' '}
         </p>
         <hr className="bg-light mt-3 " />
-        <a
-          href={checkoutUrl}
+        <Link
+          to={checkoutUrl}
           className="btn btn-warning w-100 text-dark font-weight-bold"
         >
           Checkout
-        </a>
+        </Link>
         <p className="text-center mt-3 py-1 " id="savings-2">
           You will save 4,399 & earn 2234 MB Cash * on this order
         </p>
