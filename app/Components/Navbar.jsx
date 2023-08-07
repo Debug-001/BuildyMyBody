@@ -53,7 +53,7 @@ export async function loader({request, context}) {
 }
 
 const Navbar = () => {
-  // const {user} = useLoaderData();
+  const {user} = useLoaderData();
 
   const [menuItems, setMenuItems] = useState([
     {
@@ -63,7 +63,7 @@ const Navbar = () => {
     },
     {
       text: 'Products',
-      link: '/product',
+      link: '/products/all',
       active: true,
     },
     {
@@ -163,7 +163,7 @@ const Navbar = () => {
               )}
             </li>
           </div>
-          {/* {user ? (
+          {user ? (
             <>
               <div>
                 <b>Welcome {user.personalAccount.email}</b>
@@ -176,7 +176,7 @@ const Navbar = () => {
                 Login Nigga
               </button>
             </Form>
-          ) : null} */}
+          ) : null}
 
           <div>
             <Form method="post" action="/logout">

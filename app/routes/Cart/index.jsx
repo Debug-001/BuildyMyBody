@@ -86,11 +86,16 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              <CartLineItems linesObj={cart.lines} />
+              {cart?.totalQuantity > 0 && (
+                <CartLineItems linesObj={cart.lines} />
+              )}
             </div>
 
             <div className="col  h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 px-5">
-              <CartSummary cost={cart.cost} checkoutUrl={cart.checkoutUrl} />
+              <CartSummary
+                cost={cart?.cost || 0}
+                checkoutUrl={cart?.checkoutUrl || ''}
+              />
 
               <div className="card-1 p-1 mt-3 px-2 font-weight-bold">
                 <div className="col h-100 mt-2">
