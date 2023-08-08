@@ -55,7 +55,6 @@ h5 {
 
 .featured-img {
   width: 300px;
-  margin-left: 19rem;
 }
 
 .carousel h1 {
@@ -75,10 +74,23 @@ h5 {
   margin-top: 3rem !important;
 }
 
+@media screen and (max-width: 768px) {
+  .featured-details {
+    text-align: center !important;
+  }
+}
 #featured-carousel {
   padding-bottom: 6rem !important;
 }
 
+@media screen and (max-width: 449px) {
+  .custom-heading {
+    font-size: 2rem;
+  }
+  .custom-heading2 {
+    font-size: 1.3rem;
+  }
+}
 .featured-details h2 {
   color: white;
   font-size: 2.5rem;
@@ -145,7 +157,7 @@ h5 {
 }
 
 .card-content p {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .btn-primary {
@@ -199,9 +211,7 @@ h5 {
 
 .card-img-trending {
   border-radius: 6px;
-  padding: 10px 10px 10px 10px;
   background-color: #6c6c6c;
-  margin-left: 4.5rem;
 }
 
 .brands-slider {
@@ -209,7 +219,7 @@ h5 {
 }
 
 .card-img-brand {
-  margin-left: 6rem;
+  width: 50%;
 }
 
 #articles-card {
@@ -222,10 +232,31 @@ h5 {
   width: 350px;
 }
 
-.verify-vid {
-  margin-left: 5rem;
+@media screen and (max-width: 1199px) {
+  .card-img-articles {
+    width: 290px;
+  }
 }
-
+@media screen and (max-width: 984px) {
+  .card-img-articles {
+    width: 318px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-img-articles {
+    width: 238px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .card-img-articles {
+    width: 215px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-img-articles {
+    width: 390px;
+  }
+}
 .fitness-slider {
   margin-top: 4.5rem;
 }
@@ -484,7 +515,7 @@ del {
 }
 
 #firstrow {
-  background-color: #eaeaea;
+  background-color: rgb(234, 234, 234);
   padding-left: 30px;
 }
 
@@ -511,14 +542,14 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center !important;
-  color: #919191;
+  color: rgb(145, 145, 145);
   padding-top: 1rem;
 }
 
 .total {
   display: flex;
   justify-content: flex-start;
-  color: #919191;
+  color: rgb(145, 145, 145);
 }
 
 .price {
@@ -540,15 +571,15 @@ p {
 
 .mrpprice {
   margin-left: 18rem;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 700 !important;
 }
 
 .card-body {
   display: flex;
   justify-content: flex-start;
-  background-color: #ffffe8;
-  border-color: #ffee00 !important;
+  background-color: rgb(255, 255, 232);
+  border-color: rgb(255, 238, 0) !important;
   border: solid 1.6px;
   margin-bottom: 2.5rem;
 }
@@ -557,7 +588,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #dffef4;
+  background-color: rgb(223, 254, 244);
   padding: 20px 25px 0;
   border: 2.4px solid #2fffc4;
   margin-bottom: 3.5rem;
@@ -604,7 +635,7 @@ p {
 
 .card3 {
   margin-top: 1rem;
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   border: 1px solid black !important;
   font-style: italic;
 }
@@ -890,7 +921,7 @@ textarea::placeholder {
 
 #savings {
   font-size: 0.8rem;
-  color: #39d1c6;
+  color: rgb(57, 209, 198);
 }
 
 #savings-2 {
@@ -950,8 +981,8 @@ hr {
 }
 
 .num {
-  border-left: 2px solid #777575;
-  border-right: 2px solid #777575;
+  border-left: 2px solid rgb(119, 117, 117);
+  border-right: 2px solid rgb(119, 117, 117);
 }
 
 #leftside {
@@ -964,7 +995,7 @@ hr {
 }
 
 .card-1 {
-  background: #f4f2f2;
+  background: rgb(244, 242, 242);
   border-radius: 10px;
 }
 
@@ -1054,7 +1085,7 @@ hr {
 }
 
 .address_subtitle_text {
-  color: #6e6e6e;
+  color: rgb(110, 110, 110);
   padding-right: 10rem;
 }
 
@@ -1072,7 +1103,7 @@ hr {
   /* margin-left: 3rem; */
   width: 100%;
   padding: 10px;
-  border: 1px dashed #9d9ecb;
+  border: 1px dashed rgb(157, 158, 203);
 }
 
 #delivery_btn {
@@ -1083,21 +1114,21 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 5px 10px 5px 10px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
 }
 
 .del_btn {
   background-color: white;
   color: black;
-  border: black;
+  border: rgb(0, 0, 0);
 }
 
 .payments_btn {
   padding: 9px;
   font-size: 13px;
   font-weight: bolder;
-  background-color: #ffe100;
+  background-color: rgb(255, 225, 0);
   width: 30%;
 }
 
@@ -1230,8 +1261,8 @@ hr {
 }
 
 .all-btn a {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px 10px 10px 10px;
   border-radius: 4px;
 }
@@ -1281,7 +1312,7 @@ hr {
 }
 
 .place-text input::placeholder {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .bmi-result {

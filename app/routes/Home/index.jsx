@@ -9,7 +9,7 @@ import BrandCaraousel from './BrandCaraousel';
 import TopSelling from './TopSelling';
 
 export function links() {
-  return [{rel: 'stylesheet', href: styles}];
+  return [{ rel: 'stylesheet', href: styles }];
 }
 
 const Home = () => {

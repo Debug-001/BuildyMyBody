@@ -18,9 +18,9 @@ const Carousel = () => {
 			active: false,
 		},
 	]);
-	
+
 	return (
-		<section>		
+		<section>
 			<div
 				id="carouselExampleControls"
 				className="carousel slide"
@@ -54,7 +54,7 @@ const Carousel = () => {
 					<span className="carousel-control-next-icon" aria-hidden="true" />
 					<span className="sr-only">Next</span>
 				</a>
-			{/* </div> */}
+				{/* </div> */}
 			</div>
 		</section>
 	);

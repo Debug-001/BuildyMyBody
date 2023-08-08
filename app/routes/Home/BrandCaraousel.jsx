@@ -26,6 +26,32 @@ const BrandCaraousel = () => {
 							slidesToShow={3}
 							swipeToSlide={true}
 							focusOnSelect={true}
+							responsive={[
+								{
+									breakpoint: 1024,
+									settings: {
+										slidesToShow: 3,
+										slidesToScroll: 3,
+										infinite: true,
+										dots: true
+									}
+								},
+								{
+									breakpoint: 992,
+									settings: {
+										slidesToShow: 2,
+										slidesToScroll: 2,
+										initialSlide: 2
+									}
+								},
+								{
+									breakpoint: 480,
+									settings: {
+										slidesToShow: 1,
+										slidesToScroll: 1
+									}
+								}
+							]}
 						>
 							<div className="card" id="articles-card">
 								<img className="card-img-articles" src="/img/article1.jpg" alt="Card image cap" />
@@ -34,17 +60,17 @@ const BrandCaraousel = () => {
 										10th June, 2019
 									</em>
 									</p>
-									<h2 className="font-weight-bold mt-2" style={{color:"black"}}>Fitness Hacks During Navratri</h2>
+									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
 								</a>
 							</div>
 							<div className="card" id="articles-card">
 								<img className="card-img-articles" src="/img/article2.jpg" alt="Card image cap" />
 								<a href="/blog" className="card-content2">
-									<p className="mt-3"> <em>
+									<p className="mt-3 "> <em>
 										10th June, 2019
 									</em>
 									</p>
-									<h2 className="font-weight-bold mt-2" style={{color:"black"}}>Fitness Hacks During Navratri</h2>
+									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
 								</a>
 							</div>
 							<div className="card" id="articles-card">
@@ -54,7 +80,7 @@ const BrandCaraousel = () => {
 										10th June, 2019
 									</em>
 									</p>
-									<h2 className="font-weight-bold mt-2" style={{color:"black"}}>Fitness Hacks During Navratri</h2>
+									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
 								</a>
 							</div>
 							<div className="card" id="articles-card">
@@ -64,14 +90,14 @@ const BrandCaraousel = () => {
 										10th June, 2019
 									</em>
 									</p>
-									<h2 className="font-weight-bold mt-2">Fitness Hacks During Navratri</h2>
+									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
 								</a>
 							</div>
 						</Slider>
 					</div>
 				</div>
 			</section>
-			
+
 			<section id="brand-car">
 				<div className="container mt-5">
 					<h1 className="d-flex font-weight-bold justify-content-center"><em>BRANDS</em></h1>
@@ -82,24 +108,50 @@ const BrandCaraousel = () => {
 							slidesToShow={3}
 							swipeToSlide={true}
 							focusOnSelect={true}
+							responsive={[
+								{
+									breakpoint: 1024,
+									settings: {
+										slidesToShow: 3,
+										slidesToScroll: 3,
+										infinite: true,
+										dots: true
+									}
+								},
+								{
+									breakpoint: 768,
+									settings: {
+										slidesToShow: 2,
+										slidesToScroll: 2,
+										initialSlide: 2
+									}
+								},
+								{
+									breakpoint: 480,
+									settings: {
+										slidesToShow: 1,
+										slidesToScroll: 1
+									}
+								}
+							]}
 						>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc1.jpg" alt="Card image cap" />
+							<div className="card ml-lg-5 ">
+								<img className="card-img-brand ml-5 " src="/img/bc1.jpg" alt="Card image cap" />
 							</div>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc2.jpg" alt="Card image cap" />
+							<div className="card  ml-lg-5 ">
+								<img className="card-img-brand ml-5 " src="/img/bc2.jpg" alt="Card image cap" />
 							</div>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc3.jpg" alt="Card image cap" />
+							<div className="card  ml-lg-5 ">
+								<img className="card-img-brand ml-5 " src="/img/bc3.jpg" alt="Card image cap" />
 							</div>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc4.jpg" alt="Card image cap" />
+							<div className="card  ml-lg-5 ">
+								<img className="card-img-brand ml-5 " src="/img/bc4.jpg" alt="Card image cap" />
 							</div>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc5.jpg" alt="Card image cap" />
+							<div className="card  ml-lg-5 ">
+								<img className="card-img-brand ml-5 " src="/img/bc5.jpg" alt="Card image cap" />
 							</div>
-							<div className="card">
-								<img className="card-img-brand" src="/img/bc6.jpg" alt="Card image cap" />
+							<div className="card  ml-lg-5">
+								<img className="card-img-brand ml-5 " src="/img/bc6.jpg" alt="Card image cap" />
 							</div>
 						</Slider>
 					</div>

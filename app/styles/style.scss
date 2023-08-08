@@ -50,6 +50,8 @@ h5 {
   color: black !important;
 }
 
+
+
 .discount-text {
   font-size: 20px;
   color: #ff2828;
@@ -57,7 +59,7 @@ h5 {
 
 .featured-img {
   width: 300px;
-  margin-left: 19rem;
+  // margin-left: 19rem;
 }
 
 .carousel h1 {
@@ -77,8 +79,24 @@ h5 {
   margin-top: 3rem !important;
 }
 
+@media screen and (max-width:768px) {
+  .featured-details {
+    text-align: center !important
+  }
+}
+
 #featured-carousel {
   padding-bottom: 6rem !important;
+}
+
+@media screen and (max-width:449px) {
+  .custom-heading {
+    font-size: 2rem;
+  }
+
+  .custom-heading2 {
+    font-size: 1.3rem;
+  }
 }
 
 .featured-details h2 {
@@ -199,11 +217,12 @@ h5 {
 #trend-card h5 p {
   color: white !important;
 }
+
 .card-img-trending {
   border-radius: 6px;
-  padding: 10px 10px 10px 10px;
+  // padding: 10px 10px 10px 10px;
   background-color: #6c6c6c;
-  margin-left: 4.5rem;
+  // margin-left: 4.5rem;
 }
 
 .brands-slider {
@@ -211,7 +230,8 @@ h5 {
 }
 
 .card-img-brand {
-  margin-left: 6rem;
+  // margin-left: 6rem;
+  width: 50%;
 }
 
 #articles-card {
@@ -224,9 +244,45 @@ h5 {
   width: 350px;
 }
 
-.verify-vid {
-  margin-left: 5rem;
+@media screen and (max-width:1199px) {
+  .card-img-articles {
+
+    width: 290px;
+  }
 }
+
+@media screen and (max-width:984px) {
+  .card-img-articles {
+
+    width: 318px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .card-img-articles {
+
+    width: 238px;
+  }
+}
+
+@media screen and (max-width:510px) {
+  .card-img-articles {
+
+    width: 215px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .card-img-articles {
+
+    width: 390px;
+  }
+}
+
+.verify-vid {
+  // margin-left: 5rem;
+}
+
 
 .fitness-slider {
   margin-top: 4.5rem;
@@ -245,6 +301,7 @@ h5 {
   color: #ff2828;
   padding-top: 5rem;
 }
+
 // ----------------------
 // Tracking
 // ----------------------
@@ -300,6 +357,7 @@ h5 {
 .track-2 {
   font-size: 1.1rem;
 }
+
 // ----------------------
 // Product
 // ----------------------
@@ -341,9 +399,11 @@ h5 {
 #howto-tab:hover {
   color: #ff2828;
 }
+
 #descr-tab:hover {
   color: #ff2828;
 }
+
 #reviews-tab:hover {
   color: #ff2828;
 }
@@ -405,6 +465,7 @@ hr {
       &:hover {
         cursor: pointer;
       }
+
       &.active img {
         opacity: 1;
       }
@@ -427,6 +488,7 @@ hr {
     color: blak !important;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M5.25%200l-4%204%204%204%201.5-1.5-2.5-2.5%202.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
   }
+
   .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M2.75%200l-1.5%201.5%202.5%202.5-2.5%202.5%201.5%201.5%204-4-4-4z'/%3E%3C/svg%3E");
   }
@@ -457,7 +519,7 @@ del {
 }
 
 #secondbtn {
-  margin-left: 8rem !important ;
+  margin-left: 8rem !important;
 }
 
 .card {
@@ -491,9 +553,11 @@ del {
 .sptxt p {
   margin-top: 1rem;
 }
+
 .slick-arrow::before {
   color: black;
 }
+
 // ----------------------
 // Payment
 // ----------------------
@@ -722,6 +786,7 @@ p {
 .collapseOne {
   background-color: white !important;
 }
+
 // ----------------------
 // Login
 // ----------------------
@@ -806,6 +871,7 @@ p {
 .sideline:after {
   margin: 0 0 0 20px;
 }
+
 // ----------------------
 // Contact
 // ----------------------
@@ -895,6 +961,7 @@ textarea::placeholder {
 .contact-button:hover {
   transform: scaleY(1.1);
 }
+
 // ----------------------
 // Cart
 // ----------------------
@@ -1001,15 +1068,17 @@ hr {
   width: 30px;
   margin-right: 25px;
 }
-.carousel-item > .col,
-.carousel-item > .col-sm,
-.carousel-item > .col-md {
+
+.carousel-item>.col,
+.carousel-item>.col-sm,
+.carousel-item>.col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
 }
+
 // ----------------------
 // Blog
 // ----------------------
@@ -1061,6 +1130,7 @@ hr {
 .blog-btn:hover {
   transform: scale(1.2);
 }
+
 // ----------------------
 // Address
 // ----------------------
@@ -1134,6 +1204,7 @@ hr {
     margin-left: 0;
   }
 }
+
 // about us
 .about-img {
   object-fit: cover;
@@ -1194,6 +1265,7 @@ hr {
 .aboutus-info {
   font-size: 1.3rem;
 }
+
 // Certificate Page
 .certificate-card {
   transition: all 200ms ease-in-out;
@@ -1242,6 +1314,7 @@ hr {
   width: 20%;
   border: 2px solid #2caae2;
 }
+
 // ALL PRODUCTS PAGE
 
 .card-img-all {
@@ -1287,6 +1360,7 @@ hr {
 .card-filter h3 {
   padding-left: 10px;
 }
+
 // bmi
 #bmi {
   background-color: #171717;

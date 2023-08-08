@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const TopSelling = () => {
   return (
@@ -8,13 +8,13 @@ const TopSelling = () => {
         className="carousel slide "
         data-ride="carousel"
       >
-        <h1 className="d-flex justify-content-center font-weight-bold">
+        <h1 className="d-flex justify-content-center font-weight-bold custom-heading">
           <em>FEATURED PRODUCTS</em>
         </h1>
         <div className="carousel-inner" id="featured-carousel">
           <div className="carousel-item active">
-            <div className="row">
-              <div className="col">
+            <div className="row ">
+              <div className="col-md-5 col-lg-6 d-flex justify-content-center">
                 <img className="featured-img" src="/img/tp1.jpg" alt="" />
               </div>
               <div className="col featured-details">
@@ -33,8 +33,8 @@ const TopSelling = () => {
             </div>
           </div>
           <div className="carousel-item ">
-            <div className="row">
-              <div className="col">
+            <div className="row ">
+              <div className="col-md-5 col-lg-6 d-flex justify-content-center">
                 <img className="featured-img" src="/img/tp2.jpg" alt="" />
               </div>
               <div className="col featured-details">
@@ -54,7 +54,7 @@ const TopSelling = () => {
           </div>
           <div className="carousel-item ">
             <div className="row">
-              <div className="col">
+              <div className="col-md-5 col-lg-6 d-flex justify-content-center">
                 <img className="featured-img" src="/img/tp3.jpg" alt="" />
               </div>
               <div className="col featured-details">
@@ -74,10 +74,11 @@ const TopSelling = () => {
           </div>
           <div className="carousel-item ">
             <div className="row">
-              <div className="col">
+              <div className="col-md-5 col-lg-6 d-flex justify-content-center">
                 <img className="featured-img" src="/img/tp4.jpg" alt="" />
               </div>
-              <div className="col featured-details">
+              <div className="col featured-details ">
+
                 <h2>100% Whey Protein</h2>
                 <h4>
                   {' '}
