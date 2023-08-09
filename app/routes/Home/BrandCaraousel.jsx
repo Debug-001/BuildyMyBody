@@ -18,7 +18,7 @@ const BrandCaraousel = () => {
 		<>
 			<section id="fitness-car">
 				<div className="container">
-					<h1 className="fitnessarticel d-flex justify-content-center font-weight-bold "><em>FITNESS ARTICLES</em></h1>
+					<h1 className="fitnessarticel d-flex justify-content-center font-weight-bold custom-heading"><em>FITNESS ARTICLES</em></h1>
 					<div className="fitness-slider">
 						<Slider
 							asNavFor={nav1}
@@ -45,6 +45,14 @@ const BrandCaraousel = () => {
 									}
 								},
 								{
+									breakpoint: 767,
+									settings: {
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										initialSlide: 1
+									}
+								},
+								{
 									breakpoint: 480,
 									settings: {
 										slidesToShow: 1,
@@ -61,6 +69,9 @@ const BrandCaraousel = () => {
 									</em>
 									</p>
 									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
+
+									<a href="#" class=" btn category-btn  d-flex justify-content-center mt-4">Read More</a>
+
 								</a>
 							</div>
 							<div className="card" id="articles-card">
@@ -71,6 +82,8 @@ const BrandCaraousel = () => {
 									</em>
 									</p>
 									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
+									<a href="#" class=" btn category-btn  d-flex justify-content-center mt-4">Read More</a>
+
 								</a>
 							</div>
 							<div className="card" id="articles-card">
@@ -81,6 +94,8 @@ const BrandCaraousel = () => {
 									</em>
 									</p>
 									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
+									<a href="#" class=" btn category-btn  d-flex justify-content-center mt-4">Read More</a>
+
 								</a>
 							</div>
 							<div className="card" id="articles-card">
@@ -91,6 +106,8 @@ const BrandCaraousel = () => {
 									</em>
 									</p>
 									<h2 className="font-weight-bold mt-2" style={{ color: "black" }}>Fitness Hacks During Navratri</h2>
+									<a href="#" class=" btn category-btn  d-flex justify-content-center mt-4">Read More</a>
+
 								</a>
 							</div>
 						</Slider>
@@ -100,7 +117,7 @@ const BrandCaraousel = () => {
 
 			<section id="brand-car">
 				<div className="container mt-5">
-					<h1 className="d-flex font-weight-bold justify-content-center"><em>BRANDS</em></h1>
+					<h1 className="d-flex font-weight-bold justify-content-center custom-heading"><em>BRANDS</em></h1>
 					<div className="brands-slider">
 						<Slider
 							asNavFor={nav1}
@@ -135,23 +152,24 @@ const BrandCaraousel = () => {
 								}
 							]}
 						>
-							<div className="card ml-lg-5 ">
-								<img className="card-img-brand ml-5 " src="/img/bc1.jpg" alt="Card image cap" />
+							<div className="card  d-flex justify-content-center">
+								<img className="card-img-brand	  " src="/img/bc1.jpg" alt="Card image cap" />
+
 							</div>
-							<div className="card  ml-lg-5 ">
-								<img className="card-img-brand ml-5 " src="/img/bc2.jpg" alt="Card image cap" />
+							<div className="card  d-flex justify-content-center">
+								<img className="card-img-brand  " src="/img/bc2.jpg" alt="Card image cap" />
 							</div>
-							<div className="card  ml-lg-5 ">
-								<img className="card-img-brand ml-5 " src="/img/bc3.jpg" alt="Card image cap" />
+							<div className="card   d-flex justify-content-center">
+								<img className="card-img-brand  " src="/img/bc3.jpg" alt="Card image cap" />
 							</div>
-							<div className="card  ml-lg-5 ">
-								<img className="card-img-brand ml-5 " src="/img/bc4.jpg" alt="Card image cap" />
+							<div className="card   d-flex justify-content-center">
+								<img className="card-img-brand  " src="/img/bc4.jpg" alt="Card image cap" />
 							</div>
-							<div className="card  ml-lg-5 ">
-								<img className="card-img-brand ml-5 " src="/img/bc5.jpg" alt="Card image cap" />
+							<div className="card   d-flex justify-content-center">
+								<img className="card-img-brand  " src="/img/bc5.jpg" alt="Card image cap" />
 							</div>
-							<div className="card  ml-lg-5">
-								<img className="card-img-brand ml-5 " src="/img/bc6.jpg" alt="Card image cap" />
+							<div className="card  d-flex justify-content-center">
+								<img className="card-img-brand  " src="/img/bc6.jpg" alt="Card image cap" />
 							</div>
 						</Slider>
 					</div>

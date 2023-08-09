@@ -32,7 +32,7 @@ const Carousel = () => {
 							key={index}
 							className={`carousel-item ${item.active ? "active" : ""}`}
 						>
-							<img className="d-block w-100" src={item.src} alt={item.alt} />
+							<img className="d-block w-100 " src={item.src} alt={item.alt} />
 						</div>
 					))}
 				</div>

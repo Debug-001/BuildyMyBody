@@ -17,7 +17,7 @@ const FlashDeals = () => {
     <>
       <section id="trending-products">
         <div className="container mb-5 py-5">
-          <h1 className="d-flex justify-content-center align-items-center font-weight-bold">
+          <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
             <em>Trending Products</em>
           </h1>
           <ul className="nav nav-tabs mt-5 " id="myTab" role="tablist">

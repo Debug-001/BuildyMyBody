@@ -18,30 +18,32 @@ const Footer = () => {
       <div className="footer-row">
         <div className="container">
           <div className="row ">
-            <div className="col-lg-4 col-md-6 ">
-              <div className=' w-75 mt-1'>
-                <img className="footer-img" src="/img/logo.png" alt="" />
-                <p className="mt-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Dignissimos illo ex inventore, nulla iste ut incidunt eum pariatur
-                </p>
-                <div className="footer-social-icons">
-                  <a href="/">
-                    <BsInstagram className="icons" size={25} />
-                  </a>
-                  <a href="/">
-                    <AiOutlineYoutube size={30} />
-                  </a>
-                  <a href="/">
-                    <CiTwitter size={30} />
-                  </a>
-                  <a href="/">
-                    <CiFacebook size={30} />
-                  </a>
+            <div className="col-lg-4 col-md-6  ">
+              <div className=' w-75 '>
+                <div className='footer-details'>
+                  <img className="footer-img" src="/img/logo.png" alt="" />
+                  <p className="mt-3">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dignissimos illo ex inventore, nulla iste ut incidunt eum pariatur
+                  </p>
+                  <div className="footer-social-icons">
+                    <a href="/">
+                      <BsInstagram className="icons" size={25} />
+                    </a>
+                    <a href="/">
+                      <AiOutlineYoutube size={30} />
+                    </a>
+                    <a href="/">
+                      <CiTwitter size={30} />
+                    </a>
+                    <a href="/">
+                      <CiFacebook size={30} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6  footer-details">
+            <div className="col-lg-3 col-md-6  footer-details ">
               <div>
                 <h6>CUSTOMER SERVICE</h6>
                 <a href="/track">
@@ -75,8 +77,9 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-1  footer-details">
-              <div className='mt-4 '>
+
+            <div className="col-lg-3 col-md-6 footer-details">
+              <div>
                 <h6>COMPANY</h6>
                 <a href="/shippingpolicy">
                   <p>Shipping Policy</p>
@@ -95,8 +98,10 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
           </div>
         </div>
+
         <div className="container mt-4">
           <div className="row footer-bg pb-5">
             <div className="col-sm-6 custom-footer2  ">
@@ -118,10 +123,10 @@ const Footer = () => {
           </div>
         </div>
 
-
-
-
       </div>
+
+
+
 
     </>
   );

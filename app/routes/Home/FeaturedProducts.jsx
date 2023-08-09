@@ -15,17 +15,8 @@ const FeaturedProducts = () => {
 
   return (
     <section id="product-card">
-      <div className="container" id="cgap">
-        <h1 className="d-flex justify-content-center py-5 font-weight-bold font-weight-bold"><em>SHOP BY CATEGORIES</em></h1>
-        {/* <div className="vl"></div> */}
-        {/* <Slider
-          asNavFor={nav1}
-          ref={slider2}
-          slidesToShow={3}
-          swipeToSlide={true}
-          focusOnSelect={true}
-
-        > */}
+      <div className="container " id="cgap">
+        <h1 className="d-flex justify-content-center py-5 font-weight-bold font-weight-bold custom-heading3"><em>SHOP BY CATEGORIES</em></h1>
 
         <Slider
 

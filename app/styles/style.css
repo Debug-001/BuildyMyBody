@@ -13,10 +13,6 @@
   padding-right: 1rem;
 }
 
-#articles-card {
-  padding-right: 4rem !important;
-}
-
 .carousel-control-prev {
   filter: invert(100%);
 }
@@ -85,10 +81,24 @@ h5 {
 
 @media screen and (max-width: 449px) {
   .custom-heading {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .custom-heading2 {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+  }
+  .custom-heading3 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  .custom-heading2 {
+    font-size: 1.8rem;
+  }
+  .custom-heading3 {
+    font-size: 2rem;
+  }
+  .custom-heading {
+    font-size: 2rem;
   }
 }
 .featured-details h2 {
@@ -138,7 +148,6 @@ h5 {
 }
 
 #brand-car {
-  margin-top: 7rem;
   padding: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,9 +228,14 @@ h5 {
 }
 
 .card-img-brand {
-  width: 50%;
+  transform: scale(0.5);
 }
 
+@media screen and (max-width: 991px) {
+  .card-img-brand {
+    transform: scale(0.7);
+  }
+}
 #articles-card {
   cursor: pointer;
   padding: 1rem;
@@ -229,34 +243,9 @@ h5 {
 
 .card-img-articles {
   aspect-ratio: 16/9;
-  width: 350px;
+  width: 100%;
 }
 
-@media screen and (max-width: 1199px) {
-  .card-img-articles {
-    width: 290px;
-  }
-}
-@media screen and (max-width: 984px) {
-  .card-img-articles {
-    width: 318px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .card-img-articles {
-    width: 238px;
-  }
-}
-@media screen and (max-width: 510px) {
-  .card-img-articles {
-    width: 215px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .card-img-articles {
-    width: 390px;
-  }
-}
 .fitness-slider {
   margin-top: 4.5rem;
 }
