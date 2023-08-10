@@ -10,6 +10,15 @@
   -webkit-font-smoothing: antialiased;
 }
 
+@media screen and (max-width:992px) {
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+}
+
+
 .logo_img {
   width: 200px;
   margin-left: 3rem;

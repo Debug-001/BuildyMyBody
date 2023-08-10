@@ -16,7 +16,7 @@ const FeaturedProducts = () => {
   return (
     <section id="product-card">
       <div className="container " id="cgap">
-        <h1 className="d-flex justify-content-center py-5 font-weight-bold font-weight-bold custom-heading3"><em>SHOP BY CATEGORIES</em></h1>
+        <h1 className="d-flex justify-content-center py-5 font-weight-bold custom-heading3"><em>SHOP BY CATEGORIES</em></h1>
 
         <Slider
 
@@ -40,14 +40,16 @@ const FeaturedProducts = () => {
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                initialSlide: 2
+                initialSlide: 2,
+                dots: true
               }
             },
             {
               breakpoint: 480,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: true
               }
             }
           ]}
