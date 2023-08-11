@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
 const FlashDeals = () => {
@@ -17,10 +17,10 @@ const FlashDeals = () => {
     <>
       <section id="trending-products">
         <div className="container mb-5 py-5">
-          <h1 className="d-flex justify-content-center align-items-center font-weight-bold">
+          <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
             <em>Trending Products</em>
           </h1>
-          <ul className="nav nav-tabs mt-5" id="myTab" role="tablist">
+          <ul className="nav nav-tabs mt-5 " id="myTab" role="tablist">
             <li className="nav-item">
               <a
                 className="nav-link"
@@ -139,13 +139,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 969,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -162,11 +192,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -183,11 +215,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -204,11 +238,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -225,11 +261,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -246,11 +284,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -282,13 +322,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -305,11 +375,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -326,11 +398,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -347,11 +421,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -368,11 +444,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -389,11 +467,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -425,13 +505,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -448,11 +558,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -469,11 +581,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -490,11 +604,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -511,11 +627,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -532,11 +650,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -568,13 +688,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -591,11 +741,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -612,11 +764,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -633,11 +787,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -654,11 +810,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -675,11 +833,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -711,13 +871,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -734,11 +924,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -755,11 +947,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -776,11 +970,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -797,11 +993,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -818,11 +1016,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -854,13 +1054,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -877,11 +1107,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -898,11 +1130,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -919,11 +1153,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -940,11 +1176,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -961,11 +1199,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6
@@ -997,13 +1237,43 @@ const FlashDeals = () => {
                   slidesToShow={3}
                   swipeToSlide={true}
                   focusOnSelect={true}
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 480,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                      }
+                    }
+                  ]}
                 >
                   <div className="card" id="trend-card">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp1.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp1.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         ProStar 100% Whey Protein
@@ -1020,11 +1290,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp2.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp2.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athlete Rad 140
@@ -1041,11 +1313,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp3.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp3.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Enhanced Athelete Cardarine
@@ -1062,11 +1336,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp4.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp4.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         Ehanced Athlete MK-677
@@ -1083,11 +1359,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp5.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp5.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         NitroTech Performance Series
@@ -1104,11 +1382,13 @@ const FlashDeals = () => {
                     </div>
                   </div>
                   <div className="card" id="">
-                    <img
-                      className="card-img-trending"
-                      src="/img/tp6.jpg"
-                      alt="Card image cap"
-                    />
+                    <div className='d-flex justify-content-center'>
+                      <img
+                        className="card-img-trending"
+                        src="/img/tp6.jpg"
+                        alt="Card image cap"
+                      />
+                    </div>
                     <div className="card-content">
                       <h5 className="d-flex justify-content-center mt-5">
                         BSN Syntha 6

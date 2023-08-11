@@ -18,9 +18,9 @@ const Carousel = () => {
 			active: false,
 		},
 	]);
-	
+
 	return (
-		<section>		
+		<section>
 			<div
 				id="carouselExampleControls"
 				className="carousel slide"
@@ -32,7 +32,7 @@ const Carousel = () => {
 							key={index}
 							className={`carousel-item ${item.active ? "active" : ""}`}
 						>
-							<img className="d-block w-100" src={item.src} alt={item.alt} />
+							<img className="d-block w-100 " src={item.src} alt={item.alt} />
 						</div>
 					))}
 				</div>
@@ -54,7 +54,7 @@ const Carousel = () => {
 					<span className="carousel-control-next-icon" aria-hidden="true" />
 					<span className="sr-only">Next</span>
 				</a>
-			{/* </div> */}
+				{/* </div> */}
 			</div>
 		</section>
 	);
