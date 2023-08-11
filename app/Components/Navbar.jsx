@@ -111,8 +111,9 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <img className="logo_img" src="/img/nav-logo.png" alt="" />
-        <a className="navbar-brand" href="/"></a>
+        <a className="navbar-brand" href="/">
+          <img className="logo_img" src="/img/nav-logo.png" alt="" />
+        </a>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav mx-auto mt-2 mt-lg-0">
             {menuItems.map((menuItem, index) => (
@@ -178,11 +179,13 @@ const Navbar = () => {
             </Form>
           ) : null}
 
-          <div>
-            <Form method="post" action="/logout">
-              <button>Logout</button>
-            </Form>
-          </div>
+          {user && (
+            <div>
+              <Form method="post" action="/logout">
+                <button>Logout</button>
+              </Form>
+            </div>
+          )}
         </div>
       </nav>
       {/* <div className="promo_text">
