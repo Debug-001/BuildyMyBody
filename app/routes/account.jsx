@@ -1,13 +1,15 @@
-import {Form, NavLink, Outlet, useLoaderData} from '@remix-run/react';
-import {json, redirect} from '@shopify/remix-oxygen';
+import { Form, NavLink, Outlet, useLoaderData } from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import Footer from '~/Components/Footer';
+import Navbar from '~/Components/Navbar';
 
 export function shouldRevalidate() {
   return true;
 }
 
-export async function loader({request, context}) {
-  const {session, storefront} = context;
-  const {pathname} = new URL(request.url);
+export async function loader({ request, context }) {
+  const { session, storefront } = context;
+  const { pathname } = new URL(request.url);
   const customerAccessToken = await session.get('customerAccessToken');
   const isLoggedIn = Boolean(customerAccessToken?.accessToken);
   const isAccountHome = pathname === '/account' || pathname === '/account/';
@@ -41,7 +43,7 @@ export async function loader({request, context}) {
   }
 
   try {
-    const {customer} = await storefront.query(CUSTOMER_QUERY, {
+    const { customer } = await storefront.query(CUSTOMER_QUERY, {
       variables: {
         customerAccessToken: customerAccessToken.accessToken,
         country: storefront.i18n.country,
@@ -55,7 +57,7 @@ export async function loader({request, context}) {
     }
 
     return json(
-      {isLoggedIn, isPrivateRoute, isAccountHome, customer},
+      { isLoggedIn, isPrivateRoute, isAccountHome, customer },
       {
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -75,22 +77,22 @@ export async function loader({request, context}) {
 }
 
 export default function Acccount() {
-  const {customer, isPrivateRoute, isAccountHome} = useLoaderData();
+  const { customer, isPrivateRoute, isAccountHome } = useLoaderData();
 
   if (!isPrivateRoute && !isAccountHome) {
-    return <Outlet context={{customer}} />;
+    return <Outlet context={{ customer }} />;
   }
 
   return (
     <AccountLayout customer={customer}>
       <br />
       <br />
-      <Outlet context={{customer}} />
+      <Outlet context={{ customer }} />
     </AccountLayout>
   );
 }
 
-function AccountLayout({customer, children}) {
+function AccountLayout({ customer, children }) {
   const heading = customer
     ? customer.firstName
       ? `Welcome, ${customer.firstName}`
@@ -98,46 +100,59 @@ function AccountLayout({customer, children}) {
     : 'Account Details';
 
   return (
-    <div className="account">
-      <h1>{heading}</h1>
-      <br />
-      <AcccountMenu />
-      {children}
-    </div>
+    <>
+      <Navbar />
+      <div className="account">
+        <div className='details'>
+          <h1 className='welcome-txt'><em>{heading}</em></h1>
+        </div>
+          <hr className='hr-tag' style={{ height: 2, borderWidth: 0,backgroundColor: "gray" }}/>
+        <br />
+        <AcccountMenu />
+        {children}
+      </div>
+      <Footer />
+    </>
   );
 }
 
 function AcccountMenu() {
-  function isActiveStyle({isActive, isPending}) {
+  function isActiveStyle({ isActive, isPending }) {
     return {
       fontWeight: isActive ? 'bold' : '',
       color: isPending ? 'grey' : 'black',
     };
   }
   return (
-    <nav role="navigation">
-      <NavLink to="/account/orders" style={isActiveStyle}>
-        Orders &nbsp;
-      </NavLink>
-      &nbsp;|&nbsp;
-      <NavLink to="/account/profile" style={isActiveStyle}>
-        &nbsp; Profile &nbsp;
-      </NavLink>
-      &nbsp;|&nbsp;
-      <NavLink to="/account/addresses" style={isActiveStyle}>
-        &nbsp; Addresses &nbsp;
-      </NavLink>
-      &nbsp;|&nbsp;
-      <Logout />
-    </nav>
+    <>
+    <div className='account_menu'>
+    <div className="card-acc">
+      <nav role="navigation">
+        <NavLink to="/account/orders" style={isActiveStyle}>
+         My Orders &nbsp;
+        </NavLink>
+        <NavLink to="/account/profile" style={isActiveStyle}>
+          &nbsp;Profile &nbsp;
+        </NavLink>
+        <NavLink to="/account/addresses" style={isActiveStyle}>
+          &nbsp;Saved Addresses &nbsp;
+        </NavLink>
+        <Logout/>
+      </nav>
+    </div>
+    </div>
+    </>
   );
 }
 
 function Logout() {
   return (
-    <Form className="account-logout" method="POST" action="/account/logout">
-      &nbsp;<button type="submit">Sign out</button>
-    </Form>
+    <>
+      <Form className="account-logout" method="POST" action="/account/logout">
+        &nbsp;<button type="submit" className='btn-logout'>Sign out</button>
+      </Form>
+    </>
+
   );
 }
 

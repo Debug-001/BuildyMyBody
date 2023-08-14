@@ -46,18 +46,25 @@ export default function Orders() {
   const {customer} = useLoaderData();
   const {orders, numberOfOrders} = customer;
   return (
+    <>
+    <div className="parent-orders">
+    <div className="card-orders">
     <div className="orders">
       <h2>
-        Orders <small>({numberOfOrders})</small>
+      Orders <small>[{numberOfOrders}]</small>
       </h2>
       <br />
       {orders.nodes.length ? <OrdersTable orders={orders} /> : <EmptyOrders />}
     </div>
+    </div>
+    </div>
+    </>
   );
 }
 
 function OrdersTable({orders}) {
   return (
+    <>
     <div className="acccount-orders">
       {orders?.nodes.length ? (
         <Pagination connection={orders}>
@@ -81,18 +88,22 @@ function OrdersTable({orders}) {
         <EmptyOrders />
       )}
     </div>
+    </>
+    
   );
 }
 
 function EmptyOrders() {
   return (
-    <div>
+    <>
+    <div className='empty-orders'>
       <p>You haven&apos;t placed any orders yet.</p>
       <br />
-      <p>
+      <a className='btn-shopping'>
         <Link to="/collections">Start Shopping →</Link>
-      </p>
+      </a>
     </div>
+        </>
   );
 }
 

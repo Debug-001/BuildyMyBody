@@ -172,7 +172,7 @@ const Navbar = () => {
             </>
           ) : null}
           {!user ? (
-            <Form method="post" action="/authorize">
+            <Form method="post" action="/account">
               <button id="nav-btn" className="btn btn-dark my-2 my-sm-0">
                 Login Nigga
               </button>

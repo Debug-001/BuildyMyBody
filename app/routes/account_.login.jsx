@@ -1,22 +1,24 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, Link, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, Link, useActionData } from '@remix-run/react';
+import Navbar from '~/Components/Navbar';
+import Footer from '~/Components/Footer';
 
 export const meta = () => {
-  return [{title: 'Login'}];
+  return [{ title: 'Login' }];
 };
 
-export async function loader({context}) {
+export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
     return redirect('/account');
   }
   return json({});
 }
 
-export async function action({request, context}) {
-  const {session, storefront} = context;
+export async function action({ request, context }) {
+  const { session, storefront } = context;
 
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
   try {
@@ -29,11 +31,11 @@ export async function action({request, context}) {
       throw new Error('Please provide both an email and a password.');
     }
 
-    const {customerAccessTokenCreate} = await storefront.mutate(
+    const { customerAccessTokenCreate } = await storefront.mutate(
       LOGIN_MUTATION,
       {
         variables: {
-          input: {email, password},
+          input: { email, password },
         },
       },
     );
@@ -42,7 +44,7 @@ export async function action({request, context}) {
       throw new Error(customerAccessTokenCreate?.customerUserErrors[0].message);
     }
 
-    const {customerAccessToken} = customerAccessTokenCreate;
+    const { customerAccessToken } = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
 
     return redirect('/account', {
@@ -52,9 +54,9 @@ export async function action({request, context}) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 }
 
@@ -63,55 +65,97 @@ export default function Login() {
   const error = data?.error || null;
 
   return (
-    <div className="login">
-      <h1>Sign in.</h1>
-      <Form method="POST">
-        <fieldset>
-          <label htmlFor="email">Email address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-            placeholder="Email address"
-            aria-label="Email address"
-            // eslint-disable-next-line jsx-a11y/no-autofocus
-            autoFocus
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="current-password"
-            placeholder="Password"
-            aria-label="Password"
-            minLength={8}
-            required
-          />
-        </fieldset>
-        {error ? (
-          <p>
-            <mark>
-              <small>{error}</small>
-            </mark>
-          </p>
-        ) : (
-          <br />
-        )}
-        <button type="submit">Sign in</button>
-      </Form>
-      <br />
-      <div>
-        <p>
-          <Link to="/account/recover">Forgot password →</Link>
-        </p>
-        <p>
-          <Link to="/account/register">Register →</Link>
-        </p>
+    <>
+      <Navbar />
+      <div className="main-div mt-5 ">
+        {/* grid */}
+        {/* <img src="../img/buildbody.jpg" className="img-fluid login-img" /> */}
+        <div className="container ">
+          <div className="row m-5 no-gutters shadow-lg ">
+            {/* <img src="../img/buildbody.jpg" className="img-fluid login-img" /> */}
+            <div className="col d-none col-lg-5 d-lg-block  ">
+              <img src="/img/buildbody.jpg" className="img-fluid login-img" />
+            </div>
+            <div className="col-md-12 col-lg-7 bg-white p-5 border border-dark login-border">
+              <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>
+              <div className="form-style">
+                <Form method="POST">
+                  <fieldset>
+
+
+                    <div className="form-group pb-3 mt-4">
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        required
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autoFocus
+                      />
+                    </div>
+                    <div className="form-group pb-3">
+                      <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        autoComplete="current-password"
+                        placeholder="Password"
+                        aria-label="Password"
+                        minLength={8}
+                        required
+                      />
+                    </div>
+                  </fieldset>
+                  {error ? (
+                    <p>
+                      <mark>
+                        <small>{error}</small>
+                      </mark>
+                    </p>
+                  ) : (
+                    <br />
+                  )}
+                  <div className="d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center">
+                      <input name="" type="checkbox" value="" />{' '}
+                      <span className="pl-2 font-weight-bold">Remember Me</span>
+                    </div>
+                    <div>
+                    <Link to="/account/recover">Forgot password →</Link>
+                    </div>
+                  </div>
+                  <div className="pb-2">
+                    <button
+                      type="submit"
+                      className="btn text-light w-100 font-weight-bold mt-2 login-btn "
+                    >
+                      Sign in
+                    </button>
+                  </div>
+                </Form>
+                <div className="sideline">OR</div>
+                <div>
+                  <button
+                    type="submit"
+                    className="btn text-light w-100 font-weight-bold mt-2  google"
+                  >
+                   <Link to="/account/register">Sign Up →</Link>
+                  </button>
+                </div>
+                <div className="pt-4 text-center">
+                  Get Members Benefit. <Link to="/account/register">Sign Up→</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+
+      <Footer />
+    </>
   );
 }
 

@@ -593,6 +593,12 @@ p {
   align-items: center;
 }
 
+.form-group #email,
+.form-group #password,
+.form-group #passwordConfirm {
+  width: 40rem;
+}
+
 .card-header {
   padding: 0;
   background-color: white !important;
@@ -634,9 +640,101 @@ p {
   padding-bottom: 20px;
 }
 
+.account {
+  background-color: #171717;
+}
+
+.account_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.card-acc {
+  width: 50rem;
+  display: flex;
+  justify-content: center;
+  border: solid grey 2.5px;
+  color: rgb(255, 0, 0) !important;
+  padding: 2rem;
+}
+
+.card-acc a {
+  font-size: 1.5rem !important;
+  color: white !important;
+}
+
+.card-acc a:hover {
+  transition: all 0.4s ease-in-out;
+  color: #ff2828 !important;
+}
+
+.parent-orders {
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-orders {
+  padding: 2rem;
+  width: 52.5%;
+  display: start;
+  justify-content: center;
+  border: grey 2.5px solid;
+}
+
+.orders h2 {
+  color: #ff2828;
+  font-weight: 700;
+}
+
+.empty-orders a {
+  background-color: #ff2828 !important;
+  color: white !important;
+  padding: 1rem;
+  margin-top: 15px;
+}
+
+.empty-orders p {
+  color: white;
+  font-size: 1.2rem !important;
+}
+
+.orders p {
+  font-size: 10px;
+}
+
+.welcome-txt {
+  color: #ffffff;
+  padding-top: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.details {
+  display: flex !important;
+  justify-content: center !important;
+  color: white;
+}
+
 #progressbar {
   overflow: hidden;
   margin-top: 30px;
+}
+
+.hr-tag {
+  width: 30%;
+  margin-left: 33rem;
+}
+
+.btn-logout {
+  background-color: #ff2828;
+  color: white;
+  border: 2px #ff2828;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-left: 6.5rem;
+  width: 10rem;
+  padding: 10px 10px 10px 10px;
 }
 
 .card {
