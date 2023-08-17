@@ -2,6 +2,7 @@ import { json, redirect } from '@shopify/remix-oxygen';
 import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
+import React, { useState } from 'react';
 
 export const meta = () => {
   return [{ title: 'Login' }];
@@ -9,7 +10,7 @@ export const meta = () => {
 
 export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
-    return redirect('/account');
+    return redirect('/');
   }
   return json({});
 }
@@ -47,7 +48,7 @@ export async function action({ request, context }) {
     const { customerAccessToken } = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
 
-    return redirect('/account', {
+    return redirect('/', {
       headers: {
         'Set-Cookie': await session.commit(),
       },
@@ -68,11 +69,8 @@ export default function Login() {
     <>
       <Navbar />
       <div className="main-div mt-5 ">
-        {/* grid */}
-        {/* <img src="../img/buildbody.jpg" className="img-fluid login-img" /> */}
         <div className="container ">
           <div className="row m-5 no-gutters shadow-lg ">
-            {/* <img src="../img/buildbody.jpg" className="img-fluid login-img" /> */}
             <div className="col d-none col-lg-5 d-lg-block  ">
               <img src="/img/buildbody.jpg" className="img-fluid login-img" />
             </div>
@@ -81,8 +79,6 @@ export default function Login() {
               <div className="form-style">
                 <Form method="POST">
                   <fieldset>
-
-
                     <div className="form-group pb-3 mt-4">
                       <input
                         id="email"

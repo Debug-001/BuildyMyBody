@@ -203,27 +203,24 @@ export default function Addresses() {
 
   return (
     <>
-      <div className="account-card">
-        <div className="account-addresses">
+      <div className="account-card profile-clr pt-5 pb-5">
+        <div className="account-addresses container ">
           <h2>Addresses</h2>
           <br />
-          {!addresses.nodes.length ? (
-            <p>You have no addresses saved.</p>
-          ) : (
-            <div>
-              <div>
-                <legend>Create address</legend>
-                <NewAddressForm />
-              </div>
-              <br />
-              <hr />
-              <br />
-              <ExistingAddresses
-                addresses={addresses}
-                defaultAddress={defaultAddress}
-              />
-            </div>
-          )}
+          <div>
+            <legend></legend>
+            <ExistingAddresses
+              addresses={addresses}
+              defaultAddress={defaultAddress}
+            />
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div>
+            <legend>Create address</legend>
+            <NewAddressForm />
+          </div>
         </div>
       </div>
     </>
@@ -253,6 +250,7 @@ function NewAddressForm() {
             disabled={stateForMethod('POST') !== 'idle'}
             formMethod="POST"
             type="submit"
+            className='w-25 profile-btn'
           >
             {stateForMethod('POST') !== 'idle' ? 'Creating' : 'Create'}
           </button>
@@ -278,6 +276,7 @@ function ExistingAddresses({ addresses, defaultAddress }) {
                 disabled={stateForMethod('PUT') !== 'idle'}
                 formMethod="PUT"
                 type="submit"
+                className='w-25 profile-btn'
               >
                 {stateForMethod('PUT') !== 'idle' ? 'Saving' : 'Save'}
               </button>
@@ -285,6 +284,7 @@ function ExistingAddresses({ addresses, defaultAddress }) {
                 disabled={stateForMethod('DELETE') !== 'idle'}
                 formMethod="DELETE"
                 type="submit"
+                className='w-25 ml-5 profile-btn'
               >
                 {stateForMethod('DELETE') !== 'idle' ? 'Deleting' : 'Delete'}
               </button>
@@ -302,140 +302,187 @@ export function AddressForm({ address, defaultAddress, children }) {
   const error = action?.error?.[address.id];
   const isDefaultAddress = defaultAddress?.id === address.id;
   return (
-    <Form id={address.id}>
-      <fieldset>
-        <input type="hidden" name="addressId" defaultValue={address.id} />
-        <label htmlFor="firstName">First name*</label>
-        <input
-          aria-label="First name"
-          autoComplete="given-name"
-          defaultValue={address?.firstName ?? ''}
-          id="firstName"
-          name="firstName"
-          placeholder="First name"
-          required
-          type="text"
-        />
-        <label htmlFor="lastName">Last name*</label>
-        <input
-          aria-label="Last name"
-          autoComplete="family-name"
-          defaultValue={address?.lastName ?? ''}
-          id="lastName"
-          name="lastName"
-          placeholder="Last name"
-          required
-          type="text"
-        />
-        <label htmlFor="company">Company</label>
-        <input
-          aria-label="Company"
-          autoComplete="organization"
-          defaultValue={address?.company ?? ''}
-          id="company"
-          name="company"
-          placeholder="Company"
-          type="text"
-        />
-        <label htmlFor="address1">Address line*</label>
-        <input
-          aria-label="Address line 1"
-          autoComplete="address-line1"
-          defaultValue={address?.address1 ?? ''}
-          id="address1"
-          name="address1"
-          placeholder="Address line 1*"
-          required
-          type="text"
-        />
-        <label htmlFor="address2">Address line 2</label>
-        <input
-          aria-label="Address line 2"
-          autoComplete="address-line2"
-          defaultValue={address?.address2 ?? ''}
-          id="address2"
-          name="address2"
-          placeholder="Address line 2"
-          type="text"
-        />
-        <label htmlFor="city">City*</label>
-        <input
-          aria-label="City"
-          autoComplete="address-level2"
-          defaultValue={address?.city ?? ''}
-          id="city"
-          name="city"
-          placeholder="City"
-          required
-          type="text"
-        />
-        <label htmlFor="province">State / Province*</label>
-        <input
-          aria-label="State"
-          autoComplete="address-level1"
-          defaultValue={address?.province ?? ''}
-          id="province"
-          name="province"
-          placeholder="State / Province"
-          required
-          type="text"
-        />
-        <label htmlFor="zip">Zip / Postal Code*</label>
-        <input
-          aria-label="Zip"
-          autoComplete="postal-code"
-          defaultValue={address?.zip ?? ''}
-          id="zip"
-          name="zip"
-          placeholder="Zip / Postal Code"
-          required
-          type="text"
-        />
-        <label htmlFor="country">Country*</label>
-        <input
-          aria-label="Country"
-          autoComplete="country-name"
-          defaultValue={address?.country ?? ''}
-          id="country"
-          name="country"
-          placeholder="Country"
-          required
-          type="text"
-        />
-        <label htmlFor="phone">Phone</label>
-        <input
-          aria-label="Phone"
-          autoComplete="tel"
-          defaultValue={address?.phone ?? ''}
-          id="phone"
-          name="phone"
-          placeholder="+16135551111"
-          pattern="^\+?[1-9]\d{3,14}$"
-          type="tel"
-        />
-        <div>
-          <input
-            defaultChecked={isDefaultAddress}
-            id="defaultAddress"
-            name="defaultAddress"
-            type="checkbox"
-          />
-          <label htmlFor="defaultAddress">Set as default address</label>
+    <>
+
+      <Form id={address.id}>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <fieldset>
+                <input type="hidden" name="addressId" defaultValue={address.id} />
+                <label htmlFor="firstName">First name*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="First name"
+                  autoComplete="given-name"
+                  defaultValue={address?.firstName ?? ''}
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First name"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="lastName">Last name*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Last name"
+                  autoComplete="family-name"
+                  defaultValue={address?.lastName ?? ''}
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last name"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="company">Company</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Company"
+                  autoComplete="organization"
+                  defaultValue={address?.company ?? ''}
+                  id="company"
+                  name="company"
+                  placeholder="Company"
+                  type="text"
+                />
+                <br />
+                <label htmlFor="address1">Address line*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Address line 1"
+                  autoComplete="address-line1"
+                  defaultValue={address?.address1 ?? ''}
+                  id="address1"
+                  name="address1"
+                  placeholder="Address line 1*"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="address2">Address line 2</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Address line 2"
+                  autoComplete="address-line2"
+                  defaultValue={address?.address2 ?? ''}
+                  id="address2"
+                  name="address2"
+                  placeholder="Address line 2"
+                  type="text"
+                />
+              </fieldset>
+            </div>
+            <div className="col">
+              <fieldset>
+                <label htmlFor="city">City*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="City"
+                  autoComplete="address-level2"
+                  defaultValue={address?.city ?? ''}
+                  id="city"
+                  name="city"
+                  placeholder="City"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="province">State / Province*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="State"
+                  autoComplete="address-level1"
+                  defaultValue={address?.province ?? ''}
+                  id="province"
+                  name="province"
+                  placeholder="State / Province"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="zip">Zip / Postal Code*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Zip"
+                  autoComplete="postal-code"
+                  defaultValue={address?.zip ?? ''}
+                  id="zip"
+                  name="zip"
+                  placeholder="Zip / Postal Code"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="country">Country*</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Country"
+                  autoComplete="country-name"
+                  defaultValue={address?.country ?? ''}
+                  id="country"
+                  name="country"
+                  placeholder="Country"
+                  required
+                  type="text"
+                />
+                <br />
+                <label htmlFor="phone">Phone</label>
+                <br />
+                <input
+                  className='w-75 profile-input'
+                  aria-label="Phone"
+                  autoComplete="tel"
+                  defaultValue={address?.phone ?? ''}
+                  id="phone"
+                  name="phone"
+                  placeholder="+16135551111"
+                  pattern="^\+?[1-9]\d{3,14}$"
+                  type="tel"
+                />
+                <div>
+                  <input
+                    defaultChecked={isDefaultAddress}
+                    id="defaultAddress"
+                    name="defaultAddress"
+                    type="checkbox"
+                  />
+                  <label htmlFor="defaultAddress" className='px-2'>
+                    Set as default address
+                  </label>
+                </div>
+                {error ? (
+                  <p>
+                    <mark>
+                      <small>{error}</small>
+                    </mark>
+                  </p>
+                ) : (
+                  <br />
+                )}
+                {children({
+                  stateForMethod: (method) => (formMethod === method ? state : 'idle'),
+                })}
+              </fieldset>
+            </div>
+          </div>
         </div>
-        {error ? (
-          <p>
-            <mark>
-              <small>{error}</small>
-            </mark>
-          </p>
-        ) : (
-          <br />
-        )}
-        {children({
-          stateForMethod: (method) => (formMethod === method ? state : 'idle'),
-        })}
-      </fieldset>
-    </Form>
+
+      </Form>
+
+    </>
+
   );
 }
 

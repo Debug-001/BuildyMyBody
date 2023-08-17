@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { BsSearch } from 'react-icons/bs';
-import { FiShoppingCart } from 'react-icons/fi';
-import { Form, useLoaderData, useRouteError } from '@remix-run/react';
-import { json } from '@shopify/remix-oxygen';
+import React, {useEffect, useState} from 'react';
+import {BsSearch} from 'react-icons/bs';
+import {FiShoppingCart} from 'react-icons/fi';
+import {RiAccountCircleLine} from 'react-icons/ri';
 
-export async function loader({ request, context }) {
+import {Form, NavLink, useLoaderData, useRouteError} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+
+export async function loader({request, context}) {
   const accessToken = context.session.get('customer_access_token');
 
-  if (!Boolean(accessToken)) return json({ user: null });
+  if (!Boolean(accessToken)) return json({user: null});
 
   const userAgent =
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
@@ -53,7 +55,9 @@ export async function loader({ request, context }) {
 }
 
 const Navbar = () => {
-  const { user } = useLoaderData();
+  // const {user} = useLoaderData();
+  const {user} = useLoaderData() || {};
+  // const [user, setUser] = useState('rtg') ;
 
   const [menuItems, setMenuItems] = useState([
     {
@@ -78,16 +82,7 @@ const Navbar = () => {
     },
   ]);
 
-  const [isCartDialogVisible, setCartDialogVisible] = useState(false);
   const [isSearchBarVisible, setSearchBarVisible] = useState(false);
-
-  const showCartDialog = () => {
-    setCartDialogVisible(true);
-  };
-
-  const hideCartDialog = () => {
-    setCartDialogVisible(false);
-  };
 
   const showSearchBar = () => {
     setSearchBarVisible(true);
@@ -111,9 +106,9 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/">
           <img className="logo_img" src="/img/nav-logo.png" alt="" />
-        </a>
+        </NavLink>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav mx-auto mt-2 mt-lg-0">
             {menuItems.map((menuItem, index) => (
@@ -121,25 +116,25 @@ const Navbar = () => {
                 key={index}
                 className={`nav-item ${menuItem.active ? 'active' : ''}`}
               >
-                <a className="nav-link" href={menuItem.link}>
+                <NavLink className="nav-link" to={menuItem.link}>
                   {menuItem.text}
                   {menuItem.active && (
                     <span className="sr-only">(current)</span>
                   )}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
 
           <div className="icon-search">
             <li>
-              <a
-                href="#"
+              <NavLink
+                to="#"
                 onMouseEnter={showSearchBar}
                 onMouseLeave={hideSearchBar}
               >
                 <BsSearch size={18} />
-              </a>
+              </NavLink>
               {isSearchBarVisible && (
                 <div className="search-bar">
                   <input type="text" placeholder="Search Products..." />
@@ -150,40 +145,54 @@ const Navbar = () => {
 
           <div className="icon-cart">
             <li>
-              <a
-                href="/cart"
-                onMouseEnter={showCartDialog}
-                onMouseLeave={hideCartDialog}
-              >
+              <NavLink to="/cart">
                 <FiShoppingCart size={18} />
-              </a>
-              {isCartDialogVisible && (
-                <div id="cart-dialog" className="cart-dialog">
-                  <p>No products in your Cart.</p>
-                </div>
-              )}
+              </NavLink>
             </li>
           </div>
-          {user ? (
-            <>
-              <div>
-                <b>Welcome {user.personalAccount.email}</b>
-              </div>
-            </>
-          ) : null}
-          {!user ? (
-            <Form method="post" action="/account">
-              <button id="nav-btn" className="btn btn-dark my-2 my-sm-0">
-                Login Nigga
-              </button>
-            </Form>
-          ) : null}
 
-          {user && (
-            <div>
-              <Form method="post" action="/logout">
-                <button>Logout</button>
-              </Form>
+          {!user ? (
+            <NavLink
+              to="/account/login"
+              id="nav-btn"
+              className="btn btn-dark my-2 my-sm-0"
+            >
+              Login
+            </NavLink>
+          ) : (
+            <div className="dropdown show">
+              <NavLink
+                to="#"
+                className="icon-cart"
+                role="button"
+                id="dropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <RiAccountCircleLine size={18} />
+              </NavLink>
+
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <NavLink className="dropdown-item" to="#">
+                  Profile
+                </NavLink>
+                <NavLink className="dropdown-item" to="#">
+                  Orders
+                </NavLink>
+                <NavLink className="dropdown-item" to="#">
+                  Addresses
+                </NavLink>
+                <Form
+                  className="account-logout"
+                  method="POST"
+                  action="/account/logout"
+                >
+                  <button type="submit" className="dropdown-item">
+                    Sign out
+                  </button>
+                </Form>
+              </div>
             </div>
           )}
         </div>
