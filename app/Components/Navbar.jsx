@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import {BsSearch} from 'react-icons/bs';
-import {FiShoppingCart} from 'react-icons/fi';
-import {RiAccountCircleLine} from 'react-icons/ri';
+import React, { useEffect, useState } from 'react';
+import { BsSearch } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
+import { RiAccountCircleLine } from 'react-icons/ri';
 
-import {Form, NavLink, useLoaderData, useRouteError} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
+import { Form, NavLink, useLoaderData, useRouteError } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
 
-export async function loader({request, context}) {
+export async function loader({ request, context }) {
   const accessToken = context.session.get('customer_access_token');
 
-  if (!Boolean(accessToken)) return json({user: null});
+  if (!Boolean(accessToken)) return json({ user: null });
 
   const userAgent =
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
@@ -56,7 +56,7 @@ export async function loader({request, context}) {
 
 const Navbar = () => {
   // const {user} = useLoaderData();
-  const {user} = useLoaderData() || {};
+  const { user } = useLoaderData() || {};
   // const [user, setUser] = useState('rtg') ;
 
   const [menuItems, setMenuItems] = useState([
@@ -121,10 +121,16 @@ const Navbar = () => {
                   {menuItem.active && (
                     <span className="sr-only">(current)</span>
                   )}
+
                 </NavLink>
+
               </li>
+
             ))}
           </ul>
+
+
+
 
           <div className="icon-search">
             <li>
@@ -196,12 +202,18 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
+
+
+
       </nav>
       {/* <div className="promo_text">
 			<div className="container_wrap">
 				<p>Elevate your Fitness Journey with BuildMyBody</p>
 			</div>
 		</div> */}
+
+
     </>
   );
 };

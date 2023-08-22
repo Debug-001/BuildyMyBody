@@ -268,6 +268,50 @@
   color: white;
 }
 
+.company-footer {
+  margin-top: 31.9px;
+}
+
+.company-footer1 {
+  margin-top: 47px;
+}
+
+@media screen and (max-width:1199px) {
+  .company-footer {
+    margin-top: 63.6px;
+  }
+
+  .company-footer1 {
+    margin-top: 79px;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .company-footer {
+    margin-top: 20px;
+  }
+
+  .company-footer1 {
+    margin-top: 44px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .customer-footer {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .cont1 {
+    display: block;
+  }
+}
+
+.cont1 {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .auth {
     display: none;
