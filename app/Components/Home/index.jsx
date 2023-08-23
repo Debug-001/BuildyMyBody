@@ -9,19 +9,19 @@ import BrandCaraousel from './BrandCaraousel';
 import TopSelling from './TopSelling';
 
 export function links() {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [{rel: 'stylesheet', href: styles}];
 }
 
-const Home = () => {
+const Home = ({data}) => {
   return (
     <>
       <Navbar />
       <Carousel />
-      <FeaturedProducts />
+      <FeaturedProducts collections={data.collections} />
       <Discount />
-      <TopSelling />
+      <TopSelling collection={data.collection} />
       <Verify />
-      <FlashDeals />
+      <FlashDeals collection={data.flashDeals} />
       <BrandCaraousel />
       <Discount />
       <Footer />

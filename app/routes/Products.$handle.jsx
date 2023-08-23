@@ -37,7 +37,7 @@ export default function Products() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section>
         <div className="container d-flex mt-5">
           <div className="row">
@@ -60,29 +60,29 @@ export default function Products() {
               >
                 <em>{collection.title}</em>
               </h1>
-              <div className="row row-cols-3 g-3 mt-5">
-                <Pagination connection={collection.products}>
-                  {({nodes, NextLink, PreviousLink, isLoading}) => (
-                    <>
-                      <div className="flex items-center justify-center mt-6">
-                        <PreviousLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
-                          {isLoading ? 'Loading...' : 'Load previous products'}
-                        </PreviousLink>
-                      </div>
-                      <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <Pagination connection={collection.products}>
+                {({nodes, NextLink, PreviousLink, isLoading}) => (
+                  <>
+                    <div className="flex items-center justify-center mt-6">
+                      <PreviousLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
+                        {isLoading ? 'Loading...' : 'Load previous products'}
+                      </PreviousLink>
+                    </div>
+                    <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                      <div className="row row-cols-3 g-3 mt-5">
                         {nodes.map((product) => (
                           <ProductCard key={product.id} product={product} />
                         ))}
                       </div>
-                      <div className="flex items-center justify-center mt-6">
-                        <NextLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
-                          {isLoading ? 'Loading...' : 'Load more products'}
-                        </NextLink>
-                      </div>
-                    </>
-                  )}
-                </Pagination>
-              </div>
+                    </div>
+                    <div className="flex items-center justify-center mt-6">
+                      <NextLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
+                        {isLoading ? 'Loading...' : 'Load more products'}
+                      </NextLink>
+                    </div>
+                  </>
+                )}
+              </Pagination>
             </div>
           </div>
         </div>

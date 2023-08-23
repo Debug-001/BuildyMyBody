@@ -4,60 +4,9 @@ import {FiShoppingCart} from 'react-icons/fi';
 import {RiAccountCircleLine} from 'react-icons/ri';
 
 import {Form, NavLink, useLoaderData, useRouteError} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
-
-export async function loader({request, context}) {
-  const accessToken = context.session.get('customer_access_token');
-
-  if (!Boolean(accessToken)) return json({user: null});
-
-  const userAgent =
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36';
-  const origin = new URL(request.url).origin; // Will be http://localhost:3000 in development or an oxygen generated host
-
-  const query = `query customer {
-      personalAccount {
-        email
-      }
-    }`;
-  const variables = {};
-  const shopID = context.env.PUBLIC_STOREFRONT_ID;
-  const user = await fetch(
-    `https://shopify.com/${shopID}/account/customer/api/${context.env.CUSTOMER_API_VERSION}/graphql`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': userAgent,
-        Origin: origin,
-        Authorization: accessToken,
-      },
-      body: JSON.stringify({
-        operationName: 'SomeQuery',
-        query,
-        variables: variables,
-      }),
-    },
-  ).then(async (response) => {
-    if (!response.ok) {
-      throw new Error(
-        `${response.status} (RequestID ${response.headers.get(
-          'x-request-id',
-        )}): ${await response.text()}`,
-      );
-    }
-    return (await response.json()).data;
-  });
-
-  return {
-    user,
-  };
-}
 
 const Navbar = () => {
-  // const {user} = useLoaderData();
-  const {user} = useLoaderData() || {};
-  // const [user, setUser] = useState('rtg') ;
+  const [user, setUser] = useState('rtg'); // to be removed
 
   const [menuItems, setMenuItems] = useState([
     {
