@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Blog() {
   const navigate = useNavigate();
@@ -35,35 +35,35 @@ function Blog() {
         <p className="text-center mt-3 blogs-text">BLOGS</p>
         <nav className="nav nav-pills flex-column flex-sm-row  justify-content-center blog-links mt-3">
           <a
-            className="flex-sm-fill text-sm-center nav-link blog-colour "
+            className=" text-sm-center nav-link blog-colour "
             onClick={navigateToAll}
             href="#"
           >
             All
           </a>
           <a
-            className="flex-sm-fill text-sm-center nav-link blog-colour"
+            className=" text-sm-center nav-link blog-colour"
             onClick={navigateToFitness}
             href="#"
           >
             Fitness
           </a>
           <a
-            className="flex-sm-fill text-sm-center nav-link blog-colour"
+            className=" text-sm-center nav-link blog-colour"
             onClick={navigateToFood}
             href="#"
           >
             Food
           </a>
           <a
-            className="flex-sm-fill text-sm-center nav-link blog-colour"
+            className=" text-sm-center nav-link blog-colour"
             onClick={navigateToHealthy}
             href="#"
           >
             Healthy Eating
           </a>
           <a
-            className="flex-sm-fill text-sm-center nav-link blog-colour"
+            className=" text-sm-center nav-link blog-colour"
             onClick={navigateToNavratri}
             href="#"
           >
@@ -86,9 +86,9 @@ function Blog() {
               -
             </p>
             <p className="text-center">
-              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-dark"> Read More</button> */}
+              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light"> Read More</button> */}
               <a
-                className="btn font-weight-bold mt-4 blog-btn text-dark"
+                className="btn font-weight-bold mt-4 blog-btn text-light"
                 target="_blank"
                 href="https://m.timesofindia.com/life-style/food-news/5-tips-that-will-make-navratri-fasting-healthier-for-you/photostory/98935923.cms"
               >
@@ -113,9 +113,9 @@ function Blog() {
               between this water and fruit dilemma. Try that as an experiment.
             </p>
             <p className="text-center">
-              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-dark " > Read More</button> */}
+              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light " > Read More</button> */}
               <a
-                className="btn font-weight-bold mt-4 blog-btn text-dark"
+                className="btn font-weight-bold mt-4 blog-btn text-light"
                 target="_blank"
                 href="https://familydoctor.org/athletes-the-importance-of-good-hydration/"
               >
@@ -146,9 +146,9 @@ function Blog() {
               fasting for detoxing and giving your body a break.
             </p>
             <p className="text-center">
-              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-dark"> Read More</button> */}
+              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light"> Read More</button> */}
               <a
-                className="btn font-weight-bold mt-4 blog-btn text-dark"
+                className="btn font-weight-bold mt-4 blog-btn text-light"
                 target="_blank"
                 href=" https://www.healthline.com/nutrition/greasy-food#5.-May-raise-your-risk-of-diabetes"
               >
@@ -174,9 +174,9 @@ function Blog() {
               to 10 reps of 50 kilos. But who’s stronger?
             </p>
             <p className="text-center">
-              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-dark "> Read More</button> */}
+              {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light "> Read More</button> */}
               <a
-                className="btn font-weight-bold mt-4 blog-btn text-dark"
+                className="btn font-weight-bold mt-4 blog-btn text-light"
                 target="_blank"
                 href="  https://www.wikihow.com/Lift-Heavier-Weights"
               >

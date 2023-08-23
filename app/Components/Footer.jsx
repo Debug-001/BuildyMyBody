@@ -9,9 +9,9 @@ const Footer = () => {
     <>
       <div className="container">
         <div className="footer-top-section d-flex align-items-center  ">
-          <p>100% Satisfaction</p>
-          <p>Save 20% Every Time</p>
-          <p>Fast Free Shipment</p>
+          <p >100% Satisfaction</p>
+          <p >Save 20% Every Time</p>
+          <p >Fast Free Shipment</p>
           <p>Gift and Vouchers</p>
         </div>
       </div>
@@ -20,8 +20,8 @@ const Footer = () => {
         <div className="container">
           <div className="row ">
             <div className="col-lg-4 col-md-6  ">
-              <div className=" w-75 ">
-                <div className="footer-details">
+              <div className=' w-75 '>
+                <div className='footer-details company-footer1'>
                   <img className="footer-img" src="/img/logo.png" alt="" />
                   <p className="mt-3">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6  footer-details ">
-              <div>
+              <div className='customer-footer'>
                 <h6>CUSTOMER SERVICE</h6>
                 <Link to="/track">
                   <p>Track My Order</p>
@@ -63,7 +63,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-lg-2 col-md-6  footer-details">
-              <div>
+              <div className='customer-footer'>
                 <h6>PRODUCTS</h6>
                 <Link to="/products">
                   <p>Sports Nutrition</p>
@@ -80,10 +80,17 @@ const Footer = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="col-lg-3 col-md-6 footer-details">
               <div>
                 <h6>COMPANY</h6>
                 <Link to="/shippingpolicy">
+=======
+            <div className="col-lg-3 col-md-6  footer-details">
+              <div className=' company-footer'>
+                <h6 className=' '>COMPANY</h6>
+                <a href="/shippingpolicy">
+>>>>>>> 42a4d6648a63a8ae8feb073c2a8d2f40b9ff2f9d
                   <p>Shipping Policy</p>
                 </Link>
                 <Link to="/terms">
