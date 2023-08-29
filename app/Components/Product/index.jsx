@@ -1,14 +1,14 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import {MediaFile, Money, ShopPayButton} from '@shopify/hydrogen-react';
+import { MediaFile, Money, ShopPayButton } from '@shopify/hydrogen-react';
 import ProductCarousal from './ProductCarousal';
-import {BuyNowButton} from '@shopify/hydrogen-react';
+import { BuyNowButton } from '@shopify/hydrogen-react';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 
-const Product = ({data}) => {
-  const {product, selectedVariant, storeDomain, orderable} = data;
+const Product = ({ data }) => {
+  const { product, selectedVariant, storeDomain, orderable } = data;
 
   return (
     <>
@@ -18,15 +18,15 @@ const Product = ({data}) => {
           <div className="container-fullwidth">
             <div className="row">
               {/* image column  */}
-              <div className="col-sm-4 mx-4">
+              <div className="col-sm-12 col-md-12 col-lg-3 ">
                 <ProductCarousal media={product.media.nodes} />
               </div>
               {/* middle column  */}
-              <div className="col-sm-4">
-                <h2 className="d-flex justify-content-start">
+              <div className="col-sm-12 col-lg-5 col-md-12">
+                <h2 className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">
                   {product.title}
                 </h2>
-                <div className="off">
+                <div className="off m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">
                   <a href="">
                     <p className="knowmore"> Know More</p>
                   </a>
@@ -45,9 +45,9 @@ const Product = ({data}) => {
                     </div>
                   </div>
                 </div>
-                <div className="row mt-5">
+                <div className="row mt-5 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">
                   {/* weight/flavour section  */}
-                  <div className="col-md-5">
+                  <div className="col-md-5 col-lg-6">
                     <ProductOptions
                       options={product.options}
                       selectedVariant={selectedVariant}
@@ -72,22 +72,26 @@ const Product = ({data}) => {
                       <span className=""> Free Shipping</span>
                     </p>
                     {/* show now btn  */}
-                    <div className="shopbtn mt-4">
-                      <ProductForm variantId={selectedVariant?.id} />
-                      {orderable && (
-                        <ShopPayButton
-                          storeDomain={storeDomain}
-                          variantIds={[selectedVariant?.id]}
-                          className="btn mx-3"
-                        />
-                      )}
+                    <div className="shopbtn mt-4 d-flex row ">
+                      <div className="col-md-12 col-lg-5">
+                        <ProductForm variantId={selectedVariant?.id} />
+                      </div>
+                      <div className="col">
+                        {orderable && (
+                          <ShopPayButton
+                            storeDomain={storeDomain}
+                            variantIds={[selectedVariant?.id]}
+                            className="btn  "
+                          />
+                        )}
+                      </div>
                       {/* <BuyNowButton variantId={[selectedVariant?.id]} /> */}
                     </div>
                   </div>
                 </div>
                 <hr />
-                <h4 className="mt-4 py-2">Check Delivery</h4>
-                <div className="input-group mb-3">
+                <h4 className="mt-4 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">Check Delivery</h4>
+                <div className="input-group mb-3 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 ">
                   <input
                     type="number"
                     className="form-control"
@@ -101,16 +105,16 @@ const Product = ({data}) => {
                   </div>
                 </div>
               </div>
-              {/* featured products section  */}
-              <div id="third" className="col-sm-3">
+              {/* featured products section   */}
+              <div id="third" className="col-lg-4 flex-lg-column flex-md-row">
                 <h4 className="d-flex justify-content-center font-weight-bolder">
                   <em>FEATURED PRODUCTS</em>
                 </h4>
                 <div className="d-flex mt-4">
-                  <div className="" style={{width: '250px'}}>
+                  <div className="" >
                     <img
                       src="/img/sbi1.jpg"
-                      style={{objectFit: 'contain'}}
+                      style={{ objectFit: 'contain' }}
                       alt="side bar product"
                     />
                   </div>
@@ -125,10 +129,10 @@ const Product = ({data}) => {
                   </div>
                 </div>
                 <div className="d-flex mt-4">
-                  <div className="" style={{width: '250px'}}>
+                  <div className="" >
                     <img
                       src="/img/sbi1.jpg"
-                      style={{objectFit: 'contain'}}
+                      style={{ objectFit: 'contain' }}
                       alt="side bar product"
                     />
                   </div>
@@ -147,7 +151,7 @@ const Product = ({data}) => {
             <div className="container-fluid mb-5">
               <hr />
               <div className="row">
-                <div className="col-sm-7" id="product-tabs">
+                <div className="col-sm-7 d-lg-none " id="product-tabs">
                   <ul className="nav nav-tabs mt-4" id="myTab" role="tablist">
                     <li className="nav-item">
                       <a
@@ -162,7 +166,7 @@ const Product = ({data}) => {
                         Description
                       </a>
                     </li>
-                    <div className="vl mt-2 py-3 mx-2"></div>
+                    {/* <div className="vl mt-2 py-3 mx-2"></div>
                     <li className="nav-item">
                       <a
                         className="nav-link"
@@ -189,7 +193,7 @@ const Product = ({data}) => {
                       >
                         Reviews
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
 
                   <div className="tab-content mt-3" id="myTabContent">
@@ -202,7 +206,7 @@ const Product = ({data}) => {
                         __html: product.descriptionHtml,
                       }}
                     ></div>
-                    <div
+                    {/* <div
                       className="tab-pane fade"
                       id="profile"
                       role="tabpanel"
@@ -239,18 +243,18 @@ const Product = ({data}) => {
                       blog. Scenester cred you probably haven't heard of them,
                       vinyl craft beer blog stumptown. Pitchfork sustainable
                       tofu synth chambray yr.
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-                <div id="third" className="col-sm-3 mx-5 ">
+                <div id="third" className="col-lg-4 flex-lg-column flex-md-row ">
                   <h4 className="d-flex justify-content-center font-weight-bolder">
-                    <em>FEATURED PRODUCTS</em>
+                    <em>RELATED PRODUCTS</em>
                   </h4>
                   <div className="d-flex mt-4">
-                    <div className="" style={{width: '250px'}}>
+                    <div className="" >
                       <img
                         src="/img/sbi1.jpg"
-                        style={{objectFit: 'contain'}}
+                        style={{ objectFit: 'contain' }}
                         alt="side bar product"
                       />
                     </div>
@@ -265,10 +269,10 @@ const Product = ({data}) => {
                     </div>
                   </div>
                   <div className="d-flex mt-4">
-                    <div className="" style={{width: '250px'}}>
+                    <div className="" >
                       <img
                         src="/img/sbi1.jpg"
-                        style={{objectFit: 'contain'}}
+                        style={{ objectFit: 'contain' }}
                         alt="side bar product"
                       />
                     </div>

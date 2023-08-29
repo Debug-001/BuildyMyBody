@@ -1,8 +1,8 @@
 import React from 'react';
-import {SlLocationPin} from 'react-icons/sl';
-import {BiPhoneCall} from 'react-icons/bi';
-import {FaRegPaperPlane} from 'react-icons/fa';
-import {BiTime} from 'react-icons/bi';
+import { SlLocationPin } from 'react-icons/sl';
+import { BiPhoneCall } from 'react-icons/bi';
+import { FaRegPaperPlane } from 'react-icons/fa';
+import { BiTime } from 'react-icons/bi';
 // import Social from '../Social/Social';
 // import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
@@ -17,7 +17,7 @@ function Contact() {
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28005.941294708296!2d77.114441!3d28.667423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d039f59dcb4e5%3A0x767db4f75b67b6de!2sClub%20Rd%2C%20Samta%20Budh%20Vihar%2C%20Pocket%203%2C%20Paschim%20Puri%2C%20Paschim%20Vihar%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1689448293631!5m2!1sen!2sus"
           width="100%"
           height="250"
-          style={{border: '0'}}
+          style={{ border: '0' }}
           allowfullscreen=""
           loading="lazy"
         ></iframe>
@@ -26,13 +26,13 @@ function Contact() {
       {/* <p className='text-center mt-4 contact-issue'>If you have an issue or question that requires immediate assistance, <br /> you can click below to email our customer service representative. If we aren't available, drop us an email to the left and we'll respond within 24-48 hours.</p> */}
       <div className="container-fluid  mt-4 ">
         <div className="row ml-lg-4 d-flex justify-content-between contact-flex">
-          <div className="col  col-lg-5 col-md-12 mt-md-1 ml-lg-4 col-sm-12">
+          <div className="col-lg-5 col-md-12 mt-md-1 ml-lg-4 col-sm-12">
             <p className="text-center  contact-touch">Let's get in touch</p>
             {/* <p className='text-center mr-4 '>We're open for any suggestion or just to have a chat</p> */}
             <p className="text-center">
               {/* Location */}
               <div className="row mt-4">
-                <div className="col col-2 text-right">
+                <div className=" col-2 text-right">
                   <a
                     href=""
                     className="btn btn-primary btn-lg btn-floating contact-address try"
@@ -50,7 +50,7 @@ function Contact() {
               </div>
 
               <div className="row mt-2">
-                <div className="col col-2 text-right">
+                <div className=" col-2 text-right">
                   <a
                     href=""
                     className="btn btn-primary btn-lg btn-floating contact-address try "
@@ -65,7 +65,7 @@ function Contact() {
               </div>
 
               <div className="row mt-3">
-                <div className="col col-2 text-right">
+                <div className=" col-2 text-right">
                   <a
                     href=""
                     className="btn btn-primary btn-lg btn-floating contact-address try"
@@ -84,7 +84,7 @@ function Contact() {
               </div>
 
               <div className="row mt-3">
-                <div className="col col-2 text-right">
+                <div className=" col-2 text-right">
                   <a
                     href=""
                     className="btn btn-primary btn-lg btn-floating contact-address try"
@@ -147,7 +147,7 @@ function Contact() {
                     <textarea
                       name=""
                       id=""
-                      cols="50"
+                      style={{ width: '100%', maxWidth: '90%' }}
                       rows="5"
                       placeholder="Please leave your text here"
                     ></textarea>

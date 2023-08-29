@@ -39,6 +39,7 @@ h5 {
 
 #featured-section {
   background-color: #242424;
+  // color: #242424;
 }
 
 .card-content2 p {
@@ -116,18 +117,21 @@ h5 {
 
 .featured-details h2 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
+  width: 80%;
 }
 
 .carousel-control-prev-icon {
   background-image: url(/img/carousel-left.png);
   filter: invert(100%);
+  transform: scale(2);
 }
 
 .carousel-control-next-icon {
   background-image: url(/img/carousel-right.png);
   filter: invert(100%);
+  transform: scale(2);
 }
 
 .featured-btn {
@@ -360,7 +364,7 @@ h5 {
 }
 
 #product-tabs {
-  margin-left: 5rem;
+  // margin-left: 5rem;
 }
 
 #product-tabs ul {
@@ -538,6 +542,39 @@ del {
 .slick-arrow::before {
   color: black;
 }
+
+// .custom-dropdown {
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .dropdown-toggle {
+//   background-color: #f0f0f0;
+//   border: 1px solid #ccc;
+//   padding: 8px 12px;
+//   cursor: pointer;
+// }
+
+// .dropdown-menu {
+//   display: none;
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   background-color: white;
+//   border: 1px solid #ccc;
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// .dropdown-menu li {
+//   padding: 8px 12px;
+// }
+
+// .custom-dropdown.is-open .dropdown-menu {
+//   display: block;
+// }
 
 // ----------------------
 // Payment
@@ -733,7 +770,7 @@ p {
 }
 
 .btn {
-  margin-right: 10px !important;
+  // margin-right: 10px !important;
   border-radius: 0;
 }
 
@@ -1042,6 +1079,21 @@ hr {
   border-radius: 10px;
 }
 
+// .carousel-inner img {
+//   width: 100%;
+//   height: auto;
+//   object-fit: cover;
+// }
+
+// /* Media query for screens up to 712px width */
+// @media screen and (max-width: 712px) {
+//   .carousel-inner img {
+//     height: 216px;
+//     /* Adjust as needed */
+//     object-fit: cover;
+//   }
+// }
+
 .carousel-nav-icon {
   width: 30px;
   margin-left: 25px;
@@ -1301,6 +1353,8 @@ hr {
 
 // ALL PRODUCTS PAGE
 
+
+
 .card-img-all {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1324,26 +1378,89 @@ hr {
   border-radius: 4px;
 }
 
+@media screen and (max-width:1200px) {
+  .all-btn {
+    flex-direction: column;
+  }
+}
+
 .all-btn a:hover {
   // filter: invert(100%);
   transition: all 0.4s ease-in-out;
 }
 
 .buy-button {
-  margin-left: 1rem;
+  // margin-left: 1rem;
   background-color: #ff2828 !important;
   color: white !important;
 }
 
 .card-filter {
   padding-top: 1rem;
-  background-color: #e2e2e2;
+  // background-color: #e2e2e2;
   border-radius: 6px;
 }
 
 .card-filter h3 {
   padding-left: 10px;
 }
+
+// .panel {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 300px;
+//   height: 100vh;
+//   overflow: auto;
+//   background: #aeb7bc;
+//   transition: left 1s;
+// }
+
+// .dropdown:first-child {
+//   border: none;
+//   margin-top: 30px;
+// }
+
+// .dropdown>input[type="checkbox"] {
+//   display: none;
+// }
+
+// .dropdown>label {
+//   display: block;
+//   padding: 10px 15px;
+//   font-size: 1.8rem;
+//   cursor: pointer;
+//   border-top: 1px solid #8c8c8c;
+//   border-bottom: 1px solid #8c8c8c;
+//   transition: background 0.3s;
+//   background: #8181a8;
+//   user-select: none;
+// }
+
+// .dropdown>label:hover {
+//   background: #76768c;
+// }
+
+// .dropdown>ul {
+//   margin: 0;
+//   position: relative;
+//   font-size: 1.6rem;
+//   background: #8f8fa1;
+//   list-style: none;
+//   max-height: 0;
+//   overflow-y: hidden;
+//   transition: max-height 0.5s ease-in-out;
+//   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+// }
+
+// .dropdown>input[type="checkbox"]:checked~ul {
+//   max-height: 1000px;
+// }
+
+// .dropdown:nth-child(2n)>label {
+//   background: #7151a8;
+// }
 
 // bmi
 #bmi {

@@ -1,7 +1,7 @@
-import {useLoaderData} from '@remix-run/react';
-import {useEffect} from 'react';
+import { useLoaderData } from '@remix-run/react';
+import { useEffect } from 'react';
 
-const TopSelling = ({collection}) => {
+const TopSelling = ({ collection }) => {
   useEffect(() => {
     console.log(collection);
   }, []);
@@ -31,7 +31,7 @@ const TopSelling = ({collection}) => {
                       alt={product.variants.nodes[0].image?.altText || ''}
                     />
                   </div>
-                  <div className="col featured-details">
+                  <div className="col featured-details ">
                     <h2>{product.title}</h2>
                     <h4>
                       {product.variants.nodes[0].compareAtPrice && (

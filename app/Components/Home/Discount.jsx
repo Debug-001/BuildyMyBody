@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Carousel = () => {
 	const [carouselItems, setCarouselItems] = useState([
 		{
-			src: "/img/discount-banner1.jpg",
+			src: "/img/Banner_1.jpg",
 			alt: "First slide",
 			active: true,
 		},
@@ -18,9 +18,9 @@ const Carousel = () => {
 			active: false,
 		},
 	]);
-	
+
 	return (
-		<section>		
+		<section>
 			<div
 				id="carouselExampleControls3"
 				className="carousel slide"
@@ -36,8 +36,8 @@ const Carousel = () => {
 						</div>
 					))}
 				</div>
-				
-			{/* </div> */}
+
+				{/* </div> */}
 			</div>
 		</section>
 	);
