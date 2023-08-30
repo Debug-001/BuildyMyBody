@@ -7,7 +7,7 @@ const TopSelling = ({ collection }) => {
   }, []);
   return (
     <>
-      <section id="featured-section">
+      <section id="featured-section" style={{ background: 'black' }}>
         <div
           id="carouselExampleControls1"
           className="carousel slide "

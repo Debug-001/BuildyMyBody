@@ -51,6 +51,9 @@ h5 {
 
 .featured-img {
   width: 300px;
+  background: black;
+  transform: scale(1.3);
+  object-fit: cover;
 }
 
 .carousel h1 {
@@ -63,7 +66,6 @@ h5 {
 #fitness-car h1 {
   color: #ff2828;
   font-weight: 900 !important;
-  margin-top: 5rem;
 }
 
 .featured-details {
@@ -121,8 +123,7 @@ h5 {
 }
 
 .featured-btn {
-  background: white !important;
-  color: black;
+  color: white;
   margin-top: 1rem;
   width: 10rem;
   border-radius: 4px !important;
@@ -223,7 +224,7 @@ h5 {
 
 .card-img-trending {
   border-radius: 6px;
-  background-color: #6c6c6c;
+  transform: scale(0.8);
 }
 
 .brands-slider {
@@ -253,11 +254,6 @@ h5 {
   margin-top: 4.5rem;
 }
 
-#verify {
-  margin-top: 7rem;
-  margin-bottom: 5rem;
-}
-
 #trending-products {
   background-color: #242424;
 }
@@ -283,7 +279,7 @@ h5 {
 
 .btn {
   background: none;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .text-2 {
@@ -496,10 +492,6 @@ del {
 
 .sptxt p {
   margin-top: 1rem;
-}
-
-.slick-arrow::before {
-  color: black;
 }
 
 #firstrow {
@@ -835,7 +827,7 @@ p {
 
 .contact-logo {
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .contact-a {
@@ -844,12 +836,13 @@ p {
 }
 
 .try:hover {
-  transform: scale(1.2);
-  background: #1d022f;
+  transform: scale(1.1);
+  background: black;
+  border-color: white;
 }
 
 .try {
-  background: #1d022f;
+  border: 1px solid white;
 }
 
 .contact-touch {
@@ -886,11 +879,12 @@ textarea::placeholder {
 }
 
 .contact-button {
-  background: #1d022f;
+  border: 1px solid white;
 }
 
 .contact-button:hover {
-  transform: scaleY(1.1);
+  transform: scale(1.1);
+  background: #ff2828;
 }
 
 #protien-name {
@@ -986,6 +980,45 @@ hr {
   border-radius: 10px;
 }
 
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    position: relative;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  .nav-item:hover .submenu {
+    display: block;
+  }
+  .submenu-content {
+    padding: 10px;
+    max-height: max-content;
+  }
+  .submenu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* Add spacing between rows */
+  }
+  .submenu-category {
+    flex-basis: calc(50% - 10px);
+    /* Adjust width for two categories per row */
+  }
+  .submenu a {
+    color: black;
+    text-decoration: none;
+  }
+}
 .carousel-nav-icon {
   width: 30px;
   margin-left: 25px;
@@ -1234,12 +1267,12 @@ hr {
 .card-img-all {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #6c6c6c;
   border-radius: 6px;
 }
 
 .card-img-all img {
   width: 100%;
+  height: 100%;
 }
 
 #all-products h1 {
@@ -1264,13 +1297,25 @@ hr {
 }
 
 .buy-button {
-  background-color: #ff2828 !important;
+  border: 1px solid white;
   color: white !important;
+}
+
+.buy-button:hover {
+  background-color: #ff2828;
 }
 
 .card-filter {
   padding-top: 1rem;
   border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .card-filter {
+    width: 100%;
+    /* Make the filter full width on smaller screens */
+    padding: 15px;
+    /* Add some padding for better spacing */
+  }
 }
 
 .card-filter h3 {

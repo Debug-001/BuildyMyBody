@@ -47,20 +47,21 @@ export default function Products() {
   return (
     <>
       <Navbar />
-      <section>
-        <div className="container   d-flex  mt-5">
-          <div className="row">
+      <section style={{ background: 'black' }} >
+        <div className="container   d-flex  " >
+          <div className="row mt-5">
             <div className="col-3">
               <div className="card-filter">
                 <div className="card-content-all">
-                  <h3 className="font-weight-bolder">
-                    <FcFilledFilter size={30} /> &nbsp;Filter per <br /> your needs
+                  <h3 className="font-weight-bolder ">
+
+                    <FcFilledFilter size={30} /> <span style={{ color: 'white' }}>Filter as per <br />  your needs</span>
                   </h3>
                   {/* <hr /> */}
                   {/* <p className="card-text">Rest filters, price,range etc.</p> */}
                   <div className='border border-dark ' >
 
-                    <h1 className='text-center'>Categories</h1>
+                    <h1 className='text-center' style={{ color: 'white' }}>Categories</h1>
                     <hr className='mt-0' />
                     <div className="dropdown show ">
                       <a className="btn btn-secondary  dropdown-toggle text-dark w-100" style={{ backgroundColor: 'white' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -219,7 +220,7 @@ export default function Products() {
                   <br />
                   <br />
                   <div className="product-top-sellers border border-dark">
-                    <h1 className='text-center'>Top Sellers</h1>
+                    <h1 className='text-center' style={{ color: 'white' }}>Top Sellers</h1>
                     <hr className="mt-0" />
                     {/* <BrandCa>raousel /> */}
                     {/* <FeaturedProducts collections={data.collections} /> */}
@@ -228,14 +229,14 @@ export default function Products() {
                   <br />
                   <br />
                   <div className="product-authencity border border-dark">
-                    <h2 className='text-center'>Authencity Matters</h2>
+                    <h2 className='text-center' style={{ color: 'white' }}>Authencity Matters</h2>
                     <hr className="mt-0" />
 
-                    <p className='text-center'>
+                    <p className='text-center' style={{ color: 'white' }}>
                       The risk of receiving a counterfeit product increases when customer buys it from a reseller as the product moves from Importer to distributor then retailer and then to the reseller. But here at BuildMyBody we have reduced this gap between the importer and the customer. That's how BuildMyBody maintains the quality and authenticity till customer receives the final product.
                     </p>
                     <a href="">
-                      <p className='text-center mt-3'> Read More</p>
+                      <p className='text-center mt-3' style={{ color: 'white' }}> Read More</p>
                     </a>
                   </div>
                 </div>

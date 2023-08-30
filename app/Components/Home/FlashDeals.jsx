@@ -1,9 +1,9 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
-const FlashDeals = ({collection}) => {
+const FlashDeals = ({ collection }) => {
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
   const [nav2, setNav2] = useState();
@@ -17,8 +17,8 @@ const FlashDeals = ({collection}) => {
 
   return (
     <>
-      <section id="trending-products">
-        <div className="container mb-5 py-5">
+      <section id="trending-products" style={{ background: 'black' }}>
+        <div className="container  py-5">
           <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
             <em>Trending Products</em>
           </h1>
@@ -173,13 +173,13 @@ const FlashDeals = ({collection}) => {
                   {products.nodes.map((product) => (
                     <div className="card" id="trend-card" key={product.id}>
                       <div className="d-flex justify-content-center">
-                        {/* <img
+                        <img
                           className="card-img-trending"
                           src={product.variants.nodes[0].image?.url || ''}
                           alt={product.variants.nodes[0].image?.altText}
-                        /> */}
+                        />
                       </div>
-                      <div className="card-content">
+                      <div className="card-content ml-3 mr-3">
                         <h5 className="d-flex justify-content-center mt-5">
                           {product.title}
                         </h5>

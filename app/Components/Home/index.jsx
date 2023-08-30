@@ -21,10 +21,12 @@ const Home = ({ data }) => {
       {/* <Discount /> */}
       {/* <br /> */}
       <TopSelling collection={data.collection} />
-      <Verify />
-      <FlashDeals collection={data.flashDeals} />
-      <BrandCaraousel />
       <Discount />
+
+      <FlashDeals collection={data.flashDeals} />
+
+      <BrandCaraousel />
+      <Verify />
       <Footer />
     </>
   );

@@ -20,19 +20,20 @@ const Carousel = () => {
 	]);
 
 	return (
-		<section>
+		<section style={{ background: 'black' }}>
 			<div
 				id="carouselExampleControls3"
-				className="carousel slide"
+				className="carousel slide container"
 				data-ride="carousel"
+
 			>
-				<div className="carousel-inner">
+				<div className="carousel-inner " >
 					{carouselItems.map((item, index) => (
 						<div
 							key={index}
 							className={`carousel-item ${item.active ? "active" : ""}`}
 						>
-							<img className="d-block w-100 carousel-discount-img" src={item.src} alt={item.alt} />
+							<img className="d-block w-100 carousel-discount-img rounded" src={item.src} alt={item.alt} />
 						</div>
 					))}
 				</div>

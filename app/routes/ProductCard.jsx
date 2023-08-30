@@ -14,12 +14,14 @@ export default function ProductCard({ product }) {
             <Image
               data={product.variants.nodes[0].image}
               alt={product.title}
+              sizes="(max-width: 768px) 100vw, 50vw"
+
               className="all-img"
             />{' '}
           </div>
           <div className="card-content-all mt-4">
-            <h3 className="font-weight-bolder"> {product.title}</h3>
-            <p className="card-text mt-3">
+            <h3 className="font-weight-bolder text-center" style={{ color: 'white' }}> {product.title}</h3>
+            <p className="card-text mt-3 text-center">
               <Money withoutTrailingZeros data={price} />
               {isDiscounted && (
                 <Money

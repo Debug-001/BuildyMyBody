@@ -20,7 +20,8 @@
 
 
 .logo_img {
-  width: 200px;
+  width: 139px;
+  transform: scale(1.4);
   /* margin-left: 3rem; */
 }
 
@@ -33,7 +34,7 @@
 }
 
 .icon-search a {
-  color: #000000 !important;
+  color: white !important;
 }
 
 .icon-search a:hover {
@@ -42,14 +43,25 @@
 
 .icon-cart {
   padding-right: 3rem;
+  color: white;
 }
 
 .icon-cart a {
-  color: #000000;
+  color: white;
 }
 
 .icon-cart a:hover {
   color: #ff0000;
+}
+
+@media screen and (max-width:575px) {
+  .custom-search {
+    display: none;
+  }
+
+  .custom-flex {
+    display: flex;
+  }
 }
 
 .search-bar {
@@ -463,7 +475,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
   /* overflow-y: auto; */
-  max-height: 400px;
+  max-height: max-content;
 }
 
 .nav-item:hover .submenu {
@@ -482,6 +494,7 @@
   text-decoration: none;
   display: block;
   transition: background-color 0.3s;
+  /* z-index: 1000; */
 }
 
 .submenu-item:hover {

@@ -1,9 +1,9 @@
-import {Link, useLoaderData} from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
-const FeaturedProducts = ({collections}) => {
+const FeaturedProducts = ({ collections }) => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const slider1 = useRef(null);
@@ -15,7 +15,7 @@ const FeaturedProducts = ({collections}) => {
   }, []);
 
   return (
-    <section id="product-card">
+    <section id="product-card " style={{ background: 'black' }}>
       <div className="container " id="cgap">
         <h1 className="d-flex justify-content-center py-5 font-weight-bold custom-heading3">
           <em>SHOP BY CATEGORIES</em>
@@ -59,7 +59,7 @@ const FeaturedProducts = ({collections}) => {
           {collections.nodes.map((collection) => (
             <div
               className="card"
-              style={{width: '18rem', paddingBottom: ''}}
+              style={{ width: '18rem', paddingBottom: '' }}
               id="cgap"
               key={collection.id}
             >
