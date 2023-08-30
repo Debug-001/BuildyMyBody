@@ -108,17 +108,20 @@ export function CartSummary({cost, checkoutUrl}) {
           My Order Summary
         </p>
         <p className="text-start d-flex justify-content-between mt-4" id="mrp">
-          Total Mrp <span>Rs 16,097</span>
-        </p>
-        <p className="text-start d-flex justify-content-between text-secondary mt-2">
-          Total Discount <span className="text-success">-Rs 16,097</span>{' '}
-        </p>
-        <hr className="bg-light mt-3 " />
-        <p className="text-start d-flex justify-content-between  text-secondary ">
-          Total{' '}
+          Subtotal{' '}
           <span>
             {cost?.subtotalAmount?.amount ? (
               <Money data={cost?.subtotalAmount} />
+            ) : (
+              '-'
+            )}
+          </span>{' '}
+        </p>
+        <p className="text-start d-flex justify-content-between mt-4" id="mrp">
+          Total{' '}
+          <span className="text-success">
+            {cost?.totalAmount?.amount ? (
+              <Money data={cost?.totalAmount} />
             ) : (
               '-'
             )}
@@ -131,9 +134,6 @@ export function CartSummary({cost, checkoutUrl}) {
         >
           Checkout
         </Link>
-        <p className="text-center mt-3 py-1 " id="savings-2">
-          You will save 4,399 & earn 2234 MB Cash * on this order
-        </p>
       </div>
     </>
   );

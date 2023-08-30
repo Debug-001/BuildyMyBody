@@ -40,7 +40,7 @@ export async function loader({context}) {
 
 const Cart = () => {
   const {cart} = useLoaderData();
-
+  console.log(cart);
   const [btnClass, setBtnClass] = useState('transparent');
   function toggleColor() {
     // const [btnClass, setBtnClass] = useState('blue-color');
@@ -75,17 +75,6 @@ const Cart = () => {
               className="col h-100 col-12 col-sm-12 col-md-12 col-lg-7"
               id="leftside"
             >
-              <div className="card mt-0">
-                <div className="row d-flex justify-content-center">
-                  <div className="col-12">
-                    <ul id="progressbar" className="text-center">
-                      <li className="step0"></li>
-                      <li className="step0"></li>
-                      <li className="step0"></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
               {cart?.totalQuantity > 0 && (
                 <CartLineItems linesObj={cart.lines} />
               )}
@@ -96,120 +85,6 @@ const Cart = () => {
                 cost={cart?.cost || 0}
                 checkoutUrl={cart?.checkoutUrl || ''}
               />
-
-              <div className="card-1 p-1 mt-3 px-2 font-weight-bold">
-                <div className="col h-100 mt-2">
-                  <p className="text-start">Have a Coupon?</p>
-                  <input
-                    type="email"
-                    className="form-control input mb-3 mt-3"
-                    id="inputEmail"
-                    placeholder="Enter code"
-                  />
-                </div>
-              </div>
-
-              <div className="card-1 mt-3 mb-5">
-                {/* <div className="col"> */}
-                <div className="container-fullwidth text-center">
-                  <div className="row d-flex align-items-center">
-                    <div className="col-1 d-flex align-items-center justify-content-center">
-                      <a
-                        href="#carouselExampleIndicators"
-                        role="button"
-                        data-slide="prev"
-                      >
-                        <div className="carousel-nav-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 129 129"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
-                          >
-                            <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z" />
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                    <div className="col-10">
-                      {/*Start carousel*/}
-                      <div
-                        id="carouselExampleIndicators"
-                        className="carousel slide"
-                        data-ride="carousel"
-                      >
-                        <div className="carousel-inner">
-                          <div className="carousel-item active">
-                            <div className="row">
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp2.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              ></div>
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp2.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              ></div>
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp3.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              ></div>
-                            </div>
-                          </div>
-                          <div className="carousel-item">
-                            <div className="row">
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp4.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              >
-                                <img src="" alt="" />
-                              </div>
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp5.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              ></div>
-                              <div
-                                style={{
-                                  backgroundImage: 'url("/img/tp6.jpg")',
-                                  mixBlendMode: 'multiply',
-                                }}
-                                className="col-12 col-md d-flex align-items-center justify-content-center"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      {/*End carousel*/}
-                    </div>
-                    <div className="col-1 d-flex align-items-center justify-content-center">
-                      <a href="#carouselExampleIndicators" data-slide="next">
-                        <div className="carousel-nav-icon2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 129 129"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
-                          >
-                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z" />
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -223,31 +98,172 @@ const Cart = () => {
 
 export default Cart;
 
-// export default function Cart() {
-
-//   if (cart?.totalQuantity > 0)
-//     return (
-//       <div className="w-full max-w-6xl mx-auto pb-12 grid md:grid-cols-2 md:items-start gap-8 md:gap-8 lg:gap-12">
-//         <div className="flex-grow md:translate-y-4">
-//           <CartLineItems linesObj={cart.lines} />
-//         </div>
-//         <div className="fixed left-0 right-0 bottom-0 md:sticky md:top-[65px] grid gap-6 p-4 md:px-6 md:translate-y-4 bg-gray-100 rounded-md w-full">
-//           <CartSummary cost={cart.cost} />
-//           <CartActions checkoutUrl={cart.checkoutUrl} />
-//         </div>
-//       </div>
-//     );
-//   return (
-//     <div className="flex flex-col space-y-7 justify-center items-center md:py-8 md:px-12 px-4 py-6 h-screen">
-//       <h2 className="whitespace-pre-wrap max-w-prose font-bold text-4xl">
-//         Your cart is empty
-//       </h2>
-//       <Link
-//         to="/"
-//         className="inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none bg-black text-white w-full"
-//       >
-//         Continue shopping
-//       </Link>
-//     </div>
-//   );
+// {
+//     "id": "gid://shopify/Cart/c1-2ebcd576cecfa490ccf003b3bb3f36d5",
+//     "checkoutUrl": "https://buildmybodytest.myshopify.com/cart/c/c1-2ebcd576cecfa490ccf003b3bb3f36d5",
+//     "totalQuantity": 9,
+//     "buyerIdentity": {
+//         "countryCode": "US",
+//         "customer": null,
+//         "email": null,
+//         "phone": null
+//     },
+//     "lines": {
+//         "edges": [
+//             {
+//                 "node": {
+//                     "id": "gid://shopify/CartLine/15c99f61-95e1-4eee-8c30-9b28c3ff298a?cart=c1-2ebcd576cecfa490ccf003b3bb3f36d5",
+//                     "quantity": 7,
+//                     "attributes": [],
+//                     "cost": {
+//                         "totalAmount": {
+//                             "amount": "63.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "amountPerQuantity": {
+//                             "amount": "9.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "compareAtAmountPerQuantity": null
+//                     },
+//                     "merchandise": {
+//                         "id": "gid://shopify/ProductVariant/45792784089376",
+//                         "availableForSale": true,
+//                         "compareAtPrice": null,
+//                         "price": {
+//                             "currencyCode": "USD",
+//                             "amount": "9.0"
+//                         },
+//                         "requiresShipping": true,
+//                         "title": "Chocolate / 1lb",
+//                         "image": {
+//                             "id": "gid://shopify/ProductImage/42117652087072",
+//                             "url": "https://cdn.shopify.com/s/files/1/0794/9395/5872/products/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg?v=1690103536",
+//                             "altText": "Top and bottom view of a snowboard. The top view shows abstract circles and lines in shades of teal.\n          The bottom view shows abstract circles and lines in shades of purple and blue with the text “SHOPIFY” in a\n          sans serif typeface on top.",
+//                             "width": 1600,
+//                             "height": 1600
+//                         },
+//                         "product": {
+//                             "handle": "the-complete-snowboard",
+//                             "title": "The Complete Snowboard",
+//                             "id": "gid://shopify/Product/8456567423264"
+//                         },
+//                         "selectedOptions": [
+//                             {
+//                                 "name": "Flavor",
+//                                 "value": "Chocolate"
+//                             },
+//                             {
+//                                 "name": "Weight",
+//                                 "value": "1lb"
+//                             }
+//                         ]
+//                     }
+//                 }
+//             },
+//             {
+//                 "node": {
+//                     "id": "gid://shopify/CartLine/6f85c509-4ff3-4c84-8eab-a39e5cf7a7bd?cart=c1-2ebcd576cecfa490ccf003b3bb3f36d5",
+//                     "quantity": 1,
+//                     "attributes": [],
+//                     "cost": {
+//                         "totalAmount": {
+//                             "amount": "8.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "amountPerQuantity": {
+//                             "amount": "8.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "compareAtAmountPerQuantity": null
+//                     },
+//                     "merchandise": {
+//                         "id": "gid://shopify/ProductVariant/45733373804832",
+//                         "availableForSale": true,
+//                         "compareAtPrice": null,
+//                         "price": {
+//                             "currencyCode": "USD",
+//                             "amount": "8.0"
+//                         },
+//                         "requiresShipping": true,
+//                         "title": "Default Title",
+//                         "image": {
+//                             "id": "gid://shopify/ProductImage/42117652742432",
+//                             "url": "https://cdn.shopify.com/s/files/1/0794/9395/5872/products/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg?v=1690103536",
+//                             "altText": "Top and bottom view of a snowboard. The top view shows an illustration with varied outlined shapes\n          in black. The bottom view shows a black box character with an H pointing, and surrounded by black outlined\n          illustrative elements.",
+//                             "width": 1600,
+//                             "height": 1600
+//                         },
+//                         "product": {
+//                             "handle": "the-multi-managed-snowboard",
+//                             "title": "The Multi-managed Snowboard",
+//                             "id": "gid://shopify/Product/8456567849248"
+//                         },
+//                         "selectedOptions": [
+//                             {
+//                                 "name": "Title",
+//                                 "value": "Default Title"
+//                             }
+//                         ]
+//                     }
+//                 }
+//             },
+//             {
+//                 "node": {
+//                     "id": "gid://shopify/CartLine/6ed9c20e-e6f7-4f76-999a-baf2c373d251?cart=c1-2ebcd576cecfa490ccf003b3bb3f36d5",
+//                     "quantity": 1,
+//                     "attributes": [],
+//                     "cost": {
+//                         "totalAmount": {
+//                             "amount": "11.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "amountPerQuantity": {
+//                             "amount": "11.0",
+//                             "currencyCode": "USD"
+//                         },
+//                         "compareAtAmountPerQuantity": null
+//                     },
+//                     "merchandise": {
+//                         "id": "gid://shopify/ProductVariant/45733373051168",
+//                         "availableForSale": true,
+//                         "compareAtPrice": null,
+//                         "price": {
+//                             "currencyCode": "USD",
+//                             "amount": "11.0"
+//                         },
+//                         "requiresShipping": true,
+//                         "title": "Default Title",
+//                         "image": null,
+//                         "product": {
+//                             "handle": "the-minimal-snowboard",
+//                             "title": "The Minimal Snowboard",
+//                             "id": "gid://shopify/Product/8456567324960"
+//                         },
+//                         "selectedOptions": [
+//                             {
+//                                 "name": "Title",
+//                                 "value": "Default Title"
+//                             }
+//                         ]
+//                     }
+//                 }
+//             }
+//         ]
+//     },
+//     "cost": {
+//         "subtotalAmount": {
+//             "currencyCode": "USD",
+//             "amount": "82.0"
+//         },
+//         "totalAmount": {
+//             "currencyCode": "USD",
+//             "amount": "82.0"
+//         },
+//         "totalDutyAmount": null,
+//         "totalTaxAmount": null
+//     },
+//     "note": "",
+//     "attributes": [],
+//     "discountCodes": []
 // }
