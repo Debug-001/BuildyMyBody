@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Try from './try';
 import data from './data';
+import First from '../../dist/client/img/first.jpeg'
 
 const Certi = () => {
     // Empty dependency array ensures this effect runs only once after mount
     const [selectedCategory, setSelectedCategory] = useState('Category1');
     const uniqueCategories = [...new Set(data.map(item => item.category))];
+
+    useEffect(() => {
+        const btn = document.getElementById('certi-btn');
+
+        btn.addEventListener('click', function onClick(event) {
+            // 👇️ change background color
+            document.body.style.backgroundColor = 'blue';
+
+            // 👇️ optionally change text color
+            // document.body.style.color = 'white';
+        });
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            btn.removeEventListener('click', onClick);
+        }
+    }, []);
+
+
     return (
 
         <>
@@ -13,7 +33,7 @@ const Certi = () => {
                 <div className="row">
                     <div className="col-4 d-flex flex-column">
                         {/* <button onClick={() => setSelectedCategory('All')}>All</button> */}
-                        <button onClick={() => setSelectedCategory('Category1')} className='p-2' style={{ background: 'black', color: 'white', cursor: 'pointer' }}>
+                        <button onClick={() => setSelectedCategory('Category1')} className='p-2' id='certi-btn' style={{ background: 'black', color: 'white', cursor: 'pointer' }}>
                             <p className='text-left'>Kar Enterprises</p>
                         </button>
                         <button onClick={() => setSelectedCategory('Category2')} className='p-2' style={{ background: 'black', color: 'white', cursor: 'pointer' }}>
@@ -57,9 +77,10 @@ const Certi = () => {
                             .map((item, index) => (
                                 <Try
                                     key={index}
+                                    img={item.img}
                                     email={item.email}
                                     aboutUs={item.aboutUs}
-                                    name={item.name}
+
                                     website={item.website}
                                     phone={item.phone}
                                 />

@@ -173,7 +173,7 @@ function Contact() {
         {/* <Social /> */}
 
       </div>
-      <div className="mt-3"></div>
+
       <Footer />
     </>
   );

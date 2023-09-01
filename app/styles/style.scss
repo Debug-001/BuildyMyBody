@@ -1470,8 +1470,33 @@ hr {
   color: white;
 }
 
-// ALL PRODUCTS PAGE
+.certi-btn {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
 
+.bold {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.bold2 {
+  font-size: 1.2rem;
+
+}
+
+.active-certi-btn {
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+// ALL PRODUCTS PAGE
+.filter-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
 
 .card-img-all {
@@ -1827,4 +1852,47 @@ hr {
   background-color: #f0f0f0;
   border: none;
   cursor: pointer;
+}
+
+
+
+
+
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add some styling for the dropdown links */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+/* Add hover effect for the dropdown links */
+.dropdown-content a:hover {
+  background-color: #ddd;
 }

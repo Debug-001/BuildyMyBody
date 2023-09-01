@@ -476,13 +476,8 @@
   max-height: max-content;
 }
 
-@media screen and (max-width:1171px) {
-  .cust {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid: 1fr 1fr;
-  }
-}
+
+
 
 @media screen and (max-width:1200px) {
   .sub2 {
@@ -493,6 +488,12 @@
 @media screen and (max-width:1048px) {
   .sub2 {
     left: 17%;
+  }
+}
+
+@media screen and (max-width:1172px) {
+  .sub2 {
+    left: 15%;
   }
 }
 

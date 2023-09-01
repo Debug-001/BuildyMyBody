@@ -676,14 +676,12 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
                             </NavLink>
+
                             <NavLink to={'/'}>
-                              <p className='text-center'><img src='' className='w-50' alt="" /></p>
+                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
                             </NavLink>
                             <NavLink to={'/'}>
-                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email</p>
-                            </NavLink>
-                            <NavLink to={'/'}>
-                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number</p>
+                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
                             </NavLink>
                             {/* Add more contact options if needed */}
                           </div>
@@ -817,14 +815,12 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
                             </NavLink>
+
                             <NavLink to={'/'}>
-                              <p className='text-center'><img src='' className='w-50' alt="" /></p>
+                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
                             </NavLink>
                             <NavLink to={'/'}>
-                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email</p>
-                            </NavLink>
-                            <NavLink to={'/'}>
-                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number</p>
+                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
                             </NavLink>
                             {/* Add more contact options if needed */}
                           </div>
