@@ -246,7 +246,7 @@ function Blog() {
               </p>
             </div>
           </div> */}
-          <div className="mt-3"></div>
+          <br />
         </div>
 
       </div>

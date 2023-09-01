@@ -1,8 +1,8 @@
-import {BsInstagram} from 'react-icons/bs';
-import {CiFacebook} from 'react-icons/ci';
-import {CiTwitter} from 'react-icons/ci';
-import {AiOutlineYoutube} from 'react-icons/ai';
-import {Link} from '@remix-run/react';
+import { BsInstagram } from 'react-icons/bs';
+import { CiFacebook } from 'react-icons/ci';
+import { CiTwitter } from 'react-icons/ci';
+import { AiOutlineYoutube } from 'react-icons/ai';
+import { Link } from '@remix-run/react';
 
 const Footer = () => {
   return (
@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6  footer-details">
               <div className=" company-footer">
                 <h6 className=" ">COMPANY</h6>
-                <Link href="/shippingpolicy">
+                <Link to="/shippingPolicy">
                   <p>Shipping Policy</p>
                 </Link>
                 <Link to="/terms">

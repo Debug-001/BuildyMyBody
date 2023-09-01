@@ -214,14 +214,14 @@ export default function Products() {
                       </a>
                     </div>
                   </div>
-
-
-
                   <br />
                   <br />
                   <div className="product-top-sellers border border-dark">
                     <h1 className='text-center' style={{ color: 'white' }}>Top Sellers</h1>
                     <hr className="mt-0" />
+                    <div>
+                      {/* <FeaturedProducts collections={data.collections} /> */}
+                    </div>
                     {/* <BrandCa>raousel /> */}
                     {/* <FeaturedProducts collections={data.collections} /> */}
                   </div>
@@ -279,6 +279,36 @@ export default function Products() {
         </div>
       </section>
       <Footer />
+
+      <script>
+        {`
+          document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            
+            dropdowns.forEach((dropdown, index) => {
+              const toggleButton = dropdown.querySelector(".dropdown-toggle");
+              const content = dropdown.querySelector(".dropdown-content");
+            
+              toggleButton.addEventListener("click", () => {
+                dropdown.classList.toggle("active");
+                const isActive = dropdown.classList.contains("active");
+            
+                if (isActive) {
+                  const contentHeight = content.offsetHeight;
+                  if (index < dropdowns.length - 1) {
+                    dropdowns[index + 1].style.marginTop = contentHeight + "px";
+                  }
+                } else {
+                  dropdowns[index + 1].style.marginTop = "0";
+                }
+              });
+            });
+          });
+        `}
+      </script>
+
+
+
     </>
   );
 }

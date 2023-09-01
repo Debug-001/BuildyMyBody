@@ -35,9 +35,10 @@ export default function ProductCard({ product }) {
           </div>
         </div>
       </Link>
-      <div className="all-btn mt-3 d-flex flex-md-column flex-lg-row">
+      <div className="all-btn mt-3 d-flex flex-lg-column pro-clr ">
         <ProductForm variantId={product.variants?.nodes[0].id} />
-        <a href="/buy" className="buy-button ml-lg-4 ml-md-0 ml-sm-0">
+
+        <a href="/buy" className="buy-button  text-center mt-1">
           Buy Now
         </a>
       </div>
