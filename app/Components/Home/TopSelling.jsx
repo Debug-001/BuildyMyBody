@@ -3,9 +3,6 @@ import {useEffect} from 'react';
 import ProductForm from '../Product/ProductForm';
 
 const TopSelling = ({collection}) => {
-  useEffect(() => {
-    console.log(collection);
-  }, []);
   return (
     <>
       <section id="featured-section">
@@ -32,7 +29,7 @@ const TopSelling = ({collection}) => {
                       alt={product.variants.nodes[0].image?.altText || ''}
                     />
                   </div>
-                  <div className="col featured-details">
+                  <div className="col featured-details ">
                     <h2>{product.title}</h2>
                     <h4>
                       {product.variants.nodes[0].compareAtPrice && (

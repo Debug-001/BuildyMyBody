@@ -51,6 +51,9 @@ h5 {
 
 .featured-img {
   width: 300px;
+  background: black;
+  transform: scale(1.3);
+  object-fit: cover;
 }
 
 .carousel h1 {
@@ -63,7 +66,6 @@ h5 {
 #fitness-car h1 {
   color: #ff2828;
   font-weight: 900 !important;
-  margin-top: 5rem;
 }
 
 .featured-details {
@@ -83,11 +85,9 @@ h5 {
   .custom-heading {
     font-size: 1.7rem;
   }
-
   .custom-heading2 {
     font-size: 1.7rem;
   }
-
   .custom-heading3 {
     font-size: 1.7rem;
   }
@@ -96,34 +96,34 @@ h5 {
   .custom-heading2 {
     font-size: 1.8rem;
   }
-
   .custom-heading3 {
     font-size: 2rem;
   }
-
   .custom-heading {
     font-size: 2rem;
   }
 }
 .featured-details h2 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
+  width: 80%;
 }
 
 .carousel-control-prev-icon {
   background-image: url(/img/carousel-left.png);
   filter: invert(100%);
+  transform: scale(2);
 }
 
 .carousel-control-next-icon {
   background-image: url(/img/carousel-right.png);
   filter: invert(100%);
+  transform: scale(2);
 }
 
 .featured-btn {
-  background: white !important;
-  color: black;
+  color: white;
   margin-top: 1rem;
   width: 10rem;
   border-radius: 4px !important;
@@ -170,7 +170,7 @@ h5 {
 }
 
 .card-content p {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .btn-primary {
@@ -224,7 +224,7 @@ h5 {
 
 .card-img-trending {
   border-radius: 6px;
-  background-color: #6c6c6c;
+  transform: scale(0.8);
 }
 
 .brands-slider {
@@ -254,11 +254,6 @@ h5 {
   margin-top: 4.5rem;
 }
 
-#verify {
-  margin-top: 7rem;
-  margin-bottom: 5rem;
-}
-
 #trending-products {
   background-color: #242424;
 }
@@ -284,7 +279,7 @@ h5 {
 
 .btn {
   background: none;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .text-2 {
@@ -336,10 +331,6 @@ h5 {
 .knowmore:hover {
   cursor: pointer;
   color: #ff2828 !important;
-}
-
-#product-tabs {
-  margin-left: 5rem;
 }
 
 #product-tabs ul {
@@ -503,12 +494,8 @@ del {
   margin-top: 1rem;
 }
 
-.slick-arrow::before {
-  color: black;
-}
-
 #firstrow {
-  background-color: #eaeaea;
+  background-color: rgb(234, 234, 234);
   padding-left: 30px;
 }
 
@@ -535,14 +522,14 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center !important;
-  color: #919191;
+  color: rgb(145, 145, 145);
   padding-top: 1rem;
 }
 
 .total {
   display: flex;
   justify-content: flex-start;
-  color: #919191;
+  color: rgb(145, 145, 145);
 }
 
 .price {
@@ -564,15 +551,15 @@ p {
 
 .mrpprice {
   margin-left: 18rem;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 700 !important;
 }
 
 .card-body {
   display: flex;
   justify-content: flex-start;
-  background-color: #ffffe8;
-  border-color: #ffee00 !important;
+  background-color: rgb(255, 255, 232);
+  border-color: rgb(255, 238, 0) !important;
   border: solid 1.6px;
   margin-bottom: 2.5rem;
 }
@@ -581,7 +568,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #dffef4;
+  background-color: rgb(223, 254, 244);
   padding: 20px 25px 0;
   border: 2.4px solid #2fffc4;
   margin-bottom: 3.5rem;
@@ -628,7 +615,7 @@ p {
 
 .card3 {
   margin-top: 1rem;
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   border: 1px solid black !important;
   font-style: italic;
 }
@@ -698,7 +685,6 @@ p {
 }
 
 .btn {
-  margin-right: 10px !important;
   border-radius: 0;
 }
 
@@ -841,7 +827,7 @@ p {
 
 .contact-logo {
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .contact-a {
@@ -850,12 +836,13 @@ p {
 }
 
 .try:hover {
-  transform: scale(1.2);
-  background: #1d022f;
+  transform: scale(1.1);
+  background: black;
+  border-color: white;
 }
 
 .try {
-  background: #1d022f;
+  border: 1px solid white;
 }
 
 .contact-touch {
@@ -892,11 +879,12 @@ textarea::placeholder {
 }
 
 .contact-button {
-  background: #1d022f;
+  border: 1px solid white;
 }
 
 .contact-button:hover {
-  transform: scaleY(1.1);
+  transform: scale(1.1);
+  background: #ff2828;
 }
 
 #protien-name {
@@ -914,7 +902,7 @@ textarea::placeholder {
 
 #savings {
   font-size: 0.8rem;
-  color: #39d1c6;
+  color: rgb(57, 209, 198);
 }
 
 #savings-2 {
@@ -974,8 +962,8 @@ hr {
 }
 
 .num {
-  border-left: 2px solid #777575;
-  border-right: 2px solid #777575;
+  border-left: 2px solid rgb(119, 117, 117);
+  border-right: 2px solid rgb(119, 117, 117);
 }
 
 #leftside {
@@ -988,10 +976,49 @@ hr {
 }
 
 .card-1 {
-  background: #f4f2f2;
+  background: rgb(244, 242, 242);
   border-radius: 10px;
 }
 
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    position: relative;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  .nav-item:hover .submenu {
+    display: block;
+  }
+  .submenu-content {
+    padding: 10px;
+    max-height: max-content;
+  }
+  .submenu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* Add spacing between rows */
+  }
+  .submenu-category {
+    flex-basis: calc(50% - 10px);
+    /* Adjust width for two categories per row */
+  }
+  .submenu a {
+    color: black;
+    text-decoration: none;
+  }
+}
 .carousel-nav-icon {
   width: 30px;
   margin-left: 25px;
@@ -1078,7 +1105,7 @@ hr {
 }
 
 .address_subtitle_text {
-  color: #6e6e6e;
+  color: rgb(110, 110, 110);
   padding-right: 10rem;
 }
 
@@ -1096,7 +1123,7 @@ hr {
   /* margin-left: 3rem; */
   width: 100%;
   padding: 10px;
-  border: 1px dashed #9d9ecb;
+  border: 1px dashed rgb(157, 158, 203);
 }
 
 #delivery_btn {
@@ -1107,21 +1134,21 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 5px 10px 5px 10px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
 }
 
 .del_btn {
   background-color: white;
   color: black;
-  border: black;
+  border: rgb(0, 0, 0);
 }
 
 .payments_btn {
   padding: 9px;
   font-size: 13px;
   font-weight: bolder;
-  background-color: #ffe100;
+  background-color: rgb(255, 225, 0);
   width: 30%;
 }
 
@@ -1240,12 +1267,12 @@ hr {
 .card-img-all {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #6c6c6c;
   border-radius: 6px;
 }
 
 .card-img-all img {
   width: 100%;
+  height: 100%;
 }
 
 #all-products h1 {
@@ -1254,26 +1281,41 @@ hr {
 }
 
 .all-btn a {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px 10px 10px 10px;
   border-radius: 4px;
 }
 
+@media screen and (max-width: 1200px) {
+  .all-btn {
+    flex-direction: column;
+  }
+}
 .all-btn a:hover {
   transition: all 0.4s ease-in-out;
 }
 
 .buy-button {
-  margin-left: 1rem;
-  background-color: #ff2828 !important;
+  border: 1px solid white;
   color: white !important;
+}
+
+.buy-button:hover {
+  background-color: #ff2828;
 }
 
 .card-filter {
   padding-top: 1rem;
-  background-color: #e2e2e2;
   border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .card-filter {
+    width: 100%;
+    /* Make the filter full width on smaller screens */
+    padding: 15px;
+    /* Add some padding for better spacing */
+  }
 }
 
 .card-filter h3 {
@@ -1305,7 +1347,7 @@ hr {
 }
 
 .place-text input::placeholder {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .bmi-result {
@@ -1457,15 +1499,12 @@ hr {
   .profile-btn-display {
     display: none;
   }
-
   .profile-btn-display2 {
     display: block;
   }
-
   .profile-btn-display3 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: block;
   }
@@ -1474,7 +1513,6 @@ hr {
   .profile-btn-display2 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: none;
   }

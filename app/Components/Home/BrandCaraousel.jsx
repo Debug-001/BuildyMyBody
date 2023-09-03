@@ -1,6 +1,6 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
 const BrandCaraousel = () => {
@@ -16,7 +16,7 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car">
+      <section id="fitness-car" style={{ background: 'black' }}>
         <div className="container">
           <h1 className="fitnessarticel d-flex justify-content-center font-weight-bold custom-heading">
             <em>FITNESS ARTICLES</em>
@@ -79,7 +79,7 @@ const BrandCaraousel = () => {
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: 'black'}}
+                    style={{ color: 'white' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -105,7 +105,7 @@ const BrandCaraousel = () => {
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: 'black'}}
+                    style={{ color: 'white' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -130,7 +130,7 @@ const BrandCaraousel = () => {
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: 'black'}}
+                    style={{ color: 'white' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -155,7 +155,7 @@ const BrandCaraousel = () => {
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: 'black'}}
+                    style={{ color: 'white' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -172,7 +172,7 @@ const BrandCaraousel = () => {
         </div>
       </section>
 
-      <section id="brand-car">
+      <section id="brand-car" style={{ background: 'black' }}>
         <div className="container mt-5">
           <h1 className="d-flex font-weight-bold justify-content-center custom-heading">
             <em>BRANDS</em>
