@@ -36,12 +36,22 @@ const Navbar = () => {
     },
     {
       text: 'Certification',
-      link: '/certificate',
+      link: '/certificates',
       active: true,
     },
     {
       text: 'Authenticity',
       link: '/authenticity',
+      active: true,
+    },
+    {
+      text: 'filter',
+      link: '/filter',
+      active: true,
+    },
+    {
+      text: 'certi',
+      link: '/certi',
       active: true,
     },
   ]);
@@ -678,6 +688,27 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
+                  {menuItem.text === 'Contact Us' && isSubMenuVisible && (
+                    <div className="submenu w-50" style={{ background: 'black', color: 'white' }}>
+                      <div className="submenu-content">
+                        <div className="row p-4">
+                          <div className="col mt-2">
+                            <NavLink to={'/'}>
+                              <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
+                            </NavLink>
+
+                            <NavLink to={'/'}>
+                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
+                            </NavLink>
+                            <NavLink to={'/'}>
+                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
+                            </NavLink>
+                            {/* Add more contact options if needed */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -888,8 +919,31 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
+                  {menuItem.text === 'Contact Us' && isSubMenuVisible && (
+                    <div className="w-25 sub2 " style={{ background: 'black', color: 'white' }}>
+                      <div className="submenu-content ">
+                        <div className="row p-4">
+                          <div className="col mt-2">
+                            <NavLink to={'/'}>
+                              <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
+                            </NavLink>
+
+                            <NavLink to={'/'}>
+                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
+                            </NavLink>
+                            <NavLink to={'/'}>
+                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
+                            </NavLink>
+                            {/* Add more contact options if needed */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                 </li>
               ))}
+
             </ul>
 
             {/* <div className="icon-search">

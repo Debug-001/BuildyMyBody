@@ -48,9 +48,9 @@ export default function Products() {
     <>
       <Navbar />
       <section style={{ background: 'black' }} >
-        <div className="container   d-flex  " >
+        <div className="container-fluid d-flex  " >
           <div className="row mt-5">
-            <div className="col-3">
+            <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
               <div className="card-filter">
                 <div className="card-content-all">
                   <h3 className="font-weight-bolder ">
@@ -214,14 +214,14 @@ export default function Products() {
                       </a>
                     </div>
                   </div>
-
-
-
                   <br />
                   <br />
                   <div className="product-top-sellers border border-dark">
                     <h1 className='text-center' style={{ color: 'white' }}>Top Sellers</h1>
                     <hr className="mt-0" />
+                    <div>
+                      {/* <FeaturedProducts collections={data.collections} /> */}
+                    </div>
                     {/* <BrandCa>raousel /> */}
                     {/* <FeaturedProducts collections={data.collections} /> */}
                   </div>
@@ -244,13 +244,27 @@ export default function Products() {
               </div>
             </div>
 
-            <div className="col-9 " id="all-products">
+
+
+            <div className="col-lg-9 col-md-12 " id="all-products">
               <h1
                 style={{ color: '#ff2828' }}
                 className="d-flex justify-content-center align-items-center"
               >
                 <em>{collection.title}</em>
               </h1>
+
+              <div className="col d-lg-none">
+                <nav class="navbar navbar-expand-lg navbar-light d-lg-none d-flex justify-content-around">
+                  {/* <a class="navbar-brand text-light" href="#">Navbar</a> */}
+                  <a class="nav-link text-light filter-text" href="#">Filter <span class="sr-only">(current)</span></a>
+                  <a class="nav-link text-light filter-text" href="#">Authencity</a>
+                  {/* <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button> */}
+
+                </nav>
+              </div>
               <Pagination connection={collection.products}>
                 {({ nodes, NextLink, PreviousLink, isLoading }) => (
                   <>
@@ -260,7 +274,7 @@ export default function Products() {
                       </PreviousLink>
                     </div>
                     <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 mt-5">
+                      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 mt-5">
                         {nodes.map((product) => (
                           <ProductCard key={product.id} product={product} />
                         ))}
@@ -279,6 +293,36 @@ export default function Products() {
         </div>
       </section>
       <Footer />
+
+      <script>
+        {`
+          document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            
+            dropdowns.forEach((dropdown, index) => {
+              const toggleButton = dropdown.querySelector(".dropdown-toggle");
+              const content = dropdown.querySelector(".dropdown-content");
+            
+              toggleButton.addEventListener("click", () => {
+                dropdown.classList.toggle("active");
+                const isActive = dropdown.classList.contains("active");
+            
+                if (isActive) {
+                  const contentHeight = content.offsetHeight;
+                  if (index < dropdowns.length - 1) {
+                    dropdowns[index + 1].style.marginTop = contentHeight + "px";
+                  }
+                } else {
+                  dropdowns[index + 1].style.marginTop = "0";
+                }
+              });
+            });
+          });
+        `}
+      </script>
+
+
+
     </>
   );
 }

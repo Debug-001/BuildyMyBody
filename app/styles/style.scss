@@ -350,12 +350,26 @@ h5 {
 // ----------------------
 // Product
 // ----------------------
+@media screen and (max-width:575px) {
+  .offers {
+    margin-left: 10px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+
+  .pro-none {
+    display: none;
+  }
+}
+
 .off {
   margin-top: 2rem;
 }
 
 .knowmore {
-  color: black !important;
+  // color: black !important;
   font-size: 0.9rem;
   display: flex;
   justify-content: flex-end;
@@ -367,15 +381,24 @@ h5 {
   color: #ff2828 !important;
 }
 
+
+.shopbtn button {
+  color: white;
+}
+
 #product-tabs {
   // margin-left: 5rem;
+}
+
+.pro-clr button {
+  color: white;
 }
 
 #product-tabs ul {
   padding-bottom: 10px;
   padding-top: 3px;
-  background-color: white;
-  border: 1px solid black !important;
+  // background-color: white;
+  // border: 1px solid black !important;
 }
 
 #descr-tab,
@@ -403,7 +426,7 @@ h5 {
 }
 
 .offers p {
-  color: black !important;
+  // color: black !important;
 }
 
 .front {
@@ -507,7 +530,8 @@ del {
   margin-left: -14px;
 }
 
-#secondbtn {
+
+me #secondbtn {
   margin-left: 8rem !important;
 }
 
@@ -1384,14 +1408,17 @@ hr {
 .certificate-heading2 {
   font-size: 1.6rem;
   font-weight: bold;
+  color: white;
 }
 
 .certificate-card-text {
   font-size: 1.1rem;
+  color: white;
 }
 
 .certificate-auth-text {
   font-size: 1.2rem;
+  color: white;
 }
 
 .certificate-auth-text2 {
@@ -1411,8 +1438,65 @@ hr {
   border: 2px solid #2caae2;
 }
 
-// ALL PRODUCTS PAGE
+.product-filter {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
 
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.category-item:hover {
+  font-weight: bold;
+}
+
+.product-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificate-auth-text2 {
+  color: white;
+}
+
+.certi-btn {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.bold2 {
+  font-size: 1.2rem;
+
+}
+
+.active-certi-btn {
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+// ALL PRODUCTS PAGE
+.filter-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 
 
 .card-img-all {
@@ -1435,8 +1519,8 @@ hr {
 .all-btn a {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-  padding: 10px 10px 10px 10px;
-  border-radius: 4px;
+  padding: 6px;
+  // border-radius: 20px;
 }
 
 @media screen and (max-width:1200px) {
@@ -1455,24 +1539,14 @@ hr {
   // background-color: #ff2828 !important;
   border: 1px solid white;
   color: white !important;
+  border-radius: 10px;
 }
 
 .buy-button:hover {
   background-color: #ff2828
 }
 
-.card-filter {
-  padding-top: 1rem;
-  // background-color: #e2e2e2;
-  border-radius: 6px;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    /* Make the filter full width on smaller screens */
-    padding: 15px;
-    /* Add some padding for better spacing */
-  }
-}
 
 .card-filter h3 {
   padding-left: 10px;
@@ -1703,6 +1777,10 @@ hr {
   outline: none;
 }
 
+.pro-clr button {
+  width: 100%;
+}
+
 .profile-input {
   border-top: 0;
   border-left: 0;
@@ -1744,4 +1822,77 @@ hr {
 
 .account-addresses {
   border: 1.2px solid gray;
+}
+
+
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Additional styling */
+.dropdown-toggle {
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add some styling for the dropdown links */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+/* Add hover effect for the dropdown links */
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
