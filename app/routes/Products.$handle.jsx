@@ -1,24 +1,23 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import { useLoaderData } from '@remix-run/react';
-import { json } from '@shopify/remix-oxygen';
-import { FcFilledFilter } from 'react-icons/fc';
+import {useLoaderData} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+import {FcFilledFilter} from 'react-icons/fc';
 import ProductCard from './ProductCard';
-import { Pagination } from '@shopify/hydrogen';
-import { getPaginationVariables } from '@shopify/hydrogen';
+import {Pagination} from '@shopify/hydrogen';
+import {getPaginationVariables} from '@shopify/hydrogen';
 import ProductCarousal from '~/Components/Product/ProductCarousal';
 import BrandCaraousel from '~/Components/Home/BrandCaraousel';
 import TopSelling from '~/Components/Home/TopSelling';
 import FeaturedProducts from '~/Components/Home/FeaturedProducts';
 
-
-export async function loader({ params, context, request }) {
+export async function loader({params, context, request}) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
   });
-  const { handle } = params;
-  const { collection } = await context.storefront.query(COLLECTION_QUERY, {
+  const {handle} = params;
+  const {collection} = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       ...paginationVariables,
       handle,
@@ -27,7 +26,7 @@ export async function loader({ params, context, request }) {
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, { status: 404 });
+    throw new Response(null, {status: 404});
   }
 
   // json is a Remix utility for creating application/json responses
@@ -37,41 +36,52 @@ export async function loader({ params, context, request }) {
   });
 }
 
-
-
 export default function Products() {
-  const { collection } = useLoaderData();
-
-
+  const {collection} = useLoaderData();
 
   return (
     <>
       <Navbar />
-      <section style={{ background: 'black' }} >
-        <div className="container-fluid d-flex  " >
+      <section style={{background: 'black'}}>
+        <div className="container-fluid d-flex  ">
           <div className="row mt-5">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
               <div className="card-filter">
                 <div className="card-content-all">
                   <h3 className="font-weight-bolder ">
-
-                    <FcFilledFilter size={30} /> <span style={{ color: 'white' }}>Filter as per <br />  your needs</span>
+                    <FcFilledFilter size={30} />{' '}
+                    <span style={{color: 'white'}}>
+                      Filter as per <br /> your needs
+                    </span>
                   </h3>
                   {/* <hr /> */}
                   {/* <p className="card-text">Rest filters, price,range etc.</p> */}
-                  <div className='border border-dark ' >
-
-                    <h1 className='text-center' style={{ color: 'white' }}>Categories</h1>
-                    <hr className='mt-0' />
+                  <div className="border border-dark ">
+                    <h1 className="text-center" style={{color: 'white'}}>
+                      Categories
+                    </h1>
+                    <hr className="mt-0" />
                     <div className="dropdown show ">
-                      <a className="btn btn-secondary  dropdown-toggle text-dark w-100" style={{ backgroundColor: 'white' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a
+                        className="btn btn-secondary  dropdown-toggle text-dark w-100"
+                        style={{backgroundColor: 'white'}}
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
                         Sports Nutrition
                       </a>
 
-                      <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <div
+                        className="dropdown-menu"
+                        aria-labelledby="dropdownMenuLink"
+                      >
                         <a
                           className="btn btn-secondary dropdown-toggle w-100 text-dark"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -81,19 +91,24 @@ export default function Products() {
                           Protien
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
                         <hr className="mt-0" />
 
-
                         <a
                           className="btn btn-secondary dropdown-toggle w-100 text-dark"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -103,19 +118,24 @@ export default function Products() {
                           Gainers
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
                         <hr className="mt-0" />
 
-
                         <a
                           className="btn btn-secondary dropdown-toggle text-dark w-100"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -125,18 +145,24 @@ export default function Products() {
                           Pre/Post Workout
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
                         <hr className="mt-0" />
 
                         <a
                           className="btn btn-secondary dropdown-toggle w-100 text-dark"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -146,26 +172,44 @@ export default function Products() {
                           Workout Essesntials
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
                       </div>
 
-                      <hr className='mt-0' />
+                      <hr className="mt-0" />
                     </div>
                     <div className="dropdown show position-relative">
-                      <a className="btn btn-secondary dropdown-toggle text-dark w-100" style={{ backgroundColor: 'white' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a
+                        className="btn btn-secondary dropdown-toggle text-dark w-100"
+                        style={{backgroundColor: 'white'}}
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
                         Vitamin & Supplements
                       </a>
 
-                      <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <div
+                        className="dropdown-menu"
+                        aria-labelledby="dropdownMenuLink"
+                      >
                         <a
                           className="btn btn-secondary dropdown-toggle w-100 text-dark"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -175,17 +219,23 @@ export default function Products() {
                           Multivitamins
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
-                        <hr className='mt-0' />
+                        <hr className="mt-0" />
                         <a
                           className="btn btn-secondary dropdown-toggle w-100 text-dark"
-                          style={{ backgroundColor: 'white' }}
+                          style={{backgroundColor: 'white'}}
                           href="#"
                           role="button"
                           data-toggle="dropdown"
@@ -195,21 +245,36 @@ export default function Products() {
                           Speciality Supplements
                         </a>
                         <div className="dropdown-menu ">
-                          <a className="dropdown-item" href="#">Category 1</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 2</a>
-                          <hr className='mt-0' />
-                          <a className="dropdown-item" href="#">Category 3</a>
-                          <hr className='mt-0' />
+                          <a className="dropdown-item" href="#">
+                            Category 1
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 2
+                          </a>
+                          <hr className="mt-0" />
+                          <a className="dropdown-item" href="#">
+                            Category 3
+                          </a>
+                          <hr className="mt-0" />
                         </div>
 
-                        <hr className='mt-0' />
+                        <hr className="mt-0" />
                       </div>
                     </div>
 
-                    <hr className='mt-0' />
+                    <hr className="mt-0" />
                     <div className="dropdown show">
-                      <a className="btn btn-secondary dropdown-toggle text-dark w-100" style={{ backgroundColor: 'white' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a
+                        className="btn btn-secondary dropdown-toggle text-dark w-100"
+                        style={{backgroundColor: 'white'}}
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
                         Ehanced Athlete
                       </a>
                     </div>
@@ -217,7 +282,9 @@ export default function Products() {
                   <br />
                   <br />
                   <div className="product-top-sellers border border-dark">
-                    <h1 className='text-center' style={{ color: 'white' }}>Top Sellers</h1>
+                    <h1 className="text-center" style={{color: 'white'}}>
+                      Top Sellers
+                    </h1>
                     <hr className="mt-0" />
                     <div>
                       {/* <FeaturedProducts collections={data.collections} /> */}
@@ -229,26 +296,34 @@ export default function Products() {
                   <br />
                   <br />
                   <div className="product-authencity border border-dark">
-                    <h2 className='text-center' style={{ color: 'white' }}>Authencity Matters</h2>
+                    <h2 className="text-center" style={{color: 'white'}}>
+                      Authencity Matters
+                    </h2>
                     <hr className="mt-0" />
 
-                    <p className='text-center' style={{ color: 'white' }}>
-                      The risk of receiving a counterfeit product increases when customer buys it from a reseller as the product moves from Importer to distributor then retailer and then to the reseller. But here at BuildMyBody we have reduced this gap between the importer and the customer. That's how BuildMyBody maintains the quality and authenticity till customer receives the final product.
+                    <p className="text-center" style={{color: 'white'}}>
+                      The risk of receiving a counterfeit product increases when
+                      customer buys it from a reseller as the product moves from
+                      Importer to distributor then retailer and then to the
+                      reseller. But here at BuildMyBody we have reduced this gap
+                      between the importer and the customer. That's how
+                      BuildMyBody maintains the quality and authenticity till
+                      customer receives the final product.
                     </p>
                     <a href="">
-                      <p className='text-center mt-3' style={{ color: 'white' }}> Read More</p>
+                      <p className="text-center mt-3" style={{color: 'white'}}>
+                        {' '}
+                        Read More
+                      </p>
                     </a>
                   </div>
                 </div>
-
               </div>
             </div>
 
-
-
             <div className="col-lg-9 col-md-12 " id="all-products">
               <h1
-                style={{ color: '#ff2828' }}
+                style={{color: '#ff2828'}}
                 className="d-flex justify-content-center align-items-center"
               >
                 <em>{collection.title}</em>
@@ -257,19 +332,22 @@ export default function Products() {
               <div className="col d-lg-none">
                 <nav class="navbar navbar-expand-lg navbar-light d-lg-none d-flex justify-content-around">
                   {/* <a class="navbar-brand text-light" href="#">Navbar</a> */}
-                  <a class="nav-link text-light filter-text" href="#">Filter <span class="sr-only">(current)</span></a>
-                  <a class="nav-link text-light filter-text" href="#">Authencity</a>
+                  <a class="nav-link text-light filter-text" href="#">
+                    Filter <span class="sr-only">(current)</span>
+                  </a>
+                  <a class="nav-link text-light filter-text" href="#">
+                    Authencity
+                  </a>
                   {/* <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button> */}
-
                 </nav>
               </div>
               <Pagination connection={collection.products}>
-                {({ nodes, NextLink, PreviousLink, isLoading }) => (
+                {({nodes, NextLink, PreviousLink, isLoading}) => (
                   <>
                     <div className="flex items-center justify-center mt-6">
-                      <PreviousLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
+                      <PreviousLink className="btn">
                         {isLoading ? 'Loading...' : 'Load previous products'}
                       </PreviousLink>
                     </div>
@@ -281,7 +359,7 @@ export default function Products() {
                       </div>
                     </div>
                     <div className="flex items-center justify-center mt-6">
-                      <NextLink className="inline-block rounded font-medium text-center py-3 px-6 border w-full cursor-pointer">
+                      <NextLink className="btn">
                         {isLoading ? 'Loading...' : 'Load more products'}
                       </NextLink>
                     </div>
@@ -320,9 +398,6 @@ export default function Products() {
           });
         `}
       </script>
-
-
-
     </>
   );
 }
@@ -380,7 +455,7 @@ const COLLECTION_QUERY = `#graphql
     }
   }
   `;
-const seo = ({ data }) => ({
+const seo = ({data}) => ({
   title: data?.collection?.title,
   description: data?.collection?.description.substr(0, 154),
 });
@@ -388,9 +463,9 @@ export const handle = {
   seo,
 };
 
-export function meta({ data }) {
+export function meta({data}) {
   return [
-    { title: data?.collection?.title ?? 'Collection' },
-    { description: data?.collection?.description },
+    {title: data?.collection?.title ?? 'Collection'},
+    {description: data?.collection?.description},
   ];
 }

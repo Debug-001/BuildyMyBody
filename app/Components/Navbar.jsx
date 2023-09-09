@@ -6,8 +6,6 @@ import Protein from '../../dist/client/img/protien.png';
 import {Form, NavLink, useLoaderData, useRouteError} from '@remix-run/react';
 
 const Navbar = () => {
-  const [user, setUser] = useState('rtg'); // to be removed
-
   const [menuItems, setMenuItems] = useState([
     // {
     //   text: 'Home',
@@ -56,15 +54,6 @@ const Navbar = () => {
     },
   ]);
 
-  const [isSearchBarVisible, setSearchBarVisible] = useState(false);
-
-  const showSearchBar = () => {
-    setSearchBarVisible(true);
-  };
-
-  const hideSearchBar = () => {
-    setSearchBarVisible(false);
-  };
   const [isSubMenuVisible, setSubMenuVisible] = useState(false);
   const showSubMenu = () => {
     setSubMenuVisible(true);
@@ -419,39 +408,14 @@ const Navbar = () => {
                 <img className="logo_img" src="/img/nav-logo.png" alt="" />
               </NavLink>
             </div>
-            <div className="col-lg-7 d-md-none d-sm-none d-lg-flex custom-search">
-              <div className="mx-auto ">
-                <div className="nav-group ">
-                  <svg className="icon" aria-hidden="true" viewBox="0 0 24 24">
-                    <g>
-                      <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z" />
-                    </g>
-                  </svg>
-                  <input
-                    placeholder="Search"
-                    type="search"
-                    className="nav-search w-100"
-                  />
-                  {/* <input type="text" /> */}
-                </div>
-              </div>
-            </div>
+            <div className="col-lg-7 d-md-none d-sm-none d-lg-flex custom-search"></div>
             <div className="col-lg-2  col-md-3 col-sm-3">
               <div className="d-flex ml-md-5 ml-lg-0 ml-sm-0">
                 <div className="icon-search">
                   <li>
-                    <NavLink
-                      to="#"
-                      onMouseEnter={showSearchBar}
-                      onMouseLeave={hideSearchBar}
-                    >
+                    <NavLink to="/search">
                       <BsSearch size={18} />
                     </NavLink>
-                    {isSearchBarVisible && (
-                      <div className="search-bar">
-                        <input type="text" placeholder="Search Products..." />
-                      </div>
-                    )}
                   </li>
                 </div>
 
@@ -689,19 +653,37 @@ const Navbar = () => {
                     </div>
                   )}
                   {menuItem.text === 'Contact Us' && isSubMenuVisible && (
-                    <div className="submenu w-50" style={{ background: 'black', color: 'white' }}>
+                    <div
+                      className="submenu w-50"
+                      style={{background: 'black', color: 'white'}}
+                    >
                       <div className="submenu-content">
                         <div className="row p-4">
                           <div className="col mt-2">
                             <NavLink to={'/'}>
-                              <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
+                              <h4
+                                className="text-center"
+                                style={{color: 'white'}}
+                              >
+                                Contact Us
+                              </h4>
                             </NavLink>
 
                             <NavLink to={'/'}>
-                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
+                              <p
+                                className="mt-2 text-center"
+                                style={{color: 'white'}}
+                              >
+                                Email : care@buildmybody.in
+                              </p>
                             </NavLink>
                             <NavLink to={'/'}>
-                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
+                              <p
+                                className="mt-1 text-center"
+                                style={{color: 'white'}}
+                              >
+                                Phone Number: +919494979191
+                              </p>
                             </NavLink>
                             {/* Add more contact options if needed */}
                           </div>
@@ -920,19 +902,37 @@ const Navbar = () => {
                     </div>
                   )}
                   {menuItem.text === 'Contact Us' && isSubMenuVisible && (
-                    <div className="w-25 sub2 " style={{ background: 'black', color: 'white' }}>
+                    <div
+                      className="w-25 sub2 "
+                      style={{background: 'black', color: 'white'}}
+                    >
                       <div className="submenu-content ">
                         <div className="row p-4">
                           <div className="col mt-2">
                             <NavLink to={'/'}>
-                              <h4 className='text-center' style={{ color: 'white' }}>Contact Us</h4>
+                              <h4
+                                className="text-center"
+                                style={{color: 'white'}}
+                              >
+                                Contact Us
+                              </h4>
                             </NavLink>
 
                             <NavLink to={'/'}>
-                              <p className='mt-2 text-center' style={{ color: 'white' }}>Email :  care@buildmybody.in</p>
+                              <p
+                                className="mt-2 text-center"
+                                style={{color: 'white'}}
+                              >
+                                Email : care@buildmybody.in
+                              </p>
                             </NavLink>
                             <NavLink to={'/'}>
-                              <p className='mt-1 text-center' style={{ color: 'white' }}>Phone Number: +919494979191</p>
+                              <p
+                                className="mt-1 text-center"
+                                style={{color: 'white'}}
+                              >
+                                Phone Number: +919494979191
+                              </p>
                             </NavLink>
                             {/* Add more contact options if needed */}
                           </div>
@@ -940,10 +940,8 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
-
                 </li>
               ))}
-
             </ul>
 
             {/* <div className="icon-search">

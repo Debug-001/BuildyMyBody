@@ -1,20 +1,18 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { MediaFile, Money, ShopPayButton } from '@shopify/hydrogen-react';
+import {MediaFile, Money, ShopPayButton} from '@shopify/hydrogen-react';
 import ProductCarousal from './ProductCarousal';
-import { BuyNowButton } from '@shopify/hydrogen-react';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
-import Protien from '../../../dist/client/img/protien.png'
-const Product = ({ data }) => {
-  const { product, selectedVariant, storeDomain, orderable } = data;
+import Protien from '../../../dist/client/img/protien.png';
+const Product = ({data}) => {
+  const {product, selectedVariant, storeDomain, orderable} = data;
 
   return (
     <>
       <Navbar />
-      <div className="product " style={{ background: 'black' }}>
-
+      <div className="product " style={{background: 'black'}}>
         <div className="container-fluid">
           <div className="row ">
             {/* image column  */}
@@ -56,18 +54,17 @@ const Product = ({ data }) => {
 
                 {/* mrp section  */}
                 <div className="col ">
-                  <p className='title text-light'>
+                  <p className="title text-light">
                     MRP:<del>₹5,999</del>
                   </p>
                   <h2 className="d-flex title text-light">
                     Price:
-                    <Money
-                      withoutTrailingZeros
-                      data={selectedVariant.price}
-                    />
-                    <button className="btn btn-primary title text-light ml-2">25% off</button>
+                    <Money withoutTrailingZeros data={selectedVariant.price} />
+                    <button className="btn btn-primary title text-light ml-2">
+                      25% off
+                    </button>
                   </h2>
-                  <p className='title text-light'>
+                  <p className="title text-light">
                     (EMI starts from ₹211.45) | Earn BMB Cash ₹90{' '}
                     <span className=""> Free Shipping</span>
                   </p>
@@ -85,12 +82,13 @@ const Product = ({ data }) => {
                         />
                       )}
                     </div>
-                    {/* <BuyNowButton variantId={[selectedVariant?.id]} /> */}
                   </div>
                 </div>
               </div>
               <hr />
-              <h4 className="mt-4 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title text-light">Check Delivery</h4>
+              <h4 className="mt-4 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title text-light">
+                Check Delivery
+              </h4>
               <div className="input-group mb-3 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title">
                 <input
                   type="number"
@@ -99,16 +97,23 @@ const Product = ({ data }) => {
                   aria-describedby="basic-addon2"
                 />
                 <div className="input-group-append">
-                  <button className="btn btn-outline-secondary text-light" type="button">
+                  <button
+                    className="btn btn-outline-secondary text-light"
+                    type="button"
+                  >
                     Check
                   </button>
                 </div>
               </div>
             </div>
 
-
             <div className="col-lg-8  d-lg-none" id="product-tabs">
-              <ul className="nav nav-tabs mt-4 d-flex justify-content-center w-100" style={{ background: 'black' }} id="myTab" role="tablist">
+              <ul
+                className="nav nav-tabs mt-4 d-flex justify-content-center w-100"
+                style={{background: 'black'}}
+                id="myTab"
+                role="tablist"
+              >
                 <li className="nav-item">
                   <a
                     className="nav-link active text-light "
@@ -120,10 +125,8 @@ const Product = ({ data }) => {
                     aria-selected="true"
                   >
                     Description
-
                   </a>
                 </li>
-
               </ul>
 
               <div className="tab-content mt-3" id="myTabContent">
@@ -136,23 +139,20 @@ const Product = ({ data }) => {
                     __html: product.descriptionHtml,
                   }}
                 ></div>
-
               </div>
             </div>
-
-
 
             {/* featured products section   */}
             <div id="third" className="col-lg-4 flex-lg-column mt-5">
               <h4 className="d-flex justify-content-center font-weight-bolder ">
-                <em className='text-light'>FEATURED PRODUCTS</em>
+                <em className="text-light">FEATURED PRODUCTS</em>
               </h4>
               <div className="custom-fl-product d-md-flex flex-lg-column">
                 <div className="d-flex mt-4">
-                  <div className="w-100"  >
+                  <div className="w-100">
                     <img
                       src={Protien}
-                      style={{ objectFit: 'contain' }}
+                      style={{objectFit: 'contain'}}
                       alt="side bar product"
                     />
                   </div>
@@ -160,17 +160,19 @@ const Product = ({ data }) => {
                     <h6 className="font-weight-bold mt-4 text-light">
                       Syntha-6 Protein Matrix
                     </h6>
-                    <h6 className="mt-3 font-weight-bold text-light">₹6906.90</h6>
+                    <h6 className="mt-3 font-weight-bold text-light">
+                      ₹6906.90
+                    </h6>
                     <a href="/carts" className="btn btn-primary text-light">
                       Add to Cart
                     </a>
                   </div>
                 </div>
                 <div className="d-flex mt-4">
-                  <div className="w-100" >
+                  <div className="w-100">
                     <img
                       src={Protien}
-                      style={{ objectFit: 'contain' }}
+                      style={{objectFit: 'contain'}}
                       alt="side bar product"
                     />
                   </div>
@@ -178,7 +180,9 @@ const Product = ({ data }) => {
                     <h6 className="font-weight-bold mt-4 text-light">
                       Syntha-6 Protein Matrix
                     </h6>
-                    <h6 className="mt-3 font-weight-bold text-light">₹6906.90</h6>
+                    <h6 className="mt-3 font-weight-bold text-light">
+                      ₹6906.90
+                    </h6>
                     <a href="/carts" className="btn btn-primary text-light">
                       Add to Cart
                     </a>
@@ -188,15 +192,19 @@ const Product = ({ data }) => {
             </div>
           </div>
 
-
-
-
-
           <div className="container-fluid ">
             <hr />
             <div className="row">
-              <div className="col-lg-8 d-lg-block d-md-none d-sm-none pro-none" id="product-tabs">
-                <ul className="nav nav-tabs mt-4 d-flex justify-content-center w-100" style={{ background: 'black' }} id="myTab" role="tablist">
+              <div
+                className="col-lg-8 d-lg-block d-md-none d-sm-none pro-none"
+                id="product-tabs"
+              >
+                <ul
+                  className="nav nav-tabs mt-4 d-flex justify-content-center w-100"
+                  style={{background: 'black'}}
+                  id="myTab"
+                  role="tablist"
+                >
                   <li className="nav-item">
                     <a
                       className="nav-link active text-light "
@@ -208,7 +216,6 @@ const Product = ({ data }) => {
                       aria-selected="true"
                     >
                       Description
-
                     </a>
                   </li>
                   {/* <div className="vl mt-2 py-3 mx-2"></div>
@@ -297,11 +304,10 @@ const Product = ({ data }) => {
                 </h4>
                 <div className="custom-fl-product d-md-flex flex-lg-column">
                   <div className="d-flex mt-4">
-
-                    <div className="w-100" >
+                    <div className="w-100">
                       <img
                         src={Protien}
-                        style={{ objectFit: 'contain' }}
+                        style={{objectFit: 'contain'}}
                         alt="side bar product"
                       />
                     </div>
@@ -309,17 +315,19 @@ const Product = ({ data }) => {
                       <h6 className="font-weight-bold mt-4 text-light">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold text-light">₹6906.90</h6>
+                      <h6 className="mt-3 font-weight-bold text-light">
+                        ₹6906.90
+                      </h6>
                       <a href="/carts" className="btn btn-primary text-light">
                         Add to Cart
                       </a>
                     </div>
                   </div>
                   <div className="d-flex mt-4">
-                    <div className="w-100" >
+                    <div className="w-100">
                       <img
                         src={Protien}
-                        style={{ objectFit: 'contain' }}
+                        style={{objectFit: 'contain'}}
                         alt="side bar product"
                       />
                     </div>
@@ -327,8 +335,10 @@ const Product = ({ data }) => {
                       <h6 className="font-weight-bold mt-4 text-light">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold text-light">₹6906.90</h6>
-                      <a href="/carts" className="btn btn-primary text-light" >
+                      <h6 className="mt-3 font-weight-bold text-light">
+                        ₹6906.90
+                      </h6>
+                      <a href="/carts" className="btn btn-primary text-light">
                         Add to Cart
                       </a>
                     </div>
@@ -338,7 +348,6 @@ const Product = ({ data }) => {
             </div>
           </div>
         </div>
-
       </div>
 
       <Footer />
