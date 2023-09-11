@@ -1,10 +1,10 @@
-import {Link} from '@remix-run/react';
-import {Image, Money} from '@shopify/hydrogen';
-import {useEffect} from 'react';
+import { Link } from '@remix-run/react';
+import { Image, Money } from '@shopify/hydrogen';
+import { useEffect } from 'react';
 import ProductForm from '~/Components/Product/ProductForm';
 
-export default function ProductCard({product}) {
-  const {price, compareAtPrice} = product.variants?.nodes[0] || {};
+export default function ProductCard({ product }) {
+  const { price, compareAtPrice } = product.variants?.nodes[0] || {};
   const isDiscounted = compareAtPrice?.amount > price?.amount;
   return (
     <div className="col">
@@ -21,7 +21,7 @@ export default function ProductCard({product}) {
           <div className="card-content-all mt-4">
             <h3
               className="font-weight-bolder text-center"
-              style={{color: 'white'}}
+              style={{ color: 'white' }}
             >
               {' '}
               {product.title}
@@ -30,7 +30,7 @@ export default function ProductCard({product}) {
               <Money withoutTrailingZeros data={price} />
               {isDiscounted && (
                 <Money
-                  style={{color: '#ff2828', textDecoration: 'dashed'}}
+                  style={{ color: '#ff2828', textDecoration: 'dashed' }}
                   className="line-through opacity-50"
                   withoutTrailingZeros
                   data={compareAtPrice}

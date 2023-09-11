@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {BsSearch} from 'react-icons/bs';
-import {FiShoppingCart} from 'react-icons/fi';
-import {RiAccountCircleLine} from 'react-icons/ri';
+import React, { useEffect, useState } from 'react';
+import { BsSearch } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
+import { RiAccountCircleLine } from 'react-icons/ri';
 import Protein from '../../dist/client/img/protien.png';
-import {Form, NavLink, useLoaderData, useRouteError} from '@remix-run/react';
+import { Form, NavLink, useLoaderData, useRouteError } from '@remix-run/react';
 
 const Navbar = () => {
   const [menuItems, setMenuItems] = useState([
@@ -53,6 +53,13 @@ const Navbar = () => {
       active: true,
     },
   ]);
+  const showSearchBar = () => {
+    setSearchBarVisible(true);
+  };
+
+  const hideSearchBar = () => {
+    setSearchBarVisible(false);
+  };
 
   const [isSubMenuVisible, setSubMenuVisible] = useState(false);
   const showSubMenu = () => {
@@ -63,8 +70,274 @@ const Navbar = () => {
     setSubMenuVisible(false);
   };
 
+
   return (
     <>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <NavLink className="navbar-brand" to="/">
+          <img className="logo_img" src="/img/nav-logo.png" alt="" />
+        </NavLink>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+          <ul class="navbar-nav ">
+            {menuItems.map((menuItem, index) => (
+              <li
+                key={index}
+                className={`nav-item  ${menuItem.active ? 'active' : ''
+                  }`}
+                onMouseEnter={showSubMenu} // Show submenu on hover
+                onMouseLeave={hideSubMenu} // Hide submenu when mouse leaves
+              >
+                <NavLink
+                  className="nav-link"
+                  to={menuItem.link}
+                  style={{ color: '#474544' }}
+                >
+                  {menuItem.text}
+                  {menuItem.active && (
+                    <span className="sr-only">(current)</span>
+                  )}
+                </NavLink>
+
+                {menuItem.text === 'Products' && isSubMenuVisible && (
+                  <div className="submenu" style={{ background: 'black' }}>
+                    <div className="submenu-content">
+                      <div className="row p-4">
+                        <div className="submenu-row">
+                          <div className="submenu-category">
+                            <div className="col mt-2">
+                              <NavLink to={'/'}>
+                                <h4
+                                  className="text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Protein
+                                </h4>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="text-center  ">
+                                  <img
+                                    src={Protein}
+                                    className="w-50"
+                                    alt=""
+                                  />
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-2 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Whey Protein
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Whey Blend
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Whey Protein Isolate
+                                </p>
+                              </NavLink>
+                            </div>
+                          </div>
+                          <div className="submenu-category">
+                            <div className="col mt-2">
+                              <NavLink to={'/'}>
+                                <h4
+                                  className="text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Gainer
+                                </h4>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="text-center  ">
+                                  {' '}
+                                  <img
+                                    src={Protein}
+                                    className="w-50"
+                                    alt=""
+                                  />
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-2 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Mass Gainer
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Weight Gainer
+                                </p>
+                              </NavLink>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="submenu-row">
+                          <div className="submenu-category">
+                            <div className="col mt-2">
+                              <NavLink to={'/'}>
+                                <a href="">
+                                  {' '}
+                                  <h4
+                                    className="text-center  "
+                                    style={{ color: 'white' }}
+                                  >
+                                    Pre/Post Workout
+                                  </h4>
+                                </a>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="text-center  ">
+                                  {' '}
+                                  <img
+                                    src={Protein}
+                                    className="w-50"
+                                    alt=""
+                                  />
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-2 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Pre-Workout
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Amino Acids && BCAAs
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="mt-1 text-center  ">
+                                  Glutamine
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="mt-1 text-center  ">
+                                  Carnitine
+                                </p>
+                              </NavLink>
+                            </div>
+                          </div>
+                          <div className="submenu-category">
+                            <div className="col mt-2">
+                              <NavLink to={'/'}>
+                                <h4
+                                  className="text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Workout Essentials
+                                </h4>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p className="text-center  ">
+                                  {' '}
+                                  <img
+                                    src={Protein}
+                                    className="w-50"
+                                    alt=""
+                                  />
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-2 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Testosterone Support
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Multivitamins
+                                </p>
+                              </NavLink>
+                              <NavLink to={'/'}>
+                                <p
+                                  className="mt-1 text-center  "
+                                  style={{ color: 'white' }}
+                                >
+                                  Fat Burner
+                                </p>
+                              </NavLink>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {menuItem.text === 'Contact Us' && isSubMenuVisible && (
+                  <div
+                    className="submenu w-50"
+                    style={{ background: 'black', color: 'white' }}
+                  >
+                    <div className="submenu-content">
+                      <div className="row p-4">
+                        <div className="col mt-2">
+                          <NavLink to={'/'}>
+                            <h4
+                              className="text-center"
+                              style={{ color: 'white' }}
+                            >
+                              Contact Us
+                            </h4>
+                          </NavLink>
+
+                          <NavLink to={'/'}>
+                            <p
+                              className="mt-2 text-center"
+                              style={{ color: 'white' }}
+                            >
+                              Email : care@buildmybody.in
+                            </p>
+                          </NavLink>
+                          <NavLink to={'/'}>
+                            <p
+                              className="mt-1 text-center"
+                              style={{ color: 'white' }}
+                            >
+                              Phone Number: +919494979191
+                            </p>
+                          </NavLink>
+                          {/* Add more contact options if needed */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
       {/* <nav className="navbar navbar-expand-lg navbar-light  justify-content-between row ml-2 mr-2">
 
         <div className="col-lg-4 col-md-3 col-sm-1 d-lg-none">
@@ -381,7 +654,7 @@ const Navbar = () => {
 
       <nav
         className="navbar navbar-expand-lg navbar-light custom-flex"
-        style={{background: 'black'}}
+        style={{ background: '#171717' }}
       >
         <div className="container-fluid align-items-center">
           <div className="row w-100">
@@ -394,11 +667,11 @@ const Navbar = () => {
                 aria-controls="navbarSupportedContent"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-                style={{backgroundColor: 'transparent'}}
+
               >
                 <span
                   className="navbar-toggler-icon"
-                  style={{color: 'white'}}
+                  style={{ color: 'white' }}
                 ></span>
               </button>
             </div>
@@ -442,16 +715,15 @@ const Navbar = () => {
               {menuItems.map((menuItem, index) => (
                 <li
                   key={index}
-                  className={`nav-item mx-lg-3 mx-md-0 mx-sm-0 ${
-                    menuItem.active ? 'active' : ''
-                  }`}
+                  className={`nav-item mx-lg-3 mx-md-0 mx-sm-0 ${menuItem.active ? 'active' : ''
+                    }`}
                   onMouseEnter={showSubMenu} // Show submenu on hover
                   onMouseLeave={hideSubMenu} // Hide submenu when mouse leaves
                 >
                   <NavLink
                     className="nav-link"
                     to={menuItem.link}
-                    style={{color: 'white'}}
+                    style={{ color: 'white' }}
                   >
                     {menuItem.text}
                     {menuItem.active && (
@@ -460,7 +732,7 @@ const Navbar = () => {
                   </NavLink>
 
                   {menuItem.text === 'Products' && isSubMenuVisible && (
-                    <div className="submenu" style={{background: 'black'}}>
+                    <div className="submenu" style={{ background: 'black' }}>
                       <div className="submenu-content">
                         <div className="row p-4">
                           <div className="submenu-row">
@@ -469,7 +741,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <h4
                                     className="text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Protein
                                   </h4>
@@ -486,7 +758,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-2 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Whey Protein
                                   </p>
@@ -494,7 +766,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Whey Blend
                                   </p>
@@ -502,7 +774,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Whey Protein Isolate
                                   </p>
@@ -514,7 +786,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <h4
                                     className="text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Gainer
                                   </h4>
@@ -532,7 +804,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-2 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Mass Gainer
                                   </p>
@@ -540,7 +812,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Weight Gainer
                                   </p>
@@ -557,7 +829,7 @@ const Navbar = () => {
                                     {' '}
                                     <h4
                                       className="text-center  "
-                                      style={{color: 'white'}}
+                                      style={{ color: 'white' }}
                                     >
                                       Pre/Post Workout
                                     </h4>
@@ -576,7 +848,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-2 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Pre-Workout
                                   </p>
@@ -584,7 +856,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Amino Acids && BCAAs
                                   </p>
@@ -606,7 +878,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <h4
                                     className="text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Workout Essentials
                                   </h4>
@@ -624,7 +896,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-2 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Testosterone Support
                                   </p>
@@ -632,7 +904,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Multivitamins
                                   </p>
@@ -640,7 +912,7 @@ const Navbar = () => {
                                 <NavLink to={'/'}>
                                   <p
                                     className="mt-1 text-center  "
-                                    style={{color: 'white'}}
+                                    style={{ color: 'white' }}
                                   >
                                     Fat Burner
                                   </p>
@@ -655,7 +927,7 @@ const Navbar = () => {
                   {menuItem.text === 'Contact Us' && isSubMenuVisible && (
                     <div
                       className="submenu w-50"
-                      style={{background: 'black', color: 'white'}}
+                      style={{ background: 'black', color: 'white' }}
                     >
                       <div className="submenu-content">
                         <div className="row p-4">
@@ -663,7 +935,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4
                                 className="text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Contact Us
                               </h4>
@@ -672,7 +944,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Email : care@buildmybody.in
                               </p>
@@ -680,7 +952,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Phone Number: +919494979191
                               </p>
@@ -700,7 +972,7 @@ const Navbar = () => {
 
       <nav
         className="navbar navbar-expand-lg navbar-light"
-        style={{background: 'black'}}
+        style={{ background: '#171717' }}
       >
         <div className="container-fluid">
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -708,15 +980,14 @@ const Navbar = () => {
               {menuItems.map((menuItem, index) => (
                 <li
                   key={index}
-                  className={`nav-item mx-lg-3 mx-md-0 mx-sm-0 ${
-                    menuItem.active ? 'active' : ''
-                  }`}
+                  className={`nav-item mx-lg-3 mx-md-0 mx-sm-0 ${menuItem.active ? 'active' : ''
+                    }`}
                   onMouseEnter={showSubMenu} // Show submenu on hover
                   onMouseLeave={hideSubMenu} // Hide submenu when mouse leaves
                 >
                   <NavLink
                     className="nav-link"
-                    style={{color: 'white'}}
+                    style={{ color: 'white' }}
                     to={menuItem.link}
                   >
                     {menuItem.text}
@@ -728,7 +999,7 @@ const Navbar = () => {
                   {menuItem.text === 'Products' && isSubMenuVisible && (
                     <div
                       className="submenu"
-                      style={{background: 'black', color: 'white'}}
+                      style={{ background: 'black', color: 'white' }}
                     >
                       <div className="submenu-content">
                         <div className="row p-4">
@@ -736,7 +1007,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4
                                 className="text-center   "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Protein
                               </h4>
@@ -749,7 +1020,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Whey Protein
                               </p>
@@ -757,7 +1028,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Whey Blend
                               </p>
@@ -765,7 +1036,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Whey Protein Isolate
                               </p>
@@ -775,7 +1046,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4
                                 className="text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Gainer
                               </h4>
@@ -783,7 +1054,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 {' '}
                                 <img src={Protein} className="w-50" alt="" />
@@ -792,7 +1063,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Mass Gainer
                               </p>
@@ -800,7 +1071,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Weight Gainer
                               </p>
@@ -812,7 +1083,7 @@ const Navbar = () => {
                                 {' '}
                                 <h4
                                   className="text-center  "
-                                  style={{color: 'white'}}
+                                  style={{ color: 'white' }}
                                 >
                                   Pre/Post Workout
                                 </h4>
@@ -827,7 +1098,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Pre-Workout
                               </p>
@@ -835,7 +1106,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Amino Acids && BCAAs
                               </p>
@@ -843,7 +1114,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Glutamine
                               </p>
@@ -851,7 +1122,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Carnitine
                               </p>
@@ -861,7 +1132,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4
                                 className="text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Workout Essentials
                               </h4>
@@ -875,7 +1146,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Testosterone Support
                               </p>
@@ -883,7 +1154,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Multivitamins
                               </p>
@@ -891,7 +1162,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center  "
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Fat Burner
                               </p>
@@ -904,7 +1175,7 @@ const Navbar = () => {
                   {menuItem.text === 'Contact Us' && isSubMenuVisible && (
                     <div
                       className="w-25 sub2 "
-                      style={{background: 'black', color: 'white'}}
+                      style={{ background: 'black', color: 'white' }}
                     >
                       <div className="submenu-content ">
                         <div className="row p-4">
@@ -912,7 +1183,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <h4
                                 className="text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Contact Us
                               </h4>
@@ -921,7 +1192,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-2 text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Email : care@buildmybody.in
                               </p>
@@ -929,7 +1200,7 @@ const Navbar = () => {
                             <NavLink to={'/'}>
                               <p
                                 className="mt-1 text-center"
-                                style={{color: 'white'}}
+                                style={{ color: 'white' }}
                               >
                                 Phone Number: +919494979191
                               </p>

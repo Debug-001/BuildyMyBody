@@ -7,12 +7,14 @@ import { Link } from '@remix-run/react';
 const Footer = () => {
   return (
     <>
-      <div className="container">
-        <div className="footer-top-section d-flex align-items-center  ">
-          <p>100% Satisfaction</p>
-          <p>Save 20% Every Time</p>
-          <p>Fast Free Shipment</p>
-          <p>Gift and Vouchers</p>
+      <div style={{ background: '#FAF4EF' }}>
+        <div className="container" >
+          <div className="footer-top-section d-flex align-items-center  ">
+            <p style={{ color: '#474544' }}>100% Satisfaction</p>
+            <p style={{ color: '#474544' }}>Save 20% Every Time</p>
+            <p style={{ color: '#474544' }}>Fast Free Shipment</p>
+            <p style={{ color: '#474544' }}>Gift and Vouchers</p>
+          </div>
         </div>
       </div>
 

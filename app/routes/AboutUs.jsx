@@ -4,12 +4,12 @@ function AboutUs() {
   return (
     <>
       <Navbar />
-      <div className="main-div" style={{ background: 'black' }}>
+      <div className="main-div" style={{ background: '#FAF4EF' }}>
 
         <div className="about-us-text">
           <div className="top-left">
-            <p className="our-story text-light ">OUR STORY</p>
-            <p className="our-story2 text-light">
+            <p className="our-story   " >OUR STORY</p>
+            <p className="our-story2  " >
               The journey of becoming India’s leading Sports Nutrition Brand
             </p>
           </div>
@@ -21,7 +21,7 @@ function AboutUs() {
         <div className="container-fluid">
           <div className="row p-4">
             <div className="col  about-us-text-border mt-4">
-              <p className="p-4 aboutus-info text-light">
+              <p className="p-4 aboutus-info  " style={{ color: '#474544' }}>
                 Welcome to the official website of BuildMyBody™. If you are
                 looking to buy health care Supplements Online in India, you are at
                 the right place. Yes, you’re.
@@ -38,10 +38,10 @@ function AboutUs() {
 
           <div className="row p-4">
             <div className="col-lg-4 d-flex justify-content-center align-items-center ">
-              <p className="aboutus-heading2 text-light">About Us</p>
+              <p className="aboutus-heading2  " style={{ color: '#474544' }}>About Us</p>
             </div>
             <div className="col  ">
-              <p className="aboutus-info text-light">
+              <p className="aboutus-info  " style={{ color: '#474544' }}>
                 Buildmybody.in is a leading online store selling a wide range of
                 health supplements to fitness conscious people like you. Yes, at
                 this very moment, you are browsing India’s one of the most
@@ -61,8 +61,8 @@ function AboutUs() {
               />
             </div>
             <div className="col  ml-2 mt-sm-3">
-              <p className="aboutus-heading text-light">First in Industry Innovations.</p>
-              <p className="aboutus-info mt-4 text-light">
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>First in Industry Innovations.</p>
+              <p className="aboutus-info mt-4  " style={{ color: '#474544' }}>
                 The driving force behind BuildMyBody™ has always been to cater to
                 the needs of consumers effectively. They have consistently
                 provided innovative solutions to various challenges faced by
@@ -88,10 +88,10 @@ function AboutUs() {
               </div>
             </div>
             <div className="col ml-2 mt-sm-3">
-              <p className="aboutus-heading text-light">
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>
                 Superior Ingredients and Manufacturing Procedures.
               </p>
-              <p className="aboutus-info mt-4 text-light">
+              <p className="aboutus-info mt-4  " style={{ color: '#474544' }}>
                 At BuildMyBody™, our commitment to delivering top-notch fitness
                 supplements has led us to search globally for the finest whey and
                 flavors. However, our dedication to quality doesn't stop at
@@ -110,32 +110,32 @@ function AboutUs() {
         <div className="container mt-5 ">
           <div className="row ">
             <div className="col-lg-6 mt-5">
-              <p className="aboutus-heading text-light">1 Cr boxes bought till now</p>
-              <p className="aboutus-info text-light">
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>1 Cr boxes bought till now</p>
+              <p className="aboutus-info  " style={{ color: '#474544' }}>
                 We have established a robust fitness community based on trust,
                 driven by determined goals that embody the spirit of unyielding
                 determination
               </p>
             </div>
             <div className="col-lg-6 mt-5">
-              <p className="aboutus-heading text-light">Leading the path</p>
-              <p className="aboutus-info text-light">
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>Leading the path</p>
+              <p className="aboutus-info  " style={{ color: '#474544' }}>
                 We have established a robust fitness community based on trust,
                 driven by determined goals that embody the spirit of unyielding
                 determination
               </p>
             </div>
             <div className="col-lg-6 mt-5">
-              <p className="aboutus-heading text-light">Only authentic supplements</p>
-              <p className="aboutus-info text-light">
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>Only authentic supplements</p>
+              <p className="aboutus-info  " style={{ color: '#474544' }}>
                 We have established a robust fitness community based on trust,
                 driven by determined goals that embody the spirit of unyielding
                 determination
               </p>
             </div>
-            <div className="col-lg-6 mt-5 ">
-              <p className="aboutus-heading text-light">Easy & secure payments</p>
-              <p className="aboutus-info text-light">
+            <div className="col-lg-6 mt-5 " >
+              <p className="aboutus-heading  " style={{ color: '#474544' }}>Easy & secure payments</p>
+              <p className="aboutus-info  " style={{ color: '#474544' }}>
                 We have established a robust fitness community based on trust,
                 driven by determined goals that embody the spirit of unyielding
                 determination

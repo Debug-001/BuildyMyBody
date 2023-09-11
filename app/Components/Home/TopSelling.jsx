@@ -1,17 +1,17 @@
-import {useLoaderData} from '@remix-run/react';
-import {useEffect} from 'react';
+import { useLoaderData } from '@remix-run/react';
+import { useEffect } from 'react';
 import ProductForm from '../Product/ProductForm';
 
-const TopSelling = ({collection}) => {
+const TopSelling = ({ collection }) => {
   return (
     <>
-      <section id="featured-section">
+      <section id="featured-section" style={{ background: '#FAF4EF' }}>
         <div
           id="carouselExampleControls1"
           className="carousel slide "
           data-ride="carousel"
         >
-          <h1 className="d-flex justify-content-center font-weight-bold custom-heading">
+          <h1 className="d-flex justify-content-center font-weight-bold custom-heading ">
             <em>FEATURED PRODUCTS</em>
           </h1>
           <div className="carousel-inner" id="featured-carousel">
@@ -40,7 +40,9 @@ const TopSelling = ({collection}) => {
                       ₹ {product.variants.nodes[0].price.amount}
                     </h4>
                     {product.descriptionHtml}
-                    <ProductForm variantId={product.variants.nodes[0].id} />
+                    <div className="featured-btn">
+                      <ProductForm variantId={product.variants.nodes[0].id} />
+                    </div>
                   </div>
                 </div>
               </div>

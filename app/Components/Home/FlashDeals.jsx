@@ -17,7 +17,7 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products" style={{ background: 'black' }}>
+      <section id="trending-products" style={{ background: '#FAF4EF' }}>
         <div className="container  py-5">
           <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
             <em>Trending Products</em>
@@ -188,7 +188,7 @@ const FlashDeals = ({ collection }) => {
                         </p>
                         <Link
                           to="#"
-                          className="d-flex justify-content-center btn btn-danger mt-4"
+                          className="d-flex justify-content-center btn  mt-4 trend-btn"
                         >
                           Add To Cart
                         </Link>

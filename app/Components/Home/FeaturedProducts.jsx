@@ -15,7 +15,7 @@ const FeaturedProducts = ({ collections }) => {
   }, []);
 
   return (
-    <section id="product-card " style={{ background: 'black' }}>
+    <section id="product-card " style={{ background: '#FAF4EF' }}>
       <div className="container " id="cgap">
         <h1 className="d-flex justify-content-center py-5 font-weight-bold custom-heading3">
           <em>SHOP BY CATEGORIES</em>

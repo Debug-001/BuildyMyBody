@@ -3,7 +3,7 @@ import React from 'react'
 const Verify = () => {
     return (
         <>
-            <section id='verify' style={{ background: 'black', color: '#ff2828' }}>
+            <section id='verify' style={{ background: '#FAF4EF', color: '#474544 ' }}>
                 <div className="container">
 
                     <h1 className='d-flex justify-content-center font-weight-bold custom-heading2'><em>VERIFY YOUR PRODUCT</em></h1>

@@ -16,10 +16,10 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car" style={{ background: 'black' }}>
+      <section id="fitness-car" style={{ background: '#FAF4EF' }} >
         <div className="container">
           <h1 className="fitnessarticel d-flex justify-content-center font-weight-bold custom-heading">
-            <em>FITNESS ARTICLES</em>
+            <em className='mt-5'>FITNESS ARTICLES</em>
           </h1>
           <div className="fitness-slider">
             <Slider
@@ -75,11 +75,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: 'white' }}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -101,11 +101,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3 ">
                     {' '}
-                    <em>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: 'white' }}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -126,11 +126,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: 'white' }}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -151,11 +151,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: 'white' }}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -172,7 +172,7 @@ const BrandCaraousel = () => {
         </div>
       </section>
 
-      <section id="brand-car" style={{ background: 'black' }}>
+      <section id="brand-car" style={{ background: '#FAF4EF' }} >
         <div className="container mt-5">
           <h1 className="d-flex font-weight-bold justify-content-center custom-heading">
             <em>BRANDS</em>

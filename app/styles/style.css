@@ -22,17 +22,15 @@
 }
 
 .category-btn {
-  background-color: black !important;
+  background-color: #474544 !important;
   color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .category-btn:hover {
-  border: #ff2828;
-  background-color: #ff2828 !important;
-  color: white;
-}
-
-h5 {
+  border: #171717;
+  background-color: #171717 !important;
   color: white;
 }
 
@@ -51,7 +49,6 @@ h5 {
 
 .featured-img {
   width: 300px;
-  background: black;
   transform: scale(1.3);
   object-fit: cover;
 }
@@ -60,11 +57,11 @@ h5 {
   padding-top: 4rem;
   margin-bottom: 6rem;
   font-weight: 900 !important;
-  color: #ff2828;
+  color: #474544;
 }
 
 #fitness-car h1 {
-  color: #ff2828;
+  color: #474544;
   font-weight: 900 !important;
 }
 
@@ -104,7 +101,7 @@ h5 {
   }
 }
 .featured-details h2 {
-  color: white;
+  color: #474544;
   font-size: 2rem;
   font-weight: 600;
   width: 80%;
@@ -122,21 +119,31 @@ h5 {
   transform: scale(2);
 }
 
-.featured-btn {
+.trend-btn {
+  border: 1px solid black;
+  background-color: #474544 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.trend-btn:hover {
+  background: #171717;
+  color: white;
+}
+
+.featured-btn button {
+  background-color: #474544 !important;
   color: white;
   margin-top: 1rem;
-  width: 10rem;
+  width: 30%;
+  font-weight: bold;
+  font-size: 1.3rem;
   border-radius: 4px !important;
 }
 
-.featured-btn:hover {
-  background-color: #ff2828 !important;
-  color: white !important;
-  border: #ff2828 !important;
-}
-
 .featured-details h4 {
-  color: white;
+  color: #474544;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -160,17 +167,13 @@ h5 {
 
 #brand-car h1 {
   font-weight: 900 !important;
-  color: #ff2828 !important;
+  color: #474544 !important;
 }
 
 #cgap h1 {
   padding-top: 5rem !important;
   font-weight: 900 !important;
-  color: #ff2828;
-}
-
-.card-content p {
-  color: rgb(255, 255, 255);
+  color: #474544;
 }
 
 .btn-primary {
@@ -254,12 +257,8 @@ h5 {
   margin-top: 4.5rem;
 }
 
-#trending-products {
-  background-color: #242424;
-}
-
 #trending-products h1 {
-  color: #ff2828;
+  color: #474544;
   padding-top: 5rem;
 }
 
@@ -278,8 +277,7 @@ h5 {
 }
 
 .btn {
-  background: none;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .text-2 {
@@ -835,26 +833,22 @@ p {
 
 .contact-address {
   border-radius: 30px;
+  background: #FAF4EF;
+}
+
+.contact-address:hover {
+  background: #FAF4EF;
+  border-color: #474544;
 }
 
 .contact-logo {
-  color: white;
+  color: #474544;
   transform: scale(1.1);
 }
 
 .contact-a {
   color: black;
   text-decoration: underline;
-}
-
-.try:hover {
-  transform: scale(1.1);
-  background: black;
-  border-color: white;
-}
-
-.try {
-  border: 1px solid white;
 }
 
 .contact-touch {
@@ -892,11 +886,6 @@ textarea::placeholder {
 
 .contact-button {
   border: 1px solid white;
-}
-
-.contact-button:hover {
-  transform: scale(1.1);
-  background: #ff2828;
 }
 
 #protien-name {

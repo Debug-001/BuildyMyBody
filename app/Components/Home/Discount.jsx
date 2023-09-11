@@ -20,10 +20,10 @@ const Carousel = () => {
 	]);
 
 	return (
-		<section style={{ background: 'black' }}>
+		<section >
 			<div
 				id="carouselExampleControls3"
-				className="carousel slide container"
+				className="carousel slide "
 				data-ride="carousel"
 
 			>
