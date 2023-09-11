@@ -30,11 +30,17 @@
 }
 
 .icon-search {
-  padding-right: 3rem;
+  /* padding-right: 3rem; */
 }
 
 .icon-search a {
   color: white !important;
+}
+
+@media screen and (max-width:575px) {
+  .custom-icons {
+    display: none;
+  }
 }
 
 .icon-search a:hover {
@@ -42,7 +48,7 @@
 }
 
 .icon-cart {
-  padding-right: 3rem;
+  /* padding-right: 3rem; */
   color: white;
 }
 
