@@ -469,10 +469,12 @@
 .sub2 {
   position: absolute;
   /* top: 70%; */
-  /* left: 0; */
+  left: 0;
   display: none;
   width: 100%;
-  left: 10%;
+  /* margin-left: 2rem; */
+  /* margin-right: 2rem; */
+  /* left: 10%; */
   right: auto;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -487,19 +489,19 @@
 
 @media screen and (max-width:1200px) {
   .sub2 {
-    left: 14%;
+    /* left: 14%; */
   }
 }
 
 @media screen and (max-width:1048px) {
   .sub2 {
-    left: 17%;
+    /* left: 17%; */
   }
 }
 
 @media screen and (max-width:1172px) {
   .sub2 {
-    left: 15%;
+    /* left: 15%; */
   }
 }
 

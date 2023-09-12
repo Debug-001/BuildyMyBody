@@ -82,6 +82,7 @@ export default function Login() {
                     <div className="form-group pb-3 mt-4">
                       <input
                         id="email"
+                        className='w-100'
                         name="email"
                         type="email"
                         autoComplete="email"
@@ -94,6 +95,7 @@ export default function Login() {
                     <div className="form-group pb-3">
                       <input
                         id="password"
+                        className='w-100'
                         name="password"
                         type="password"
                         autoComplete="current-password"
@@ -119,7 +121,7 @@ export default function Login() {
                       <span className="pl-2 font-weight-bold">Remember Me</span>
                     </div>
                     <div>
-                    <Link to="/account/recover">Forgot password →</Link>
+                      <Link to="/account/recover">Forgot password →</Link>
                     </div>
                   </div>
                   <div className="pb-2">
@@ -135,9 +137,10 @@ export default function Login() {
                 <div>
                   <button
                     type="submit"
-                    className="btn text-light w-100 font-weight-bold mt-2  google"
+                    className="btn text-light w-100 font-weight-bold mt-2 "
+                    style={{ height: '50px', background: 'red' }}
                   >
-                   <Link to="/account/register">Sign Up →</Link>
+                    <Link to="/account/register" style={{ color: "white" }}>Sign Up →</Link>
                   </button>
                 </div>
                 <div className="pt-4 text-center">

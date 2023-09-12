@@ -794,10 +794,6 @@ p {
   /* color: black; */
 }
 
-.login-btn:hover {
-  transform: scale(1.1);
-}
-
 .sideline:before,
 .sideline:after {
   content: "";
@@ -1055,7 +1051,6 @@ hr {
 
 .login-img {
   object-position: center;
-  border-radius: 10px;
 }
 
 /* .login-img:hover {
@@ -1512,8 +1507,8 @@ hr {
 }
 
 .profile-clr {
-  background-color: #171717;
-  color: white;
+  background-color: #FAF4EF;
+  color: #474544;
 }
 
 .profile-btn:hover {
@@ -1544,8 +1539,7 @@ hr {
   border-left: 0;
   border-right: 0;
   padding: 0.5rem;
-  background-color: #171717;
-  color: white;
+  color: #474544;
 }
 
 @media screen and (max-width: 767px) {
@@ -1570,10 +1564,6 @@ hr {
     display: none;
   }
 }
-.account-addresses {
-  border: 1.2px solid gray;
-}
-
 .dropdown-container {
   position: relative;
 }

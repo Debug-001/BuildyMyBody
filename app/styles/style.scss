@@ -921,7 +921,7 @@ p {
 }
 
 .login-btn:hover {
-  transform: scale(1.1);
+  // transform: scale(1.1);
 }
 
 .sideline:before,
@@ -1227,7 +1227,7 @@ hr {
 
 .login-img {
   object-position: center;
-  border-radius: 10px;
+  // border-radius: 10px;
 }
 
 /* .login-img:hover {
@@ -1765,8 +1765,8 @@ hr {
 }
 
 .profile-clr {
-  background-color: #171717;
-  color: white;
+  background-color: #FAF4EF;
+  color: #474544;
 }
 
 .profile-btn:hover {
@@ -1797,8 +1797,8 @@ hr {
   border-left: 0;
   border-right: 0;
   padding: 0.5rem;
-  background-color: #171717;
-  color: white;
+  // background-color: #171717;
+  color: #474544;
 
 }
 
@@ -1832,7 +1832,7 @@ hr {
 }
 
 .account-addresses {
-  border: 1.2px solid gray;
+  // border: 1.2px solid gray;
 }
 
 
@@ -1907,3 +1907,10 @@ hr {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
+
+//account
+// .nav-acc {
+//   display: flex;
+//   justify-content: center;
+// }

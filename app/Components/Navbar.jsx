@@ -279,12 +279,12 @@ const Navbar = () => {
                 )}
                 {menuItem.text === 'Contact Us' && isSubMenuVisible && (
                   <div
-                    className="w-25 sub2 "
+                    className=" sub2"
                     style={{ background: 'black', color: 'white' }}
                   >
-                    <div className="submenu-content ">
-                      <div className="row p-4">
-                        <div className="col mt-2">
+                    <div className="submenu-content">
+                      <div className="row p-2  ">
+                        <div className="col mt-2 ">
                           <NavLink to={'/'}>
                             <h4
                               className="text-center"

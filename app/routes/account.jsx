@@ -102,11 +102,11 @@ function AccountLayout({ customer, children }) {
   return (
     <>
       <Navbar />
-      <div className="account">
+      <div className="account" style={{ background: '#FAF4EF' }}>
         <div className='details'>
-          <h1 className='welcome-txt'><em>{heading}</em></h1>
+          <h1 className='welcome-txt text-center'><em>{heading}</em></h1>
         </div>
-          <hr className='hr-tag' style={{ height: 2, borderWidth: 0,backgroundColor: "gray" }}/>
+        <hr className='hr-tag' style={{ height: 2, borderWidth: 0, backgroundColor: "gray" }} />
         <br />
         <AcccountMenu />
         {children}
@@ -125,22 +125,78 @@ function AcccountMenu() {
   }
   return (
     <>
-    <div className='account_menu'>
-    <div className="card-acc">
-      <nav role="navigation">
-        <NavLink to="/account/orders" style={isActiveStyle}>
-         My Orders &nbsp;
-        </NavLink>
-        <NavLink to="/account/profile" style={isActiveStyle}>
-          &nbsp;Profile &nbsp;
-        </NavLink>
-        <NavLink to="/account/addresses" style={isActiveStyle}>
-          &nbsp;Saved Addresses &nbsp;
-        </NavLink>
-        <Logout/>
+      {/* <div className='account_menu'>
+        <div className="card-acc d-flex justify-content-center ">
+          <nav role="navigation" style={{ display: "flex", gap: '6rem', fontSize: '1.4rem' }}>
+            <NavLink to="/account/orders" style={isActiveStyle}>
+              My Orders &nbsp;
+            </NavLink>
+            <NavLink to="/account/profile" style={isActiveStyle}>
+              &nbsp;Profile &nbsp;
+            </NavLink>
+            <NavLink to="/account/addresses" style={isActiveStyle}>
+              &nbsp;Saved Addresses &nbsp;
+            </NavLink>
+            <Logout />
+          </nav>
+        </div>
+      </div> */}
+
+
+      {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <nav role="navigation" style={{ display: "flex", gap: '6rem', fontSize: '1.4rem' }}>
+              <a class="nav-item nav-link active" href="#">
+                <NavLink to="/account/orders" style={isActiveStyle}>
+                  My Orders &nbsp;
+                </NavLink>
+              </a>
+              <NavLink to="/account/profile" style={isActiveStyle}>
+                &nbsp;Profile &nbsp;
+              </NavLink>
+              <NavLink to="/account/addresses" style={isActiveStyle}>
+                &nbsp;Saved Addresses &nbsp;
+              </NavLink>
+              <Logout />
+            </nav>
+          </div>
+        </div>
+      </nav> */}
+
+      <nav class="navbar navbar-expand-lg navbar-light " >
+        <a class="navbar-brand d-lg-none d-md-flex" href="#" style={{ fontSize: '1.4rem' }}>My Profile</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item mr-lg-5" style={{ fontSize: '1.4rem' }}>
+              <NavLink to="/account/orders" style={isActiveStyle}>
+                My Orders
+              </NavLink>
+            </li>
+            <li class="nav-item mr-lg-5" style={{ fontSize: '1.4rem' }}>
+              <NavLink to="/account/profile" style={isActiveStyle}>
+                Profile
+              </NavLink>
+            </li>
+            <li class="nav-item mr-lg-5" style={{ fontSize: '1.4rem' }}>
+              <NavLink to="/account/addresses" style={isActiveStyle}>
+                Saved Addresses
+              </NavLink>
+            </li>
+            <li class="nav-item" style={{ fontSize: '1.4rem' }}>
+              <Logout />
+            </li>
+          </ul>
+        </div>
       </nav>
-    </div>
-    </div>
+
     </>
   );
 }
