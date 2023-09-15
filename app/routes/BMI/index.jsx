@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
@@ -9,7 +9,7 @@ const BMI = () => {
   const [bmiResult, setBMIResult] = useState(null);
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     switch (name) {
       case 'age':
@@ -110,8 +110,8 @@ const BMI = () => {
                 </button>
               </div>
               <hr className="line-hr" />
-              <div className="analysis">
-                <div className="bmi-result"> Your Bmi is {bmiResult}</div>
+              <div className="analysis flex-lg-column ">
+                <div className="bmi-result" style={{ textAlign: 'center' }}> Your Bmi is {bmiResult}</div>
                 {/* {bmiResult && <div className='result'>Your BMI: {bmiResult}</div>} */}
                 {bmiResult && (
                   <div className="result">

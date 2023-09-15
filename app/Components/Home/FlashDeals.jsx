@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
+
 const FlashDeals = ({ collection }) => {
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
@@ -17,8 +18,8 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products" style={{ background: '#FAF4EF' }}>
-        <div className="container  py-5">
+      <section id="trending-products" >
+        <div className="container-fluid  py-5">
           <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
             <em>Trending Products</em>
           </h1>
@@ -136,6 +137,7 @@ const FlashDeals = ({ collection }) => {
             >
               <div className="container" id="wheyprotein">
                 <Slider
+                  className='ml-lg-5 mr-lg-5'
                   asNavFor={nav1}
                   ref={slider2}
                   slidesToShow={3}
@@ -180,7 +182,7 @@ const FlashDeals = ({ collection }) => {
                         />
                       </div>
                       <div className="card-content ml-3 mr-3">
-                        <h5 className="d-flex justify-content-center mt-5">
+                        <h5 className="d-flex justify-content-center mt-5 text-center" >
                           {product.title}
                         </h5>
                         <p className="d-flex justify-content-center font-weight-bold mt-3">

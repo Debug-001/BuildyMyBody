@@ -7,6 +7,8 @@ import FlashDeals from './FlashDeals';
 import Verify from './Verify';
 import BrandCaraousel from './BrandCaraousel';
 import TopSelling from './TopSelling';
+import Testimonials from './Testimonials';
+import ShopByBrands from './ShopByBrands';
 
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -24,9 +26,10 @@ const Home = ({ data }) => {
       <Discount />
 
       <FlashDeals collection={data.flashDeals} />
-
+      <ShopByBrands />
       <BrandCaraousel />
       <Verify />
+      <Testimonials />
       <Footer />
     </>
   );

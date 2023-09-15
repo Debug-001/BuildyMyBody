@@ -42,11 +42,11 @@ const Navbar = () => {
       link: '/authenticity',
       active: true,
     },
-    // {
-    //   text: 'filter',
-    //   link: '/filter',
-    //   active: true,
-    // },
+    {
+      text: 'filter',
+      link: '/filter',
+      active: true,
+    },
     // {
     //   text: 'certi',
     //   link: '/certi',
@@ -322,7 +322,7 @@ const Navbar = () => {
 
           <ul className='navbar-nav  d-lg-none d-md-flex'>
             <div className="d-flex ">
-              <div className="icon-search m-4">
+              <div className="icon-search ">
                 <li >
                   <NavLink to="/search" >
                     <BsSearch size={18} />

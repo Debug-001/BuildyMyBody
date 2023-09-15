@@ -1,13 +1,13 @@
-import {Link, useLoaderData} from '@remix-run/react';
-import {Money, Pagination, getPaginationVariables} from '@shopify/hydrogen';
-import {json, redirect} from '@shopify/remix-oxygen';
+import { Link, useLoaderData } from '@remix-run/react';
+import { Money, Pagination, getPaginationVariables } from '@shopify/hydrogen';
+import { json, redirect } from '@shopify/remix-oxygen';
 
 export const meta = () => {
-  return [{title: 'Orders'}];
+  return [{ title: 'Orders' }];
 };
 
-export async function loader({request, context}) {
-  const {session, storefront} = context;
+export async function loader({ request, context }) {
+  const { session, storefront } = context;
 
   const customerAccessToken = await session.get('customerAccessToken');
   if (!customerAccessToken?.accessToken) {
@@ -19,7 +19,7 @@ export async function loader({request, context}) {
       pageBy: 20,
     });
 
-    const {customer} = await storefront.query(CUSTOMER_ORDERS_QUERY, {
+    const { customer } = await storefront.query(CUSTOMER_ORDERS_QUERY, {
       variables: {
         customerAccessToken: customerAccessToken.accessToken,
         country: storefront.i18n.country,
@@ -33,81 +33,81 @@ export async function loader({request, context}) {
       throw new Error('Customer not found');
     }
 
-    return json({customer});
+    return json({ customer });
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 }
 
 export default function Orders() {
-  const {customer} = useLoaderData();
-  const {orders, numberOfOrders} = customer;
+  const { customer } = useLoaderData();
+  const { orders, numberOfOrders } = customer;
   return (
     <>
-    <div className="parent-orders">
-    <div className="card-orders">
-    <div className="orders">
-      <h2>
-      Orders <small>[{numberOfOrders}]</small>
-      </h2>
-      <br />
-      {orders.nodes.length ? <OrdersTable orders={orders} /> : <EmptyOrders />}
-    </div>
-    </div>
-    </div>
+      <div className="parent-orders" style={{ textAlign: 'center' }}>
+        <div className="card-orders">
+          <div className="orders">
+            <h2>
+              Orders <small>[{numberOfOrders}]</small>
+            </h2>
+            <br />
+            {orders.nodes.length ? <OrdersTable orders={orders} /> : <EmptyOrders />}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
 
-function OrdersTable({orders}) {
+function OrdersTable({ orders }) {
   return (
     <>
-    <div className="acccount-orders">
-      {orders?.nodes.length ? (
-        <Pagination connection={orders}>
-          {({nodes, isLoading, PreviousLink, NextLink}) => {
-            return (
-              <>
-                <PreviousLink>
-                  {isLoading ? 'Loading...' : <span>↑ Load previous</span>}
-                </PreviousLink>
-                {nodes.map((order) => {
-                  return <OrderItem key={order.id} order={order} />;
-                })}
-                <NextLink>
-                  {isLoading ? 'Loading...' : <span>Load more ↓</span>}
-                </NextLink>
-              </>
-            );
-          }}
-        </Pagination>
-      ) : (
-        <EmptyOrders />
-      )}
-    </div>
+      <div className="acccount-orders">
+        {orders?.nodes.length ? (
+          <Pagination connection={orders}>
+            {({ nodes, isLoading, PreviousLink, NextLink }) => {
+              return (
+                <>
+                  <PreviousLink>
+                    {isLoading ? 'Loading...' : <span>↑ Load previous</span>}
+                  </PreviousLink>
+                  {nodes.map((order) => {
+                    return <OrderItem key={order.id} order={order} />;
+                  })}
+                  <NextLink>
+                    {isLoading ? 'Loading...' : <span>Load more ↓</span>}
+                  </NextLink>
+                </>
+              );
+            }}
+          </Pagination>
+        ) : (
+          <EmptyOrders />
+        )}
+      </div>
     </>
-    
+
   );
 }
 
 function EmptyOrders() {
   return (
     <>
-    <div className='empty-orders'>
-      <p>You haven&apos;t placed any orders yet.</p>
-      <br />
-      <a className='btn-shopping'>
-        <Link to="/collections">Start Shopping →</Link>
-      </a>
-    </div>
-        </>
+      <div className='empty-orders'>
+        <p>You haven&apos;t placed any orders yet.</p>
+        <br />
+        <a className='btn-shopping'>
+          <Link to="/collections">Start Shopping →</Link>
+        </a>
+      </div>
+    </>
   );
 }
 
-function OrderItem({order}) {
+function OrderItem({ order }) {
   return (
     <>
       <fieldset>

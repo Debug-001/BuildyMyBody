@@ -190,7 +190,7 @@ function AcccountMenu() {
                 Saved Addresses
               </NavLink>
             </li>
-            <li class="nav-item" style={{ fontSize: '1.4rem' }}>
+            <li class="nav-item acc-btn " style={{ fontSize: '1.4rem' }}>
               <Logout />
             </li>
           </ul>

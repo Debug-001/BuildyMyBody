@@ -16,12 +16,13 @@ const FeaturedProducts = ({ collections }) => {
 
   return (
     <section id="product-card " style={{ background: '#FAF4EF' }}>
-      <div className="container " id="cgap">
+      <div className="container-fluid" id="cgap">
         <h1 className="d-flex justify-content-center py-5 font-weight-bold custom-heading3">
           <em>SHOP BY CATEGORIES</em>
         </h1>
 
         <Slider
+          className='ml-lg-5 mr-lg-5'
           asNavFor={nav1}
           ref={slider2}
           slidesToShow={3}

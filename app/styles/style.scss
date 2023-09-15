@@ -14,12 +14,12 @@
 }
 
 .carousel-control-prev {
-  filter: invert(100%);
+  // filter: invert(100%);
 
 }
 
 .carousel-control-next {
-  filter: invert(100%);
+  // filter: invert(100%);
 }
 
 .category-btn {
@@ -124,7 +124,7 @@ h5 {
   color: #474544;
   font-size: 2rem;
   font-weight: 600;
-  width: 80%;
+  // width: 80%;
 }
 
 .carousel-control-prev-icon {
@@ -157,7 +157,7 @@ h5 {
   color: white;
   margin-top: 1rem;
   // width: 10rem;
-  width: 30%;
+  // width: 30%;
   font-weight: bold;
   font-size: 1.3rem;
   border-radius: 4px !important;
@@ -302,6 +302,7 @@ h5 {
 
 #trending-products {
   // background-color: #242424;
+  background: url(../../dist/client/img/trendingbg.jpg);
 }
 
 #trending-products h1 {
@@ -586,7 +587,19 @@ me #secondbtn {
 }
 
 .slick-arrow::before {
-  // color: black;
+  color: black;
+  // transform: scale(2.5);
+  font-size: 40px;
+  line-height: 0;
+  // opacity: 0;
+}
+
+.slick-prev {
+  left: -37px;
+}
+
+.slick-next {
+  right: -24px;
 }
 
 // .custom-dropdown {
@@ -1007,10 +1020,10 @@ p {
 }
 
 input::placeholder {
-  font-weight: bold;
+  // font-weight: bold;
   opacity: 0.5;
-  padding-left: 2rem;
-  padding-top: 2rem !important;
+  // padding-left: 2rem;
+  // padding-top: 2rem !important;
 }
 
 
@@ -1018,7 +1031,7 @@ input::placeholder {
 textarea::placeholder {
   font-weight: bold;
   opacity: 0.5;
-  padding-left: 2rem;
+  // padding-left: 2rem;
 }
 
 .contact-button {
@@ -1638,10 +1651,12 @@ hr {
 
 .analysis {
   display: flex !important;
+  align-items: center;
 }
 
 .result {
-  margin-left: 2rem;
+  // margin-left: 2rem;
+
   color: white;
 }
 
@@ -1914,3 +1929,89 @@ hr {
 //   display: flex;
 //   justify-content: center;
 // }
+
+.row.cus {
+  display: none;
+}
+
+.row.cus.show {
+  display: flex;
+}
+
+.filter-hover:hover {
+  font-weight: bold;
+  transform: scaleY(1.1);
+  transform: scaleX(1);
+}
+
+.filter-size p {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.vl-2 {
+  border-left: 2px solid #919191;
+  margin-top: 7px;
+}
+
+.acc-btn button {
+  background-color: #474544 !important;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+//SHop by brands
+.shopby-img {
+  padding-left: 9rem;
+  padding-right: 9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.shopby-flex {
+  flex-direction: row;
+}
+
+@media screen and (max-width:940px) {
+  .shopby-flex {
+    flex-direction: column;
+  }
+
+  .shopby-img {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .cus-margin {
+    margin-top: 1.7rem;
+  }
+
+  .left {
+    margin-left: 0 !important;
+  }
+
+  .cus2 {
+    margin-top: 1.7rem;
+
+  }
+
+  .cus3 {
+    margin-top: 1rem;
+  }
+
+
+}
+
+@media screen and (max-width:992px) {
+  .left {
+    margin-left: 1rem;
+  }
+
+  .cus2 {
+    margin-top: 1rem;
+  }
+}

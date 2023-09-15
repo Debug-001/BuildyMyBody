@@ -30,7 +30,7 @@ const TopSelling = ({ collection }) => {
                     />
                   </div>
                   <div className="col featured-details ">
-                    <h2>{product.title}</h2>
+                    <h2 className='w-lg-75'>{product.title}</h2>
                     <h4>
                       {product.variants.nodes[0].compareAtPrice && (
                         <del className="discount-text">

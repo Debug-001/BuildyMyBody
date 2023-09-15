@@ -17,12 +17,13 @@ const BrandCaraousel = () => {
   return (
     <>
       <section id="fitness-car" style={{ background: '#FAF4EF' }} >
-        <div className="container">
+        <div className="container-fluid">
           <h1 className="fitnessarticel d-flex justify-content-center font-weight-bold custom-heading">
             <em className='mt-5'>FITNESS ARTICLES</em>
           </h1>
           <div className="fitness-slider">
             <Slider
+              className='ml-lg-5 mr-lg-5'
               asNavFor={nav1}
               ref={slider2}
               slidesToShow={3}
@@ -173,12 +174,13 @@ const BrandCaraousel = () => {
       </section>
 
       <section id="brand-car" style={{ background: '#FAF4EF' }} >
-        <div className="container mt-5">
+        <div className="container-fluid mt-5">
           <h1 className="d-flex font-weight-bold justify-content-center custom-heading">
             <em>BRANDS</em>
           </h1>
           <div className="brands-slider">
             <Slider
+              className='ml-lg-5 mr-lg-5'
               asNavFor={nav1}
               ref={slider2}
               slidesToShow={3}
