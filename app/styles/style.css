@@ -1673,6 +1673,7 @@ hr {
   padding-right: 9rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-radius: 4px;
 }
 
 .shopby-flex {
@@ -1707,6 +1708,12 @@ hr {
   .cus2 {
     margin-top: 1rem;
   }
+}
+.submenuuuu {
+  max-height: max-content;
+  /* Set the maximum height for the submenu */
+  overflow-y: auto;
+  /* Enable vertical scrollbar */
 }
 
 /*# sourceMappingURL=style.css.map */

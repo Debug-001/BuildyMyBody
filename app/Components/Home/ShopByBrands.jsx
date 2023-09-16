@@ -15,18 +15,18 @@ const ShopByBrands = () => {
                     <h1 class="d-flex justify-content-center align-items-center font-weight-bold custom-heading"><em>Shop By Brands</em></h1>
                     <div className="row">
                         <div className="col shopby-flex" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
-                            <img src={photo} className='border border-dark   shopby-img' style={{ background: 'burlywood' }} alt="" />
-                            <img src={photo1} className='border border-dark cus3  shopby-img  left' style={{ background: 'darkslategrey' }} alt="" />
-                            {/* <img src={photo2} className='border border-dark    ml-3' style={{ background: 'lightcoral' }} alt="" /> */}
+                            <img src={photo} className='     shopby-img' style={{ background: 'burlywood' }} alt="" />
+                            <img src={photo1} className='   cus3  shopby-img  left' style={{ background: 'darkslategrey' }} alt="" />
+                            {/* <img src={photo2} className='      ml-3' style={{ background: 'lightcoral' }} alt="" /> */}
                         </div>
 
                     </div>
 
                     <div className="row">
                         <div className="col shopby-flex mt-lg-3 " style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
-                            <img src={photo3} className='border border-dark cus2    shopby-img  ' style={{ background: 'beige' }} alt="" />
-                            {/* <img src={photo4} className='border border-dark    ml-3' style={{ background: 'aliceblue' }} alt="" /> */}
-                            <img src={photo5} className='border border-dark   shopby-img   cus2 left' style={{ background: 'bisque' }} alt="" />
+                            <img src={photo3} className='   cus2    shopby-img  ' style={{ background: 'beige' }} alt="" />
+                            {/* <img src={photo4} className='      ml-3' style={{ background: 'aliceblue' }} alt="" /> */}
+                            <img src={photo5} className='     shopby-img   cus2 left' style={{ background: 'bisque' }} alt="" />
                         </div>
                     </div>
                 </div>
