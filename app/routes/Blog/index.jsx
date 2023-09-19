@@ -33,7 +33,7 @@ function Blog() {
       <Navbar />
       <div className="main-div m-0 p-0" style={{ background: '#FAF4EF' }}>
 
-        <div className="container">
+        <div className="container" >
           <p className="text-center  blogs-text" style={{ color: '#474544' }}>BLOGS</p>
           {/* <nav className="nav nav-pills flex-column flex-sm-row  justify-content-center blog-links mt-3">
             <a

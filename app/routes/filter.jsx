@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Form, NavLink } from '@remix-run/react';
-import Protein from '../../dist/client/img/protien.png';
-
+import Protien2 from '../../dist/client/img/protien2.png';
+import { BsSearch } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
+import { RiAccountCircleLine } from 'react-icons/ri';
+import { BiCategoryAlt } from 'react-icons/bi'
 const Filter = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
@@ -25,8 +28,10 @@ const Filter = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Navbar</a>
+            <nav className="navbar navbar-expand-lg navbar-light " style={{ background: 'black' }}>
+                <NavLink className="navbar-brand ml-lg-4" to="/">
+                    <img className="logo_img w-75" src="/img/logo.png" alt="" />
+                </NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -37,24 +42,119 @@ const Filter = () => {
                     aria-label="Toggle navigation"
                     onClick={handleNavbarToggle}
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon ">
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </span>
                 </button>
                 <div className={`collapse navbar-collapse ${isNavbarCollapsed ? 'show' : ''}`} id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav ml-auto mr-auto">
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu drop-custom" aria-labelledby="dropdownMenuLink">
+                                <div className="row">
+                                    <div className="col d-flex">
+                                        <div className='  '>
+                                            <div className='d-flex flex-column align-items-center'>
+                                                <BiCategoryAlt />
+                                                <span>hello</span>
+                                            </div>
+                                        </div>
+                                        <div className='  '>
+                                            <div className='d-flex flex-column align-items-center'>
+                                                <img src={Protien2} alt="" style={{ width: '5rem' }} />
+                                                <span>hello</span>
+                                            </div>
+                                        </div>
+                                        <div className='  '>
+                                            <div className='d-flex flex-column align-items-center'>
+                                                <img src={Protien2} alt="" style={{ width: '5rem' }} />
+                                                <span>hello</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="col d-flex">
+                                        <div className='  '>
+                                            <div className='d-flex flex-column align-items-center'>
+                                                <img src={Protien2} alt="" style={{ width: '5rem' }} />
+                                                <span>hello</span>
+                                            </div>
+                                        </div>
+                                        <div className='  '>
+                                            <div className='d-flex flex-column align-items-center' >
+                                                <img src={Protien2} alt="" style={{ width: '5rem' }} />
+                                                <span>hello</span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
                         <li className="nav-item">
-                            <a
-                                className={`nav-link cus-1 ${selectedCategory === 'Protein' ? 'active' : ''}`}
-                                href="#"
+                            <NavLink
+                                className={`nav-link cus-1 text-light ${selectedCategory === 'Protein' ? 'active' : ''}`}
+                                to="#"
                                 onClick={() => handleFeaturesClick('Protein')}
                             >
-                                Features
-                            </a>                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                                All Products
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="#">Disabled</a>
+                            <NavLink className={'nav-link active text-light'} to='/blog'>Blog</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className={'nav-link active text-light'} to='/contact'>Contact Us</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className={'nav-link active text-light'} to='/certificates'>Certifications</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className={'nav-link active text-light'} to='/authenticity'>Authenticity</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className={'nav-link active text-light'} to='/filter'>Filter</NavLink>
+                        </li>
+
+                    </ul>
+                    <ul className='navbar-nav  ml-auto'>
+                        <div className="d-flex ">
+                            <div className="icon-search ">
+                                <li >
+                                    <NavLink to="/search" >
+                                        <BsSearch size={18} />
+                                    </NavLink>
+                                </li>
+                            </div>
+
+                            <div className="icon-cart ml-3">
+                                <li>
+                                    <NavLink to="/cart">
+                                        <FiShoppingCart size={18} />
+                                    </NavLink>
+                                </li>
+                            </div>
+                            <div className="icon-cart ml-3">
+                                <li>
+                                    <NavLink to="/account" className={'border border-light p-2'}>
+                                        Account
+                                    </NavLink>
+                                </li>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </nav>
@@ -76,7 +176,7 @@ const Filter = () => {
                         <p onClick={() => handleFeaturesClick('PrePostWorkout')} style={{ fontSize: '1.6rem', cursor: 'pointer' }} className='mt-3 filter-hover'>Pre/Post Workout</p>
                         <p onClick={() => handleFeaturesClick('WorkoutEssentials')} style={{ fontSize: '1.6rem', cursor: 'pointer' }} className='mt-3 filter-hover'>Workout Essentials</p>
                         <button className='category-btn btn w-100 mt-3'>
-                            Shop All
+                            <NavLink to='/products/all'>Shop All</NavLink>
                         </button>
                     </div>
                     <div className="vl-2"></div>

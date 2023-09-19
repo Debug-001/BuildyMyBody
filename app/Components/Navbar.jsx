@@ -75,7 +75,7 @@ const Navbar = () => {
     <>
       <nav class="navbar navbar-expand-lg navbar-light " style={{ background: 'black' }}>
         <NavLink className="navbar-brand ml-4" to="/">
-          <img className="logo_img" src="/img/logo.png" alt="" />
+          <img className="logo_img w-75" src="/img/logo.png" alt="" />
         </NavLink>
         <button class="navbar-toggler" style={{ backgroundColor: 'white' }} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" ></span>

@@ -18,8 +18,7 @@
   }
 }
 
-
-.logo_img {
+.slick-next:before .logo_img {
   width: 139px;
   transform: scale(1.4);
   /* margin-left: 3rem; */
@@ -419,6 +418,30 @@
   .card {
     margin-left: 4rem;
   } */
+}
+
+.navbar-toggler-icon .bar {
+  background-color: white;
+  /* Set the color to white */
+  display: block;
+  width: 25px;
+  /* Adjust the width as needed */
+  height: 3px;
+  /* Adjust the height as needed */
+  margin: 4px auto;
+  /* Adjust the margin as needed */
+  transition: background-color 0.3s ease;
+  /* Add a transition effect */
+}
+
+/* Change the bar color on hover (optional) */
+.navbar-toggler-icon:hover .bar {
+  background-color: #ccc;
+  /* Change to a different color on hover */
+}
+
+.drop-custom {
+  /* padding: 7rem; */
 }
 
 .trends {
