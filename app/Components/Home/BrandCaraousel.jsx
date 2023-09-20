@@ -16,11 +16,14 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car" style={{ background: '#FAF4EF' }} >
-        <div className="container-fluid">
-          <h1 className="fitnessarticel d-flex justify-content-center font-weight-bold custom-heading">
-            <em className='mt-5'>FITNESS ARTICLES</em>
-          </h1>
+      <section id="fitness-car"  style={{ background:'#f8f8f8'}}>
+        <div className="container-fluid pt-5 pb-5">
+        <div className="d-flex justify-content-center mb-5" style={{flexDirection:"column", alignItems:"center"}}>
+        <h1 className="custom-heading3">
+          <em>Fitness Articles</em>
+        </h1>
+        <hr className='h1-hr'/>
+        </div>
           <div className="fitness-slider">
             <Slider
               className='ml-lg-5 mr-lg-5'
@@ -173,11 +176,14 @@ const BrandCaraousel = () => {
         </div>
       </section>
 
-      <section id="brand-car" style={{ background: '#FAF4EF' }} >
-        <div className="container-fluid mt-5">
-          <h1 className="d-flex font-weight-bold justify-content-center custom-heading">
-            <em>BRANDS</em>
-          </h1>
+      <section id="brand-car">
+        <div className="container-fluid">
+        <div className="d-flex justify-content-center" style={{flexDirection:"column", alignItems:"center"}}>
+        <h1 className="font-weight-bold custom-heading3">
+          <em>Brands</em>
+        </h1>
+        <hr className='h1-hr'/>
+        </div>
           <div className="brands-slider">
             <Slider
               className='ml-lg-5 mr-lg-5'

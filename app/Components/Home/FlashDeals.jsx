@@ -1,10 +1,9 @@
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
 
-
-const FlashDeals = ({ collection }) => {
+const FlashDeals = ({collection}) => {
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
   const [nav2, setNav2] = useState();
@@ -18,11 +17,18 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products" >
+      <section id="trending-products">
         <div className="container-fluid  py-5">
-          <h1 className="d-flex justify-content-center align-items-center font-weight-bold custom-heading">
-            <em>Trending Products</em>
-          </h1>
+          <div
+            className="d-flex justify-content-center mb-5"
+            style={{flexDirection: 'column', alignItems: 'center'}}
+          >
+            <h1 className=" custom-heading3">
+              <em>Trending Products</em>
+            </h1>
+            <hr className="h1-hr" style={{backgroundColor: 'black'}} />
+          </div>
+
           {/* <ul className="nav nav-tabs mt-5 " id="myTab" role="tablist">
             <li className="nav-item">
               <Link
@@ -137,7 +143,7 @@ const FlashDeals = ({ collection }) => {
             >
               <div className="container" id="wheyprotein">
                 <Slider
-                  className='ml-lg-5 mr-lg-5'
+                  className="ml-lg-5 mr-lg-5"
                   asNavFor={nav1}
                   ref={slider2}
                   slidesToShow={3}
@@ -182,7 +188,7 @@ const FlashDeals = ({ collection }) => {
                         />
                       </div>
                       <div className="card-content ml-3 mr-3">
-                        <h5 className="d-flex justify-content-center mt-5 text-center" >
+                        <h5 className="d-flex justify-content-center mt-5 text-center">
                           {product.title}
                         </h5>
                         <p className="d-flex justify-content-center font-weight-bold mt-3">

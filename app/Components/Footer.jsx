@@ -7,7 +7,7 @@ import { Link } from '@remix-run/react';
 const Footer = () => {
   return (
     <>
-      <div style={{ background: '#FAF4EF' }}>
+      <div>
         <div className="container" >
           <div className="footer-top-section d-flex align-items-center  ">
             <p style={{ color: '#474544' }}>100% Satisfaction</p>
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-row">
-        <div className="container">
+        <div className="container-fluid px-5">
           <div className="row ">
             <div className="col-lg-4 col-md-6  ">
               <div className=" w-75 ">
@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="container mt-4">
+        <div className="container-fluid px-5 mt-4">
           <div className="row footer-bg pb-5">
             <div className="col-sm-6 custom-footer2  ">
               <p>@2023 BuildMyBody. All Rights Reserved</p>

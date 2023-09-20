@@ -10,7 +10,7 @@ export const meta = () => {
 
 export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
-    return redirect('/');
+    return redirect('/account/profile');
   }
   return json({});
 }
@@ -48,7 +48,7 @@ export async function action({ request, context }) {
     const { customerAccessToken } = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
 
-    return redirect('/', {
+    return redirect('/account/profile', {
       headers: {
         'Set-Cookie': await session.commit(),
       },

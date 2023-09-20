@@ -15,11 +15,14 @@ const FeaturedProducts = ({ collections }) => {
   }, []);
 
   return (
-    <section id="product-card " style={{ background: '#FAF4EF' }}>
+    <section id="product-card ">
       <div className="container-fluid" id="cgap">
-        <h1 className="d-flex justify-content-center py-5 font-weight-bold custom-heading3">
-          <em>SHOP BY CATEGORIES</em>
+        <div className="d-flex justify-content-center mb-5" style={{flexDirection:"column", alignItems:"center"}}>
+        <h1 className="font-weight-bold custom-heading3">
+          <em>Shop By Categories</em>
         </h1>
+        <hr className='h1-hr'/>
+        </div>
 
         <Slider
           className='ml-lg-5 mr-lg-5'

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
@@ -9,7 +9,7 @@ const BMI = () => {
   const [bmiResult, setBMIResult] = useState(null);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const {name, value} = e.target;
 
     switch (name) {
       case 'age':
@@ -111,7 +111,10 @@ const BMI = () => {
               </div>
               <hr className="line-hr" />
               <div className="analysis flex-lg-column ">
-                <div className="bmi-result" style={{ textAlign: 'center' }}> Your Bmi is {bmiResult}</div>
+                <div className="bmi-result" style={{textAlign: 'center'}}>
+                  {' '}
+                  Your Bmi is {bmiResult}
+                </div>
                 {/* {bmiResult && <div className='result'>Your BMI: {bmiResult}</div>} */}
                 {bmiResult && (
                   <div className="result">
@@ -121,7 +124,7 @@ const BMI = () => {
                 )}
               </div>
               <div className="container-fullwidth mb-5">
-                <hr />
+                <hr className="line-hr" />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
                     <li className="nav-item">
@@ -174,14 +177,17 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="recom-tab"
                     >
-                      Raw denim you probably haven't heard of them jean shorts
-                      Austin. Nesciunt tofu stumptown aliqua, retro synth master
-                      cleanse. Mustache cliche tempor, williamsburg carles vegan
-                      helvetica. Reprehenderit butcher retro keffiyeh
-                      dreamcatcher synth. Cosby sweater eu banh mi, qui irure
-                      terry richardson ex squid. Aliquip placeat salvia cillum
-                      iphone. Seitan aliquip quis cardigan american apparel,
-                      butcher voluptate nisi qui.
+                      To Gain Weight: Increase your calorie intake, focus on
+                      nutrient-rich foods, eat consistently throughout the day,
+                      include strength training in your routine, make sure to
+                      get enough protein, consider incorporating healthy fats,
+                      and keep track of your progress. &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; To Lose Weight: Decrease your calorie intake,
+                      maintain a balanced diet, be mindful of portion sizes,
+                      engage in regular exercise, stay hydrated, manage stress,
+                      listen to your body's hunger cues, and seek professional
+                      guidance if needed.
                     </div>
                     <div
                       className="tab-pane fade"
@@ -189,19 +195,10 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="diet-tab"
                     >
-                      Food truck fixie locavore, accusamus mcsweeney's marfa
-                      nulla single-origin coffee squid. Exercitation +1 labore
-                      velit, blog sartorial PBR leggings next level wes anderson
-                      artisan four loko farm-to-table craft beer twee. Qui photo
-                      booth letterpress, commodo enim craft beer mlkshk aliquip
-                      jean shorts ullamco ad vinyl cillum PBR. Homo nostrud
-                      organic, assumenda labore aesthetic magna delectus mollit.
-                      Keytar helvetica VHS salvia yr, vero magna velit sapiente
-                      labore stumptown. Vegan fanny pack odio cillum wes
-                      anderson 8-bit, sustainable jean shorts beard ut DIY
-                      ethical culpa terry richardson biodiesel. Art party
-                      scenester stumptown, tumblr butcher vero sint qui sapiente
-                      accusamus tattooed echo park.
+                      Diet charts are very important for beneficial results, you
+                      can get your customized diet charts from your personal
+                      trainer or you can dm our contacts for getting your
+                      personalized diet charts.
                     </div>
                     <div
                       className="tab-pane fade"
@@ -209,17 +206,16 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="work-tab"
                     >
-                      Etsy mixtape wayfarers, ethical wes anderson tofu before
-                      they sold out mcsweeney's organic lomo retro fanny pack
-                      lo-fi farm-to-table readymade. Messenger bag gentrify
-                      pitchfork tattooed craft beer, iphone skateboard locavore
-                      carles etsy salvia banksy hoodie helvetica. DIY synth PBR
-                      banksy irony. Leggings gentrify squid 8-bit cred
-                      pitchfork. Williamsburg banh mi whatever gluten-free,
-                      carles pitchfork biodiesel fixie etsy retro mlkshk vice
-                      blog. Scenester cred you probably haven't heard of them,
-                      vinyl craft beer blog stumptown. Pitchfork sustainable
-                      tofu synth chambray yr.
+                      For Weight Loss: Combine cardio exercises like running or
+                      cycling with strength training 2-3 times weekly. Aim for
+                      around 150 minutes of moderate-intensity cardio or 75
+                      minutes of vigorous-intensity cardio per week. Include
+                      stretching for flexibility and gradually increase exercise
+                      intensity. For Muscle Gain: Emphasize strength training
+                      using resistance exercises like weightlifting. Target
+                      major muscle groups 2-3 times a week, allowing adequate
+                      rest between workouts. Focus on progressive overload to
+                      increase strength and muscle mass over time.
                     </div>
                   </div>
                 </div>

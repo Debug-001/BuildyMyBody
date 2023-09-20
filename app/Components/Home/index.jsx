@@ -20,14 +20,11 @@ const Home = ({ data }) => {
       <Navbar />
       <Carousel />
       <FeaturedProducts collections={data.collections} />
-      {/* <Discount /> */}
-      {/* <br /> */}
       <TopSelling collection={data.collection} />
       <Discount />
-
       <FlashDeals collection={data.flashDeals} />
       <ShopByBrands />
-      <BrandCaraousel />
+      <BrandCaraousel/>
       <Verify />
       <Testimonials />
       <Footer />

@@ -109,21 +109,21 @@ export default function AccountProfile() {
       <div className='profile-clr pb-5 '>
         <div className="container">
           <div className="account-profile">
-            <h2 >
-              <em className='' style={{ color: '#474544' }}>My Profile</em>
+            <h2 style={{color:"#ff2828"}}>
+              <em className=''>My Profile</em>
             </h2>
-            <hr className='bg-light' />
+            <hr style={{width:"30%"}} className='bg-light'/>
             {/* <br /> */}
-            <Form method="PUT">
+            <Form method="PUT" className='mt-5'>
               <div className="row">
                 <div className="col ">
-                  <legend className='' style={{ color: '#474544' }}>Personal information</legend>
+                  <legend className=''>Personal information</legend>
                 </div>
               </div>
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6">
                   <fieldset>
-                    <label htmlFor="firstName" className='profile-name ' style={{ color: '#474544' }}>First name</label> <br />
+                    <label htmlFor="firstName" className='profile-name '>First name</label> <br />
                     <input
                       className=' profile-input w-100'
                       id="firstName"
@@ -153,7 +153,7 @@ export default function AccountProfile() {
                 </div>
                 <div className="col ">
                   <fieldset>
-                    <label htmlFor="phone" className='profile-name ' style={{ color: '#474544' }}>Mobile</label>
+                    <label htmlFor="phone" className='profile-name '>Mobile</label>
                     <br />
                     <input
                       className=' profile-input w-100'
@@ -166,7 +166,7 @@ export default function AccountProfile() {
                       defaultValue={customer.phone ?? ''}
                     />
                     <br />
-                    <label htmlFor="email" className='profile-name ' style={{ color: '#474544' }}>Email address</label>
+                    <label htmlFor="email" className='profile-name '>Email address</label>
                     <br />
                     <input
                       className=' profile-input w-100'
@@ -189,7 +189,7 @@ export default function AccountProfile() {
                         defaultChecked={customer.acceptsMarketing}
                       />
                       <label htmlFor="acceptsMarketing">
-                        <p className='ml-2 ' style={{ color: '#474544' }}>
+                        <p className='ml-2 '>
                           Subscribed to marketing communications
                         </p>
 
@@ -208,7 +208,7 @@ export default function AccountProfile() {
               <br />
               <div className="row">
                 <div className="col ">
-                  <legend className='' style={{ color: '#474544' }}>Change password (optional)</legend>
+                  <legend className='' >Change password (optional)</legend>
                 </div>
                 <div className="col-sm-12 col-lg-6 col-md-6 d-flex justify-content-lg-end justify-content-md-end  ">
                   <button type="submit" className='w-25 text-center p-1 profile-btn-display3 profile-btn' disabled={state !== 'idle'}>
@@ -222,7 +222,7 @@ export default function AccountProfile() {
                   <fieldset>
                     <div className="row">
                       <div className="col">
-                        <label htmlFor="currentPassword" className='profile-name ' style={{ color: '#474544' }}>Current password</label>
+                        <label htmlFor="currentPassword" className='profile-name '>Current password</label>
                         <input
                           className=' profile-input w-100'
                           id="currentPassword"
@@ -234,7 +234,7 @@ export default function AccountProfile() {
                           minLength={8}
                         />
 
-                        <label htmlFor="newPassword" className='profile-name ' style={{ color: '#474544' }}>New password</label>
+                        <label htmlFor="newPassword" className='profile-name '>New password</label>
                         <input
 
                           className='  profile-input w-100'
@@ -246,7 +246,7 @@ export default function AccountProfile() {
                           minLength={8}
                         />
 
-                        <label htmlFor="newPasswordConfirm" className='profile-name ' style={{ color: '#474544' }}>New password (confirm)</label>
+                        <label htmlFor="newPasswordConfirm" className='profile-name '>New password (confirm)</label>
 
                         <input
                           className='  profile-input w-100'
@@ -258,7 +258,7 @@ export default function AccountProfile() {
                           minLength={8}
                         />
                         <br />
-                        <small className='' style={{ color: '#474544' }}>Passwords must be at least 8 characters.</small>
+                        <small className='' style={{ color: 'blue' }}>Passwords must be at least 8 characters.</small>
                       </div>
 
 

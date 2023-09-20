@@ -12,7 +12,7 @@ function Certificates() {
       <div className="main-div" style={{ background: '#FAF4EF' }}>
         <Navbar />
         <div className="container-fluid">
-          <p className="text ml-5 certificate-heading" style={{ color: '#474544' }} >Certificates</p>
+          <p className="text ml-5 certificate-heading" style={{ color: 'black' }} >Certificates</p>
           <div className="row">
             <div className="col ">
               <img src="./img/certificate_img.webp" className="w-100 p-5" alt="" />

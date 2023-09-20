@@ -11,7 +11,7 @@ import Navbar from '../../Components/Navbar';
 function Contact() {
   return (
     <>
-      <div className="main-div" style={{ background: '#FAF4EF' }}>
+      <div className="main-div contact-div">
         <Navbar />
         <div className="location">
           <iframe
@@ -157,7 +157,7 @@ function Contact() {
                       <button
                         type="button"
                         className="btn mt-1 mb-3 w-lg-25 contact-button text-light"
-                        style={{ color: 'white', background: '#474544', fontSize: '1.3rem', fontWeight: 'bold' }}
+                        style={{ color: 'white', background: 'black', fontSize: '1rem'}}
                       >
                         Send Message
                       </button>

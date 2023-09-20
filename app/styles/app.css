@@ -1,17 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&display=swap');
 * {
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue',
-    Helvetica, Arial, sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   margin: 0;
   padding: 0;
   list-style-type: none !important;
   text-decoration: none !important;
-  /* font-family: Arial, Helvetica, sans-serif !important; */
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (max-width:992px) {
-
+@media screen and (max-width: 992px) {
   .slick-prev:before,
   .slick-next:before {
     display: none;
@@ -28,15 +26,11 @@
   position: relative;
 }
 
-.icon-search {
-  /* padding-right: 3rem; */
-}
-
 .icon-search a {
   color: white !important;
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .custom-icons {
     display: none;
   }
@@ -59,7 +53,7 @@
   color: #ff0000;
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .custom-search {
     display: none;
   }
@@ -142,9 +136,6 @@
   padding: 5px;
 }
 
-.nav-item {
-  /* margin-left: 20px; */
-}
 
 .nav-group {
   display: flex;
@@ -165,7 +156,7 @@
   outline: none;
   background-color: #f3f3f4;
   color: #0d0c22;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 /* @media screen and (max-width:1270px) {
@@ -179,14 +170,11 @@
   color: #9e9ea7;
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .custom-search {
     display: none;
-
   }
 }
-
-
 
 .nav-search:focus,
 .nav-search:hover {
@@ -331,7 +319,7 @@
   /* padding-bottom: 4rem; */
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .custom-footer {
     margin-top: 1rem;
   }
@@ -354,7 +342,7 @@
   margin-top: 47px;
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width: 1199px) {
   .company-footer {
     margin-top: 63.6px;
   }
@@ -364,7 +352,7 @@
   }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   .company-footer {
     margin-top: 20px;
   }
@@ -374,13 +362,13 @@
   }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .customer-footer {
     margin-top: 1.5rem;
   }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .cont1 {
     display: block;
   }
@@ -395,16 +383,7 @@
     display: none;
   }
 
-  .icon-search {
-    /* margin-left: 1.5rem; */
-    /* margin-top: 1rem; */
-  }
-
-  .icon-cart {
-    /* margin-top: -1.5rem; */
-    /* margin-left: 5rem; */
-  }
-
+ 
   #nav-btn {
     margin-left: 1rem;
     margin-top: 20px;
@@ -440,9 +419,6 @@
   /* Change to a different color on hover */
 }
 
-.drop-custom {
-  /* padding: 7rem; */
-}
 
 .trends {
   margin-top: 5rem;
@@ -485,10 +461,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
-
-
-
 .sub2 {
   position: absolute;
   /* top: 70%; */
@@ -505,27 +477,6 @@
   z-index: 10;
   /* overflow-y: auto; */
   max-height: max-content;
-}
-
-
-
-
-@media screen and (max-width:1200px) {
-  .sub2 {
-    /* left: 14%; */
-  }
-}
-
-@media screen and (max-width:1048px) {
-  .sub2 {
-    /* left: 17%; */
-  }
-}
-
-@media screen and (max-width:1172px) {
-  .sub2 {
-    /* left: 15%; */
-  }
 }
 
 .nav-item:hover .sub2 {
@@ -552,8 +503,6 @@
   display: block;
 }
 
-
-
 .submenu-item h4 {
   color: #000;
 }
@@ -570,15 +519,6 @@
 .submenu-item:hover {
   background-color: #f5f5f5;
 }
-
-
-
-
-
-
-
-
-
 
 .multi-dropdown-container {
   display: flex;
@@ -646,10 +586,8 @@
   background-color: #f0f0f0;
 }
 
-
-
 .dropdown-item:before {
-  content: "\2022";
+  content: '\2022';
   /* Bullet point */
   margin-right: 10px;
   color: #ff6f61;

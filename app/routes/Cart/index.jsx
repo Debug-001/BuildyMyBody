@@ -67,7 +67,7 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <asection className="main-div ">
+      <section className="main-div ">
         <div className="container-fullwidth mx-5 mt-4">
           {cart?.lines.length > 0 ? (
             <div className="row ">
@@ -89,13 +89,12 @@ const Cart = () => {
             </div>
           ) : (
             <div className="row">
-              <h2>Your Cart is Empty, Please add some items to your cart.</h2>
+              <h4 className='d-flex justify-content-center px-3'>Your Cart is Empty, Please add some items to your cart.</h4>
             </div>
           )}
         </div>
         {/* end of container */}
-      </asection>
-
+      </section>
       <Footer />
     </>
   );

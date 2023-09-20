@@ -203,7 +203,8 @@ export default function Addresses() {
 
   return (
     <>
-      <div className="account-card profile-clr pt-5 pb-5">
+    <div className="container">
+      <div className="account-card profile-clr pt-5 pb-5" style={{border:"2px solid grey"}}>
         <div className="account-addresses container ">
           <h2>Addresses</h2>
           <br />
@@ -215,7 +216,7 @@ export default function Addresses() {
             />
           </div>
           <br />
-          <hr />
+          <hr className='add-hr'/>
           <br />
           <div>
             <legend>Create address</legend>
@@ -223,6 +224,7 @@ export default function Addresses() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }

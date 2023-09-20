@@ -1,19 +1,26 @@
-import { useLoaderData } from '@remix-run/react';
-import { useEffect } from 'react';
+import {useLoaderData} from '@remix-run/react';
+import {useEffect} from 'react';
 import ProductForm from '../Product/ProductForm';
 
-const TopSelling = ({ collection }) => {
+const TopSelling = ({collection}) => {
   return (
     <>
-      <section id="featured-section" style={{ background: '#FAF4EF' }}>
+      <section id="featured-section">
+      {/* <section id="featured-section" style={{background: '#FAF4EF'}}> */}
         <div
           id="carouselExampleControls1"
-          className="carousel slide "
+          className="carousel slide mt-3"
           data-ride="carousel"
         >
-          <h1 className="d-flex justify-content-center font-weight-bold custom-heading ">
-            <em>FEATURED PRODUCTS</em>
-          </h1>
+          <div
+            className="d-flex justify-content-center mb-5"
+            style={{flexDirection: 'column', alignItems: 'center'}}
+          >
+            <h1 className="font-weight-bold custom-heading3">
+              <em>Featured Products</em>
+            </h1>
+            <hr className="h1-hr" />
+          </div>
           <div className="carousel-inner" id="featured-carousel">
             {collection.products.nodes.map((product, index) => (
               <div
@@ -30,7 +37,7 @@ const TopSelling = ({ collection }) => {
                     />
                   </div>
                   <div className="col featured-details ">
-                    <h2 className='w-lg-75'>{product.title}</h2>
+                    <h2 className="w-lg-75">{product.title}</h2>
                     <h4>
                       {product.variants.nodes[0].compareAtPrice && (
                         <del className="discount-text">
