@@ -6,7 +6,7 @@ import Footer from '~/Components/Footer';
 export async function loader({ context }) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
-    return redirect('/account');
+    return redirect('/account/profile');
   }
 
   return json({});
@@ -98,7 +98,7 @@ export default function Register() {
   return (
     <>
       <Navbar />
-      <div className="main-div mt-5 ">
+      <div className="main-div pt-2 pb-5">
         <div className="container ">
           <div className="row m-5 no-gutters shadow-lg">
             <div className="col d-none col-lg-5 d-lg-block  ">
@@ -109,8 +109,9 @@ export default function Register() {
               <div className="form-style">
                 <Form method="POST">
                   <fieldset>
-                    <div className="form-group pb-3 mt-4">
+                    <div className="form-group pb-3 pt-4">
                       <input
+                      className='w-100'
                         id="email"
                         name="email"
                         type="email"
@@ -123,6 +124,7 @@ export default function Register() {
                     </div>
                     <div className="form-group pb-3">
                       <input
+                      className='w-100'
                         id="password"
                         name="password"
                         type="password"
@@ -136,6 +138,7 @@ export default function Register() {
 
                     <div className="form-group pb-3">
                       <input
+                      className='w-100'
                        id="passwordConfirm"
                        name="passwordConfirm"
                        type="password"
@@ -176,7 +179,7 @@ export default function Register() {
         </div>
       </div>
 
-      <div className="login">
+      {/* <div className="login">
         <h1>Register.</h1>
         <Form method="POST">
           <fieldset>
@@ -230,7 +233,7 @@ export default function Register() {
         <p>
           <Link to="/account/login">Login →</Link>
         </p>
-      </div>
+      </div> */}
       <Footer />
     </>
   );

@@ -140,7 +140,7 @@ export default function Login() {
                     className="btn text-light w-100 font-weight-bold mt-2 "
                     style={{ height: '50px', background: 'red' }}
                   >
-                    <Link to="/account/register" style={{ color: "white" }}>Sign Up →</Link>
+                    <Link to="/account/register" style={{ color: "white" }}>Register →</Link>
                   </button>
                 </div>
                 <div className="pt-4 text-center">
