@@ -132,7 +132,7 @@ function AcccountMenu() {
   function isActiveStyle({isActive, isPending}) {
     return {
       fontWeight: isActive ? 'bold' : '',
-      color: isPending ? 'grey' : 'white',
+      color: isPending ? 'grey' : 'black',
     };
   }
   return (

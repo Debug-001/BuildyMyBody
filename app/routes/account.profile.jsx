@@ -112,7 +112,7 @@ export default function AccountProfile() {
             <h2 style={{color:"#ff2828"}}>
               <em className=''>My Profile</em>
             </h2>
-            <hr style={{width:"30%"}} className='bg-light'/>
+            <hr style={{width:"30%"}} className='bg-dark'/>
             {/* <br /> */}
             <Form method="PUT" className='mt-5'>
               <div className="row">
@@ -136,7 +136,7 @@ export default function AccountProfile() {
                       minLength={2}
                     />
                     <br />
-                    <label htmlFor="lastName" className='profile-name text-light'>Last name</label>
+                    <label htmlFor="lastName" className='profile-name '>Last name</label>
                     <br />
                     <input
                       className=' profile-input w-100'

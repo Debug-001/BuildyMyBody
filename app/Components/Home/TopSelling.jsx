@@ -1,6 +1,7 @@
 import {useLoaderData} from '@remix-run/react';
 import {useEffect} from 'react';
 import ProductForm from '../Product/ProductForm';
+import data from '~/routes/data';
 
 const TopSelling = ({collection}) => {
   return (
@@ -46,7 +47,9 @@ const TopSelling = ({collection}) => {
                       )}{' '}
                       ₹ {product.variants.nodes[0].price.amount}
                     </h4>
-                    {product.descriptionHtml}
+                    {/* {product.descriptionHtml} */}
+                    {/* <div dangerouslySetInnerHTML={{__html: product.descriptionHtml}}> */}
+                    {/* </div> */}
                     <div className="featured-btn">
                       <ProductForm variantId={product.variants.nodes[0].id} />
                     </div>

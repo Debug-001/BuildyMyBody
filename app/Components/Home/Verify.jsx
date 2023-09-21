@@ -19,7 +19,7 @@ const Verify = () => {
           <div className="verify-img d-flex justify-content-center">
             <img
               className="verify-vid mt-5 "
-              style={{width: '85%'}}
+              style={{width: '100%'}}
               src="/img/article1.jpg"
               alt="verify-product-vid"
             />
