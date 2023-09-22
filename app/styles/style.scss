@@ -2024,3 +2024,23 @@ hr {
   overflow-y: auto;
   /* Enable vertical scrollbar */
 }
+
+//SEARCH
+.search-box {
+  font-size: 30px;
+  padding: 1px 12px;
+  border: 1px solid #C1C1C1;
+  background-color: white;
+  width: 9.8em;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.search-box:hover {
+  border-color: #AAAAAA;
+}
+
+.search-box:focus-within {
+  border-color: #FF0080;
+  box-shadow: 0 0 0 5px rgba(255, 0, 128, 0.40);
+}
