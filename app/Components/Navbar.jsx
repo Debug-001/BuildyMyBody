@@ -12,8 +12,8 @@ import pre from '../../dist/client/img/pre.png';
 
 import { BsSearch } from 'react-icons/bs';
 import { FiShoppingCart } from 'react-icons/fi';
-import { RiAccountCircleLine } from 'react-icons/ri';
-import { BiCategoryAlt } from 'react-icons/bi'
+// import { RiAccountCircleLine } from 'react-icons/ri';
+// import { BiCategoryAlt } from 'react-icons/bi'
 import { GiBodyBalance } from 'react-icons/gi'
 const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -99,8 +99,11 @@ const Navbar = () => {
                     </div>
                   </div>
                   <div className="col-lg-12 mt-4 mb-2 text-center">
+                      <NavLink to={'/products/all'} id='shop-nav-btn2'  >
                     <div className="btn w-50 shop-nav-btn " >
-                      <NavLink to={'/products/all'} id='shop-nav-btn2'  >Shop All</NavLink> </div>
+                        Shop All
+                       </div>
+                        </NavLink>
                   </div>
                 </div>
               </div>
@@ -146,9 +149,11 @@ const Navbar = () => {
                     </div>
                   </div>
                   <div className="col-lg-12 mt-4 mb-2 text-center">
+                      <NavLink to={'/products/all'} id='shop-nav-btn2'  > 
                     <div className="btn w-50 shop-nav-btn" >
-                      <NavLink to={'/products/all'} id='shop-nav-btn2'  > Shop All</NavLink>
+                      Shop All
                     </div>
+                      </NavLink>
                   </div>
                 </div>
               </div>

@@ -88,9 +88,23 @@ const Cart = () => {
               </div>
             </div>
           ) : (
-            <div className="row">
-              <h4 className='d-flex justify-content-center px-3'>Your Cart is Empty, Please add some items to your cart.</h4>
-            </div>
+            <div className="row d-flex justify-content-center">
+              <div className="col-12 d-flex justify-content-center">
+                <FiShoppingCart size={25} />
+              </div>
+              <div className="col-12 mt-5">
+                <h4 className=' px-3 text-center'> <span className='text-center' style={{ fontWeight: 'bold' }}>Your Cart is <span style={{ color: '#ff2828' }}>Empty!</span> </span>   </h4>
+              </div>
+              <div className="col-12 text-center mt-3">
+                <span style={{ fontSize: '1.3rem' }} className=''>Please add some items to your cart.</span>
+              </div>
+              <div className="col-12 text-center mt-3 mb-3">
+                <button className="btn blog-btn">
+                  <p className=''>RETURN TO SHOP</p>
+                </button>
+              </div>
+
+            </div>
           )}
         </div>
         {/* end of container */}

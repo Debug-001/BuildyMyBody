@@ -49,8 +49,10 @@ export async function loader({request, context}) {
 export default function SearchPage() {
   const {searchTerm, searchResults} = useLoaderData();
   return (
+    <>
+    <Navbar />
     <div className="search">
-      <Navbar />
+      
       <h1>Search</h1>
       <SearchForm searchTerm={searchTerm} />
       {!searchTerm || !searchResults.totalResults ? (
@@ -58,8 +60,10 @@ export default function SearchPage() {
       ) : (
         <SearchResults results={searchResults.results} />
       )}
-      <Footer />
+      
     </div>
+    <Footer />
+</>
   );
 }
 

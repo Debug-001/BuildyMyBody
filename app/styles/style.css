@@ -583,6 +583,42 @@ nav .active{
 }
 
 .card-img-trending {
+  max-width: 100%; /* Limit the image's width */
+  height: auto;
+}
+
+.product-title {
+  white-space: nowrap;     /* Prevent text from wrapping to the next line */
+  overflow: hidden;        /* Hide any overflow */
+  text-overflow: ellipsis; /* Display an ellipsis (...) for overflowed text */
+  max-width: 100%;         /* Limit the width to the container's width */
+  margin: 0;               /* Remove any margin */
+}
+
+.product-title {
+  white-space: normal;     /* Allow text to wrap */
+  overflow: hidden;        /* Hide any overflow */
+  text-overflow: ellipsis; /* Display an ellipsis (...) for overflowed text */
+  max-width: 100%;         /* Limit the width to the container's width */
+}
+
+
+a.text-light:hover,  .dropdown-toggle:hover {
+  /* color: #cbd3da!important; */
+  color: #ff2828 !important;
+}
+
+.login-error-text mark, .mark{
+  background-color: white !important;
+  color: #ff2828 !important;
+  font-weight: 600 !important;
+}
+
+#trending-card-container{
+  max-height: 245px ;
+}
+
+.card-img-trending {
   width: 100%;
   max-width: 284px;
   border-radius: 6px;

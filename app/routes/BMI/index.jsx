@@ -110,7 +110,7 @@ const BMI = () => {
                 </button>
               </div>
               <hr className="line-hr" />
-              <div className="analysis flex-lg-column ">
+              <div className="analysis flex-column ">
                 <div className="bmi-result" style={{textAlign: 'center'}}>
                   {' '}
                   Your Bmi is {bmiResult}

@@ -107,9 +107,10 @@ export default function Login() {
                     </div>
                   </fieldset>
                   {error ? (
-                    <p>
+                    <p className='login-error-text text-center'>
                       <mark>
-                        <small>{error}</small>
+                        {/* <small>{error}</small> */}
+                        <small >Wrong Email or Password, Please try again!</small>
                       </mark>
                     </p>
                   ) : (
