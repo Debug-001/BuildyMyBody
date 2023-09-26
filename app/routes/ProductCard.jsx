@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
           <div className="card-content-all mt-4">
             <h3
               className="font-weight-bolder text-center"
-              style={{ color: 'white' }}
+
             >
               {' '}
               {product.title}

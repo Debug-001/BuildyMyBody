@@ -774,9 +774,7 @@ a.text-light:hover,
   color: white;
 }
 
-.pro-clr button {
-  color: white;
-}
+
 
 #product-tabs ul {
   padding-bottom: 10px;
@@ -2034,7 +2032,7 @@ hr {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-right: 10px;
+  // margin-right: 10px;
 }
 
 .dropdown-content {
@@ -2050,7 +2048,7 @@ hr {
 
 /* Additional styling */
 .dropdown-toggle {
-  background-color: #f0f0f0;
+  // background-color: #f0f0f0;
   border: none;
   cursor: pointer;
 }
@@ -2063,7 +2061,7 @@ hr {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 }
 
 .dropdown-content {
@@ -2247,4 +2245,34 @@ hr {
 .details h1 {
   font-weight: 900;
   color: var(--h1-color);
+}
+
+/* Custom CSS for showing submenu on hover */
+.fil-nav .fil-nav-drop:hover .fil-menu {
+  display: block !important;
+  /* Important to override Bootstrap's default behavior */
+  position: absolute;
+  will-change: transform;
+  transform: translateX(100%);
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust the submenu position to the right */
+.fil-nav .fil-nav-drop .fil-menu {
+  left: 100%;
+  transform: translateX(0);
+}
+
+.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
+  /* FontAwesome chevron-right icon */
+  font-family: FontAwesome;
+  margin-left: 5px;
+  transform: rotate(90deg);
+}
+
+.fil-menu {
+  left: 100%;
+  top: 0%;
 }
