@@ -195,7 +195,7 @@ export default function Products() {
                         ))}
                       </div>
                     </div>
-                    <div className="flex items-center justify-center mt-6">
+                    <div className="flex items-center justify-center mt-4">
                       <NextLink className="btn">
                         {isLoading ? 'Loading...' : 'Load more products'}
                       </NextLink>

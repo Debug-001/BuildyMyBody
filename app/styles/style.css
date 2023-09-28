@@ -563,6 +563,7 @@ nav .active {
   max-width: 100%;
   /* Limit the image's width */
   height: auto;
+  object-fit: contain;
 }
 
 .product-title {
@@ -587,6 +588,12 @@ nav .active {
   /* Display an ellipsis (...) for overflowed text */
   max-width: 100%;
   /* Limit the width to the container's width */
+}
+
+.product-btn {
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.67);
 }
 
 a.text-light:hover,
@@ -738,10 +745,6 @@ a.text-light:hover,
   color: #ff2828 !important;
 }
 
-.shopbtn button {
-  color: white;
-}
-
 #product-tabs ul {
   padding-bottom: 10px;
   padding-top: 3px;
@@ -751,14 +754,9 @@ a.text-light:hover,
 #howto-tab,
 #reviews-tab {
   font-size: 1.4rem;
-  color: black;
 }
 
 #howto-tab:hover {
-  color: #ff2828;
-}
-
-#descr-tab:hover {
   color: #ff2828;
 }
 
@@ -768,7 +766,6 @@ a.text-light:hover,
 
 .offers {
   border-radius: 4px;
-  border-style: dashed;
 }
 
 .front {
@@ -776,7 +773,12 @@ a.text-light:hover,
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 1.3rem;
+}
+
+/* Apply margin-left to the div with the "move-left" class */
+.move-left {
+  margin-left: 85px;
+  /* You can adjust the margin value as needed */
 }
 
 .carousel-item.active {
@@ -1109,10 +1111,6 @@ p {
   background: #00db5b;
 }
 
-.btn {
-  border-radius: 0;
-}
-
 .fhr {
   margin-top: 38px;
   margin-left: 8px !important;
@@ -1366,7 +1364,7 @@ hr {
 
 .btn,
 .form-control {
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .num {
@@ -1740,8 +1738,9 @@ hr {
 }
 
 .card-img-all img {
-  width: 100%;
-  height: 100%;
+  width: 50% !important;
+  object-fit: contain;
+  transform: scale(1.7);
 }
 
 #all-products h1 {
@@ -1972,56 +1971,6 @@ hr {
     display: none;
   }
 }
-.dropdown-container {
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-}
-
-.dropdown.active .dropdown-content {
-  display: block;
-}
-
-/* Additional styling */
-.dropdown-toggle {
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* Add some styling for the dropdown links */
 .dropdown-content a {
   padding: 12px 16px;

@@ -1,18 +1,18 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import {MediaFile, Money, ShopPayButton} from '@shopify/hydrogen-react';
+import { MediaFile, Money, ShopPayButton } from '@shopify/hydrogen-react';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../../dist/client/img/protien.png';
-const Product = ({data}) => {
-  const {product, selectedVariant, storeDomain, orderable} = data;
+const Product = ({ data }) => {
+  const { product, selectedVariant, storeDomain, orderable } = data;
 
   return (
     <>
       <Navbar />
-      <div className="product " style={{background: 'black'}}>
+      <div className="product " >
         <div className="container-fluid">
           <div className="row ">
             {/* image column  */}
@@ -20,57 +20,49 @@ const Product = ({data}) => {
               <ProductCarousal media={product.media.nodes} />
             </div>
             {/* middle column  */}
-            <div className="col-sm-12 col-lg-5 col-md-12 mt-5">
-              <h2 className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 text-light">
+            <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
+              <h2 className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5  " style={{ fontSize: '30px', fontWeight: '800' }}>
                 {product.title}
               </h2>
               <div className="off m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">
                 <a href="">
-                  <p className="knowmore text-light"> Know More</p>
+                  <p className="knowmore  "> Know More</p>
                 </a>
-                <div className="offers">
-                  <div className="row p-3">
-                    <div className="col-sm-3 mx-3">
-                      <p className="front text-light">OFFERS</p>
-                    </div>
-                    <div className="vl"></div>
-                    <div className="col-sm-8">
-                      <p className="en text-light">
+                <div className="offers d-flex justify-content-md-center">
+                  <div className="d-flex p-3 ">
+                    <span>
+                      <p className="front  p-2" style={{ border: '1px dashed', fontWeight: '700', fontSize: '28px' }} >OFFERS</p>
+                    </span>
+                    <span>
+                      <p className="front  p-2 " style={{ border: '1px dashed', fontSize: '15px' }}>
                         Extra 30% off site wide Use Code: Om30 Terms and
                         Condtions Applied.
                       </p>
-                    </div>
+                    </span>
+
                   </div>
                 </div>
               </div>
-              <div className="row mt-5 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 ">
+              <div className="row mt-5 d-flex flex-column">
                 {/* weight/flavour section  */}
-                <div className="col-md-5 col-lg-6 title text-light">
-                  <ProductOptions
-                    options={product.options}
-                    selectedVariant={selectedVariant}
-                  />
-                </div>
-
-                {/* mrp section  */}
                 <div className="col ">
-                  <p className="title text-light">
+                  <p className="title  ">
                     MRP:<del>₹5,999</del>
                   </p>
-                  <h2 className="d-flex title text-light">
+                  <h2 className="d-flex title  ">
                     Price:
-                    <Money withoutTrailingZeros data={selectedVariant.price} />
-                    <button className="btn btn-primary title text-light ml-2">
-                      25% off
-                    </button>
+                    <Money withoutTrailingZeros data={selectedVariant.price} className='ml-2' style={{ fontSize: '38px' }} />
+                    <div className="ml-3 d-flex align-items-center">
+                      <p style={{ color: '#ff2828' }} className='product-btn p-2'  > 25% off</p>
+                    </div>
                   </h2>
-                  <p className="title text-light">
+                  <p className="title  " style={{ fontSize: '14px', opacity: '.7' }}>
                     (EMI starts from ₹211.45) | Earn BMB Cash ₹90{' '}
                     <span className=""> Free Shipping</span>
                   </p>
                   {/* show now btn  */}
-                  <div className="shopbtn mt-4 d-flex row ">
-                    <div className="col-md-12 col-lg-5 text-light">
+                  <div className=" mt-4 d-flex row ">
+                    <div className="col  ">
                       <ProductForm variantId={selectedVariant?.id} />
                     </div>
                     <div className="col">
@@ -84,9 +76,18 @@ const Product = ({data}) => {
                     </div>
                   </div>
                 </div>
+                <div className="col title  mt-4">
+                  <ProductOptions
+                    options={product.options}
+                    selectedVariant={selectedVariant}
+                  />
+                </div>
+
+                {/* mrp section  */}
+
               </div>
-              <hr />
-              <h4 className="mt-4 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title text-light">
+              <hr className='w-100' />
+              <h4 className="mt-5 title  ">
                 Check Delivery
               </h4>
               <div className="input-group mb-3 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title">
@@ -98,7 +99,7 @@ const Product = ({data}) => {
                 />
                 <div className="input-group-append">
                   <button
-                    className="btn btn-outline-secondary text-light"
+                    className="btn btn-outline-secondary  "
                     type="button"
                   >
                     Check
@@ -110,13 +111,13 @@ const Product = ({data}) => {
             <div className="col-lg-8  d-lg-none" id="product-tabs">
               <ul
                 className="nav nav-tabs mt-4 d-flex justify-content-center w-100"
-                style={{background: 'black'}}
+                style={{ background: 'black' }}
                 id="myTab"
                 role="tablist"
               >
                 <li className="nav-item">
                   <a
-                    className="nav-link active text-light "
+                    className="nav-link active   "
                     id="descr-tab"
                     data-toggle="tab"
                     href="#home"
@@ -143,47 +144,47 @@ const Product = ({data}) => {
             </div>
 
             {/* featured products section   */}
-            <div id="third" className="col-lg-4 flex-lg-column mt-5">
+            <div id="third" className="col-lg-3 flex-lg-column mt-5">
               <h4 className="d-flex justify-content-center font-weight-bolder ">
-                <em className="text-light">FEATURED PRODUCTS</em>
+                <em className=" ">FEATURED PRODUCTS</em>
               </h4>
               <div className="custom-fl-product d-md-flex flex-lg-column">
-                <div className="d-flex mt-4">
+                <div className="d-flex mt-4 flex-column">
                   <div className="w-100">
                     <img
                       src={Protien}
-                      style={{objectFit: 'contain'}}
+                      style={{ objectFit: 'contain' }}
                       alt="side bar product"
                     />
                   </div>
                   <div>
-                    <h6 className="font-weight-bold mt-4 text-light">
+                    <h6 className="font-weight-bold mt-4  text-center">
                       Syntha-6 Protein Matrix
                     </h6>
-                    <h6 className="mt-3 font-weight-bold text-light">
+                    <h6 className="mt-3 font-weight-bold  text-center">
                       ₹6906.90
                     </h6>
-                    <a href="/carts" className="btn btn-primary text-light">
+                    <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
                       Add to Cart
                     </a>
                   </div>
                 </div>
-                <div className="d-flex mt-4">
+                <div className="d-flex mt-4 flex-column">
                   <div className="w-100">
                     <img
                       src={Protien}
-                      style={{objectFit: 'contain'}}
+                      style={{ objectFit: 'contain' }}
                       alt="side bar product"
                     />
                   </div>
                   <div>
-                    <h6 className="font-weight-bold mt-4 text-light">
+                    <h6 className="font-weight-bold mt-4  text-center">
                       Syntha-6 Protein Matrix
                     </h6>
-                    <h6 className="mt-3 font-weight-bold text-light">
+                    <h6 className="mt-3 font-weight-bold  text-center">
                       ₹6906.90
                     </h6>
-                    <a href="/carts" className="btn btn-primary text-light">
+                    <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
                       Add to Cart
                     </a>
                   </div>
@@ -193,7 +194,7 @@ const Product = ({data}) => {
           </div>
 
           <div className="container-fluid ">
-            <hr />
+            {/* <hr /> */}
             <div className="row">
               <div
                 className="col-lg-8 d-lg-block d-md-none d-sm-none pro-none"
@@ -201,13 +202,13 @@ const Product = ({data}) => {
               >
                 <ul
                   className="nav nav-tabs mt-4 d-flex justify-content-center w-100"
-                  style={{background: 'black'}}
+                  style={{}}
                   id="myTab"
                   role="tablist"
                 >
                   <li className="nav-item">
                     <a
-                      className="nav-link active text-light "
+                      className="nav-link active   "
                       id="descr-tab"
                       data-toggle="tab"
                       href="#home"
@@ -299,7 +300,7 @@ const Product = ({data}) => {
                 </div>
               </div>
               <div id="third" className="col-lg-4 flex-lg-column  ">
-                <h4 className="d-flex justify-content-center font-weight-bolder text-light">
+                <h4 className="d-flex justify-content-center font-weight-bolder  ">
                   <em>RELATED PRODUCTS</em>
                 </h4>
                 <div className="custom-fl-product d-md-flex flex-lg-column">
@@ -307,18 +308,18 @@ const Product = ({data}) => {
                     <div className="w-100">
                       <img
                         src={Protien}
-                        style={{objectFit: 'contain'}}
+                        style={{ objectFit: 'contain' }}
                         alt="side bar product"
                       />
                     </div>
                     <div>
-                      <h6 className="font-weight-bold mt-4 text-light">
+                      <h6 className="font-weight-bold mt-4  ">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold text-light">
+                      <h6 className="mt-3 font-weight-bold  ">
                         ₹6906.90
                       </h6>
-                      <a href="/carts" className="btn btn-primary text-light">
+                      <a href="/carts" className="btn  category-btn " style={{ fontWeight: '500', fontSize: '1.1rem' }} >
                         Add to Cart
                       </a>
                     </div>
@@ -327,18 +328,18 @@ const Product = ({data}) => {
                     <div className="w-100">
                       <img
                         src={Protien}
-                        style={{objectFit: 'contain'}}
+                        style={{ objectFit: 'contain' }}
                         alt="side bar product"
                       />
                     </div>
                     <div>
-                      <h6 className="font-weight-bold mt-4 text-light">
+                      <h6 className="font-weight-bold mt-4  ">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold text-light">
+                      <h6 className="mt-3 font-weight-bold  ">
                         ₹6906.90
                       </h6>
-                      <a href="/carts" className="btn btn-primary text-light">
+                      <a href="/carts" className="btn  category-btn " style={{ fontWeight: '500', fontSize: '1.1rem' }} >
                         Add to Cart
                       </a>
                     </div>
