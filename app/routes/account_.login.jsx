@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 export const meta = () => {
   return [{ title: 'Login' }];
 };
-
 export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
     return redirect('/account/profile');
