@@ -1,17 +1,26 @@
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
+<<<<<<< HEAD
 import {Link, useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import {CartForm} from '@shopify/hydrogen';
 import {CartLineItems, CartSummary} from '~/Components/Cart';
 import {useState} from 'react';
 import {FiShoppingCart} from 'react-icons/fi';
+=======
+import { Link, useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
+import { CartForm } from '@shopify/hydrogen';
+import { CartLineItems, CartSummary } from '~/Components/Cart';
+import { useState } from 'react';
+import { FiShoppingCart } from 'react-icons/fi';
+>>>>>>> 43ef90b1b1bfe308e2a3b445d8fe0b34ff2aa2b6
 
-export async function action({request, context}) {
-  const {cart} = context;
+export async function action({ request, context }) {
+  const { cart } = context;
 
   const formData = await request.formData();
-  const {action, inputs} = CartForm.getFormInput(formData);
+  const { action, inputs } = CartForm.getFormInput(formData);
 
   let result;
 
@@ -32,15 +41,15 @@ export async function action({request, context}) {
   // The Cart ID might change after each mutation, so update it each time.
   const headers = cart.setCartId(result.cart.id);
 
-  return json(result, {status: 200, headers});
+  return json(result, { status: 200, headers });
 }
-export async function loader({context}) {
-  const {cart} = context;
-  return json({cart: await cart.get()});
+export async function loader({ context }) {
+  const { cart } = context;
+  return json({ cart: await cart.get() });
 }
 
 const Cart = () => {
-  const {cart} = useLoaderData();
+  const { cart } = useLoaderData();
   const [btnClass, setBtnClass] = useState('transparent');
   function toggleColor() {
     // const [btnClass, setBtnClass] = useState('blue-color');
@@ -63,7 +72,7 @@ const Cart = () => {
     }
   };
 
-  const removeItem = () => {};
+  const removeItem = () => { };
 
   return (
     <>
@@ -111,7 +120,11 @@ const Cart = () => {
                   <p className="">RETURN TO SHOP</p>
                 </button>
               </div>
+<<<<<<< HEAD
                         
+=======
+
+>>>>>>> 43ef90b1b1bfe308e2a3b445d8fe0b34ff2aa2b6
             </div>
           )}
         </div>

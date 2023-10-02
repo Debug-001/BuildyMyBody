@@ -5,8 +5,8 @@ import {
   useNavigation,
 } from '@remix-run/react';
 
-export default function ProductOptions({options, selectedVariant}) {
-  const {pathname, search} = useLocation();
+export default function ProductOptions({ options, selectedVariant }) {
+  const { pathname, search } = useLocation();
   const [currentSearchParams] = useSearchParams();
   const navigation = useNavigation();
 
@@ -17,7 +17,7 @@ export default function ProductOptions({options, selectedVariant}) {
       return defaultParams;
     }
 
-    for (const {name, value} of selectedVariant.selectedOptions) {
+    for (const { name, value } of selectedVariant.selectedOptions) {
       if (!currentSearchParams.has(name)) {
         defaultParams.set(name, value);
       }
@@ -33,7 +33,7 @@ export default function ProductOptions({options, selectedVariant}) {
     : paramsWithDefaults;
 
   return (
-    <div className="grid gap-4 mb-6">
+    <div className="d-flex ">
       {options.map((option) => {
         if (!option.values.length) {
           return;
@@ -42,14 +42,15 @@ export default function ProductOptions({options, selectedVariant}) {
         // get the currently selected option value
         const currentOptionVal = searchParams.get(option.name);
         return (
-          <div key={option.name} className="">
-            <h4 className="mt-4 mb-4">{option.name}</h4>
+          <div key={option.name} className={`second-div ${options.indexOf(option) === 1 ? 'move-left' : ''}`}>
+            <h4 className=" mb-3">{option.name}</h4>
             <div className="dropdown flavor">
               <button
-                className="btn btn-primary dropdown-toggle"
+                className="btn product-btn dropdown-toggle "
                 type="button"
                 data-toggle="dropdown"
                 aria-expanded="false"
+                style={{ fontWeight: '500', fontSize: '1.1rem' }}
               >
                 {currentOptionVal}
               </button>

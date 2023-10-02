@@ -10,18 +10,19 @@ export default function ProductCard({ product }) {
     <div className="col">
       <Link to={`/product/${product.handle}`} className="">
         <div className="card">
-          <div className="card-img-all">
+          <div className="card-img-all d-flex justify-content-center mt-5 " >
             <Image
               data={product.variants.nodes[0].image}
               alt={product.title}
-              sizes="(max-width: 768px) 100vw, 50vw"
+
               className="all-img"
+
             />{' '}
           </div>
-          <div className="card-content-all mt-4">
+          <div className="card-content-all mt-4" >
             <h3
-              className="font-weight-bolder text-center"
-              style={{ color: 'white' }}
+              className=" text-center"
+              style={{ fontSize: '1.3rem' }}
             >
               {' '}
               {product.title}
