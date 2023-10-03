@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse mx-3 mx-lg-0    ${isNavbarCollapsed ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ml-auto mr-auto" style={{ gap: '.8rem' }}>
             <div class="dropdown show mt-2" style={{ marginBottom: '0', marginRight: "0" }}>
-              <a class=" dropdown-toggle" style={{ background: 'none', color: 'white', padding: '0px', fontWeight: '400', fontSize: '1.1rem' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class=" dropdown-toggle" style={{ background: 'none', color: 'white', padding: '0px', fontWeight: '400', fontSize: '1rem' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
               </a>
 
@@ -99,20 +99,20 @@ const Navbar = () => {
                     </div>
                   </div>
                   <div className="col-lg-12 mt-4 mb-2 text-center">
-                      <NavLink to={'/products/all'} id='shop-nav-btn2'  >
-                    <div className="btn w-50 shop-nav-btn " >
+                    <NavLink to={'/products/all'} id='shop-nav-btn2'  >
+                      <div className="btn w-50 shop-nav-btn " >
                         Shop All
-                       </div>
-                        </NavLink>
+                      </div>
+                    </NavLink>
                   </div>
                 </div>
               </div>
             </div>
             <li className="nav-item">
-              <NavLink className={'nav-link active text-light'} style={{ fontSize: '1.1rem' }} to='/blog'>Blogs</NavLink>
+              <NavLink className={'nav-link active text-light'} style={{ fontSize: '1rem' }} to='/blog'>Blogs</NavLink>
             </li>
             <div class="dropdown show mt-2" style={{ marginBottom: '0', marginRight: "0" }}>
-              <a class=" dropdown-toggle" style={{ background: 'none', color: 'white', padding: '0px', fontWeight: '400', fontSize: '1.1rem' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class=" dropdown-toggle" style={{ background: 'none', color: 'white', padding: '0px', fontWeight: '400', fontSize: '1rem' }} href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Store
               </a>
               <div class="dropdown-menu drop-custom" aria-labelledby="dropdownMenuLink">
@@ -149,24 +149,25 @@ const Navbar = () => {
                     </div>
                   </div>
                   <div className="col-lg-12 mt-4 mb-2 text-center">
-                      <NavLink to={'/products/all'} id='shop-nav-btn2'  > 
-                    <div className="btn w-50 shop-nav-btn" >
-                      Shop All
-                    </div>
-                      </NavLink>
+                    <NavLink to={'/products/all'} id='shop-nav-btn2'  >
+                      <div className="btn w-50 shop-nav-btn" >
+                        Shop All
+                      </div>
+                    </NavLink>
                   </div>
                 </div>
               </div>
             </div>
             <li className="nav-item">
-              <NavLink className={'nav-link active text-light'} to='/contact' style={{ fontSize: '1.1rem' }}>Contact Us</NavLink>
+              <NavLink className={'nav-link active text-light'} to='/contact' style={{ fontSize: '1rem' }}>Contact Us</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className={'nav-link active text-light'} to='/bmi' style={{ fontSize: '1.1rem' }}>BMI Check</NavLink>
+              <NavLink className={'nav-link active text-light'} to='/bmi' style={{ fontSize: '1rem' }}>BMI Check</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className={'nav-link active text-light'} to='/certificates' style={{ fontSize: '1.1rem' }}>Authenticity</NavLink>
+              <NavLink className={'nav-link active text-light'} to='/certificates' style={{ fontSize: '1rem' }}>Authenticity</NavLink>
             </li>
+
           </ul>
           <ul className='navbar-nav nav-icon  ml-auto'>
             <div className="d-flex ">
@@ -195,10 +196,10 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-      
+
       <div className='container-fluid'>
-        <h6 className='text-center font-weight-bolder' style={{paddingTop:"10px", fontSize:"17px"}}> <GiBodyBalance size={30} style={{color:"#ff2828"}} /> Elevate your Fitness Journey with 
-        <span style={{color:"#ff2828"}}>&nbsp; BuildMyBody</span>
+        <h6 className='text-center font-weight-bolder' style={{ paddingTop: "10px", fontSize: "17px" }}> <GiBodyBalance size={30} style={{ color: "#ff2828" }} /> Elevate your Fitness Journey with
+          <span style={{ color: "#ff2828" }}>&nbsp; BuildMyBody</span>
         </h6>
       </div>
     </>

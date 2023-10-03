@@ -8,6 +8,27 @@ import ProductForm from './ProductForm';
 import Protien from '../../../dist/client/img/protien.png';
 const Product = ({ data }) => {
   const { product, selectedVariant, storeDomain, orderable } = data;
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+
+  const toggleDropdown1 = () => {
+    setIsOpen1(!isOpen1);
+    setIsOpen2(false);
+    setIsOpen3(false);
+  };
+
+  const toggleDropdown2 = () => {
+    setIsOpen2(!isOpen2);
+    setIsOpen1(false);
+    setIsOpen3(false);
+  };
+
+  const toggleDropdown3 = () => {
+    setIsOpen3(!isOpen3);
+    setIsOpen1(false);
+    setIsOpen2(false);
+  };
 
   return (
     <>
@@ -197,7 +218,7 @@ const Product = ({ data }) => {
             {/* <hr /> */}
             <div className="row">
               <div
-                className="col-lg-8 d-lg-block d-md-none d-sm-none pro-none"
+                className="col-lg-9 d-lg-block d-md-none d-sm-none pro-none"
                 id="product-tabs"
               >
                 <ul
@@ -219,34 +240,34 @@ const Product = ({ data }) => {
                       Description
                     </a>
                   </li>
-                  {/* <div className="vl mt-2 py-3 mx-2"></div>
-                      <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          id="howto-tab"
-                          data-toggle="tab"
-                          href="#profile"
-                          role="tab"
-                          aria-controls="profile"
-                          aria-selected="false"
-                        >
-                          Directions To Use
-                        </a>
-                      </li>
-                      <div className="vl mt-2 py-3 mx-2"></div>
-                      <li className="nav-item">
-                        <a
-                          className="nav-link"
-                          id="reviews-tab"
-                          data-toggle="tab"
-                          href="#contact"
-                          role="tab"
-                          aria-controls="contact"
-                          aria-selected="false"
-                        >
-                          Reviews
-                        </a>
-                      </li> */}
+                  <div className="vl mt-2 py-3 mx-2"></div>
+                  <li className="nav-item">
+                    <a
+                      className="nav-link"
+                      id="howto-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      Directions To Use
+                    </a>
+                  </li>
+                  <div className="vl mt-2 py-3 mx-2"></div>
+                  <li className="nav-item">
+                    <a
+                      className="nav-link"
+                      id="reviews-tab"
+                      data-toggle="tab"
+                      href="#contact"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                    >
+                      Reviews
+                    </a>
+                  </li>
                 </ul>
 
                 <div className="tab-content mt-3" id="myTabContent">
@@ -259,52 +280,135 @@ const Product = ({ data }) => {
                       __html: product.descriptionHtml,
                     }}
                   ></div>
-                  {/* <div
-                        className="tab-pane fade"
-                        id="profile"
-                        role="tabpanel"
-                        aria-labelledby="howto-tab"
-                      >
-                        Food truck fixie locavore, accusamus mcsweeney's marfa
-                        nulla single-origin coffee squid. Exercitation +1 labore
-                        velit, blog sartorial PBR leggings next level wes anderson
-                        artisan four loko farm-to-table craft beer twee. Qui photo
-                        booth letterpress, commodo enim craft beer mlkshk aliquip
-                        jean shorts ullamco ad vinyl cillum PBR. Homo nostrud
-                        organic, assumenda labore aesthetic magna delectus mollit.
-                        Keytar helvetica VHS salvia yr, vero magna velit sapiente
-                        labore stumptown. Vegan fanny pack odio cillum wes
-                        anderson 8-bit, sustainable jean shorts beard ut DIY
-                        ethical culpa terry richardson biodiesel. Art party
-                        scenester stumptown, tumblr butcher vero sint qui sapiente
-                        accusamus tattooed echo park.
+                  <div
+                    className="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="howto-tab"
+                  >
+                    <div>
+                      <div>
+                        <button onClick={toggleDropdown1} className='w-100 text-left p-3' style={{ border: '1px solid transparent' }}>
+                          <span className='ques-product'>
+                            Question
+                          </span>
+                          <span data-title="Question" className='ml-5' data-show="">
+                            What should I do if I receive a Damaged item, wrong product or missing units in my order?
+                          </span>
+                        </button>
+                        {isOpen1 && <div style={{ fontSize: '14px' }}>
+                          <br /> <br />
+                          <span className='answer-product'>
+                            Answer
+                          </span>
+                          <span data-title="Answer" className='' data-show="">
+
+                            <p className='mt-4'>If an item is found damaged or incorrect as per description on our website or units are missing as per ordered quantity, please send a snapshot of the outer packaging, MRP Hologram, Batch Number and images of products received with invoice copy to our customer care at care@buildmybody.in or call us on +91 9494 979191.
+
+                            </p>
+                            <p className='mt-4'>Once you raise the concern we will investigate for same you will get revert in 24-48 hrs. If we need we might raise the concern to brand or importer and in those situations, we need to wait for the revert from same.</p>
+                            <p className='mt-5'>Once the investigation is over if we arrange a reverse pickup then below will be the process:
+
+                            </p>
+                            <p className='mt-4'>
+                              1/ Our courier partner will take 1-2 working days to pick up the product/item from you.
+                              <br /> <br />
+                              2/As reverse pick up is done by standard delivery it takes minimum 5-7 working days to get back to our warehouse.
+                              <br /> <br />
+                              3/Once the product is received back to us quality team check it and give update related to the product condition, as we need the product in the same condition as delivered to you.
+                              <br /> <br />
+                              4/On receiving a positive response we will get back to you and as per your request we will replace or refund you for the order (replacement are subject to availability of the particular product.
+                              <br /> <br />
+                              5/ In case we receive a negative response the product would be sent back to you in the same condition.
+
+
+                            </p>
+                          </span>
+
+
+                        </div>}
                       </div>
-                      <div
-                        className="tab-pane fade"
-                        id="contact"
-                        role="tabpanel"
-                        aria-labelledby="reviews-tab"
-                      >
-                        Etsy mixtape wayfarers, ethical wes anderson tofu before
-                        they sold out mcsweeney's organic lomo retro fanny pack
-                        lo-fi farm-to-table readymade. Messenger bag gentrify
-                        pitchfork tattooed craft beer, iphone skateboard locavore
-                        carles etsy salvia banksy hoodie helvetica. DIY synth PBR
-                        banksy irony. Leggings gentrify squid 8-bit cred
-                        pitchfork. Williamsburg banh mi whatever gluten-free,
-                        carles pitchfork biodiesel fixie etsy retro mlkshk vice
-                        blog. Scenester cred you probably haven't heard of them,
-                        vinyl craft beer blog stumptown. Pitchfork sustainable
-                        tofu synth chambray yr.
-                      </div> */}
+                      <div>
+                        <button onClick={toggleDropdown2} className='w-100 text-left p-3 mt-4' style={{ border: '1px solid transparent' }}>
+                          <span className='ques-product'>
+                            Question
+                          </span>
+                          <span data-title="Question" className='ml-5' data-show="">
+                            Is there a policy for returns?
+                          </span>
+                        </button>
+                        {isOpen2 && <div style={{ fontSize: '14px' }}>
+                          <br /><br />
+                          <span className='answer-product'>
+                            Answer
+                          </span>
+                          <span data-title="Answer" className='' data-show="">
+
+                            <p className='mt-4'>
+                              Yes. Products should be received in original packaging and sealed condition. <br /> Opened or used boxes will not be accepted as returns. For issues like rashes, stomach upset, headache, flavor like/dislike, flavor difference from one brand to other etc. products would not be applicable for return. Please consult with the doctor before buying the product
+                            </p>
+
+                          </span>
+
+
+
+                        </div>}
+                      </div>
+                      <div>
+                        <button onClick={toggleDropdown3} className='w-100 text-left p-3 mt-4' style={{ border: '1px solid transparent' }}>
+                          <span className='ques-product'>
+                            Question
+                          </span>
+                          <span data-title="Question" className='ml-5' data-show="">
+
+                            What are the modes of refund available after cancellation?
+
+                          </span>
+                        </button>
+                        {isOpen3 && <div style={{ fontSize: '14px' }}>
+
+                          <br /><br />
+                          <span className='answer-product'>
+                            Answer
+                          </span>
+                          <span data-title="Answer" className='' data-show="">
+
+                            <p className='mt-4'>
+                              In order to confirm cancellation of item(s) in your order, you need to indicate your refund preference. <br /> The money will be refunded back to the payment mode/account that was originally used to make the transaction. Once you have requested the cancellation of item(s) in your order, BuildMyBody will complete the cancellation and initiate the refund, depending on your preference.
+                            </p>
+
+                          </span>
+
+                        </div>}
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="contact"
+                    role="tabpanel"
+                    aria-labelledby="reviews-tab"
+                  >
+                    Etsy mixtape wayfarers, ethical wes anderson tofu before
+                    they sold out mcsweeney's organic lomo retro fanny pack
+                    lo-fi farm-to-table readymade. Messenger bag gentrify
+                    pitchfork tattooed craft beer, iphone skateboard locavore
+                    carles etsy salvia banksy hoodie helvetica. DIY synth PBR
+                    banksy irony. Leggings gentrify squid 8-bit cred
+                    pitchfork. Williamsburg banh mi whatever gluten-free,
+                    carles pitchfork biodiesel fixie etsy retro mlkshk vice
+                    blog. Scenester cred you probably haven't heard of them,
+                    vinyl craft beer blog stumptown. Pitchfork sustainable
+                    tofu synth chambray yr.
+                  </div>
                 </div>
               </div>
-              <div id="third" className="col-lg-4 flex-lg-column  ">
+              <div id="third" className="col-lg-3 flex-lg-column  mt-lg-4">
                 <h4 className="d-flex justify-content-center font-weight-bolder  ">
                   <em>RELATED PRODUCTS</em>
                 </h4>
                 <div className="custom-fl-product d-md-flex flex-lg-column">
-                  <div className="d-flex mt-4">
+                  <div className="d-flex mt-4 flex-column">
                     <div className="w-100">
                       <img
                         src={Protien}
@@ -313,18 +417,18 @@ const Product = ({ data }) => {
                       />
                     </div>
                     <div>
-                      <h6 className="font-weight-bold mt-4  ">
+                      <h6 className="font-weight-bold mt-4  text-center">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold  ">
+                      <h6 className="mt-3 font-weight-bold  text-center">
                         ₹6906.90
                       </h6>
-                      <a href="/carts" className="btn  category-btn " style={{ fontWeight: '500', fontSize: '1.1rem' }} >
+                      <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
                         Add to Cart
                       </a>
                     </div>
                   </div>
-                  <div className="d-flex mt-4">
+                  <div className="d-flex mt-4 flex-column">
                     <div className="w-100">
                       <img
                         src={Protien}
@@ -333,13 +437,13 @@ const Product = ({ data }) => {
                       />
                     </div>
                     <div>
-                      <h6 className="font-weight-bold mt-4  ">
+                      <h6 className="font-weight-bold mt-4  text-center">
                         Syntha-6 Protein Matrix
                       </h6>
-                      <h6 className="mt-3 font-weight-bold  ">
+                      <h6 className="mt-3 font-weight-bold  text-center">
                         ₹6906.90
                       </h6>
-                      <a href="/carts" className="btn  category-btn " style={{ fontWeight: '500', fontSize: '1.1rem' }} >
+                      <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
                         Add to Cart
                       </a>
                     </div>

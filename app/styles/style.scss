@@ -1679,6 +1679,8 @@ hr {
   transition: all 200ms ease-in-out;
 }
 
+
+
 .certificate-card:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -1753,6 +1755,23 @@ hr {
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.ques-product {
+  border: 1px solid transparent;
+  padding: 2px 8px 2px 8px;
+  color: white;
+  background: #009fda;
+  border-radius: 2px;
+}
+
+.answer-product {
+  border: 1px solid transparent;
+  padding: 2px 8px 2px 8px;
+  color: white;
+  background: #ea3b02;
+  border-radius: 2px;
+}
+
 
 .certificate-auth-text2 {
   color: white;

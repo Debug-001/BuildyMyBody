@@ -178,40 +178,40 @@ function Certificates() {
           <div className="row flex-sm-column flex-lg-row flex-md-row">
             <div className="col-lg-4 col-md-5 d-flex flex-column " >
               {/* <button onClick={() => setSelectedCategory('All')}>All</button> */}
-              <button onClick={() => setSelectedCategory('Category1')} className='p-2 mt-5' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button id='myButton' onClick={() => setSelectedCategory('Category1')} className='p-2 mt-5 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer', }}>
                 <p className='text-left'>Kar Enterprises</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category2')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category2')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>MusclePro Nutrition(MPN)</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category3')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category3')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Bright Comodities</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category4')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category4')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Pearl International</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category5')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category5')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>ARC Distributors</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category6')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category6')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Shree Balaji Overseas</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category7')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category7')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Paradise Nutrition</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category8')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category8')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Unlimited Nutrition</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category9')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category9')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Musclehouse</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category10')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category10')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>Molecule Hub</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category11')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category11')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>SSNC</p>
               </button>
-              <button onClick={() => setSelectedCategory('Category12')} className='p-2' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
+              <button onClick={() => setSelectedCategory('Category12')} className='p-2 certi-btn' style={{ background: '#FAF4EF', color: '#474544', cursor: 'pointer' }}>
                 <p className='text-left'>AM Lifestyle</p>
               </button>
 
