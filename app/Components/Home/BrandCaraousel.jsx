@@ -16,14 +16,14 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car"  style={{ background:'#f8f8f8'}}>
+      <section id="fitness-car" style={{ background: '#f8f8f8' }}>
         <div className="container-fluid pt-5 pb-5">
-        <div className="d-flex justify-content-center mb-5" style={{flexDirection:"column", alignItems:"center"}}>
-        <h1 className="custom-heading3">
-          <em>Fitness Articles</em>
-        </h1>
-        <hr className='h1-hr'/>
-        </div>
+          <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
+            <h1 className="custom-heading3">
+              <em>Fitness Articles</em>
+            </h1>
+            <hr className='h1-hr' />
+          </div>
           <div className="fitness-slider">
             <Slider
               className='ml-lg-5 mr-lg-5'
@@ -49,6 +49,8 @@ const BrandCaraousel = () => {
                     slidesToScroll: 2,
                     initialSlide: 2,
                     dots: true,
+                    nextArrow: <></>,
+                    prevArrow: <></>
                   },
                 },
                 {
@@ -58,6 +60,8 @@ const BrandCaraousel = () => {
                     slidesToScroll: 1,
                     initialSlide: 1,
                     dots: true,
+                    nextArrow: <></>,
+                    prevArrow: <></>
                   },
                 },
                 {
@@ -66,6 +70,8 @@ const BrandCaraousel = () => {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: true,
+                    nextArrow: <></>,
+                    prevArrow: <></>
                   },
                 },
               ]}
@@ -178,12 +184,12 @@ const BrandCaraousel = () => {
 
       <section id="brand-car">
         <div className="container-fluid">
-        <div className="d-flex justify-content-center" style={{flexDirection:"column", alignItems:"center"}}>
-        <h1 className="font-weight-bold custom-heading3">
-          <em>Brands</em>
-        </h1>
-        <hr className='h1-hr'/>
-        </div>
+          <div className="d-flex justify-content-center" style={{ flexDirection: "column", alignItems: "center" }}>
+            <h1 className="font-weight-bold custom-heading3">
+              <em>Brands</em>
+            </h1>
+            <hr className='h1-hr' />
+          </div>
           <div className="brands-slider">
             <Slider
               className='ml-lg-5 mr-lg-5'

@@ -1,13 +1,13 @@
-import {useLoaderData} from '@remix-run/react';
-import {useEffect} from 'react';
+import { useLoaderData } from '@remix-run/react';
+import { useEffect } from 'react';
 import ProductForm from '../Product/ProductForm';
 import data from '~/routes/data';
 
-const TopSelling = ({collection}) => {
+const TopSelling = ({ collection }) => {
   return (
     <>
       <section id="featured-section">
-      {/* <section id="featured-section" style={{background: '#FAF4EF'}}> */}
+        {/* <section id="featured-section" style={{background: '#FAF4EF'}}> */}
         <div
           id="carouselExampleControls1"
           className="carousel slide mt-3"
@@ -15,7 +15,7 @@ const TopSelling = ({collection}) => {
         >
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="font-weight-bold custom-heading3">
               <em>Featured Products</em>

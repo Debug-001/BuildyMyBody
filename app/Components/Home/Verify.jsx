@@ -7,9 +7,9 @@ const Verify = () => {
         <div className="container pt-5 pb-5">
           <div
             className="d-flex justify-content-center"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
-            <h1 className="custom-heading3" style={{color: '#ff2828', fontWeight:"900"}}>
+            <h1 className="custom-heading3" style={{ color: '#ff2828', fontWeight: "900" }}>
               <em>Verify Your Products</em>
             </h1>
             <hr className="h1-hr" />
@@ -19,7 +19,7 @@ const Verify = () => {
           <div className="verify-img d-flex justify-content-center">
             <img
               className="verify-vid mt-5 "
-              style={{width: '100%'}}
+              style={{ width: '100%' }}
               src="/img/article1.jpg"
               alt="verify-product-vid"
             />

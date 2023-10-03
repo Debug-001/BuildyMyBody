@@ -17,11 +17,11 @@ const FeaturedProducts = ({ collections }) => {
   return (
     <section id="product-card ">
       <div className="container-fluid" id="cgap">
-        <div className="d-flex justify-content-center mb-5" style={{flexDirection:"column", alignItems:"center"}}>
-        <h1 className="font-weight-bold custom-heading3">
-          <em>Shop By Categories</em>
-        </h1>
-        <hr className='h1-hr'/>
+        <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
+          <h1 className="font-weight-bold custom-heading3">
+            <em>Shop By Categories</em>
+          </h1>
+          <hr className='h1-hr' />
         </div>
 
         <Slider
@@ -31,6 +31,7 @@ const FeaturedProducts = ({ collections }) => {
           slidesToShow={3}
           swipeToSlide={true}
           focusOnSelect={true}
+
           responsive={[
             {
               breakpoint: 1024,
@@ -48,6 +49,8 @@ const FeaturedProducts = ({ collections }) => {
                 slidesToScroll: 2,
                 initialSlide: 2,
                 dots: true,
+                nextArrow: <></>,
+                prevArrow: <></>
               },
             },
             {
@@ -56,6 +59,8 @@ const FeaturedProducts = ({ collections }) => {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
+                nextArrow: <></>,
+                prevArrow: <></>
               },
             },
           ]}

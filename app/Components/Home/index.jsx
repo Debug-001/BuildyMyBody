@@ -24,7 +24,7 @@ const Home = ({ data }) => {
       <Discount />
       <FlashDeals collection={data.flashDeals} />
       <ShopByBrands />
-      <BrandCaraousel/>
+      <BrandCaraousel />
       <Verify />
       <Testimonials />
       <Footer />

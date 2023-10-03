@@ -8,11 +8,11 @@ const ShopByBrands = () => {
   return (
     <>
       <section id="shopbb">
-        <div style={{paddingTop:"3.7rem", paddingBottom:"3.7rem"}} >
+        <div style={{ paddingTop: "3.7rem", paddingBottom: "3.7rem" }} >
           <div className="container ">
             <div
               className="d-flex justify-content-center mb-5"
-              style={{flexDirection: 'column', alignItems: 'center'}}
+              style={{ flexDirection: 'column', alignItems: 'center' }}
             >
               <h1 className="custom-heading3">
                 <em>Shop By Brands</em>
@@ -31,13 +31,13 @@ const ShopByBrands = () => {
               >
                 <img
                   src={photo}
-                  className="     shopby-img"
+                  className="  w-50   shopby-img"
                   // style={{background: 'burlywood'}}
                   alt=""
                 />
                 <img
                   src={photo1}
-                  className="   cus3  shopby-img  left"
+                  className=" w-50  cus3  shopby-img  left"
                   // style={{background: 'darkslategrey'}}
                   alt=""
                 />
@@ -56,14 +56,14 @@ const ShopByBrands = () => {
               >
                 <img
                   src={photo3}
-                  className="   cus2    shopby-img  "
+                  className=" w-50   cus2    shopby-img  "
                   // style={{background: 'beige'}}
                   alt=""
                 />
                 {/* <img src={photo4} className='      ml-3' style={{ background: 'aliceblue' }} alt="" /> */}
                 <img
                   src={photo5}
-                  className="     shopby-img   cus2 left"
+                  className="  w-50   shopby-img   cus2 left"
                   // style={{background: 'bisque'}}
                   alt=""
                 />

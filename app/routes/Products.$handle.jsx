@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import { useLoaderData } from '@remix-run/react';
+import { NavLink, useLoaderData } from '@remix-run/react';
 import { json } from '@shopify/remix-oxygen';
 import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
@@ -83,12 +83,10 @@ export default function Products() {
                       BuildMyBody maintains the quality and authenticity till
                       customer receives the final product.
                     </p>
-                    <a href="">
-                      <p className="text-center mt-3"  >
-                        {' '}
-                        Read More
-                      </p>
-                    </a>
+                    <NavLink to={'/certificates'} >
+                      <p className='text-center'> Read More</p>
+
+                    </NavLink>
                   </div>
                 </div>
               </div>

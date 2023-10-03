@@ -1,6 +1,6 @@
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
-import { Link, useLoaderData } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import { json } from '@shopify/remix-oxygen';
 import { CartForm } from '@shopify/hydrogen';
 import { CartLineItems, CartSummary } from '~/Components/Cart';
@@ -70,7 +70,7 @@ const Cart = () => {
       <Navbar />
       <section className="main-div ">
         <div className="container-fullwidth mx-5 mt-4">
-          {cart?.lines.length > 0 ? (
+          {cart?.totalQuantity > 0 ? (
             <div className="row ">
               <div
                 className="col h-100 col-12 col-sm-12 col-md-12 col-lg-7"
@@ -94,17 +94,23 @@ const Cart = () => {
                 <FiShoppingCart size={25} />
               </div>
               <div className="col-12 mt-5">
-                <h4 className=' px-3 text-center'> <span className='text-center' style={{ fontWeight: 'bold' }}>Your Cart is <span style={{ color: '#ff2828' }}>Empty!</span> </span>   </h4>
+                <h4 className=" px-3 text-center">
+                  {' '}
+                  <span className="text-center" style={{ fontWeight: 'bold' }}>
+                    Your Cart is <span style={{ color: '#ff2828' }}>Empty!</span>{' '}
+                  </span>{' '}
+                </h4>
               </div>
               <div className="col-12 text-center mt-3">
-                <span style={{ fontSize: '1.3rem' }} className=''>Please add some items to your cart.</span>
+                <span style={{ fontSize: '1.3rem' }} className="">
+                  Please add some items to your cart.
+                </span>
               </div>
               <div className="col-12 text-center mt-3 mb-3">
                 <button className="btn blog-btn">
-                  <p className=''>RETURN TO SHOP</p>
+                  <p className="">RETURN TO SHOP</p>
                 </button>
               </div>
-
             </div>
           )}
         </div>

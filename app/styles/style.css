@@ -1451,7 +1451,7 @@ hr {
 }
 
 .blog-next-btn-flex {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .blog-next-btn {
@@ -2035,7 +2035,6 @@ hr {
 }
 
 .shopby-img {
-  max-width: 31rem;
   padding: 9px 1px;
   border-radius: 4px;
 }

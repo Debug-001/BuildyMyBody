@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import {AiOutlineArrowRight} from 'react-icons/ai'
-import {AiOutlineArrowLeft} from 'react-icons/ai'
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 function Blog() {
   const navigate = useNavigate();
@@ -35,11 +35,11 @@ function Blog() {
         <div className="container">
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1
               className="font-weight-bold custom-heading3"
-              style={{color: '#ff2828'}}
+              style={{ color: '#ff2828' }}
             >
               <em>Blogs</em>
             </h1>
@@ -53,13 +53,13 @@ function Blog() {
             <div className="col  ">
               <p
                 className="text-center mt-2 blog-name"
-                // style={{color: '#474544'}}
+
               >
                 Fitness Hacks During Navratri:
               </p>
               <p
                 className="text-center pt-lg-0 pb-lg-0 pl-lg-4 pr-lg-4 mt-5"
-                // style={{color: '#474544'}}
+
               >
                 Navratri time is here. A great opportunity to detox your body.
                 But there are some things you should keep in mind while fasting
@@ -67,12 +67,12 @@ function Blog() {
                 quickly -
               </p>
               <p className="text-center">
-                {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light"> Read More</button> */}
+
                 <a
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
                   href="https://m.timesofindia.com/life-style/food-news/5-tips-that-will-make-navratri-fasting-healthier-for-you/photostory/98935923.cms"
-                  // style={{color: '#474544'}}
+
                 >
                   Read More
                 </a>
@@ -87,13 +87,13 @@ function Blog() {
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p
                 className="text-center mt-2 blog-name"
-                // style={{color: '#474544'}}
+
               >
                 Hydration is the key:
               </p>
               <p
                 className="text-center mt-5 mr-lg-2"
-                // style={{color: '#474544'}}
+
               >
                 Fast or no fast, water intake is super important for your body.
                 During fasting, the body's stored energy resources are used.
@@ -104,12 +104,12 @@ function Blog() {
                 experiment.
               </p>
               <p className="text-center">
-                {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light " > Read More</button> */}
+
                 <a
                   className="btn font-weight-bold mt-4 blog-btn "
                   target="_blank"
                   href="https://familydoctor.org/athletes-the-importance-of-good-hydration/"
-                  // style={{color: '#474544'}}
+
                 >
                   Read More
                 </a>
@@ -127,13 +127,13 @@ function Blog() {
             <div className="col  ">
               <p
                 className="text-center mt-2 blog-name"
-                // style={{color: '#474544'}}
+
               >
                 Avoid fried, oily and sugary stuff:
               </p>
               <p
                 className="text-center mt-5 ml-lg-2"
-                // style={{color: '#474544'}}
+
               >
                 Potatoes might become your friend during Navratri time. There
                 are so many chips available in the market made of things other
@@ -145,7 +145,7 @@ function Blog() {
                 a break.
               </p>
               <p className="text-center">
-                {/* <button type="submit" className="btn font-weight-bold mt-4 blog-btn text-light"> Read More</button> */}
+
                 <a
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
@@ -164,13 +164,13 @@ function Blog() {
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p
                 className="text-center mt-2 blog-name"
-                // style={{color: '#474544'}}
+
               >
                 How to increase lifting capacity?
               </p>
               <p
                 className="text-center mt-5 mr-lg-2"
-                // style={{color: '#474544'}}
+
               >
                 Lifting capacity is defined as the amount of weight you can
                 lift. Now, this measurement can be taken in the span of an hour
@@ -183,7 +183,7 @@ function Blog() {
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
                   href="  https://www.wikihow.com/Lift-Heavier-Weights"
-                  // style={{color: '#474544'}}
+
                 >
                   Read More
                 </a>
@@ -201,7 +201,7 @@ function Blog() {
                 <button
                   type="submit"
                   className="btn font-weight-bold w-100 blog-next-btn mt-3"
-                  // style={{ color: 'white' }}
+
                 >
                   {' '}
                   <AiOutlineArrowLeft />
@@ -221,7 +221,7 @@ function Blog() {
                   type="submit"
                   onClick={navigateToBlog2}
                   className="btn font-weight-bold mt-3 mr-2 blog-next-btn"
-                //  style={{ color: 'white' }}
+
                 >
                   {' '}
                   2
@@ -232,14 +232,14 @@ function Blog() {
                   type="submit"
                   onClick={navigateToBlog2}
                   className="btn font-weight-bold  w-100 blog-next-btn mt-3 "
-                  // style={{ color: 'white' }}
+
                 >
                   {' '}
                   <AiOutlineArrowRight className="" />
                 </button>
               </p>
             </div>
-            </div>
+          </div>
           <br />
         </div>
       </div>
