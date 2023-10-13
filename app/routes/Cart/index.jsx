@@ -69,19 +69,19 @@ const Cart = () => {
     <>
       <Navbar />
       <section className="main-div ">
-        <div className="container-fullwidth mx-5 mt-4">
+        <div className="container-fluid  mt-4">
           {cart?.totalQuantity > 0 ? (
             <div className="row ">
               <div
                 className="col h-100 col-12 col-sm-12 col-md-12 col-lg-7"
-                id="leftside"
+
               >
                 {cart?.totalQuantity > 0 && (
                   <CartLineItems linesObj={cart.lines} />
                 )}
               </div>
 
-              <div className="col  h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 px-5">
+              <div className="col  h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-lg-4 mt-sm-3 mt-md-3 ">
                 <CartSummary
                   cost={cart?.cost || 0}
                   checkoutUrl={cart?.checkoutUrl || ''}

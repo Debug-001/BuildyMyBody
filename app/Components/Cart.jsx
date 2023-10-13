@@ -1,8 +1,8 @@
-import {Link, useFetcher} from '@remix-run/react';
-import {CartForm} from '@shopify/hydrogen';
-import {flattenConnection, Image, Money} from '@shopify/hydrogen-react';
-
-export function CartLineItems({linesObj}) {
+import { Link, useFetcher } from '@remix-run/react';
+import { CartForm } from '@shopify/hydrogen';
+import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
+import { AiOutlineDelete } from 'react-icons/ai'
+export function CartLineItems({ linesObj }) {
   const lines = flattenConnection(linesObj);
   return (
     <div className="space-y-8">
@@ -13,13 +13,14 @@ export function CartLineItems({linesObj}) {
   );
 }
 
-function ItemRemoveButton({lineIds}) {
+function ItemRemoveButton({ lineIds }) {
   return (
     <CartForm
       route="/cart"
       action={CartForm.ACTIONS.LinesRemove}
-      inputs={{lineIds}}
+      inputs={{ lineIds }}
     >
+
       <button
         className="bg-white border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
         type="submit"
@@ -58,33 +59,44 @@ function IconRemove() {
     //     strokeWidth="1.25"
     //   />
     // </svg>
-    <p>Remove</p>
+    <AiOutlineDelete />
   );
 }
 
-function LineItem({lineItem}) {
-  const {merchandise, quantity} = lineItem;
+function LineItem({ lineItem }) {
+  const { merchandise, quantity } = lineItem;
 
   return (
-    <div className="all-info d-flex mt-5">
-      <Link to={`/product/${merchandise.product.handle}`} className="">
-        <Image
-          data={merchandise.image}
-          //   width={110}
-          className="w-25 protien-image"
+    <div className="all-info d-flex mt-5 row">
+      <div className="col-5   mt-2">
+        <Link to={`/product/${merchandise.product.handle}`} className="">
+          <Image
+            data={merchandise.image}
+            //   width={110}
+            className=""
+            style={{ objectFit: 'contain', transform: 'scale(1.4)' }}
           //   height={110}
-        />
-      </Link>
-      {/* PROTIEN INFO */}
-      <div className="protien-info">
-        <Link
-          to={`/products/${merchandise.product.handle}`}
-          className="text-start"
-          id="protien-name"
-        >
-          {merchandise.product.title}
+          />
         </Link>
-        <Money data={lineItem.cost.totalAmount} />
+      </div>
+      {/* PROTIEN INFO */}
+      <div className="col">
+
+
+        <div className="protien-info">
+          <Link
+            to={`/products/${merchandise.product.handle}`}
+            className="text-start"
+            id="protien-name"
+          >
+            {merchandise.product.title}
+          </Link>
+          <Money data={lineItem.cost.totalAmount} />
+
+        </div>
+      </div>
+
+      <div className="col">
         <ItemRemoveButton lineIds={[lineItem.id]} />
       </div>
       {/* <div className="add-to-cart  ml-lg-2 ml-md-2">
@@ -99,7 +111,7 @@ function LineItem({lineItem}) {
     </div>
   );
 }
-export function CartSummary({cost, checkoutUrl}) {
+export function CartSummary({ cost, checkoutUrl }) {
   if (!checkoutUrl) return null;
   return (
     <>
