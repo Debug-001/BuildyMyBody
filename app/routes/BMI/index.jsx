@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
@@ -9,7 +9,7 @@ const BMI = () => {
   const [bmiResult, setBMIResult] = useState(null);
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     switch (name) {
       case 'age':
@@ -69,49 +69,54 @@ const BMI = () => {
     <>
       <Navbar />
       <section id="bmi">
-        <div className="container pb-5">
+        <div className="container-fluid pb-5">
           <div className="row">
-            <div className="col-md-8 col-10">
+            <div className="col-md-8 col-lg-8">
               <h1 className="d-flex justify-content-start pt-5">
                 <em>
                   <u className="underline">BMI CAL</u>CULATOR
                 </em>
               </h1>
-              <div className="calc mt-5">
-                <div className="place-text">
+              <div className="calc mt-5 row">
+                <div className=" col-lg-4 col-md-6 text-sm-center text-lg-left text-md-left bmi-margin2">
                   <input
                     type="number"
                     name="age"
                     placeholder="Age"
                     value={age}
                     onChange={handleInputChange}
+                    className='bmi-width'
                   />
                 </div>
-                <div>
+                <div className=" col-lg-4 col-md-6 mt-sm-3 mt-lg-0 mt-md-0 bmi-margin text-sm-center text-lg-left text-md-left">
                   <input
                     type="number"
                     name="height"
                     placeholder="Height (cm)"
                     value={height}
                     onChange={handleInputChange}
+                    className='bmi-width'
                   />
                 </div>
-                <div>
+                <div className=" col-lg-4 col-md-6 mt-md-3 mt-sm-3 mt-lg-0 mt-md-0 bmi-margin text-sm-center text-lg-left text-md-left" >
                   <input
                     type="number"
                     name="weight"
                     placeholder="Weight (kg)"
                     value={weight}
                     onChange={handleInputChange}
+                    className='bmi-width'
                   />
                 </div>
-                <button className="btn-reset" onClick={calculateBMI}>
-                  Check
-                </button>
+                <div className=" col-lg-12 col-md-6 mt-lg-3 mt-md-3 mt-sm-3 mt-lg-0 mt-md-0 bmi-margin text-sm-center text-lg-left text-md-left">
+                  <button className="btn-reset bmi-width" onClick={calculateBMI} >
+                    Check
+                  </button>
+                </div>
               </div>
               <hr className="line-hr" />
               <div className="analysis flex-column ">
-                <div className="bmi-result" style={{textAlign: 'center'}}>
+                <div className="bmi-result text-dark" style={{ textAlign: 'center' }}>
                   {' '}
                   Your Bmi is {bmiResult}
                 </div>
@@ -129,7 +134,7 @@ const BMI = () => {
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
                     <li className="nav-item">
                       <a
-                        className="nav-link active"
+                        className="nav-link active text-dark"
                         id="recom-tab"
                         data-toggle="tab"
                         href="#recom"
@@ -143,7 +148,7 @@ const BMI = () => {
                     {/* <div className="vl mt-2 py-3 mx-2"></div> */}
                     <li className="nav-item">
                       <a
-                        className="nav-link"
+                        className="nav-link text-dark"
                         id="diet-tab"
                         data-toggle="tab"
                         href="#diet"
@@ -157,7 +162,7 @@ const BMI = () => {
                     {/* <div className="vl mt-2 py-3 mx-2"></div> */}
                     <li className="nav-item">
                       <a
-                        className="nav-link"
+                        className="nav-link text-dark"
                         id="work-tab"
                         data-toggle="tab"
                         href="#work"
@@ -177,13 +182,14 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="recom-tab"
                     >
-                      To Gain Weight: Increase your calorie intake, focus on
+                      <span style={{ fontWeight: 'bold' }}>To Gain Weight:</span>
+                      &nbsp;  Increase your calorie intake, focus on
                       nutrient-rich foods, eat consistently throughout the day,
                       include strength training in your routine, make sure to
                       get enough protein, consider incorporating healthy fats,
-                      and keep track of your progress. &nbsp; &nbsp; &nbsp;
-                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                      &nbsp; To Lose Weight: Decrease your calorie intake,
+                      and keep track of your progress. <br /> <br />
+                      <span style={{ fontWeight: 'bold' }}>To Lose Weight:</span>
+                      &nbsp;  Decrease your calorie intake,
                       maintain a balanced diet, be mindful of portion sizes,
                       engage in regular exercise, stay hydrated, manage stress,
                       listen to your body's hunger cues, and seek professional
@@ -195,7 +201,8 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="diet-tab"
                     >
-                      Diet charts are very important for beneficial results, you
+                      <span style={{ fontWeight: 'bold' }}>Diet charts</span>
+                      &nbsp; are very important for beneficial results, you
                       can get your customized diet charts from your personal
                       trainer or you can dm our contacts for getting your
                       personalized diet charts.
@@ -206,12 +213,15 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="work-tab"
                     >
-                      For Weight Loss: Combine cardio exercises like running or
+                      <span style={{ fontWeight: 'bold' }}>For Weight Loss:</span>
+                      &nbsp; Combine cardio exercises like running or
                       cycling with strength training 2-3 times weekly. Aim for
                       around 150 minutes of moderate-intensity cardio or 75
                       minutes of vigorous-intensity cardio per week. Include
                       stretching for flexibility and gradually increase exercise
-                      intensity. For Muscle Gain: Emphasize strength training
+                      intensity. <br /> <br />
+                      <span style={{ fontWeight: 'bold' }}> Muscle Gain:</span>
+                      Emphasize strength training
                       using resistance exercises like weightlifting. Target
                       major muscle groups 2-3 times a week, allowing adequate
                       rest between workouts. Focus on progressive overload to
@@ -221,7 +231,7 @@ const BMI = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-4" id="bmi-blogs">
+            <div className="col-md-4 col-lg-4" id="bmi-blogs">
               <h1 className="d-flex justify-content-start pt-5">
                 <em>
                   <u className="underline">BLOGS</u>
@@ -231,10 +241,18 @@ const BMI = () => {
               <a href="/blog" className="blog-img">
                 <img src="../img/blog-4.jpg" alt="" />
                 <p>Increase Lifting Capacity</p>
+                <div className="text-center">
+                  <a class="btn font-weight-bold mt-4 blog-btn w-50" target="_blank" href="  https://www.wikihow.com/Lift-Heavier-Weights">Read More</a>
+                </div>
+
               </a>
               <a href="/blog" className="blog-img">
                 <img src="../img/blog-6.jpg" alt="" />
                 <p>Rice vs Chapati</p>
+                <div className="text-center">
+                  <button type="submit" class="btn font-weight-bold mt-4 blog-btn text-dark w-50"> Read More</button>
+                </div>
+
               </a>
             </div>
           </div>

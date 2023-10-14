@@ -159,7 +159,7 @@ function Blog() {
 
           <div className="row no-gutters mt-5">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../img/blog-2.jpg" className="img-fluid login-img " />
+              <img src="../img/blog-4.jpg" className="img-fluid login-img " />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p
