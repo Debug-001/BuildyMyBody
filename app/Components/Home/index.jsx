@@ -10,6 +10,7 @@ import TopSelling from './TopSelling';
 import Testimonials from './Testimonials';
 import ShopByBrands from './ShopByBrands';
 import Popular from './Popular';
+import Authenticity from './Authenticity';
 
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -29,7 +30,9 @@ const Home = ({ data }) => {
       <BrandCaraousel />
       <Verify />
       <Testimonials />
+      <Authenticity />
       <Footer />
+
     </>
   );
 };

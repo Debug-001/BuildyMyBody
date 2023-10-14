@@ -278,8 +278,6 @@
 /* //Profile page */
 .account {
   /* background-color: #171717; */
-  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  backdrop-filter: contrast(0.95);
 }
 
 .card-acc {
@@ -412,18 +410,8 @@
   transform: scale(2);
 }
 
-.blog-main {
-  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  backdrop-filter: contrast(0.95);
-}
-
 nav .active {
   color: #ff2828;
-}
-
-.main-div {
-  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  backdrop-filter: contrast(0.95);
 }
 
 .carousel-control-next-icon {
@@ -1844,7 +1832,6 @@ hr {
 }
 
 .calc input {
-  color: white !important;
   padding-left: 0;
   padding-bottom: 10px;
   border: 2px solid #4d4d4d;
@@ -1921,8 +1908,6 @@ hr {
 .profile-clr {
   /* background-color: none !important; */
   /* background-color: #171717; */
-  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  backdrop-filter: contrast(0.95);
   color: rgb(0, 0, 0);
 }
 

@@ -4,7 +4,7 @@ function AboutUs() {
   return (
     <>
       <Navbar />
-      <div className="main-div" style={{ background: '#FAF4EF' }}>
+      <div className="main-div" >
 
         <div className="about-us-text">
           <div className="top-left">

@@ -3,6 +3,8 @@ import whey from '../../../dist/client/img/whey.png';
 import gainer from '../../../dist/client/img/gainer.png';
 import workout from '../../../dist/client/img/workout.png';
 import pre from '../../../dist/client/img/pre.png';
+import creatine from '../../../dist/client/img/creatine.png';
+import amino from '../../../dist/client/img/amino.png';
 
 const Popular = () => {
     return (
@@ -59,7 +61,7 @@ const Popular = () => {
                         <div className="certificate-card ">
                             <p className="text-center mt-4 ">
                                 <img
-                                    src={whey}
+                                    src={creatine}
                                     className="w-50"
                                     alt=""
                                 />
@@ -90,7 +92,7 @@ const Popular = () => {
                         <div className="certificate-card ">
                             <p className="text-center mt-4 ">
                                 <img
-                                    src={whey}
+                                    src={amino}
                                     className="w-50"
                                     alt=""
                                 />
@@ -212,7 +214,7 @@ const Popular = () => {
                         <div className="certificate-card ">
                             <p className="text-center mt-4 ">
                                 <img
-                                    src={whey}
+                                    src={creatine}
                                     className="w-50"
                                     alt=""
                                 />
@@ -234,7 +236,7 @@ const Popular = () => {
                         <div className="certificate-card ">
                             <p className="text-center mt-4 ">
                                 <img
-                                    src={whey}
+                                    src={amino}
                                     className="w-50"
                                     alt=""
                                 />

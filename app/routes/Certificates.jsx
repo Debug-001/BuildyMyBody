@@ -9,7 +9,7 @@ function Certificates() {
   const uniqueCategories = [...new Set(data.map(item => item.category))];
   return (
     <>
-      <div className="main-div" style={{ background: '#FAF4EF' }}>
+      <div className="main-div" >
         <Navbar />
         <div className="container-fluid">
           <p className="text ml-5 certificate-heading" style={{ color: 'black' }} >Certificates</p>
