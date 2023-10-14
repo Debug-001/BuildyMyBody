@@ -9,6 +9,7 @@ import BrandCaraousel from './BrandCaraousel';
 import TopSelling from './TopSelling';
 import Testimonials from './Testimonials';
 import ShopByBrands from './ShopByBrands';
+import Popular from './Popular';
 
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -21,6 +22,7 @@ const Home = ({ data }) => {
       <Carousel />
       <FeaturedProducts collections={data.collections} />
       <TopSelling collection={data.collection} />
+      <Popular />
       <Discount />
       <FlashDeals collection={data.flashDeals} />
       <ShopByBrands />

@@ -20,7 +20,7 @@ const Carousel = () => {
 	]);
 
 	return (
-		<section >
+		<section className="mt-3">
 			<div
 				id="carouselExampleControls3"
 				className="carousel slide "

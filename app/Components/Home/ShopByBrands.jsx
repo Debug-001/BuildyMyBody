@@ -99,7 +99,7 @@ const ShopByBrands = () => {
 
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-12  mb-4">
+          <div className="col-lg-6 col-md-6 col-sm-12  mb-lg-4 mb-1 ">
             <div className="certificate-card">
               <p className="text-center mt-4">
                 <img
@@ -113,11 +113,11 @@ const ShopByBrands = () => {
           </div>
 
           <div className="col-lg-6 col-md-6 col-sm-12  mb-4">
-            <div className="certificate-card ">
+            <div className="certificate-card">
               <p className="text-center mt-4">
                 <img
                   src={photo5}
-                  className="w-100"
+                  className="w-100   "
                   alt=""
                 />
               </p>

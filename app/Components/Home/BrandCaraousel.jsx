@@ -16,7 +16,7 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car" style={{ background: '#f8f8f8' }}>
+      <section id="fitness-car" >
         <div className="container-fluid pt-5 pb-5">
           <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
             <h1 className="custom-heading3">

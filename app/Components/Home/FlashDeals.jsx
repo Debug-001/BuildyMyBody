@@ -203,7 +203,7 @@ const FlashDeals = ({ collection }) => {
                           variantId={product.variants?.nodes[0].id}
                           custom={true}
                           button={
-                            <button className="d-flex justify-content-center btn mt-4 trend-btn w-100">
+                            <button className="d-flex justify-content-center btn mt-4 category-btn w-100">
                               Add to Cart
                             </button>
                           }
