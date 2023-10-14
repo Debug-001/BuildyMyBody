@@ -92,8 +92,76 @@ const PRODUCT_QUERY = `#graphql
   }
 `;
 
+const FeaturedProducts = `{
+  collection(handle: "all") {
+    id
+    title
+    products(first: 10) {
+      nodes {
+          id
+          title
+          publishedAt
+          descriptionHtml
+          handle
+          variants(first: 1) {
+            nodes {
+              id
+              image {
+                url
+                altText
+                width
+                height
+              }
+              price {
+                amount
+                currencyCode
+              }
+              compareAtPrice {
+                amount
+                currencyCode
+              }
+            }
+        }}
+    }}
+}
+`;
+const TrendingProducts = `{
+  collection(handle: "all") {
+    id
+    title
+    products(first: 10) {
+      nodes {
+          id
+          title
+          publishedAt
+          descriptionHtml
+          handle
+          variants(first: 1) {
+            nodes {
+              id
+              image {
+                url
+                altText
+                width
+                height
+              }
+              price {
+                amount
+                currencyCode
+              }
+              compareAtPrice {
+                amount
+                currencyCode
+              }
+            }
+        }}
+    }}
+}
+`;
+
 export async function loader({params, context, request}) {
   const {handle} = params;
+
   const searchParams = new URL(request.url).searchParams;
   const selectedOptions = [];
 
@@ -114,8 +182,16 @@ export async function loader({params, context, request}) {
   if (!product?.id) {
     throw new Response(null, {status: 404});
   }
+  const FeaturedProductsCollection = await context.storefront.query(
+    FeaturedProducts,
+  );
+  const TrendingProductsCollection = await context.storefront.query(
+    TrendingProducts,
+  );
 
   return json({
+    FeaturedProductsCollection,
+    TrendingProductsCollection,
     product,
     selectedVariant,
     storeDomain,

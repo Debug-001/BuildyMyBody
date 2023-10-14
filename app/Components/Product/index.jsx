@@ -1,13 +1,22 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { MediaFile, Money, ShopPayButton } from '@shopify/hydrogen-react';
+import {MediaFile, ShopPayButton} from '@shopify/hydrogen-react';
+import {Image, Money} from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../../dist/client/img/protien.png';
-const Product = ({ data }) => {
-  const { product, selectedVariant, storeDomain, orderable } = data;
+import {Link} from '@remix-run/react';
+const Product = ({data}) => {
+  const {
+    product,
+    selectedVariant,
+    FeaturedProductsCollection,
+    TrendingProductsCollection,
+    storeDomain,
+    orderable,
+  } = data;
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
@@ -29,11 +38,13 @@ const Product = ({ data }) => {
     setIsOpen1(false);
     setIsOpen2(false);
   };
-
+  useEffect(() => {
+    console.log(data.FeaturedProductsCollection);
+  }, [data]);
   return (
     <>
       <Navbar />
-      <div className="product " >
+      <div className="product ">
         <div className="container-fluid">
           <div className="row ">
             {/* image column  */}
@@ -42,7 +53,10 @@ const Product = ({ data }) => {
             </div>
             {/* middle column  */}
             <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
-              <h2 className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5  " style={{ fontSize: '30px', fontWeight: '800' }}>
+              <h2
+                className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5  "
+                style={{fontSize: '30px', fontWeight: '800'}}
+              >
                 {product.title}
               </h2>
               <div className="off m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5">
@@ -52,15 +66,26 @@ const Product = ({ data }) => {
                 <div className="offers d-flex justify-content-md-center">
                   <div className="d-flex p-3 ">
                     <span>
-                      <p className="front  p-2" style={{ border: '1px dashed', fontWeight: '700', fontSize: '28px' }} >OFFERS</p>
+                      <p
+                        className="front  p-2"
+                        style={{
+                          border: '1px dashed',
+                          fontWeight: '700',
+                          fontSize: '28px',
+                        }}
+                      >
+                        OFFERS
+                      </p>
                     </span>
                     <span>
-                      <p className="front  p-2 " style={{ border: '1px dashed', fontSize: '15px' }}>
+                      <p
+                        className="front  p-2 "
+                        style={{border: '1px dashed', fontSize: '15px'}}
+                      >
                         Extra 30% off site wide Use Code: Om30 Terms and
                         Condtions Applied.
                       </p>
                     </span>
-
                   </div>
                 </div>
               </div>
@@ -72,12 +97,23 @@ const Product = ({ data }) => {
                   </p>
                   <h2 className="d-flex title  ">
                     Price:
-                    <Money withoutTrailingZeros data={selectedVariant.price} className='ml-2' style={{ fontSize: '38px' }} />
+                    <Money
+                      withoutTrailingZeros
+                      data={selectedVariant.price}
+                      className="ml-2"
+                      style={{fontSize: '38px'}}
+                    />
                     <div className="ml-3 d-flex align-items-center">
-                      <p style={{ color: '#ff2828' }} className='product-btn p-2'  > 25% off</p>
+                      <p style={{color: '#ff2828'}} className="product-btn p-2">
+                        {' '}
+                        25% off
+                      </p>
                     </div>
                   </h2>
-                  <p className="title  " style={{ fontSize: '14px', opacity: '.7' }}>
+                  <p
+                    className="title  "
+                    style={{fontSize: '14px', opacity: '.7'}}
+                  >
                     (EMI starts from ₹211.45) | Earn BMB Cash ₹90{' '}
                     <span className=""> Free Shipping</span>
                   </p>
@@ -105,12 +141,9 @@ const Product = ({ data }) => {
                 </div>
 
                 {/* mrp section  */}
-
               </div>
-              <hr className='w-100' />
-              <h4 className="mt-5 title  ">
-                Check Delivery
-              </h4>
+              <hr className="w-100" />
+              <h4 className="mt-5 title  ">Check Delivery</h4>
               <div className="input-group mb-3 m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5 title">
                 <input
                   type="number"
@@ -119,10 +152,7 @@ const Product = ({ data }) => {
                   aria-describedby="basic-addon2"
                 />
                 <div className="input-group-append">
-                  <button
-                    className="btn btn-outline-secondary  "
-                    type="button"
-                  >
+                  <button className="btn btn-outline-secondary  " type="button">
                     Check
                   </button>
                 </div>
@@ -132,7 +162,7 @@ const Product = ({ data }) => {
             <div className="col-lg-8  d-lg-none" id="product-tabs">
               <ul
                 className="nav nav-tabs mt-4 d-flex justify-content-center w-100"
-                style={{ background: 'black' }}
+                style={{background: 'black'}}
                 id="myTab"
                 role="tablist"
               >
@@ -170,46 +200,36 @@ const Product = ({ data }) => {
                 <em className=" ">FEATURED PRODUCTS</em>
               </h4>
               <div className="custom-fl-product d-md-flex flex-lg-column">
-                <div className="d-flex mt-4 flex-column">
-                  <div className="w-100">
-                    <img
-                      src={Protien}
-                      style={{ objectFit: 'contain' }}
-                      alt="side bar product"
-                    />
-                  </div>
-                  <div>
-                    <h6 className="font-weight-bold mt-4  text-center">
-                      Syntha-6 Protein Matrix
-                    </h6>
-                    <h6 className="mt-3 font-weight-bold  text-center">
-                      ₹6906.90
-                    </h6>
-                    <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
-                      Add to Cart
-                    </a>
-                  </div>
-                </div>
-                <div className="d-flex mt-4 flex-column">
-                  <div className="w-100">
-                    <img
-                      src={Protien}
-                      style={{ objectFit: 'contain' }}
-                      alt="side bar product"
-                    />
-                  </div>
-                  <div>
-                    <h6 className="font-weight-bold mt-4  text-center">
-                      Syntha-6 Protein Matrix
-                    </h6>
-                    <h6 className="mt-3 font-weight-bold  text-center">
-                      ₹6906.90
-                    </h6>
-                    <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
-                      Add to Cart
-                    </a>
-                  </div>
-                </div>
+                {FeaturedProductsCollection.collection.products.nodes.map(
+                  (product) => (
+                    <Link
+                      to={`/product/${product.handle}`}
+                      className="d-flex mt-4 flex-column"
+                    >
+                      <div className="w-100">
+                        <Image
+                          data={product.variants.nodes[0].image}
+                          style={{objectFit: 'contain'}}
+                          alt={product.title}
+                        />
+                      </div>
+                      <div>
+                        <h6 className="font-weight-bold mt-4  text-center">
+                          {product.title}
+                        </h6>
+                        <h6 className="mt-3 font-weight-bold  text-center">
+                          <Money
+                            withoutTrailingZeros
+                            data={product.variants?.nodes[0].price}
+                          />
+                        </h6>
+                        <ProductForm
+                          variantId={product.variants?.nodes[0].id}
+                        />
+                      </div>
+                    </Link>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -288,98 +308,145 @@ const Product = ({ data }) => {
                   >
                     <div>
                       <div>
-                        <button onClick={toggleDropdown1} className='w-100 text-left p-3' style={{ border: '1px solid transparent' }}>
-                          <span className='ques-product'>
-                            Question
-                          </span>
-                          <span data-title="Question" className='ml-5' data-show="">
-                            What should I do if I receive a Damaged item, wrong product or missing units in my order?
+                        <button
+                          onClick={toggleDropdown1}
+                          className="w-100 text-left p-3"
+                          style={{border: '1px solid transparent'}}
+                        >
+                          <span className="ques-product">Question</span>
+                          <span
+                            data-title="Question"
+                            className="ml-5"
+                            data-show=""
+                          >
+                            What should I do if I receive a Damaged item, wrong
+                            product or missing units in my order?
                           </span>
                         </button>
-                        {isOpen1 && <div style={{ fontSize: '14px' }}>
-                          <br /> <br />
-                          <span className='answer-product'>
-                            Answer
-                          </span>
-                          <span data-title="Answer" className='' data-show="">
-
-                            <p className='mt-4'>If an item is found damaged or incorrect as per description on our website or units are missing as per ordered quantity, please send a snapshot of the outer packaging, MRP Hologram, Batch Number and images of products received with invoice copy to our customer care at care@buildmybody.in or call us on +91 9494 979191.
-
-                            </p>
-                            <p className='mt-4'>Once you raise the concern we will investigate for same you will get revert in 24-48 hrs. If we need we might raise the concern to brand or importer and in those situations, we need to wait for the revert from same.</p>
-                            <p className='mt-5'>Once the investigation is over if we arrange a reverse pickup then below will be the process:
-
-                            </p>
-                            <p className='mt-4'>
-                              1/ Our courier partner will take 1-2 working days to pick up the product/item from you.
-                              <br /> <br />
-                              2/As reverse pick up is done by standard delivery it takes minimum 5-7 working days to get back to our warehouse.
-                              <br /> <br />
-                              3/Once the product is received back to us quality team check it and give update related to the product condition, as we need the product in the same condition as delivered to you.
-                              <br /> <br />
-                              4/On receiving a positive response we will get back to you and as per your request we will replace or refund you for the order (replacement are subject to availability of the particular product.
-                              <br /> <br />
-                              5/ In case we receive a negative response the product would be sent back to you in the same condition.
-
-
-                            </p>
-                          </span>
-
-
-                        </div>}
+                        {isOpen1 && (
+                          <div style={{fontSize: '14px'}}>
+                            <br /> <br />
+                            <span className="answer-product">Answer</span>
+                            <span data-title="Answer" className="" data-show="">
+                              <p className="mt-4">
+                                If an item is found damaged or incorrect as per
+                                description on our website or units are missing
+                                as per ordered quantity, please send a snapshot
+                                of the outer packaging, MRP Hologram, Batch
+                                Number and images of products received with
+                                invoice copy to our customer care at
+                                care@buildmybody.in or call us on +91 9494
+                                979191.
+                              </p>
+                              <p className="mt-4">
+                                Once you raise the concern we will investigate
+                                for same you will get revert in 24-48 hrs. If we
+                                need we might raise the concern to brand or
+                                importer and in those situations, we need to
+                                wait for the revert from same.
+                              </p>
+                              <p className="mt-5">
+                                Once the investigation is over if we arrange a
+                                reverse pickup then below will be the process:
+                              </p>
+                              <p className="mt-4">
+                                1/ Our courier partner will take 1-2 working
+                                days to pick up the product/item from you.
+                                <br /> <br />
+                                2/As reverse pick up is done by standard
+                                delivery it takes minimum 5-7 working days to
+                                get back to our warehouse.
+                                <br /> <br />
+                                3/Once the product is received back to us
+                                quality team check it and give update related to
+                                the product condition, as we need the product in
+                                the same condition as delivered to you.
+                                <br /> <br />
+                                4/On receiving a positive response we will get
+                                back to you and as per your request we will
+                                replace or refund you for the order (replacement
+                                are subject to availability of the particular
+                                product.
+                                <br /> <br />
+                                5/ In case we receive a negative response the
+                                product would be sent back to you in the same
+                                condition.
+                              </p>
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <div>
-                        <button onClick={toggleDropdown2} className='w-100 text-left p-3 mt-4' style={{ border: '1px solid transparent' }}>
-                          <span className='ques-product'>
-                            Question
-                          </span>
-                          <span data-title="Question" className='ml-5' data-show="">
+                        <button
+                          onClick={toggleDropdown2}
+                          className="w-100 text-left p-3 mt-4"
+                          style={{border: '1px solid transparent'}}
+                        >
+                          <span className="ques-product">Question</span>
+                          <span
+                            data-title="Question"
+                            className="ml-5"
+                            data-show=""
+                          >
                             Is there a policy for returns?
                           </span>
                         </button>
-                        {isOpen2 && <div style={{ fontSize: '14px' }}>
-                          <br /><br />
-                          <span className='answer-product'>
-                            Answer
-                          </span>
-                          <span data-title="Answer" className='' data-show="">
-
-                            <p className='mt-4'>
-                              Yes. Products should be received in original packaging and sealed condition. <br /> Opened or used boxes will not be accepted as returns. For issues like rashes, stomach upset, headache, flavor like/dislike, flavor difference from one brand to other etc. products would not be applicable for return. Please consult with the doctor before buying the product
-                            </p>
-
-                          </span>
-
-
-
-                        </div>}
+                        {isOpen2 && (
+                          <div style={{fontSize: '14px'}}>
+                            <br />
+                            <br />
+                            <span className="answer-product">Answer</span>
+                            <span data-title="Answer" className="" data-show="">
+                              <p className="mt-4">
+                                Yes. Products should be received in original
+                                packaging and sealed condition. <br /> Opened or
+                                used boxes will not be accepted as returns. For
+                                issues like rashes, stomach upset, headache,
+                                flavor like/dislike, flavor difference from one
+                                brand to other etc. products would not be
+                                applicable for return. Please consult with the
+                                doctor before buying the product
+                              </p>
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <div>
-                        <button onClick={toggleDropdown3} className='w-100 text-left p-3 mt-4' style={{ border: '1px solid transparent' }}>
-                          <span className='ques-product'>
-                            Question
-                          </span>
-                          <span data-title="Question" className='ml-5' data-show="">
-
-                            What are the modes of refund available after cancellation?
-
+                        <button
+                          onClick={toggleDropdown3}
+                          className="w-100 text-left p-3 mt-4"
+                          style={{border: '1px solid transparent'}}
+                        >
+                          <span className="ques-product">Question</span>
+                          <span
+                            data-title="Question"
+                            className="ml-5"
+                            data-show=""
+                          >
+                            What are the modes of refund available after
+                            cancellation?
                           </span>
                         </button>
-                        {isOpen3 && <div style={{ fontSize: '14px' }}>
-
-                          <br /><br />
-                          <span className='answer-product'>
-                            Answer
-                          </span>
-                          <span data-title="Answer" className='' data-show="">
-
-                            <p className='mt-4'>
-                              In order to confirm cancellation of item(s) in your order, you need to indicate your refund preference. <br /> The money will be refunded back to the payment mode/account that was originally used to make the transaction. Once you have requested the cancellation of item(s) in your order, BuildMyBody will complete the cancellation and initiate the refund, depending on your preference.
-                            </p>
-
-                          </span>
-
-                        </div>}
+                        {isOpen3 && (
+                          <div style={{fontSize: '14px'}}>
+                            <br />
+                            <br />
+                            <span className="answer-product">Answer</span>
+                            <span data-title="Answer" className="" data-show="">
+                              <p className="mt-4">
+                                In order to confirm cancellation of item(s) in
+                                your order, you need to indicate your refund
+                                preference. <br /> The money will be refunded
+                                back to the payment mode/account that was
+                                originally used to make the transaction. Once
+                                you have requested the cancellation of item(s)
+                                in your order, BuildMyBody will complete the
+                                cancellation and initiate the refund, depending
+                                on your preference.
+                              </p>
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -394,12 +461,11 @@ const Product = ({ data }) => {
                     lo-fi farm-to-table readymade. Messenger bag gentrify
                     pitchfork tattooed craft beer, iphone skateboard locavore
                     carles etsy salvia banksy hoodie helvetica. DIY synth PBR
-                    banksy irony. Leggings gentrify squid 8-bit cred
-                    pitchfork. Williamsburg banh mi whatever gluten-free,
-                    carles pitchfork biodiesel fixie etsy retro mlkshk vice
-                    blog. Scenester cred you probably haven't heard of them,
-                    vinyl craft beer blog stumptown. Pitchfork sustainable
-                    tofu synth chambray yr.
+                    banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+                    Williamsburg banh mi whatever gluten-free, carles pitchfork
+                    biodiesel fixie etsy retro mlkshk vice blog. Scenester cred
+                    you probably haven't heard of them, vinyl craft beer blog
+                    stumptown. Pitchfork sustainable tofu synth chambray yr.
                   </div>
                 </div>
               </div>
@@ -408,46 +474,36 @@ const Product = ({ data }) => {
                   <em>RELATED PRODUCTS</em>
                 </h4>
                 <div className="custom-fl-product d-md-flex flex-lg-column">
-                  <div className="d-flex mt-4 flex-column">
-                    <div className="w-100">
-                      <img
-                        src={Protien}
-                        style={{ objectFit: 'contain' }}
-                        alt="side bar product"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="font-weight-bold mt-4  text-center">
-                        Syntha-6 Protein Matrix
-                      </h6>
-                      <h6 className="mt-3 font-weight-bold  text-center">
-                        ₹6906.90
-                      </h6>
-                      <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
-                        Add to Cart
-                      </a>
-                    </div>
-                  </div>
-                  <div className="d-flex mt-4 flex-column">
-                    <div className="w-100">
-                      <img
-                        src={Protien}
-                        style={{ objectFit: 'contain' }}
-                        alt="side bar product"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="font-weight-bold mt-4  text-center">
-                        Syntha-6 Protein Matrix
-                      </h6>
-                      <h6 className="mt-3 font-weight-bold  text-center">
-                        ₹6906.90
-                      </h6>
-                      <a href="/carts" className="btn product-btn d-flex justify-content-center"  >
-                        Add to Cart
-                      </a>
-                    </div>
-                  </div>
+                  {TrendingProductsCollection.collection.products.nodes.map(
+                    (product) => (
+                      <Link
+                        to={`/product/${product.handle}`}
+                        className="d-flex mt-4 flex-column"
+                      >
+                        <div className="w-100">
+                          <Image
+                            data={product.variants.nodes[0].image}
+                            style={{objectFit: 'contain'}}
+                            alt={product.title}
+                          />
+                        </div>
+                        <div>
+                          <h6 className="font-weight-bold mt-4  text-center">
+                            {product.title}
+                          </h6>
+                          <h6 className="mt-3 font-weight-bold  text-center">
+                            <Money
+                              withoutTrailingZeros
+                              data={product.variants?.nodes[0].price}
+                            />
+                          </h6>
+                          <ProductForm
+                            variantId={product.variants?.nodes[0].id}
+                          />
+                        </div>
+                      </Link>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
