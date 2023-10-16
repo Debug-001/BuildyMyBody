@@ -38,9 +38,7 @@ const Product = ({data}) => {
     setIsOpen1(false);
     setIsOpen2(false);
   };
-  useEffect(() => {
-    console.log(data.FeaturedProductsCollection);
-  }, [data]);
+
   return (
     <>
       <Navbar />

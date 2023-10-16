@@ -96,7 +96,7 @@ const FeaturedProducts = `{
   collection(handle: "all") {
     id
     title
-    products(first: 10) {
+    products(first: 3) {
       nodes {
           id
           title
@@ -129,7 +129,7 @@ const TrendingProducts = `{
   collection(handle: "all") {
     id
     title
-    products(first: 10) {
+    products(first: 3) {
       nodes {
           id
           title
