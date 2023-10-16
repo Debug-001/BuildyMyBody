@@ -1,8 +1,8 @@
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
-import {MediaFile} from '@shopify/hydrogen-react';
+import { MediaFile } from '@shopify/hydrogen-react';
 // import "./styles.css";
-const ProductCarousal = ({media}) => {
+const ProductCarousal = ({ media }) => {
   if (!media.length) {
     return null;
   }
@@ -24,10 +24,11 @@ const ProductCarousal = ({media}) => {
   }, []);
 
   return (
-    <div style={{padding: '0 30px', maxWidth: '500px'}} className="mx-auto">
+    <div style={{ padding: '0 30px', maxWidth: '500px' }} className="mx-auto">
       <Slider className="mainSlider" asNavFor={nav2} ref={slider1}>
         {media.map((med, i) => {
           let extraProps = {};
+
 
           if (med.mediaContentType === 'MODEL_3D') {
             extraProps = {
