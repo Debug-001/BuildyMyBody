@@ -142,7 +142,7 @@ const FlashDeals = ({ collection }) => {
               role="tabpanel"
               aria-labelledby="home-tab"
             >
-              <div className="container" id="wheyprotein">
+              <div className="container-fluid" id="wheyprotein">
                 <Slider
                   className="ml-lg-5 mr-lg-5"
                   asNavFor={nav1}
