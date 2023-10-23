@@ -1746,12 +1746,6 @@ hr {
   border-radius: 6px;
 }
 
-.card-img-all img {
-  width: 50% !important;
-  object-fit: contain;
-  transform: scale(1.7);
-}
-
 #all-products h1 {
   font-weight: 900 !important;
   color: #ff2828;
@@ -2141,6 +2135,19 @@ hr {
 .fil-menu {
   left: 100%;
   top: 0%;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.all-img {
+  margin-bottom: 1rem;
+  height: 100%;
+  aspect-ratio: 1/1 !important;
+  max-width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

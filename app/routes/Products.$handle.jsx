@@ -1,23 +1,23 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import { NavLink, useLoaderData } from '@remix-run/react';
-import { json } from '@shopify/remix-oxygen';
-import { FcFilledFilter } from 'react-icons/fc';
+import {Link, NavLink, useLoaderData} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+import {FcFilledFilter} from 'react-icons/fc';
 import ProductCard from './ProductCard';
-import { Pagination } from '@shopify/hydrogen';
-import { getPaginationVariables } from '@shopify/hydrogen';
+import {Pagination} from '@shopify/hydrogen';
+import {getPaginationVariables} from '@shopify/hydrogen';
 import ProductCarousal from '~/Components/Product/ProductCarousal';
 import BrandCaraousel from '~/Components/Home/BrandCaraousel';
 import TopSelling from '~/Components/Home/TopSelling';
 import FeaturedProducts from '~/Components/Home/FeaturedProducts';
 
-export async function loader({ params, context, request }) {
+export async function loader({params, context, request}) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
   });
-  const { handle } = params;
-  const { collection } = await context.storefront.query(COLLECTION_QUERY, {
+  const {handle} = params;
+  const {collection} = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       ...paginationVariables,
       handle,
@@ -26,7 +26,7 @@ export async function loader({ params, context, request }) {
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, { status: 404 });
+    throw new Response(null, {status: 404});
   }
 
   // json is a Remix utility for creating application/json responses
@@ -37,27 +37,24 @@ export async function loader({ params, context, request }) {
 }
 
 export default function Products() {
-  const { collection } = useLoaderData();
+  const {collection} = useLoaderData();
 
   return (
     <>
       <Navbar />
-      <section >
+      <section>
         <div className="container-fluid d-flex  ">
           <div className="row mt-4">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
               <div className="card-filter">
                 <div className="card-content-all">
-
                   {/* <hr /> */}
                   {/* <p className="card-text">Rest filters, price,range etc.</p> */}
 
                   <br />
                   <br />
                   <div className="product-top-sellers border border-dark">
-                    <h1 className="text-center"  >
-                      Top Sellers
-                    </h1>
+                    <h1 className="text-center">Top Sellers</h1>
                     <hr className="mt-0" />
                     <div>
                       {/* <FeaturedProducts collections={data.collections} /> */}
@@ -69,23 +66,20 @@ export default function Products() {
                   <br />
                   <br />
                   <div className="product-authencity border border-dark">
-                    <h2 className="text-center"  >
-                      Authencity Matters
-                    </h2>
+                    <h2 className="text-center">Authencity Matters</h2>
                     <hr className="mt-0" />
 
-                    <p className="text-center m-2"  >
+                    <p className="text-center m-2">
                       The risk of receiving a counterfeit product increases when
                       customer buys it from a reseller as the product moves from
                       Importer to distributor then retailer and then to the
-                      reseller. <br /> <br /> But here at BuildMyBody we have reduced this gap
-                      between the importer and the customer. That's how
-                      BuildMyBody maintains the quality and authenticity till
-                      customer receives the final product.
+                      reseller. <br /> <br /> But here at BuildMyBody we have
+                      reduced this gap between the importer and the customer.
+                      That's how BuildMyBody maintains the quality and
+                      authenticity till customer receives the final product.
                     </p>
-                    <NavLink to={'/certificates'} >
-                      <p className='text-center'> Read More</p>
-
+                    <NavLink to={'/certificates'}>
+                      <p className="text-center"> Read More</p>
                     </NavLink>
                   </div>
                 </div>
@@ -94,23 +88,27 @@ export default function Products() {
 
             <div className="col-lg-9 col-md-12 " id="all-products">
               <h1
-                style={{ color: '#ff2828' }}
+                style={{color: '#ff2828'}}
                 className="d-flex justify-content-center align-items-center"
               >
                 <em>{collection.title}</em>
               </h1>
 
               <div className="col ">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <a class="navbar-brand" href="#">
-                    <FcFilledFilter size={30} />{' '}
-                    <span  >
-                      Filter
-                    </span>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                  <a className="navbar-brand" href="#">
+                    <FcFilledFilter size={30} /> <span>Filter</span>
                   </a>
 
-
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
                     <span className="navbar-toggler-icon ">
                       <span className="bar"></span>
                       <span className="bar"></span>
@@ -118,60 +116,161 @@ export default function Products() {
                     </span>
                   </button>
 
-
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mr-auto" >
-
-                      <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="#">Authencity</a>
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul className="navbar-nav ml-auto mr-auto">
+                      <li className="nav-item d-lg-none">
+                        <a className="nav-link" href="#">
+                          Authencity
+                        </a>
                       </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <li className="nav-item dropdown">
+                        <a
+                          className="nav-link dropdown-toggle"
+                          href="#"
+                          id="servicesDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           Protien
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                          <a class="dropdown-item" href="#">Whey Protien</a>
-                          <a class="dropdown-item" href="#">Whey Blend</a>
-                          <a class="dropdown-item" href="#">Whey Protien Isolate </a>
-
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="servicesDropdown"
+                        >
+                          <Link
+                            className="dropdown-item"
+                            to="/products/whey-protien-1"
+                          >
+                            Whey Protien
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/whey-blend"
+                          >
+                            Whey Blend
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/whey-protein"
+                          >
+                            Whey Protein Isolate{' '}
+                          </Link>
                         </div>
                       </li>
 
-
-                      <li class="nav-item dropdown ml-lg-3 ">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <li className="nav-item dropdown ml-lg-3 ">
+                        <a
+                          className="nav-link dropdown-toggle"
+                          href="#"
+                          id="servicesDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           Gainers
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                          <a class="dropdown-item" href="#">Mass Gainer</a>
-                          <a class="dropdown-item" href="#">Weight Gainer</a>
-
-
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="servicesDropdown"
+                        >
+                          <Link
+                            className="dropdown-item"
+                            to="/products/mass-gainer"
+                          >
+                            Mass Gainer
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/weight-gainer"
+                          >
+                            Weight Gainer
+                          </Link>
                         </div>
                       </li>
 
-                      <li class="nav-item dropdown ml-lg-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <li className="nav-item dropdown ml-lg-3">
+                        <a
+                          className="nav-link dropdown-toggle"
+                          href="#"
+                          id="servicesDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           Pre/Post Workout
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                          <a class="dropdown-item" href="#">Pre Workout</a>
-                          <a class="dropdown-item" href="#">Amino Acids & BCAAs</a>
-                          <a class="dropdown-item" href="#">Glutamine</a>
-                          <a class="dropdown-item" href="#">Carnitine</a>
-
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="servicesDropdown"
+                        >
+                          <Link
+                            className="dropdown-item"
+                            to="/products/preworkout"
+                          >
+                            Pre Workout
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/amino-acids-bcaas"
+                          >
+                            Amino Acids & BCAAs
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/glutamine"
+                          >
+                            Glutamine
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/Carnitine"
+                          >
+                            Carnitine
+                          </Link>
                         </div>
                       </li>
 
-                      <li class="nav-item dropdown ml-lg-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <li className="nav-item dropdown ml-lg-3">
+                        <a
+                          className="nav-link dropdown-toggle"
+                          href="#"
+                          id="servicesDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           Workout Essentials
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                          <a class="dropdown-item" href="#">Testosterone</a>
-                          <a class="dropdown-item" href="#">Multivitamins</a>
-                          <a class="dropdown-item" href="#">Fat Burner </a>
-
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="servicesDropdown"
+                        >
+                          <Link
+                            className="dropdown-item"
+                            to="/products/testosterone-support"
+                          >
+                            Testosterone
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/multivitamins-men-women"
+                          >
+                            Multivitamins
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            to="/products/fat-burner"
+                          >
+                            Fat Burner{' '}
+                          </Link>
                         </div>
                       </li>
                     </ul>
@@ -179,7 +278,7 @@ export default function Products() {
                 </nav>
               </div>
               <Pagination connection={collection.products}>
-                {({ nodes, NextLink, PreviousLink, isLoading }) => (
+                {({nodes, NextLink, PreviousLink, isLoading}) => (
                   <>
                     <div className="flex items-center justify-center mt-6">
                       <PreviousLink className="btn">
@@ -290,7 +389,7 @@ const COLLECTION_QUERY = `#graphql
     }
   }
   `;
-const seo = ({ data }) => ({
+const seo = ({data}) => ({
   title: data?.collection?.title,
   description: data?.collection?.description.substr(0, 154),
 });
@@ -298,9 +397,9 @@ export const handle = {
   seo,
 };
 
-export function meta({ data }) {
+export function meta({data}) {
   return [
-    { title: data?.collection?.title ?? 'Collection' },
-    { description: data?.collection?.description },
+    {title: data?.collection?.title ?? 'Collection'},
+    {description: data?.collection?.description},
   ];
 }
