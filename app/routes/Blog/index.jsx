@@ -47,7 +47,7 @@ function Blog() {
           </div>
           <div className="row no-gutters mt-5 blog-margin">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
-              <img src="../img/blog-1.jpg" className="img-fluid login-img " />
+              <img src="../img/blog-1.jpg" className="img-fluid login-img rounded" />
             </div>
 
             <div className="col  ">
@@ -82,7 +82,7 @@ function Blog() {
 
           <div className="row no-gutters mt-5">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../img/blog-2.jpg" className="img-fluid login-img " />
+              <img src="../img/blog-2.jpg" className="img-fluid login-img rounded" />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p
@@ -116,13 +116,13 @@ function Blog() {
               </p>
             </div>
             <div className="col-lg-6 d-none d-lg-block ">
-              <img src="../img/blog-2.jpg" className="img-fluid login-img" />
+              <img src="../img/blog-2.jpg" className="img-fluid login-img rounded" />
             </div>
           </div>
 
           <div className="row no-gutters mt-5">
             <div className="col-lg-6 col-sm-12 col-md-12">
-              <img src="../img/blog-3.jpg" className="img-fluid login-img" />
+              <img src="../img/blog-3.jpg" className="img-fluid login-img rounded" />
             </div>
             <div className="col  ">
               <p
@@ -159,7 +159,7 @@ function Blog() {
 
           <div className="row no-gutters mt-5">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../img/blog-4.jpg" className="img-fluid login-img " />
+              <img src="../img/blog-4.jpg" className="img-fluid login-img rounded" />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p
@@ -190,7 +190,7 @@ function Blog() {
               </p>
             </div>
             <div className="col-lg-6 d-none d-lg-block ">
-              <img src="../img/blog-4.jpg" className="img-fluid login-img" />
+              <img src="../img/blog-4.jpg" className="img-fluid login-img rounded" />
             </div>
 
           </div>

@@ -114,7 +114,7 @@ const BMI = () => {
                   </button>
                 </div>
               </div>
-              <hr className="line-hr" />
+              <hr className="line-hr " style={{ borderColor: 'black' }} />
               <div className="analysis flex-column ">
                 <div className="bmi-result text-dark" style={{ textAlign: 'center' }}>
                   {' '}
@@ -129,7 +129,7 @@ const BMI = () => {
                 )}
               </div>
               <div className="container-fullwidth mb-5">
-                <hr className="line-hr" />
+                <hr className="line-hr" style={{ borderColor: 'black' }} />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
                     <li className="nav-item">
@@ -239,7 +239,7 @@ const BMI = () => {
               </h1>
 
               <a href="/blog" className="blog-img">
-                <img src="../img/blog-4.jpg" alt="" />
+                <img src="../img/blog-4.jpg" className='rounded' alt="" />
                 <p>Increase Lifting Capacity</p>
                 <div className="text-center">
                   <a class="btn font-weight-bold mt-4 blog-btn w-50" target="_blank" href="  https://www.wikihow.com/Lift-Heavier-Weights">Read More</a>
@@ -247,7 +247,7 @@ const BMI = () => {
 
               </a>
               <a href="/blog" className="blog-img">
-                <img src="../img/blog-6.jpg" alt="" />
+                <img src="../img/blog-6.jpg" className='rounded' alt="" />
                 <p>Rice vs Chapati</p>
                 <div className="text-center">
                   <button type="submit" class="btn font-weight-bold mt-4 blog-btn text-dark w-50"> Read More</button>

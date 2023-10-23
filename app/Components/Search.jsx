@@ -99,37 +99,42 @@ export function SearchResults({ results }) {
 
 function SearchResultsProductsGrid({ products }) {
   return (
-    <div className="search-result">
-      <h3 className='text-center mt-3'>Products</h3>
-      <Pagination connection={products}>
-        {({ nodes, isLoading, NextLink, PreviousLink }) => {
-          const itemsMarkup = nodes.map((product) => (
-            <ProductCard product={product} key={product.title} />
-          ));
+    <div className="container-fluid">
+      <div className="search-result">
+        <h3 className="text-center mt-3">Products</h3>
+        <Pagination connection={products}>
+          {({ nodes, isLoading, NextLink, PreviousLink }) => {
+            const itemsMarkup = nodes.map((product) => (
+              <div className="col-12 col-lg-4 col-md-6 col-sm-12" key={product.title}>
+                <ProductCard product={product} />
+              </div>
+            ));
 
-
-          return (
-            <div>
+            return (
               <div>
-                <PreviousLink>
-                  {isLoading ? 'Loading...' : <span>↑ Load previous</span>}
-                </PreviousLink>
+                <div>
+                  <PreviousLink>
+                    {isLoading ? 'Loading...' : <span>↑ Load previous</span>}
+                  </PreviousLink>
+                </div>
+                <div className="row">{/* Create a row for columns */}
+                  {itemsMarkup}
+                </div>
+                <div>
+                  <NextLink>
+                    {isLoading ? 'Loading...' : <span>Load more ↓</span>}
+                  </NextLink>
+                </div>
               </div>
-              <div>
-                {itemsMarkup}
-                <br />
-              </div>
-              <div>
-                <NextLink>
-                  {isLoading ? 'Loading...' : <span>Load more ↓</span>}
-                </NextLink>
-              </div>
-            </div>
-          );
-        }}
-      </Pagination>
-      <br />
+            );
+          }}
+        </Pagination>
+        <br />
+      </div>
     </div>
+
+
+
   );
 }
 

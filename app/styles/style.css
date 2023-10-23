@@ -1136,8 +1136,6 @@ p {
 
 .login-img {
   min-height: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 .login-name {
@@ -1819,7 +1817,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #ff2828;
+  border: 3px solid black;
 }
 
 .line-hr {
@@ -1865,7 +1863,7 @@ hr {
 }
 
 #bmi-tab {
-  border: 1px solid #ff2828 !important;
+  border: 1px solid black !important;
   font-size: 15px;
   font-weight: bolder;
 }

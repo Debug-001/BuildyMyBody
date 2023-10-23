@@ -43,6 +43,8 @@ const Navbar = () => {
         <NavLink className="navbar-brand ml-lg-4" to="/">
           <img className="logo_img w-75" src="/img/logo.png" alt="" />
         </NavLink>
+
+
         <button
           className="navbar-toggler"
           type="button"
@@ -53,12 +55,16 @@ const Navbar = () => {
           aria-label="Toggle navigation"
           onClick={handleNavbarToggle}
         >
+
           <span className="navbar-toggler-icon ">
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
           </span>
+
         </button>
+
+
         <div
           className={`collapse navbar-collapse mx-3 mx-lg-0    ${isNavbarCollapsed ? 'show' : ''
             }`}
