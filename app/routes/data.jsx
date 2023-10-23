@@ -1,5 +1,5 @@
 // data.js
-import First from '../../dist/client/img/first.jpeg'
+import First from '../../app/img/first.jpeg'
 const data = [
     {
         img: { First },

@@ -1,7 +1,7 @@
 // AboutUs.js
 
 import React from 'react';
-import First from '../../dist/client/img/first.jpeg';
+import First from '../../app/img/first.jpeg';
 
 const Try = ({ email, aboutUs, phone, website, name, img }) => {
   return (
