@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/Components/Product/ProductForm.jsx"],
-  "sourcesContent": ["import {CartForm} from '@shopify/hydrogen';\n\nexport default function ProductForm({variantId, custom = false, button}) {\n  const lines = [{merchandiseId: variantId, quantity: 1}];\n\n  return (\n    <CartForm route=\"/cart\" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>\n      {custom ? button : <button className=\"btn\">Add to Cart</button>}\n    </CartForm>\n  );\n}\n"],
-  "mappings": ";;;;;;;;;;;AAOyB;AALV,SAAR,YAA6B,EAAC,WAAW,SAAS,OAAO,OAAM,GAAG;AACvE,QAAM,QAAQ,CAAC,EAAC,eAAe,WAAW,UAAU,EAAC,CAAC;AAEtD,SACE,mDAAC,KAAS,OAAM,SAAQ,QAAQ,EAAS,QAAQ,UAAU,QAAQ,EAAC,MAAK,GACtE,mBAAS,SAAS,mDAAC,YAAO,WAAU,OAAM,2BAAxB;AAAA;AAAA;AAAA;AAAA,SAAmC,KADxD;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
-  "names": []
-}

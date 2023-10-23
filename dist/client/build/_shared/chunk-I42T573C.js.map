@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/StateProvider.jsx"],
-  "sourcesContent": ["import React, {createContext,useContext,useReducer} from 'react';\r\n\r\nexport const StateContext = createContext();\r\nexport const StateProvider = ({reducer ,initialState, children}) => (\r\n    <StateContext.Provider value={useReducer(reducer, initialState)}>\r\n        {children}\r\n    </StateContext.Provider>\r\n);\r\n\r\nexport const useStateValue = () => useContext(StateContext);"],
-  "mappings": ";;;;;;;;;AAAA,mBAAyD;AAIrD;AAFG,IAAM,mBAAe,4BAAc;AACnC,IAAM,gBAAgB,CAAC,EAAC,SAAS,cAAc,SAAQ,MAC1D,mDAAC,aAAa,UAAb,EAAsB,WAAO,yBAAW,SAAS,YAAY,GACzD,YADL;AAAA;AAAA;AAAA;AAAA,OAEA;",
-  "names": []
-}
