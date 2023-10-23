@@ -201,13 +201,20 @@ const Product = ({data}) => {
                 {FeaturedProductsCollection.collection.products.nodes.map(
                   (product) => (
                     <Link
+                      key={product.handle}
                       to={`/product/${product.handle}`}
                       className="d-flex mt-4 flex-column"
                     >
-                      <div className="w-100">
+                      <div
+                        className="w-100"
+                        style={{maxWidth: '250px', margin: '0 auto'}}
+                      >
                         <Image
                           data={product.variants.nodes[0].image}
-                          style={{objectFit: 'contain'}}
+                          style={{
+                            objectFit: 'contain',
+                            height: '100%',
+                          }}
                           alt={product.title}
                         />
                       </div>
@@ -475,13 +482,20 @@ const Product = ({data}) => {
                   {TrendingProductsCollection.collection.products.nodes.map(
                     (product) => (
                       <Link
+                        key={product.handle}
                         to={`/product/${product.handle}`}
                         className="d-flex mt-4 flex-column"
                       >
-                        <div className="w-100">
+                        <div
+                          className="w-100"
+                          style={{maxWidth: '250px', margin: '0 auto'}}
+                        >
                           <Image
                             data={product.variants.nodes[0].image}
-                            style={{objectFit: 'contain'}}
+                            style={{
+                              objectFit: 'contain',
+                              height: '100%',
+                            }}
                             alt={product.title}
                           />
                         </div>
