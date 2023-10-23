@@ -788,6 +788,8 @@ a.text-light:hover,
   padding-top: 3px;
 }
 
+
+
 #descr-tab,
 #howto-tab,
 #reviews-tab {
@@ -1288,13 +1290,14 @@ p {
 }
 
 .contact-address {
-  border-radius: 30px;
-  background: #faf4ef;
+  // border-radius: 30px;
+  background: white;
+  border: none;
+  transform: scale(1.5);
 }
 
 .contact-address:hover {
-  background: #faf4ef;
-  border-color: #474544;
+  background: white;
 }
 
 .contact-logo {

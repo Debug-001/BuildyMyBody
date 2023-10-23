@@ -1,5 +1,5 @@
-import {useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
+import { useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
 import Product from '~/Components/Product';
 
 const PRODUCT_QUERY = `#graphql
@@ -96,7 +96,7 @@ const FeaturedProducts = `{
   collection(handle: "all") {
     id
     title
-    products(first: 3) {
+    products(first: 2) {
       nodes {
           id
           title
@@ -129,7 +129,7 @@ const TrendingProducts = `{
   collection(handle: "all") {
     id
     title
-    products(first: 3) {
+    products(first: 2) {
       nodes {
           id
           title
@@ -159,18 +159,18 @@ const TrendingProducts = `{
 }
 `;
 
-export async function loader({params, context, request}) {
-  const {handle} = params;
+export async function loader({ params, context, request }) {
+  const { handle } = params;
 
   const searchParams = new URL(request.url).searchParams;
   const selectedOptions = [];
 
   // set selected options from the query string
   searchParams.forEach((value, name) => {
-    selectedOptions.push({name, value});
+    selectedOptions.push({ name, value });
   });
   const storeDomain = context.storefront.getShopifyDomain();
-  const {product} = await context.storefront.query(PRODUCT_QUERY, {
+  const { product } = await context.storefront.query(PRODUCT_QUERY, {
     variables: {
       handle,
       selectedOptions,
@@ -180,7 +180,7 @@ export async function loader({params, context, request}) {
     product.selectedVariant ?? product?.variants?.nodes[0];
 
   if (!product?.id) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
   const FeaturedProductsCollection = await context.storefront.query(
     FeaturedProducts,
@@ -202,5 +202,5 @@ export default function ProductHandle() {
 
   const orderable = data.selectedVariant?.availableForSale || false;
 
-  return <Product data={{...data, orderable: orderable}} />;
+  return <Product data={{ ...data, orderable: orderable }} />;
 }

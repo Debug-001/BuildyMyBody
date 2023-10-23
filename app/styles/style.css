@@ -167,11 +167,9 @@
   .custom-heading {
     font-size: 1.7rem;
   }
-
   .custom-heading2 {
     font-size: 1.7rem;
   }
-
   .custom-heading3 {
     font-size: 1.7rem;
   }
@@ -180,15 +178,12 @@
   .custom-heading2 {
     font-size: 1.8rem;
   }
-
   .custom-heading3 {
     font-size: 2rem;
   }
-
   .custom-heading {
     font-size: 2rem;
   }
-
   .card-1 {
     margin-top: 2rem;
   }
@@ -255,22 +250,19 @@
   border-right: 0;
   padding: 1rem;
   background-color: #ffffff;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 767px) {
   .profile-btn-display {
     display: none;
   }
-
   .profile-btn-display2 {
     display: block;
   }
-
   .profile-btn-display3 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: block;
   }
@@ -279,7 +271,6 @@
   .profile-btn-display2 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: none;
   }
@@ -292,7 +283,7 @@
 .card-acc {
   /* width: 50rem; */
   border: solid grey 2.5px;
-  color: red !important;
+  color: rgb(255, 0, 0) !important;
   padding: 2rem;
 }
 
@@ -338,7 +329,7 @@
 .btn-logout:hover {
   padding: 10px 10px 10px 10px;
   background-color: #ffffff;
-  color: black;
+  color: rgb(0, 0, 0);
   border: 2px solid #000000;
   border-radius: 4px;
   transition: all 0.4s;
@@ -382,7 +373,7 @@
   color: #fff;
   font-size: 15px;
   background-color: transparent;
-  box-shadow: 3px 3px 10px black, -1px -1px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 10px rgb(0, 0, 0), -1px -1px 6px rgba(255, 255, 255, 0.4);
 }
 
 .card-recover #email-label {
@@ -410,7 +401,7 @@
 }
 
 .login-back a:hover {
-  color: #0091ff;
+  color: rgb(0, 145, 255);
 }
 
 .carousel-control-prev-icon {
@@ -430,9 +421,9 @@ nav .active {
 }
 
 .trend-btn {
-  border: 2px solid white !important;
+  border: 2px solid rgb(255, 255, 255) !important;
   background-color: #ffffff !important;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -440,7 +431,7 @@ nav .active {
 .trend-btn:hover {
   border: 2px solid #ff2828 !important;
   background-color: #ffffff !important;
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -716,20 +707,16 @@ a.text-light:hover,
   .offers {
     margin-left: 10px;
   }
-
   .title {
     margin-left: 10px;
   }
-
   .pro-none {
     display: none;
   }
-
   .bmi-margin {
     margin-top: 2rem;
     text-align: center;
   }
-
   .bmi-margin2 {
     text-align: center;
   }
@@ -927,7 +914,7 @@ me #secondbtn {
 }
 
 #firstrow {
-  background-color: #eaeaea;
+  background-color: rgb(234, 234, 234);
   padding-left: 30px;
 }
 
@@ -954,14 +941,14 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center !important;
-  color: #919191;
+  color: rgb(145, 145, 145);
   padding-top: 1rem;
 }
 
 .total {
   display: flex;
   justify-content: flex-start;
-  color: #919191;
+  color: rgb(145, 145, 145);
 }
 
 .price {
@@ -983,15 +970,15 @@ p {
 
 .mrpprice {
   margin-left: 18rem;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 700 !important;
 }
 
 .card-body {
   display: flex;
   justify-content: flex-start;
-  background-color: #ffffe8;
-  border-color: #ffee00 !important;
+  background-color: rgb(255, 255, 232);
+  border-color: rgb(255, 238, 0) !important;
   border: solid 1.6px;
   margin-bottom: 2.5rem;
 }
@@ -1000,7 +987,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #dffef4;
+  background-color: rgb(223, 254, 244);
   padding: 20px 25px 0;
   border: 2.4px solid #2fffc4;
   margin-bottom: 3.5rem;
@@ -1047,7 +1034,7 @@ p {
 
 .card3 {
   margin-top: 1rem;
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   border: 1px solid black !important;
   font-style: italic;
 }
@@ -1246,13 +1233,13 @@ p {
 }
 
 .contact-address {
-  border-radius: 30px;
-  background: #faf4ef;
+  background: white;
+  border: none;
+  transform: scale(1.5);
 }
 
 .contact-address:hover {
-  background: #faf4ef;
-  border-color: #474544;
+  background: white;
 }
 
 .contact-logo {
@@ -1313,7 +1300,7 @@ textarea::placeholder {
 
 #savings {
   font-size: 0.8rem;
-  color: #39d1c6;
+  color: rgb(57, 209, 198);
 }
 
 #savings-2 {
@@ -1373,8 +1360,8 @@ hr {
 }
 
 .num {
-  border-left: 2px solid #777575;
-  border-right: 2px solid #777575;
+  border-left: 2px solid rgb(119, 117, 117);
+  border-right: 2px solid rgb(119, 117, 117);
 }
 
 #leftside {
@@ -1387,7 +1374,7 @@ hr {
 }
 
 .card-1 {
-  background: #f4f2f2;
+  background: rgb(244, 242, 242);
   border-radius: 10px;
 }
 
@@ -1395,11 +1382,9 @@ hr {
   .navbar-nav {
     flex-direction: column;
   }
-
   .nav-item {
     position: relative;
   }
-
   .submenu {
     display: none;
     position: absolute;
@@ -1410,28 +1395,23 @@ hr {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
-
   .nav-item:hover .submenu {
     display: block;
   }
-
   .submenu-content {
     padding: 10px;
     max-height: max-content;
   }
-
   .submenu-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     /* Add spacing between rows */
   }
-
   .submenu-category {
     flex-basis: calc(50% - 10px);
     /* Adjust width for two categories per row */
   }
-
   .submenu a {
     color: black;
     text-decoration: none;
@@ -1496,11 +1476,11 @@ hr {
 .blog-btn {
   background: #fff !important;
   color: black !important;
-  border: 2px solid black !important;
+  border: 2px solid rgb(0, 0, 0) !important;
 }
 
 .blog-btn:hover {
-  color: red !important;
+  color: rgb(255, 0, 0) !important;
   border: 2px solid #ff2828 !important;
   transition: all 0.4s !important;
 }
@@ -1523,7 +1503,7 @@ hr {
 }
 
 .address_subtitle_text {
-  color: #6e6e6e;
+  color: rgb(110, 110, 110);
   padding-right: 10rem;
 }
 
@@ -1541,7 +1521,7 @@ hr {
   /* margin-left: 3rem; */
   width: 100%;
   padding: 10px;
-  border: 1px dashed #9d9ecb;
+  border: 1px dashed rgb(157, 158, 203);
 }
 
 #delivery_btn {
@@ -1552,21 +1532,21 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 5px 10px 5px 10px;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
 }
 
 .del_btn {
   background-color: white;
   color: black;
-  border: black;
+  border: rgb(0, 0, 0);
 }
 
 .payments_btn {
   padding: 9px;
   font-size: 13px;
   font-weight: bolder;
-  background-color: #ffe100;
+  background-color: rgb(255, 225, 0);
   width: 30%;
 }
 
@@ -1574,7 +1554,6 @@ hr {
   #address_card {
     margin-left: 0;
   }
-
   .bmi-width {
     width: 100%;
   }
@@ -1775,8 +1754,8 @@ hr {
 }
 
 .all-btn a {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 6px;
 }
 
@@ -1824,7 +1803,7 @@ hr {
 }
 
 .place-text input::placeholder {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .bmi-result {
@@ -1923,7 +1902,7 @@ hr {
 .profile-clr {
   /* background-color: none !important; */
   /* background-color: #171717; */
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .profile-btn:hover {
@@ -1953,15 +1932,12 @@ hr {
   .profile-btn-display {
     display: none;
   }
-
   .profile-btn-display2 {
     display: block;
   }
-
   .profile-btn-display3 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: block;
   }
@@ -1970,7 +1946,6 @@ hr {
   .profile-btn-display2 {
     display: none;
   }
-
   .profile-btn-display4 {
     display: none;
   }
@@ -2013,7 +1988,7 @@ hr {
 }
 
 .acc-btn button {
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
   color: #000000;
   font-weight: 700;
   font-size: 1rem;
@@ -2036,24 +2011,19 @@ hr {
   .shopby-flex {
     flex-direction: column;
   }
-
   .shopby-img {
     padding-left: 5rem;
     padding-right: 5rem;
   }
-
   .cus-margin {
     margin-top: 1.7rem;
   }
-
   .left {
     margin-left: 0 !important;
   }
-
   .cus2 {
     margin-top: 1.7rem;
   }
-
   .cus3 {
     margin-top: 1rem;
   }
@@ -2062,7 +2032,6 @@ hr {
   .left {
     margin-left: 1rem;
   }
-
   .cus2 {
     margin-top: 1rem;
   }
@@ -2074,7 +2043,7 @@ hr {
   /* Enable vertical scrollbar */
 }
 
-/*# sourceMappingURL=style.css.map */
+
 .carousel .carousel-item {
   color: #000000;
   overflow: hidden;
