@@ -1,9 +1,8 @@
 import React from 'react';
-// import ShopBy from '../../../dist/client/img/shopbyprotien.jpeg'
-import photo from '../../../app/img/cellu.png';
-import photo1 from '../../../app/img/mt.png';
-import photo3 from '../../../app/img/mp.png';
-import photo5 from '../../../app/img/onn.png';
+import photo from '../../img/cellu.png';
+import photo1 from '../../img/mt.png';
+import photo3 from '../../img/mp.png';
+import photo5 from '../../img/onn.png';
 const ShopByBrands = () => {
   return (
     <>

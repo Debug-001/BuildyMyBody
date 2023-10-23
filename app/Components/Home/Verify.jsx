@@ -1,4 +1,7 @@
 import React from 'react';
+import article1 from '../../img/article1.jpg'
+// import article2 from '../../img/article2.jpg'
+// import article3 from '../../img/article3.jpg'
 
 const Verify = () => {
   return (
@@ -20,7 +23,7 @@ const Verify = () => {
             <img
               className="verify-vid mt-5 "
               style={{ width: '100%' }}
-              src="/img/article1.jpg"
+              src={article1}
               alt="verify-product-vid"
             />
           </div>

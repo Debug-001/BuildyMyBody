@@ -1,8 +1,8 @@
-import { CartForm } from '@shopify/hydrogen';
-import { useState } from 'react';
+import {CartForm} from '@shopify/hydrogen';
+import {useState} from 'react';
 
-export default function ProductForm({ variantId, custom = false, button }) {
-  const lines = [{ merchandiseId: variantId, quantity: 1 }];
+export default function ProductForm({variantId, custom = false, button}) {
+  const lines = [{merchandiseId: variantId, quantity: 1}];
   const [showAlert, setShowAlert] = useState(false);
 
   const showAlertAndDismiss = () => {
@@ -13,7 +13,7 @@ export default function ProductForm({ variantId, custom = false, button }) {
     }, 3000);
   };
   return (
-    <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{ lines }}>
+    <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>
       {custom ? (
         button
       ) : (
@@ -23,14 +23,13 @@ export default function ProductForm({ variantId, custom = false, button }) {
       )}
 
       {showAlert && (
-        <div className="cart-popup">
-          <div className="alert alert-success alert-dismissible fade show" role="alert">
-            <div className="cart-popup-content">
-              <span className="product-thumbnail">
-                {/* <img src="product-image.jpg" alt="Product Thumbnail" /> */}
-              </span>
-              <span className="message">Added To the Cart!</span>
-            </div>
+        <div className="fixed-bottom">
+          <div
+            className="alert alert-success alert-dismissible fade show"
+            style={{maxWidth: '300px'}}
+            role="alert"
+          >
+            Added To the Cart!
             <button
               type="button"
               className="close"
@@ -38,12 +37,11 @@ export default function ProductForm({ variantId, custom = false, button }) {
               aria-label="Close"
               onClick={() => setShowAlert(false)}
             >
-              <span aria-hidden="true" className='cross'>&times;</span>
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
         </div>
       )}
-
     </CartForm>
   );
 }

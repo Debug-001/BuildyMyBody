@@ -2,6 +2,18 @@ import { Link } from '@remix-run/react';
 import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
+import article1 from '../../img/article1.jpg'
+import article2 from '../../img/article2.jpg'
+import article3 from '../../img/article3.jpg'
+import article4 from '../../img/article4.jpg'
+import bc1 from '../../img/bc1.jpg'
+import bc2 from '../../img/bc2.jpg'
+import bc3 from '../../img/bc3.jpg'
+import bc4 from '../../img/bc4.jpg'
+import bc5 from '../../img/bc5.jpg'
+import bc6 from '../../img/bc6.jpg'
+// import bc7 from '../../img/bc7.jpg'
+
 
 const BrandCaraousel = () => {
   const [nav1, setNav1] = useState();
@@ -79,7 +91,7 @@ const BrandCaraousel = () => {
               <div className="card" id="articles-card">
                 <img
                   className="card-img-articles"
-                  src="/img/article1.jpg"
+                  src={article1}
                   alt="Card image cap"
                 />
                 <Link to="/blog" className="card-content2">
@@ -105,7 +117,7 @@ const BrandCaraousel = () => {
               <div className="card" id="articles-card">
                 <img
                   className="card-img-articles"
-                  src="/img/article2.jpg"
+                  src={article2}
                   alt="Card image cap"
                 />
                 <Link to="/blog" className="card-content2">
@@ -130,7 +142,7 @@ const BrandCaraousel = () => {
               <div className="card" id="articles-card">
                 <img
                   className="card-img-articles"
-                  src="/img/article3.jpg"
+                  src={article3}
                   alt="Card image cap"
                 />
                 <Link to="/blog" className="card-content2">
@@ -155,7 +167,7 @@ const BrandCaraousel = () => {
               <div className="card" id="articles-card">
                 <img
                   className="card-img-articles"
-                  src="/img/article4.jpg"
+                  src={article4}
                   alt="Card image cap"
                 />
                 <Link to="/blog" className="card-content2">
@@ -230,42 +242,42 @@ const BrandCaraousel = () => {
               <div className="card  d-flex justify-content-center">
                 <img
                   className="card-img-brand	  "
-                  src="/img/bc1.jpg"
+                  src={bc1}
                   alt="Card image cap"
                 />
               </div>
               <div className="card  d-flex justify-content-center">
                 <img
                   className="card-img-brand  "
-                  src="/img/bc2.jpg"
+                  src={bc2}
                   alt="Card image cap"
                 />
               </div>
               <div className="card   d-flex justify-content-center">
                 <img
                   className="card-img-brand  "
-                  src="/img/bc3.jpg"
+                  src={bc3}
                   alt="Card image cap"
                 />
               </div>
               <div className="card   d-flex justify-content-center">
                 <img
                   className="card-img-brand  "
-                  src="/img/bc4.jpg"
+                  src={bc4}
                   alt="Card image cap"
                 />
               </div>
               <div className="card   d-flex justify-content-center">
                 <img
                   className="card-img-brand  "
-                  src="/img/bc5.jpg"
+                  src={bc5}
                   alt="Card image cap"
                 />
               </div>
               <div className="card  d-flex justify-content-center">
                 <img
                   className="card-img-brand  "
-                  src="/img/bc6.jpg"
+                  src={bc6}
                   alt="Card image cap"
                 />
               </div>

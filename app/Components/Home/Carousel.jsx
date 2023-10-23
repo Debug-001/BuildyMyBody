@@ -1,3 +1,7 @@
+import banner1 from '../../img/banner1.jpg'
+import banner2 from '../../img/banner2.jpg'
+import banner3 from '../../img/banner3.jpg'
+
 const Carousel = () => {
   return (
     <section>
@@ -17,13 +21,13 @@ const Carousel = () => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src="/img/banner1.jpg" alt="First slide" />
+            <img className="d-block w-100" src={banner1} alt="First slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="/img/banner2.jpg" alt="Second slide" />
+            <img className="d-block w-100" src={banner2} alt="Second slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="/img/banner3.jpg" alt="Third slide" />
+            <img className="d-block w-100" src={banner3} alt="Third slide" />
           </div>
         </div>
         <a

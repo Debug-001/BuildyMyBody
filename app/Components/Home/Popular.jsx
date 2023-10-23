@@ -1,10 +1,10 @@
 import React from 'react';
-import whey from '../../../app/img/whey.png';
-import gainer from '../../../app/img/gainer.png';
-import workout from '../../../app/img/workout.png';
-import pre from '../../../app/img/pre.png';
-import creatine from '../../../app/img/creatine.png';
-import amino from '../../../app/img/amino.png';
+import whey from '../../img/whey.png';
+import gainer from '../../img/gainer.png';
+import workout from '../../img/workout.png';
+import pre from '../../img/pre.png';
+import creatine from '../../img/creatine.png';
+import amino from '../../img/amino.png';
 
 const Popular = () => {
   return (
@@ -23,7 +23,7 @@ const Popular = () => {
               </p>
               <div className="text-center">
                 <span
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                   className="mt-2 text-dark"
                 >
                   Whey Protein
@@ -38,7 +38,7 @@ const Popular = () => {
               </p>
               <div className="text-center">
                 <span
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                   className="mt-2 text-center text-dark"
                 >
                   Mass Gainer
@@ -56,7 +56,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Creatine
                 </span>
@@ -74,7 +74,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Amino Acids/BCAAs
                 </span>
@@ -90,7 +90,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Pre/Post Workout
                 </span>
@@ -106,7 +106,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Workout Essentials
                 </span>
@@ -130,7 +130,7 @@ const Popular = () => {
               </p>
               <div className="text-center">
                 <span
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                   className="mt-2 text-dark"
                 >
                   Whey Protein
@@ -146,7 +146,7 @@ const Popular = () => {
               </p>
               <div className="text-center">
                 <span
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                   className="mt-2 text-center text-dark"
                 >
                   Mass Gainer
@@ -166,7 +166,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Creatine
                 </span>
@@ -182,7 +182,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Amino Acids/BCAAs
                 </span>
@@ -200,7 +200,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Pre/Post Workout
                 </span>
@@ -216,7 +216,7 @@ const Popular = () => {
               <div className="text-center">
                 <span
                   className="text-center mt-2 text-dark"
-                  style={{ fontWeight: 'bold', fontSize: '1rem' }}
+                  style={{fontWeight: 'bold', fontSize: '1rem'}}
                 >
                   Workout Essentials
                 </span>

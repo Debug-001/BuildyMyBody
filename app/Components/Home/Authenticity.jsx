@@ -1,5 +1,5 @@
 import React from 'react'
-import authenticity2 from '../../../app/img/authenticity2.jpg'
+import authenticity2 from '../../img/authenticity2.jpg'
 const Authenticity = () => {
     return (
         <div>

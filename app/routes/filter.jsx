@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Form, NavLink } from '@remix-run/react';
-import Protien2 from '../../app/img/protien2.png';
-import on from '../../app/img/on.png';
-import mt from '../../app/img/mt.jpg';
-import uni from '../../app/img/uni.jpg';
-import cl from '../../app/img/cl.jpg';
-import whey from '../../app/img/whey.png';
-import gainer from '../../app/img/gainer.png';
-import workout from '../../app/img/workout.png';
-import pre from '../../app/img/pre.png';
+import React, {useEffect, useState} from 'react';
+import {Form, NavLink} from '@remix-run/react';
+import Protien2 from '../img/protien2.png';
+import on from '../img/on.png';
+import mt from '../img//mt.jpg';
+import uni from '../img/uni.jpg';
+import cl from '../img/cl.jpg';
+import whey from '../img/whey.png';
+import gainer from '../img/gainer.png';
+import workout from '../img/workout.png';
+import pre from '../img/pre.png';
 
-import { BsSearch } from 'react-icons/bs';
-import { FiShoppingCart } from 'react-icons/fi';
+import {BsSearch} from 'react-icons/bs';
+import {FiShoppingCart} from 'react-icons/fi';
 const Filter = () => {
   // const [selectedCategory, setSelectedCategory] = useState(null);
   // const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);

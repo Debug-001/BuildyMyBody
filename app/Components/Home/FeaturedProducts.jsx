@@ -2,6 +2,7 @@ import { Link, useLoaderData } from '@remix-run/react';
 import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
+import ds1 from '../../img/ds1.jpg'
 
 const FeaturedProducts = ({ collections }) => {
   const [nav1, setNav1] = useState();
@@ -74,7 +75,7 @@ const FeaturedProducts = ({ collections }) => {
             >
               <img
                 className="card-img-top"
-                src="/img/ds1.jpg" //to be fetched
+                src= {ds1}  //to be fetched
                 alt="Card image cap"
               />
               <div className="card-content">

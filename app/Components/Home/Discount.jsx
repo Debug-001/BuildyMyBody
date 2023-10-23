@@ -1,19 +1,20 @@
 import React, { useState } from "react";
+import banner from '../../img/discount-banner1.jpg'
 
 const Carousel = () => {
 	const [carouselItems, setCarouselItems] = useState([
 		{
-			src: "/img/Banner_1.jpg",
+			src: "../../img/discount-banner1.jpg",
 			alt: "First slide",
 			active: true,
 		},
 		{
-			src: "/img/discount-banner2.jpg",
+			src: "../../img/discount-banner2.jpg",
 			alt: "Second slide",
 			active: false,
 		},
 		{
-			src: "/img/discount-banner3.jpg",
+			src: "../../img/discount-banner3.jpg",
 			alt: "Third slide",
 			active: false,
 		},
