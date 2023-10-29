@@ -6,7 +6,7 @@ import photo5 from '../../img/onn.png';
 const ShopByBrands = () => {
   return (
     <>
-      <section id="shopbb" className='container'>
+      <section id="shopbb" className="container" data-aos="fade-up">
         {/* <div style={{ paddingTop: "3.7rem", paddingBottom: "3.7rem" }} >
           <div className="container ">
             <div
@@ -72,56 +72,35 @@ const ShopByBrands = () => {
         </div> */}
 
         <div className="row">
-
           <div className="col-lg-6 col-md-6 col-sm-12  ">
             <div className="certificate-card ">
               <p className="text-center mt-4 ">
-                <img
-                  src={photo}
-                  className="w-100"
-                  alt=""
-                />
+                <img src={photo} className="w-100" alt="" />
               </p>
             </div>
-
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12  ">
             <div className="certificate-card">
               <p className="text-center mt-4">
-                <img
-                  src={photo1}
-                  className="w-100   "
-                  alt=""
-                />
+                <img src={photo1} className="w-100   " alt="" />
               </p>
             </div>
-
           </div>
 
           <div className="col-lg-6 col-md-6 col-sm-12  mb-lg-4 mb-1 ">
             <div className="certificate-card">
               <p className="text-center mt-4">
-                <img
-                  src={photo3}
-                  className="w-100   "
-                  alt=""
-                />
+                <img src={photo3} className="w-100   " alt="" />
               </p>
             </div>
-
           </div>
 
           <div className="col-lg-6 col-md-6 col-sm-12  mb-4">
             <div className="certificate-card">
               <p className="text-center mt-4">
-                <img
-                  src={photo5}
-                  className="w-100   "
-                  alt=""
-                />
+                <img src={photo5} className="w-100   " alt="" />
               </p>
             </div>
-
           </div>
         </div>
       </section>

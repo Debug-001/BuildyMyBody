@@ -9,7 +9,7 @@ import amino from '../../img/amino.png';
 const Popular = () => {
   return (
     <>
-      <div className="container-fluid d-none d-lg-block">
+      <div className="container-fluid d-none d-lg-block" data-aos="fade-up">
         <div className="text-center">
           <h1 className="font-weight-bold custom-heading3">
             <em>Popular in Sports Nutrition</em>

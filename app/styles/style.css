@@ -167,9 +167,11 @@
   .custom-heading {
     font-size: 1.7rem;
   }
+
   .custom-heading2 {
     font-size: 1.7rem;
   }
+
   .custom-heading3 {
     font-size: 1.7rem;
   }
@@ -178,12 +180,15 @@
   .custom-heading2 {
     font-size: 1.8rem;
   }
+
   .custom-heading3 {
     font-size: 2rem;
   }
+
   .custom-heading {
     font-size: 2rem;
   }
+
   .card-1 {
     margin-top: 2rem;
   }
@@ -250,19 +255,22 @@
   border-right: 0;
   padding: 1rem;
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 @media screen and (max-width: 767px) {
   .profile-btn-display {
     display: none;
   }
+
   .profile-btn-display2 {
     display: block;
   }
+
   .profile-btn-display3 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: block;
   }
@@ -271,6 +279,7 @@
   .profile-btn-display2 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: none;
   }
@@ -283,7 +292,7 @@
 .card-acc {
   /* width: 50rem; */
   border: solid grey 2.5px;
-  color: rgb(255, 0, 0) !important;
+  color: red !important;
   padding: 2rem;
 }
 
@@ -329,7 +338,7 @@
 .btn-logout:hover {
   padding: 10px 10px 10px 10px;
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: black;
   border: 2px solid #000000;
   border-radius: 4px;
   transition: all 0.4s;
@@ -373,7 +382,7 @@
   color: #fff;
   font-size: 15px;
   background-color: transparent;
-  box-shadow: 3px 3px 10px rgb(0, 0, 0), -1px -1px 6px rgba(255, 255, 255, 0.4);
+  box-shadow: 3px 3px 10px black, -1px -1px 6px rgba(255, 255, 255, 0.4);
 }
 
 .card-recover #email-label {
@@ -401,7 +410,7 @@
 }
 
 .login-back a:hover {
-  color: rgb(0, 145, 255);
+  color: #0091ff;
 }
 
 .carousel-control-prev-icon {
@@ -421,9 +430,9 @@ nav .active {
 }
 
 .trend-btn {
-  border: 2px solid rgb(255, 255, 255) !important;
+  border: 2px solid white !important;
   background-color: #ffffff !important;
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -431,7 +440,7 @@ nav .active {
 .trend-btn:hover {
   border: 2px solid #ff2828 !important;
   background-color: #ffffff !important;
-  color: rgb(0, 0, 0) !important;
+  color: black !important;
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -707,16 +716,20 @@ a.text-light:hover,
   .offers {
     margin-left: 10px;
   }
+
   .title {
     margin-left: 10px;
   }
+
   .pro-none {
     display: none;
   }
+
   .bmi-margin {
     margin-top: 2rem;
     text-align: center;
   }
+
   .bmi-margin2 {
     text-align: center;
   }
@@ -914,7 +927,7 @@ me #secondbtn {
 }
 
 #firstrow {
-  background-color: rgb(234, 234, 234);
+  background-color: #eaeaea;
   padding-left: 30px;
 }
 
@@ -941,14 +954,14 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center !important;
-  color: rgb(145, 145, 145);
+  color: #919191;
   padding-top: 1rem;
 }
 
 .total {
   display: flex;
   justify-content: flex-start;
-  color: rgb(145, 145, 145);
+  color: #919191;
 }
 
 .price {
@@ -970,15 +983,15 @@ p {
 
 .mrpprice {
   margin-left: 18rem;
-  color: rgb(0, 0, 0);
+  color: black;
   font-weight: 700 !important;
 }
 
 .card-body {
   display: flex;
   justify-content: flex-start;
-  background-color: rgb(255, 255, 232);
-  border-color: rgb(255, 238, 0) !important;
+  background-color: #ffffe8;
+  border-color: #ffee00 !important;
   border: solid 1.6px;
   margin-bottom: 2.5rem;
 }
@@ -987,7 +1000,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgb(223, 254, 244);
+  background-color: #dffef4;
   padding: 20px 25px 0;
   border: 2.4px solid #2fffc4;
   margin-bottom: 3.5rem;
@@ -1034,7 +1047,7 @@ p {
 
 .card3 {
   margin-top: 1rem;
-  background-color: rgb(255, 255, 255) !important;
+  background-color: white !important;
   border: 1px solid black !important;
   font-style: italic;
 }
@@ -1298,7 +1311,7 @@ textarea::placeholder {
 
 #savings {
   font-size: 0.8rem;
-  color: rgb(57, 209, 198);
+  color: #39d1c6;
 }
 
 #savings-2 {
@@ -1358,8 +1371,8 @@ hr {
 }
 
 .num {
-  border-left: 2px solid rgb(119, 117, 117);
-  border-right: 2px solid rgb(119, 117, 117);
+  border-left: 2px solid #777575;
+  border-right: 2px solid #777575;
 }
 
 #leftside {
@@ -1372,7 +1385,7 @@ hr {
 }
 
 .card-1 {
-  background: rgb(244, 242, 242);
+  background: #f4f2f2;
   border-radius: 10px;
 }
 
@@ -1380,9 +1393,11 @@ hr {
   .navbar-nav {
     flex-direction: column;
   }
+
   .nav-item {
     position: relative;
   }
+
   .submenu {
     display: none;
     position: absolute;
@@ -1393,23 +1408,28 @@ hr {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
+
   .nav-item:hover .submenu {
     display: block;
   }
+
   .submenu-content {
     padding: 10px;
     max-height: max-content;
   }
+
   .submenu-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     /* Add spacing between rows */
   }
+
   .submenu-category {
     flex-basis: calc(50% - 10px);
     /* Adjust width for two categories per row */
   }
+
   .submenu a {
     color: black;
     text-decoration: none;
@@ -1474,11 +1494,11 @@ hr {
 .blog-btn {
   background: #fff !important;
   color: black !important;
-  border: 2px solid rgb(0, 0, 0) !important;
+  border: 2px solid black !important;
 }
 
 .blog-btn:hover {
-  color: rgb(255, 0, 0) !important;
+  color: red !important;
   border: 2px solid #ff2828 !important;
   transition: all 0.4s !important;
 }
@@ -1501,7 +1521,7 @@ hr {
 }
 
 .address_subtitle_text {
-  color: rgb(110, 110, 110);
+  color: #6e6e6e;
   padding-right: 10rem;
 }
 
@@ -1519,7 +1539,7 @@ hr {
   /* margin-left: 3rem; */
   width: 100%;
   padding: 10px;
-  border: 1px dashed rgb(157, 158, 203);
+  border: 1px dashed #9d9ecb;
 }
 
 #delivery_btn {
@@ -1530,21 +1550,21 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 5px 10px 5px 10px;
-  color: rgb(255, 255, 255);
+  color: white;
   border-radius: 4px;
 }
 
 .del_btn {
   background-color: white;
   color: black;
-  border: rgb(0, 0, 0);
+  border: black;
 }
 
 .payments_btn {
   padding: 9px;
   font-size: 13px;
   font-weight: bolder;
-  background-color: rgb(255, 225, 0);
+  background-color: #ffe100;
   width: 30%;
 }
 
@@ -1552,6 +1572,7 @@ hr {
   #address_card {
     margin-left: 0;
   }
+
   .bmi-width {
     width: 100%;
   }
@@ -1752,8 +1773,8 @@ hr {
 }
 
 .all-btn a {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  background-color: black;
+  color: white;
   padding: 6px;
 }
 
@@ -1801,7 +1822,7 @@ hr {
 }
 
 .place-text input::placeholder {
-  color: rgb(255, 255, 255) !important;
+  color: white !important;
 }
 
 .bmi-result {
@@ -1900,7 +1921,7 @@ hr {
 .profile-clr {
   /* background-color: none !important; */
   /* background-color: #171717; */
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 .profile-btn:hover {
@@ -1930,12 +1951,15 @@ hr {
   .profile-btn-display {
     display: none;
   }
+
   .profile-btn-display2 {
     display: block;
   }
+
   .profile-btn-display3 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: block;
   }
@@ -1944,6 +1968,7 @@ hr {
   .profile-btn-display2 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: none;
   }
@@ -1986,7 +2011,7 @@ hr {
 }
 
 .acc-btn button {
-  background-color: rgb(255, 255, 255) !important;
+  background-color: white !important;
   color: #000000;
   font-weight: 700;
   font-size: 1rem;
@@ -2009,19 +2034,24 @@ hr {
   .shopby-flex {
     flex-direction: column;
   }
+
   .shopby-img {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
   .cus-margin {
     margin-top: 1.7rem;
   }
+
   .left {
     margin-left: 0 !important;
   }
+
   .cus2 {
     margin-top: 1.7rem;
   }
+
   .cus3 {
     margin-top: 1rem;
   }
@@ -2030,6 +2060,7 @@ hr {
   .left {
     margin-left: 1rem;
   }
+
   .cus2 {
     margin-top: 1rem;
   }
@@ -2041,7 +2072,7 @@ hr {
   /* Enable vertical scrollbar */
 }
 
-
+/*# sourceMappingURL=style.css.map */
 .carousel .carousel-item {
   color: #000000;
   overflow: hidden;

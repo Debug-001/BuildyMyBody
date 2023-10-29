@@ -1,10 +1,10 @@
-import { Link, useLoaderData } from '@remix-run/react';
+import {Link, useLoaderData} from '@remix-run/react';
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
-import ds1 from '../../img/ds1.jpg'
+import ds1 from '../../img/ds1.jpg';
 
-const FeaturedProducts = ({ collections }) => {
+const FeaturedProducts = ({collections}) => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const slider1 = useRef(null);
@@ -16,23 +16,25 @@ const FeaturedProducts = ({ collections }) => {
   }, []);
 
   return (
-    <section id="product-card ">
+    <section id="product-card " data-aos="fade-up">
       <div className="container-fluid" id="cgap">
-        <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
+        <div
+          className="d-flex justify-content-center mb-5"
+          style={{flexDirection: 'column', alignItems: 'center'}}
+        >
           <h1 className="font-weight-bold custom-heading3">
             <em>Shop By Categories</em>
           </h1>
-          <hr className='h1-hr' />
+          <hr className="h1-hr" />
         </div>
 
         <Slider
-          className='ml-lg-5 mr-lg-5'
+          className="ml-lg-5 mr-lg-5"
           asNavFor={nav1}
           ref={slider2}
           slidesToShow={3}
           swipeToSlide={true}
           focusOnSelect={true}
-
           responsive={[
             {
               breakpoint: 1024,
@@ -51,7 +53,7 @@ const FeaturedProducts = ({ collections }) => {
                 initialSlide: 2,
                 dots: true,
                 nextArrow: <></>,
-                prevArrow: <></>
+                prevArrow: <></>,
               },
             },
             {
@@ -61,7 +63,7 @@ const FeaturedProducts = ({ collections }) => {
                 slidesToScroll: 1,
                 dots: true,
                 nextArrow: <></>,
-                prevArrow: <></>
+                prevArrow: <></>,
               },
             },
           ]}
@@ -69,13 +71,13 @@ const FeaturedProducts = ({ collections }) => {
           {collections.nodes.map((collection) => (
             <div
               className="card"
-              style={{ width: '18rem', paddingBottom: '' }}
+              style={{width: '18rem', paddingBottom: ''}}
               id="cgap"
               key={collection.id}
             >
               <img
                 className="card-img-top"
-                src= {ds1}  //to be fetched
+                src={ds1} //to be fetched
                 alt="Card image cap"
               />
               <div className="card-content">
