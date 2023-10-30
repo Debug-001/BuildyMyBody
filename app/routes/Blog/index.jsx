@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import { AiOutlineArrowRight } from 'react-icons/ai'
-import { AiOutlineArrowLeft } from 'react-icons/ai'
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import {AiOutlineArrowRight} from 'react-icons/ai';
+import {AiOutlineArrowLeft} from 'react-icons/ai';
 
 function Blog() {
   const navigate = useNavigate();
@@ -35,44 +35,39 @@ function Blog() {
         <div className="container">
           <div
             className="d-flex justify-content-center mb-5"
-            style={{ flexDirection: 'column', alignItems: 'center' }}
+            style={{flexDirection: 'column', alignItems: 'center'}}
           >
             <h1
               className="font-weight-bold custom-heading3"
-              style={{ color: '#ff2828' }}
+              style={{color: '#ff2828'}}
             >
               <em>Blogs</em>
             </h1>
             <hr className="h1-hr" />
           </div>
-          <div className="row no-gutters mt-5 blog-margin">
+          <div className="row no-gutters mt-5 blog-margin" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
-              <img src="../../img/blog-1.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../../img/blog-1.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
 
             <div className="col  ">
-              <p
-                className="text-center mt-2 blog-name"
-
-              >
+              <p className="text-center mt-2 blog-name">
                 Fitness Hacks During Navratri:
               </p>
-              <p
-                className="text-center pt-lg-0 pb-lg-0 pl-lg-4 pr-lg-4 mt-5"
-
-              >
+              <p className="text-center pt-lg-0 pb-lg-0 pl-lg-4 pr-lg-4 mt-5">
                 Navratri time is here. A great opportunity to detox your body.
                 But there are some things you should keep in mind while fasting
                 - to balance out the pros and cons. Today we'll learn them very
                 quickly -
               </p>
               <p className="text-center">
-
                 <a
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
                   href="https://m.timesofindia.com/life-style/food-news/5-tips-that-will-make-navratri-fasting-healthier-for-you/photostory/98935923.cms"
-
                 >
                   Read More
                 </a>
@@ -80,21 +75,18 @@ function Blog() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5">
+          <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../../img/blog-2.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../../img/blog-2.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
-              <p
-                className="text-center mt-2 blog-name"
-
-              >
+              <p className="text-center mt-2 blog-name">
                 Hydration is the key:
               </p>
-              <p
-                className="text-center mt-5 mr-lg-2"
-
-              >
+              <p className="text-center mt-5 mr-lg-2">
                 Fast or no fast, water intake is super important for your body.
                 During fasting, the body's stored energy resources are used.
                 That's why hydration becomes even more necessary. With fruit
@@ -104,37 +96,35 @@ function Blog() {
                 experiment.
               </p>
               <p className="text-center">
-
                 <a
                   className="btn font-weight-bold mt-4 blog-btn "
                   target="_blank"
                   href="https://familydoctor.org/athletes-the-importance-of-good-hydration/"
-
                 >
                   Read More
                 </a>
               </p>
             </div>
             <div className="col-lg-6 d-none d-lg-block ">
-              <img src="../../img/blog-2.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../../img/blog-2.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
           </div>
 
-          <div className="row no-gutters mt-5">
+          <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12">
-              <img src="../../img/blog-3.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../../img/blog-3.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
             <div className="col  ">
-              <p
-                className="text-center mt-2 blog-name"
-
-              >
+              <p className="text-center mt-2 blog-name">
                 Avoid fried, oily and sugary stuff:
               </p>
-              <p
-                className="text-center mt-5 ml-lg-2"
-
-              >
+              <p className="text-center mt-5 ml-lg-2">
                 Potatoes might become your friend during Navratri time. There
                 are so many chips available in the market made of things other
                 than just potatoes. But they're not a healthy option. Too much
@@ -145,7 +135,6 @@ function Blog() {
                 a break.
               </p>
               <p className="text-center">
-
                 <a
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
@@ -157,21 +146,18 @@ function Blog() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5">
+          <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../img/blog-4.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../img/blog-4.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
-              <p
-                className="text-center mt-2 blog-name"
-
-              >
+              <p className="text-center mt-2 blog-name">
                 How to increase lifting capacity?
               </p>
-              <p
-                className="text-center mt-5 mr-lg-2"
-
-              >
+              <p className="text-center mt-5 mr-lg-2">
                 Lifting capacity is defined as the amount of weight you can
                 lift. Now, this measurement can be taken in the span of an hour
                 or a week. But in general, high lifting capacity is often
@@ -183,25 +169,25 @@ function Blog() {
                   className="btn font-weight-bold mt-4 blog-btn"
                   target="_blank"
                   href="  https://www.wikihow.com/Lift-Heavier-Weights"
-
                 >
                   Read More
                 </a>
               </p>
             </div>
             <div className="col-lg-6 d-none d-lg-block ">
-              <img src="../img/blog-4.jpg" className="img-fluid login-img rounded" />
+              <img
+                src="../img/blog-4.jpg"
+                className="img-fluid login-img rounded"
+              />
             </div>
-
           </div>
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col d-flex justify-content-center blog-next-btn-flex mt-5">
               <p className="text-center">
                 {' '}
                 <button
                   type="submit"
                   className="btn font-weight-bold w-100 blog-next-btn mt-3"
-
                 >
                   {' '}
                   <AiOutlineArrowLeft />
@@ -221,7 +207,6 @@ function Blog() {
                   type="submit"
                   onClick={navigateToBlog2}
                   className="btn font-weight-bold mt-3 mr-2 blog-next-btn"
-
                 >
                   {' '}
                   2
@@ -232,7 +217,6 @@ function Blog() {
                   type="submit"
                   onClick={navigateToBlog2}
                   className="btn font-weight-bold  w-100 blog-next-btn mt-3 "
-
                 >
                   {' '}
                   <AiOutlineArrowRight className="" />

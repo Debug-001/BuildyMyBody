@@ -1,19 +1,18 @@
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
-import article1 from '../../img/article1.jpg'
-import article2 from '../../img/article2.jpg'
-import article3 from '../../img/article3.jpg'
-import article4 from '../../img/article4.jpg'
-import bc1 from '../../img/bc1.jpg'
-import bc2 from '../../img/bc2.jpg'
-import bc3 from '../../img/bc3.jpg'
-import bc4 from '../../img/bc4.jpg'
-import bc5 from '../../img/bc5.jpg'
-import bc6 from '../../img/bc6.jpg'
+import article1 from '../../img/article1.jpg';
+import article2 from '../../img/article2.jpg';
+import article3 from '../../img/article3.jpg';
+import article4 from '../../img/article4.jpg';
+import bc1 from '../../img/bc1.jpg';
+import bc2 from '../../img/bc2.jpg';
+import bc3 from '../../img/bc3.jpg';
+import bc4 from '../../img/bc4.jpg';
+import bc5 from '../../img/bc5.jpg';
+import bc6 from '../../img/bc6.jpg';
 // import bc7 from '../../img/bc7.jpg'
-
 
 const BrandCaraousel = () => {
   const [nav1, setNav1] = useState();
@@ -28,17 +27,20 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car" >
+      <section id="fitness-car" data-aos="fade-up">
         <div className="container-fluid pt-5 pb-5">
-          <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
+          <div
+            className="d-flex justify-content-center mb-5"
+            style={{flexDirection: 'column', alignItems: 'center'}}
+          >
             <h1 className="custom-heading3">
               <em>Fitness Articles</em>
             </h1>
-            <hr className='h1-hr' />
+            <hr className="h1-hr" />
           </div>
           <div className="fitness-slider">
             <Slider
-              className='ml-lg-5 mr-lg-5'
+              className="ml-lg-5 mr-lg-5"
               asNavFor={nav1}
               ref={slider2}
               slidesToShow={3}
@@ -62,7 +64,7 @@ const BrandCaraousel = () => {
                     initialSlide: 2,
                     dots: true,
                     nextArrow: <></>,
-                    prevArrow: <></>
+                    prevArrow: <></>,
                   },
                 },
                 {
@@ -73,7 +75,7 @@ const BrandCaraousel = () => {
                     initialSlide: 1,
                     dots: true,
                     nextArrow: <></>,
-                    prevArrow: <></>
+                    prevArrow: <></>,
                   },
                 },
                 {
@@ -83,7 +85,7 @@ const BrandCaraousel = () => {
                     slidesToScroll: 1,
                     dots: true,
                     nextArrow: <></>,
-                    prevArrow: <></>
+                    prevArrow: <></>,
                   },
                 },
               ]}
@@ -97,11 +99,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
+                    <em style={{color: '#474544 '}}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
+                    style={{color: '#474544 '}}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -123,11 +125,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3 ">
                     {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
+                    <em style={{color: '#474544 '}}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
+                    style={{color: '#474544 '}}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -148,11 +150,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
+                    <em style={{color: '#474544 '}}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
+                    style={{color: '#474544 '}}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -173,11 +175,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
+                    <em style={{color: '#474544 '}}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
+                    style={{color: '#474544 '}}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -196,15 +198,18 @@ const BrandCaraousel = () => {
 
       <section id="brand-car">
         <div className="container-fluid">
-          <div className="d-flex justify-content-center" style={{ flexDirection: "column", alignItems: "center" }}>
+          <div
+            className="d-flex justify-content-center"
+            style={{flexDirection: 'column', alignItems: 'center'}}
+          >
             <h1 className="font-weight-bold custom-heading3">
               <em>Brands</em>
             </h1>
-            <hr className='h1-hr' />
+            <hr className="h1-hr" />
           </div>
           <div className="brands-slider">
             <Slider
-              className='ml-lg-5 mr-lg-5'
+              className="ml-lg-5 mr-lg-5"
               asNavFor={nav1}
               ref={slider2}
               slidesToShow={3}

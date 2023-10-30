@@ -21,7 +21,7 @@ const Carousel = () => {
   ]);
 
   return (
-    <section className="mt-3" data-aos="fade-in">
+    <section className="mt-3" data-aos="fade-up">
       <div
         id="carouselExampleControls3"
         className="carousel slide "

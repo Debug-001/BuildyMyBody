@@ -117,8 +117,8 @@ const BMI = () => {
                   </button>
                 </div>
               </div>
-              <hr className="line-hr " style={{ borderColor: 'black' }} />
-              <div className="analysis flex-column ">
+              <hr className="line-hr " style={{borderColor: 'black'}} />
+              <div className="analysis flex-column " data-aos="fade-up">
                 <div
                   className="bmi-result text-dark"
                   style={{textAlign: 'center'}}
@@ -134,8 +134,8 @@ const BMI = () => {
                   </div>
                 )}
               </div>
-              <div className="container-fullwidth mb-5">
-                <hr className="line-hr" style={{ borderColor: 'black' }} />
+              <div className="container-fullwidth mb-5" data-aos="fade-up">
+                <hr className="line-hr" style={{borderColor: 'black'}} />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
                     <li className="nav-item">
@@ -237,7 +237,11 @@ const BMI = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-lg-4" id="bmi-blogs">
+            <div
+              className="col-md-4 col-lg-4"
+              id="bmi-blogs"
+              data-aos="fade-up"
+            >
               <h1 className="d-flex justify-content-start pt-5">
                 <em>
                   <u className="underline">BLOGS</u>
@@ -245,7 +249,7 @@ const BMI = () => {
               </h1>
 
               <a href="/blog" className="blog-img">
-                <img src="../img/blog-4.jpg" className='rounded' alt="" />
+                <img src="../img/blog-4.jpg" className="rounded" alt="" />
                 <p>Increase Lifting Capacity</p>
                 <div className="text-center">
                   <a
@@ -258,7 +262,7 @@ const BMI = () => {
                 </div>
               </a>
               <a href="/blog" className="blog-img">
-                <img src="../img/blog-6.jpg" className='rounded' alt="" />
+                <img src="../img/blog-6.jpg" className="rounded" alt="" />
                 <p>Rice vs Chapati</p>
                 <div className="text-center">
                   <button

@@ -157,7 +157,11 @@ const Product = ({data}) => {
               </div>
             </div>
 
-            <div className="col-lg-8  d-lg-none" id="product-tabs">
+            <div
+              className="col-lg-8  d-lg-none"
+              id="product-tabs"
+              data-aos="fade-up"
+            >
               <ul
                 className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
                 style={{background: 'black'}}

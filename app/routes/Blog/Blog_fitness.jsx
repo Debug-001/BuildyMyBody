@@ -27,7 +27,7 @@ function Blog_fitness() {
   };
 
   return (
-    <div className="main-div">
+    <div className="main-div" data-aos="fade-up">
       <Navbar />
       <div className="container">
         <p className="text-center mt-3 blogs-text">BLOGS</p>

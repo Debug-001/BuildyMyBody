@@ -1,16 +1,26 @@
 const Testimonials = () => {
   return (
-    <section id="testmon">
+    <section id="testmon" data-aos="fade-up">
       <div className="container-xl pt-5 pb-5">
         <div className="row">
           <div className="col-sm-12">
-            <div className="d-flex justify-content-center mb-5" style={{ flexDirection: "column", alignItems: "center" }}>
-              <h1 className="custom-heading3" style={{ color: '#ff2828', fontWeight: "900" }}>
+            <div
+              className="d-flex justify-content-center mb-5"
+              style={{flexDirection: 'column', alignItems: 'center'}}
+            >
+              <h1
+                className="custom-heading3"
+                style={{color: '#ff2828', fontWeight: '900'}}
+              >
                 <em>Amazing Customer Reviews</em>
               </h1>
-              <hr className='h1-hr' />
+              <hr className="h1-hr" />
             </div>
-            <div id="myCarousel" className="carousel slide" data-ride="carousel">
+            <div
+              id="myCarousel"
+              className="carousel slide"
+              data-ride="carousel"
+            >
               {/* Carousel indicators */}
               <ol className="carousel-indicators">
                 <li
@@ -35,7 +45,9 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              The Product quality was really good and the price was also somewhat affordable. Go for the On Nutrition Whey Protein package.
+                              The Product quality was really good and the price
+                              was also somewhat affordable. Go for the On
+                              Nutrition Whey Protein package.
                             </p>
                             <p className="overview">
                               <b>Anupam Kumar</b>, New Delhi
@@ -54,7 +66,10 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              All types of supplements were there that are required for my body building. All though would suggest to add more flavours options if possible. Else everything was great.
+                              All types of supplements were there that are
+                              required for my body building. All though would
+                              suggest to add more flavours options if possible.
+                              Else everything was great.
                             </p>
                             <p className="overview">
                               <b>Akash Yaduvansi</b>, Banglore
@@ -77,7 +92,9 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              The ordering experience was quite easy as I order supplements on monthly basis. Overall good experience uptill now.
+                              The ordering experience was quite easy as I order
+                              supplements on monthly basis. Overall good
+                              experience uptill now.
                             </p>
                             <p className="overview">
                               <b>Rashmi Singh</b>, Noida
@@ -96,7 +113,9 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              Recently they added more flavours of whey protein and I was literally looking for the flavours option. 100% satisfied with BuildMyBody
+                              Recently they added more flavours of whey protein
+                              and I was literally looking for the flavours
+                              option. 100% satisfied with BuildMyBody
                             </p>
                             <p className="overview">
                               <b>Saket Kumar</b>, Noida
@@ -119,7 +138,8 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              Decent but flavours and categories could be increased.
+                              Decent but flavours and categories could be
+                              increased.
                             </p>
                             <p className="overview">
                               <b>Smith Kumar</b>, Patna
@@ -138,7 +158,8 @@ const Testimonials = () => {
                         <div className="media-body">
                           <div className="testimonial">
                             <p>
-                              ordered the on whey protein and got it delivered within 3 days, gg guys keep it up.
+                              ordered the on whey protein and got it delivered
+                              within 3 days, gg guys keep it up.
                             </p>
                             <p className="overview">
                               <b>Bhavya Sharma</b>, Delhi

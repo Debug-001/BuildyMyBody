@@ -1,23 +1,25 @@
-import { AiFillCheckCircle } from 'react-icons/ai';
+import {AiFillCheckCircle} from 'react-icons/ai';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import { useState } from 'react';
+import {useState} from 'react';
 import data from './data';
 import Try from './Try';
 function Certificates() {
   const [selectedCategory, setSelectedCategory] = useState('Category1');
   const uniqueCategories = [...new Set(data.map((item) => item.category))];
 
-
   return (
     <>
       <div className="main-div">
         <Navbar />
         <div className="container-fluid">
-          <p className="text ml-0 ml-lg-5 ml-md-5 certificate-heading" style={{ color: 'black' }}>
+          <p
+            className="text ml-0 ml-lg-5 ml-md-5 certificate-heading"
+            style={{color: 'black'}}
+          >
             Certificates
           </p>
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col ">
               <img
                 src="./img/certificate_img.webp"
@@ -26,17 +28,17 @@ function Certificates() {
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col">
               <p
                 className="text-center certificate-heading2 "
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 View Certificates
               </p>
             </div>
           </div>
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card ">
                 <p className="text-center mt-4 ">
@@ -49,13 +51,13 @@ function Certificates() {
               </div>
               <p
                 className="text-center mb-5 mt-3 certificate-card-text "
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 <a
                   href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/Glanbia_Certificate_BuildMyBody.jpg?v=1595962934"
                   target="_blank"
                   className="  "
-                  style={{ color: '#474544' }}
+                  style={{color: '#474544'}}
                 >
                   GLANBIA CERTIFICATE
                 </a>
@@ -76,7 +78,7 @@ function Certificates() {
                   href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/MPN_Authorization_BuildMyBody.jpg?v=1595962932"
                   target="_blank"
                   className="  "
-                  style={{ color: '#474544' }}
+                  style={{color: '#474544'}}
                 >
                   MUSCLEPRO NUTRITION CERTIFICATE
                 </a>
@@ -98,7 +100,7 @@ function Certificates() {
                   href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/Pearl-International-Authorisation_BuildMyBody.jpg?v=1595962928"
                   target="_blank"
                   className="  "
-                  style={{ color: '#474544' }}
+                  style={{color: '#474544'}}
                 >
                   PEARL INTERNATIONAL CERTIFICATE
                 </a>
@@ -120,7 +122,7 @@ function Certificates() {
                   href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/MHI-cerificate-BuildMyBody.jpg?v=1595963106"
                   target="_blank"
                   className="  "
-                  style={{ color: '#474544' }}
+                  style={{color: '#474544'}}
                 >
                   {' '}
                   MUSCLE HOUSE CERTIFICATE
@@ -129,18 +131,18 @@ function Certificates() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col-lg-8 col-md-8">
               <p
                 className="text ml-0 ml-lg-5 ml-md-5 certificate-heading2"
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 AUTHENTICITY DELIVERED
                 <hr className="mt-0 certificate-hr" />
               </p>
               <p
                 className="ml-0 ml-lg-5 ml-md-5 certificate-auth-text"
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 About half of the supplements sold in India are suspect - they
                 are either parallel imports or fake. Fake supplements may
@@ -150,7 +152,7 @@ function Certificates() {
               <br />
               <p
                 className="ml-0 ml-lg-5 ml-md-5 certificate-auth-text"
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 At BuildMyBody, we strive to provide 100% authentic products to
                 our customers by maintaining tight quality control during
@@ -168,25 +170,25 @@ function Certificates() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col ml-0 ml-lg-5 ml-md-5 mt-5">
               <p
                 className=" certificate-heading2   "
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 How to check if the product is genuine and of good quality?
                 <hr className="mt-0 certificate-hr" />
               </p>
               <p
                 className="d-flex certificate-auth-text2 "
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 <AiFillCheckCircle className="  mt-1 certificate-img" />
                 Product should be sealed pack and have a long shelf life.
               </p>
               <p
                 className="d-flex certificate-auth-text2"
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 <AiFillCheckCircle className="  mt-1 certificate-img" />
                 The importers MRP sticker must be there and should display the
@@ -194,7 +196,7 @@ function Certificates() {
               </p>
               <p
                 className="d-flex certificate-auth-text2"
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 <AiFillCheckCircle className=" mt-1 certificate-img" />
                 The batch number can be confirmed with the Brand itself & from
@@ -202,7 +204,7 @@ function Certificates() {
               </p>
               <p
                 className="d-flex certificate-auth-text2 "
-                style={{ color: '#474544' }}
+                style={{color: '#474544'}}
               >
                 <AiFillCheckCircle className=" mt-1 certificate-img" />
                 If still concerned, get the lab test done.
@@ -211,7 +213,7 @@ function Certificates() {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <div className="row flex-sm-column flex-lg-row flex-md-row">
             <div className="col-lg-4 col-md-5 d-flex flex-column ">
               {/* <button onClick={() => setSelectedCategory('All')}>All</button> */}
@@ -220,7 +222,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category1')}
                 className="p-2 mt-5 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -232,7 +234,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category2')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -244,7 +246,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category3')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -256,7 +258,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category4')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -268,7 +270,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category5')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -280,7 +282,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category6')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -292,7 +294,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category7')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -304,7 +306,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category8')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -316,7 +318,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category9')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -328,7 +330,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category10')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -340,7 +342,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category11')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',
@@ -352,7 +354,7 @@ function Certificates() {
                 onClick={() => setSelectedCategory('Category12')}
                 className="p-2 certi-btn"
                 style={{
-                  border: "1px solid #ccc",
+                  border: '1px solid #ccc',
                   background: 'white',
                   color: '#474544',
                   cursor: 'pointer',

@@ -7,7 +7,7 @@ export default function ProductCard({product}) {
   const {price, compareAtPrice} = product.variants?.nodes[0] || {};
   const isDiscounted = compareAtPrice?.amount > price?.amount;
   return (
-    <div className="col productCard">
+    <div className="col productCard" data-aos="fade-up">
       <Link to={`/product/${product.handle}`} className="">
         <div className="card">
           <div className="card-img-all d-flex justify-content-center mt-3 ">

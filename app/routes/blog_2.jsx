@@ -34,8 +34,8 @@ function Blog_2() {
     <>
       <Navbar />
       {/* <div className="container"> */}
-        <div className="main-div pt-5 pb-5">
-          <div className="container">
+      <div className="main-div pt-5 pb-5">
+        <div className="container">
           <div className="container">
             <div
               className="d-flex justify-content-center mb-5"
@@ -89,7 +89,7 @@ function Blog_2() {
               Navratri
             </a>
           </nav> */}
-          <div className="row no-gutters mt-5 blog-margin">
+          <div className="row no-gutters mt-5 blog-margin" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
               <img src="../img/blog-1.jpg" className="img-fluid login-img " />
             </div>
@@ -116,7 +116,7 @@ function Blog_2() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5">
+          <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-md-12 d-lg-none d-md-block ">
               <img src="../img/blog-6.jpg" className="img-fluid login-img " />
             </div>
@@ -147,7 +147,7 @@ function Blog_2() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5">
+          <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12">
               <img src="../img/blog-2.jpg" className="img-fluid login-img" />
             </div>
@@ -174,7 +174,7 @@ function Blog_2() {
               </p>
             </div>
           </div>
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             <div className="col d-flex justify-content-center blog-next-btn-flex mt-5">
               <p className="text-center">
                 {' '}
@@ -217,10 +217,10 @@ function Blog_2() {
               </p>
             </div>
           </div>
-          <div className="mt-3"></div>
-          </div>
+          <div className="mt-3" data-aos="fade-up"></div>
         </div>
-        <Footer />
+      </div>
+      <Footer />
       {/* </div> */}
     </>
   );
