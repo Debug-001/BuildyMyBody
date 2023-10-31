@@ -353,6 +353,15 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
+                to="/collection"
+                style={{ fontSize: '1rem' }}
+              >
+                Collection
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={'nav-link active text-light'}
                 to="/certificates"
                 style={{ fontSize: '1rem' }}
               >
