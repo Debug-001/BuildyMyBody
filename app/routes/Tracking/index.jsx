@@ -60,21 +60,21 @@ function Track() {
         </div>
         <div className="container mt-5">
           <div className="row">
-            <div className="col  d-flex h-100 mt-lg-4 ">
-              <img
-                src={authenticity}
+            <div className="col text-center">
+              {/* <img
+                src="../img/authenticity.png"
                 className="img-fluid w-10 ml-5 protien-img"
                 alt="your product"
-              ></img>
+              ></img> */}
 
-              <span>
-                <p className="text-justify text-1">UNTHENTICITY</p>
-              </span>
-              <p className="text-left text-2 ">GUARANTEED</p>
+
+              <p className=" text-1">AUNTHENTICITY</p>
+
+              <p className="  ml-5" style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>GUARANTEED</p>
             </div>
-            <div className="vertical-line d-none d-lg-block mb-3"></div>
+            <div className="vertical-line d-none d-lg-block d-md-block mb-3"></div>
 
-            <div className="col  h-100 mt-lg-5 ">
+            <div className="col  h-100 mt-lg-5 mt-3 mt-md-5 mt-sm-3">
               <div className="input-box d-flex  justify-content-center">
                 <input className="form-control " type="number" />
                 <input className="form-control ml-2" type="number" />
@@ -94,6 +94,8 @@ function Track() {
             {/* <p className="text-center">UNTHENTICITY</p> */}
           </div>
         </div>
+        <img src={authenticity} className='w-100' alt="" />
+
       </div>
       <Footer />
     </>
