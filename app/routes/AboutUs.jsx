@@ -1,5 +1,7 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import aboutinfo from '../img/aboutus-info.jpg'
+import aboutus from '../img/about-us.jpg'
 function AboutUs() {
   return (
     <>
@@ -15,7 +17,7 @@ function AboutUs() {
           </div>
         </div>
         <div className="about-us">
-          <img src="./img/about-us.jpg" className="about-img" alt="" />
+          <img src={aboutus} className="about-img" alt="" />
         </div>
 
         <div className="container-fluid">
@@ -55,7 +57,7 @@ function AboutUs() {
           <div className="row mt-5 p-4">
             <div className="col-lg-4  ">
               <img
-                src="./img/aboutus-info.jpg"
+                src={aboutinfo}
                 className="w-100 aboutus-info-img "
                 alt=""
               />
@@ -81,7 +83,7 @@ function AboutUs() {
             <div className="col-lg-4  ">
               <div className=" d-flex justify-content-center">
                 <img
-                  src="./img/aboutus-info.jpg"
+                  src={aboutinfo}
                   className="w-100 aboutus-info-img "
                   alt=""
                 />

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar';
-
+import buildbody from '../../img/buildbody.jpg'
 function Login() {
   return (
     <>
@@ -12,7 +12,7 @@ function Login() {
           <div className="row m-5 no-gutters shadow-lg ">
             {/* <img src="../img/buildbody.jpg" className="img-fluid login-img" /> */}
             <div className="col d-none col-lg-5 d-lg-block  ">
-              <img src="/img/buildbody.jpg" className="img-fluid login-img" />
+              <img src={buildbody} className="img-fluid login-img" />
             </div>
             <div className="col-md-12 col-lg-7 bg-white p-5 border border-dark login-border">
               <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>

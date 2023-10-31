@@ -1,11 +1,12 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import blog1 from '../../img/blog-1.jpg'
 
 import './Blog.css';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Blog_food() {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ function Blog_food() {
         </nav>
         <div className="row no-gutters mt-5 blog-margin">
           <div className="col-lg-6 col-sm-12 col-md-12 ">
-            <img src="../img/blog-1.jpg" className="img-fluid login-img " />
+            <img src={blog1} className="img-fluid login-img " />
           </div>
 
           <div className="col  ">

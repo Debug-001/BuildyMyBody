@@ -341,13 +341,22 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
                 to="/subscription"
                 style={{ fontSize: '1rem' }}
               >
                 Subscription
+              </NavLink>
+            </li> */}
+            <li className="nav-item">
+              <NavLink
+                className={'nav-link active text-light'}
+                to="/aboutUs"
+                style={{ fontSize: '1rem' }}
+              >
+                About Us
               </NavLink>
             </li>
             <li className="nav-item">

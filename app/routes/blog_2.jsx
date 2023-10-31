@@ -1,11 +1,14 @@
 import React from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import blog1 from '../img/blog-1.jpg'
+import blog2 from '../img/blog-2.jpg'
+import blog6 from '../img/blog-6.jpg'
 
 // import './Blog.css';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Blog_2() {
   const navigate = useNavigate();
@@ -39,11 +42,11 @@ function Blog_2() {
           <div className="container">
             <div
               className="d-flex justify-content-center mb-5"
-              style={{flexDirection: 'column', alignItems: 'center'}}
+              style={{ flexDirection: 'column', alignItems: 'center' }}
             >
               <h1
                 className="font-weight-bold custom-heading3"
-                style={{color: '#ff2828'}}
+                style={{ color: '#ff2828' }}
               >
                 <em>Blogs</em>
               </h1>
@@ -91,7 +94,7 @@ function Blog_2() {
           </nav> */}
           <div className="row no-gutters mt-5 blog-margin" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
-              <img src="../img/blog-1.jpg" className="img-fluid login-img " />
+              <img src={blog1} className="img-fluid login-img " />
             </div>
 
             <div className="col  ">
@@ -118,7 +121,7 @@ function Blog_2() {
 
           <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-md-12 d-lg-none d-md-block ">
-              <img src="../img/blog-6.jpg" className="img-fluid login-img " />
+              <img src={blog6} className="img-fluid login-img " />
             </div>
             <div className=" col-lg-6 col-sm-12 col-md-12">
               <p className="text-center mt-2 blog-name">
@@ -143,13 +146,13 @@ function Blog_2() {
               </p>
             </div>
             <div className="col-lg-6 d-none d-lg-block ">
-              <img src="/img/blog-6.jpg" className="img-fluid login-img" />
+              <img src={blog6} className="img-fluid login-img" />
             </div>
           </div>
 
           <div className="row no-gutters mt-5" data-aos="fade-up">
             <div className="col-lg-6 col-sm-12 col-md-12">
-              <img src="../img/blog-2.jpg" className="img-fluid login-img" />
+              <img src={blog2} className="img-fluid login-img" />
             </div>
             <div className="col  ">
               <p className="text-center mt-2 blog-name">

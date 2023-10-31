@@ -3,7 +3,7 @@ import { CiFacebook } from 'react-icons/ci';
 import { CiTwitter } from 'react-icons/ci';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import { Link } from '@remix-run/react';
-
+import logo from '../img/logo.png'
 const Footer = () => {
   return (
     <>
@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6  ">
               <div className=" w-75 ">
                 <div className="footer-details company-footer1">
-                  <img className="footer-img" src="/img/logo.png" alt="" />
+                  <img className="footer-" src={logo} alt="" />
                   <p className="mt-3">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Dignissimos illo ex inventore, nulla iste ut incidunt eum

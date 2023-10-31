@@ -2,7 +2,7 @@ import { json, redirect } from '@shopify/remix-oxygen';
 import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
-
+import buildbody from '../img/buildbody.jpg'
 export async function loader({ context }) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
@@ -102,7 +102,7 @@ export default function Register() {
         <div className="container ">
           <div className="row m-5 no-gutters shadow-lg">
             <div className="col d-none col-lg-5 d-lg-block  ">
-              <img src="/img/buildbody.jpg" className="img-fluid login-img" />
+              <img src={buildbody} className="img-fluid login-img" />
             </div>
             <div className="col-md-12 col-lg-7 bg-white p-5 border border-dark login-border">
               <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>
@@ -111,7 +111,7 @@ export default function Register() {
                   <fieldset>
                     <div className="form-group pb-3 pt-4">
                       <input
-                      className='w-100'
+                        className='w-100'
                         id="email"
                         name="email"
                         type="email"
@@ -124,7 +124,7 @@ export default function Register() {
                     </div>
                     <div className="form-group pb-3">
                       <input
-                      className='w-100'
+                        className='w-100'
                         id="password"
                         name="password"
                         type="password"
@@ -138,15 +138,15 @@ export default function Register() {
 
                     <div className="form-group pb-3">
                       <input
-                      className='w-100'
-                       id="passwordConfirm"
-                       name="passwordConfirm"
-                       type="password"
-                       autoComplete="current-password"
-                       placeholder="Re-enter password"
-                       aria-label="Re-enter password"
-                       minLength={8}
-                       required
+                        className='w-100'
+                        id="passwordConfirm"
+                        name="passwordConfirm"
+                        type="password"
+                        autoComplete="current-password"
+                        placeholder="Re-enter password"
+                        aria-label="Re-enter password"
+                        minLength={8}
+                        required
                       />
                     </div>
                   </fieldset>
@@ -171,7 +171,7 @@ export default function Register() {
                   </div>
                 </Form>
                 <div className="pt-4 text-center">
-                 Already a member? <Link to="/account/login">Login →</Link>
+                  Already a member? <Link to="/account/login">Login →</Link>
                 </div>
               </div>
             </div>

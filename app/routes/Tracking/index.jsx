@@ -1,6 +1,8 @@
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 // import Protien from './public/img/protien.png'
+import protien from '../../img/protien.png'
+import authenticity from '../../img/auth.jpg'
 function Track() {
   return (
     <>
@@ -38,7 +40,7 @@ function Track() {
           <div className="row">
             <div className="col border border-dark d-flex ">
               <img
-                src="../img/protien.png"
+                src={protien}
                 className=" w-25 "
                 alt="your product"
               ></img>
@@ -60,7 +62,7 @@ function Track() {
           <div className="row">
             <div className="col  d-flex h-100 mt-lg-4 ">
               <img
-                src="../img/authenticity.png"
+                src={authenticity}
                 className="img-fluid w-10 ml-5 protien-img"
                 alt="your product"
               ></img>

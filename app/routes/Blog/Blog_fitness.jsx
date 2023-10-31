@@ -1,11 +1,14 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import blog1 from '../../img/blog-1.jpg'
+import blog2 from '../../img/blog-2.jpg'
+import blog3 from '../../img/blog-3.jpg'
 
 import './Blog.css';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Blog_fitness() {
   const navigate = useNavigate();
@@ -71,7 +74,7 @@ function Blog_fitness() {
 
         <div className="row no-gutters mt-5 blog-margin">
           <div className="col-lg-6 col-sm-12 col-md-12 ">
-            <img src="../img/blog-1.jpg" className="img-fluid login-img " />
+            <img src={blog1} className="img-fluid login-img " />
           </div>
 
           <div className="col  ">
@@ -98,7 +101,7 @@ function Blog_fitness() {
 
         <div className="row no-gutters mt-5">
           <div className="col-md-12 d-lg-none d-md-block ">
-            <img src="../img/blog-2.jpg" className="img-fluid login-img " />
+            <img src={blog2} className="img-fluid login-img " />
           </div>
           <div className=" col-lg-6 col-sm-12 col-md-12">
             <p className="text-center mt-2 blog-name">Hydration is the key:</p>
@@ -121,13 +124,13 @@ function Blog_fitness() {
             </p>
           </div>
           <div className="col-lg-6 d-none d-lg-block ">
-            <img src="../img/blog-2.jpg" className="img-fluid login-img" />
+            <img src={blog2} className="img-fluid login-img" />
           </div>
         </div>
 
         <div className="row no-gutters mt-5">
           <div className="col-lg-6 col-sm-12 col-md-12">
-            <img src="../img/blog-3.jpg" className="img-fluid login-img" />
+            <img src={blog3} className="img-fluid login-img" />
           </div>
           <div className="col  ">
             <p className="text-center mt-2 blog-name">
