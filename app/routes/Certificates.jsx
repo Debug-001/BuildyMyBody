@@ -4,6 +4,9 @@ import Footer from '../Components/Footer';
 import { useState } from 'react';
 import data from './data';
 import Try from './Try';
+import certificate_emoji from '../img/certificate_emoji.png'
+import authenticity from '../img/authenticity3.jpg'
+import certificate_img from '../img/certificate_img.webp'
 function Certificates() {
   const [selectedCategory, setSelectedCategory] = useState('Category1');
   const uniqueCategories = [...new Set(data.map((item) => item.category))];
@@ -22,7 +25,7 @@ function Certificates() {
           <div className="row" data-aos="fade-up">
             <div className="col ">
               <img
-                src="./img/certificate_img.webp"
+                src={certificate_img}
                 className="w-100 p-5"
                 alt=""
               />
@@ -42,11 +45,15 @@ function Certificates() {
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card ">
                 <p className="text-center mt-4 ">
-                  <img
-                    src="./img/certificate_emoji.png"
-                    className="w-25"
-                    alt=""
-                  />
+                  <a href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/Glanbia_Certificate_BuildMyBody.jpg?v=1595962934"
+                    target="_blank">
+                    <img
+                      src={certificate_emoji}
+                      className="w-25"
+                      alt=""
+                    />
+                  </a>
+
                 </p>
               </div>
               <p
@@ -66,11 +73,14 @@ function Certificates() {
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card">
                 <p className="text-center mt-4">
-                  <img
-                    src="./img/certificate_emoji.png"
-                    className="w-25   "
-                    alt=""
-                  />
+                  <a href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/MPN_Authorization_BuildMyBody.jpg?v=1595962932"
+                    target="_blank">
+                    <img
+                      src={certificate_emoji}
+                      className="w-25"
+                      alt=""
+                    />
+                  </a>
                 </p>
               </div>
               <p className="text-center mb-5 mt-3 certificate-card-text">
@@ -88,11 +98,14 @@ function Certificates() {
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card">
                 <p className="text-center mt-4">
-                  <img
-                    src="./img/certificate_emoji.png"
-                    className="w-25   "
-                    alt=""
-                  />
+                  <a href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/Pearl-International-Authorisation_BuildMyBody.jpg?v=1595962928"
+                    target="_blank">
+                    <img
+                      src={certificate_emoji}
+                      className="w-25"
+                      alt=""
+                    />
+                  </a>
                 </p>
               </div>
               <p className="text-center  mb-5 mt-3 certificate-card-text">
@@ -110,11 +123,14 @@ function Certificates() {
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card ">
                 <p className="text-center mt-4">
-                  <img
-                    src="./img/certificate_emoji.png"
-                    className="w-25"
-                    alt=""
-                  />
+                  <a href="https://cdn.shopify.com/s/files/1/0272/0566/4803/files/MHI-cerificate-BuildMyBody.jpg?v=1595963106"
+                    target="_blank">
+                    <img
+                      src={certificate_emoji}
+                      className="w-25"
+                      alt=""
+                    />
+                  </a>
                 </p>
               </div>
               <p className="text-center  mb-5 mt-3 certificate-card-text">
@@ -163,8 +179,8 @@ function Certificates() {
             </div>
             <div className="col ">
               <img
-                src="./img/certicate-authenticity.png"
-                className="ml-0 ml-lg-5 ml-md-5 mt-5"
+                src={authenticity}
+                className=" mt-5 w-100"
                 alt=""
               />
             </div>
