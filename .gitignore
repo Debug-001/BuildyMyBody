@@ -6,3 +6,6 @@ node_modules
 /public/build
 /.mf
 .shopify
+
+# Local Netlify folder
+.netlify

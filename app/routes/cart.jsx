@@ -1,5 +1,5 @@
-import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 import {Link, useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import {CartForm} from '@shopify/hydrogen';
