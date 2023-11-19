@@ -1,24 +1,24 @@
-import { defer } from '@shopify/remix-oxygen';
-import { useLoaderData } from '@remix-run/react';
-import { getPaginationVariables } from '@shopify/hydrogen';
+import {defer} from '@shopify/remix-oxygen';
+import {useLoaderData} from '@remix-run/react';
+import {getPaginationVariables} from '@shopify/hydrogen';
 
-import { SearchForm, SearchResults, NoSearchResults } from '~/Components/Search';
+import {SearchForm, SearchResults, NoSearchResults} from '~/Components/Search';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 
 export const meta = () => {
-  return [{ title: `Hydrogen | Search` }];
+  return [{title: `Hydrogen | Search`}];
 };
 
-export async function loader({ request, context }) {
+export async function loader({request, context}) {
   const url = new URL(request.url);
   const searchParams = new URLSearchParams(url.search);
-  const variables = getPaginationVariables(request, { pageBy: 8 });
+  const variables = getPaginationVariables(request, {pageBy: 8});
   const searchTerm = String(searchParams.get('q') || '');
 
   if (!searchTerm) {
     return {
-      searchResults: { results: null, totalResults: 0 },
+      searchResults: {results: null, totalResults: 0},
       searchTerm,
     };
   }
@@ -43,11 +43,11 @@ export async function loader({ request, context }) {
     totalResults,
   };
 
-  return defer({ searchTerm, searchResults });
+  return defer({searchTerm, searchResults});
 }
 
 export default function SearchPage() {
-  const { searchTerm, searchResults } = useLoaderData();
+  const {searchTerm, searchResults} = useLoaderData();
   return (
     <>
       <Navbar />
@@ -58,9 +58,10 @@ export default function SearchPage() {
           <>
             {!searchTerm ? (
               <div className="text-center mt-3">
-                <p style={{ fontSize: '1.2rem' }}>
+                <p style={{fontSize: '1.2rem'}}>
                   Search from our wide range of products
-                </p></div>
+                </p>
+              </div>
             ) : (
               <NoSearchResults />
             )}

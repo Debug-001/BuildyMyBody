@@ -25,6 +25,7 @@ const TopSelling = ({collection}) => {
           <div className="carousel-inner" id="featured-carousel">
             {collection.products.nodes.map((product, index) => (
               <div
+                key={index}
                 className={
                   index === 0 ? 'carousel-item active' : 'carousel-item'
                 }

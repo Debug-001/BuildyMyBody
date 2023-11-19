@@ -1,24 +1,24 @@
-import { json, redirect } from '@shopify/remix-oxygen';
-import { Form, Link, useActionData } from '@remix-run/react';
+import {json, redirect} from '@shopify/remix-oxygen';
+import {Form, Link, useActionData} from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
-import React, { useState } from 'react';
-import buildbody from '../img/buildbody.jpg'
+import React, {useState} from 'react';
+import buildbody from '../img/buildbody.jpg';
 export const meta = () => {
-  return [{ title: 'Login' }];
+  return [{title: 'Login'}];
 };
-export async function loader({ context }) {
+export async function loader({context}) {
   if (await context.session.get('customerAccessToken')) {
     return redirect('/account/profile');
   }
   return json({});
 }
 
-export async function action({ request, context }) {
-  const { session, storefront } = context;
+export async function action({request, context}) {
+  const {session, storefront} = context;
 
   if (request.method !== 'POST') {
-    return json({ error: 'Method not allowed' }, { status: 405 });
+    return json({error: 'Method not allowed'}, {status: 405});
   }
 
   try {
@@ -31,11 +31,11 @@ export async function action({ request, context }) {
       throw new Error('Please provide both an email and a password.');
     }
 
-    const { customerAccessTokenCreate } = await storefront.mutate(
+    const {customerAccessTokenCreate} = await storefront.mutate(
       LOGIN_MUTATION,
       {
         variables: {
-          input: { email, password },
+          input: {email, password},
         },
       },
     );
@@ -44,7 +44,7 @@ export async function action({ request, context }) {
       throw new Error(customerAccessTokenCreate?.customerUserErrors[0].message);
     }
 
-    const { customerAccessToken } = customerAccessTokenCreate;
+    const {customerAccessToken} = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
 
     return redirect('/account/profile', {
@@ -54,9 +54,9 @@ export async function action({ request, context }) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      return json({ error: error.message }, { status: 400 });
+      return json({error: error.message}, {status: 400});
     }
-    return json({ error }, { status: 400 });
+    return json({error}, {status: 400});
   }
 }
 
@@ -81,7 +81,7 @@ export default function Login() {
                     <div className="form-group pb-3 mt-4">
                       <input
                         id="email"
-                        className='w-100'
+                        className="w-100"
                         name="email"
                         type="email"
                         autoComplete="email"
@@ -94,7 +94,7 @@ export default function Login() {
                     <div className="form-group pb-3">
                       <input
                         id="password"
-                        className='w-100'
+                        className="w-100"
                         name="password"
                         type="password"
                         autoComplete="current-password"
@@ -106,10 +106,12 @@ export default function Login() {
                     </div>
                   </fieldset>
                   {error ? (
-                    <p className='login-error-text text-center'>
+                    <p className="login-error-text text-center">
                       <mark>
                         {/* <small>{error}</small> */}
-                        <small >Wrong Email or Password, Please try again!</small>
+                        <small>
+                          Wrong Email or Password, Please try again!
+                        </small>
                       </mark>
                     </p>
                   ) : (
@@ -138,20 +140,22 @@ export default function Login() {
                   <button
                     type="submit"
                     className="btn text-light w-100 font-weight-bold mt-2 "
-                    style={{ height: '50px', background: 'red' }}
+                    style={{height: '50px', background: 'red'}}
                   >
-                    <Link to="/account/register" style={{ color: "white" }}>Register →</Link>
+                    <Link to="/account/register" style={{color: 'white'}}>
+                      Register →
+                    </Link>
                   </button>
                 </div>
                 <div className="pt-4 text-center">
-                  Get Members Benefit. <Link to="/account/register">Sign Up→</Link>
+                  Get Members Benefit.{' '}
+                  <Link to="/account/register">Sign Up→</Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
 
       <Footer />
     </>

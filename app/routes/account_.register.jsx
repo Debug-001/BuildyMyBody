@@ -1,9 +1,9 @@
-import { json, redirect } from '@shopify/remix-oxygen';
-import { Form, Link, useActionData } from '@remix-run/react';
+import {json, redirect} from '@shopify/remix-oxygen';
+import {Form, Link, useActionData} from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
-import buildbody from '../img/buildbody.jpg'
-export async function loader({ context }) {
+import buildbody from '../img/buildbody.jpg';
+export async function loader({context}) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
     return redirect('/account/profile');
@@ -12,12 +12,12 @@ export async function loader({ context }) {
   return json({});
 }
 
-export const action = async ({ request, context }) => {
+export const action = async ({request, context}) => {
   if (request.method !== 'POST') {
-    return json({ error: 'Method not allowed' }, { status: 405 });
+    return json({error: 'Method not allowed'}, {status: 405});
   }
 
-  const { storefront, session } = context;
+  const {storefront, session} = context;
   const form = await request.formData();
   const email = String(form.has('email') ? form.get('email') : '');
   const password = form.has('password') ? String(form.get('password')) : null;
@@ -38,9 +38,9 @@ export const action = async ({ request, context }) => {
       throw new Error('Please provide both an email and a password.');
     }
 
-    const { customerCreate } = await storefront.mutate(CUSTOMER_CREATE_MUTATION, {
+    const {customerCreate} = await storefront.mutate(CUSTOMER_CREATE_MUTATION, {
       variables: {
-        input: { email, password },
+        input: {email, password},
       },
     });
 
@@ -54,7 +54,7 @@ export const action = async ({ request, context }) => {
     }
 
     // get an access token for the new customer
-    const { customerAccessTokenCreate } = await storefront.mutate(
+    const {customerAccessTokenCreate} = await storefront.mutate(
       REGISTER_LOGIN_MUTATION,
       {
         variables: {
@@ -75,7 +75,7 @@ export const action = async ({ request, context }) => {
     );
 
     return json(
-      { error: null, newCustomer },
+      {error: null, newCustomer},
       {
         status: 302,
         headers: {
@@ -86,9 +86,9 @@ export const action = async ({ request, context }) => {
     );
   } catch (error) {
     if (error instanceof Error) {
-      return json({ error: error.message }, { status: 400 });
+      return json({error: error.message}, {status: 400});
     }
-    return json({ error }, { status: 400 });
+    return json({error}, {status: 400});
   }
 };
 
@@ -111,7 +111,7 @@ export default function Register() {
                   <fieldset>
                     <div className="form-group pb-3 pt-4">
                       <input
-                        className='w-100'
+                        className="w-100"
                         id="email"
                         name="email"
                         type="email"
@@ -124,7 +124,7 @@ export default function Register() {
                     </div>
                     <div className="form-group pb-3">
                       <input
-                        className='w-100'
+                        className="w-100"
                         id="password"
                         name="password"
                         type="password"
@@ -138,7 +138,7 @@ export default function Register() {
 
                     <div className="form-group pb-3">
                       <input
-                        className='w-100'
+                        className="w-100"
                         id="passwordConfirm"
                         name="passwordConfirm"
                         type="password"
@@ -159,8 +159,7 @@ export default function Register() {
                   ) : (
                     <br />
                   )}
-                  <div className="d-flex align-items-center justify-content-between">
-                  </div>
+                  <div className="d-flex align-items-center justify-content-between"></div>
                   <div className="pb-2">
                     <button
                       type="submit"

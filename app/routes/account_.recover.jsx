@@ -1,9 +1,9 @@
-import { json, redirect } from '@shopify/remix-oxygen';
-import { Form, Link, useActionData } from '@remix-run/react';
+import {json, redirect} from '@shopify/remix-oxygen';
+import {Form, Link, useActionData} from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 
-export async function loader({ context }) {
+export async function loader({context}) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
     return redirect('/account');
@@ -12,13 +12,13 @@ export async function loader({ context }) {
   return json({});
 }
 
-export async function action({ request, context }) {
-  const { storefront } = context;
+export async function action({request, context}) {
+  const {storefront} = context;
   const form = await request.formData();
   const email = form.has('email') ? String(form.get('email')) : null;
 
   if (request.method !== 'POST') {
-    return json({ error: 'Method not allowed' }, { status: 405 });
+    return json({error: 'Method not allowed'}, {status: 405});
   }
 
   try {
@@ -26,16 +26,16 @@ export async function action({ request, context }) {
       throw new Error('Please provide an email.');
     }
     await storefront.mutate(CUSTOMER_RECOVER_MUTATION, {
-      variables: { email },
+      variables: {email},
     });
 
-    return json({ resetRequested: true });
+    return json({resetRequested: true});
   } catch (error) {
     const resetRequested = false;
     if (error instanceof Error) {
-      return json({ error: error.message, resetRequested }, { status: 400 });
+      return json({error: error.message, resetRequested}, {status: 400});
     }
-    return json({ error, resetRequested }, { status: 400 });
+    return json({error, resetRequested}, {status: 400});
   }
 }
 
@@ -46,15 +46,15 @@ export default function Recover() {
     <>
       <Navbar />
       <div className="account-recover pt-5 pb-5">
-        <div className=''>
+        <div className="">
           <div className="card-recover">
             {action?.resetRequested ? (
               <>
                 <h1>Request Sent.</h1>
                 <p>
-                  If that email address is in our system, you will receive an email
-                  with instructions about how to reset your password in a few
-                  minutes.
+                  If that email address is in our system, you will receive an
+                  email with instructions about how to reset your password in a
+                  few minutes.
                 </p>
                 <br />
                 <Link to="/account/login">Return to Login</Link>
@@ -63,11 +63,11 @@ export default function Recover() {
               <>
                 <h1>Forgot Password.</h1>
                 <p>
-                  Enter the email address associated with your account to receive a
-                  link to reset your password.
+                  Enter the email address associated with your account to
+                  receive a link to reset your password.
                 </p>
                 <br />
-                <Form method="POST" className='d-flex'>
+                <Form method="POST" className="d-flex">
                   <fieldset>
                     <input
                       aria-label="Email address"
@@ -81,7 +81,9 @@ export default function Recover() {
                       type="email"
                     />
                   </fieldset>
-                  <button className='recover-btn' type="submit">Request Reset Link</button>
+                  <button className="recover-btn" type="submit">
+                    Request Reset Link
+                  </button>
                   {action?.error ? (
                     <p>
                       <mark>
@@ -91,9 +93,8 @@ export default function Recover() {
                   ) : (
                     <br />
                   )}
-                 
                 </Form>
-                <div className='login-back'>
+                <div className="login-back">
                   <br />
                   <p>
                     <Link to="/account/login">Back to Login</Link>
@@ -103,10 +104,9 @@ export default function Recover() {
             )}
           </div>
         </div>
-        </div>
+      </div>
       <Footer />
     </>
-
   );
 }
 

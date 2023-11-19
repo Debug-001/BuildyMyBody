@@ -1,4 +1,4 @@
-import { json, redirect } from '@shopify/remix-oxygen';
+import {json, redirect} from '@shopify/remix-oxygen';
 import {
   Form,
   useActionData,
@@ -8,13 +8,10 @@ import {
 // import Footer from '~/Components/Footer';
 
 export const meta = () => {
-  return [{ title: 'Profile' }];
+  return [{title: 'Profile'}];
 };
 
-
-
-
-export async function loader({ context }) {
+export async function loader({context}) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (!customerAccessToken) {
     return redirect('/account/login');
@@ -22,17 +19,17 @@ export async function loader({ context }) {
   return json({});
 }
 
-export async function action({ request, context }) {
-  const { session, storefront } = context;
+export async function action({request, context}) {
+  const {session, storefront} = context;
 
   if (request.method !== 'PUT') {
-    return json({ error: 'Method not allowed' }, { status: 405 });
+    return json({error: 'Method not allowed'}, {status: 405});
   }
 
   const form = await request.formData();
   const customerAccessToken = await session.get('customerAccessToken');
   if (!customerAccessToken) {
-    return json({ error: 'Unauthorized' }, { status: 401 });
+    return json({error: 'Unauthorized'}, {status: 401});
   }
 
   try {
@@ -72,8 +69,8 @@ export async function action({ request, context }) {
     // check for mutation errors
     if (updated.customerUpdate?.customerUserErrors?.length) {
       return json(
-        { error: updated.customerUpdate?.customerUserErrors[0] },
-        { status: 400 },
+        {error: updated.customerUpdate?.customerUserErrors[0]},
+        {status: 400},
       );
     }
 
@@ -86,7 +83,7 @@ export async function action({ request, context }) {
     }
 
     return json(
-      { error: null, customer: updated.customerUpdate?.customer },
+      {error: null, customer: updated.customerUpdate?.customer},
       {
         headers: {
           'Set-Cookie': await session.commit(),
@@ -94,38 +91,41 @@ export async function action({ request, context }) {
       },
     );
   } catch (error) {
-    return json({ error: error.message, customer: null }, { status: 400 });
+    return json({error: error.message, customer: null}, {status: 400});
   }
 }
 
 export default function AccountProfile() {
   const account = useOutletContext();
-  const { state } = useNavigation();
+  const {state} = useNavigation();
   const action = useActionData();
   const customer = action?.customer ?? account?.customer;
 
   return (
     <>
-      <div className='profile-clr pb-5 '>
+      <div className="profile-clr pb-5 ">
         <div className="container">
           <div className="account-profile">
-            <h2 style={{color:"#ff2828"}}>
-              <em className=''>My Profile</em>
+            <h2 style={{color: '#ff2828'}}>
+              <em className="">My Profile</em>
             </h2>
-            <hr style={{width:"30%"}} className='bg-dark'/>
+            <hr style={{width: '30%'}} className="bg-dark" />
             {/* <br /> */}
-            <Form method="PUT" className='mt-5'>
+            <Form method="PUT" className="mt-5">
               <div className="row">
                 <div className="col ">
-                  <legend className=''>Personal information</legend>
+                  <legend className="">Personal information</legend>
                 </div>
               </div>
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6">
                   <fieldset>
-                    <label htmlFor="firstName" className='profile-name '>First name</label> <br />
+                    <label htmlFor="firstName" className="profile-name ">
+                      First name
+                    </label>{' '}
+                    <br />
                     <input
-                      className=' profile-input w-100'
+                      className=" profile-input w-100"
                       id="firstName"
                       name="firstName"
                       type="text"
@@ -136,10 +136,12 @@ export default function AccountProfile() {
                       minLength={2}
                     />
                     <br />
-                    <label htmlFor="lastName" className='profile-name '>Last name</label>
+                    <label htmlFor="lastName" className="profile-name ">
+                      Last name
+                    </label>
                     <br />
                     <input
-                      className=' profile-input w-100'
+                      className=" profile-input w-100"
                       id="lastName"
                       name="lastName"
                       type="text"
@@ -153,10 +155,12 @@ export default function AccountProfile() {
                 </div>
                 <div className="col ">
                   <fieldset>
-                    <label htmlFor="phone" className='profile-name '>Mobile</label>
+                    <label htmlFor="phone" className="profile-name ">
+                      Mobile
+                    </label>
                     <br />
                     <input
-                      className=' profile-input w-100'
+                      className=" profile-input w-100"
                       id="phone"
                       name="phone"
                       type="tel"
@@ -166,10 +170,12 @@ export default function AccountProfile() {
                       defaultValue={customer.phone ?? ''}
                     />
                     <br />
-                    <label htmlFor="email" className='profile-name '>Email address</label>
+                    <label htmlFor="email" className="profile-name ">
+                      Email address
+                    </label>
                     <br />
                     <input
-                      className=' profile-input w-100'
+                      className=" profile-input w-100"
                       id="email"
                       name="email"
                       type="email"
@@ -189,14 +195,13 @@ export default function AccountProfile() {
                         defaultChecked={customer.acceptsMarketing}
                       />
                       <label htmlFor="acceptsMarketing">
-                        <p className='ml-2 '>
+                        <p className="ml-2 ">
                           Subscribed to marketing communications
                         </p>
-
                       </label>
                     </div>
                     <div className="">
-                      <button className='w-25 p-1 profile-btn-display2 profile-btn'>
+                      <button className="w-25 p-1 profile-btn-display2 profile-btn">
                         Edit
                       </button>
                     </div>
@@ -204,14 +209,17 @@ export default function AccountProfile() {
                 </div>
               </div>
 
-
               <br />
               <div className="row">
                 <div className="col ">
-                  <legend className='' >Change password (optional)</legend>
+                  <legend className="">Change password (optional)</legend>
                 </div>
                 <div className="col-sm-12 col-lg-6 col-md-6 d-flex justify-content-lg-end justify-content-md-end  ">
-                  <button type="submit" className='w-25 text-center p-1 profile-btn-display3 profile-btn' disabled={state !== 'idle'}>
+                  <button
+                    type="submit"
+                    className="w-25 text-center p-1 profile-btn-display3 profile-btn"
+                    disabled={state !== 'idle'}
+                  >
                     {state !== 'idle' ? 'Updating' : 'Update'}
                   </button>
                 </div>
@@ -222,9 +230,14 @@ export default function AccountProfile() {
                   <fieldset>
                     <div className="row">
                       <div className="col">
-                        <label htmlFor="currentPassword" className='profile-name '>Current password</label>
+                        <label
+                          htmlFor="currentPassword"
+                          className="profile-name "
+                        >
+                          Current password
+                        </label>
                         <input
-                          className=' profile-input w-100'
+                          className=" profile-input w-100"
                           id="currentPassword"
                           name="currentPassword"
                           type="password"
@@ -234,10 +247,11 @@ export default function AccountProfile() {
                           minLength={8}
                         />
 
-                        <label htmlFor="newPassword" className='profile-name '>New password</label>
+                        <label htmlFor="newPassword" className="profile-name ">
+                          New password
+                        </label>
                         <input
-
-                          className='  profile-input w-100'
+                          className="  profile-input w-100"
                           id="newPassword"
                           name="newPassword"
                           type="password"
@@ -246,10 +260,15 @@ export default function AccountProfile() {
                           minLength={8}
                         />
 
-                        <label htmlFor="newPasswordConfirm" className='profile-name '>New password (confirm)</label>
+                        <label
+                          htmlFor="newPasswordConfirm"
+                          className="profile-name "
+                        >
+                          New password (confirm)
+                        </label>
 
                         <input
-                          className='  profile-input w-100'
+                          className="  profile-input w-100"
                           id="newPasswordConfirm"
                           name="newPasswordConfirm"
                           type="password"
@@ -258,18 +277,20 @@ export default function AccountProfile() {
                           minLength={8}
                         />
                         <br />
-                        <small className='' style={{ color: 'blue' }}>Passwords must be at least 8 characters.</small>
+                        <small className="" style={{color: 'blue'}}>
+                          Passwords must be at least 8 characters.
+                        </small>
                       </div>
-
-
-
                     </div>
                     <div className=" profile-btn-display4">
-                      <button type="submit" className='w-25 text-center p-1 profile-btn' disabled={state !== 'idle'}>
+                      <button
+                        type="submit"
+                        className="w-25 text-center p-1 profile-btn"
+                        disabled={state !== 'idle'}
+                      >
                         {state !== 'idle' ? 'Updating' : 'Update'}
                       </button>
                     </div>
-
                   </fieldset>
                   {action?.error ? (
                     <p>
@@ -281,10 +302,7 @@ export default function AccountProfile() {
                     <br />
                   )}
                 </div>
-
-
               </div>
-
             </Form>
           </div>
         </div>
@@ -292,7 +310,8 @@ export default function AccountProfile() {
     </>
   );
 }
-{/* {action?.error ? (
+{
+  /* {action?.error ? (
             <p>
               <mark>
                 <small>{action.error.message}</small>
@@ -303,7 +322,8 @@ export default function AccountProfile() {
           )}
 <button type="submit" disabled={state !== 'idle'}>
   {state !== 'idle' ? 'Updating' : 'Update'}
-</button> */}
+</button> */
+}
 
 function getPassword(form) {
   let password;

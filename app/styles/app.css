@@ -13,7 +13,6 @@
 }
 
 @media screen and (max-width: 992px) {
-
   .slick-prev:before,
   .slick-next:before {
     display: none;
@@ -139,7 +138,6 @@
   margin: 0;
   padding: 5px;
 }
-
 
 .nav-group {
   display: flex;
@@ -312,7 +310,7 @@
 }
 
 .footer-bg {
-  background-image: url('/img/footer-bg.png');
+  background-image: url('../img/footer-bg.png');
 }
 
 .footer-end {
@@ -387,7 +385,6 @@
     display: none;
   }
 
-
   #nav-btn {
     margin-left: 1rem;
     margin-top: 20px;
@@ -422,7 +419,6 @@
   background-color: #ccc;
   /* Change to a different color on hover */
 }
-
 
 .trends {
   margin-top: 5rem;
