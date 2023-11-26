@@ -695,41 +695,44 @@ const Product = ({data}) => {
                 <div className="custom-fl-product d-md-flex flex-lg-column justify-content-around">
                   {TrendingProductsCollection.collection.products.nodes.map(
                     (product) => (
-                      <Link
-                        key={product.handle}
-                        to={`/product/${product.handle}`}
-                        className="d-flex mt-4 flex-column"
-                      >
-                        <div
-                          className="w-100"
-                          style={{maxWidth: '250px', margin: '0 auto'}}
+                      <>
+                        {' '}
+                        <Link
+                          key={product.handle}
+                          to={`/product/${product.handle}`}
+                          className="d-flex mt-4 flex-column"
                         >
-                          <Image
-                            data={product.variants.nodes[0].image}
-                            style={{
-                              objectFit: 'contain',
-                              height: '100%',
-                            }}
-                            alt={product.title}
-                          />
-                        </div>
-                        <div>
-                          <h6 className="font-weight-bold mt-4  text-center text-dark">
-                            {product.title}
-                          </h6>
-                          <h6 className="mt-3 font-weight-bold  text-center text-dark">
-                            <Money
-                              withoutTrailingZeros
-                              data={product.variants?.nodes[0].price}
-                            />
-                          </h6>
-                          <div className="text-center">
-                            <ProductForm
-                              variantId={product.variants?.nodes[0].id}
+                          <div
+                            className="w-100"
+                            style={{maxWidth: '250px', margin: '0 auto'}}
+                          >
+                            <Image
+                              data={product.variants.nodes[0].image}
+                              style={{
+                                objectFit: 'contain',
+                                height: '100%',
+                              }}
+                              alt={product.title}
                             />
                           </div>
+                          <div>
+                            <h6 className="font-weight-bold mt-4  text-center text-dark">
+                              {product.title}
+                            </h6>
+                            <h6 className="mt-3 font-weight-bold  text-center text-dark">
+                              <Money
+                                withoutTrailingZeros
+                                data={product.variants?.nodes[0].price}
+                              />
+                            </h6>
+                          </div>
+                        </Link>
+                        <div className="text-center">
+                          <ProductForm
+                            variantId={product.variants?.nodes[0].id}
+                          />
                         </div>
-                      </Link>
+                      </>
                     ),
                   )}
                 </div>

@@ -46,11 +46,17 @@ export async function action({request, context}) {
 
     const {customerAccessToken} = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
+    // Sync customerAccessToken with existing cart
+    const result = await cart.updateBuyerIdentity({customerAccessToken});
+
+    // Update cart id in cookie
+    const headers = cart.setCartId(result.cart.id);
+
+    // Update session
+    headers.append('Set-Cookie', await session.commit());
 
     return redirect('/account/profile', {
-      headers: {
-        'Set-Cookie': await session.commit(),
-      },
+      headers,
     });
   } catch (error) {
     if (error instanceof Error) {

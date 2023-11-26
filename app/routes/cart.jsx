@@ -1,10 +1,11 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import {Link, useLoaderData} from '@remix-run/react';
+import {Link, NavLink, useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
 import {CartForm} from '@shopify/hydrogen';
 import {CartLineItems, CartSummary} from '~/Components/Cart';
 import {useState} from 'react';
+import invariant from 'tiny-invariant';
 import {FiShoppingCart} from 'react-icons/fi';
 
 export async function action({request, context}) {
@@ -26,7 +27,7 @@ export async function action({request, context}) {
       result = await cart.removeLines(inputs.lineIds);
       break;
     default:
-      invariant(false, `{action} cart action is not defined`);
+      invariant(false, `${action} cart action is not defined`);
   }
 
   // The Cart ID might change after each mutation, so update it each time.
@@ -107,9 +108,9 @@ const Cart = () => {
                 </span>
               </div>
               <div className="col-12 text-center mt-3 mb-3">
-                <button className="btn blog-btn">
-                  <p className="">RETURN TO SHOP</p>
-                </button>
+                <NavLink to="/" className="btn blog-btn">
+                  RETURN TO SHOP
+                </NavLink>
               </div>
             </div>
           )}
