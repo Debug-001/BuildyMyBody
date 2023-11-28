@@ -1316,14 +1316,10 @@ textarea::placeholder {
 .add-to-cart {
   /* margin-left: 1rem; */
   /* margin-top: 1.5rem; */
-  border: 1px solid white;
   height: 12%;
-  min-width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  font-size: 1.5rem;
 }
 
 hr {
@@ -1331,7 +1327,6 @@ hr {
 }
 
 .add-to-cart {
-  border-radius: 10px;
   border: 1px solid black;
 }
 
@@ -1347,11 +1342,20 @@ hr {
   border-radius: 3px;
 }
 
-.num {
-  border-left: 2px solid rgb(119, 117, 117);
-  border-right: 2px solid rgb(119, 117, 117);
+button.minus,
+button.plus {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
+span.num {
+  font-size: 1.2rem;
+}
+
+/* Optional: Add hover effects for buttons */
 #order {
   font-weight: bold;
   font-size: 1.2rem;

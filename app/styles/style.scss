@@ -1388,22 +1388,24 @@ textarea::placeholder {
 .add-to-cart {
   /* margin-left: 1rem; */
   /* margin-top: 1.5rem; */
-  border: 1px solid white;
+  // border: 1px solid white;
   height: 12%;
-  min-width: 80px;
+  // min-width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  // border-radius: 10px;
+  // font-size: 1.5rem;
 }
+
+
 
 hr {
   border-width: 0.3px;
 }
 
 .add-to-cart {
-  border-radius: 10px;
+  // border-radius: 10px;
   border: 1px solid black;
 }
 
@@ -1419,10 +1421,29 @@ hr {
   border-radius: 3px;
 }
 
-.num {
-  border-left: 2px solid rgb(119, 117, 117);
-  border-right: 2px solid rgb(119, 117, 117);
+
+button.minus,
+button.plus {
+  background-color: white;
+  // color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+
+span.num {
+  // margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* Optional: Add hover effects for buttons */
+button.minus:hover,
+button.plus:hover {
+  // background-color: #0056b3;
+}
+
+
 
 #order {
   font-weight: bold;

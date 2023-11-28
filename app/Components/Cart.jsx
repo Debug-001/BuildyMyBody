@@ -1,8 +1,8 @@
-import {Link, useFetcher} from '@remix-run/react';
-import {CartForm} from '@shopify/hydrogen';
-import {flattenConnection, Image, Money} from '@shopify/hydrogen-react';
-import {AiOutlineDelete} from 'react-icons/ai';
-export function CartLineItems({linesObj}) {
+import { Link, useFetcher } from '@remix-run/react';
+import { CartForm } from '@shopify/hydrogen';
+import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
+import { AiOutlineDelete } from 'react-icons/ai';
+export function CartLineItems({ linesObj }) {
   const lines = flattenConnection(linesObj);
   return (
     <div className="space-y-8">
@@ -13,12 +13,12 @@ export function CartLineItems({linesObj}) {
   );
 }
 
-function ItemRemoveButton({lineIds}) {
+function ItemRemoveButton({ lineIds }) {
   return (
     <CartForm
       route="/cart"
       action={CartForm.ACTIONS.LinesRemove}
-      inputs={{lineIds}}
+      inputs={{ lineIds }}
     >
       <button
         className="bg-white border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
@@ -30,8 +30,8 @@ function ItemRemoveButton({lineIds}) {
   );
 }
 
-function LineItem({lineItem}) {
-  const {merchandise, quantity} = lineItem;
+function LineItem({ lineItem }) {
+  const { merchandise, quantity } = lineItem;
   return (
     <div className="all-info d-flex mt-5 row">
       <div className="col-5   mt-2">
@@ -39,8 +39,8 @@ function LineItem({lineItem}) {
           <Image
             data={merchandise.image}
             className=""
-            style={{objectFit: 'contain', transform: 'scale(1.4)'}}
-            //   height={110}
+            style={{ objectFit: 'contain', transform: 'scale(1.4)' }}
+          //   height={110}
           />
         </Link>
       </div>
@@ -62,42 +62,49 @@ function LineItem({lineItem}) {
         <ItemRemoveButton lineIds={[lineItem.id]} />
       </div>
       <div className="add-to-cart  ml-lg-2 ml-md-2">
-        <CartForm
-          route="/cart"
-          action={CartForm.ACTIONS.LinesUpdate}
-          inputs={{
-            lines: [
-              {
-                id: lineItem.id,
-                merchandiseId: merchandise.id,
-                quantity: quantity - 1,
-              },
-            ],
-          }}
-        >
-          <button className="minus">-</button>
-        </CartForm>
-        <span className="num">{quantity}</span>
-        <CartForm
-          route="/cart"
-          action={CartForm.ACTIONS.LinesUpdate}
-          inputs={{
-            lines: [
-              {
-                id: lineItem.id,
-                merchandiseId: merchandise.id,
-                quantity: quantity + 1,
-              },
-            ],
-          }}
-        >
-          <button className="plus">+</button>
-        </CartForm>
+        <div>
+          <CartForm
+            route="/cart"
+            action={CartForm.ACTIONS.LinesUpdate}
+            inputs={{
+              lines: [
+                {
+                  id: lineItem.id,
+                  merchandiseId: merchandise.id,
+                  quantity: quantity - 1,
+                },
+              ],
+            }}
+          >
+            <button className="minus">-</button>
+          </CartForm>
+        </div>
+        <div className='ml-3 mr-3'>
+          <span className="num">{quantity}</span>
+        </div>
+
+        <div>
+          <CartForm
+            route="/cart"
+            action={CartForm.ACTIONS.LinesUpdate}
+            inputs={{
+              lines: [
+                {
+                  id: lineItem.id,
+                  merchandiseId: merchandise.id,
+                  quantity: quantity + 1,
+                },
+              ],
+            }}
+          >
+            <button className="plus">+</button>
+          </CartForm>
+        </div>
       </div>
     </div>
   );
 }
-export function CartSummary({cost, checkoutUrl}) {
+export function CartSummary({ cost, checkoutUrl }) {
   if (!checkoutUrl) return null;
   return (
     <>
