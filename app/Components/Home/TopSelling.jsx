@@ -1,4 +1,4 @@
-import {useLoaderData} from '@remix-run/react';
+import {Link, useLoaderData} from '@remix-run/react';
 import {useEffect} from 'react';
 import ProductForm from '../Product/ProductForm';
 import data from '~/routes/data';
@@ -24,7 +24,8 @@ const TopSelling = ({collection}) => {
           </div>
           <div className="carousel-inner" id="featured-carousel">
             {collection.products.nodes.map((product, index) => (
-              <div
+              <Link
+                to={`/product/${product.handle}`}
                 key={index}
                 className={
                   index === 0 ? 'carousel-item active' : 'carousel-item'
@@ -56,7 +57,7 @@ const TopSelling = ({collection}) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <a

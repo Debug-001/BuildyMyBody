@@ -181,7 +181,8 @@ const FlashDeals = ({collection}) => {
                 >
                   {products.nodes.map((product) => (
                     <div className="card" id="trend-card" key={product.id}>
-                      <div
+                      <Link
+                        to={`/product/${product.handle}`}
                         className="d-flex justify-content-center"
                         id="trending-card-container"
                       >
@@ -190,17 +191,19 @@ const FlashDeals = ({collection}) => {
                           src={product.variants.nodes[0].image?.url || ''}
                           alt={product.variants.nodes[0].image?.altText}
                         />
-                      </div>
+                      </Link>
                       <div className="card-content ml-3 mr-3">
-                        <h5
-                          className="d-flex justify-content-center mt-5 text-center product-title"
-                          style={{fontSize: '1.1rem'}}
-                        >
-                          {product.title}
-                        </h5>
-                        <p className="d-flex justify-content-center font-weight-bold mt-3">
-                          {product.variants.nodes[0].price.amount}
-                        </p>
+                        <Link to={`/product/${product.handle}`}>
+                          <h5
+                            className="d-flex justify-content-center mt-5 text-center product-title"
+                            style={{fontSize: '1.1rem'}}
+                          >
+                            {product.title}
+                          </h5>
+                          <p className="d-flex justify-content-center font-weight-bold mt-3">
+                            {product.variants.nodes[0].price.amount}
+                          </p>
+                        </Link>
                         <ProductForm
                           variantId={product.variants?.nodes[0].id}
                           custom={true}

@@ -5,224 +5,51 @@ import workout from '../../img/workout.png';
 import pre from '../../img/pre.png';
 import creatine from '../../img/creatine.png';
 import amino from '../../img/amino.png';
+import {Link} from '@remix-run/react';
 
 const Popular = () => {
+  const tiles = [
+    {title: 'Whey Protein', url: 'whey-protein', image: whey},
+    {title: 'Mass Gainer', url: 'mass-gainer-1', image: gainer},
+    {title: 'Creatine', url: 'creatine', image: creatine},
+    {title: 'Amino Acids/BCAAs', url: 'amino-acids-bcaas-1', image: amino},
+    {
+      title: 'Pre/Post Workout',
+      url: 'pre-post-workout',
+      image: pre,
+    },
+    {
+      title: 'Workout Essentials',
+      url: 'workout-essentials',
+      image: workout,
+    },
+  ];
   return (
     <>
-      <div className="container-fluid d-none d-lg-block" data-aos="fade-up">
+      <div className="container-fluid" data-aos="fade-up">
         <div className="text-center">
           <h1 className="font-weight-bold custom-heading3">
             <em>Popular in Sports Nutrition</em>
           </h1>
         </div>
-        <div className="row">
-          <div className="col-lg-4 col-md-4 col-sm-4  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={whey} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                  className="mt-2 text-dark"
-                >
-                  Whey Protein
-                </span>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          {tiles.map((tile) => (
+            <Link to={`/products/${tile.url}`} className="col" key={tile.url}>
+              <div className="certificate-card ">
+                <p className="text-center mt-4 ">
+                  <img src={tile.image} className="w-50" alt="" />
+                </p>
+                <div className="text-center">
+                  <span
+                    style={{fontWeight: 'bold', fontSize: '1rem'}}
+                    className="mt-2 text-dark"
+                  >
+                    {tile.title}
+                  </span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-4  ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={gainer} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                  className="mt-2 text-center text-dark"
-                >
-                  Mass Gainer
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-4 col-sm-4  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={creatine} className="w-50" alt="" />
-              </p>
-
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Creatine
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-4 col-md-4 col-sm-4  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={amino} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Amino Acids/BCAAs
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-4 col-sm-4  ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={pre} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Pre/Post Workout
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-4 col-sm-4 ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={workout} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Workout Essentials
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container-fluid d-lg-none">
-        <div className="text-center">
-          <h1 className="font-weight-bold custom-heading3">
-            <em>Popular in Sports Nutrition</em>
-          </h1>
-        </div>
-        <div className="row">
-          <div className="col-6  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={whey} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                  className="mt-2 text-dark"
-                >
-                  Whey Protein
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-6  ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={gainer} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                  className="mt-2 text-center text-dark"
-                >
-                  Mass Gainer
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-6  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={creatine} className="w-50" alt="" />
-              </p>
-
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Creatine
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-6  ">
-            <div className="certificate-card ">
-              <p className="text-center mt-4 ">
-                <img src={amino} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Amino Acids/BCAAs
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-6  ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={pre} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Pre/Post Workout
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-6 ">
-            <div className="certificate-card">
-              <p className="text-center mt-4">
-                <img src={workout} className="w-50" alt="" />
-              </p>
-              <div className="text-center">
-                <span
-                  className="text-center mt-2 text-dark"
-                  style={{fontWeight: 'bold', fontSize: '1rem'}}
-                >
-                  Workout Essentials
-                </span>
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </div>
     </>

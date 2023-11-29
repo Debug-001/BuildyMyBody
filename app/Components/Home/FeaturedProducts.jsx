@@ -12,6 +12,7 @@ const FeaturedProducts = ({collections}) => {
 
   useEffect(() => {
     setNav1(slider1.current);
+    console.log(collections);
     setNav2(slider2.current);
   }, []);
 
@@ -77,7 +78,7 @@ const FeaturedProducts = ({collections}) => {
             >
               <img
                 className="card-img-top"
-                src={ds1} //to be fetched
+                src={collection.image?.url || ''}
                 alt="Card image cap"
               />
               <div className="card-content">

@@ -230,7 +230,7 @@ const Navbar = () => {
               >
                 <div className="row">
                   <div className="col-lg-12 col-md-6 d-flex justify-content-around">
-                    <Link to="" className="  ">
+                    <Link to="/products/on-nutrition" className="  ">
                       <div className="d-flex flex-column align-items-center ">
                         <img
                           src={on}
@@ -250,7 +250,7 @@ const Navbar = () => {
                         </span>
                       </div>
                     </Link>
-                    <Link to="" className="  ">
+                    <Link to="/products/muscletech" className="  ">
                       <div className="d-flex flex-column align-items-center ml-lg-5 ">
                         <img
                           src={mt}
@@ -272,7 +272,7 @@ const Navbar = () => {
                   </div>
 
                   <div className="col-lg-12 col-md-6 d-flex mt-lg-2 justify-content-around">
-                    <Link to="" className="  ">
+                    <Link to="/products/universal" className="  ">
                       <div className="d-flex flex-column align-items-center  ">
                         <img
                           src={uni}
@@ -291,7 +291,7 @@ const Navbar = () => {
                         </span>
                       </div>
                     </Link>
-                    <Link to="" className="  ">
+                    <Link to="/product/cellucor" className="  ">
                       <div className="d-flex flex-column align-items-center ml-lg-5">
                         <img
                           src={cl}
