@@ -2038,6 +2038,10 @@ span.num {
   min-height: 120px;
   font-size: 13px;
 }
+.carousel .carousel-item .row {
+  max-width: 80%;
+  margin: 0 auto;
+}
 
 .carousel .media img {
   width: 80px;

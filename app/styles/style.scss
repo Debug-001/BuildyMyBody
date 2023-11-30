@@ -1398,8 +1398,6 @@ textarea::placeholder {
   // font-size: 1.5rem;
 }
 
-
-
 hr {
   border-width: 0.3px;
 }
@@ -1421,7 +1419,6 @@ hr {
   border-radius: 3px;
 }
 
-
 button.minus,
 button.plus {
   background-color: white;
@@ -1442,8 +1439,6 @@ button.minus:hover,
 button.plus:hover {
   // background-color: #0056b3;
 }
-
-
 
 #order {
   font-weight: bold;
@@ -1512,9 +1507,9 @@ button.plus:hover {
   margin-right: 25px;
 }
 
-.carousel-item>.col,
-.carousel-item>.col-sm,
-.carousel-item>.col-md {
+.carousel-item > .col,
+.carousel-item > .col-sm,
+.carousel-item > .col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -2187,6 +2182,10 @@ button.plus:hover {
   overflow: hidden;
   min-height: 120px;
   font-size: 13px;
+  .row {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .carousel .media img {
@@ -2265,7 +2264,7 @@ button.plus:hover {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
+.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;
@@ -2289,7 +2288,6 @@ button.plus:hover {
   aspect-ratio: 1/1 !important;
   max-width: 300px;
 }
-
 
 .fixed-bottom {
   position: fixed;

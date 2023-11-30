@@ -24,40 +24,41 @@ const TopSelling = ({collection}) => {
           </div>
           <div className="carousel-inner" id="featured-carousel">
             {collection.products.nodes.map((product, index) => (
-              <Link
-                to={`/product/${product.handle}`}
+              <div
                 key={index}
                 className={
                   index === 0 ? 'carousel-item active' : 'carousel-item'
                 }
               >
-                <div className="row ">
-                  <div className="col-md-5 col-lg-6 d-flex justify-content-center">
+                <div className="row">
+                  <Link
+                    to={`/product/${product.handle}`}
+                    className="col-md-5 col-lg-6 d-flex justify-content-center"
+                  >
                     <img
                       className="featured-img"
                       src={product.variants.nodes[0].image?.url || ''}
                       alt={product.variants.nodes[0].image?.altText || ''}
                     />
-                  </div>
+                  </Link>
                   <div className="col featured-details ">
-                    <h2 className="w-lg-75">{product.title}</h2>
-                    <h4>
-                      {product.variants.nodes[0].compareAtPrice && (
-                        <del className="discount-text">
-                          ₹{product.variants.nodes[0].compareAtPrice.amount}
-                        </del>
-                      )}{' '}
-                      ₹ {product.variants.nodes[0].price.amount}
-                    </h4>
-                    {/* {product.descriptionHtml} */}
-                    {/* <div dangerouslySetInnerHTML={{__html: product.descriptionHtml}}> */}
-                    {/* </div> */}
+                    <Link to={`/product/${product.handle}`}>
+                      <h2 className="w-lg-75">{product.title}</h2>
+                      <h4>
+                        {product.variants.nodes[0].compareAtPrice && (
+                          <del className="discount-text">
+                            ₹{product.variants.nodes[0].compareAtPrice.amount}
+                          </del>
+                        )}{' '}
+                        ₹ {product.variants.nodes[0].price.amount}
+                      </h4>
+                    </Link>
                     <div className="featured-btn">
                       <ProductForm variantId={product.variants.nodes[0].id} />
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
           <a
