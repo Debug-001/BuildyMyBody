@@ -114,6 +114,18 @@
   background-position: 50%;
 }
 
+.top-scale:hover {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+}
+
 .card-content h5,
 .card-content p {
   font-weight: 700 !important;
@@ -1099,6 +1111,19 @@ p {
 .card {
   z-index: 0;
   padding-bottom: 20px;
+  /* From https://css.glass */
+
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
 }
 
 #progressbar {
@@ -1723,8 +1748,14 @@ button.plus:hover {
 }
 
 .certificate-card:hover {
-  transform: scale(1.1);
+  // transform: scale(1.1);
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
 }
 
 .certificate-card a {
