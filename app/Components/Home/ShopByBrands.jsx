@@ -3,6 +3,8 @@ import photo from '../../img/cellu.png';
 import photo1 from '../../img/mt.png';
 import photo3 from '../../img/mp.png';
 import photo5 from '../../img/onn.png';
+import { Form, Link, NavLink } from '@remix-run/react';
+
 const ShopByBrands = () => {
   return (
     <>
@@ -73,6 +75,7 @@ const ShopByBrands = () => {
 
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12  ">
+
             <div className="certificate-card ">
               <p className="text-center mt-4 ">
                 <img src={photo} className="w-100" alt="" />
@@ -88,11 +91,15 @@ const ShopByBrands = () => {
           </div>
 
           <div className="col-lg-6 col-md-6 col-sm-12  mb-lg-4 mb-1 ">
+
             <div className="certificate-card">
               <p className="text-center mt-4">
-                <img src={photo3} className="w-100   " alt="" />
+                <Link to="/products/muscletech" className="  ">
+                  <img src={photo3} className="w-100   " alt="" />
+                </Link>
               </p>
             </div>
+
           </div>
 
           <div className="col-lg-6 col-md-6 col-sm-12  mb-4">

@@ -1,8 +1,12 @@
 import React from 'react'
+import Footer from '~/Components/Footer'
+import Navbar from '~/Components/Navbar'
 import protien from '../../img/protien.png'
+
 const index = () => {
     return (
         <div>
+            <Navbar />
             <div className="container-fluid">
                 <div className="row">
                     <div className="col">
@@ -129,6 +133,7 @@ const index = () => {
                 </div>
 
             </div>
+            <Footer />
         </div >
     )
 }
