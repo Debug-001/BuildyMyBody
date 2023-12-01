@@ -11,6 +11,7 @@ import Testimonials from './Testimonials';
 import ShopByBrands from './ShopByBrands';
 import Popular from './Popular';
 import Authenticity from './Authenticity';
+import ScrollToTop from "react-scroll-to-top";
 
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -21,9 +22,11 @@ const Home = ({ data }) => {
     <>
       <Navbar />
       <Carousel />
+      <ScrollToTop smooth className='sctt'/>
       <FeaturedProducts collections={data.collections} />
       <TopSelling collection={data.collection} />
       <Popular />
+      <ScrollToTop smooth color="#fff" />
       <Discount />
       <FlashDeals collection={data.flashDeals} />
       <ShopByBrands />
