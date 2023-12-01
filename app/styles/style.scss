@@ -1385,15 +1385,33 @@ textarea::placeholder {
   background: red;
 }
 
+.added-to-cart {
+  display: flex;
+  // flex-direction: row-reverse;
+  max-width: 20%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+}
+
+@media screen and (max-width:768px) {
+  .added-to-cart {
+    // flex-direction: row-reverse;
+    // justify-content: normal;
+    // align-items: normal;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+
 .add-to-cart {
   /* margin-left: 1rem; */
   /* margin-top: 1.5rem; */
   // border: 1px solid white;
   height: 12%;
-  // min-width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 20%; // min-width: 80px;
+
   // border-radius: 10px;
   // font-size: 1.5rem;
 }
@@ -1507,9 +1525,9 @@ button.plus:hover {
   margin-right: 25px;
 }
 
-.carousel-item > .col,
-.carousel-item > .col-sm,
-.carousel-item > .col-md {
+.carousel-item>.col,
+.carousel-item>.col-sm,
+.carousel-item>.col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -2182,6 +2200,7 @@ button.plus:hover {
   overflow: hidden;
   min-height: 120px;
   font-size: 13px;
+
   .row {
     max-width: 80%;
     margin: 0 auto;
@@ -2264,7 +2283,7 @@ button.plus:hover {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
+.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;

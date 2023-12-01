@@ -21,10 +21,11 @@ function ItemRemoveButton({ lineIds }) {
       inputs={{ lineIds }}
     >
       <button
-        className="bg-white border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
+        className="bg-white p-2 border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
         type="submit"
       >
-        <AiOutlineDelete />
+        {/* <AiOutlineDelete /> */}
+        <p>Remove</p>
       </button>
     </CartForm>
   );
@@ -33,8 +34,8 @@ function ItemRemoveButton({ lineIds }) {
 function LineItem({ lineItem }) {
   const { merchandise, quantity } = lineItem;
   return (
-    <div className="all-info d-flex mt-5 row">
-      <div className="col-5   mt-2">
+    <div className="all-info  mt-5 row">
+      <div className="col-lg-3 col-md-3 col-sm-4  mt-2">
         <Link to={`/product/${merchandise.product.handle}`} className="">
           <Image
             data={merchandise.image}
@@ -45,7 +46,7 @@ function LineItem({ lineItem }) {
         </Link>
       </div>
       {/* PROTIEN INFO */}
-      <div className="col">
+      <div className="col-lg-4 col-md-4 col-sm-4 ">
         <div className="protien-info">
           <Link
             to={`/product/${merchandise.product.handle}`}
@@ -58,47 +59,49 @@ function LineItem({ lineItem }) {
         </div>
       </div>
 
-      <div className="col">
+      <div className="col-lg-2 col-md-2 col-sm-4">
         <ItemRemoveButton lineIds={[lineItem.id]} />
       </div>
-      <div className="add-to-cart  ml-lg-2 ml-md-2">
-        <div>
-          <CartForm
-            route="/cart"
-            action={CartForm.ACTIONS.LinesUpdate}
-            inputs={{
-              lines: [
-                {
-                  id: lineItem.id,
-                  merchandiseId: merchandise.id,
-                  quantity: quantity - 1,
-                },
-              ],
-            }}
-          >
-            <button className="minus">-</button>
-          </CartForm>
-        </div>
-        <div className='ml-3 mr-3'>
-          <span className="num">{quantity}</span>
-        </div>
+      <div className=" col-lg-3 col-md-3 added-to-cart  ">
+        <div className='d-flex justify-content-center align-items-center'>
+          <div>
+            <CartForm
+              route="/cart"
+              action={CartForm.ACTIONS.LinesUpdate}
+              inputs={{
+                lines: [
+                  {
+                    id: lineItem.id,
+                    merchandiseId: merchandise.id,
+                    quantity: quantity - 1,
+                  },
+                ],
+              }}
+            >
+              <button className="minus">-</button>
+            </CartForm>
+          </div>
+          <div className='ml-3 mr-3'>
+            <span className="num">{quantity}</span>
+          </div>
 
-        <div>
-          <CartForm
-            route="/cart"
-            action={CartForm.ACTIONS.LinesUpdate}
-            inputs={{
-              lines: [
-                {
-                  id: lineItem.id,
-                  merchandiseId: merchandise.id,
-                  quantity: quantity + 1,
-                },
-              ],
-            }}
-          >
-            <button className="plus">+</button>
-          </CartForm>
+          <div>
+            <CartForm
+              route="/cart"
+              action={CartForm.ACTIONS.LinesUpdate}
+              inputs={{
+                lines: [
+                  {
+                    id: lineItem.id,
+                    merchandiseId: merchandise.id,
+                    quantity: quantity + 1,
+                  },
+                ],
+              }}
+            >
+              <button className="plus">+</button>
+            </CartForm>
+          </div>
         </div>
       </div>
     </div>
