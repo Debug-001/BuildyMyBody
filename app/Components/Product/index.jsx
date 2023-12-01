@@ -1,14 +1,14 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import {MediaFile, ShopPayButton} from '@shopify/hydrogen-react';
-import {Image, Money} from '@shopify/hydrogen';
+import { MediaFile, ShopPayButton } from '@shopify/hydrogen-react';
+import { Image, Money } from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../img/protien.png';
-import {Link} from '@remix-run/react';
-const Product = ({data}) => {
+import { Link } from '@remix-run/react';
+const Product = ({ data }) => {
   const {
     product,
     selectedVariant,
@@ -53,7 +53,7 @@ const Product = ({data}) => {
             <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
               <h2
                 className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5  "
-                style={{fontSize: '30px', fontWeight: '800'}}
+                style={{ fontSize: '30px', fontWeight: '800' }}
               >
                 {product.title}
               </h2>
@@ -78,7 +78,7 @@ const Product = ({data}) => {
                     <span>
                       <p
                         className="front  p-2 "
-                        style={{border: '1px dashed', fontSize: '15px'}}
+                        style={{ border: '1px dashed', fontSize: '15px' }}
                       >
                         Extra 30% off site wide Use Code: Om30 Terms and
                         Condtions Applied.
@@ -99,10 +99,10 @@ const Product = ({data}) => {
                       withoutTrailingZeros
                       data={selectedVariant.price}
                       className="ml-2"
-                      style={{fontSize: '38px'}}
+                      style={{ fontSize: '38px' }}
                     />
                     <div className="ml-3 d-flex align-items-center">
-                      <p style={{color: '#ff2828'}} className="product-btn p-2">
+                      <p style={{ color: '#ff2828' }} className="product-btn p-2">
                         {' '}
                         25% off
                       </p>
@@ -110,7 +110,7 @@ const Product = ({data}) => {
                   </h2>
                   <p
                     className="title  "
-                    style={{fontSize: '14px', opacity: '.7'}}
+                    style={{ fontSize: '14px', opacity: '.7' }}
                   >
                     (EMI starts from ₹211.45) | Earn BMB Cash ₹90{' '}
                     <span className=""> Free Shipping</span>
@@ -125,7 +125,7 @@ const Product = ({data}) => {
                         <ShopPayButton
                           storeDomain={storeDomain}
                           variantIds={[selectedVariant?.id]}
-                          className="btn  "
+                          className="btn"
                         />
                       )}
                     </div>
@@ -155,6 +155,15 @@ const Product = ({data}) => {
                   </button>
                 </div>
               </div>
+
+              <div className='return mt-2'>
+                <h3>Return Policy</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsam
+                  expedita nemo totam nostrum dolorum unde doloribus cum nisi corrupti.
+
+                </p>
+              </div>
             </div>
 
             <div
@@ -164,7 +173,7 @@ const Product = ({data}) => {
             >
               <ul
                 className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                style={{background: 'black'}}
+                style={{ background: 'black' }}
                 id="myTab"
                 role="tablist"
               >
@@ -235,7 +244,7 @@ const Product = ({data}) => {
                       <button
                         onClick={toggleDropdown1}
                         className="w-100 text-left p-3"
-                        style={{border: '1px solid transparent'}}
+                        style={{ border: '1px solid transparent' }}
                       >
                         <span className="ques-product">Question</span>
                         <span
@@ -248,7 +257,7 @@ const Product = ({data}) => {
                         </span>
                       </button>
                       {isOpen1 && (
-                        <div style={{fontSize: '14px'}}>
+                        <div style={{ fontSize: '14px' }}>
                           <br /> <br />
                           <span className="answer-product">Answer</span>
                           <span data-title="Answer" className="" data-show="">
@@ -303,7 +312,7 @@ const Product = ({data}) => {
                       <button
                         onClick={toggleDropdown2}
                         className="w-100 text-left p-3 mt-4"
-                        style={{border: '1px solid transparent'}}
+                        style={{ border: '1px solid transparent' }}
                       >
                         <span className="ques-product">Question</span>
                         <span
@@ -315,7 +324,7 @@ const Product = ({data}) => {
                         </span>
                       </button>
                       {isOpen2 && (
-                        <div style={{fontSize: '14px'}}>
+                        <div style={{ fontSize: '14px' }}>
                           <br />
                           <br />
                           <span className="answer-product">Answer</span>
@@ -338,7 +347,7 @@ const Product = ({data}) => {
                       <button
                         onClick={toggleDropdown3}
                         className="w-100 text-left p-3 mt-4"
-                        style={{border: '1px solid transparent'}}
+                        style={{ border: '1px solid transparent' }}
                       >
                         <span className="ques-product">Question</span>
                         <span
@@ -351,7 +360,7 @@ const Product = ({data}) => {
                         </span>
                       </button>
                       {isOpen3 && (
-                        <div style={{fontSize: '14px'}}>
+                        <div style={{ fontSize: '14px' }}>
                           <br />
                           <br />
                           <span className="answer-product">Answer</span>
@@ -412,7 +421,7 @@ const Product = ({data}) => {
                     >
                       <div
                         className="w-100"
-                        style={{maxWidth: '250px', margin: '0 auto'}}
+                        style={{ maxWidth: '250px', margin: '0 auto' }}
                       >
                         <Image
                           data={product.variants.nodes[0].image}
@@ -455,7 +464,7 @@ const Product = ({data}) => {
               >
                 <ul
                   className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                  style={{background: 'black'}}
+                  style={{ background: 'black' }}
                   id="myTab"
                   role="tablist"
                 >
@@ -526,7 +535,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown1}
                           className="w-100 text-left p-3"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -539,7 +548,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen1 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br /> <br />
                             <span className="answer-product">Answer</span>
                             <span data-title="Answer" className="" data-show="">
@@ -595,7 +604,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown2}
                           className="w-100 text-left p-3 mt-4"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -607,7 +616,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen2 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br />
                             <br />
                             <span className="answer-product">Answer</span>
@@ -630,7 +639,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown3}
                           className="w-100 text-left p-3 mt-4"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -643,7 +652,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen3 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br />
                             <br />
                             <span className="answer-product">Answer</span>
@@ -704,7 +713,7 @@ const Product = ({data}) => {
                         >
                           <div
                             className="w-100"
-                            style={{maxWidth: '250px', margin: '0 auto'}}
+                            style={{ maxWidth: '250px', margin: '0 auto' }}
                           >
                             <Image
                               data={product.variants.nodes[0].image}
