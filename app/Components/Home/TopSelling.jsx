@@ -10,10 +10,20 @@ const TopSelling = ({ collection }) => {
         {/* <section id="featured-section" style={{background: '#FAF4EF'}}> */}
         <div
           id="carouselExampleControls1"
-          className="carousel slide mt-3"
+          className="carousel slide"
           data-ride="carousel"
         >
-          <div
+           <div
+          className="d-flex justify-content-center mb-5"
+          style={{flexDirection: 'column', alignItems: 'center'}}
+        >
+          <h1 className="font-weight-bold custom-heading3">
+            <em>Featured Products </em>
+          </h1>
+          <hr className="h1-hr" />
+        </div>
+
+        {/* <div
             className="d-flex justify-content-center mb-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}
           >
@@ -21,7 +31,7 @@ const TopSelling = ({ collection }) => {
               <em>Featured Products</em>
             </h1>
             <hr className="h1-hr" />
-          </div>
+          </div> */}
           <div className="carousel-inner" id="featured-carousel">
             {collection.products.nodes.map((product, index) => (
               <div

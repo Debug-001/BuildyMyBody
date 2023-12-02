@@ -27,8 +27,8 @@ const BrandCaraousel = () => {
 
   return (
     <>
-      <section id="fitness-car" data-aos="fade-up">
-        <div className="container-fluid pt-5 pb-5">
+      <section id="fitness-car">
+        <div className="container-fluid pt-5 pb-5" >
           <div
             className="d-flex justify-content-center mb-5"
             style={{flexDirection: 'column', alignItems: 'center'}}

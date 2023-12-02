@@ -6,7 +6,7 @@ import article1 from '../../img/article1.jpg';
 const Verify = () => {
   return (
     <>
-      <section id="verify" data-aos="fade-up">
+      <section id="verify">
         <div className="container pt-5 pb-5">
           <div
             className="d-flex justify-content-center"

@@ -26,20 +26,25 @@ const Popular = () => {
   ];
   return (
     <>
-      <div className="container-fluid" data-aos="fade-up">
-        <div className="text-center">
-          <h1 className="font-weight-bold custom-heading3">
-            <em style={{ color: '#ff2828' }}>Popular in Sports Nutrition</em>
+    <section id='popular' className='pb-5'>
+      <div className="container-fluid" data-aos="fade-up" id='cgap'>
+      <div
+          className="d-flex justify-content-center mb-5"
+          style={{flexDirection: 'column', alignItems: 'center'}}
+        >
+          <h1 className="font-weight-bolder custom-heading3">
+            <em>Popular in Sports Nutrition</em>
           </h1>
+          <hr className="h1-hr" />
         </div>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
           {tiles.map((tile) => (
             <Link to={`/products/${tile.url}`} className="col" key={tile.url}>
               <div className="certificate-card ">
-                <p className="text-center mt-4 ">
-                  <img src={tile.image} className="w-50" alt="" />
+                <p className="text-center mt-4">
+                  <img src={tile.image} className="popular-img w-50" alt="" />
                 </p>
-                <div className="text-center">
+                <div className="text-center" id='popular-txt'>
                   <span
                     style={{ fontWeight: 'bold', fontSize: '1rem' }}
                     className="mt-2 text-dark"
@@ -52,6 +57,7 @@ const Popular = () => {
           ))}
         </div>
       </div>
+    </section>
     </>
   );
 };

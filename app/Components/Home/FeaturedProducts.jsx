@@ -24,7 +24,7 @@ const FeaturedProducts = ({collections}) => {
           style={{flexDirection: 'column', alignItems: 'center'}}
         >
           <h1 className="font-weight-bold custom-heading3">
-            <em>Shop By Categories</em>
+            <em>Shop by Brands </em>
           </h1>
           <hr className="h1-hr" />
         </div>

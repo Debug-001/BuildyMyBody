@@ -1,6 +1,6 @@
 const Testimonials = () => {
   return (
-    <section id="testmon" data-aos="fade-up">
+    <section id="testmon">
       <div className="container-xl pt-5 pb-5">
         <div className="row">
           <div className="col-sm-12">

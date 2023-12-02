@@ -26,9 +26,7 @@ const Footer = () => {
                 <div className="footer-details company-footer1">
                   <img className="footer-" src={logo} alt="" />
                   <p className="mt-3">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Dignissimos illo ex inventore, nulla iste ut incidunt eum
-                    pariatur
+                   You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>
                   <div className="footer-social-icons">
                     <Link to="/">

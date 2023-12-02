@@ -105,25 +105,10 @@
 }
 
 #featured-section {
-  /* background-color: #242424; */
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/shop_by_level.png);
-  /* background-size: 100%; */
-  background-repeat: no-repeat;
-  /* background-position: center; */
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
-  background-position: 50%;
-}
+  background-size: 100%;
 
-.top-scale:hover {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.3px);
-  -webkit-backdrop-filter: blur(2.3px);
-  border: 1px solid rgba(255, 255, 255, 0.29);
-  transform: scale(1.1);
-  transition: all .2s ease-in-out;
 }
 
 .card-content h5,
@@ -136,9 +121,15 @@
   color: black !important;
 }
 
-#testmon {
-  /* background: rgb(248, 248, 248); */
-  // background-image: url(../../public/img/testi-bg.png);
+#popular {
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.popular-img {
+  mix-blend-mode: multiply !important;
 }
 
 .discount-text {
@@ -151,6 +142,21 @@
   max-width: 180px;
   transform: scale(1.3);
   object-fit: contain;
+  background: white !important;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  margin: 70px 0px 40px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-img:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#popular-txt {
+  padding-bottom: 25px !important;
 }
 
 .carousel h1 {
@@ -158,6 +164,12 @@
   /* margin-bottom: 6rem; */
   font-weight: 900 !important;
   color: #ff2828;
+}
+
+#fitness-car{
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-size: 100%;
 }
 
 #fitness-car h1 {
@@ -245,11 +257,6 @@
   border-radius: 4px;
 }
 
-/* .profile-clr {
-  background-color: #171717;
-  color: white;
-} */
-
 .profile-btn:hover {
   background-color: #ff2828;
   color: white;
@@ -306,17 +313,7 @@
   }
 }
 
-/* //Profile page */
-
-.account {
-  /* background-color: #171717; */
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  // backdrop-filter: contrast(.95);
-}
-
 .card-acc {
-  /* width: 50rem; */
-
   border: solid grey 2.5px;
   color: rgb(255, 0, 0) !important;
   padding: 2rem;
@@ -325,10 +322,6 @@
 .card-acc a:hover {
   transition: all 0.4s ease-in-out;
   color: #ff2828 !important;
-}
-
-.parent-orders {
-  /* padding-bottom: 4rem; */
 }
 
 .card-orders {
@@ -442,31 +435,9 @@
   color: rgb(0, 145, 255);
 }
 
-// .carousel-control-prev-icon {
-//   background-image: url(/img/carousel-left.png);
-//   filter: invert(100%);
-//   transform: scale(2);
-// }
-
-.blog-main {
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  // backdrop-filter: contrast(.95);
-}
-
 nav .active {
   color: #ff2828;
 }
-
-.main-div {
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  // backdrop-filter: contrast(.95);
-}
-
-// .carousel-control-next-icon {
-//   background-image: url(/img/carousel-right.png);
-//   filter: invert(100%);
-//   transform: scale(2);
-// }
 
 .trend-btn {
   border: 2px solid rgb(255, 255, 255) !important;
@@ -510,11 +481,37 @@ nav .active {
 }
 
 .featured-btn button:hover {
-  background-color: #ff2828 !important;
-  color: white;
-  border: #ff2828 solid 2px;
+  background-color: hsl(0, 0%, 0%) !important;
+  color: rgb(253, 253, 253);
+  border: #ffffff solid 2px;
 }
 
+.certificate-card1:hover {
+  cursor: pointer !important;
+  transform: scale(1.05);
+  transition: all 0.4s ease-in-out;
+}
+
+#flash-button {
+  background-color: #202020 !important;
+  color: white;
+  border: #000000 solid 2px;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#flash-button:hover {
+  background-color: hsl(0, 0%, 100%) !important;
+  color: rgb(0, 0, 0);
+  border: #000000 solid 2px;
+}
+
+.featured-details h2 {
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
 .featured-details h4 {
   color: #474544;
   margin-top: 1.5rem;
@@ -535,7 +532,7 @@ nav .active {
   padding: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
 }
 
 #brand-car h1 {
@@ -596,34 +593,35 @@ nav .active {
 }
 
 .card-img-trending {
+  // transform: scale(2);
+  background: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
   max-width: 100%;
-  /* Limit the image's width */
   height: auto;
   object-fit: contain;
 }
 
+.card-img-trending:hover {
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+}
+
 .product-title {
   white-space: nowrap;
-  /* Prevent text from wrapping to the next line */
   overflow: hidden;
-  /* Hide any overflow */
   text-overflow: ellipsis;
-  /* Display an ellipsis (...) for overflowed text */
   max-width: 100%;
-  /* Limit the width to the container's width */
   margin: 0;
-  /* Remove any margin */
 }
 
 .product-title {
   white-space: normal;
-  /* Allow text to wrap */
   overflow: hidden;
-  /* Hide any overflow */
   text-overflow: ellipsis;
-  /* Display an ellipsis (...) for overflowed text */
   max-width: 100%;
-  /* Limit the width to the container's width */
 }
 
 .product-btn {
@@ -634,7 +632,6 @@ nav .active {
 
 a.text-light:hover,
 .dropdown-toggle:hover {
-  /* color: #cbd3da!important; */
   color: #ff2828 !important;
 }
 
@@ -655,10 +652,6 @@ a.text-light:hover,
   border-radius: 6px;
   transform: scale(0.8);
 }
-
-/* .brands-slider {
-  margin-top: 5rem;
-} */
 
 .card-img-brand {
   transform: scale(0.5);
@@ -686,20 +679,20 @@ a.text-light:hover,
 }
 
 #trending-products {
-  // background: url(../../dist/client/img/trendingbg.jpg);
+  background: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
 }
 
 #shopbb h1 {
-  /* padding-bottom: 4rem ; */
   color: #ff2828;
-  /* padding-top: 5rem; */
   font-weight: 900 !important;
 }
 
 #trending-products h1 {
-  color: black;
+  color: #ff2828;
   font-weight: 900 !important;
   padding-top: 2rem;
 }
@@ -811,10 +804,6 @@ a.text-light:hover,
   color: #ff2828;
 }
 
-#descr-tab:hover {
-  // color: #ff2828;
-}
-
 #reviews-tab:hover {
   color: #ff2828;
 }
@@ -898,13 +887,15 @@ hr {
 .carousel-control-prev-icon {
   color: black !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M5.25%200l-4%204%204%204%201.5-1.5-2.5-2.5%202.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  // filter: invert(100%);
+  // filter: invert(1);
+  mix-blend-mode: difference;
   transform: scale(2);
 }
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M2.75%200l-1.5%201.5%202.5%202.5-2.5%202.5%201.5%201.5%204-4-4-4z'/%3E%3C/svg%3E");
-  // filter: invert(100%);
+  // filter: invert(1);
+  mix-blend-mode: difference;
   transform: scale(2);
 }
 
@@ -1111,19 +1102,6 @@ p {
 .card {
   z-index: 0;
   padding-bottom: 20px;
-  /* From https://css.glass */
-
-}
-
-.card:hover {
-  background: rgba(255, 255, 255, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.3px);
-  -webkit-backdrop-filter: blur(2.3px);
-  border: 1px solid rgba(255, 255, 255, 0.29);
-  transform: scale(1.1);
-  transition: all .2s ease-in-out;
 }
 
 #progressbar {
@@ -1420,7 +1398,7 @@ textarea::placeholder {
   height: 12%;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .added-to-cart {
     // flex-direction: row-reverse;
     // justify-content: normal;
@@ -1475,12 +1453,6 @@ button.plus {
 span.num {
   // margin: 0 10px;
   font-size: 1.2rem;
-}
-
-/* Optional: Add hover effects for buttons */
-button.minus:hover,
-button.plus:hover {
-  // background-color: #0056b3;
 }
 
 #order {
@@ -1550,9 +1522,9 @@ button.plus:hover {
   margin-right: 25px;
 }
 
-.carousel-item>.col,
-.carousel-item>.col-sm,
-.carousel-item>.col-md {
+.carousel-item > .col,
+.carousel-item > .col-sm,
+.carousel-item > .col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -1747,9 +1719,12 @@ button.plus:hover {
   transition: all 200ms ease-in-out;
 }
 
+#pricing p {
+  color: #ff2828;
+}
+
 .certificate-card:hover {
-  // transform: scale(1.1);
-  cursor: pointer;
+  cursor:pointer;
   background: rgba(255, 255, 255, 0.13);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1922,10 +1897,6 @@ button.plus:hover {
   padding-left: 10px;
 }
 
-#bmi {
-  // background-color: #171717;
-}
-
 #bmi h1 {
   display: none;
   color: #ff2828;
@@ -2006,32 +1977,16 @@ button.plus:hover {
   flex-direction: row !important;
 }
 
-#bmi-tabs {
-  // background-color: #171717;
-}
-
 #bmi-tab {
   border: 1px solid black !important;
   font-size: 15px;
   font-weight: bolder;
 }
 
-#recom-tab,
-#diet-tab,
-#work-tab {
-  // color: #d4d4d4;
-}
-
 #recom-tab:hover,
 #diet-tab:hover,
 #work-tab:hover {
   color: #ff2828;
-}
-
-#work,
-#diet,
-#recom {
-  // color: white;
 }
 
 .blog-img p {
@@ -2064,10 +2019,10 @@ button.plus:hover {
 }
 
 .profile-clr {
-  /* background-color: none !important; */
-  /* background-color: #171717; */
-  // background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
-  // backdrop-filter: contrast(.95);
+  background-color: none !important;
+  background-color: #171717;
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
+  backdrop-filter: contrast(0.95);
   color: rgb(0, 0, 0);
 }
 
@@ -2238,6 +2193,12 @@ button.plus:hover {
   }
 }
 
+#verify{
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-size: 100%;
+}
+
 .carousel .media img {
   width: 80px;
   height: 80px;
@@ -2280,7 +2241,7 @@ button.plus:hover {
   box-sizing: border-box;
 }
 
-.scroll-to-top{
+.scroll-to-top {
   // color:rgb(0, 145, 255) !important;
   position: fixed;
   bottom: 20px;
@@ -2292,9 +2253,12 @@ button.plus:hover {
   border-radius: 50%;
   padding: 10px;
   font-size: 16px;
+  transition: all .4s ease-in-out;
 }
-.scroll-to-top:hover{
- background-color: #666666;
+
+.scroll-to-top:hover {
+  transition: all .4s ease-in-out;
+  background-color: #666666;
 }
 
 .carousel-indicators li {
@@ -2307,6 +2271,12 @@ button.plus:hover {
   background: #292929;
   border: 5px double;
 }
+
+.customer-footer p:hover, .company-footer p:hover, .custom-footer a:hover{
+transform: scale(1.05);
+transition: all .4s ease-in-out ;
+}
+
 
 .details h1 {
   font-weight: 900;
@@ -2331,7 +2301,7 @@ button.plus:hover {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
+.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;
