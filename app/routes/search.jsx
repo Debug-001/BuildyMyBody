@@ -51,15 +51,27 @@ export default function SearchPage() {
   return (
     <>
       <Navbar />
+      <section id="search-section"> 
       <div className="search">
-        <h1 className="text-center">Search</h1>
+      <div
+          className="d-flex justify-content-center mb-4" 
+          style={{flexDirection: 'column', alignItems: 'center'}}
+        >
+          <h1 className="custom-heading3" style={{color: "#ff2828"}} id='search-heading-text'>
+            <em> Search for Products </em>
+          </h1>
+          <hr className="h1-hr" />
+        </div>
         <SearchForm searchTerm={searchTerm} />
         {!searchTerm || !searchResults.totalResults ? (
           <>
             {!searchTerm ? (
-              <div className="text-center mt-3">
+              <div className="text-center mt-3 search-below-text">
                 <p style={{fontSize: '1.2rem'}}>
-                  Search from our wide range of products
+                  Search from our wide range of &nbsp;
+                  <em style={{color: "#ff2828"}}>
+                  Products
+                  </em>
                 </p>
               </div>
             ) : (
@@ -70,6 +82,7 @@ export default function SearchPage() {
           <SearchResults results={searchResults.results} />
         )}
       </div>
+      </section>
       <Footer />
     </>
   );

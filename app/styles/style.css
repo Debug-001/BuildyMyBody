@@ -30,13 +30,20 @@
   /* justify-content: space-evenly; */
 }
 
+.search-result h3 {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 900 !important;
+}
+
 .shop-nav-btn {
   background-color: #fff;
   color: black;
   border: 1px solid white;
   font-weight: 700;
   font-size: 15px;
-  padding: 0.3rem;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
 }
 
 .shop-nav-btn:hover {
@@ -101,6 +108,10 @@
   background-color: #353535 !important;
   color: white;
   transition: all 0.4s;
+}
+
+.card-content-all {
+  margin-top: 0 !important;
 }
 
 #featured-section {
@@ -390,6 +401,73 @@
 .card-recover #email-label {
   color: white;
   margin-right: 1rem !important;
+}
+
+.main-div {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#search-section {
+  padding-top: 2.65rem;
+  padding-bottom: 3rem;
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search-box {
+  border: rgb(206, 206, 206) solid 2px;
+  line-height: 40px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: black 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: hsl(0, 0%, 100%);
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.search-below-text {
+  font-weight: bolder;
+}
+
+.search-box::placeholder {
+  color: #000000;
+}
+
+.search-box:focus, input:hover {
+  outline: none;
+  border-color: rgba(81, 76, 234, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 174, 255, 0.1);
+}
+
+#search-heading-text {
+  font-weight: 900 !important;
+}
+
+#remove-product p {
+  font-weight: 500;
+}
+
+#remove-product {
+  cursor: pointer;
+  border: solid black 1px !important;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+#remove-product:hover {
+  color: white;
+  background-color: black !important;
+  transition: all 0.4s ease-in-out;
 }
 
 .recover-btn {
@@ -996,10 +1074,20 @@ p {
   font-weight: 700 !important;
 }
 
+#mrp1 {
+  font-weight: 900;
+}
+
+#mrp2,
+.text-success {
+  font-weight: 900;
+  color: #ff2828 !important;
+}
+
 .mrpprice {
   margin-left: 18rem;
   color: rgb(0, 0, 0);
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .card-body {
@@ -1312,6 +1400,7 @@ textarea::placeholder {
 }
 
 #protien-name {
+  color: #282828;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -1322,6 +1411,13 @@ textarea::placeholder {
 
 #fixed-price {
   font-weight: bold;
+}
+
+.price-cart {
+  font-size: 17px !important;
+  margin-top: 1rem;
+  font-weight: bolder;
+  color: #ff2828;
 }
 
 #savings {
@@ -1351,13 +1447,39 @@ textarea::placeholder {
   background: red;
 }
 
-.added-to-cart {
+.quantity-button {
   display: flex;
-  max-width: 20%;
-  border: 1px solid black;
+  max-width: 15%;
+  border: 0.5px solid black;
   justify-content: center;
   align-items: center;
   height: 12%;
+  border-radius: 4px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plus {
+  border: 1px solid black !important;
+  border-radius: 4px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.minus {
+  border: 1px solid black !important;
+  border-radius: 4px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.plus:hover {
+  transform: scale(1.04);
+  transition: all 0.1s ease-in-out;
+}
+
+.minus:hover {
+  transform: scale(1.04);
+  transition: all 0.1s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -1411,8 +1533,23 @@ span.num {
   font-size: 1.2rem;
 }
 
+.checkout-button {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ff2828;
+  background-color: #ff2828;
+}
+
+.checkout-button:hover {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  transition: all 0.4s ease-in-out;
+}
+
 .card-1 {
-  background: rgb(244, 242, 242);
+  padding-bottom: 1.5rem !important;
+  background: white;
   border-radius: 10px;
 }
 
@@ -1795,15 +1932,29 @@ span.num {
   border-radius: 6px;
 }
 
+.cart-item-img {
+  object-fit: contain;
+  transform: scale(1.7);
+}
+
 #all-products h1 {
   font-weight: 900 !important;
   color: #ff2828;
 }
 
-.all-btn a {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  padding: 6px;
+.all-btn button {
+  font-weight: 900 !important;
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 29, 29);
+  border: 2px solid rgb(143, 143, 143);
+  padding: 10px;
+}
+
+.all-btn button:hover {
+  color: white;
+  background-color: rgb(29, 29, 29);
+  border: #282828;
+  transition: all 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1811,10 +1962,6 @@ span.num {
     flex-direction: column;
   }
 }
-.all-btn a:hover {
-  transition: all 0.4s ease-in-out;
-}
-
 .buy-button {
   border: 1px solid white;
   color: white !important;
@@ -2182,7 +2329,9 @@ span.num {
   border: 5px double;
 }
 
-.customer-footer p:hover, .company-footer p:hover, .custom-footer a:hover {
+.customer-footer p:hover,
+.company-footer p:hover,
+.custom-footer a:hover {
   transform: scale(1.05);
   transition: all 0.4s ease-in-out;
 }
@@ -2232,7 +2381,19 @@ span.num {
   margin-bottom: 1rem;
   height: 100%;
   aspect-ratio: 1/1 !important;
-  max-width: 300px;
+  max-width: 230px;
+  background: white !important;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.all-img:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out;
 }
 
 .fixed-bottom {
@@ -2240,8 +2401,6 @@ span.num {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  /* Adjust as needed */
-  /* Add animation for a smooth appearance */
   animation: slideInUp 0.5s ease-in-out;
 }
 

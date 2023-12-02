@@ -69,8 +69,8 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <section className="main-div ">
-        <div className="container-fullwidth mx-5 mt-4">
+      <section className="main-div">
+        <div className="container-fullwidth mx-5">
           {cart?.totalQuantity > 0 ? (
             <div className="row ">
               <div

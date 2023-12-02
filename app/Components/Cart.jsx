@@ -20,11 +20,10 @@ function ItemRemoveButton({ lineIds }) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{ lineIds }}
     >
-      <button
+      <button id="remove-product"
         className="bg-white p-2 border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
         type="submit"
       >
-        {/* <AiOutlineDelete /> */}
         <p>Remove</p>
       </button>
     </CartForm>
@@ -39,9 +38,7 @@ function LineItem({ lineItem }) {
         <Link to={`/product/${merchandise.product.handle}`} className="">
           <Image
             data={merchandise.image}
-            className=""
-            style={{ objectFit: 'contain', transform: 'scale(1.4)' }}
-          //   height={110}
+            className="cart-item-img"
           />
         </Link>
       </div>
@@ -55,14 +52,14 @@ function LineItem({ lineItem }) {
           >
             {merchandise.product.title}
           </Link>
-          <Money data={lineItem.cost.totalAmount} />
+          <Money className='price-cart' data={lineItem.cost.totalAmount} />
         </div>
       </div>
 
       <div className="col-lg-2 col-md-2 col-sm-4">
         <ItemRemoveButton lineIds={[lineItem.id]} />
       </div>
-      <div className=" col-lg-3 col-md-3 added-to-cart  ">
+      <div className=" col-lg-3 col-md-3 quantity-button">
         <div className='d-flex justify-content-center align-items-center'>
           <div>
             <CartForm
@@ -117,7 +114,7 @@ export function CartSummary({ cost, checkoutUrl }) {
         </p>
         <div
           className="text-start d-flex justify-content-between mt-4"
-          id="mrp"
+          id="mrp1"
         >
           Subtotal
           {cost?.subtotalAmount?.amount ? (
@@ -128,7 +125,7 @@ export function CartSummary({ cost, checkoutUrl }) {
         </div>
         <div
           className="text-start d-flex justify-content-between mt-4"
-          id="mrp"
+          id="mrp2"
         >
           Total{' '}
           {cost?.totalAmount?.amount ? (
@@ -137,10 +134,10 @@ export function CartSummary({ cost, checkoutUrl }) {
             '-'
           )}
         </div>
-        <hr className="bg-light mt-3 " />
+        <hr className="cart-hr bg-dark w-100 mt-3 " />
         <Link
           to={checkoutUrl}
-          className="btn btn-warning w-100 text-dark font-weight-bold"
+          className="btn w-100 checkout-button"
         >
           Checkout
         </Link>

@@ -25,13 +25,13 @@ export default function ProductCard({product}) {
             <p className="card-text mt-3 text-center">
               {isDiscounted && (
                 <Money
-                  style={{color: '#ff2828', textDecoration: 'dashed'}}
-                  className="line-through opacity-50"
+                  style={{color: '#ff2828'}}
+                  className=" opacity-50"
                   withoutTrailingZeros
                   data={compareAtPrice}
                 />
               )}
-              <Money withoutTrailingZeros data={price} />
+              <Money withoutTrailingZeros data={price}/>
             </p>
           </div>
         </div>
