@@ -24,14 +24,17 @@ export default function ProductCard({product}) {
             </h3>
             <p className="card-text mt-3 text-center">
               {isDiscounted && (
-                <Money
-                  style={{color: '#ff2828'}}
-                  className=" opacity-50"
-                  withoutTrailingZeros
-                  data={compareAtPrice}
-                />
+                <p>
+                  <Money
+                    style={{color: '#ff2828'}}
+                    className=""
+                    withoutTrailingZeros
+                    as="del"
+                    data={compareAtPrice}
+                  />
+                </p>
               )}
-              <Money withoutTrailingZeros data={price}/>
+              <Money withoutTrailingZeros data={price} />
             </p>
           </div>
         </div>

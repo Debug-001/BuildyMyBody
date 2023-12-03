@@ -279,7 +279,7 @@ export default function Products() {
               </div>
               <Pagination connection={collection.products}>
                 {({nodes, NextLink, PreviousLink, isLoading}) => (
-                  <>
+                  <div style={{textAlign: 'center'}}>
                     <div className="flex items-center justify-center mt-6">
                       <PreviousLink className="btn">
                         {isLoading ? 'Loading...' : 'Load previous products'}
@@ -297,7 +297,7 @@ export default function Products() {
                         {isLoading ? 'Loading...' : 'Load more products'}
                       </NextLink>
                     </div>
-                  </>
+                  </div>
                 )}
               </Pagination>
             </div>

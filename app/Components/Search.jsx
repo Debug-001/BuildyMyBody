@@ -1,18 +1,18 @@
-import { Link, Form, useParams, useFetcher, useFetchers } from '@remix-run/react';
-import { Image, Money, Pagination } from '@shopify/hydrogen';
-import React, { useRef, useEffect } from 'react';
+import {Link, Form, useParams, useFetcher, useFetchers} from '@remix-run/react';
+import {Image, Money, Pagination} from '@shopify/hydrogen';
+import React, {useRef, useEffect} from 'react';
 import ProductCard from '~/routes/ProductCard';
 // import ProductCard from './ProductCard';
 
 export const NO_PREDICTIVE_SEARCH_RESULTS = [
-  { type: 'queries', items: [] },
-  { type: 'products', items: [] },
-  { type: 'collections', items: [] },
-  { type: 'pages', items: [] },
-  { type: 'articles', items: [] },
+  {type: 'queries', items: []},
+  {type: 'products', items: []},
+  {type: 'collections', items: []},
+  {type: 'pages', items: []},
+  {type: 'articles', items: []},
 ];
 
-export function SearchForm({ searchTerm }) {
+export function SearchForm({searchTerm}) {
   const inputRef = useRef(null);
 
   // focus the input when cmd+k is pressed
@@ -53,7 +53,7 @@ export function SearchForm({ searchTerm }) {
   );
 }
 
-export function SearchResults({ results }) {
+export function SearchResults({results}) {
   if (!results) {
     return null;
   }
@@ -97,32 +97,36 @@ export function SearchResults({ results }) {
   );
 }
 
-function SearchResultsProductsGrid({ products }) {
+function SearchResultsProductsGrid({products}) {
   return (
     <div className="container-fluid">
       <div className="search-result">
         <h3 className="text-center mt-3">Products</h3>
         <Pagination connection={products}>
-          {({ nodes, isLoading, NextLink, PreviousLink }) => {
+          {({nodes, isLoading, NextLink, PreviousLink}) => {
             const itemsMarkup = nodes.map((product) => (
-              <div className="col-12 col-lg-4 col-md-6 col-sm-12" key={product.title}>
+              <div
+                className="col-12 col-lg-4 col-md-6 col-sm-12"
+                key={product.title}
+              >
                 <ProductCard product={product} />
               </div>
             ));
 
             return (
-              <div>
-                <div>
-                  <PreviousLink>
-                    {isLoading ? 'Loading...' : <span>↑ Load previous</span>}
+              <div style={{textAlign: 'center'}}>
+                <div className="flex items-center justify-center mt-6">
+                  <PreviousLink className="btn">
+                    {isLoading ? 'Loading...' : 'Load previous products'}
                   </PreviousLink>
                 </div>
-                <div className="row">{/* Create a row for columns */}
+                <div className="row">
+                  {/* Create a row for columns */}
                   {itemsMarkup}
                 </div>
-                <div>
-                  <NextLink>
-                    {isLoading ? 'Loading...' : <span>Load more ↓</span>}
+                <div className="flex items-center justify-center mt-4">
+                  <NextLink className="btn">
+                    {isLoading ? 'Loading...' : 'Load more products'}
                   </NextLink>
                 </div>
               </div>
@@ -132,13 +136,10 @@ function SearchResultsProductsGrid({ products }) {
         <br />
       </div>
     </div>
-
-
-
   );
 }
 
-function SearchResultPageGrid({ pages }) {
+function SearchResultPageGrid({pages}) {
   return (
     <div className="search-result">
       <h2>Pages</h2>
@@ -156,7 +157,7 @@ function SearchResultPageGrid({ pages }) {
   );
 }
 
-function SearchResultArticleGrid({ articles }) {
+function SearchResultArticleGrid({articles}) {
   return (
     <div className="search-result">
       <h2>Articles</h2>
@@ -175,7 +176,11 @@ function SearchResultArticleGrid({ articles }) {
 }
 
 export function NoSearchResults() {
-  return <p className='text-center mt-3' style={{ fontSize: '1.2rem' }}>No results, try a different search.</p>;
+  return (
+    <p className="text-center mt-3" style={{fontSize: '1.2rem'}}>
+      No results, try a different search.
+    </p>
+  );
 }
 
 /**
@@ -199,8 +204,8 @@ export function PredictiveSearchForm({
       : searchAction;
     const newSearchTerm = event.target.value || '';
     fetcher.submit(
-      { q: newSearchTerm, limit: '6' },
-      { method, action: localizedAction },
+      {q: newSearchTerm, limit: '6'},
+      {method, action: localizedAction},
     );
   }
 
@@ -223,13 +228,13 @@ export function PredictiveSearchForm({
         inputRef.current.blur();
       }}
     >
-      {children({ fetchResults, inputRef, fetcher })}
+      {children({fetchResults, inputRef, fetcher})}
     </fetcher.Form>
   );
 }
 
 export function PredictiveSearchResults() {
-  const { results, totalResults, searchInputRef, searchTerm } =
+  const {results, totalResults, searchInputRef, searchTerm} =
     usePredictiveSearch();
 
   function goToSearchResult(event) {
@@ -246,7 +251,7 @@ export function PredictiveSearchResults() {
   return (
     <div className="predictive-search-results">
       <div>
-        {results.map(({ type, items }) => (
+        {results.map(({type, items}) => (
           <PredictiveSearchResult
             goToSearchResult={goToSearchResult}
             items={items}
@@ -269,7 +274,7 @@ export function PredictiveSearchResults() {
   );
 }
 
-function NoPredictiveSearchResults({ searchTerm }) {
+function NoPredictiveSearchResults({searchTerm}) {
   if (!searchTerm.current) {
     return null;
   }
@@ -280,10 +285,11 @@ function NoPredictiveSearchResults({ searchTerm }) {
   );
 }
 
-function PredictiveSearchResult({ goToSearchResult, items, searchTerm, type }) {
+function PredictiveSearchResult({goToSearchResult, items, searchTerm, type}) {
   const isSuggestions = type === 'queries';
-  const categoryUrl = `/search?q=${searchTerm.current
-    }&type=${pluralToSingularSearchType(type)}`;
+  const categoryUrl = `/search?q=${
+    searchTerm.current
+  }&type=${pluralToSingularSearchType(type)}`;
 
   return (
     <div className="predictive-search-result" key={type}>
@@ -303,7 +309,7 @@ function PredictiveSearchResult({ goToSearchResult, items, searchTerm, type }) {
   );
 }
 
-function SearchResultItem({ goToSearchResult, item }) {
+function SearchResultItem({goToSearchResult, item}) {
   return (
     <li className="predictive-search-result-item" key={item.id}>
       <Link onClick={goToSearchResult} to={item.url}>
@@ -357,7 +363,7 @@ function usePredictiveSearch() {
     searchInputRef.current = document.querySelector('input[type="search"]');
   }, []);
 
-  return { ...search, searchInputRef, searchTerm };
+  return {...search, searchInputRef, searchTerm};
 }
 
 /**
