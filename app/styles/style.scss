@@ -255,6 +255,7 @@
   /* margin-bottom: 6rem; */
   font-weight: 900 !important;
   color: #ff2828;
+  text-align: center;
 }
 
 #fitness-car {
@@ -266,6 +267,7 @@
 #fitness-car h1 {
   color: #ff2828;
   font-weight: 900 !important;
+  text-align: center;
 }
 
 .featured-details {
@@ -287,32 +289,28 @@
     font-size: 1.7rem;
   }
 
-  .custom-heading2 {
-    font-size: 1.7rem;
-  }
+  // .custom-heading2 {
+  //   font-size: 1.7rem;
+  // }
 
-  .custom-heading3 {
-    font-size: 1.7rem;
-  }
+  // .custom-heading3 {
+  //   font-size: 1.7rem;
+  // }
 }
 
 @media screen and (max-width: 510px) {
-  .custom-heading2 {
-    font-size: 1.8rem;
-  }
-
-  .custom-heading3 {
-    font-size: 2rem;
-  }
-
-  .custom-heading {
-    font-size: 2rem;
-  }
 
   .card-1 {
     margin-top: 2rem;
   }
 }
+
+@media screen and (max-width: 572px) {
+  .custom-heading {
+    font-size: 1.9rem;
+  }
+}
+
 
 .featured-details h2 {
   /* color: #ff2828; */
@@ -475,6 +473,7 @@
   color: #ff2828;
   font-weight: 900;
   text-transform: capitalize;
+
 }
 
 .card-recover p {
@@ -703,6 +702,7 @@ nav .active {
 #brand-car h1 {
   font-weight: 900 !important;
   color: #ff2828 !important;
+  text-align: center;
 }
 
 #cgap h1 {
@@ -710,6 +710,7 @@ nav .active {
   /* padding-bottom: 1rem; */
   font-weight: 900 !important;
   color: #ff2828;
+  text-align: center;
 }
 
 .btn-primary {
@@ -860,6 +861,7 @@ a.text-light:hover,
   color: #ff2828;
   font-weight: 900 !important;
   padding-top: 2rem;
+  text-align: center;
 }
 
 .order-info {

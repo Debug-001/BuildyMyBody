@@ -6,11 +6,11 @@ const Testimonials = () => {
           <div className="col-sm-12">
             <div
               className="d-flex justify-content-center mb-5"
-              style={{flexDirection: 'column', alignItems: 'center'}}
+              style={{ flexDirection: 'column', alignItems: 'center' }}
             >
               <h1
-                className="custom-heading3"
-                style={{color: '#ff2828', fontWeight: '900'}}
+                className="custom-heading3 text-center"
+                style={{ color: '#ff2828', fontWeight: '900' }}
               >
                 <em>Amazing Customer Reviews</em>
               </h1>
