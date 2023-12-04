@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-light "
+        className="navbar navbar-expand-lg  "
         style={{ background: 'black' }}
       >
         <NavLink className="navbar-brand ml-lg-4" to="/">
@@ -346,7 +346,7 @@ const Navbar = () => {
                 Subscription
               </NavLink>
             </li> */}
-            
+
             <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}

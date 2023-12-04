@@ -4,8 +4,12 @@
   --h1-font-weight: 900;
 }
 
+.navbar-toggler-icon {
+  margin-top: 2px;
+}
+
 .navbar-toggler-icon .bar {
-  background-color: white;
+  background-color: black;
   /* Set the color to white */
   display: block;
   width: 25px;
@@ -20,7 +24,7 @@
 
 /* Change the bar color on hover (optional) */
 .navbar-toggler-icon:hover .bar {
-  background-color: #ccc;
+  background-color: black;
   /* Change to a different color on hover */
 }
 
@@ -523,6 +527,7 @@ input:hover {
 
 #search-heading-text {
   font-weight: 900 !important;
+  text-align: center;
 }
 
 #remove-product p {
