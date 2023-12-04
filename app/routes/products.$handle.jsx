@@ -42,62 +42,67 @@ export default function Products() {
   return (
     <>
       <Navbar />
-      <section>
-        <div className="container-fluid d-flex  ">
+      <section id="product-section">
+        <div className="container-fluid d-flex pb-5">
           <div className="row mt-4">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
               <div className="card-filter">
-                <div className="card-content-all">
-                  {/* <hr /> */}
-                  {/* <p className="card-text">Rest filters, price,range etc.</p> */}
-
-                  <br />
-                  <br />
-                  <div className="product-top-sellers border border-dark">
-                    <h1 className="text-center">Top Sellers</h1>
-                    <hr className="mt-0" />
-                    <div>
-                      {/* <FeaturedProducts collections={data.collections} /> */}
-                    </div>
-                    {/* <BrandCa>raousel /> */}
-                    {/* <FeaturedProducts collections={data.collections} /> */}
-                  </div>
-
-                  <br />
-                  <br />
-                  <div className="product-authencity border border-dark">
-                    <h2 className="text-center">Authencity Matters</h2>
-                    <hr className="mt-0" />
-
-                    <p className="text-center m-2">
+                <div className="card-content-all ">
+                  <div className="product-authencity border border-dark pb-4">
+                    <h2 className="text-center font-weight-bolder mt-3 p-1">
+                      <em style={{color: '#282828'}}>Authencity Matters</em>
+                    </h2>
+                    <hr
+                      className="w-100"
+                      style={{border: '1.5px solid black'}}
+                    />
+                    <p
+                      className="text-center m-2"
+                      style={{fontWeight: 'bold', color: '#242424'}}
+                    >
                       The risk of receiving a counterfeit product increases when
                       customer buys it from a reseller as the product moves from
                       Importer to distributor then retailer and then to the
-                      reseller. <br /> <br /> But here at BuildMyBody we have
-                      reduced this gap between the importer and the customer.
-                      That's how BuildMyBody maintains the quality and
-                      authenticity till customer receives the final product.
+                      reseller. <br /> <br /> But here at
+                      <span style={{color: '#ff2828'}}>
+                        {' '}
+                        &nbsp; BuildMyBody
+                      </span>
+                      &nbsp; we have reduced this gap between the importer and
+                      the customer. That's how BuildMyBody maintains the quality
+                      and authenticity till customer receives the final product.
                     </p>
-                    <NavLink to={'/certificates'}>
-                      <p className="text-center"> Read More</p>
-                    </NavLink>
+                    <div className='d-flex justify-content-center pt-2
+                    '>
+                      <NavLink to={'/certificates'}>
+                        <p className="read-more-all text-center"> Read More</p>
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-9 col-md-12 " id="all-products">
-              <h1
-                style={{color: '#ff2828'}}
-                className="d-flex justify-content-center align-items-center"
+              <div
+                className="d-flex justify-content-center mb-5"
+                style={{flexDirection: 'column', alignItems: 'center'}}
               >
-                <em>{collection.title}</em>
-              </h1>
-
-              <div className="col ">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <h1 className="font-weight-bold custom-heading3">
+                  <em className="text-capitalize">
+                    {collection.title} Products
+                  </em>
+                </h1>
+                <hr className="h1-hr" />
+              </div>
+              <div className="col mt-4">
+                <nav
+                  className="navbar navbar-expand-lg navbar-light"
+                  id="all-products-navbar"
+                >
                   <a className="navbar-brand" href="#">
-                    <FcFilledFilter size={30} /> <span>Filter</span>
+                    <FcFilledFilter size={30} />{' '}
+                    <span className="font-weight-bolder">Filters</span>
                   </a>
 
                   <button

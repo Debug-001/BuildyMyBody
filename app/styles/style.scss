@@ -111,15 +111,55 @@
   transition: all 0.4s;
 }
 
-.card-content-all{
-  margin-top: 0 !important;
+.product-authencity{
+  border: 2px solid black !important;
 }
+
+.read-more-all:hover{
+  background-color: #282828;
+  border: 2px solid #282828;
+  transition: all .4s ease-in-out;
+}
+.read-more-all{
+  width: 100%;
+  color: white;
+  background-color: #ff2828;
+  padding: 7px;
+  border: 2px solid #ff2828;
+  border-radius: 4px;
+}
+
+.card-content-all{
+  margin-top: 7.8rem;
+}
+
+#all-products-navbar li a{
+color: black !important;
+}
+
+#all-products-navbar{
+background-color: #ffdada!important;
+}
+
+#all-products-navbar li a:hover{
+color: #ff2828 !important;
+font-weight: 900;
+transition: all .2s ease-in-out;
+}
+
 
 #featured-section {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-size: 100%;
 }
+
+#product-section {
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-size: 100%;
+}
+
 
 .card-content h5,
 .card-content p {
@@ -147,6 +187,45 @@
   color: #ff2828;
 }
 
+#products-section{
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-size: 100%;
+}
+
+.each-product-btn button{
+  color: white;
+  background-color: #282828;
+  border: 2px solid #282828;
+  border-radius: 4px;
+}
+
+.shop-pay-button-link, .custom-buy-now {
+  max-width: 100px !important;
+}
+
+.each-product-btn:hover button{
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #282828;
+  transition: all .4s ease-in-out;
+}
+
+.single-product-img{
+  object-fit: contain;
+  background: white !important;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.single-product-img:hover{
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 .featured-img {
   width: 100%;
   max-width: 180px;
@@ -158,10 +237,10 @@
   margin: 70px 0px 40px 0px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
 }
 
 .featured-img:hover {
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -2389,7 +2468,7 @@ span.num {
 }
 
 .scroll-to-top {
-  // color:rgb(0, 145, 255) !important;
+  color:rgb(0, 145, 255) !important;
   position: fixed;
   bottom: 20px;
   right: 20px;

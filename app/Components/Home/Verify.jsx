@@ -1,7 +1,5 @@
 import React from 'react';
-import article1 from '../../img/article1.jpg';
-// import article2 from '../../img/article2.jpg'
-// import article3 from '../../img/article3.jpg'
+import article1 from '../../img/article-1.png';
 
 const Verify = () => {
   return (

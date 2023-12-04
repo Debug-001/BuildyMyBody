@@ -142,7 +142,7 @@ function SearchResultsProductsGrid({products}) {
 function SearchResultPageGrid({pages}) {
   return (
     <div className="search-result">
-      <h2>Pages</h2>
+      {/* <h2>Pages</h2>
       <div>
         {pages?.nodes?.map((page) => (
           <div className="search-results-item" key={page.id}>
@@ -152,7 +152,7 @@ function SearchResultPageGrid({pages}) {
           </div>
         ))}
       </div>
-      <br />
+      <br /> */}
     </div>
   );
 }
@@ -160,7 +160,7 @@ function SearchResultPageGrid({pages}) {
 function SearchResultArticleGrid({articles}) {
   return (
     <div className="search-result">
-      <h2>Articles</h2>
+      {/* <h2>Articles</h2>
       <div>
         {articles?.nodes?.map((article) => (
           <div className="search-results-item" key={article.id}>
@@ -170,7 +170,7 @@ function SearchResultArticleGrid({articles}) {
           </div>
         ))}
       </div>
-      <br />
+      <br /> */}
     </div>
   );
 }
