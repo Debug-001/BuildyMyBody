@@ -13,8 +13,9 @@ function Certificates() {
 
   return (
     <>
+      <Navbar />
       <div className="main-div">
-        <Navbar />
+
         <div className="container-fluid">
           <p
             className="text ml-0 ml-lg-5 ml-md-5 certificate-heading"
