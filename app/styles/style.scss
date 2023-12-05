@@ -994,6 +994,47 @@ a.text-light:hover,
   // font-size: 1.3rem;
 }
 
+
+@keyframes wiggle {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-5px);
+  }
+  50% {
+      transform: translateX(5px);
+  }
+  75% {
+      transform: translateX(-5px);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.error-message {
+  display: none;
+  color: red;
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.error {
+  animation: slideInLeft 0.5s ease-in-out;
+  display: block;
+}
+
+
+
+
 /* Apply margin-left to the div with the "move-left" class */
 .move-left {
   margin-left: 85px;
