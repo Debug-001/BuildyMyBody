@@ -82,7 +82,7 @@ const Cart = () => {
                 )}
               </div>
 
-              <div className="col  h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 ">
+              <div className="h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 ">
                 <p className='text-center' style={{ fontSize: '1.2rem', fontWeight: '700' }}>Checkout To Apply Offers --------&#62; </p>
                 <CartSummary
                   cost={cart?.cost || 0}
