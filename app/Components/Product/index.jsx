@@ -46,7 +46,9 @@ const Product = ({data}) => {
 
   const checkPincode = async () => {
     try {
-      const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+      const response = await fetch(
+        `https://api.postalpincode.in/pincode/${pincode}`,
+      );
       const data = await response.json();
 
       console.log('API Response:', data);
@@ -153,7 +155,12 @@ const Product = ({data}) => {
                   {/* mrp section  */}
                 </div>
                 <hr className="w-100" />
-                <h4 className="mt-5 title  ">Check Delivery</h4>
+                <h4
+                  className="mt-5 title font-weight-bolder"
+                  style={{color: '#282828'}}
+                >
+                  Check Delivery
+                </h4>
                 <div className="input-group mb-3 m-lg-0 title">
                   <input
                     type="number"
@@ -181,16 +188,73 @@ const Product = ({data}) => {
                   </p>
                 </div>
 
-                <div className="return mt-2">
-                  <h4>Return Policy</h4>
+                <div className="return mt-4 mb-3">
+                  <h4 className="font-weight-bolder" style={{color: '#282828'}}>
+                    Return and Replacement Policy
+                  </h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Nulla ipsam expedita nemo totam nostrum dolorum unde
-                    doloribus cum nisi corrupti.
+                    <em
+                      className="font-weight-bolder"
+                      style={{color: '#ff2828'}}
+                    >
+                      7-days replacement policy
+                    </em>
+                  </p>
+                  <p className="mt-2">
+                    We offer you complete peace of mind while ordering at
+                    BuildMyBody - you can return all items within 7 days of
+                    receipt of goods. Please ensure however that the product is
+                    unused and the tags, boxes and other packaging is intact. If
+                    you are not satisfied with what you have bought, we'll
+                    gladly take it back within 7 days from the date of delivery.
+                    If you have paid by card then we will reverse the payment.
+                    In case of Cash on Delivery or Bank Deposits as modes of
+                    payment, we will issue a cheque in the registered name of
+                    the customer. Wrong item if received: We apologize if you
+                    have received the wrong item by mistake. This is not common
+                    and we want to resolve this as quickly as possible for you.
+                    To receive a refund or a replacement, you must return the
+                    item in the same condition you received it and within 7 days
+                    from the day on which you received the item.
+                  </p>
+                  <p className="mt-3">
+                    <span
+                      className="font-weight-bold"
+                      style={{color: '#282828'}}
+                    >
+                      Product will be only replaced if it follows the following
+                      conditions:
+                    </span>
+                    <ul className="mt-2">
+                      <li className="mt-1">
+                        1) Product should be sealed. We will not accept the
+                        return product if it finds unpacked or unsealed in any
+                        condition.
+                      </li>
+                      <li className="mt-1">
+                        2) Our 7 days Return Policy period starts on the day
+                        when you receive the product. In case, you are not
+                        satisfied with the product, you need to inform us at
+                        given email address: care@buildmybody.in within 7 days
+                        only, otherwise order will be not replaced or returned.
+                      </li>
+                      <li className="mt-1">
+                        3) We will only guarantee with the replacement of the
+                        product. Only in extreme circumstances, your product may
+                        be returned with refunds.
+                      </li>
+                    </ul>
+                  </p>
+                  <p className="font-weight-bold" style={{color: 'black'}}>
+                    For further details, feel free to
+                    <span>
+                      <Link to="/contact"> Contact Us.</Link>
+                    </span>
                   </p>
                 </div>
               </div>
 
+              {/* description tab */}
               <div
                 className="col-lg-8  d-lg-none"
                 id="product-tabs"
@@ -198,8 +262,7 @@ const Product = ({data}) => {
               >
                 <ul
                   className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                  style={{background: 'black'}}
-                  id="myTab"
+                  id="myTabContent"
                   role="tablist"
                 >
                   <li className="nav-item">
@@ -247,10 +310,11 @@ const Product = ({data}) => {
                   </li>
                 </ul>
 
+                {/* inner linked tabs content   */}
                 <div className="tab-content mt-3" id="myTabContent">
                   <div
                     className="tab-pane fade show active"
-                    id="home"
+                    id="descr-tab"
                     role="tabpanel"
                     aria-labelledby="descr-tab"
                     dangerouslySetInnerHTML={{
@@ -260,7 +324,7 @@ const Product = ({data}) => {
 
                   <div
                     className="tab-pane fade"
-                    id="profile"
+                    id="howto-tab"
                     role="tabpanel"
                     aria-labelledby="howto-tab"
                   >
@@ -411,7 +475,7 @@ const Product = ({data}) => {
 
                   <div
                     className="tab-pane fade"
-                    id="contact"
+                    id="reviews-tab"
                     role="tabpanel"
                     aria-labelledby="reviews-tab"
                   >
