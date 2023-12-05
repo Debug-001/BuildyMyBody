@@ -49,7 +49,7 @@ const Product = ({data}) => {
       const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
       const data = await response.json();
 
-      console.log('API Response:', data); // Log the response for debugging
+      console.log('API Response:', data);
 
       if (data && data[0]?.Status === 'Success') {
         const postOfficeData = data[0].PostOffice[0];
@@ -66,8 +66,6 @@ const Product = ({data}) => {
         setDeliverable(false);
         setErrorMessage('Enter a valid PIN code');
       }
-
-      // Clear error message after 0.5s
       setTimeout(() => {
         setErrorMessage('');
       }, 5000);
