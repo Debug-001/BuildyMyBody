@@ -137,7 +137,7 @@ const FLASH_DEALS_QUERY = `{
 
 const FeaturedCollections = `#graphql
   query FeaturedCollections {
-    collections(first: 10) {
+    collections(first: 6, query: "(title:Carnitine) OR (title:Whey Blend) OR (title:Glutamine) OR (title:Testosterone) OR (title:Multivitamins) OR (title:Enhanced Athelte)") {
       nodes {
         id
         title

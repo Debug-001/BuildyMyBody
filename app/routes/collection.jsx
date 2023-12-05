@@ -144,7 +144,7 @@ export default function Collection() {
                         >
                           <Link
                             className="dropdown-item"
-                            to="/products/whey-protien-1"
+                            to="/products/whey-protien"
                           >
                             Whey Protien
                           </Link>
