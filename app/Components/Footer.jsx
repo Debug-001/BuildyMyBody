@@ -26,7 +26,7 @@ const Footer = () => {
                 <div className="footer-details company-footer1">
                   <img className="footer-" src={logo} alt="" />
                   <p className="mt-3">
-                   You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
+                    You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>
                   <div className="footer-social-icons">
                     <Link to="/">
@@ -51,10 +51,10 @@ const Footer = () => {
                 <Link to="/track">
                   <p>Track My Order</p>
                 </Link>
-                <Link to="/myaccount">
+                <Link to="/account/profile">
                   <p>Account</p>
                 </Link>
-                <Link to="/myorders">
+                <Link to="/cart">
                   <p>Orders</p>
                 </Link>
                 <Link to="/blog">
