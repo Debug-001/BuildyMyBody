@@ -162,13 +162,13 @@ export default function Products() {
                           </Link>
                           <Link
                             className="dropdown-item"
-                            to="/products/whey-blend"
+                            to="/products/whey-blend-1"
                           >
                             Whey Blend
                           </Link>
                           <Link
                             className="dropdown-item"
-                            to="/products/whey-protein"
+                            to="/products/whey-protein-isolate"
                           >
                             Whey Protein Isolate{' '}
                           </Link>
@@ -236,13 +236,13 @@ export default function Products() {
                           </Link>
                           <Link
                             className="dropdown-item"
-                            to="/products/glutamine"
+                            to="/products/glutamine-1"
                           >
                             Glutamine
                           </Link>
                           <Link
                             className="dropdown-item"
-                            to="/products/Carnitine"
+                            to="/products/Carnitine-1"
                           >
                             Carnitine
                           </Link>
@@ -267,13 +267,13 @@ export default function Products() {
                         >
                           <Link
                             className="dropdown-item"
-                            to="/products/testosterone-support"
+                            to="/products/testosterone"
                           >
                             Testosterone
                           </Link>
                           <Link
                             className="dropdown-item"
-                            to="/products/multivitamins-men-women"
+                            to="/products/multivitamins-1"
                           >
                             Multivitamins
                           </Link>
