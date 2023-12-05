@@ -1,5 +1,5 @@
 import {CartForm} from '@shopify/hydrogen';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 export default function ProductForm({variantId, custom = false, button}) {
   const lines = [{merchandiseId: variantId, quantity: 1}];
@@ -12,6 +12,11 @@ export default function ProductForm({variantId, custom = false, button}) {
       setShowAlert(false);
     }, 1500);
   };
+  useEffect(() => {
+    document
+      .querySelectorAll('.flash-button')
+      .forEach((btn) => btn.addEventListener('click', showAlertAndDismiss));
+  }, []);
   return (
     <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>
       {custom ? (
