@@ -13,6 +13,7 @@
 }
 
 @media screen and (max-width: 992px) {
+
   .slick-prev:before,
   .slick-next:before {
     display: none;
@@ -289,6 +290,12 @@
   /* margin-bottom: 1.5rem;  */
   font-weight: bolder;
   color: white;
+}
+
+@media screen and (max-width:480px) {
+  .footer-details h6 {
+    font-size: 17px;
+  }
 }
 
 .footer-details p {

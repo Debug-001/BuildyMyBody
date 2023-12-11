@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6  ">
               <div className=" w-75 ">
                 <div className="footer-details company-footer1">
-                  <img className="footer-" src={logo} alt="" />
+                  <img className="w-75" src={logo} alt="" />
                   <p className="mt-3">
                     You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>

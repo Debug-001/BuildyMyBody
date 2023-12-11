@@ -12,7 +12,7 @@ const Testimonials = () => {
                 className="custom-heading3 text-center"
                 style={{ color: '#ff2828', fontWeight: '900' }}
               >
-                <em>Amazing Customer Reviews</em>
+                <em>Customer Reviews</em>
               </h1>
               <hr className="h1-hr" />
             </div>

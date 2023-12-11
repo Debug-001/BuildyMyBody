@@ -8,7 +8,7 @@
 }
 
 .navbar-toggler-icon .bar {
-  background-color: black;
+  // background-color: black;
   /* Set the color to white */
   display: block;
   width: 25px;
@@ -177,6 +177,12 @@
   color: black !important;
 }
 
+@media screen and (max-width:512px) {
+  .card-content2 h2 {
+    font-size: 1.3rem;
+  }
+}
+
 #popular {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
@@ -303,6 +309,12 @@
   // }
 }
 
+@media screen and (max-width:"480px") {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
 @media screen and (max-width: 510px) {
 
   .card-1 {
@@ -321,6 +333,13 @@
   /* color: #ff2828; */
   font-size: 2rem;
   font-weight: 600;
+  font-weight: bold;
+}
+
+@media screen and (max-width:512px) {
+  .featured-details h2 {
+    font-size: 1.3rem;
+  }
 }
 
 /* 
@@ -723,13 +742,13 @@ nav .active {
   color: black;
 }
 
-#myTab li a{
+#myTab li a {
   font-weight: bold;
   color: #282828 !important;
 }
 
 
-#myTab li a:hover{
+#myTab li a:hover {
   color: #ff2828 !important;
   transition: all .4s ease-in-out;
 
@@ -739,7 +758,7 @@ nav .active {
   padding-top: 2px;
   padding-bottom: 6px !important;
   border: 2.3px solid #292929 !important;
-  border-radius: 4px ;
+  border-radius: 4px;
   background-color: rgb(255, 255, 255) !important;
 }
 
@@ -1004,28 +1023,34 @@ a.text-light:hover,
 
 
 @keyframes wiggle {
-  0%, 100% {
-      transform: translateX(0);
+
+  0%,
+  100% {
+    transform: translateX(0);
   }
+
   25% {
-      transform: translateX(-5px);
+    transform: translateX(-5px);
   }
+
   50% {
-      transform: translateX(5px);
+    transform: translateX(5px);
   }
+
   75% {
-      transform: translateX(-5px);
+    transform: translateX(-5px);
   }
 }
 
 @keyframes slideInLeft {
   0% {
-      transform: translateX(-100%);
-      opacity: 0;
+    transform: translateX(-100%);
+    opacity: 0;
   }
+
   100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

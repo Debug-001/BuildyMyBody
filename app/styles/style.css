@@ -9,7 +9,6 @@
 }
 
 .navbar-toggler-icon .bar {
-  background-color: black;
   /* Set the color to white */
   display: block;
   width: 25px;
@@ -173,6 +172,11 @@
   color: black !important;
 }
 
+@media screen and (max-width: 512px) {
+  .card-content2 h2 {
+    font-size: 1.3rem;
+  }
+}
 #popular {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
@@ -289,6 +293,11 @@
     font-size: 1.7rem;
   }
 }
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
 @media screen and (max-width: 510px) {
   .card-1 {
     margin-top: 2rem;
@@ -303,8 +312,14 @@
   /* color: #ff2828; */
   font-size: 2rem;
   font-weight: 600;
+  font-weight: bold;
 }
 
+@media screen and (max-width: 512px) {
+  .featured-details h2 {
+    font-size: 1.3rem;
+  }
+}
 /* 
 //PROFLE */
 .add-hr {
