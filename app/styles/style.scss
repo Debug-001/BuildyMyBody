@@ -212,6 +212,16 @@
   border-radius: 4px;
 }
 
+@media screen and (max-width:512px) {
+  .each-product-btn {
+    flex-direction: column;
+  }
+
+  .each-product-btn button {
+    width: 100%;
+  }
+}
+
 .shop-pay-button-link,
 .custom-buy-now {
   max-width: 100px !important;

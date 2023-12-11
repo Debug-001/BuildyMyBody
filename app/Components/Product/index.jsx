@@ -1,15 +1,15 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import {MediaFile, ShopPayButton} from '@shopify/hydrogen-react';
-import {Image, Money} from '@shopify/hydrogen';
+import { MediaFile, ShopPayButton } from '@shopify/hydrogen-react';
+import { Image, Money } from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../img/protien.png';
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 
-const Product = ({data}) => {
+const Product = ({ data }) => {
   const {
     product,
     selectedVariant,
@@ -85,22 +85,22 @@ const Product = ({data}) => {
           <div className="container-fluid">
             <div className="row ">
               {/* image column  */}
-              <div className="col-sm-12 col-md-12 col-lg-3 mt-5">
+              <div className="col-sm-12 col-md-12 col-lg-4 mt-5">
                 <ProductCarousal media={product.media.nodes} />
               </div>
               {/* middle column  */}
               <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
                 <h2
                   className="text-lg-left text-md-center text-sm-center m-lg-0 ml-md-5 mr-md-5 ml-sm-5 mr-sm-5  "
-                  style={{fontSize: '30px', fontWeight: '800'}}
+                  style={{ fontSize: '30px', fontWeight: '800' }}
                 >
                   {product.title}
                 </h2>
-                <div className="row mt-2 d-flex">
+                <div className="row mt-2 d-flex ">
                   {/* weight/flavour section  */}
                   <div className="col ">
                     <p className="title  ">
-                      Price:<del style={{color: '#ff2828'}}>₹5,999</del>
+                      Price:<del style={{ color: '#ff2828' }}>₹5,999</del>
                     </p>
                     <h2 className="d-flex title  ">
                       MRP:
@@ -108,11 +108,11 @@ const Product = ({data}) => {
                         withoutTrailingZeros
                         data={selectedVariant.price}
                         className="ml-2"
-                        style={{fontSize: '38px'}}
+                        style={{ fontSize: '38px' }}
                       />
                       <div className="ml-3 d-flex align-items-center">
                         <p
-                          style={{color: '#ff2828'}}
+                          style={{ color: '#ff2828' }}
                           className="product-btn p-2"
                         >
                           {' '}
@@ -122,7 +122,7 @@ const Product = ({data}) => {
                     </h2>
                     <p
                       className="title  "
-                      style={{fontSize: '14px', opacity: '.7'}}
+                      style={{ fontSize: '14px', opacity: '.7' }}
                     >
                       (EMI starts from ₹211.45) | Limited Time
                       <span className=""> Free Shipping</span>
@@ -137,7 +137,7 @@ const Product = ({data}) => {
                               <ShopPayButton
                                 storeDomain={storeDomain}
                                 variantIds={[selectedVariant?.id]}
-                                className="custom-buy-now"
+                                className="custom-buy-now "
                               />
                             )}
                           </div>
@@ -157,7 +157,7 @@ const Product = ({data}) => {
                 <hr className="w-100" />
                 <h4
                   className="mt-5 title font-weight-bolder"
-                  style={{color: '#282828'}}
+                  style={{ color: '#282828' }}
                 >
                   Check Delivery
                 </h4>
@@ -180,22 +180,21 @@ const Product = ({data}) => {
                     </button>
                   </div>
                   <p
-                    className={`error-message ${
-                      deliverable ? 'success' : 'error'
-                    }`}
+                    className={`error-message ${deliverable ? 'success' : 'error'
+                      }`}
                   >
                     {errorMessage}
                   </p>
                 </div>
 
                 <div className="return mt-4 mb-3">
-                  <h4 className="font-weight-bolder" style={{color: '#282828'}}>
+                  <h4 className="font-weight-bolder" style={{ color: '#282828' }}>
                     Return and Replacement Policy
                   </h4>
                   <p>
                     <em
                       className="font-weight-bolder"
-                      style={{color: '#ff2828'}}
+                      style={{ color: '#ff2828' }}
                     >
                       7-days replacement policy
                     </em>
@@ -220,7 +219,7 @@ const Product = ({data}) => {
                   <p className="mt-3">
                     <span
                       className="font-weight-bold"
-                      style={{color: '#282828'}}
+                      style={{ color: '#282828' }}
                     >
                       Product will be only replaced if it follows the following
                       conditions:
@@ -245,7 +244,7 @@ const Product = ({data}) => {
                       </li>
                     </ul>
                   </p>
-                  <p className="font-weight-bold" style={{color: 'black'}}>
+                  <p className="font-weight-bold" style={{ color: 'black' }}>
                     For further details, feel free to
                     <span>
                       <Link to="/contact"> Contact Us.</Link>
@@ -333,7 +332,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown1}
                           className="w-100 text-left p-3"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -346,7 +345,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen1 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br /> <br />
                             <span className="answer-product">Answer</span>
                             <span data-title="Answer" className="" data-show="">
@@ -402,7 +401,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown2}
                           className="w-100 text-left p-3 mt-4"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -414,7 +413,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen2 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br />
                             <br />
                             <span className="answer-product">Answer</span>
@@ -437,7 +436,7 @@ const Product = ({data}) => {
                         <button
                           onClick={toggleDropdown3}
                           className="w-100 text-left p-3 mt-4"
-                          style={{border: '1px solid transparent'}}
+                          style={{ border: '1px solid transparent' }}
                         >
                           <span className="ques-product">Question</span>
                           <span
@@ -450,7 +449,7 @@ const Product = ({data}) => {
                           </span>
                         </button>
                         {isOpen3 && (
-                          <div style={{fontSize: '14px'}}>
+                          <div style={{ fontSize: '14px' }}>
                             <br />
                             <br />
                             <span className="answer-product">Answer</span>
@@ -496,10 +495,10 @@ const Product = ({data}) => {
               {/* featured products section   */}
               <div
                 id="third"
-                className="col-lg-3 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 "
+                className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 "
               >
                 <h4 className="d-flex justify-content-center font-weight-bolder ">
-                  <em style={{fontSize: '2rem'}}>FEATURED PRODUCTS</em>
+                  <em style={{ fontSize: '2rem' }} className='text-center'>FEATURED PRODUCTS</em>
                 </h4>
                 <div className="custom-fl-product d-md-flex flex-lg-column justify-content-around">
                   {FeaturedProductsCollection.collection.products.nodes.map(
@@ -511,7 +510,7 @@ const Product = ({data}) => {
                       >
                         <div
                           className="w-100"
-                          style={{maxWidth: '250px', margin: '0 auto'}}
+                          style={{ maxWidth: '250px', margin: '0 auto' }}
                         >
                           <Image
                             data={product.variants.nodes[0].image}
@@ -531,7 +530,7 @@ const Product = ({data}) => {
                             <Money
                               withoutTrailingZeros
                               data={product.variants?.nodes[0].price}
-                              style={{color: '#ff2828 !important'}}
+                              style={{ color: '#ff2828 !important' }}
                             />
                           </h6>
                           <div className="text-center each-product-btn">
@@ -551,12 +550,12 @@ const Product = ({data}) => {
               {/* <hr /> */}
               <div className="row">
                 <div
-                  className="col-lg-9 d-lg-block d-md-none d-sm-none pro-none"
+                  className="col-lg-10 d-lg-block d-md-none d-sm-none pro-none"
                   id="product-tabs"
                 >
                   <ul
                     className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                    style={{background: 'black'}}
+                    style={{ background: 'black' }}
                     id="myTab"
                     role="tablist"
                   >
@@ -627,7 +626,7 @@ const Product = ({data}) => {
                           <button
                             onClick={toggleDropdown1}
                             className="w-100 text-left p-3"
-                            style={{border: '1px solid transparent'}}
+                            style={{ border: '1px solid transparent' }}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -640,7 +639,7 @@ const Product = ({data}) => {
                             </span>
                           </button>
                           {isOpen1 && (
-                            <div style={{fontSize: '14px'}}>
+                            <div style={{ fontSize: '14px' }}>
                               <br /> <br />
                               <span className="answer-product">Answer</span>
                               <span
@@ -701,7 +700,7 @@ const Product = ({data}) => {
                           <button
                             onClick={toggleDropdown2}
                             className="w-100 text-left p-3 mt-4"
-                            style={{border: '1px solid transparent'}}
+                            style={{ border: '1px solid transparent' }}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -713,7 +712,7 @@ const Product = ({data}) => {
                             </span>
                           </button>
                           {isOpen2 && (
-                            <div style={{fontSize: '14px'}}>
+                            <div style={{ fontSize: '14px' }}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -741,7 +740,7 @@ const Product = ({data}) => {
                           <button
                             onClick={toggleDropdown3}
                             className="w-100 text-left p-3 mt-4"
-                            style={{border: '1px solid transparent'}}
+                            style={{ border: '1px solid transparent' }}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -754,7 +753,7 @@ const Product = ({data}) => {
                             </span>
                           </button>
                           {isOpen3 && (
-                            <div style={{fontSize: '14px'}}>
+                            <div style={{ fontSize: '14px' }}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -803,10 +802,10 @@ const Product = ({data}) => {
                 </div>
                 <div
                   id="third"
-                  className="col-lg-3 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"
+                  className="col-lg-2 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"
                 >
-                  <h4 className="d-flex justify-content-center font-weight-bolder  ">
-                    <em>RELATED PRODUCTS</em>
+                  <h4 className="d-flex justify-content-center font-weight-bolder  text-center">
+                    <em style={{ fontSize: '2rem' }}>RELATED PRODUCTS</em>
                   </h4>
                   <div className="custom-fl-product d-md-flex flex-lg-column justify-content-around">
                     {TrendingProductsCollection.collection.products.nodes.map(
@@ -820,7 +819,7 @@ const Product = ({data}) => {
                           >
                             <div
                               className="w-100"
-                              style={{maxWidth: '250px', margin: '0 auto'}}
+                              style={{ maxWidth: '250px', margin: '0 auto' }}
                             >
                               <Image
                                 data={product.variants.nodes[0].image}
@@ -840,7 +839,7 @@ const Product = ({data}) => {
                                 <Money
                                   withoutTrailingZeros
                                   data={product.variants?.nodes[0].price}
-                                  style={{color: '#ff2828 !important'}}
+                                  style={{ color: '#ff2828 !important' }}
                                 />
                               </h6>
                             </div>

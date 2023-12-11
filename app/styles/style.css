@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root {
   --h1-color: #ff2828 !important;
   --h1-font-weight: 900;
@@ -75,6 +76,7 @@
     margin-bottom: 24px;
   }
 }
+
 .h1-hr {
   width: 5rem;
   border-width: 5px;
@@ -177,6 +179,7 @@
     font-size: 1.3rem;
   }
 }
+
 #popular {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
@@ -204,6 +207,20 @@
   background-color: #282828;
   border: 2px solid #282828;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 512px) {
+  .each-product-btn {
+    flex-direction: column;
+  }
+
+  .each-product-btn button {
+    width: 100%;
+  }
+
+  .custom-buy-now {
+    margin-top: 10px;
+  }
 }
 
 .shop-pay-button-link,
@@ -284,6 +301,7 @@
     text-align: center !important;
   }
 }
+
 #featured-carousel {
   padding-bottom: 6rem !important;
 }
@@ -293,21 +311,25 @@
     font-size: 1.7rem;
   }
 }
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.9rem;
   }
 }
+
 @media screen and (max-width: 510px) {
   .card-1 {
     margin-top: 2rem;
   }
 }
+
 @media screen and (max-width: 572px) {
   .custom-heading {
     font-size: 1.9rem;
   }
 }
+
 .featured-details h2 {
   /* color: #ff2828; */
   font-size: 2rem;
@@ -320,6 +342,7 @@
     font-size: 1.3rem;
   }
 }
+
 /* 
 //PROFLE */
 .add-hr {
@@ -379,24 +402,30 @@
   .profile-btn-display {
     display: none;
   }
+
   .profile-btn-display2 {
     display: block;
   }
+
   .profile-btn-display3 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: block;
   }
 }
+
 @media screen and (min-width: 768px) {
   .profile-btn-display2 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: none;
   }
 }
+
 .card-acc {
   border: solid grey 2.5px;
   color: rgb(255, 0, 0) !important;
@@ -824,6 +853,7 @@ a.text-light:hover,
     transform: scale(0.7);
   }
 }
+
 #articles-card {
   cursor: pointer;
   padding: 1rem;
@@ -915,20 +945,25 @@ a.text-light:hover,
   .offers {
     margin-left: 10px;
   }
+
   .title {
     margin-left: 10px;
   }
+
   .pro-none {
     display: none;
   }
+
   .bmi-margin {
     margin-top: 2rem;
     text-align: center;
   }
+
   .bmi-margin2 {
     text-align: center;
   }
 }
+
 .off {
   margin-top: 2rem;
 }
@@ -976,29 +1011,37 @@ a.text-light:hover,
 }
 
 @keyframes wiggle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-5px);
   }
+
   50% {
     transform: translateX(5px);
   }
+
   75% {
     transform: translateX(-5px);
   }
 }
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .error-message {
   display: none;
   color: red;
@@ -1443,6 +1486,7 @@ p {
     border-radius: 10px;
   }
 }
+
 .login-border {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -1479,6 +1523,7 @@ p {
     margin-left: 2rem;
   }
 }
+
 /* .insta:hover {
     background: #1d022f;
 } */
@@ -1623,6 +1668,7 @@ textarea::placeholder {
     margin-top: 10px;
   }
 }
+
 .add-to-cart {
   /* margin-left: 1rem; */
   /* margin-top: 1.5rem; */
@@ -1692,9 +1738,11 @@ span.num {
   .navbar-nav {
     flex-direction: column;
   }
+
   .nav-item {
     position: relative;
   }
+
   .submenu {
     display: none;
     position: absolute;
@@ -1705,28 +1753,34 @@ span.num {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
+
   .nav-item:hover .submenu {
     display: block;
   }
+
   .submenu-content {
     padding: 10px;
     max-height: max-content;
   }
+
   .submenu-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     /* Add spacing between rows */
   }
+
   .submenu-category {
     flex-basis: calc(50% - 10px);
     /* Adjust width for two categories per row */
   }
+
   .submenu a {
     color: black;
     text-decoration: none;
   }
 }
+
 .carousel-nav-icon {
   width: 30px;
   margin-left: 25px;
@@ -1737,9 +1791,9 @@ span.num {
   margin-right: 25px;
 }
 
-.carousel-item > .col,
-.carousel-item > .col-sm,
-.carousel-item > .col-md {
+.carousel-item>.col,
+.carousel-item>.col-sm,
+.carousel-item>.col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -1864,10 +1918,12 @@ span.num {
   #address_card {
     margin-left: 0;
   }
+
   .bmi-width {
     width: 100%;
   }
 }
+
 .about-img {
   object-fit: cover;
   height: 30rem;
@@ -1902,6 +1958,7 @@ span.num {
     left: 6rem;
   }
 }
+
 .aboutus-heading2 {
   font-size: 2.9rem;
   font-weight: bold;
@@ -2078,6 +2135,7 @@ span.num {
     height: 100%;
   }
 }
+
 #all-products h1 {
   font-weight: 900 !important;
   color: #ff2828;
@@ -2103,6 +2161,7 @@ span.num {
     flex-direction: column;
   }
 }
+
 .buy-button {
   border: 1px solid white;
   color: white !important;
@@ -2269,24 +2328,30 @@ span.num {
   .profile-btn-display {
     display: none;
   }
+
   .profile-btn-display2 {
     display: block;
   }
+
   .profile-btn-display3 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: block;
   }
 }
+
 @media screen and (min-width: 768px) {
   .profile-btn-display2 {
     display: none;
   }
+
   .profile-btn-display4 {
     display: none;
   }
 }
+
 /* Add some styling for the dropdown links */
 .dropdown-content a {
   padding: 12px 16px;
@@ -2348,31 +2413,39 @@ span.num {
   .shopby-flex {
     flex-direction: column;
   }
+
   .shopby-img {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
   .cus-margin {
     margin-top: 1.7rem;
   }
+
   .left {
     margin-left: 0 !important;
   }
+
   .cus2 {
     margin-top: 1.7rem;
   }
+
   .cus3 {
     margin-top: 1rem;
   }
 }
+
 @media screen and (max-width: 992px) {
   .left {
     margin-left: 1rem;
   }
+
   .cus2 {
     margin-top: 1rem;
   }
 }
+
 .submenuuuu {
   max-height: max-content;
   /* Set the maximum height for the submenu */
@@ -2387,6 +2460,7 @@ span.num {
   min-height: 120px;
   font-size: 13px;
 }
+
 .carousel .carousel-item .row {
   max-width: 80%;
   margin: 0 auto;
@@ -2501,7 +2575,7 @@ span.num {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
+.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;
@@ -2574,10 +2648,12 @@ span.num {
   from {
     transform: translateY(100%);
   }
+
   to {
     transform: translateY(0);
   }
 }
+
 .alert-dismissible .close {
   padding: 0;
   top: 2px;
