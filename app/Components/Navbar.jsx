@@ -4,6 +4,7 @@ import on from '../img/on.png';
 import mt from '../img/mt.jpg';
 import uni from '../img/uni.jpg';
 import imgbrand from '../img/logo.png';
+import logo_replace from '../img/logo_replace.png'
 import cl from '../img/cl.jpg';
 import whey from '../img/whey.png';
 import gainer from '../img/gainer.png';
@@ -35,9 +36,42 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg  " style={{ background: 'black' }}>
-        <NavLink className="navbar-brand ml-lg-4" to="/">
-          <img className="logo_img w-50 w-md-75 w-lg-75" src={imgbrand} alt="" />
+      <nav className="navbar navbar-expand-lg  nav-flex" style={{ background: 'black' }}>
+        <div className="d-flex d-md-flex d-lg-none">
+          <div className="icon-search ">
+            <li>
+              <NavLink to="/search">
+                <BsSearch size={20} />
+              </NavLink>
+            </li>
+          </div>
+          <div className="icon-cart ml-2">
+            <li>
+              <NavLink to="/cart">
+                <FiShoppingCart size={20} />
+              </NavLink>
+            </li>
+          </div>
+          <div className="icon-cart ml-2">
+            <li>
+              <NavLink
+                to="/account"
+                className={'border border-light p-2'}
+                id="acc-icon"
+                style={{ fontSize: '.9rem' }}
+              >
+                Account
+              </NavLink>
+            </li>
+          </div>
+        </div>
+
+        <NavLink className="navbar-brand ml-lg-4 center-img d-none d-lg-block" to="/">
+          <img className="logo_img w-50 w-md-75 w-lg-75 " src={imgbrand} alt="" />
+        </NavLink>
+
+        <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none" to="/">
+          <img className="logo_img replace-img-width ml-5" src={logo_replace} alt="" />
         </NavLink>
 
         <button

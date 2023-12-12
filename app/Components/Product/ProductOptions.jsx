@@ -33,7 +33,7 @@ export default function ProductOptions({ options, selectedVariant }) {
     : paramsWithDefaults;
 
   return (
-    <div className="d-flex ">
+    <div className="d-flex justify-content-between">
       {options.map((option) => {
         if (!option.values.length) {
           return;
@@ -54,7 +54,7 @@ export default function ProductOptions({ options, selectedVariant }) {
               >
                 {currentOptionVal}
               </button>
-              <div className="dropdown-menu">
+              <div className="dropdown-menu ">
                 {option.values.map((value) => {
                   const linkParams = new URLSearchParams(searchParams);
                   const isSelected = currentOptionVal === value;

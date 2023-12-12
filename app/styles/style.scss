@@ -23,7 +23,7 @@
 
 /* Change the bar color on hover (optional) */
 .navbar-toggler-icon:hover .bar {
-  background-color: black;
+  background-color: white;
   // background-color: #ccc;
   /* Change to a different color on hover */
 }
@@ -210,9 +210,11 @@
   background-color: #282828;
   border: 2px solid #282828;
   border-radius: 4px;
+  font-size: 1.4rem;
+  // width: 100%;
 }
 
-@media screen and (max-width:512px) {
+@media screen and (max-width:576px) {
   .each-product-btn {
     flex-direction: column;
   }
@@ -605,9 +607,10 @@ input:hover {
 }
 
 #remove-product:hover {
-  color: white;
+
   background-color: black !important;
   transition: all 0.4s ease-in-out;
+  color: white !important;
 }
 
 .recover-btn {
@@ -1080,7 +1083,7 @@ a.text-light:hover,
 
 /* Apply margin-left to the div with the "move-left" class */
 .move-left {
-  margin-left: 85px;
+  // margin-left: 30px;
   /* You can adjust the margin value as needed */
 }
 
@@ -1780,6 +1783,41 @@ span.num {
   border-radius: 10px;
 }
 
+@media screen and (max-width:992px) {
+  .nav-flex {
+    flex-direction: row-reverse;
+  }
+
+  .center-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.replace-img {
+  width: 50%;
+}
+
+.replace-img-width {
+  width: 12%;
+}
+
+@media screen and (max-width:730px) {
+  .replace-img-width {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width:433px) {
+  .replace-img {
+    width: 30%;
+  }
+
+  .replace-img-width {
+    width: 40%;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     flex-direction: column;
@@ -1862,6 +1900,8 @@ span.num {
 
 .login-img {
   object-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .blog-links {

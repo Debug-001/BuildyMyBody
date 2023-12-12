@@ -96,7 +96,7 @@ const Product = ({ data }) => {
                 >
                   {product.title}
                 </h2>
-                <div className="row mt-2 d-flex ">
+                <div className="row mt-2 d-flex option-flex">
                   {/* weight/flavour section  */}
                   <div className="col ">
                     <p className="title  ">
@@ -110,7 +110,7 @@ const Product = ({ data }) => {
                         className="ml-2"
                         style={{ fontSize: '38px' }}
                       />
-                      <div className="ml-3 d-flex align-items-center">
+                      <div className="ml-3 d-flex align-items-center ">
                         <p
                           style={{ color: '#ff2828' }}
                           className="product-btn p-2"
@@ -128,7 +128,7 @@ const Product = ({ data }) => {
                       <span className=""> Free Shipping</span>
                     </p>
                     {/* show now btn  */}
-                    <div className=" mt-4 d-flex row ">
+                    {/* <div className=" mt-4 d-flex row ">
                       <div className="col">
                         <div className=" each-product-btn d-flex">
                           <ProductForm variantId={selectedVariant?.id} />
@@ -143,7 +143,7 @@ const Product = ({ data }) => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="col title  mt-4">
                     <ProductOptions
@@ -153,6 +153,22 @@ const Product = ({ data }) => {
                   </div>
 
                   {/* mrp section  */}
+                </div>
+                <div className=" mt-4 d-flex row ">
+
+                  <div className=" each-product-btn col d-flex" >
+                    <ProductForm variantId={selectedVariant?.id} />
+                    <div className="col mt-2 mt-sm-0 mt-lg-0 mt-md-0">
+                      {orderable && (
+                        <ShopPayButton
+                          storeDomain={storeDomain}
+                          variantIds={[selectedVariant?.id]}
+                          className="custom-buy-now "
+                        />
+                      )}
+                    </div>
+                  </div>
+
                 </div>
                 <hr className="w-100" />
                 <h4

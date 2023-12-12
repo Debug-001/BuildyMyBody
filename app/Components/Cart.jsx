@@ -23,7 +23,8 @@ function ItemRemoveButton({ lineIds }) {
       inputs={{ lineIds }}
     >
       <button id="remove-product"
-        className="bg-white  border-black text-black hover:text-white hover:bg-black rounded-md font-small text-center my-2 max-w-xl leading-none border w-10 h-10 flex items-center justify-center"
+        className=" text-dark mt-2 mt-lg-0 mt-md-0"
+        style={{ background: 'white' }}
         type="submit"
       >
         <p>Remove</p>
