@@ -12,6 +12,7 @@ function PrivacyPolicy() {
 					<p>
 						<strong>Collection of Information </strong>
 					</p>
+					<br />
 					<p>
 						<strong>Information You Provide to Us</strong> We collect
 						information you provide directly to us, such as when you create or
@@ -21,11 +22,13 @@ function PrivacyPolicy() {
 						payment method, items requested (for delivery services), delivery
 						notes, and other information you choose to provide.
 					</p>
+					<br />
 					<p>
 						<strong>&nbsp;Information We Collect Through Your Use</strong> When
 						you use our Services, we collect information about you in the
 						following general categories:
 					</p>
+					<br />
 					<ul>
 						<li>
 							<strong>Location Information:</strong>When you use the Services
@@ -38,6 +41,7 @@ function PrivacyPolicy() {
 							promotion. We may also derive your approximate location from your
 							IP address in order to make the app/website faster.
 						</li>
+						<br />
 						<li>
 							<strong>Contacts Information:</strong>If you permit the Build my
 							body app/website to access the address book on your device through
@@ -48,6 +52,7 @@ function PrivacyPolicy() {
 							the user is connected with network or not and to let user call in
 							case if user taps on contact number.
 						</li>
+						<br />
 						<li>
 							<strong>Transaction Information:</strong>We collect transaction
 							details related to your use of our Services, including the type of
@@ -57,6 +62,7 @@ function PrivacyPolicy() {
 							your name with that person. We may access information for data
 							caching and making the app faster.
 						</li>
+						<br />
 						<li>
 							<strong>Usage and Preference Information:</strong>We collect
 							information about how you and site visitors interact with our
@@ -64,6 +70,7 @@ function PrivacyPolicy() {
 							cases we do this through the use of cookies and similar
 							technologies that create and maintain unique identifiers.
 						</li>
+						<br />
 						<li>
 							<strong>Device Information:</strong>We may collect information
 							about your mobile device, including, for example, the hardware
@@ -75,6 +82,7 @@ function PrivacyPolicy() {
 							the device such as directly call phone numbers, read phone status
 							and identity.
 						</li>
+						<br />
 						<li>
 							<strong>Call and SMS Data:</strong>Our app/website facilitates
 							communication between Users and Customer Support. In connection
@@ -82,6 +90,7 @@ function PrivacyPolicy() {
 							time of the call or SMS message, the parties' phone numbers, and
 							the content of the SMS message and sending OTP(s).
 						</li>
+						<br />
 						<li>
 							<strong>Log Information:</strong>When you interact with the
 							Services, we collect server logs, which may include information
@@ -93,10 +102,13 @@ function PrivacyPolicy() {
 							device from sleeping, enable reading phone status and viewing
 							Wi-Fi connection.
 						</li>
+
 					</ul>
+					<br />
 					<p>
 						<strong>Use of Information</strong>
 					</p>
+					<br />
 					<p>We may use the information we collect about you to</p>
 					<ul>
 						<li>
@@ -107,33 +119,39 @@ function PrivacyPolicy() {
 							features, authenticate users, and send product updates and
 							administrative messages;
 						</li>
+						<br />
 						<li>
 							Perform internal operations, including, for example, to prevent
 							fraud and abuse of our Services; to troubleshoot software bugs and
 							operational problems; to conduct data analysis, testing, and
 							research; and to monitor and analyze usage and activity trends;
 						</li>
+						<br />
 						<li>
 							Send you communications we think will be of interest to you,
 							including information about products, services, promotions, news,
 							and events of Build my body and to process contest, sweepstake, or
 							other promotion entries and fulfill any related awards;
 						</li>
+						<br />
 						<li>
 							Personalize and improve the Services, including to provide or
 							recommend features, content, social connections, referrals, and
 							advertisements.
 						</li>
 					</ul>
+					<br />
 					<p>
 						<strong>Sharing of Information</strong>
 					</p>
+					<br />
 					<p>
 						We may share the information we collect about you as described in
 						this Statement or as described at the time of collection or sharing,
 						including as follows: Through Our Services We may share your
 						information:
 					</p>
+					<br />
 					<ul>
 						<li>
 							With third parties to provide you a service you requested through
@@ -150,6 +168,7 @@ function PrivacyPolicy() {
 							with our Services; and
 						</li>
 					</ul>
+					<br />
 					<p>Other Important Sharing We may share your information:</p>
 					<ul>
 						<li>
@@ -187,9 +206,11 @@ function PrivacyPolicy() {
 							used to identify you.
 						</li>
 					</ul>
+					<br />
 					<p>
 						<strong>Social Sharing Features</strong>
 					</p>
+					<br />
 					<p>
 						The Services may integrate with social sharing features and other
 						related tools which let you share actions you take on our Services
@@ -204,11 +225,13 @@ function PrivacyPolicy() {
 						product or service as may be determined by us in our sole
 						discretion.
 					</p>
+					<br />
 					<p>
 						<strong>
 							Analytics and Advertising Services Provided by Others
 						</strong>
 					</p>
+					<br />
 					<p>
 						We may allow others to provide audience measurement and analytics
 						services for us, to serve advertisements on our behalf across the
@@ -218,9 +241,11 @@ function PrivacyPolicy() {
 						and use our Services, as well as when you visit other online sites
 						and services.
 					</p>
+					<br />
 					<p>
 						<strong>Your Choices</strong>
 					</p>
+					<br />
 					<p>
 						Account Information You may correct your account information at any
 						time by logging into your online or in-app account. Please note that
@@ -247,9 +272,11 @@ function PrivacyPolicy() {
 						your mobile device. However, this will limit your ability to use
 						certain features of our Services.
 					</p>
+					<br />
 					<p>
 						<strong>Changes to the Statement</strong>
 					</p>
+					<br />
 					<p>
 						We may change this Statement from time to time. If we make
 						significant changes in the way we treat your personal information,

@@ -6,20 +6,20 @@ function shippingPolicy() {
   return (
     <>
       <Navbar />
-      <div style={{ background: 'black' }}>
+      <div >
         <div className="container py-4" >
-          <h1 className="py-4 text-light">Shipping Policy</h1>
+          <h1 className="py-4 text-dark">Shipping Policy</h1>
           <div>
             <p>
               <strong></strong>
-              <span className='text-light'>
+              <span className='text-dark'>
                 We deliver your order within 2-3 working days post-dispatch in A-1
                 and A-2 Metros (New Delhi, Mumbai, Kolkata, Bengaluru, Chennai,
                 Pune, Ahmedabad and Hyderabad).
               </span>
             </p>
             <p>
-              <span className='text-light'>
+              <span className='text-dark'>
                 For the rest of the cities, we deliver between 2-5 business days.
                 Delivery by ground takes a little longer than air couriers.
                 Ground-shipped orders are delivered to you between 5-7 business
@@ -29,7 +29,7 @@ function shippingPolicy() {
               </span>
             </p>
             <p>
-              <span className='text-light'>
+              <span className='text-dark'>
                 We deliver most of our orders through our courier partners such as
                 Bluedart, FedEx and Delhivery. For a few remote locations where
                 there is no other courier service available, we use India Post to
@@ -39,7 +39,7 @@ function shippingPolicy() {
             <div className="panel panel-default">
               <div id="collapse14" className="panel-collapse collapse">
                 <div className="panel-body">
-                  <p className='text-light'>
+                  <p className='text-dark'>
                     We deliver an order free of cost at your doorstep. Express
                     shipping (via air) has an additional cost of flat&nbsp;INR 230/-
                   </p>

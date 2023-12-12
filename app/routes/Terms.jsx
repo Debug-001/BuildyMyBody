@@ -23,6 +23,7 @@ function Terms() {
 						obligation to inform you and it is your responsibility to look
 						through them as often as possible.
 					</p>
+					<br />
 					<p>
 						<strong>Ownership of rights:</strong> Any use of this Website or its
 						contents, including copying or storing it or them in whole or part,
@@ -38,6 +39,7 @@ function Terms() {
 						way commercially exploit any of the content available on the
 						Website.
 					</p>
+					<br />
 					<p>
 						<strong>Accuracy of content and invitation to offer:</strong> We
 						have taken all care and precaution to try and provide accurate data
@@ -70,9 +72,11 @@ function Terms() {
 						as possible to confirm receipt of your order and email/contact you
 						again to confirm dispatch and therefore acceptance of the order.
 					</p>
+					<br />
 					<p>
 						<strong>General Terms of Use:</strong>
 					</p>
+					<br />
 					<ul>
 						<li>
 							Being eligible to use and by using the website/ transacting on the
@@ -80,6 +84,7 @@ function Terms() {
 							any purchase during the aforesaid tenure, User hereby agree to be
 							bound by this Terms of Use;
 						</li>
+						<br />
 						<li>
 							User is hereby authorized to use the website for lawful purpose
 							and for the purposes as mentioned under the policies of the Build
@@ -87,6 +92,7 @@ function Terms() {
 							strict legal action against the User in terms of the policies and
 							applicable laws;
 						</li>
+						<br />
 						<li>
 							Build my body strives to provide best prices possible on products
 							and services to users buying or availing from the Website.
@@ -95,15 +101,18 @@ function Terms() {
 							availability are subject to change without notice or any
 							consequential liability on the Build my body;
 						</li>
+						<br />
 						<li>
 							Build my body has a network of vendors and reserves the right to
 							pass on the orders to any of the vendor for fulfillment.
 						</li>
+						<br />
 						<li>
 							The prices displayed for each item under the promotion will be for
 							the respective days of promotion only and will not be applicable
 							on any date prior to or after the date of promotion;
 						</li>
+						<br />
 						<li>
 							All offers on Products shall be for limited stocks and are for
 							limited period(s). Build my body may at its sole discretion
@@ -111,10 +120,12 @@ function Terms() {
 							prior notice to the Users. In such events, the revisions, as the
 							case may be, will be updated on the website accordingly;
 						</li>
+						<br />
 						<li>
 							A promo code, once used shall not be refunded in case of
 							cancellation of order either by Customer or Build my body;
 						</li>
+						<br />
 						<li>
 							We don't run the promotions that prompt users to initiate a
 							purchase, download, or other commitment without first providing
@@ -122,6 +133,7 @@ function Terms() {
 							consent promotions that represent our services in a way that is
 							not accurate, realistic, and truthful;
 						</li>
+						<br />
 						<li>
 							All products sold on Buildmybody.in through our sellers are
 							genuine. All sellers listing their products on Buildmybody.in are
@@ -131,11 +143,13 @@ function Terms() {
 							purchase from sellers on Buildmybody.in . However this guarantee
 							is not applicable for manufacturing defects.
 						</li>
+						<br />
 						<li>
 							In case of Cash back offers extended by banks during the aforesaid
 							period, user will, in addition to this Terms of Use Policy, be
 							governed by the Terms and Conditions of the said bank/card issuer;
 						</li>
+						<br />
 						<li>
 							Build my body may, at any time due to various reasons, including
 							but not limited to technical errors, unavailability of stocks or
@@ -144,10 +158,12 @@ function Terms() {
 							final and Build my body shall not be liable for such
 							cancellation(s) whatsoever;
 						</li>
+						<br />
 						<li>
 							Expected delivery time as mentioned on website may vary than the
 							usual time of delivery;
 						</li>
+						<br />
 						<li>
 							Build my body strives to provide accurate products, services and
 							pricing information, typographical and other errors may occur. In
@@ -157,11 +173,13 @@ function Terms() {
 							discretion, either contact User for instructions or cancel the
 							User's order and will notify the User about such cancellation;
 						</li>
+						<br />
 						<li>
 							Build my body shall have right to modify the price of a product or
 							service any time, except third party products, without any prior
 							information.
 						</li>
+						<br />
 						<li>
 							Cancellation by Build my body: There may be certain orders that
 							Build my body is unable to accept and must cancel. Build my body
@@ -176,6 +194,7 @@ function Terms() {
 							identified by Build my body's credit and fraud avoidance
 							department;
 						</li>
+						<br />
 						<li>
 							Build my body may also require additional verifications or
 							information before accepting any order. Build my body will contact
@@ -184,6 +203,7 @@ function Terms() {
 							the order is cancelled after credit card has been charged, the
 							said amount will be reversed back in User's credit card account;
 						</li>
+						<br />
 						<li>
 							Cancellation by the User: In case of requests for order
 							cancellations, Build my body, at its sole discretion, reserves the
@@ -194,6 +214,7 @@ function Terms() {
 							by Build my body, Build my body shall cancel the order and refund
 							the entire amount to User within a reasonable period of time;
 						</li>
+						<br />
 						<li>
 							Build my body will not be able to cancel orders that have already
 							been processed, it is pertinent to note that the Build my body has
@@ -203,6 +224,7 @@ function Terms() {
 							any dispute on the decision taken by Build my body on
 							cancellation;
 						</li>
+						<br />
 						<li>
 							Build my body reserves the right to cancel any orders that
 							classify as 'Bulk Order' as determined by Build my body as per
@@ -224,65 +246,81 @@ function Terms() {
 								<li>Any malpractice used to place the order.</li>
 							</ol>
 						</li>
+						<br />
 						<li>
 							Build my body Reserve the right, at its sole discretion, to
 							change, modify, add or remove portions of this document, at any
 							time without any prior written notice to user;
 						</li>
+						<br />
 						<li>
 							Limitation of Liability: Under no circumstances Build my body's
 							liability shall exceed giving the User a replacement of the same
 							product/ alternate product of the same value;
 						</li>
+						<br />
 						<li>
 							These terms and conditions are subject to Indian laws and any
 							dispute shall be subject to jurisdiction of the courts in New
 							Delhi (India) only.
 						</li>
+
 					</ul>
+					<br />
 					<p>
 						<strong>Usage Restrictions:</strong>
 					</p>
+					<br />
 					<p>
 						You shall not use the Website for any of the following purposes:
 					</p>
+					<br />
 					<ul>
 						<li>
 							Disseminating any unlawful, harassing, libelous, abusive,
 							threatening, harmful, vulgar, obscene, or otherwise objectionable
 							material.
 						</li>
+						<br />
 						<li>
 							Transmitting material that encourages conduct that constitutes a
 							criminal offence, results in civil liability or otherwise breaches
 							any relevant laws, regulations or code of practice.
 						</li>
+						<br />
 						<li>
 							Gaining unauthorised access to other computer / network systems.
 						</li>
+						<br />
 						<li>
 							Interfering with any other person's use or enjoyment of the
 							Website.
 						</li>
+						<br />
 						<li>Breaching any applicable laws.</li>
+						<br />
 						<li>
 							Interfering or disrupting networks or websites connected to the
 							Website.
 						</li>
+						<br />
 						<li>
 							Making, transmitting or storing electronic copies of materials
 							protected by copyright without the permission of the owner.
 						</li>
+						<br />
 					</ul>
 					<p>
 						You are not permitted to host, display, upload, modify, publish,
 						transmit, update or share any information on the Website that
 					</p>
+					<br />
 					<ul>
 						<li>
 							belongs to another person and to which you do not have any right
 							to;
 						</li>
+						<br />
 						<li>
 							is grossly harmful, harassing, blasphemous, defamatory, obscene,
 							pornographic, paedophilic, libellous, invasive of another's
@@ -290,23 +328,30 @@ function Terms() {
 							disparaging, relating or encouraging money laundering or gambling,
 							or otherwise unlawful in any manner whatever;
 						</li>
+						<br />
 						<li>harm minors in any way;</li>
+						<br />
 						<li>
 							infringes any patent, trademark, copyright or other proprietary
 							rights;
 						</li>
+						<br />
 						<li>violates any law for the time being in force;</li>
+						<br />
 						<li>
 							deceives or misleads the addressee about the origin of such
 							messages or communicates any information which is grossly
 							offensive or menacing in nature;
 						</li>
+						<br />
 						<li>impersonate another person;</li>
+						<br />
 						<li>
 							contains software viruses or any other computer code, files or
 							programs designed to interrupt, destroy or limit the functionality
 							of any computer resource including the Website;
 						</li>
+						<br />
 						<li>
 							threatens the unity, integrity, defence, security or sovereignty
 							of India, friendly relations with foreign states, or public order
@@ -314,43 +359,55 @@ function Terms() {
 							or prevents investigation of any offence or is insulting any other
 							nation.
 						</li>
+						<br />
 					</ul>
+					<br />
 					<p>You are also prohibited from:</p>
+					<br />
 					<ul>
 						<li>
 							violating or attempting to violate the integrity or security of
 							the Website or its content;
 						</li>
+						<br />
 						<li>
 							transmitting any information (including job posts, messages and
 							hyperlinks) on or through the Website that is disruptive or
 							competitive to the provision of services by us;
 						</li>
+						<br />
 						<li>
 							intentionally submitting on the Website any incomplete, false or
 							inaccurate information;
 						</li>
+						<br />
 						<li>
 							making any unsolicited communications to other users of the
 							Website;
 						</li>
+						<br />
 						<li>
 							using any engine, software, tool, agent or other device or
 							mechanism (such as spiders, robots, avatars or intelligent agents)
 							to navigate or search the Website;
 						</li>
+						<br />
 						<li>
 							attempting to decipher, decompile, disassemble or reverse engineer
 							any part of the Website;
 						</li>
+						<br />
 						<li>
 							copying or duplicating in any manner any of the content on the
 							Website or other information available from the Website;
 						</li>
+						<br />
 						<li>
 							framing or hot linking or deep linking any content on the Website.
 						</li>
+						<br />
 					</ul>
+					<br />
 					<p>
 						<strong>Quantity Restrictions:</strong> We reserve the right, at our
 						sole discretion, to limit the quantity of items purchased per
@@ -361,6 +418,7 @@ function Terms() {
 						should such limits be applied. We also reserve the right, at our
 						sole discretion, to prohibit sales to any one as we may deem fit.
 					</p>
+					<br />
 					<p>
 						<strong>Pricing Information:</strong> While we strive to provide
 						accurate product and pricing information, pricing or typographical
@@ -391,6 +449,7 @@ function Terms() {
 						categories like diapers, baby food etc. or such other product or
 						service as may be determined by us in our sole discretion.
 					</p>
+					<br />
 					<p>
 						<strong>Indemnity:</strong> We disclaim all warranties or
 						conditions, whether expressed or implied, (including without
@@ -420,6 +479,7 @@ function Terms() {
 						property or other rights. This clause shall survive the expiry or
 						termination of this User Agreement.
 					</p>
+					<br />
 					<p>
 						<strong>Eligibility to use:</strong> Use of the Website is available
 						only to persons who can form legally binding contracts under
@@ -454,6 +514,7 @@ function Terms() {
 						understandings, or agreements and shall prevail notwithstanding any
 						variance with any other terms of any order submitted.
 					</p>
+					<br />
 					<p>
 						<strong>
 							Privacy: IF YOU DO NOT AGREE, PLEASE DO NOT USE OR ACCESS THE
@@ -528,6 +589,7 @@ function Terms() {
 						purposes that could be used to personally identify you, such as your
 						password, credit card number and bank account number.
 					</p>
+					<br />
 					<p>
 						<strong>Refusal of service:</strong> We reserve the right to refuse
 						service to anyone at any time. We reserve the right, in our sole
@@ -535,6 +597,7 @@ function Terms() {
 						computer virus, bug, or other technical problem corrupts the
 						security, or proper administration of the service.
 					</p>
+					<br />
 					<p>
 						<strong>Promotional Communications</strong> “We may also send you
 						other information about us, the Site, our other websites, our
@@ -549,6 +612,7 @@ function Terms() {
 						send you information as requested. In case of any clarity you can
 						contact our Customer support service".
 					</p>
+					<br />
 					<p>
 						<strong>Financial Details:</strong> You agree, understand and
 						confirm that the credit / debit card details or other financial
@@ -569,6 +633,7 @@ function Terms() {
 						breach of these terms and conditions in accordance with applicable
 						laws.
 					</p>
+					<br />
 					<p>
 						<strong>Communication:</strong> When you visit the Website or send
 						emails to us, you are communicating with us electronically. You
@@ -582,6 +647,7 @@ function Terms() {
 						for communication related to your order/request and other site
 						related communication.
 					</p>
+					<br />
 					<p>
 						<strong>
 							Website feedback, user comments and user generated content:
@@ -623,6 +689,7 @@ function Terms() {
 						responsibility and assume no liability for any Comments submitted by
 						you or any third party.
 					</p>
+					<br />
 					<p>
 						<strong>Copyright &amp; Trademark:</strong> We and our suppliers and
 						licensors expressly reserve all intellectual property rights in all
@@ -683,6 +750,7 @@ function Terms() {
 						logo that is identical to or substantially indistinguishable from
 						the trademark of another.
 					</p>
+					<br />
 					<p>
 						<strong>Objectionable Material:</strong> You understand that by
 						using this Website or any services provided on the Website, you may
@@ -694,6 +762,7 @@ function Terms() {
 						for Content that may be deemed offensive, indecent, or objectionable
 						to you.
 					</p>
+					<br />
 					<p>
 						<strong>Termination:</strong> This User Agreement is effective
 						unless and until terminated by either you or us. You may terminate
@@ -709,12 +778,14 @@ function Terms() {
 						well as all copies of such materials, whether made under the User
 						Agreement or otherwise. Our right to any privacy
 					</p>
+					<br />
 					<p>
 						ents shall survive any termination of this User Agreement. Any such
 						termination of the User Agreement shall not cancel your obligation
 						to pay for the product already ordered from the Website or affect
 						any liability that may have arisen under the User Agreement.
 					</p>
+					<br />
 					<p>
 						<strong>Limitation of Liability and Disclaimers:</strong> The
 						Website is provided without any warranties or guarantees and in an
@@ -776,33 +847,40 @@ function Terms() {
 							due to technical issues beyond our control.
 						</em>
 					</p>
+					<br />
 					<p>
 						<strong>Website Security:</strong>
 					</p>
+					<br />
 					<p>
 						You are prohibited from violating or attempting to violate the
 						security of the Website, including, without limitation:
 					</p>
+					<br />
 					<ul>
 						<li>
 							Accessing data not intended for you or logging onto a server or an
 							account which you are not authorized to access;
 						</li>
+						<br />
 						<li>
 							Attempting to probe, scan or test the vulnerability of a system or
 							network or to breach security or authentication measures without
 							proper authorization;
 						</li>
+						<br />
 						<li>
 							Attempting to interfere with service to any other user, host or
 							network, including, without limitation, via means of submitting a
 							virus to the Website, overloading, 'flooding,' 'spamming', 'mail
 							bombing' or 'crashing;
 						</li>
+						<br />
 						<li>
 							Sending unsolicited email, including promotions and/or advertising
 							of products or services; or
 						</li>
+						<br />
 						<li>
 							Forging any TCP/IP packet header or any part of the header
 							information in any email or newsgroup posting. Violations of
@@ -822,6 +900,7 @@ function Terms() {
 							browsers (e.g., Google Chrome, Firefox, Microsoft Internet
 							Explorer).
 						</li>
+						<br />
 						<li>
 							"We have in place appropriate technical and security measures to
 							prevent unauthorized or unlawful access to or accidental loss of
@@ -852,7 +931,9 @@ function Terms() {
 							Account. You are responsible for protecting against unauthorized
 							access to your password and to your computer."
 						</li>
+						<br />
 					</ul>
+					<br />
 					<p>
 						<strong>Entire Agreement:</strong> If any part of this User
 						Agreement is determined to be invalid or unenforceable pursuant to
@@ -870,6 +951,7 @@ function Terms() {
 						you or others does not waive its right to act with respect to
 						subsequent or similar breaches.
 					</p>
+					<br />
 					<p>
 						<strong>Contact Information:</strong> If any User has any grievance,
 						comment, question or suggestion regarding any of our
@@ -878,9 +960,11 @@ function Terms() {
 						month from the date of receipt of grievance, and who can be reached
 						by:
 					</p>
+					<br />
 					<ul>
 						<li>Sending an email to care@buildmybody.in</li>
 					</ul>
+					<br />
 					<p>
 						<strong>HEALTH RELATED INFORMATION:</strong> Health Related
 						Information. The information contained in the Web Site is provided

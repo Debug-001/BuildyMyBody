@@ -2,6 +2,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import aboutinfo from '../img/aboutus-info.jpg'
 import aboutus from '../img/about-us.jpg'
+import aboutimage from '../img/aboutimage.jpg'
 function AboutUs() {
   return (
     <>
@@ -57,7 +58,7 @@ function AboutUs() {
           <div className="row mt-5 p-4">
             <div className="col-lg-4  ">
               <img
-                src={aboutinfo}
+                src={aboutimage}
                 className="w-100 aboutus-info-img "
                 alt=""
               />

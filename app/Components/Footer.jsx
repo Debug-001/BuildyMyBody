@@ -4,6 +4,9 @@ import { CiTwitter } from 'react-icons/ci';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import { Link } from '@remix-run/react';
 import logo from '../img/logo.png'
+import { NavLink } from '@remix-run/react';
+import imgbrand from '../img/logo.png';
+
 const Footer = () => {
   return (
     <>
@@ -24,7 +27,10 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6  ">
               <div className=" w-75 ">
                 <div className="footer-details company-footer1">
-                  <img className="w-75" src={logo} alt="" />
+                  <NavLink className="" to="/">
+                    <img className="w-75 " src={imgbrand} alt="" />
+                  </NavLink>
+                  {/* <img className="w-75" src={logo} alt="" /> */}
                   <p className="mt-3">
                     You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>
@@ -65,18 +71,19 @@ const Footer = () => {
             <div className="col-lg-2 col-md-6  footer-details">
               <div className="customer-footer">
                 <h6>PRODUCTS</h6>
-                <Link to="/products">
+
+                <Link to={'/products/sports-nutrition'}>
                   <p>Sports Nutrition</p>
                 </Link>
-                <Link to="/products">
-                  <p>Essential Vitamins</p>
+                <Link to="/products/vitamin-supplements">
+                  <p>Vitamins & Supplements</p>
                 </Link>
-                <Link to="/produts">
+                <Link to="/products/enhanced-athelte">
+                  <p>Enhanced Athelte</p>
+                </Link>
+                {/* <Link to="/products">
                   <p>Weight Loss</p>
-                </Link>
-                <Link to="/products">
-                  <p>Weight Loss</p>
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -112,7 +119,7 @@ const Footer = () => {
               <Link to="/" className="">
                 Home
               </Link>
-              <Link to="/products" className="">
+              <Link to="/products/all" className="">
                 Product
               </Link>
               <Link to="/blog" className="">
