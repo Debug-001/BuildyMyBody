@@ -270,7 +270,7 @@ const Product = ({ data }) => {
               </div>
 
               {/* description tab */}
-              <div
+              {/* <div
                 className="col-lg-8  d-lg-none"
                 id="product-tabs"
                 data-aos="fade-up"
@@ -325,7 +325,7 @@ const Product = ({ data }) => {
                   </li>
                 </ul>
 
-                {/* inner linked tabs content   */}
+               
                 <div className="tab-content mt-3" id="myTabContent">
                   <div
                     className="tab-pane fade show active"
@@ -506,12 +506,12 @@ const Product = ({ data }) => {
                     stumptown. Pitchfork sustainable tofu synth chambray yr.
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* featured products section   */}
               <div
                 id="third"
-                className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 "
+                className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-none d-lg-flex "
               >
                 <h4 className="d-flex justify-content-center font-weight-bolder ">
                   <em style={{ fontSize: '2rem' }} className='text-center'>FEATURED PRODUCTS</em>
@@ -566,7 +566,7 @@ const Product = ({ data }) => {
               {/* <hr /> */}
               <div className="row">
                 <div
-                  className="col-lg-10 d-lg-block d-md-none d-sm-none pro-none"
+                  className="col-lg-10 "
                   id="product-tabs"
                 >
                   <ul
@@ -816,6 +816,59 @@ const Product = ({ data }) => {
                     </div>
                   </div>
                 </div>
+
+                <div
+                  id="third"
+                  className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-flex d-lg-none "
+                >
+                  <h4 className="d-flex justify-content-center font-weight-bolder ">
+                    <em style={{ fontSize: '2rem' }} className='text-center'>FEATURED PRODUCTS</em>
+                  </h4>
+                  <div className="custom-fl-product d-md-flex flex-lg-column justify-content-around">
+                    {FeaturedProductsCollection.collection.products.nodes.map(
+                      (product) => (
+                        <Link
+                          key={product.handle}
+                          to={`/product/${product.handle}`}
+                          className="d-flex mt-4 flex-column"
+                        >
+                          <div
+                            className="w-100"
+                            style={{ maxWidth: '250px', margin: '0 auto' }}
+                          >
+                            <Image
+                              data={product.variants.nodes[0].image}
+                              style={{
+                                objectFit: 'contain',
+                                height: '100%',
+                              }}
+                              alt={product.title}
+                              className="single-product-img"
+                            />
+                          </div>
+                          <div>
+                            <h6 className="font-weight-bold mt-4  text-center text-dark">
+                              {product.title}
+                            </h6>
+                            <h6 className="mt-3 font-weight-bold  text-center text-dark">
+                              <Money
+                                withoutTrailingZeros
+                                data={product.variants?.nodes[0].price}
+                                style={{ color: '#ff2828 !important' }}
+                              />
+                            </h6>
+                            <div className="text-center each-product-btn">
+                              <ProductForm
+                                variantId={product.variants?.nodes[0].id}
+                              />
+                            </div>
+                          </div>
+                        </Link>
+                      ),
+                    )}
+                  </div>
+                </div>
+
                 <div
                   id="third"
                   className="col-lg-2 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"

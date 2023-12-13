@@ -9,13 +9,13 @@ import AOS from 'aos';
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
 import favicon from '../public/favicon.svg';
-import {Seo} from '@shopify/hydrogen';
-import {useEffect} from 'react';
+import { Seo } from '@shopify/hydrogen';
+import { useEffect } from 'react';
 
 export const links = () => {
   return [
-    {rel: 'stylesheet', href: styles},
-    {rel: 'stylesheet', href: styles2},
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: styles2 },
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -24,13 +24,13 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    {rel: 'icon', type: 'image/svg+xml', href: favicon},
+    { rel: 'icon', type: 'image/svg+xml', href: favicon },
   ];
 };
 
-export async function loader({context}) {
+export async function loader({ context }) {
   const layout = await context.storefront.query(LAYOUT_QUERY);
-  return {layout};
+  return { layout };
 }
 
 export default function App() {
@@ -60,6 +60,8 @@ export default function App() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        {/* <link href="../node_modules/hamburgers/dist/hamburgers.css" rel="stylesheet" /> */}
+
         <Seo />
         <Meta />
         <Links />
@@ -75,6 +77,7 @@ export default function App() {
           integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
           crossOrigin="anonymous"
         ></script>
+
         <Outlet />
         <ScrollRestoration />
         <Scripts />

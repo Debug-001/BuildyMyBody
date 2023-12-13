@@ -61,6 +61,10 @@
   border: 2px solid #ff2828 !important;
 }
 
+#acc-icon2:hover {
+  color: #ff2828;
+}
+
 .shop-nav-btn #shop-nav-btn2 {
   color: black;
 }
@@ -1158,6 +1162,10 @@ me #secondbtn {
   color: black;
   font-size: 40px;
   line-height: 0;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
 }
 
 .slick-prev {

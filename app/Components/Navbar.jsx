@@ -12,6 +12,8 @@ import workout from '../img/workout.png';
 import pre from '../img/pre.png';
 import { BsSearch } from 'react-icons/bs';
 import { FiShoppingCart } from 'react-icons/fi';
+import { RiAccountCircleLine } from "react-icons/ri";
+import "../styles/hamburgers.css"
 // import { RiAccountCircleLine } from 'react-icons/ri';
 // import { BiCategoryAlt } from 'react-icons/bi'
 import { GiBodyBalance } from 'react-icons/gi';
@@ -33,6 +35,17 @@ const Navbar = () => {
     setIsNavbarCollapsed(!isNavbarCollapsed);
     setSelectedCategory(null);
   };
+  // useEffect(() => {
+  //   var hamburger = document.querySelector(".hamburger");
+  //   const handleClick = () => {
+  //     hamburger.classList.toggle("is-active");
+  //   };
+  //   hamburger.addEventListener("click", handleClick);
+
+  //   return () => {
+  //     hamburger.removeEventListener("click", handleClick);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -45,37 +58,36 @@ const Navbar = () => {
               </NavLink>
             </li>
           </div>
-          <div className="icon-cart ml-2">
+          <div className="icon-cart ml-3">
             <li>
               <NavLink to="/cart">
                 <FiShoppingCart size={20} />
               </NavLink>
             </li>
           </div>
-          <div className="icon-cart ml-2">
+          <div className="icon-cart ml-3">
             <li>
               <NavLink
                 to="/account"
-                className={'border border-light p-2'}
-                id="acc-icon"
-                style={{ fontSize: '.9rem' }}
+                id="acc-icon2"
+              // style={{ fontSize: '.9rem' }}
               >
-                Account
+                <RiAccountCircleLine size={25} />
               </NavLink>
             </li>
           </div>
         </div>
 
-        <NavLink className="navbar-brand ml-lg-4 center-img d-none d-lg-block" to="/">
-          <img className="logo_img w-50 w-md-75 w-lg-75 " src={imgbrand} alt="" />
+        <NavLink className="navbar-brand ml-lg-4 center-img d-none d-lg-block col justify-content-start" to="/">
+          <img className="logo_img w-100 " src={imgbrand} alt="" />
         </NavLink>
 
-        <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none" to="/">
-          <img className="logo_img replace-img-width ml-5" src={logo_replace} alt="" />
+        <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none ml-5" to="/">
+          <img className="logo_img replace-img-width " src={logo_replace} alt="" />
         </NavLink>
 
         <button
-          className="navbar-toggler mt-3 mt-lg-0"
+          className="navbar-toggler mt-2 mt-lg-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -96,7 +108,7 @@ const Navbar = () => {
             }`}
           id="navbarNav"
         >
-          <ul className="navbar-nav ml-auto mr-auto" style={{ gap: '.8rem' }}>
+          <ul className="navbar-nav ml-auto mr-auto col d-flex justify-content-center" style={{ gap: '.8rem' }}>
             <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
@@ -406,7 +418,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-          <ul className="navbar-nav nav-icon  ml-auto">
+          {/* <ul className="navbar-nav nav-icon  ml-auto">
             <div className="d-flex ">
               <div className="icon-search ">
                 <li>
@@ -434,8 +446,39 @@ const Navbar = () => {
                 </li>
               </div>
             </div>
-          </ul>
+          </ul> */}
         </div>
+
+
+        <ul className="navbar-nav nav-icon  ml-auto col d-none d-lg-flex justify-content-end">
+          <div className="d-flex ">
+            <div className="icon-search ">
+              <li>
+                <NavLink to="/search">
+                  <BsSearch size={25} />
+                </NavLink>
+              </li>
+            </div>
+            <div className="icon-cart ml-lg-3 ml-md-4 ml-sm-5 ml-5">
+              <li>
+                <NavLink to="/cart">
+                  <FiShoppingCart size={25} />
+                </NavLink>
+              </li>
+            </div>
+            <div className="icon-cart ml-lg-3 ml-md-4 ml-sm-5 ml-5">
+              <li>
+                <NavLink
+                  to="/account"
+                  className={'border border-light p-2'}
+                  id="acc-icon"
+                >
+                  Account
+                </NavLink>
+              </li>
+            </div>
+          </div>
+        </ul>
       </nav>
 
       <div className="container-fluid">

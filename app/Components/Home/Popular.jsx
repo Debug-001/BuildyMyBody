@@ -42,7 +42,7 @@ const Popular = () => {
               <Link to={`/products/${tile.url}`} className="col" key={tile.url}>
                 <div className="certificate-card ">
                   <p className="text-center mt-4">
-                    <img src={tile.image} className="popular-img w-75 w-lg-50 w-md-50" alt="" />
+                    <img src={tile.image} className="popular-img " alt="" style={{ width: '60%' }} />
                   </p>
                   <div className="text-center" id='popular-txt'>
                     <span
