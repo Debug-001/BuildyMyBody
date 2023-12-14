@@ -6,6 +6,12 @@ import { Link } from '@remix-run/react';
 import logo from '../img/logo.png'
 import { NavLink } from '@remix-run/react';
 import imgbrand from '../img/logo.png';
+import pay1 from '../img/pay1.jpg'
+import pay2 from '../img/pay2.jpg'
+import pay3 from '../img/pay3.jpg'
+import pay4 from '../img/pay4.jpg'
+import pay5 from '../img/pay5.jpg'
+import pay6 from '../img/pay6.jpg'
 
 const Footer = () => {
   return (
@@ -22,6 +28,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-row">
+        <div className="container">
+          <p className=' pt-2 d-flex flex-lg-row flex-column justify-content-center align-items-center' style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>Need help? Call our support team at <span className='ml-2'>+91 9494 979191</span> </p>
+        </div>
         <div className="container-fluid px-5">
           <div className="row ">
             <div className="col-lg-4 col-md-6  ">
@@ -109,9 +118,35 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+        <div className="container-fluid px-5">
+          <div className="row mt-3">
+            <div className="col">
+              <ul className='d-flex flex-wrap' style={{ gap: '.8rem' }}>
+                <li>
+                  <img src={pay1} alt="" />
+                </li>
+                <li>
+                  <img src={pay2} alt="" />
+                </li>
+                <li>
+                  <img src={pay3} alt="" />
+                </li>
+                <li>
+                  <img src={pay4} alt="" />
+                </li>
+                <li>
+                  <img src={pay5} alt="" />
+                </li>
+                <li>
+                  <img src={pay6} alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className="container-fluid px-5 mt-4">
           <div className="row footer-bg pb-5">
+
             <div className="col-sm-6 custom-footer2  ">
               <p>@2023 BuildMyBody. All Rights Reserved</p>
             </div>
@@ -122,7 +157,7 @@ const Footer = () => {
               <Link to="/products/all" className="">
                 Product
               </Link>
-              <Link to="/blog" className="">
+              <Link to="/blogs/news" className="">
                 Blog
               </Link>
               <Link to="/contact">Contact Us</Link>

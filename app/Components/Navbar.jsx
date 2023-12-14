@@ -239,7 +239,7 @@ const Navbar = () => {
               <NavLink
                 className={'nav-link active text-light'}
                 style={{ fontSize: '1rem' }}
-                to="/blog"
+                to="/blogs/news"
               >
                 Blogs
               </NavLink>

@@ -7,7 +7,9 @@ import { CartLineItems, CartSummary } from '~/Components/Cart';
 import { useState } from 'react';
 import invariant from 'tiny-invariant';
 import { FiShoppingCart } from 'react-icons/fi';
-
+export const meta = () => {
+  return [{ title: `BuildMyBody|Cart` }];
+};
 export async function action({ request, context }) {
   const { cart } = context;
 

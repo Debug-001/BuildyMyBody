@@ -3,7 +3,9 @@ import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 import blog4 from '../../img/blog-4.jpg'
 import blog6 from '../../img/blog-6.jpg'
-
+export const meta = () => {
+  return [{ title: `BuildMyBody|BMI Calculator` }];
+};
 const BMI = () => {
   const [age, setAge] = useState('');
   const [height, setHeight] = useState('');
@@ -69,6 +71,7 @@ const BMI = () => {
 
   return (
     <>
+
       <Navbar />
       <section id="bmi">
         <div className="container-fluid pb-5">

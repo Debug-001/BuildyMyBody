@@ -1,34 +1,37 @@
-import {json} from '@shopify/remix-oxygen';
-import {useLoaderData} from '@remix-run/react';
-import {Image} from '@shopify/hydrogen';
+import { json } from '@shopify/remix-oxygen';
+import { useLoaderData } from '@remix-run/react';
+import { Image } from '@shopify/hydrogen';
+import Navbar from '~/Components/Navbar';
+import { Link } from 'react-router-dom';
+import Footer from '~/Components/Footer';
 
-export const meta = ({data}) => {
-  return [{title: `Hydrogen | ${data.article.title} article`}];
+export const meta = ({ data }) => {
+  return [{ title: `Hydrogen | ${data.article.title} article` }];
 };
 
-export async function loader({params, context}) {
-  const {blogHandle, articleHandle} = params;
+export async function loader({ params, context }) {
+  const { blogHandle, articleHandle } = params;
 
   if (!articleHandle || !blogHandle) {
-    throw new Response('Not found', {status: 404});
+    throw new Response('Not found', { status: 404 });
   }
 
-  const {blog} = await context.storefront.query(ARTICLE_QUERY, {
-    variables: {blogHandle, articleHandle},
+  const { blog } = await context.storefront.query(ARTICLE_QUERY, {
+    variables: { blogHandle, articleHandle },
   });
 
   if (!blog?.articleByHandle) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
 
   const article = blog.articleByHandle;
 
-  return json({article});
+  return json({ article });
 }
 
 export default function Article() {
-  const {article} = useLoaderData();
-  const {title, image, contentHtml, author} = article;
+  const { article } = useLoaderData();
+  const { title, image, contentHtml, author } = article;
 
   const publishedDate = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -37,20 +40,27 @@ export default function Article() {
   }).format(new Date(article.publishedAt));
 
   return (
-    <div className="article">
-      <h1>
-        {title}
-        <span>
-          {publishedDate} &middot; {author?.name}
-        </span>
-      </h1>
+    <>
+      <Navbar />
+      <div className="article container">
+        <a href="/blogs/news"><p className='text-dark s' style={{ fontSize: '3rem', textDecoration: 'underline' }}>Blogs</p></a>
+        <h1 className='d-flex flex-column mt-2'>
+          {title}
+          <span style={{ fontSize: '.8rem' }}>
+            {publishedDate} &middot; {author?.name}
+          </span>
+        </h1>
 
-      {image && <Image data={image} sizes="90vw" loading="eager" />}
-      <div
-        dangerouslySetInnerHTML={{__html: contentHtml}}
-        className="article"
-      />
-    </div>
+        {image && <Image data={image} className='h-100 w-100' loading="eager" />}
+        <div
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+          className="article mt-2"
+
+        />
+
+      </div>
+      <Footer />
+    </>
   );
 }
 

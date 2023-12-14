@@ -9,6 +9,7 @@ import BrandCaraousel from './BrandCaraousel';
 import TopSelling from './TopSelling';
 import Testimonials from './Testimonials';
 import ShopByBrands from './ShopByBrands';
+import Brand from './Brand';
 import Popular from './Popular';
 import WorkoutEssential from './WorkoutEssential';
 import Authenticity from './Authenticity';
@@ -35,6 +36,7 @@ const Home = ({ data }) => {
       <ShopByBrands />
       <WhatsHot />
       <BrandCaraousel />
+      <Brand />
       <Verify />
       <Testimonials />
       <Authenticity />

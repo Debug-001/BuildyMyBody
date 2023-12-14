@@ -3,6 +3,9 @@ import Footer from '../Components/Footer';
 import aboutinfo from '../img/aboutus-info.jpg'
 import aboutus from '../img/about-us.jpg'
 import aboutimage from '../img/aboutimage.jpg'
+export const meta = () => {
+  return [{ title: `BuildMyBody|About Us` }];
+};
 function AboutUs() {
   return (
     <>

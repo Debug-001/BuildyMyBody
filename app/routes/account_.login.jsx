@@ -5,7 +5,7 @@ import Footer from '~/Components/Footer';
 import React, { useState } from 'react';
 import buildbody from '../img/buildbody.jpg';
 export const meta = () => {
-  return [{ title: 'Login' }];
+  return [{ title: 'BuildMyBody|Login' }];
 };
 export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {

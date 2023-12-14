@@ -1,19 +1,19 @@
-import {json, redirect} from '@shopify/remix-oxygen';
+import { json, redirect } from '@shopify/remix-oxygen';
 
 export const meta = () => {
-  return [{title: 'Logout'}];
+  return [{ title: 'BuildMyBody|Logout' }];
 };
 
 export async function loader() {
   return redirect('/account/login');
 }
 
-export async function action({request, context}) {
-  const {session} = context;
+export async function action({ request, context }) {
+  const { session } = context;
   session.unset('customerAccessToken');
 
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
   return redirect('/', {

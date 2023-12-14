@@ -1,16 +1,16 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, useActionData } from '@remix-run/react';
 
 export const meta = () => {
-  return [{title: 'Reset Password'}];
+  return [{ title: 'BuildMyBody|Reset Password' }];
 };
 
-export async function action({request, context, params}) {
+export async function action({ request, context, params }) {
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
-  const {id, resetToken} = params;
-  const {session, storefront} = context;
+  const { id, resetToken } = params;
+  const { session, storefront } = context;
 
   try {
     if (!id || !resetToken) {
@@ -27,10 +27,10 @@ export async function action({request, context, params}) {
       throw new Error('Please provide matching passwords');
     }
 
-    const {customerReset} = await storefront.mutate(CUSTOMER_RESET_MUTATION, {
+    const { customerReset } = await storefront.mutate(CUSTOMER_RESET_MUTATION, {
       variables: {
         id: `gid://shopify/Customer/${id}`,
-        input: {password, resetToken},
+        input: { password, resetToken },
       },
     });
 
@@ -50,9 +50,9 @@ export async function action({request, context, params}) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 }
 

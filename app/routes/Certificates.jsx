@@ -7,6 +7,9 @@ import Try from './Try';
 import certificate_emoji from '../img/certificate_emoji.png'
 import authenticity from '../img/authenticity3.jpg'
 import certificate_img from '../img/certificate_img.webp'
+export const meta = () => {
+  return [{ title: `BuildMyBody|Authenticity` }];
+};
 function Certificates() {
   const [selectedCategory, setSelectedCategory] = useState('Category1');
   const uniqueCategories = [...new Set(data.map((item) => item.category))];

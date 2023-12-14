@@ -548,7 +548,7 @@
 
 .main-div {
   padding-bottom: 3rem;
-  padding-top: 3rem;
+  // padding-top: 3rem;
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-position: center;
@@ -889,6 +889,10 @@ a.text-light:hover,
 #articles-card {
   cursor: pointer;
   padding: 1rem;
+}
+
+.article img {
+  width: 100%;
 }
 
 .card-img-articles {

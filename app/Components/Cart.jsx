@@ -4,6 +4,9 @@ import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+export const meta = () => {
+  return [{ title: `BuildMyBody|Cart` }];
+};
 export function CartLineItems({ linesObj }) {
   const lines = flattenConnection(linesObj);
   return (

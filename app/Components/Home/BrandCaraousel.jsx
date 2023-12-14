@@ -1,6 +1,6 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import article1 from '../../img/article1.jpg';
 import article2 from '../../img/article2.jpg';
@@ -31,7 +31,7 @@ const BrandCaraousel = () => {
         <div className="container-fluid pt-5 pb-5" >
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="custom-heading3">
               <em>Fitness Articles</em>
@@ -99,11 +99,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{color: '#474544 '}}>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: '#474544 '}}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -125,11 +125,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3 ">
                     {' '}
-                    <em style={{color: '#474544 '}}>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: '#474544 '}}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -150,11 +150,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{color: '#474544 '}}>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: '#474544 '}}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -175,11 +175,11 @@ const BrandCaraousel = () => {
                 <Link to="/blog" className="card-content2">
                   <p className="mt-3">
                     {' '}
-                    <em style={{color: '#474544 '}}>10th June, 2019</em>
+                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
                   </p>
                   <h2
                     className="font-weight-bold mt-2"
-                    style={{color: '#474544 '}}
+                    style={{ color: '#474544 ' }}
                   >
                     Fitness Hacks During Navratri
                   </h2>
@@ -196,7 +196,7 @@ const BrandCaraousel = () => {
         </div>
       </section>
 
-      <section id="brand-car">
+      {/* <section id="brand-car">
         <div className="container-fluid">
           <div
             className="d-flex justify-content-center"
@@ -289,7 +289,7 @@ const BrandCaraousel = () => {
             </Slider>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

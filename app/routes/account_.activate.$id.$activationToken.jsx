@@ -1,23 +1,23 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, useActionData } from '@remix-run/react';
 
 export const meta = () => {
-  return [{title: 'Activate Account'}];
+  return [{ title: 'BuildMyBody|Activate Account' }];
 };
 
-export async function loader({context}) {
+export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
     return redirect('/account');
   }
   return json({});
 }
 
-export async function action({request, context, params}) {
-  const {session, storefront} = context;
-  const {id, activationToken} = params;
+export async function action({ request, context, params }) {
+  const { session, storefront } = context;
+  const { id, activationToken } = params;
 
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
   try {
@@ -38,7 +38,7 @@ export async function action({request, context, params}) {
       throw new Error('Passwords do not match');
     }
 
-    const {customerActivate} = await storefront.mutate(
+    const { customerActivate } = await storefront.mutate(
       CUSTOMER_ACTIVATE_MUTATION,
       {
         variables: {
@@ -55,7 +55,7 @@ export async function action({request, context, params}) {
       throw new Error(customerActivate.customerUserErrors[0].message);
     }
 
-    const {customerAccessToken} = customerActivate ?? {};
+    const { customerAccessToken } = customerActivate ?? {};
     if (!customerAccessToken) {
       throw new Error('Could not activate account.');
     }
@@ -68,9 +68,9 @@ export async function action({request, context, params}) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 }
 
