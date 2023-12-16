@@ -1,10 +1,10 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import ProductForm from '../Product/ProductForm';
 
-const FlashDeals = ({collection}) => {
+const FlashDeals = ({ collection }) => {
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
   const [nav2, setNav2] = useState();
@@ -22,12 +22,15 @@ const FlashDeals = ({collection}) => {
         <div className="container-fluid  py-5">
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="font-weight-bold custom-heading3">
               <em>Trending Products </em>
             </h1>
             <hr className="h1-hr" />
+            <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
+              View All Products --------&#62;
+            </a>
           </div>
           <div className="tab-content " id="myTabContent">
             <div
@@ -90,7 +93,7 @@ const FlashDeals = ({collection}) => {
                         <Link to={`/product/${product.handle}`}>
                           <h5
                             className="d-flex justify-content-center mt-5 text-center product-title"
-                            style={{fontSize: '1.1rem'}}
+                            style={{ fontSize: '1.1rem' }}
                           >
                             {product.title}
                           </h5>

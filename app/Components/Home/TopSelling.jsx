@@ -13,17 +13,20 @@ const TopSelling = ({ collection }) => {
           className="carousel slide"
           data-ride="carousel"
         >
-           <div
-          className="d-flex justify-content-center mb-5"
-          style={{flexDirection: 'column', alignItems: 'center'}}
-        >
-          <h1 className="font-weight-bold custom-heading3">
-            <em>Featured Products </em>
-          </h1>
-          <hr className="h1-hr" />
-        </div>
+          <div
+            className="d-flex justify-content-center mb-5"
+            style={{ flexDirection: 'column', alignItems: 'center' }}
+          >
+            <h1 className="font-weight-bold custom-heading3">
+              <em>Featured Products </em>
+            </h1>
+            <hr className="h1-hr" />
+            <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
+              View All Products --------&#62;
+            </a>
+          </div>
 
-        {/* <div
+          {/* <div
             className="d-flex justify-content-center mb-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}
           >

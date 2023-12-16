@@ -24,9 +24,12 @@ const FeaturedProducts = ({ collections }) => {
           style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="font-weight-bold custom-heading1">
-            <em>Shop by Category </em>
+            <em>Shop by Category</em>
           </h1>
           <hr className="h1-hr" />
+          <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
+            View All Products --------&#62;
+          </a>
         </div>
 
         <Slider
