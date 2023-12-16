@@ -21,7 +21,7 @@ const WhatsHot = () => {
             {
                 breakpoint: 992, // Medium screens
                 settings: {
-                    slidesToShow: 2, // Show 2 slides on medium screens
+                    slidesToShow: 3, // Show 2 slides on medium screens
                 },
 
 
@@ -29,7 +29,7 @@ const WhatsHot = () => {
             {
                 breakpoint: 576, // Small screens
                 settings: {
-                    slidesToShow: 1, // Show 1 slide on small screens
+                    slidesToShow: 2, // Show 1 slide on small screens
                 },
 
             },

@@ -15,6 +15,8 @@ import WorkoutEssential from './WorkoutEssential';
 import Authenticity from './Authenticity';
 import ScrollToTop from "react-scroll-to-top";
 import WhatsHot from './WhatsHot';
+import Offers from './Offers';
+
 // import NotFound from './NotFound';
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
@@ -32,6 +34,7 @@ const Home = ({ data }) => {
       <ScrollToTop smooth color="#fff" />
       <Discount />
       <FlashDeals collection={data.flashDeals} />
+      <Offers />
       <WorkoutEssential />
       <ShopByBrands />
       <WhatsHot />
