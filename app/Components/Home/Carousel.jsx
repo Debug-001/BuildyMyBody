@@ -31,17 +31,27 @@ const Carousel = () => {
               <img className="d-block w-100" src={banner1} alt="First slide" />
             </div>
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner2} alt="Second slide" />
+              <a href="/products/protein">
+                <img className="d-block w-100" src={banner2} alt="Second slide" />
+              </a>
             </div>
             <div className="carousel-item">
               <img className="d-block w-100" src={banner3} alt="Third slide" />
             </div>
+
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner4} alt="Fourth slide" />
+              <a href="/products/gainers">
+                <img className="d-block w-100" src={banner4} alt="Fourth slide" />
+              </a>
             </div>
+
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner5} alt="Fifth slide" />
+              <a href="/products/enhanced-athelete">
+
+                <img className="d-block w-100" src={banner5} alt="Fifth slide" />
+              </a>
             </div>
+
             <div className="carousel-item">
               <img className="d-block w-100" src={banner6} alt="Sixth slide" />
             </div>
@@ -87,18 +97,33 @@ const Carousel = () => {
             {/* Add more indicators as needed */}
           </ol>
           <div className="carousel-inner">
+
             <div className="carousel-item active">
-              <img className="d-block w-100" src={banner4mob} alt="First slide" />
+              <a href="/products/gainers">
+                <img className="d-block w-100" src={banner4mob} alt="First slide" />
+              </a>
             </div>
+
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner2mob} alt="Second slide" />
+              <a href="/products/protein">
+
+                <img className="d-block w-100" src={banner2mob} alt="Second slide" />
+              </a>
             </div>
+
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner5mob} alt="Fifth slide" />
+              <a href="/products/enhanced-athelete">
+                <img className="d-block w-100" src={banner5mob} alt="Fifth slide" />
+              </a>
             </div>
+
+
             <div className="carousel-item">
-              <img className="d-block w-100" src={banner6mob} alt="Sixth slide" />
+              <a href="/products/humongous-pharma">
+                <img className="d-block w-100" src={banner6mob} alt="Sixth slide" />
+              </a>
             </div>
+
           </div>
           {/* <a
             className="carousel-control-prev"

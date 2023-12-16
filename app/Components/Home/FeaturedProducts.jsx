@@ -76,11 +76,9 @@ const FeaturedProducts = ({ collections }) => {
               id="cgap"
               key={collection.id}
             >
-              <img
-                className="card-img-top"
-                src={collection.image?.url || ''}
-                alt="Card image cap"
-              />
+              <Link to={`/products/${collection.handle}`}>
+                <img className="card-img-top" src={collection.image?.url || ''} alt="Card image cap" />
+              </Link>
               <div className="card-content">
                 <Link
                   to={`/products/${collection.handle}`}

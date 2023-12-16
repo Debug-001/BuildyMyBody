@@ -303,7 +303,7 @@ export default function Products() {
                       </PreviousLink>
                     </div>
                     <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 mt-5">
+                      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 mt-5">
                         {nodes.map((product) => (
                           <ProductCard key={product.id} product={product} />
                         ))}
