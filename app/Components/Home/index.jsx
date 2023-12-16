@@ -15,7 +15,7 @@ import WorkoutEssential from './WorkoutEssential';
 import Authenticity from './Authenticity';
 import ScrollToTop from "react-scroll-to-top";
 import WhatsHot from './WhatsHot';
-
+// import NotFound from './NotFound';
 export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
@@ -41,7 +41,7 @@ const Home = ({ data }) => {
       <Testimonials />
       <Authenticity />
       <Footer />
-
+      {/* <NotFound /> */}
     </>
   );
 };

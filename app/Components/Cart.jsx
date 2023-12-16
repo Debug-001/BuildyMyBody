@@ -4,6 +4,12 @@ import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import Slider from 'react-slick';
+import { NavLink } from '@remix-run/react';
+import React from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import pre from '../img/pre.png'
 export const meta = () => {
   return [{ title: `BuildMyBody|Cart` }];
 };
@@ -17,6 +23,31 @@ export function CartLineItems({ linesObj }) {
     </div>
   );
 }
+const settings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3, // Show 3 slides on large screens
+  arrows: false,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 992, // Medium screens
+      settings: {
+        slidesToShow: 3, // Show 2 slides on medium screens
+      },
+
+
+    },
+    {
+      breakpoint: 576, // Small screens
+      settings: {
+        slidesToShow: 2, // Show 1 slide on small screens
+      },
+
+    },
+  ],
+};
 
 function ItemRemoveButton({ lineIds }) {
   return (
@@ -58,7 +89,9 @@ function LineItem({ lineItem }) {
               id="protien-name"
             >
               {merchandise.product.title}
+              <br />
             </Link>
+            <span  >(Chocolate Charge | 8LB)</span>
             <Money className='price-cart' data={lineItem.cost.totalAmount} />
           </div>
         </div>
@@ -169,6 +202,7 @@ function LineItem({ lineItem }) {
 }
 export function CartSummary({ cost, checkoutUrl }) {
   if (!checkoutUrl) return null;
+
   return (
     <>
       <div className="card-1 px-4 py-2 mt-2">
@@ -204,6 +238,114 @@ export function CartSummary({ cost, checkoutUrl }) {
         >
           Checkout
         </Link>
+
+
+      </div>
+      <div className=' container offers'>
+        {/* <h2>
+          Special offers
+        </h2> */}
+        <div className='text-center carousel'>
+          <h1 class="font-weight-bold custom-heading3" style={{ paddingTop: '0rem' }}>
+            <em> Special offers </em>
+          </h1>
+          <p>Best deals on individual products picked for you. Shop Now to grab the deals!</p>
+        </div>
+        <Slider {...settings}>
+          {/* Your components go here */}
+          <NavLink to="/product/insane-labz-psychotic-preworkout" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Shaker @ Rs. 199 | 76% Off | MRP: 849
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Flat 50% Off</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+
+
+          <NavLink to="/product/genuine-enhanced-four" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Muesli 400g @ Rs. 285</p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/mhp-xpel" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Chocolate Peanut Butter 340 g @ Rs. 149 Only
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Flat 43% Off</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/genuine-enhanced-two" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Gym Bag @ Rs. 299 | 83% Off | MRP: 1199
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/genuine-enhanced-two" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Fish Oil 30 Caps @ Rs 279 | 30% Off | MRP: 399
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/genuine-enhanced-two" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Ashwagandha 60 Tabs @ Rs. 259 | 35% Off | MRP: 399
+
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/genuine-enhanced-two" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB-VITE 30 Tabs @ Rs 299 only | 21% Off | MRP: 379
+
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/product/genuine-enhanced-two" >
+            <div className="slider-item p-2 text-dark">
+              <img src={pre} alt="" className='w-100' />
+              <div className='mt-1'>
+                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Oats @ Rs. 79
+
+                </p>
+                {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+              </div>
+            </div>
+          </NavLink>
+        </Slider>
       </div>
     </>
   );
