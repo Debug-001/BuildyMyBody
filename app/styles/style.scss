@@ -2245,6 +2245,13 @@ span.num {
   }
 }
 
+@media screen and (max-width:'512px') {
+  .cart-item-img {
+    transform: scale(2);
+    height: 100%;
+  }
+}
+
 #all-products h1 {
   font-weight: 900 !important;
   color: #ff2828;

@@ -72,7 +72,7 @@ function LineItem({ lineItem }) {
   return (
     <>
       <div className="all-info  mt-5 row">
-        <div className="col-lg-5 col-md-5 col-sm-12  mt-2">
+        <div className=" col-3 col-lg-5 col-md-5   mt-2">
           <Link to={`/product/${merchandise.product.handle}`} className="">
             <Image
               data={merchandise.image}
@@ -81,7 +81,7 @@ function LineItem({ lineItem }) {
           </Link>
         </div>
         {/* PROTIEN INFO */}
-        <div className="col-lg-4 col-md-5 col-sm-12 ">
+        <div className=" col-9 col-lg-4 col-md-5  ">
           <div className="protien-info mt-3 mt-md-0 mt-lg-0">
             <Link
               to={`/product/${merchandise.product.handle}`}
