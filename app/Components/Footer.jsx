@@ -2,6 +2,8 @@ import { BsInstagram } from 'react-icons/bs';
 import { CiFacebook } from 'react-icons/ci';
 import { CiTwitter } from 'react-icons/ci';
 import { AiOutlineYoutube } from 'react-icons/ai';
+import { BiLogoLinkedin } from "react-icons/bi";
+
 import { Link } from '@remix-run/react';
 import logo from '../img/logo.png'
 import { NavLink } from '@remix-run/react';
@@ -44,16 +46,16 @@ const Footer = () => {
                     You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>
                   <div className="footer-social-icons">
-                    <Link to="/">
+                    <Link to="https://www.instagram.com/buildmybody.in/">
                       <BsInstagram className="icons" size={25} />
                     </Link>
-                    <Link to="/">
-                      <AiOutlineYoutube size={30} />
+                    <Link to="https://www.linkedin.com/company/buildmybody™/about/">
+                      <BiLogoLinkedin size={30} />
                     </Link>
-                    <Link to="/">
+                    {/* <Link to="/">
                       <CiTwitter size={30} />
-                    </Link>
-                    <Link to="/">
+                    </Link> */}
+                    <Link to="https://www.facebook.com/buildmybody.in">
                       <CiFacebook size={30} />
                     </Link>
                   </div>

@@ -52,7 +52,11 @@ const TopSelling = ({ collection }) => {
                       className="featured-img"
                       src={product.variants.nodes[0].image?.url || ''}
                       alt={product.variants.nodes[0].image?.altText || ''}
+
                     />
+                    <div style={{ position: 'relative', top: '44px', left: '-24px' }}>
+                      <p>25% off</p>
+                    </div>
                   </Link>
                   <div className="col featured-details ">
                     <Link to={`/product/${product.handle}`}>
