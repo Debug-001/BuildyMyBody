@@ -1,8 +1,13 @@
 import {CartForm} from '@shopify/hydrogen';
 import {useEffect, useState} from 'react';
 
-export default function ProductForm({variantId, custom = false, button}) {
-  const lines = [{merchandiseId: variantId, quantity: 1}];
+export default function ProductForm({
+  variantId,
+  custom = false,
+  button,
+  quantity = 1,
+}) {
+  const lines = [{merchandiseId: variantId, quantity: quantity}];
   const [showAlert, setShowAlert] = useState(false);
 
   const showAlertAndDismiss = () => {
