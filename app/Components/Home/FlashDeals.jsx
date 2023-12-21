@@ -100,8 +100,18 @@ const FlashDeals = ({ collection }) => {
                           >
                             {product.title}
                           </h5>
+
                           <p className="d-flex justify-content-center font-weight-bold mt-3">
-                            {product.variants.nodes[0].price.amount}
+                            <h4>
+                              {product.variants.nodes[0].compareAtPrice && (
+                                <del className="discount-text">
+                                  ₹{product.variants.nodes[0].compareAtPrice.amount}
+                                </del>
+                              )}{' '}
+                              <span className='text-dark'>
+                                ₹ {product.variants.nodes[0].price.amount}
+                              </span>
+                            </h4>
                           </p>
                         </Link>
                         <ProductForm

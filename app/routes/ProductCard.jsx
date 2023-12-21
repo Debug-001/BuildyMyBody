@@ -1,10 +1,10 @@
-import {Link} from '@remix-run/react';
-import {Image, Money} from '@shopify/hydrogen';
-import {useEffect} from 'react';
+import { Link } from '@remix-run/react';
+import { Image, Money } from '@shopify/hydrogen';
+import { useEffect } from 'react';
 import ProductForm from '~/Components/Product/ProductForm';
 
-export default function ProductCard({product}) {
-  const {price, compareAtPrice} = product.variants?.nodes[0] || {};
+export default function ProductCard({ product }) {
+  const { price, compareAtPrice } = product.variants?.nodes[0] || {};
   const isDiscounted = compareAtPrice?.amount > price?.amount;
   return (
     <div className="col productCard" data-aos="fade-up">
@@ -16,9 +16,12 @@ export default function ProductCard({product}) {
               alt={product.title}
               className="all-img"
             />{' '}
+            <div style={{ position: 'relative', left: '-46px' }}>
+              <p>25% off</p>
+            </div>
           </div>
           <div className="card-content-all mt-4">
-            <h3 className=" text-center" style={{fontSize: '1.3rem'}}>
+            <h3 className=" text-center" style={{ fontSize: '1.3rem' }}>
               {' '}
               {product.title}
             </h3>
@@ -26,7 +29,7 @@ export default function ProductCard({product}) {
               {isDiscounted && (
                 <p>
                   <Money
-                    style={{color: '#ff2828'}}
+                    style={{ color: '#ff2828' }}
                     className=""
                     withoutTrailingZeros
                     as="del"
