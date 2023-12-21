@@ -4,6 +4,8 @@ import { Image, Pagination, getPaginationVariables } from '@shopify/hydrogen';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Brand from '../Components/Home/Brand';
+import { NavLink } from '@remix-run/react';
+import Offers from '~/Components/Home/Offers';
 export const meta = ({ data }) => {
   return [{ title: `BuildMyBody|${data.blog.title}` }];
 };
@@ -38,13 +40,60 @@ export default function Blog() {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <h1>{blog.title}</h1>
+      <div className="container-fluid">
+        <div className='d-flex' style={{ justifyContent: 'space-between' }}>
+          <h1>{blog.title}</h1>
+          <NavLink to={'/certificates'}>
+            <div className='d-flex d-lg-none d-md-none ' >
+              <h1 className=''>Authenticity</h1>
+            </div>
+          </NavLink>
+        </div>
+
         <div className="blog row">
-          <div className="col-lg-4 col-md-4 ">
+          <div className="col-lg-4 col-md-4 d-none d-md-flex d-lg-flex flex-column">
+            <div className="card-filter">
+              <div className="mt-3 ">
+                <div className="product-authencity border border-dark pb-4">
+                  <h2 className="text-center font-weight-bolder mt-3 p-1">
+                    <em style={{ color: '#282828' }}>Authencity Matters</em>
+                  </h2>
+                  <hr
+                    className="w-100"
+                    style={{ border: '1.5px solid black' }}
+                  />
+                  <p
+                    className="text-center m-2"
+                    style={{ fontWeight: 'bold', color: '#242424' }}
+                  >
+                    The risk of receiving a counterfeit product increases when
+                    customer buys it from a reseller as the product moves from
+                    Importer to distributor then retailer and then to the
+                    reseller. <br /> <br /> But here at
+                    <span style={{ color: '#ff2828' }}>
+                      {' '}
+                      &nbsp; BuildMyBody
+                    </span>
+                    &nbsp; we have reduced this gap between the importer and
+                    the customer. That's how BuildMyBody maintains the quality
+                    and authenticity till customer receives the final product.
+                  </p>
+                  <div
+                    className="d-flex justify-content-center pt-2
+                    "
+                  >
+                    <NavLink to={'/certificates'}>
+                      <p className="read-more-all text-center"> Read More</p>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Offers />
 
           </div>
-          <div className="blog-grid col-lg-8 col-md-8 col-sm-12">
+          <div className="blog-grid col-lg-8 col-md-8 ">
             <Pagination connection={articles}>
               {({ nodes, isLoading, PreviousLink, NextLink }) => {
                 return (
@@ -70,6 +119,9 @@ export default function Blog() {
             </Pagination>
           </div>
         </div>
+      </div>
+      <div className='d-lg-none d-md-none'>
+        <Offers />
       </div>
       <Brand />
       <Footer />

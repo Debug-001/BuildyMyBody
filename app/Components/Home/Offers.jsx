@@ -41,98 +41,98 @@ const Offers = () => {
             </div>
             <Slider {...settings}>
                 {/* Your components go here */}
-                <NavLink to="/product/insane-labz-psychotic-preworkout" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Shaker @ Rs. 199 | 76% Off | MRP: 849
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Flat 50% Off</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Shaker @ Rs. 199 | 76% Off | MRP: 849
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Flat 50% Off</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
                     </div>
-                </NavLink>
+                </div>
 
 
-                <NavLink to="/product/genuine-enhanced-four" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Muesli 400g @ Rs. 285</p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product/mhp-xpel" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Chocolate Peanut Butter 340 g @ Rs. 149 Only
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Flat 43% Off</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product/genuine-enhanced-two" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Gym Bag @ Rs. 299 | 83% Off | MRP: 1199
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product/genuine-enhanced-two" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Fish Oil 30 Caps @ Rs 279 | 30% Off | MRP: 399
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product/genuine-enhanced-two" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Ashwagandha 60 Tabs @ Rs. 259 | 35% Off | MRP: 399
 
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
-                    </div>
-                </NavLink>
-                <NavLink to="/product/genuine-enhanced-two" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB-VITE 30 Tabs @ Rs 299 only | 21% Off | MRP: 379
 
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Muesli 400g @ Rs. 285</p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
                     </div>
-                </NavLink>
-                <NavLink to="/product/genuine-enhanced-two" >
-                    <div className="slider-item p-2 text-dark">
-                        <img src={pre} alt="" className='w-100' />
-                        <div className='mt-1'>
-                            <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Oats @ Rs. 79
+                </div>
 
-                            </p>
-                            {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
-                            {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
-                        </div>
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Chocolate Peanut Butter 340 g @ Rs. 149 Only
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Flat 43% Off</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
                     </div>
-                </NavLink>
+                </div>
+
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB Gym Bag @ Rs. 299 | 83% Off | MRP: 1199
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+                    </div>
+                </div>
+
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Fish Oil 30 Caps @ Rs 279 | 30% Off | MRP: 399
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+                    </div>
+                </div>
+
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>Ashwagandha 60 Tabs @ Rs. 259 | 35% Off | MRP: 399
+
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+                    </div>
+                </div>
+
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB-VITE 30 Tabs @ Rs 299 only | 21% Off | MRP: 379
+
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+                    </div>
+                </div>
+
+
+                <div className="slider-item p-2 text-dark">
+                    <img src={pre} alt="" className='w-100' />
+                    <div className='mt-1'>
+                        <p style={{ fontWeight: '600', fontSize: '.9rem' }}>BMB High Protein Oats @ Rs. 79
+
+                        </p>
+                        {/* <p style={{ fontSize: '.9rem' }}>Upto 40% off on Enhanced Athlete Products.</p> */}
+                        {/* <button id='flash-button' className='w-100 p-1'>Shop Now</button> */}
+                    </div>
+                </div>
+
             </Slider>
         </div>
     )

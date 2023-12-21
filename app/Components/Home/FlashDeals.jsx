@@ -88,6 +88,9 @@ const FlashDeals = ({ collection }) => {
                           src={product.variants.nodes[0].image?.url || ''}
                           alt={product.variants.nodes[0].image?.altText}
                         />
+                        <div style={{ position: 'relative', top: '25px', left: '-87px' }}>
+                          <p>25% off</p>
+                        </div>
                       </Link>
                       <div className="card-content ml-3 mr-3" id="pricing">
                         <Link to={`/product/${product.handle}`}>
