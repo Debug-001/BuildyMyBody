@@ -4,6 +4,11 @@ import { useEffect } from 'react';
 import ProductForm from '~/Components/Product/ProductForm';
 
 export default function ProductCard({ product }) {
+  function calculateDiscountPercentage(mrp, discountedPrice) {
+    const discount = ((mrp - discountedPrice) / mrp) * 100;
+    return discount.toFixed(2);
+  }
+
   const { price, compareAtPrice } = product.variants?.nodes[0] || {};
   const isDiscounted = compareAtPrice?.amount > price?.amount;
   return (
@@ -17,7 +22,15 @@ export default function ProductCard({ product }) {
               className="all-img"
             />{' '}
             <div style={{ position: 'relative', left: '-46px' }}>
-              <p>25% off</p>
+            <p style={{color:"#ff2828"}}>
+                        {' '}
+                        {calculateDiscountPercentage(
+                          product.variants.nodes[0]?.compareAtPrice?.amount ||
+                            0,
+                          product.variants.nodes[0]?.price?.amount || 0,
+                        )}
+                        %
+                      </p>
             </div>
           </div>
           <div className="card-content-all mt-4">

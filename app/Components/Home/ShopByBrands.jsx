@@ -10,16 +10,13 @@ const ShopByBrands = () => {
     <>
       <section id="shopbb" className="container">
         <div
-          className="d-flex justify-content-center mb-5"
+          className="d-flex justify-content-center mb-5 pt-5"
           style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="custom-heading3">
             <em>Shop By Brands</em>
           </h1>
           <hr className="h1-hr" />
-          <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
-            View All Products --------&#62;
-          </a>
         </div>
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12 mb-4  mb-lg-0 mb-md-0 ">

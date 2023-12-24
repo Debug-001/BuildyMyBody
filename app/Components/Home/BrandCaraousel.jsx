@@ -28,7 +28,7 @@ const BrandCaraousel = () => {
   return (
     <>
       <section id="fitness-car">
-        <div className="container-fluid pt-5 pb-5" >
+        <div className="container-fluid pt-5 pb-5 mt-5 mb-3" >
           <div
             className="d-flex justify-content-center mb-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}
@@ -37,9 +37,6 @@ const BrandCaraousel = () => {
               <em>Fitness Articles</em>
             </h1>
             <hr className="h1-hr" />
-            <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
-              View All Products --------&#62;
-            </a>
           </div>
           <div className="fitness-slider">
             <Slider

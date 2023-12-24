@@ -75,6 +75,8 @@
   color: black;
 }
 
+
+
 .shop-nav-btn:hover #shop-nav-btn2 {
   color: white;
 }
@@ -212,6 +214,8 @@
   background-size: cover;
   background-size: 100%;
 }
+
+
 
 .each-product-btn button {
   color: white;
@@ -480,6 +484,11 @@
   font-size: 1.2rem !important;
 }
 
+.logo_img{
+  width: 75% !important;
+}
+
+
 .btn-logout {
   padding: 10px 10px 10px 10px;
   background-color: #ff2828;
@@ -565,6 +574,18 @@
   // height: 100%;
 }
 
+#shopb{
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.custom-heading4{
+  color: #ff2828;
+  font-weight: 900 !important;
+}
 
 .search-box {
   border: rgb(206, 206, 206) solid 2px;

@@ -79,7 +79,7 @@ const Navbar = () => {
         </div>
 
         <NavLink className="navbar-brand ml-lg-4 center-img d-none d-lg-block col justify-content-start" to="/">
-          <img className="logo_img w-100 " src={imgbrand} alt="" />
+          <img className="logo_img w-80 " src={imgbrand} alt="" />
         </NavLink>
 
         <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none ml-5" to="/">

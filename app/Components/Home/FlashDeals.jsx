@@ -4,7 +4,15 @@ import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import ProductForm from '../Product/ProductForm';
 
+
 const FlashDeals = ({ collection }) => {
+
+  function calculateDiscountPercentage(mrp, discountedPrice) {
+    const discount = ((mrp - discountedPrice) / mrp) * 100;
+    return discount.toFixed(2);
+  }
+
+
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
   const [nav2, setNav2] = useState();
@@ -28,9 +36,6 @@ const FlashDeals = ({ collection }) => {
               <em>Trending Products </em>
             </h1>
             <hr className="h1-hr" />
-            <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
-              View All Products --------&#62;
-            </a>
           </div>
           <div className="tab-content " id="myTabContent">
             <div
@@ -89,7 +94,15 @@ const FlashDeals = ({ collection }) => {
                           alt={product.variants.nodes[0].image?.altText}
                         />
                         <div style={{ position: 'relative', top: '25px', left: '-87px' }}>
-                          <p>25% off</p>
+                        <p style={{color:"#ff2828"}}>
+                        {' '}
+                        {calculateDiscountPercentage(
+                          product.variants.nodes[0]?.compareAtPrice?.amount ||
+                            0,
+                          product.variants.nodes[0]?.price?.amount || 0,
+                        )}
+                        %
+                      </p>
                         </div>
                       </Link>
                       <div className="card-content ml-3 mr-3" id="pricing">

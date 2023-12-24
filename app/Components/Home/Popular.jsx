@@ -36,9 +36,6 @@ const Popular = () => {
               <em>Popular in Sports Nutrition</em>
             </h1>
             <hr className="h1-hr" />
-            <a href="/products/all" className='text-dark' style={{ fontSize: '1.2rem', textDecoration: 'underline' }}>
-              View All Products --------&#62;
-            </a>
           </div>
           <div className="row row-cols-2 row-cols-md-2 row-cols-lg-3">
             {tiles.map((tile) => (
