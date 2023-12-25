@@ -83,28 +83,32 @@ const FlashDeals = ({ collection }) => {
                 >
                   {products.nodes.map((product) => (
                     <div className="card" id="trend-card" key={product.id}>
-                      <Link
-                        to={`/product/${product.handle}`}
-                        className="d-flex justify-content-center"
-                        id="trending-card-container"
-                      >
-                        <img
-                          className="card-img-trending"
-                          src={product.variants.nodes[0].image?.url || ''}
-                          alt={product.variants.nodes[0].image?.altText}
-                        />
-                        <div style={{ position: 'relative', top: '25px', left: '-87px' }}>
-                        <p style={{color:"#ff2828"}}>
-                        {' '}
-                        {calculateDiscountPercentage(
-                          product.variants.nodes[0]?.compareAtPrice?.amount ||
-                            0,
-                          product.variants.nodes[0]?.price?.amount || 0,
-                        )}
-                        %
-                      </p>
-                        </div>
-                      </Link>
+                      <div>
+                        <Link
+                          to={`/product/${product.handle}`}
+                          className="d-flex justify-content-center"
+                          id="trending-card-container"
+                          style={{ position: 'relative' }}
+                        >
+                          <img
+                            className="card-img-trending"
+                            src={product.variants.nodes[0].image?.url || ''}
+                            alt={product.variants.nodes[0].image?.altText}
+                          />
+                          <div style={{ position: 'absolute', marginLeft: '9rem', top: '20px' }}>
+                            <p style={{ color: "#ff2828" }}>
+                              {' '}
+                              {calculateDiscountPercentage(
+                                product.variants.nodes[0]?.compareAtPrice?.amount ||
+                                0,
+                                product.variants.nodes[0]?.price?.amount || 0,
+                              )}
+                              %
+                            </p>
+                          </div>
+                        </Link>
+                      </div>
+
                       <div className="card-content ml-3 mr-3" id="pricing">
                         <Link to={`/product/${product.handle}`}>
                           <h5
@@ -147,7 +151,7 @@ const FlashDeals = ({ collection }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
     </>
   );
 };

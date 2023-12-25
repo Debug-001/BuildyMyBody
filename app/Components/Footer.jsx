@@ -20,11 +20,20 @@ const Footer = () => {
     <>
       <div>
         <div className="container" >
-          <div className="footer-top-section d-flex align-items-center  ">
-            <p style={{ color: '#474544' }}>100% Satisfaction</p>
-            <p style={{ color: '#474544' }}>Save 20% Every Time</p>
-            <p style={{ color: '#474544' }}>Fast Free Shipment</p>
-            <p style={{ color: '#474544' }}>Gift and Vouchers</p>
+          <div className="footer-top-section row">
+            <div className='col-6 col-md-3 col-lg-3'>
+              <p style={{ color: '#474544' }}>100% Satisfaction</p>
+            </div>
+            <div className='col-6 col-md-3 col-lg-3'>
+              <p style={{ color: '#474544' }} className=' '>Save 20% Every Time</p>
+            </div>
+            <div className='col-6 col-md-3 col-lg-3'>
+              <p style={{ color: '#474544' }} className=''>Fast Free Shipment</p>
+            </div>
+            <div className='col-6 col-md-3 col-lg-3'>
+              <p style={{ color: '#474544' }} className=''>Gift and Vouchers</p>
+            </div>
+
           </div>
         </div>
       </div>

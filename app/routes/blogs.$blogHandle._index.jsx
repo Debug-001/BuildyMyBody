@@ -41,7 +41,7 @@ export default function Blog() {
     <>
       <Navbar />
       <div className="container-fluid">
-        <div className='d-flex' style={{ justifyContent: 'space-between' }}>
+        <div className='d-flex flex-wrap' style={{ justifyContent: 'space-between' }}>
           <h1>{blog.title}</h1>
           <NavLink to={'/certificates'}>
             <div className='d-flex d-lg-none d-md-none ' >

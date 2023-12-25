@@ -82,8 +82,8 @@ const Navbar = () => {
           <img className="logo_img w-80 " src={imgbrand} alt="" />
         </NavLink>
 
-        <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none ml-5" to="/">
-          <img className="logo_img replace-img-width " src={logo_replace} alt="" />
+        <NavLink className="navbar-brand replace-img d-flex justify-content-center d-lg-none ml-0 ml-lg-5 ml-md-5 ml-sm-5" to="/">
+          <img className=" replace-img-width " src={logo_replace} alt="" />
         </NavLink>
 
         <button

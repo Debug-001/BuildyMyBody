@@ -1,11 +1,11 @@
-import {Link, useLoaderData} from '@remix-run/react';
-import {useEffect} from 'react';
+import { Link, useLoaderData } from '@remix-run/react';
+import { useEffect } from 'react';
 import ProductForm from '../Product/ProductForm';
 import data from '~/routes/data';
 
-const TopSelling = ({collection}) => {
+const TopSelling = ({ collection }) => {
 
-  
+
   function calculateDiscountPercentage(mrp, discountedPrice) {
     const discount = ((mrp - discountedPrice) / mrp) * 100;
     return discount.toFixed(2);
@@ -21,7 +21,7 @@ const TopSelling = ({collection}) => {
         >
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="font-weight-bold custom-heading3">
               <em>Featured Products </em>
@@ -40,6 +40,7 @@ const TopSelling = ({collection}) => {
                   <Link
                     to={`/product/${product.handle}`}
                     className="col-md-5 col-lg-6 d-flex justify-content-center top-scale"
+                    style={{ position: 'relative' }}
                   >
                     <img
                       className="featured-img"
@@ -47,13 +48,14 @@ const TopSelling = ({collection}) => {
                       alt={product.variants.nodes[0]?.image?.altText || ''}
                     />
                     <div
-                      style={{position: 'relative', top: '44px', left: '-24px'}}
+                      className='featured-discount'
+                      style={{ position: 'absolute', top: '43px', marginLeft: '11rem' }}
                     >
-                      <p style={{color:"#ff2828"}}>
+                      <p style={{ color: "#ff2828" }}>
                         {' '}
                         {calculateDiscountPercentage(
                           product.variants.nodes[0]?.compareAtPrice?.amount ||
-                            0,
+                          0,
                           product.variants.nodes[0]?.price?.amount || 0,
                         )}
                         %
