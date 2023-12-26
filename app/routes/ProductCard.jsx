@@ -14,23 +14,25 @@ export default function ProductCard({ product }) {
   return (
     <div className="col productCard" data-aos="fade-up">
       <Link to={`/product/${product.handle}`} className="">
-        <div className="card">
-          <div className="card-img-all d-flex justify-content-center mt-3 ">
-            <Image
-              data={product.variants.nodes[0].image}
-              alt={product.title}
-              className="all-img"
-            />{' '}
-            <div style={{ position: 'relative', left: '-46px' }}>
-            <p style={{color:"#ff2828"}}>
-                        {' '}
-                        {calculateDiscountPercentage(
-                          product.variants.nodes[0]?.compareAtPrice?.amount ||
-                            0,
-                          product.variants.nodes[0]?.price?.amount || 0,
-                        )}
-                        %
-                      </p>
+        <div className="card" style={{ paddingBottom: '0px' }}>
+          <div className="card-img-all  mt-3 ">
+            <div>
+              <Image
+                data={product.variants.nodes[0].image}
+                alt={product.title}
+                className="all-img"
+              />{' '}
+            </div>
+            <div >
+              <p style={{ color: "#ff2828", fontSize: '1.3rem' }}>
+                {' '}
+                {calculateDiscountPercentage(
+                  product.variants.nodes[0]?.compareAtPrice?.amount ||
+                  0,
+                  product.variants.nodes[0]?.price?.amount || 0,
+                )}
+                %
+              </p>
             </div>
           </div>
           <div className="card-content-all mt-4">
@@ -42,7 +44,7 @@ export default function ProductCard({ product }) {
               {isDiscounted && (
                 <p>
                   <Money
-                    style={{ color: '#ff2828' }}
+                    style={{ color: '#ff2828', fontSize: '1.3rem' }}
                     className=""
                     withoutTrailingZeros
                     as="del"
@@ -50,7 +52,7 @@ export default function ProductCard({ product }) {
                   />
                 </p>
               )}
-              <Money withoutTrailingZeros data={price} />
+              <Money withoutTrailingZeros data={price} style={{ fontSize: '1.4rem' }} />
             </p>
           </div>
         </div>

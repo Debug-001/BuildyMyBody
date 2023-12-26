@@ -12,10 +12,10 @@ function AboutUs() {
       <Navbar />
       <div className="main-div" >
 
-        <div className="about-us-text">
-          <div className="top-left">
-            <p className="our-story   " >OUR STORY</p>
-            <p className="our-story2  " >
+        <div className="about-us-text d-flex justify-content-center">
+          <div className="top-left ">
+            <p className="our-story text-center">OUR STORY</p>
+            <p className="our-story2  text-center" >
               The journey of becoming India’s leading Sports Nutrition Brand
             </p>
           </div>

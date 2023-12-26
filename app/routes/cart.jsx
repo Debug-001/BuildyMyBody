@@ -72,7 +72,7 @@ const Cart = () => {
     <>
       <Navbar />
       <section className="main-div">
-        <div className="container-fullwidth mx-5">
+        <div className="container-fluid">
           {cart?.totalQuantity > 0 ? (
             <div className="row ">
               <div

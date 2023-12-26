@@ -230,6 +230,16 @@
   justify-content: space-around;
 }
 
+.help-size {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width:'512px') {
+  .help-size {
+    font-size: 1rem;
+  }
+}
+
 .footer-main-section {
   height: 360px;
   margin-left: 3rem;
@@ -419,6 +429,10 @@
   /* Adjust the margin as needed */
   transition: background-color 0.3s ease;
   /* Add a transition effect */
+}
+
+.navbar-brand {
+  margin-right: 0rem;
 }
 
 /* Change the bar color on hover (optional) */

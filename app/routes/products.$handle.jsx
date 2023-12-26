@@ -43,7 +43,7 @@ export default function Products() {
     <>
       <Navbar />
       <section id="product-section">
-        <div className="container-fluid d-flex pb-5">
+        <div className="container-fluid pb-5">
           <div className="row mt-4">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
               <div className="card-filter">
@@ -110,11 +110,7 @@ export default function Products() {
                     >
                       Filters
                     </span>
-                    <span className="nav-item d-lg-none">
-                      <a className="nav-link font-weight-bolder" href="/certificates" style={{ color: 'black' }}>
-                        Authencity
-                      </a>
-                    </span>
+
                   </a>
 
                   <button
@@ -293,6 +289,13 @@ export default function Products() {
                     </ul>
                   </div>
                 </nav>
+              </div>
+              <div className="col">
+                <span className="nav-item d-lg-none">
+                  <a className="nav-link font-weight-bolder" href="/certificates" style={{ color: 'black', fontSize: '1.3rem' }}>
+                    Authencity
+                  </a>
+                </span>
               </div>
               <Pagination connection={collection.products}>
                 {({ nodes, NextLink, PreviousLink, isLoading }) => (

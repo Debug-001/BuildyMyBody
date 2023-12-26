@@ -78,12 +78,13 @@ const TopSelling = ({ collection }) => {
                             </h4>
                           </>
                         )}
-                      <div className="featured-btn">
-                        <ProductForm
-                          variantId={product.variants.nodes[0]?.id || ''}
-                        />
-                      </div>
+
                     </Link>
+                    <div className="featured-btn">
+                      <ProductForm
+                        variantId={product.variants.nodes[0]?.id || ''}
+                      />
+                    </div>
                   </div>
                 </div>
 

@@ -1,24 +1,24 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, Link, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import buildbody from '../img/buildbody.jpg';
 export const meta = () => {
-  return [{title: 'Login'}];
+  return [{ title: 'Login' }];
 };
-export async function loader({context}) {
+export async function loader({ context }) {
   if (await context.session.get('customerAccessToken')) {
     return redirect('/account/profile');
   }
   return json({});
 }
 
-export async function action({request, context}) {
-  const {session, storefront} = context;
+export async function action({ request, context }) {
+  const { session, storefront } = context;
 
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
   try {
@@ -31,11 +31,11 @@ export async function action({request, context}) {
       throw new Error('Please provide both an email and a password.');
     }
 
-    const {customerAccessTokenCreate} = await storefront.mutate(
+    const { customerAccessTokenCreate } = await storefront.mutate(
       LOGIN_MUTATION,
       {
         variables: {
-          input: {email, password},
+          input: { email, password },
         },
       },
     );
@@ -44,10 +44,10 @@ export async function action({request, context}) {
       throw new Error(customerAccessTokenCreate?.customerUserErrors[0].message);
     }
 
-    const {customerAccessToken} = customerAccessTokenCreate;
+    const { customerAccessToken } = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
     // Sync customerAccessToken with existing cart
-    const result = await cart.updateBuyerIdentity({customerAccessToken});
+    const result = await cart.updateBuyerIdentity({ customerAccessToken });
 
     // Update cart id in cookie
     const headers = cart.setCartId(result.cart.id);
@@ -60,9 +60,9 @@ export async function action({request, context}) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 }
 
@@ -75,11 +75,11 @@ export default function Login() {
       <Navbar />
       <div className="main-div mt-5 ">
         <div className="container ">
-          <div className="row m-5 no-gutters shadow-lg ">
+          <div className="row  no-gutters shadow-lg ">
             <div className="col d-none col-lg-5 d-lg-block  ">
               <img src={buildbody} className="img-fluid login-img" />
             </div>
-            <div className="col-md-12 col-lg-7 bg-white p-5 border border-dark login-border">
+            <div className="col-md-12 col-lg-7 bg-white p-4 border border-dark login-border">
               <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>
               <div className="form-style">
                 <Form method="POST">
@@ -123,7 +123,7 @@ export default function Login() {
                   ) : (
                     <br />
                   )}
-                  <div className="d-flex align-items-center justify-content-between">
+                  <div className="d-flex align-items-center justify-content-between flex-wrap">
                     <div className="d-flex align-items-center">
                       <input name="" type="checkbox" value="" />{' '}
                       <span className="pl-2 font-weight-bold">Remember Me</span>
@@ -146,9 +146,9 @@ export default function Login() {
                   <button
                     type="submit"
                     className="btn text-light w-100 font-weight-bold mt-2 "
-                    style={{height: '50px', background: 'red'}}
+                    style={{ height: '50px', background: 'red' }}
                   >
-                    <Link to="/account/register" style={{color: 'white'}}>
+                    <Link to="/account/register" style={{ color: 'white' }}>
                       Register →
                     </Link>
                   </button>

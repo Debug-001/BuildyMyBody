@@ -156,7 +156,7 @@ function ArticleItem({ article, loading }) {
       </Link>
 
       <Link to={`/blogs/${article.blog.handle}/${article.handle}`}>
-        <button className=" w-50 p-2 mt-2 " id='flash-button'>
+        <button className=" p-2 mt-2 " id='flash-button'>
           Read More
         </button>
       </Link>

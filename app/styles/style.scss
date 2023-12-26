@@ -484,7 +484,7 @@
   font-size: 1.2rem !important;
 }
 
-.logo_img{
+.logo_img {
   width: 75% !important;
 }
 
@@ -574,7 +574,7 @@
   // height: 100%;
 }
 
-#shopb{
+#shopb {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-position: center;
@@ -582,7 +582,7 @@
 }
 
 
-.custom-heading4{
+.custom-heading4 {
   color: #ff2828;
   font-weight: 900 !important;
 }
@@ -1002,7 +1002,7 @@ a.text-light:hover,
 
 @media screen and (max-width: 575px) {
   .offers {
-    margin-left: 10px;
+    // margin-left: 10px;
   }
 
   .title {
@@ -1663,6 +1663,12 @@ textarea::placeholder {
   font-size: 1.1rem;
 }
 
+@media screen and (max-width:'512px') {
+  #protien-name {
+    font-size: 1rem;
+  }
+}
+
 #price {
   text-decoration: line-through;
 }
@@ -1839,6 +1845,11 @@ span.num {
 
 .replace-img-width {
   width: 12%;
+}
+
+.featured-discount {
+  position: absolute;
+  // left: ;
 }
 
 @media screen and (max-width:730px) {
@@ -2105,6 +2116,12 @@ span.num {
   font-weight: bold;
 }
 
+@media screen and (max-width:'375px') {
+  .aboutus-heading {
+    font-size: 1.19rem;
+  }
+}
+
 .aboutus-info {
   font-size: 1.3rem;
 }
@@ -2245,7 +2262,7 @@ span.num {
 
 .card-img-all {
   padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-bottom: 12px;
   border-radius: 6px;
 }
 
@@ -2268,7 +2285,7 @@ span.num {
 
 @media screen and (max-width:'512px') {
   .cart-item-img {
-    transform: scale(2);
+    // transform: scale(2);
     height: 100%;
   }
 }

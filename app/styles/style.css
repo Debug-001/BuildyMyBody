@@ -944,9 +944,6 @@ a.text-light:hover,
 }
 
 @media screen and (max-width: 575px) {
-  .offers {
-    margin-left: 10px;
-  }
   .title {
     margin-left: 10px;
   }
@@ -1581,6 +1578,11 @@ textarea::placeholder {
   font-size: 1.1rem;
 }
 
+@media screen and (max-width: 512px) {
+  #protien-name {
+    font-size: 1rem;
+  }
+}
 #price {
   text-decoration: line-through;
 }
@@ -1738,6 +1740,10 @@ span.num {
 
 .replace-img-width {
   width: 12%;
+}
+
+.featured-discount {
+  position: absolute;
 }
 
 @media screen and (max-width: 730px) {
@@ -1990,6 +1996,11 @@ span.num {
   font-weight: bold;
 }
 
+@media screen and (max-width: 375px) {
+  .aboutus-heading {
+    font-size: 1.19rem;
+  }
+}
 .aboutus-info {
   font-size: 1.3rem;
 }
@@ -2130,7 +2141,6 @@ span.num {
 
 .card-img-all {
   padding-top: 12px;
-  padding-bottom: 12px;
   border-radius: 6px;
 }
 
@@ -2147,7 +2157,6 @@ span.num {
 }
 @media screen and (max-width: 512px) {
   .cart-item-img {
-    transform: scale(2);
     height: 100%;
   }
 }

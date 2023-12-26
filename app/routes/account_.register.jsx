@@ -1,9 +1,9 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, Link, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 import buildbody from '../img/buildbody.jpg';
-export async function loader({context}) {
+export async function loader({ context }) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
     return redirect('/account/profile');
@@ -12,12 +12,12 @@ export async function loader({context}) {
   return json({});
 }
 
-export const action = async ({request, context}) => {
+export const action = async ({ request, context }) => {
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
-  const {storefront, session} = context;
+  const { storefront, session } = context;
   const form = await request.formData();
   const email = String(form.has('email') ? form.get('email') : '');
   const password = form.has('password') ? String(form.get('password')) : null;
@@ -38,9 +38,9 @@ export const action = async ({request, context}) => {
       throw new Error('Please provide both an email and a password.');
     }
 
-    const {customerCreate} = await storefront.mutate(CUSTOMER_CREATE_MUTATION, {
+    const { customerCreate } = await storefront.mutate(CUSTOMER_CREATE_MUTATION, {
       variables: {
-        input: {email, password},
+        input: { email, password },
       },
     });
 
@@ -54,7 +54,7 @@ export const action = async ({request, context}) => {
     }
 
     // get an access token for the new customer
-    const {customerAccessTokenCreate} = await storefront.mutate(
+    const { customerAccessTokenCreate } = await storefront.mutate(
       REGISTER_LOGIN_MUTATION,
       {
         variables: {
@@ -75,7 +75,7 @@ export const action = async ({request, context}) => {
     );
 
     return json(
-      {error: null, newCustomer},
+      { error: null, newCustomer },
       {
         status: 302,
         headers: {
@@ -86,9 +86,9 @@ export const action = async ({request, context}) => {
     );
   } catch (error) {
     if (error instanceof Error) {
-      return json({error: error.message}, {status: 400});
+      return json({ error: error.message }, { status: 400 });
     }
-    return json({error}, {status: 400});
+    return json({ error }, { status: 400 });
   }
 };
 
@@ -100,11 +100,11 @@ export default function Register() {
       <Navbar />
       <div className="main-div pt-2 pb-5">
         <div className="container ">
-          <div className="row m-5 no-gutters shadow-lg">
+          <div className="row no-gutters shadow-lg">
             <div className="col d-none col-lg-5 d-lg-block  ">
               <img src={buildbody} className="img-fluid login-img" />
             </div>
-            <div className="col-md-12 col-lg-7 bg-white p-5 border border-dark login-border">
+            <div className="col-md-12 col-lg-7 bg-white p-4 border border-dark login-border">
               <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>
               <div className="form-style">
                 <Form method="POST">
