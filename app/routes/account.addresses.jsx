@@ -321,7 +321,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="firstName">First name*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="First name"
                   autoComplete="given-name"
                   defaultValue={address?.firstName ?? ''}
@@ -335,7 +335,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="lastName">Last name*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Last name"
                   autoComplete="family-name"
                   defaultValue={address?.lastName ?? ''}
@@ -349,7 +349,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="company">Company</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Company"
                   autoComplete="organization"
                   defaultValue={address?.company ?? ''}
@@ -362,7 +362,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="address1">Address line*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Address line 1"
                   autoComplete="address-line1"
                   defaultValue={address?.address1 ?? ''}
@@ -376,7 +376,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="address2">Address line 2</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Address line 2"
                   autoComplete="address-line2"
                   defaultValue={address?.address2 ?? ''}
@@ -392,7 +392,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="city">City*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="City"
                   autoComplete="address-level2"
                   defaultValue={address?.city ?? ''}
@@ -406,7 +406,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="province">State / Province*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="State"
                   autoComplete="address-level1"
                   defaultValue={address?.province ?? ''}
@@ -420,7 +420,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="zip">Zip / Postal Code*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Zip"
                   autoComplete="postal-code"
                   defaultValue={address?.zip ?? ''}
@@ -434,7 +434,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="country">Country*</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Country"
                   autoComplete="country-name"
                   defaultValue={address?.country ?? ''}
@@ -448,7 +448,7 @@ export function AddressForm({ address, defaultAddress, children }) {
                 <label htmlFor="phone">Phone</label>
                 <br />
                 <input
-                  className="w-75 profile-input"
+                  className="w-100 profile-input"
                   aria-label="Phone"
                   autoComplete="tel"
                   defaultValue={address?.phone ?? ''}

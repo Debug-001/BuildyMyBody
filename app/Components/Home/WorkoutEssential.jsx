@@ -32,10 +32,10 @@ const WheyEssential = () => {
                     </div>
                     <div className="row row-cols-2 row-cols-md-2 row-cols-lg-3">
                         {tiles.map((tile) => (
-                            <Link to={tile.url} className="col" key={tile.url}>
+                            <Link to={tile.url} className="col-12" key={tile.url}>
                                 <div className="certificate-card ">
                                     <p className="text-center mt-4">
-                                        <img src={tile.image} className="popular-img " alt="" style={{ width: '100%' }} />
+                                        <img src={tile.image} className="popular-img " alt="" style={{ width: '100%', }} />
                                     </p>
                                     <div className="text-center" id='popular-txt'>
                                         <span

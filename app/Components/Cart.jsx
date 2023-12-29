@@ -96,7 +96,7 @@ function LineItem({ lineItem }) {
           </div>
         </div>
       </div>
-      <div className='row mt-3'>
+      <div className='row mt-4'>
         <div className="col-6 ">
           <div className='d-flex justify-content-left justify-content-lg-center justify-content-md-center '>
             <div
@@ -258,7 +258,7 @@ export function CartSummary({ cost, checkoutUrl }) {
         </h2> */}
         <div className="text-center carousel">
           <h1
-            class="font-weight-bold custom-heading3"
+            className="font-weight-bold custom-heading3"
             style={{ paddingTop: '0rem' }}
           >
             <em> Special offers </em>

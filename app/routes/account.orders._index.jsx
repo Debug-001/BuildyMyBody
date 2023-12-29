@@ -47,8 +47,8 @@ export default function Orders() {
   const { orders, numberOfOrders } = customer;
   return (
     <>
-      <div className="ml-5 mr-5">
-        <div className="parent-orders container-fluid ">
+      <div className="container">
+        <div className="parent-orders  ">
           <div className="card-orders">
             <div className="orders">
               <h2 className="text-center">
@@ -105,8 +105,8 @@ function EmptyOrders() {
       <div className="empty-orders">
         <p>You haven&apos;t placed any orders yet.</p>
         <br />
-        <a className="btn-shopping">
-          <Link to="/collections">Start Shopping →</Link>
+        <a className="btn-shopping p-3">
+          <Link to="/products/all">Start Shopping →</Link>
         </a>
       </div>
     </>

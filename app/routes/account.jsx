@@ -1,15 +1,16 @@
-import {Form, NavLink, Outlet, useLoaderData} from '@remix-run/react';
-import {json, redirect} from '@shopify/remix-oxygen';
+import { Form, NavLink, Outlet, useLoaderData } from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
 import Footer from '~/Components/Footer';
 import Navbar from '~/Components/Navbar';
+import { Link } from '@remix-run/react';
 
 export function shouldRevalidate() {
   return true;
 }
 
-export async function loader({request, context}) {
-  const {session, storefront} = context;
-  const {pathname} = new URL(request.url);
+export async function loader({ request, context }) {
+  const { session, storefront } = context;
+  const { pathname } = new URL(request.url);
   const customerAccessToken = await session.get('customerAccessToken');
   const isLoggedIn = Boolean(customerAccessToken?.accessToken);
   const isAccountHome = pathname === '/account' || pathname === '/account/';
@@ -43,7 +44,7 @@ export async function loader({request, context}) {
   }
 
   try {
-    const {customer} = await storefront.query(CUSTOMER_QUERY, {
+    const { customer } = await storefront.query(CUSTOMER_QUERY, {
       variables: {
         customerAccessToken: customerAccessToken.accessToken,
         country: storefront.i18n.country,
@@ -57,7 +58,7 @@ export async function loader({request, context}) {
     }
 
     return json(
-      {isLoggedIn, isPrivateRoute, isAccountHome, customer},
+      { isLoggedIn, isPrivateRoute, isAccountHome, customer },
       {
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -77,22 +78,22 @@ export async function loader({request, context}) {
 }
 
 export default function Acccount() {
-  const {customer, isPrivateRoute, isAccountHome} = useLoaderData();
+  const { customer, isPrivateRoute, isAccountHome } = useLoaderData();
 
   if (!isPrivateRoute && !isAccountHome) {
-    return <Outlet context={{customer}} />;
+    return <Outlet context={{ customer }} />;
   }
 
   return (
     <AccountLayout customer={customer}>
       <br />
       <br />
-      <Outlet context={{customer}} />
+      <Outlet context={{ customer }} />
     </AccountLayout>
   );
 }
 
-function AccountLayout({customer, children}) {
+function AccountLayout({ customer, children }) {
   const firstName = customer?.firstName;
   const lastName = customer?.lastName;
   let heading;
@@ -108,16 +109,23 @@ function AccountLayout({customer, children}) {
       <Navbar />
       <div className="account pt-5 pb-5">
         <div
-          className="d-flex justify-content-center mb-5"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          className="d-flex justify-content-center mb-2"
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1
-            className="font-weight-bold custom-heading3"
-            style={{color: '#ff2828'}}
+            className="font-weight-bold custom-heading3 text-center"
+            style={{ color: '#ff2828' }}
           >
             <em>{heading}</em>
+
           </h1>
           <hr className="h1-hr" />
+          {/* <a href="/">
+            <button id='flash-button' className='p-2'>Home  &rarr;</button>
+          </a> */}
+          <Link to='/'>
+            <button className='p-2 home-btn text-light'>Home  &rarr;</button>
+          </Link>
         </div>
         <br />
         <AcccountMenu />
@@ -129,7 +137,7 @@ function AccountLayout({customer, children}) {
 }
 
 function AcccountMenu() {
-  function isActiveStyle({isActive, isPending}) {
+  function isActiveStyle({ isActive, isPending }) {
     return {
       fontWeight: isActive ? 'bold' : '',
       color: isPending ? 'grey' : 'black',
@@ -142,7 +150,7 @@ function AcccountMenu() {
           <div className="row">
             <div
               className="col-lg-3 col-md-6 text-lg-center"
-              style={{fontSize: '1.3rem'}}
+              style={{ fontSize: '1.3rem' }}
             >
               <NavLink to="/account/orders" style={isActiveStyle}>
                 My Orders
@@ -150,7 +158,7 @@ function AcccountMenu() {
             </div>
             <div
               className="col-lg-3 col-md-6 mt-4 mt-lg-0 mt-md-0 text-lg-center"
-              style={{fontSize: '1.3rem'}}
+              style={{ fontSize: '1.3rem' }}
             >
               <NavLink to="/account/profile" style={isActiveStyle}>
                 Profile
@@ -158,7 +166,7 @@ function AcccountMenu() {
             </div>
             <div
               className="col-lg-3 col-md-6 mt-4 mt-lg-0 text-lg-center"
-              style={{fontSize: '1.3rem'}}
+              style={{ fontSize: '1.3rem' }}
             >
               <NavLink to="/account/addresses" style={isActiveStyle}>
                 Saved Addresses
@@ -166,7 +174,7 @@ function AcccountMenu() {
             </div>
             <div
               className="col-lg-3 col-md-6 mt-4 mt-lg-0 text-lg-center"
-              style={{fontSize: '1.2rem'}}
+              style={{ fontSize: '1.2rem' }}
             >
               <Logout />
             </div>

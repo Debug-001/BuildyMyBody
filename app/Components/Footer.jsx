@@ -40,7 +40,7 @@ const Footer = () => {
 
       <div className="footer-row">
         <div className="container">
-          <p className=' pt-2 d-flex flex-lg-row flex-column justify-content-center align-items-center help-size' style={{ fontWeight: 'bold' }}>Need help? Call our support team at <span className='ml-2'>+91 9494 979191</span> </p>
+          <p className=' pt-2 d-flex flex-lg-row flex-column justify-content-center align-items-center help-size text-center' style={{ fontWeight: 'bold' }}>Need help? Call our support team at <span className='ml-2'>+91 9494 979191</span> </p>
         </div>
         <div className="container-fluid px-5">
           <div className="row ">
@@ -71,8 +71,8 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6  footer-details ">
-              <div className="customer-footer">
+            <div className="col-lg-3 col-md-6  footer-details  mt-4 mt-lg-5 mt-md-5">
+              <div className="customer-footer mt-0 mt-lg-5 mt-md-4">
                 <h6>CUSTOMER SERVICE</h6>
                 <Link to="/track">
                   <p>Track My Order</p>
@@ -88,8 +88,8 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-2 col-md-6  footer-details">
-              <div className="customer-footer">
+            <div className="col-lg-2 col-md-6  footer-details mt-4 mt-lg-5 mt-md-0">
+              <div className="customer-footer mt-0 mt-lg-5 mt-md-5">
                 <h6>PRODUCTS</h6>
 
                 <Link to={'/products/sports-nutrition'}>
@@ -107,8 +107,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6  footer-details">
-              <div className=" company-footer">
+            <div className="col-lg-3 col-md-6  footer-details mt-4  mt-lg-5 mt-md-0">
+              <div className="  mt-0 mt-lg-5 mt-md-5">
                 <h6 className=" ">COMPANY</h6>
                 <Link to="/shippingPolicy">
                   <p>Shipping Policy</p>

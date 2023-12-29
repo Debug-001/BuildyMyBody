@@ -56,7 +56,7 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
                       <div className="media">
                         {/* <img
                         src=""
@@ -103,7 +103,7 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
                       <div className="media">
                         {/* <img
                         src=""
@@ -148,7 +148,7 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
                       <div className="media">
                         {/* <img
                         src=""

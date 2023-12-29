@@ -11,7 +11,9 @@ import ProductCarousal from '~/Components/Product/ProductCarousal';
 import BrandCaraousel from '~/Components/Home/BrandCaraousel';
 import TopSelling from '~/Components/Home/TopSelling';
 import FeaturedProducts from '~/Components/Home/FeaturedProducts';
-
+import Offers from '~/Components/Home/Offers';
+// import New from '../routes/new.jsx'
+import New from '../routes/New'
 export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
@@ -39,13 +41,15 @@ export async function loader({ params, context, request }) {
 export default function Products() {
   const { collection } = useLoaderData();
 
+
   return (
     <>
       <Navbar />
       <section id="product-section">
         <div className="container-fluid pb-5">
           <div className="row mt-4">
-            <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none ">
+            <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none flex-column ">
+              <New />
               <div className="card-filter">
                 <div className="card-content-all ">
                   <div className="product-authencity border border-dark pb-4">
@@ -83,6 +87,7 @@ export default function Products() {
                   </div>
                 </div>
               </div>
+
             </div>
 
             <div className="col-lg-9 col-md-12 " id="all-products">
@@ -293,7 +298,7 @@ export default function Products() {
               <div className="col">
                 <span className="nav-item d-lg-none">
                   <a className="nav-link font-weight-bolder" href="/certificates" style={{ color: 'black', fontSize: '1.3rem' }}>
-                    Authencity
+                    Authenticity
                   </a>
                 </span>
               </div>
@@ -320,6 +325,9 @@ export default function Products() {
                   </div>
                 )}
               </Pagination>
+            </div>
+            <div className="col-12 d-flex d-lg-none ">
+              <New />
             </div>
           </div>
         </div>

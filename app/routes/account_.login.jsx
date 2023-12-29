@@ -3,7 +3,8 @@ import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 import React, { useState } from 'react';
-import buildbody from '../img/buildbody.jpg';
+import buildbody from '../img/buildbody.jpg'
+
 export const meta = () => {
   return [{ title: 'Login' }];
 };
@@ -15,22 +16,19 @@ export async function loader({ context }) {
 }
 
 export async function action({ request, context }) {
-  const { session, storefront } = context;
+  const { cart, session, storefront } = context;
 
   if (request.method !== 'POST') {
     return json({ error: 'Method not allowed' }, { status: 405 });
   }
-
   try {
     const form = await request.formData();
     const email = String(form.has('email') ? form.get('email') : '');
     const password = String(form.has('password') ? form.get('password') : '');
     const validInputs = Boolean(email && password);
-
     if (!validInputs) {
       throw new Error('Please provide both an email and a password.');
     }
-
     const { customerAccessTokenCreate } = await storefront.mutate(
       LOGIN_MUTATION,
       {
@@ -39,24 +37,17 @@ export async function action({ request, context }) {
         },
       },
     );
-
     if (!customerAccessTokenCreate?.customerAccessToken?.accessToken) {
       throw new Error(customerAccessTokenCreate?.customerUserErrors[0].message);
     }
 
     const { customerAccessToken } = customerAccessTokenCreate;
     session.set('customerAccessToken', customerAccessToken);
-    // Sync customerAccessToken with existing cart
-    const result = await cart.updateBuyerIdentity({ customerAccessToken });
-
-    // Update cart id in cookie
-    const headers = cart.setCartId(result.cart.id);
-
-    // Update session
-    headers.append('Set-Cookie', await session.commit());
 
     return redirect('/account/profile', {
-      headers,
+      headers: {
+        'Set-Cookie': await session.commit(),
+      },
     });
   } catch (error) {
     if (error instanceof Error) {
@@ -65,11 +56,9 @@ export async function action({ request, context }) {
     return json({ error }, { status: 400 });
   }
 }
-
 export default function Login() {
   const data = useActionData();
   const error = data?.error || null;
-
   return (
     <>
       <Navbar />
@@ -79,7 +68,7 @@ export default function Login() {
             <div className="col d-none col-lg-5 d-lg-block  ">
               <img src={buildbody} className="img-fluid login-img" />
             </div>
-            <div className="col-md-12 col-lg-7 bg-white p-4 border border-dark login-border">
+            <div className="col-md-12 col-lg-7 bg-white p-3 border border-dark login-border">
               <h3 className="pb-3 text-center login-name">Welcome To BMB!</h3>
               <div className="form-style">
                 <Form method="POST">
@@ -162,12 +151,10 @@ export default function Login() {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );
 }
-
 // NOTE: https://shopify.dev/docs/api/storefront/latest/mutations/customeraccesstokencreate
 const LOGIN_MUTATION = `#graphql
   mutation login($input: CustomerAccessTokenCreateInput!) {

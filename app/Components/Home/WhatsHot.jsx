@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import {NavLink} from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -37,8 +37,8 @@ const WhatsHot = () => {
     <section id="whatshot">
       <div className="container pt-5">
         <div
-          className="d-flex justify-content-center mb-5"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          className="d-flex justify-content-center mb-5 text-center"
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="font-weight-bolder custom-heading4">
             <em>Hot Selling Products🔥</em>
@@ -50,10 +50,10 @@ const WhatsHot = () => {
             <div className="slider-item p-2 text-dark">
               <img src={hot1} alt="" className="w-100" />
               <div className="mt-1">
-                <p style={{fontWeight: '600', fontSize: '1.3rem'}}>
+                <p style={{ fontWeight: '600', fontSize: '1.3rem' }}>
                   Insane Labz Psychotic Preworkout
                 </p>
-                <p style={{fontSize: '.9rem'}}>Flat 50% Off</p>
+                <p style={{ fontSize: '.9rem' }}>Flat 50% Off</p>
                 <button id="flash-button" className="w-100 p-1">
                   Shop Now
                 </button>
@@ -64,10 +64,10 @@ const WhatsHot = () => {
             <div className="slider-item p-2 text-dark">
               <img src={hot2} alt="" className="w-100" />
               <div className="mt-1">
-                <p style={{fontWeight: '600', fontSize: '1.3rem'}}>
+                <p style={{ fontWeight: '600', fontSize: '1.3rem' }}>
                   Enhanced Athlete MK-677
                 </p>
-                <p style={{fontSize: '.9rem'}}>
+                <p style={{ fontSize: '.9rem' }}>
                   Upto 40% off on Enhanced Athlete Products
                 </p>
                 <button id="flash-button" className="w-100 p-1">
@@ -80,10 +80,10 @@ const WhatsHot = () => {
             <div className="slider-item p-2 text-dark">
               <img src={hot3} alt="" className="w-100" />
               <div className="mt-1">
-                <p style={{fontWeight: '600', fontSize: '1.3rem'}}>
+                <p style={{ fontWeight: '600', fontSize: '1.3rem' }}>
                   MHP XPEL, 80 Capsules
                 </p>
-                <p style={{fontSize: '.9rem'}}>Flat 43% Off</p>
+                <p style={{ fontSize: '.9rem' }}>Flat 43% Off</p>
                 <button id="flash-button" className="w-100 p-1">
                   Shop Now
                 </button>
@@ -94,10 +94,10 @@ const WhatsHot = () => {
             <div className="slider-item p-2 text-dark">
               <img src={hot4} alt="" className="w-100" />
               <div className="mt-1">
-                <p style={{fontWeight: '600', fontSize: '1.3rem'}}>
+                <p style={{ fontWeight: '600', fontSize: '1.3rem' }}>
                   Enhanced Athlete Blue Ox
                 </p>
-                <p style={{fontSize: '.9rem'}}>
+                <p style={{ fontSize: '.9rem' }}>
                   Upto 40% off on Enhanced Athlete Products.
                 </p>
                 <button id="flash-button" className="w-100 p-1">

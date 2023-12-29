@@ -110,8 +110,10 @@ export default function Blog() {
                         />
                       );
                     })}
-                    <NextLink>
-                      {isLoading ? 'Loading...' : <span>Load more ↓</span>}
+                    <NextLink className='d-flex justify-content-center'>
+                      <button id='flash-button' className='p-2'>
+                        {isLoading ? 'Loading...' : <span>Load more ↓</span>}
+                      </button>
                     </NextLink>
                   </>
                 );

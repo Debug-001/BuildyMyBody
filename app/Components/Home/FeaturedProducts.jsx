@@ -1,9 +1,9 @@
-import {Link, useLoaderData} from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 
-const FeaturedProducts = ({collections}) => {
+const FeaturedProducts = ({ collections }) => {
 
 
   const [nav1, setNav1] = useState();
@@ -22,7 +22,7 @@ const FeaturedProducts = ({collections}) => {
       <div className="container-fluid" id="cgap">
         <div
           className="d-flex justify-content-center mb-5"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="font-weight-bold custom-heading1">
             <em>Shop by Category</em>
@@ -73,7 +73,7 @@ const FeaturedProducts = ({collections}) => {
           {collections.nodes.map((collection) => (
             <div
               className="card"
-              style={{width: '18rem', paddingBottom: ''}}
+              style={{ width: '18rem', paddingBottom: '' }}
               id="cgap"
               key={collection.id}
             >

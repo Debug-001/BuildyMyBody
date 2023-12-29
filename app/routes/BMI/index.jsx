@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 import blog4 from '../../img/blog-4.jpg'
 import blog6 from '../../img/blog-6.jpg'
+import Bmitrend from '../Bmitrend'
 export const meta = () => {
   return [{ title: `BuildMyBody|BMI Calculator` }];
 };
@@ -139,7 +140,7 @@ const BMI = () => {
                   </div>
                 )}
               </div>
-              <div className="container-fullwidth mb-5" data-aos="fade-up">
+              <div className="container-fullwidth" data-aos="fade-up">
                 <hr className="line-hr" style={{ borderColor: 'black' }} />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
@@ -241,6 +242,7 @@ const BMI = () => {
                   </div>
                 </div>
               </div>
+              <Bmitrend />
             </div>
             <div
               className="col-md-4 col-lg-4"

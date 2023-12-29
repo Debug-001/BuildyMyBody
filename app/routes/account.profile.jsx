@@ -185,7 +185,7 @@ export default function AccountProfile() {
                       aria-label="Email address"
                       defaultValue={customer.email ?? ''}
                     />
-                    <div className="account-profile-marketing">
+                    <div className="account-profile-marketing d-flex align-items-center mt-2">
                       <input
                         id="acceptsMarketing"
                         name="acceptsMarketing"
@@ -194,17 +194,19 @@ export default function AccountProfile() {
                         aria-label="Accept marketing"
                         defaultChecked={customer.acceptsMarketing}
                       />
-                      <label htmlFor="acceptsMarketing">
-                        <p className="ml-2 ">
-                          Subscribed to marketing communications
-                        </p>
-                      </label>
+                      <p>
+                        <label htmlFor="acceptsMarketing" >
+                          <p className="ml-2 ">
+                            Subscribed to marketing communications
+                          </p>
+                        </label>
+                      </p>
                     </div>
-                    <div className="">
+                    {/* <div className="mt-2">
                       <button className="w-25 p-1 profile-btn-display2 profile-btn">
                         Edit
                       </button>
-                    </div>
+                    </div> */}
                   </fieldset>
                 </div>
               </div>
@@ -214,10 +216,11 @@ export default function AccountProfile() {
                 <div className="col ">
                   <legend className="">Change password (optional)</legend>
                 </div>
-                <div className="col-sm-12 col-lg-6 col-md-6 d-flex justify-content-lg-end justify-content-md-end  ">
+                <div className="col-sm-12 col-lg-6 col-md-6 d-none d-md-flex d-lg-flex justify-content-lg-end justify-content-md-end  ">
                   <button
                     type="submit"
-                    className="w-25 text-center p-1 profile-btn-display3 profile-btn"
+                    id='flash-button'
+                    className="w-50 w-lg-25  text-center p-1 "
                     disabled={state !== 'idle'}
                   >
                     {state !== 'idle' ? 'Updating' : 'Update'}
@@ -282,10 +285,11 @@ export default function AccountProfile() {
                         </small>
                       </div>
                     </div>
-                    <div className=" profile-btn-display4">
+                    <div className=" profile-btn-display4 mt-2">
                       <button
                         type="submit"
-                        className="w-25 text-center p-1 profile-btn"
+                        id='flash-button'
+                        className="w-100  text-center p-1 profile-btn"
                         disabled={state !== 'idle'}
                       >
                         {state !== 'idle' ? 'Updating' : 'Update'}
