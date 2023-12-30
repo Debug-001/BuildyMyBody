@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { CartForm } from '@shopify/hydrogen';
-import { FaPlus } from 'react-icons/fa6';
-import { FaMinus } from 'react-icons/fa6';
-import { MediaFile, ShopPayButton } from '@shopify/hydrogen-react';
-import { Image, Money } from '@shopify/hydrogen';
+import {CartForm} from '@shopify/hydrogen';
+import {FaPlus} from 'react-icons/fa6';
+import {FaMinus} from 'react-icons/fa6';
+import {MediaFile, ShopPayButton} from '@shopify/hydrogen-react';
+import {Image, Money} from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../img/protien.png';
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 
-const Product = ({ data }) => {
+const Product = ({data}) => {
   const {
     product,
     selectedVariant,
@@ -110,47 +110,46 @@ const Product = ({ data }) => {
               <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
                 <h2
                   className="text-lg-left text-md-center text-sm-center product-title-size  "
-                  style={{ fontWeight: '800' }}
+                  style={{fontWeight: '800'}}
                 >
                   {product.title}
                 </h2>
                 <div className="row mt-2 d-flex option-flex">
                   {/* weight/flavour section  */}
                   <div className="col-lg-6 col-md-6 col-12 ">
-                    <div className='d-flex' style={{ fontSize: '25px' }}>
-                      <p className="title  " >
-                        Price:
-                      </p><span>
+                    <div className="d-flex" style={{fontSize: '25px'}}>
+                      <p className="title  ">Price:</p>
+                      <span>
                         <Money
                           withoutTrailingZeros
                           data={selectedVariant.compareAtPrice}
                           className="ml-2"
                           as="del"
-                          style={{ color: '#ff2828' }}
+                          style={{color: '#ff2828'}}
                         />
                       </span>
                     </div>
                     <h2 className="d-flex title flex-wrap ">
-                      <div className='d-flex'>
+                      <div className="d-flex">
                         MRP:
                         <Money
                           withoutTrailingZeros
                           data={selectedVariant.price}
                           className="ml-2"
-                          style={{ fontSize: '38px' }}
+                          style={{fontSize: '38px'}}
                         />
                       </div>
                       <div>
                         <div className="ml-3 d-flex align-items-center ">
                           <p
-                            style={{ color: '#ff2828' }}
+                            style={{color: '#ff2828'}}
                             className="product-btn p-2"
                           >
                             {Math.ceil(
                               ((selectedVariant.compareAtPrice.amount -
                                 selectedVariant.price.amount) /
                                 selectedVariant.compareAtPrice.amount) *
-                              100,
+                                100,
                             )}
                             % off
                           </p>
@@ -159,12 +158,11 @@ const Product = ({ data }) => {
                     </h2>
                     <p
                       className="title  "
-                      style={{ fontSize: '14px', opacity: '.7' }}
+                      style={{fontSize: '14px', opacity: '.7'}}
                     >
                       (EMI starts from ₹211.45) | Limited Time
                       <span className=""> Free Shipping</span>
                     </p>
-
                   </div>
                   <div className="col-lg-6 col-md-6 col-12  title  mt-4">
                     <ProductOptions
@@ -205,8 +203,6 @@ const Product = ({ data }) => {
                         </button>
                       </div>
                     </div> */}
-
-
                   </div>
                   {/* mrp section  */}
                 </div>
@@ -215,7 +211,7 @@ const Product = ({ data }) => {
                     <div className="d-flex width-input mt-3 border border-dark justify-content-between p-1">
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="ml-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -233,7 +229,7 @@ const Product = ({ data }) => {
 
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="mr-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -270,12 +266,12 @@ const Product = ({ data }) => {
                 <hr className="w-100" />
                 <h4
                   className="mt-5 title font-weight-bolder"
-                  style={{ color: '#282828' }}
+                  style={{color: '#282828'}}
                 >
                   Check Delivery
                 </h4>
                 <div className="input-group mb-3 m-lg-0 title d-flex flex-column ">
-                  <div className='d-flex'>
+                  <div className="d-flex">
                     <input
                       type="number"
                       className="form-control w-100"
@@ -294,10 +290,11 @@ const Product = ({ data }) => {
                       </button>
                     </div>
                   </div>
-                  <div className='mt-1'>
+                  <div className="mt-1">
                     <p
-                      className={`error-message ${deliverable ? 'success' : 'error'
-                        }`}
+                      className={`error-message ${
+                        deliverable ? 'success' : 'error'
+                      }`}
                     >
                       {errorMessage}
                     </p>
@@ -306,13 +303,16 @@ const Product = ({ data }) => {
 
                 <div className="return mt-4 mb-3">
                   <div>
-                    <h4 className="font-weight-bolder" style={{ color: '#282828' }}>
+                    <h4
+                      className="font-weight-bolder"
+                      style={{color: '#282828'}}
+                    >
                       Return and Replacement Policy
                     </h4>
                     <p>
                       <em
                         className="font-weight-bolder"
-                        style={{ color: '#ff2828' }}
+                        style={{color: '#ff2828'}}
                       >
                         7-days replacement policy
                       </em>
@@ -321,44 +321,48 @@ const Product = ({ data }) => {
                       <button
                         onClick={toggleDropdown4}
                         className="w-100 text-left p-3"
-                        style={{ border: '1px solid transparent' }}
+                        style={{border: '1px solid transparent'}}
                       >
-                        <span className="font-weight-bold"
-                          style={{ color: '#282828' }}
+                        <span
+                          className="font-weight-bold"
+                          style={{color: '#282828'}}
                         >
                           View Policy
                         </span>
                       </button>
                       {isOpen4 && (
-                        <div style={{ fontSize: '14px' }}>
-
-                          <span
-
-                            className=""
-                            data-show=""
-                          >
+                        <div style={{fontSize: '14px'}}>
+                          <span className="" data-show="">
                             <p className="mt-1">
-                              We offer you complete peace of mind while ordering at
-                              BuildMyBody - you can return all items within 7 days of
-                              receipt of goods.
-                              <br /> <br />Please ensure however that the product is
-                              unused and the tags, boxes and other packaging is intact. If
-                              you are not satisfied with what you have bought, we'll
-                              gladly take it back within 7 days from the date of delivery.
+                              We offer you complete peace of mind while ordering
+                              at BuildMyBody - you can return all items within 7
+                              days of receipt of goods.
                               <br /> <br />
-                              If you have paid by card then we will reverse the payment.
-                              In case of Cash on Delivery or Bank Deposits as modes of
-                              payment, we will issue a cheque in the registered name of
-                              the customer.<br /> <span style={{ fontWeight: 'bold' }}> Wrong item if received: We apologize if you
-                                have received the wrong item by mistake.</span> <br /><br />
+                              Please ensure however that the product is unused
+                              and the tags, boxes and other packaging is intact.
+                              If you are not satisfied with what you have
+                              bought, we'll gladly take it back within 7 days
+                              from the date of delivery.
+                              <br /> <br />
+                              If you have paid by card then we will reverse the
+                              payment. In case of Cash on Delivery or Bank
+                              Deposits as modes of payment, we will issue a
+                              cheque in the registered name of the customer.
+                              <br />{' '}
+                              <span style={{fontWeight: 'bold'}}>
+                                {' '}
+                                Wrong item if received: We apologize if you have
+                                received the wrong item by mistake.
+                              </span>{' '}
+                              <br />
+                              <br />
                               <h5>Refund:</h5>
-                              This is not common
-                              and we want to resolve this as quickly as possible for you.
-                              To receive a refund or a replacement, you must return the
-                              item in the same condition you received it and within 7 days
+                              This is not common and we want to resolve this as
+                              quickly as possible for you. To receive a refund
+                              or a replacement, you must return the item in the
+                              same condition you received it and within 7 days
                               from the day on which you received the item.
                             </p>
-
                           </span>
                         </div>
                       )}
@@ -367,60 +371,57 @@ const Product = ({ data }) => {
                       <button
                         onClick={toggleDropdown5}
                         className="w-100 text-left p-3 mt-2"
-                        style={{ border: '1px solid transparent' }}
+                        style={{border: '1px solid transparent'}}
                       >
                         <span
                           className="font-weight-bold"
-                          style={{ color: '#282828' }}
+                          style={{color: '#282828'}}
                         >
-                          Product will be only replaced if it follows the following
-                          conditions:
+                          Product will be only replaced if it follows the
+                          following conditions:
                         </span>
                       </button>
                       {isOpen5 && (
-                        <div style={{ fontSize: '14px' }}>
-
+                        <div style={{fontSize: '14px'}}>
                           <ul className="mt-2">
                             <li className="mt-1">
-                              1) Product should be sealed. We will not accept the
-                              return product if it finds unpacked or unsealed in any
-                              condition.
+                              1) Product should be sealed. We will not accept
+                              the return product if it finds unpacked or
+                              unsealed in any condition.
                             </li>
                             <li className="mt-1">
-                              2) Our 7 days Return Policy period starts on the day
-                              when you receive the product. In case, you are not
-                              satisfied with the product, you need to inform us at
-                              given email address: care@buildmybody.in within 7 days
-                              only, otherwise order will be not replaced or returned.
+                              2) Our 7 days Return Policy period starts on the
+                              day when you receive the product. In case, you are
+                              not satisfied with the product, you need to inform
+                              us at given email address: care@buildmybody.in
+                              within 7 days only, otherwise order will be not
+                              replaced or returned.
                             </li>
                             <li className="mt-1">
-                              3) We will only guarantee with the replacement of the
-                              product. Only in extreme circumstances, your product may
-                              be returned with refunds.
+                              3) We will only guarantee with the replacement of
+                              the product. Only in extreme circumstances, your
+                              product may be returned with refunds.
                             </li>
                           </ul>
                         </div>
                       )}
                     </div>
-
                   </div>
 
-
-                  <p className="font-weight-bold mt-2" style={{ color: 'black', fontSize: '1.2rem' }}>
+                  <p
+                    className="font-weight-bold mt-2"
+                    style={{color: 'black', fontSize: '1.2rem'}}
+                  >
                     For further details, feel free to
                     <span>
                       <Link to="/contact"> Contact Us.</Link>
                     </span>
-                    <p className='mt-1'>
+                    <p className="mt-1">
                       <span>Email: </span>
-                      <a href="">
-                        care@buildmybody.in
-                      </a>
+                      <a href="">care@buildmybody.in</a>
                       <br />
                       <span>Phone: </span>
-                      <a href="">
-                        +91 9494979191
-                      </a>
+                      <a href="">+91 9494979191</a>
                     </p>
                   </p>
                 </div>
@@ -432,7 +433,7 @@ const Product = ({ data }) => {
                 className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-none d-lg-flex "
               >
                 <h4 className="d-flex justify-content-center font-weight-bolder ">
-                  <em style={{ fontSize: '2rem' }} className="text-center">
+                  <em style={{fontSize: '2rem'}} className="text-center">
                     FEATURED PRODUCTS
                   </em>
                 </h4>
@@ -447,7 +448,7 @@ const Product = ({ data }) => {
                         >
                           <div
                             className="w-100"
-                            style={{ maxWidth: '250px', margin: '0 auto' }}
+                            style={{maxWidth: '250px', margin: '0 auto'}}
                           >
                             <Image
                               data={product.variants.nodes[0].image}
@@ -457,13 +458,22 @@ const Product = ({ data }) => {
                               }}
                               alt={product.title}
                               className="single-product-img"
-
                             />
                             <div>
-                              <p>25%off</p>
+                              <p>
+                                {Math.ceil(
+                                  ((product.variants.nodes[0].compareAtPrice
+                                    .amount -
+                                    product.variants.nodes[0].price.amount) /
+                                    product.variants.nodes[0].compareAtPrice
+                                      .amount) *
+                                    100,
+                                )}
+                                % off
+                              </p>
                             </div>
 
-                            {/* <div class="featured-discount" style={{ position: 'absolute', top: '43px', marginleft: '11rem' }}><p style={{ color: 'rgb(255, 40, 40)' }}> 30.56%</p></div> */}
+                            {/* <div className="featured-discount" style={{ position: 'absolute', top: '43px', marginleft: '11rem' }}><p style={{ color: 'rgb(255, 40, 40)' }}> 30.56%</p></div> */}
                           </div>
                         </Link>
                         <div>
@@ -474,7 +484,7 @@ const Product = ({ data }) => {
                             <Money
                               withoutTrailingZeros
                               data={product.variants?.nodes[0].price}
-                              style={{ color: '#ff2828 !important' }}
+                              style={{color: '#ff2828 !important'}}
                             />
                           </h6>
                           <div className="text-center each-product-btn">
@@ -495,7 +505,7 @@ const Product = ({ data }) => {
                 <div className="col-lg-10 " id="product-tabs">
                   <ul
                     className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                    style={{ background: 'black' }}
+                    style={{background: 'black'}}
                     id="myTab"
                     role="tablist"
                   >
@@ -550,9 +560,7 @@ const Product = ({ data }) => {
                       dangerouslySetInnerHTML={{
                         __html: product.descriptionHtml,
                       }}
-                    >
-
-                    </div>
+                    ></div>
                     <div
                       className="tab-pane fade"
                       id="profile"
@@ -564,7 +572,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown1}
                             className="w-100 text-left p-3"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -577,7 +585,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen1 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br /> <br />
                               <span className="answer-product">Answer</span>
                               <span
@@ -638,7 +646,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown2}
                             className="w-100 text-left p-3 mt-4"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -650,7 +658,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen2 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -678,7 +686,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown3}
                             className="w-100 text-left p-3 mt-4"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -691,7 +699,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen3 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -742,7 +750,7 @@ const Product = ({ data }) => {
                   className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-flex d-lg-none "
                 >
                   <h4 className="d-flex justify-content-center font-weight-bolder ">
-                    <em style={{ fontSize: '2rem' }} className="text-center">
+                    <em style={{fontSize: '2rem'}} className="text-center">
                       FEATURED PRODUCTS
                     </em>
                   </h4>
@@ -757,7 +765,7 @@ const Product = ({ data }) => {
                           >
                             <div
                               className="w-100"
-                              style={{ maxWidth: '250px', margin: '0 auto' }}
+                              style={{maxWidth: '250px', margin: '0 auto'}}
                             >
                               <Image
                                 data={product.variants.nodes[0].image}
@@ -778,7 +786,7 @@ const Product = ({ data }) => {
                               <Money
                                 withoutTrailingZeros
                                 data={product.variants?.nodes[0].price}
-                                style={{ color: '#ff2828 !important' }}
+                                style={{color: '#ff2828 !important'}}
                               />
                             </h6>
                             <div className="text-center each-product-btn">
@@ -797,7 +805,7 @@ const Product = ({ data }) => {
                   className="col-lg-2 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"
                 >
                   <h4 className="d-flex justify-content-center font-weight-bolder  text-center">
-                    <em style={{ fontSize: '2rem' }}>RELATED PRODUCTS</em>
+                    <em style={{fontSize: '2rem'}}>RELATED PRODUCTS</em>
                   </h4>
                   <div className="custom-fl-product d-md-flex flex-lg-column justify-content-around">
                     {TrendingProductsCollection.collection.products.nodes.map(
@@ -811,7 +819,7 @@ const Product = ({ data }) => {
                           >
                             <div
                               className="w-100"
-                              style={{ maxWidth: '250px', margin: '0 auto' }}
+                              style={{maxWidth: '250px', margin: '0 auto'}}
                             >
                               <Image
                                 data={product.variants.nodes[0].image}
@@ -832,7 +840,7 @@ const Product = ({ data }) => {
                               <Money
                                 withoutTrailingZeros
                                 data={product.variants?.nodes[0].price}
-                                style={{ color: '#ff2828 !important' }}
+                                style={{color: '#ff2828 !important'}}
                               />
                             </h6>
                           </div>

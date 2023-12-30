@@ -1,20 +1,20 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import { Link, NavLink, useLoaderData } from '@remix-run/react';
-import { json } from '@shopify/remix-oxygen';
-import { CartForm } from '@shopify/hydrogen';
-import { CartLineItems, CartSummary } from '~/Components/Cart';
-import { useState } from 'react';
+import {Link, NavLink, useLoaderData} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+import {CartForm} from '@shopify/hydrogen';
+import {CartLineItems, CartSummary} from '~/Components/Cart';
+import {useState} from 'react';
 import invariant from 'tiny-invariant';
-import { FiShoppingCart } from 'react-icons/fi';
+import {FiShoppingCart} from 'react-icons/fi';
 export const meta = () => {
-  return [{ title: `BuildMyBody|Cart` }];
+  return [{title: `BuildMyBody|Cart`}];
 };
-export async function action({ request, context }) {
-  const { cart } = context;
+export async function action({request, context}) {
+  const {cart} = context;
 
   const formData = await request.formData();
-  const { action, inputs } = CartForm.getFormInput(formData);
+  const {action, inputs} = CartForm.getFormInput(formData);
 
   let result;
 
@@ -35,15 +35,50 @@ export async function action({ request, context }) {
   // The Cart ID might change after each mutation, so update it each time.
   const headers = cart.setCartId(result.cart.id);
 
-  return json(result, { status: 200, headers });
+  return json(result, {status: 200, headers});
 }
-export async function loader({ context }) {
-  const { cart } = context;
-  return json({ cart: await cart.get() });
+
+const COLLECTION_QUERY = `{
+  collection(handle: "all") {
+    id
+    title
+    products(first: 10) {
+      nodes {
+          id
+          title
+          publishedAt
+          descriptionHtml
+          handle
+          variants(first: 1) {
+            nodes {
+              id
+              image {
+                url
+                altText
+                width
+                height
+              }
+              price {
+                amount
+                currencyCode
+              }
+              compareAtPrice {
+                amount
+                currencyCode
+              }
+            }
+        }}
+    }}
+}`;
+
+export async function loader({context}) {
+  const {cart} = context;
+  const {collection} = await context.storefront.query(COLLECTION_QUERY);
+  return json({cart: await cart.get(), collection});
 }
 
 const Cart = () => {
-  const { cart } = useLoaderData();
+  const {cart, collection} = useLoaderData();
   const [btnClass, setBtnClass] = useState('transparent');
   function toggleColor() {
     // const [btnClass, setBtnClass] = useState('blue-color');
@@ -66,7 +101,7 @@ const Cart = () => {
     }
   };
 
-  const removeItem = () => { };
+  const removeItem = () => {};
 
   return (
     <>
@@ -85,10 +120,16 @@ const Cart = () => {
               </div>
 
               <div className="h-100 col-12 col-sm-12 col-md-12 col-lg-5 order-summary mt-1 mt-md-3 ">
-                <p className='text-center' style={{ fontSize: '1.2rem', fontWeight: '700' }}>Checkout To Apply Offers --------&#62; </p>
+                <p
+                  className="text-center"
+                  style={{fontSize: '1.2rem', fontWeight: '700'}}
+                >
+                  Checkout To Apply Offers --------&#62;{' '}
+                </p>
                 <CartSummary
                   cost={cart?.cost || 0}
                   checkoutUrl={cart?.checkoutUrl || ''}
+                  collection={collection}
                 />
               </div>
             </div>
@@ -100,13 +141,13 @@ const Cart = () => {
               <div className="col-12 mt-5">
                 <h4 className=" px-3 text-center">
                   {' '}
-                  <span className="text-center" style={{ fontWeight: 'bold' }}>
-                    Your Cart is <span style={{ color: '#ff2828' }}>Empty!</span>{' '}
+                  <span className="text-center" style={{fontWeight: 'bold'}}>
+                    Your Cart is <span style={{color: '#ff2828'}}>Empty!</span>{' '}
                   </span>{' '}
                 </h4>
               </div>
               <div className="col-12 text-center mt-3">
-                <span style={{ fontSize: '1.3rem' }} className="">
+                <span style={{fontSize: '1.3rem'}} className="">
                   Please add some items to your cart.
                 </span>
               </div>
