@@ -118,28 +118,49 @@ function OrderItem({ order }) {
     <>
       <fieldset>
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <h5 style={{ fontWeight: 'bold' }}>Orders</h5>
+          <div className="col-5 col-lg-6 col-md-6">
+            {/* <img src={order.lineItems.nodes[0].variant[0].image.url} alt="" /> */}
+          </div>
+          <div className="col-7 col-md-6 col-lg-6">
 
-            <Link to={`/account/orders/${order.id}`}>
-              <span style={{ fontSize: '1.2rem', color: 'black' }}>
-                #{order.orderNumber}
-              </span>
-            </Link>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-3 mt-lg-0 mt-md-0">
-            <h5 style={{ fontWeight: 'bold' }}>Date</h5>
-            <p style={{ fontSize: '1.2rem' }}>
-              {new Date(order.processedAt).toDateString()}
-            </p>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-3 mt-lg-0 ">
-            <h5 style={{ fontWeight: 'bold' }}>Payment Status</h5>
-            <p style={{ fontSize: '1.2rem' }}>{order.financialStatus}</p>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-3 mt-lg-0">
-            <h5 style={{ fontWeight: 'bold' }}>Fulfillment Status</h5>
-            <p style={{ fontSize: '1.2rem' }}>{order.fulfillmentStatus}</p>
+            <div className="row">
+              <div className="col-12 col-lg-6 col-md-6 ">
+                <div className="">
+                  <h5 style={{ fontWeight: 'bold' }}>Order Id</h5>
+                  <Link to={`/account/orders/${order.id}`}>
+                    <span style={{ fontSize: '1.2rem', color: 'black' }}>
+                      #{order.orderNumber}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6 col-md-6">
+                <div className="mt-3 mt-lg-0 mt-md-0">
+                  <h5 style={{ fontWeight: 'bold' }}>Date</h5>
+                  <p style={{ fontSize: '1.2rem' }}>
+                    {new Date(order.processedAt).toDateString()}
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            <div className="row">
+              <div className="col-12 col-lg-6 col-md-6">
+                <div className="mt-3">
+                  <h5 style={{ fontWeight: 'bold' }}>Payment Status</h5>
+                  <p style={{ fontSize: '1.2rem' }}>{order.financialStatus}</p>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6 col-md-6">
+                <div className="mt-3">
+                  <h5 style={{ fontWeight: 'bold' }}>Fulfillment Status</h5>
+                  <p style={{ fontSize: '1.2rem' }}>{order.fulfillmentStatus}</p>
+                </div>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
         <div className="row mt-5">

@@ -1,24 +1,24 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import {Link, NavLink, useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
-import {FcFilledFilter} from 'react-icons/fc';
+import { Link, NavLink, useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
+import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
-import {Pagination} from '@shopify/hydrogen';
-import {getPaginationVariables} from '@shopify/hydrogen';
+import { Pagination } from '@shopify/hydrogen';
+import { getPaginationVariables } from '@shopify/hydrogen';
 import ProductCarousal from '~/Components/Product/ProductCarousal';
 import BrandCaraousel from '~/Components/Home/BrandCaraousel';
 import TopSelling from '~/Components/Home/TopSelling';
 import FeaturedProducts from '~/Components/Home/FeaturedProducts';
 import Offers from '~/Components/Home/Offers';
 import Bmitrend from '~/Components/Bmitrend';
-export async function loader({params, context, request}) {
+export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
   });
-  const {handle} = params;
-  const {collection} = await context.storefront.query(COLLECTION_QUERY, {
+  const { handle } = params;
+  const { collection } = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       ...paginationVariables,
       handle,
@@ -28,7 +28,7 @@ export async function loader({params, context, request}) {
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
 
   // json is a Remix utility for creating application/json responses
@@ -40,7 +40,7 @@ export async function loader({params, context, request}) {
 }
 
 export default function Products() {
-  const {collection, trendingProducts} = useLoaderData();
+  const { collection, trendingProducts } = useLoaderData();
 
   return (
     <>
@@ -49,29 +49,32 @@ export default function Products() {
         <div className="container-fluid pb-5">
           <div className="row mt-4">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none flex-column ">
-              <Bmitrend
-                trendingProducts={trendingProducts.collection}
-                slides={1}
-              />
+              <div style={{ marginTop: '7.7rem' }}>
+                <Bmitrend
+                  trendingProducts={trendingProducts.collection}
+                  slides={1}
+
+                />
+              </div>
               <div className="card-filter">
                 <div className="card-content-all ">
                   <div className="product-authencity border border-dark pb-4">
                     <h2 className="text-center font-weight-bolder mt-3 p-1">
-                      <em style={{color: '#282828'}}>Authencity Matters</em>
+                      <em style={{ color: '#282828' }}>Authencity Matters</em>
                     </h2>
                     <hr
                       className="w-100"
-                      style={{border: '1.5px solid black'}}
+                      style={{ border: '1.5px solid black' }}
                     />
                     <p
                       className="text-center m-2"
-                      style={{fontWeight: 'bold', color: '#242424'}}
+                      style={{ fontWeight: 'bold', color: '#242424' }}
                     >
                       The risk of receiving a counterfeit product increases when
                       customer buys it from a reseller as the product moves from
                       Importer to distributor then retailer and then to the
                       reseller. <br /> <br /> But here at
-                      <span style={{color: '#ff2828'}}>
+                      <span style={{ color: '#ff2828' }}>
                         {' '}
                         &nbsp; BuildMyBody
                       </span>
@@ -95,7 +98,7 @@ export default function Products() {
             <div className="col-lg-9 col-md-12 " id="all-products">
               <div
                 className="d-flex justify-content-center mb-5"
-                style={{flexDirection: 'column', alignItems: 'center'}}
+                style={{ flexDirection: 'column', alignItems: 'center' }}
               >
                 <h1 className="font-weight-bold custom-heading3">
                   <em className="text-capitalize">
@@ -116,7 +119,7 @@ export default function Products() {
                     <FcFilledFilter size={30} />{' '}
                     <span
                       className="font-weight-bolder "
-                      style={{color: 'black'}}
+                      style={{ color: 'black' }}
                     >
                       Filters
                     </span>
@@ -304,15 +307,15 @@ export default function Products() {
                   <a
                     className="nav-link font-weight-bolder"
                     href="/certificates"
-                    style={{color: 'black', fontSize: '1.3rem'}}
+                    style={{ color: 'black', fontSize: '1.3rem' }}
                   >
                     Authenticity
                   </a>
                 </span>
               </div>
               <Pagination connection={collection.products}>
-                {({nodes, NextLink, PreviousLink, isLoading}) => (
-                  <div style={{textAlign: 'center'}}>
+                {({ nodes, NextLink, PreviousLink, isLoading }) => (
+                  <div style={{ textAlign: 'center' }}>
                     <div className="flex items-center justify-center mt-6">
                       <PreviousLink className="btn">
                         {isLoading ? 'Loading...' : 'Load previous products'}
@@ -460,7 +463,7 @@ const PRODUCT_QUERY = `{
         }}
     }}
 }`;
-const seo = ({data}) => ({
+const seo = ({ data }) => ({
   title: data?.collection?.title,
   description: data?.collection?.description.substr(0, 154),
 });
@@ -468,9 +471,9 @@ export const handle = {
   seo,
 };
 
-export function meta({data}) {
+export function meta({ data }) {
   return [
-    {title: data?.collection?.title ?? 'Collection'},
-    {description: data?.collection?.description},
+    { title: data?.collection?.title ?? 'Collection' },
+    { description: data?.collection?.description },
   ];
 }

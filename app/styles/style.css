@@ -1206,6 +1206,10 @@ me #secondbtn {
   font-size: 14px;
 }
 
+.slick-dots {
+  bottom: -43px;
+}
+
 .slick-prev {
   left: -37px;
 }
