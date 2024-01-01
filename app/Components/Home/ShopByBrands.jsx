@@ -19,14 +19,14 @@ const ShopByBrands = () => {
           <hr className="h1-hr" />
         </div>
         <div className="row">
-          <div className="col-6 mb-2  mb-lg-0 mb-md-0 ">
+          <div className="col-12 col-lg-6 col-sm-6 mb-2  mb-lg-0 mb-md-0 ">
             <div className="certificate-card1 ">
               <Link to={`/products/cellucor`} className="text-center mt-4 ">
                 <img src={photo} className="w-100" alt="" />
               </Link>
             </div>
           </div>
-          <div className="col-6  mb-lg-0 mb-md-0">
+          <div className="col-12 col-lg-6 col-sm-6 mb-2  mb-lg-0 mb-md-0">
             <div className="certificate-card1">
               <Link to={`/products/muscletech`} className="text-center mt-4">
                 <img src={photo1} className="w-100   " alt="" />
@@ -34,7 +34,7 @@ const ShopByBrands = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-lg-6 col-sm-6 mb-2  mb-lg-0 mb-md-0">
             <div className="certificate-card1">
               <p className="text-center mt-0 mt-lg-4 mt-md-2">
                 <Link to="/products/musclepharm" className="  ">
@@ -44,7 +44,7 @@ const ShopByBrands = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-lg-6 col-sm-6">
             <div className="certificate-card1">
               <p className="text-center mt-0 mt-lg-4 mt-md-2">
                 <Link to={`/products/on-nutrition`} className="text-center mt-4">

@@ -225,7 +225,7 @@
   background-color: #282828;
   border: 2px solid #282828;
   border-radius: 4px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 576px) {
@@ -1115,7 +1115,6 @@ hr {
 }
 
 .carousel-control-prev-icon {
-  color: black !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M5.25%200l-4%204%204%204%201.5-1.5-2.5-2.5%202.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
   mix-blend-mode: difference;
   transform: scale(2);
@@ -2319,6 +2318,7 @@ span.num {
 
 .blog-img p {
   margin-top: 1rem;
+  color: black;
 }
 
 .blog-img p:hover {
