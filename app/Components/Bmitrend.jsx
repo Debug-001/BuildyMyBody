@@ -1,13 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { NavLink } from '@remix-run/react';
+import {NavLink} from '@remix-run/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import pre from '../img/pre.png';
 import ProductForm from './Product/ProductForm';
-import { Link } from '@remix-run/react';
-const Bmitrend = ({ trendingProducts, slides, product }) => {
-  console.log(trendingProducts);
+import {Link} from '@remix-run/react';
+const Bmitrend = ({trendingProducts, slides, product}) => {
   const settings = {
     dots: true,
     infinite: false,
@@ -35,17 +34,15 @@ const Bmitrend = ({ trendingProducts, slides, product }) => {
       <div className="text-center carousel">
         <h1
           className="font-weight-bold custom-heading3"
-          style={{ paddingTop: '0rem' }}
+          style={{paddingTop: '0rem'}}
         >
           <em> Trending Products </em>
         </h1>
         {/* <p>Best deals on individual products picked for you. Shop Now to grab the deals!</p> */}
       </div>
       <Slider {...settings}>
-
         {/* Your components go here */}
         {trendingProducts.products.nodes.map((product) => (
-
           <div className="slider-item p-2 text-dark">
             <div>
               <Link to={`/product/${product.handle}`} className="">
@@ -56,7 +53,7 @@ const Bmitrend = ({ trendingProducts, slides, product }) => {
                 />
               </Link>
               <div className="mt-1 text-center">
-                <p style={{ fontWeight: '600', fontSize: '.9rem' }}>
+                <p style={{fontWeight: '600', fontSize: '.9rem'}}>
                   {product.title}
                 </p>
               </div>
@@ -96,15 +93,10 @@ const Bmitrend = ({ trendingProducts, slides, product }) => {
                 </div>
               </div>
             </div> */}
-
           </div>
-
-
-        ))
-        }
-
-      </Slider >
-    </div >
+        ))}
+      </Slider>
+    </div>
   );
 };
 

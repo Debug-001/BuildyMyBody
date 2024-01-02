@@ -1,13 +1,13 @@
-import { json, redirect } from '@shopify/remix-oxygen';
-import { Link, useLoaderData } from '@remix-run/react';
-import { Money, Image, flattenConnection } from '@shopify/hydrogen';
+import {json, redirect} from '@shopify/remix-oxygen';
+import {Link, useLoaderData} from '@remix-run/react';
+import {Money, Image, flattenConnection} from '@shopify/hydrogen';
 
-export const meta = ({ data }) => {
-  return [{ title: `Order ${data?.order?.name}` }];
+export const meta = ({data}) => {
+  return [{title: `Order ${data?.order?.name}`}];
 };
 
-export async function loader({ params, context }) {
-  const { session, storefront } = context;
+export async function loader({params, context}) {
+  const {session, storefront} = context;
 
   if (!params.id) {
     return redirect('/account/orders');
@@ -20,12 +20,12 @@ export async function loader({ params, context }) {
     return redirect('/account/login');
   }
 
-  const { order } = await storefront.query(CUSTOMER_ORDER_QUERY, {
-    variables: { orderId },
+  const {order} = await storefront.query(CUSTOMER_ORDER_QUERY, {
+    variables: {orderId},
   });
 
   if (!order || !('lineItems' in order)) {
-    throw new Response('Order not found', { status: 404 });
+    throw new Response('Order not found', {status: 404});
   }
 
   const lineItems = flattenConnection(order.lineItems);
@@ -49,15 +49,14 @@ export async function loader({ params, context }) {
 }
 
 export default function OrderRoute() {
-  const { order, lineItems, discountValue, discountPercentage } = useLoaderData();
+  const {order, lineItems, discountValue, discountPercentage} = useLoaderData();
   return (
     <div className="account-order container">
       <h2>Order {order.name}</h2>
       <p>Placed on {new Date(order.processedAt).toDateString()}</p>
       <br />
-      <div className='d-flex justify-content-between flex-wrap'>
+      <div className="d-flex justify-content-between flex-wrap">
         <table>
-
           {/* <tr className='row'>
             <th scope="col">Product</th>
             <th scope="col">Price</th>
@@ -74,22 +73,22 @@ export default function OrderRoute() {
           <tfoot>
             {((discountValue && discountValue.amount) ||
               discountPercentage) && (
-                <tr>
-                  <th scope="row" colSpan={3}>
-                    <p>Discounts</p>
-                  </th>
-                  <th scope="row">
-                    <p>Discounts</p>
-                  </th>
-                  <td>
-                    {discountPercentage ? (
-                      <span>-{discountPercentage}% OFF</span>
-                    ) : (
-                      discountValue && <Money data={discountValue} />
-                    )}
-                  </td>
-                </tr>
-              )}
+              <tr>
+                <th scope="row" colSpan={3}>
+                  <p>Discounts</p>
+                </th>
+                <th scope="row">
+                  <p>Discounts</p>
+                </th>
+                <td>
+                  {discountPercentage ? (
+                    <span>-{discountPercentage}% OFF</span>
+                  ) : (
+                    discountValue && <Money data={discountValue} />
+                  )}
+                </td>
+              </tr>
+            )}
             <tr>
               {/* <th scope="row" colSpan={3}>
                 <p>Subtotal</p>
@@ -116,7 +115,7 @@ export default function OrderRoute() {
               {/* <th scope="row" colSpan={3}>
                 Total
               </th> */}
-              <th scope="row" className='ml-2'>
+              <th scope="row" className="ml-2">
                 <p>Total</p>
               </th>
               <td>
@@ -125,7 +124,7 @@ export default function OrderRoute() {
             </tr>
           </tfoot>
         </table>
-        <div className=''>
+        <div className="">
           <h3>Shipping Address</h3>
           {order?.shippingAddress ? (
             <address>
@@ -161,10 +160,10 @@ export default function OrderRoute() {
   );
 }
 
-function OrderLineRow({ lineItem }) {
+function OrderLineRow({lineItem}) {
   return (
-    <tr key={lineItem.variant.id} className='row'>
-      <td className='col-6 col-lg-3 col-md-3 '>
+    <tr key={lineItem.variant.id} className="row">
+      <td className="col-6 col-lg-3 col-md-3 ">
         <div>
           <h4>Product</h4>
           <Link to={`/products/${lineItem.variant.product.handle}`}>
@@ -180,15 +179,15 @@ function OrderLineRow({ lineItem }) {
           </div>
         </div>
       </td>
-      <td className='col-6 col-lg-3 col-md-3'>
+      <td className="col-6 col-lg-3 col-md-3">
         <h4>Price</h4>
         <Money data={lineItem.variant.price} />
       </td>
-      <td className='col-6 col-lg-3 col-md-3'>
+      <td className="col-6 col-lg-3 col-md-3">
         <h4>Quantity</h4>
         {lineItem.quantity}
       </td>
-      <td className='col-6 col-lg-3 col-md-3'>
+      <td className="col-6 col-lg-3 col-md-3">
         <h4>Total</h4>
         <Money data={lineItem.discountedTotalPrice} />
       </td>

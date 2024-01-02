@@ -2,7 +2,7 @@
 import First from '../img/first.jpeg'
 const data = [
     {
-        img: { First },
+        img:  First ,
 
         email: '2karenterprises@gmail.com',
         aboutUs: "We are one of India's leading distributors for wholesale supplements, both health and sports based, as well as offering a great range of products.We are official distributors for all of the leading brands such as Ultimate Nutrition and BioX.",
