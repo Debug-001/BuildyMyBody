@@ -112,7 +112,7 @@ const Product = ({ data }) => {
                 <ProductCarousal media={product.media.nodes} />
               </div>
               {/* middle column  */}
-              <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
+              <div className="col-sm-12 col-lg-6 col-md-12 mt-5 " style={{ padding: '0rem 1rem' }}>
                 <h2
                   className="text-lg-left text-md-center text-sm-center product-title-size  "
                   style={{ fontWeight: '800' }}
@@ -145,7 +145,7 @@ const Product = ({ data }) => {
                         />
                       </div>
                       <div>
-                        <div className="ml-3 d-flex align-items-center ">
+                        <div className="ml-1 mt-1 d-flex align-items-center ">
                           <p
                             style={{ color: '#ff2828' }}
                             className="product-btn p-2"
@@ -169,7 +169,7 @@ const Product = ({ data }) => {
                       <span className=""> Free Shipping</span>
                     </p>
                   </div>
-                  <div className="col-lg-6 col-md-6 col-12  title  mt-4">
+                  <div className="col-lg-6 col-md-6 col-12  title  mt-3 mt-lg-0 mt-md-0">
                     <ProductOptions
                       options={product.options}
                       selectedVariant={selectedVariant}
@@ -249,7 +249,7 @@ const Product = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-4 ">
+                <div className=" mt-5 ">
                   <div className=" each-product-btn d-flex">
                     <div>
                       <ProductForm
@@ -262,10 +262,12 @@ const Product = ({ data }) => {
                         <ShopPayButton
                           storeDomain={storeDomain}
                           variantIds={[selectedVariant?.id]}
-                          className="custom-buy-now "
+                          className="custom-buy-now"
                         />
                       )}
+
                     </div>
+
                   </div>
                 </div>
                 <hr className="w-100" />
