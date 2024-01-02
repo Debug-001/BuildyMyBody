@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import { CartForm } from '@shopify/hydrogen';
-import { FaPlus } from 'react-icons/fa6';
-import { FaMinus } from 'react-icons/fa6';
-import { MediaFile, ShopPayButton } from '@shopify/hydrogen-react';
-import { Image, Money } from '@shopify/hydrogen';
+import {CartForm} from '@shopify/hydrogen';
+import {FaPlus} from 'react-icons/fa6';
+import {FaMinus} from 'react-icons/fa6';
+import {MediaFile, ShopPayButton} from '@shopify/hydrogen-react';
+import {Image, Money} from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../img/protien.png';
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 
-const Product = ({ data }) => {
+const Product = ({data}) => {
   const {
     product,
     selectedVariant,
@@ -21,7 +21,6 @@ const Product = ({ data }) => {
     storeDomain,
     orderable,
   } = data;
-  console.log(data);
 
   const [qty, setQty] = useState(1);
   const [isOpen1, setIsOpen1] = useState(false);
@@ -76,7 +75,6 @@ const Product = ({ data }) => {
         `https://api.postalpincode.in/pincode/${pincode}`,
       );
       const data = await response.json();
-      console.log('API Response:', data);
       if (data && data[0]?.Status === 'Success') {
         const postOfficeData = data[0].PostOffice[0];
         const deliveryStatus = postOfficeData.Deliverystatus;
@@ -115,14 +113,14 @@ const Product = ({ data }) => {
               <div className="col-sm-12 col-lg-6 col-md-12 mt-5">
                 <h2
                   className="text-lg-left text-md-center text-sm-center product-title-size  "
-                  style={{ fontWeight: '800' }}
+                  style={{fontWeight: '800'}}
                 >
                   {product.title}
                 </h2>
                 <div className="row mt-2 d-flex option-flex">
                   {/* weight/flavour section  */}
                   <div className="col-lg-6 col-md-6 col-12 ">
-                    <div className="d-flex" style={{ fontSize: '25px' }}>
+                    <div className="d-flex" style={{fontSize: '25px'}}>
                       <p className="title  ">Price:</p>
                       <span>
                         <Money
@@ -130,7 +128,7 @@ const Product = ({ data }) => {
                           data={selectedVariant.compareAtPrice}
                           className="ml-2"
                           as="del"
-                          style={{ color: '#ff2828' }}
+                          style={{color: '#ff2828'}}
                         />
                       </span>
                     </div>
@@ -141,20 +139,20 @@ const Product = ({ data }) => {
                           withoutTrailingZeros
                           data={selectedVariant.price}
                           className="ml-2"
-                          style={{ fontSize: '38px' }}
+                          style={{fontSize: '38px'}}
                         />
                       </div>
                       <div>
                         <div className="ml-3 d-flex align-items-center ">
                           <p
-                            style={{ color: '#ff2828' }}
+                            style={{color: '#ff2828'}}
                             className="product-btn p-2"
                           >
                             {Math.ceil(
                               ((selectedVariant.compareAtPrice.amount -
                                 selectedVariant.price.amount) /
                                 selectedVariant.compareAtPrice.amount) *
-                              100,
+                                100,
                             )}
                             % off
                           </p>
@@ -163,7 +161,7 @@ const Product = ({ data }) => {
                     </h2>
                     <p
                       className="title  "
-                      style={{ fontSize: '14px', opacity: '.7' }}
+                      style={{fontSize: '14px', opacity: '.7'}}
                     >
                       (EMI starts from ₹211.45) | Limited Time
                       <span className=""> Free Shipping</span>
@@ -216,7 +214,7 @@ const Product = ({ data }) => {
                     <div className="d-flex width-input mt-3 border border-dark justify-content-between p-1">
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="ml-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -234,7 +232,7 @@ const Product = ({ data }) => {
 
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="mr-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -271,7 +269,7 @@ const Product = ({ data }) => {
                 <hr className="w-100" />
                 <h4
                   className="mt-5 title font-weight-bolder"
-                  style={{ color: '#282828' }}
+                  style={{color: '#282828'}}
                 >
                   Check Delivery
                 </h4>
@@ -297,8 +295,9 @@ const Product = ({ data }) => {
                   </div>
                   <div className="mt-1">
                     <p
-                      className={`error-message ${deliverable ? 'success' : 'error'
-                        }`}
+                      className={`error-message ${
+                        deliverable ? 'success' : 'error'
+                      }`}
                     >
                       {errorMessage}
                     </p>
@@ -309,14 +308,14 @@ const Product = ({ data }) => {
                   <div>
                     <h4
                       className="font-weight-bolder"
-                      style={{ color: '#282828' }}
+                      style={{color: '#282828'}}
                     >
                       Return and Replacement Policy
                     </h4>
                     <p>
                       <em
                         className="font-weight-bolder"
-                        style={{ color: '#ff2828' }}
+                        style={{color: '#ff2828'}}
                       >
                         7-days replacement policy
                       </em>
@@ -325,17 +324,17 @@ const Product = ({ data }) => {
                       <button
                         onClick={toggleDropdown4}
                         className="w-100 text-left p-3"
-                        style={{ border: '1px solid transparent' }}
+                        style={{border: '1px solid transparent'}}
                       >
                         <span
                           className="font-weight-bold"
-                          style={{ color: '#282828' }}
+                          style={{color: '#282828'}}
                         >
                           View Policy
                         </span>
                       </button>
                       {isOpen4 && (
-                        <div style={{ fontSize: '14px' }}>
+                        <div style={{fontSize: '14px'}}>
                           <span className="" data-show="">
                             <p className="mt-1">
                               We offer you complete peace of mind while ordering
@@ -353,7 +352,7 @@ const Product = ({ data }) => {
                               Deposits as modes of payment, we will issue a
                               cheque in the registered name of the customer.
                               <br />{' '}
-                              <span style={{ fontWeight: 'bold' }}>
+                              <span style={{fontWeight: 'bold'}}>
                                 {' '}
                                 Wrong item if received: We apologize if you have
                                 received the wrong item by mistake.
@@ -375,18 +374,18 @@ const Product = ({ data }) => {
                       <button
                         onClick={toggleDropdown5}
                         className="w-100 text-left p-3 mt-2"
-                        style={{ border: '1px solid transparent' }}
+                        style={{border: '1px solid transparent'}}
                       >
                         <span
                           className="font-weight-bold"
-                          style={{ color: '#282828' }}
+                          style={{color: '#282828'}}
                         >
                           Product will be only replaced if it follows the
                           following conditions:
                         </span>
                       </button>
                       {isOpen5 && (
-                        <div style={{ fontSize: '14px' }}>
+                        <div style={{fontSize: '14px'}}>
                           <ul className="mt-2">
                             <li className="mt-1">
                               1) Product should be sealed. We will not accept
@@ -414,7 +413,7 @@ const Product = ({ data }) => {
 
                   <p
                     className="font-weight-bold mt-2"
-                    style={{ color: 'black', fontSize: '1.2rem' }}
+                    style={{color: 'black', fontSize: '1.2rem'}}
                   >
                     For further details, feel free to
                     <span>
@@ -437,7 +436,7 @@ const Product = ({ data }) => {
                 className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-none d-lg-flex "
               >
                 <h4 className="d-flex justify-content-center font-weight-bolder ">
-                  <em style={{ fontSize: '2rem' }} className="text-center">
+                  <em style={{fontSize: '2rem'}} className="text-center">
                     FEATURED PRODUCTS
                   </em>
                 </h4>
@@ -452,7 +451,7 @@ const Product = ({ data }) => {
                         >
                           <div
                             className="w-100"
-                            style={{ maxWidth: '250px', margin: '0 auto' }}
+                            style={{maxWidth: '250px', margin: '0 auto'}}
                           >
                             <Image
                               data={product.variants.nodes[0].image}
@@ -463,16 +462,15 @@ const Product = ({ data }) => {
                               alt={product.title}
                               className="single-product-img"
                             />
-                            <div className='text-center'>
+                            <div className="text-center">
                               <p>
-
                                 {Math.ceil(
                                   ((product.variants.nodes[0].compareAtPrice
                                     .amount -
                                     product.variants.nodes[0].price.amount) /
                                     product.variants.nodes[0].compareAtPrice
                                       .amount) *
-                                  100,
+                                    100,
                                 )}
                                 % off
                               </p>
@@ -482,20 +480,30 @@ const Product = ({ data }) => {
                           </div>
                         </Link>
                         <div>
-                          <p className="font-weight-bold mt-4  text-center text-dark d-flex justify-content-center align-items-center flex-column" style={{ fontSize: '.9rem' }}>
+                          <p
+                            className="font-weight-bold mt-4  text-center text-dark d-flex justify-content-center align-items-center flex-column"
+                            style={{fontSize: '.9rem'}}
+                          >
                             {product.title}
                           </p>
                           <h6 className="mt-3 font-weight-bold  text-center text-dark d-flex align-items-center justify-content-center">
                             {product.variants.nodes[0].compareAtPrice && (
                               <del className="discount-text">
-                                ₹{product.variants.nodes[0].compareAtPrice.amount}
+                                ₹
+                                {
+                                  product.variants.nodes[0].compareAtPrice
+                                    .amount
+                                }
                               </del>
                             )}{' '}
                             <Money
                               withoutTrailingZeros
                               data={product.variants?.nodes[0].price}
-                              style={{ color: '#ff2828 !important', fontSize: '22px' }}
-                              className='ml-2'
+                              style={{
+                                color: '#ff2828 !important',
+                                fontSize: '22px',
+                              }}
+                              className="ml-2"
                             />
                           </h6>
                           <div className="text-center each-product-btn">
@@ -516,7 +524,7 @@ const Product = ({ data }) => {
                 <div className="col-lg-10 " id="product-tabs">
                   <ul
                     className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                    style={{ background: 'black' }}
+                    style={{background: 'black'}}
                     id="myTab"
                     role="tablist"
                   >
@@ -571,9 +579,7 @@ const Product = ({ data }) => {
                       dangerouslySetInnerHTML={{
                         __html: product.descriptionHtml,
                       }}
-                    >
-
-                    </div>
+                    ></div>
                     {/* <div>
                      
                       {dropdownOpen && (
@@ -604,7 +610,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown1}
                             className="w-100 text-left p-3"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -617,7 +623,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen1 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br /> <br />
                               <span className="answer-product">Answer</span>
                               <span
@@ -678,7 +684,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown2}
                             className="w-100 text-left p-3 mt-4"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -690,7 +696,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen2 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -718,7 +724,7 @@ const Product = ({ data }) => {
                           <button
                             onClick={toggleDropdown3}
                             className="w-100 text-left p-3 mt-4"
-                            style={{ border: '1px solid transparent' }}
+                            style={{border: '1px solid transparent'}}
                           >
                             <span className="ques-product">Question</span>
                             <span
@@ -731,7 +737,7 @@ const Product = ({ data }) => {
                             </span>
                           </button>
                           {isOpen3 && (
-                            <div style={{ fontSize: '14px' }}>
+                            <div style={{fontSize: '14px'}}>
                               <br />
                               <br />
                               <span className="answer-product">Answer</span>
@@ -782,7 +788,7 @@ const Product = ({ data }) => {
                   className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-flex d-lg-none "
                 >
                   <h4 className="d-flex justify-content-center font-weight-bolder ">
-                    <em style={{ fontSize: '2rem' }} className="text-center">
+                    <em style={{fontSize: '2rem'}} className="text-center">
                       FEATURED PRODUCTS
                     </em>
                   </h4>
@@ -797,7 +803,7 @@ const Product = ({ data }) => {
                           >
                             <div
                               className="w-100"
-                              style={{ maxWidth: '250px', margin: '0 auto' }}
+                              style={{maxWidth: '250px', margin: '0 auto'}}
                             >
                               <Image
                                 data={product.variants.nodes[0].image}
@@ -808,37 +814,43 @@ const Product = ({ data }) => {
                                 alt={product.title}
                                 className="single-product-img"
                               />
-                              <div className='text-center'>
+                              <div className="text-center">
                                 <p>
-
                                   {Math.ceil(
                                     ((product.variants.nodes[0].compareAtPrice
                                       .amount -
                                       product.variants.nodes[0].price.amount) /
                                       product.variants.nodes[0].compareAtPrice
                                         .amount) *
-                                    100,
+                                      100,
                                   )}
                                   % off
                                 </p>
                               </div>
                             </div>
                           </Link>
-                          <div className='d-flex justify-content-center align-items-center flex-column'>
+                          <div className="d-flex justify-content-center align-items-center flex-column">
                             <h6 className="font-weight-bold mt-4  text-center text-dark">
                               {product.title}
                             </h6>
                             <h6 className="mt-3 font-weight-bold  text-center text-dark d-flex align-items-center justify-content-center">
                               {product.variants.nodes[0].compareAtPrice && (
                                 <del className="discount-text">
-                                  ₹{product.variants.nodes[0].compareAtPrice.amount}
+                                  ₹
+                                  {
+                                    product.variants.nodes[0].compareAtPrice
+                                      .amount
+                                  }
                                 </del>
                               )}{' '}
                               <Money
                                 withoutTrailingZeros
                                 data={product.variants?.nodes[0].price}
-                                style={{ color: '#ff2828 !important', fontSize: '22px' }}
-                                className='ml-2'
+                                style={{
+                                  color: '#ff2828 !important',
+                                  fontSize: '22px',
+                                }}
+                                className="ml-2"
                               />
                             </h6>
                             <div className="text-center each-product-btn">
@@ -857,7 +869,7 @@ const Product = ({ data }) => {
                   className="col-lg-2 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"
                 >
                   <h4 className="d-flex justify-content-center align-items-center font-weight-bolder  text-center">
-                    <em style={{ fontSize: '2rem' }}>RELATED PRODUCTS</em>
+                    <em style={{fontSize: '2rem'}}>RELATED PRODUCTS</em>
                   </h4>
                   <div className="custom-fl-product d-md-flex flex-lg-column ">
                     {TrendingProductsCollection.collection.products.nodes.map(
@@ -871,7 +883,7 @@ const Product = ({ data }) => {
                           >
                             <div
                               className="w-100"
-                              style={{ maxWidth: '250px', margin: '0 auto' }}
+                              style={{maxWidth: '250px', margin: '0 auto'}}
                             >
                               <Image
                                 data={product.variants.nodes[0].image}
@@ -882,37 +894,46 @@ const Product = ({ data }) => {
                                 className="single-product-img"
                                 alt={product.title}
                               />
-                              <div className='text-center'>
+                              <div className="text-center">
                                 <p>
-
                                   {Math.ceil(
                                     ((product.variants.nodes[0].compareAtPrice
                                       .amount -
                                       product.variants.nodes[0].price.amount) /
                                       product.variants.nodes[0].compareAtPrice
                                         .amount) *
-                                    100,
+                                      100,
                                   )}
                                   % off
                                 </p>
                               </div>
                             </div>
                           </Link>
-                          <div className='d-flex justify-content-center align-items-center flex-column'>
-                            <p className="font-weight-bold mt-4  text-center text-dark d-flex justify-content-center align-items-center flex-column" style={{ fontSize: '.9rem' }}>
+                          <div className="d-flex justify-content-center align-items-center flex-column">
+                            <p
+                              className="font-weight-bold mt-4  text-center text-dark d-flex justify-content-center align-items-center flex-column"
+                              style={{fontSize: '.9rem'}}
+                            >
                               {product.title}
                             </p>
                             <h6 className="mt-3 font-weight-bold  text-center text-dark d-flex align-items-center justify-content-center">
                               {product.variants.nodes[0].compareAtPrice && (
                                 <del className="discount-text">
-                                  ₹{product.variants.nodes[0].compareAtPrice.amount}
+                                  ₹
+                                  {
+                                    product.variants.nodes[0].compareAtPrice
+                                      .amount
+                                  }
                                 </del>
                               )}{' '}
                               <Money
                                 withoutTrailingZeros
                                 data={product.variants?.nodes[0].price}
-                                style={{ color: '#ff2828 !important', fontSize: '22px' }}
-                                className='ml-2'
+                                style={{
+                                  color: '#ff2828 !important',
+                                  fontSize: '22px',
+                                }}
+                                className="ml-2"
                               />
                             </h6>
 

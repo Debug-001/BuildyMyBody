@@ -24,27 +24,29 @@ export default function ProductForm({
   }, []);
   return (
     <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>
-      {custom ? (
-        button
-      ) : (
-        <button className="btn" onClick={showAlertAndDismiss}>
-          Add to Cart
-        </button>
-      )}
+      <div className="" style={{position: 'relative'}}>
+        {custom ? (
+          button
+        ) : (
+          <button className="btn" onClick={showAlertAndDismiss}>
+            Add to Cart
+          </button>
+        )}
 
-      {showAlert && (
-        <div className="fixed-bottom">
-          <div
-            className="alert alert-success alert-dismissible fade show"
-            style={{maxWidth: '300px'}}
-            role="alert"
-          >
-            <p style={{fontSize: '1.4rem', fontStyle: 'normal'}}>
-              Added To the Cart!
-            </p>
+        {showAlert && (
+          <div className="fixed-bottom">
+            <div
+              className="alert alert-success alert-dismissible fade show"
+              style={{maxWidth: '300px'}}
+              role="alert"
+            >
+              <p style={{fontSize: '1.4rem', fontStyle: 'normal'}}>
+                Added To the Cart!
+              </p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </CartForm>
   );
 }
