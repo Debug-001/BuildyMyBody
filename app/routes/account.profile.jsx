@@ -1,17 +1,18 @@
-import { json, redirect } from '@shopify/remix-oxygen';
+import {json, redirect} from '@shopify/remix-oxygen';
 import {
   Form,
   useActionData,
   useNavigation,
   useOutletContext,
 } from '@remix-run/react';
+import {useEffect} from 'react';
 // import Footer from '~/Components/Footer';
 
 export const meta = () => {
-  return [{ title: 'BuildMyBody|Profile' }];
+  return [{title: 'BuildMyBody|Profile'}];
 };
 
-export async function loader({ context }) {
+export async function loader({context}) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (!customerAccessToken) {
     return redirect('/account/login');
@@ -19,17 +20,17 @@ export async function loader({ context }) {
   return json({});
 }
 
-export async function action({ request, context }) {
-  const { session, storefront } = context;
+export async function action({request, context}) {
+  const {session, storefront} = context;
 
   if (request.method !== 'PUT') {
-    return json({ error: 'Method not allowed' }, { status: 405 });
+    return json({error: 'Method not allowed'}, {status: 405});
   }
 
   const form = await request.formData();
   const customerAccessToken = await session.get('customerAccessToken');
   if (!customerAccessToken) {
-    return json({ error: 'Unauthorized' }, { status: 401 });
+    return json({error: 'Unauthorized'}, {status: 401});
   }
 
   try {
@@ -53,7 +54,6 @@ export async function action({ request, context }) {
         customer[key] = value;
       }
     }
-
     if (password) {
       customer.password = password;
     }
@@ -69,8 +69,8 @@ export async function action({ request, context }) {
     // check for mutation errors
     if (updated.customerUpdate?.customerUserErrors?.length) {
       return json(
-        { error: updated.customerUpdate?.customerUserErrors[0] },
-        { status: 400 },
+        {error: updated.customerUpdate?.customerUserErrors[0]},
+        {status: 400},
       );
     }
 
@@ -83,7 +83,7 @@ export async function action({ request, context }) {
     }
 
     return json(
-      { error: null, customer: updated.customerUpdate?.customer },
+      {error: null, customer: updated.customerUpdate?.customer},
       {
         headers: {
           'Set-Cookie': await session.commit(),
@@ -91,25 +91,24 @@ export async function action({ request, context }) {
       },
     );
   } catch (error) {
-    return json({ error: error.message, customer: null }, { status: 400 });
+    return json({error: error.message, customer: null}, {status: 400});
   }
 }
 
 export default function AccountProfile() {
   const account = useOutletContext();
-  const { state } = useNavigation();
+  const {state} = useNavigation();
   const action = useActionData();
   const customer = action?.customer ?? account?.customer;
-
   return (
     <>
       <div className="profile-clr pb-5 ">
         <div className="container">
           <div className="account-profile">
-            <h2 style={{ color: '#ff2828' }}>
+            <h2 style={{color: '#ff2828'}}>
               <em className="">My Profile</em>
             </h2>
-            <hr style={{ width: '30%' }} className="bg-dark" />
+            <hr style={{width: '30%'}} className="bg-dark" />
             {/* <br /> */}
             <Form method="PUT" className="mt-5">
               <div className="row">
@@ -195,7 +194,7 @@ export default function AccountProfile() {
                         defaultChecked={customer.acceptsMarketing}
                       />
                       <p>
-                        <label htmlFor="acceptsMarketing" >
+                        <label htmlFor="acceptsMarketing">
                           <p className="ml-2 ">
                             Subscribed to marketing communications
                           </p>
@@ -219,7 +218,7 @@ export default function AccountProfile() {
                 <div className="col-sm-12 col-lg-6 col-md-6 d-none d-md-flex d-lg-flex justify-content-lg-end justify-content-md-end  ">
                   <button
                     type="submit"
-                    id='flash-button'
+                    id="flash-button"
                     className="w-50 w-lg-25  text-center p-1 "
                     disabled={state !== 'idle'}
                   >
@@ -280,7 +279,7 @@ export default function AccountProfile() {
                           minLength={8}
                         />
                         <br />
-                        <small className="" style={{ color: 'blue' }}>
+                        <small className="" style={{color: 'blue'}}>
                           Passwords must be at least 8 characters.
                         </small>
                       </div>
@@ -288,7 +287,7 @@ export default function AccountProfile() {
                     <div className=" profile-btn-display4 mt-2">
                       <button
                         type="submit"
-                        id='flash-button'
+                        id="flash-button"
                         className="w-100  text-center p-1 profile-btn"
                         disabled={state !== 'idle'}
                       >
@@ -299,7 +298,7 @@ export default function AccountProfile() {
                   {action?.error ? (
                     <p>
                       <mark>
-                        <small>{action.error}</small>
+                        <small>{action.error.message}</small>
                       </mark>
                     </p>
                   ) : (

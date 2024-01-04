@@ -118,13 +118,10 @@ function OrderItem({ order }) {
     <>
       <fieldset>
         <div className="row">
-          <div className="col-5 col-lg-6 col-md-6">
-            {/* <img src={order.lineItems.nodes[0].variant[0].image.url} alt="" /> */}
-          </div>
-          <div className="col-7 col-md-6 col-lg-6">
 
+          <div className="col-12 ">
             <div className="row">
-              <div className="col-12 col-lg-6 col-md-6 ">
+              <div className="col-12 col-lg-3 col-md-6 ">
                 <div className="">
                   <h5 style={{ fontWeight: 'bold' }}>Order Id</h5>
                   <Link to={`/account/orders/${order.id}`}>
@@ -134,7 +131,7 @@ function OrderItem({ order }) {
                   </Link>
                 </div>
               </div>
-              <div className="col-12 col-lg-6 col-md-6">
+              <div className="col-12 col-lg-3 col-md-6">
                 <div className="mt-3 mt-lg-0 mt-md-0">
                   <h5 style={{ fontWeight: 'bold' }}>Date</h5>
                   <p style={{ fontSize: '1.2rem' }}>
@@ -142,35 +139,30 @@ function OrderItem({ order }) {
                   </p>
                 </div>
               </div>
-
-            </div>
-            <div className="row">
-              <div className="col-12 col-lg-6 col-md-6">
-                <div className="mt-3">
+              <div className="col-12 col-lg-3 col-md-6">
+                <div className="mt-3 mt-lg-0 mt-md-0">
                   <h5 style={{ fontWeight: 'bold' }}>Payment Status</h5>
                   <p style={{ fontSize: '1.2rem' }}>{order.financialStatus}</p>
                 </div>
               </div>
-              <div className="col-12 col-lg-6 col-md-6">
-                <div className="mt-3">
+              <div className="col-12 col-lg-3 col-md-6">
+                <div className="mt-3 mt-lg-0 mt-md-0">
                   <h5 style={{ fontWeight: 'bold' }}>Fulfillment Status</h5>
                   <p style={{ fontSize: '1.2rem' }}>{order.fulfillmentStatus}</p>
                 </div>
               </div>
             </div>
 
-
-
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-lg-center ">
+          <div className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-lg-center ">
             <h5 style={{ fontWeight: 'bold' }}>Total</h5>
             <span style={{ fontSize: '1.2rem' }} className="ml-4">
               <Money data={order.currentTotalPrice} />
             </span>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12  d-flex justify-content-lg-center mt-3 mt-lg-0 mt-md-0">
+          <div className="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-lg-center mt-3 mt-lg-0 mt-md-0">
             <Link to={`/account/orders/${btoa(order.id)}`}>
               <div
                 className="btn shop-nav-btn p-2"

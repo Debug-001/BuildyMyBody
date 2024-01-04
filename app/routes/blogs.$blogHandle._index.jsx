@@ -90,7 +90,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <Offers />
+            {/* <Offers /> */}
 
           </div>
           <div className="blog-grid col-lg-8 col-md-8 ">

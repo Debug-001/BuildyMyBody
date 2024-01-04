@@ -2,7 +2,7 @@
 import First from '../img/first.jpeg'
 const data = [
     {
-        img: { First },
+        img: First,
 
         email: '2karenterprises@gmail.com',
         aboutUs: "We are one of India's leading distributors for wholesale supplements, both health and sports based, as well as offering a great range of products.We are official distributors for all of the leading brands such as Ultimate Nutrition and BioX.",
@@ -11,6 +11,7 @@ const data = [
         category: 'Category1'
     },
     {
+        img: First,
 
         email: 'info@musclepronutrition.com',
         aboutUs: "Muscle Pro Nutrition’s philosophy is very simple; to provide Indian customers with the BEST source of high quality Sports nutrition brands available in the world. Through the years, we have developed excellent relationships with major manufacturers and brands and can pass these benefits to our clients..",
@@ -20,6 +21,7 @@ const data = [
 
     },
     {
+        img: First,
 
         email: 'info@brightcommodities.co.in',
         aboutUs: "Bright Commodities is a leading importer and distributor of nutritional and health related products and supplements. We have an exclusive import agreement for Optimum Nutrition and Bio-Engineered Supplements and Nutrition products. With a pan-India reach and seven warehouses spread across the country, we have a large distribution network. Making genuine products and quality supplements available to all is our goal.",
@@ -29,6 +31,7 @@ const data = [
 
     },
     {
+        img: First,
 
         email: 'info@pearl-international.co.in',
         aboutUs: "Pearl International is one of India's leading importer for sports nutrition brands, offering a great range of products. We are the official importer all of the leading brands such as Dymatize, BPI Sports, GAT Sport, RSP Nutrition, EVL Nutrition, Rule 1, All Max Nutrition etc.",
@@ -38,6 +41,7 @@ const data = [
 
     },
     {
+        img: First,
 
         email: 'info@unlimitednutrition.in',
         aboutUs: "We believe that everybody can be a Pro at whatever they set their mind on, what differentiates one from another is the strength of their body and the will power of their mind. We, at Proburst, are the new generation of Fitness enablers and we wish to partner with people who believe that fitness is not just an activity, but a way of life, an irreplaceable lifestyle and a perfect fashion statement; people who believe in being fit, and being Pro at whatever they do!",
@@ -46,6 +50,7 @@ const data = [
         category: 'Category5'
     },
     {
+        img: First,
 
         email: 'Shree Balaji Overseas',
         aboutUs: "Shri Balaji Overseas is the official importer of the brands many top international brands like Dymatize, Kaged Muscle, Musclepharm, BPI Sports, Ultimate Nutrition, Gaspari nutriiton etc.",
@@ -54,6 +59,7 @@ const data = [
 
     },
     {
+        img: First,
 
         email: 'info@paradisenutrition.in',
         aboutUs: "Paradise Nutrition Inc. is an import & distribution company established in 2002. Our Goal is to provide world’s best manufactured Nutritional Supplements, sports Fitness accessories to Indian market. We don’t Compromise on the Quality of the Products, We distribute the World best brands which meets high Quality Standards directly from the manufacturers and do not deal with any third party manufactured brand. One thing that has remained constant in our journey is our love for what we do and our focus on delivering products of quality at extremely competitive prices.",
@@ -62,7 +68,7 @@ const data = [
         category: 'Category7'
     },
     {
-
+        img: First,
         email: 'info@unlimitednutrition.in',
         aboutUs: "We believe that everybody can be a Pro at whatever they set their mind on, what differentiates one from another is the strength of their body and the will power of their mind. We, at Proburst, are the new generation of Fitness enablers and we wish to partner with people who believe that fitness is not just an activity, but a way of life, an irreplaceable lifestyle and a perfect fashion statement; people who believe in being fit, and being Pro at whatever they do!",
         phone: +9102240100770,
@@ -71,7 +77,7 @@ const data = [
     },
 
     {
-
+        img: First,
         email: 'info@musclehouseindia.com',
         aboutUs: "MHI is an authorized distributor to different nutritional supplement and gives out these products with promise of cent per cent genuineness. All our products are delivered with authorized holograms across India.   ",
         phone: +9101164000740,
@@ -79,6 +85,7 @@ const data = [
         category: 'Category9'
     },
     {
+        img: First,
 
         email: 'info@moleculeshub.com',
         aboutUs: 'About "MOLECULES HUB" is a pan India distributor. We cater to your need for your favorite protein supplements of the brand, The Protein Works,UK. We help make "PERFECTION" easier for YOU by providing you with 100% authentic products.',
@@ -87,14 +94,14 @@ const data = [
         category: 'Category10'
     },
     {
-
+        img: First,
         email: 'info@ssncindia.in',
         aboutUs: 'Since 2016, Sports Supplement Nutrition Co. is operating in India, it has been proudly serving over 10,00,000 Indians, Providing the best in Sports Supplements at the lowest prices. Serving genuine and quality supplements to customers is our primary goal.',
         website: 'www.ssncindia.in',
         category: 'Category11'
     },
     {
-
+        img: First,
         email: 'AM Lifestyle',
         aboutUs: 'AM lifestyle is the official importer of Dynamik Nutrition, RedCon1 and Sparta in India. Our mission is to give the best supplement experience to the customers.',
         category: 'Category12'
