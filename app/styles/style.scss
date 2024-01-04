@@ -1224,9 +1224,8 @@ hr {
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M2.75%200l-1.5%201.5%202.5%202.5-2.5%202.5%201.5%201.5%204-4-4-4z'/%3E%3C/svg%3E");
-  // filter: invert(1);
-  mix-blend-mode: difference;
-  transform: scale(2);
+  filter: invert(1);
+  transform: scale(1);
 }
 
 .secondhr {
