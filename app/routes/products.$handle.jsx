@@ -53,7 +53,6 @@ export default function Products() {
                 <Bmitrend
                   trendingProducts={trendingProducts.collection}
                   slides={1}
-
                 />
               </div>
               <div className="card-filter">

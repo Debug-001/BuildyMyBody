@@ -72,7 +72,7 @@ const Authenticity2 = () => {
                             <img src={frame2} className='h-75' alt="" />
                             <p>Don’t accept products with stickers that have been scratched off</p>
                         </div>
-                        <div className='col-12 col-md-6 col-lg-4 text-center'>
+                        <div className='col-12 col-md-6 col-lg-4     text-center'>
                             <img src={frame3} className='h-75' alt="" />
                             <p>Only buy from authorized retailers</p>
                         </div>

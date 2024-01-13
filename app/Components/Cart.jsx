@@ -1,19 +1,19 @@
-import {Link, useFetcher} from '@remix-run/react';
-import {CartForm} from '@shopify/hydrogen';
-import {flattenConnection, Image, Money} from '@shopify/hydrogen-react';
-import {AiOutlineDelete} from 'react-icons/ai';
-import {FaPlus} from 'react-icons/fa6';
-import {FaMinus} from 'react-icons/fa6';
+import { Link, useFetcher } from '@remix-run/react';
+import { CartForm } from '@shopify/hydrogen';
+import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
+import { AiOutlineDelete } from 'react-icons/ai';
+import { FaPlus } from 'react-icons/fa6';
+import { FaMinus } from 'react-icons/fa6';
 import Slider from 'react-slick';
-import {NavLink} from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import pre from '../img/pre.png';
 export const meta = () => {
-  return [{title: `BuildMyBody|Cart`}];
+  return [{ title: `BuildMyBody|Cart` }];
 };
-export function CartLineItems({linesObj}) {
+export function CartLineItems({ linesObj }) {
   const lines = flattenConnection(linesObj);
   return (
     <div className="space-y-8">
@@ -46,17 +46,17 @@ const settings = {
   ],
 };
 
-function ItemRemoveButton({lineIds}) {
+function ItemRemoveButton({ lineIds }) {
   return (
     <CartForm
       route="/cart"
       action={CartForm.ACTIONS.LinesRemove}
-      inputs={{lineIds}}
+      inputs={{ lineIds }}
     >
       <button
         id="remove-product"
         className=" text-dark"
-        style={{background: 'white'}}
+        style={{ background: 'white' }}
         type="submit"
       >
         <p>Remove</p>
@@ -65,8 +65,8 @@ function ItemRemoveButton({lineIds}) {
   );
 }
 
-function LineItem({lineItem}) {
-  const {merchandise, quantity} = lineItem;
+function LineItem({ lineItem }) {
+  const { merchandise, quantity } = lineItem;
   return (
     <>
       <div className="all-info  mt-5 row">
@@ -101,7 +101,7 @@ function LineItem({lineItem}) {
           <div className="d-flex justify-content-left justify-content-lg-center justify-content-md-center ">
             <div
               className="d-flex p-2 flex-row-reverse"
-              style={{border: '1px solid black', borderRadius: '4px'}}
+              style={{ border: '1px solid black', borderRadius: '4px' }}
             >
               <div>
                 <CartForm
@@ -119,7 +119,7 @@ function LineItem({lineItem}) {
                 >
                   {/* <button className="plus">+</button> */}
                   <button
-                    style={{border: 'none', background: 'none'}}
+                    style={{ border: 'none', background: 'none' }}
                     className="ml-4"
                   >
                     {' '}
@@ -146,7 +146,7 @@ function LineItem({lineItem}) {
                   }}
                 >
                   <button
-                    style={{border: 'none', background: 'none'}}
+                    style={{ border: 'none', background: 'none' }}
                     className="mr-4"
                   >
                     {' '}
@@ -213,7 +213,7 @@ function LineItem({lineItem}) {
     </>
   );
 }
-export function CartSummary({cost, checkoutUrl, collection}) {
+export function CartSummary({ cost, checkoutUrl, collection }) {
   if (!checkoutUrl) return null;
   return (
     <>
@@ -244,7 +244,7 @@ export function CartSummary({cost, checkoutUrl, collection}) {
           )}
         </div>
         <hr className="cart-hr bg-dark w-100 mt-3 " />
-        <Link to={checkoutUrl} className="btn w-100 checkout-button">
+        <Link to={checkoutUrl} className="btn w-100 checkout-button" target="_blank" rel=" noopener noreferrer ">
           Checkout
         </Link>
       </div>
@@ -255,7 +255,7 @@ export function CartSummary({cost, checkoutUrl, collection}) {
         <div className="text-center carousel">
           <h1
             className="font-weight-bold custom-heading3"
-            style={{paddingTop: '0rem'}}
+            style={{ paddingTop: '0rem' }}
           >
             <em> Special offers </em>
           </h1>
@@ -275,7 +275,7 @@ export function CartSummary({cost, checkoutUrl, collection}) {
                   className="w-100"
                 />
                 <div className="mt-1">
-                  <p style={{fontWeight: '600', fontSize: '.9rem'}}>
+                  <p style={{ fontWeight: '600', fontSize: '.9rem' }}>
                     {product.title}
                   </p>
                   {/* <p style={{ fontSize: '.9rem' }}>Flat 50% Off</p> */}
