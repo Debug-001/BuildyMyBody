@@ -11,7 +11,6 @@ export function meta() {
     {description: 'A custom storefront powered by Hydrogen'},
   ];
 }
-
 export async function loader({request, context}) {
   const {collection} = await context.storefront.query(COLLECTION_QUERY);
   const {collections} = await context.storefront.query(FeaturedCollections);

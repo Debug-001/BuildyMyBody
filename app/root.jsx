@@ -9,13 +9,12 @@ import AOS from 'aos';
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
 import favicon from '../public/favicon.svg';
-import { Seo } from '@shopify/hydrogen';
-import { useEffect } from 'react';
-
+import {Seo} from '@shopify/hydrogen';
+import {useEffect} from 'react';
 export const links = () => {
   return [
-    { rel: 'stylesheet', href: styles },
-    { rel: 'stylesheet', href: styles2 },
+    {rel: 'stylesheet', href: styles},
+    {rel: 'stylesheet', href: styles2},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -24,13 +23,13 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    { rel: 'icon', type: 'image/svg+xml', href: favicon },
+    {rel: 'icon', type: 'image/svg+xml', href: favicon},
   ];
 };
 
-export async function loader({ context }) {
+export async function loader({context}) {
   const layout = await context.storefront.query(LAYOUT_QUERY);
-  return { layout };
+  return {layout};
 }
 
 export default function App() {

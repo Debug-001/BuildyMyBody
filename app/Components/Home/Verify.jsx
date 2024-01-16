@@ -1,30 +1,22 @@
 import {useState} from 'react';
 // import article1 from '../../img/article-1.png';
-
+import {doc, getDoc} from 'firebase/firestore';
+import {db} from '~/firebase';
 const Verify = () => {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
+  const [productDetails, setProductDetails] = useState({});
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('/api', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({code}),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage(data.message);
-      } else {
-        setMessage('Code not found.');
-      }
-    } catch (error) {
-      console.error('Error verifying code:', error);
-      setMessage('Error verifying code.');
+    console.log('Submitted');
+    const snapshot = await getDoc(doc(db, 'codes', code));
+    if (snapshot.exists()) {
+      setMessage('Authentication completed, product verified.');
+      setProductDetails(snapshot.data());
+      console.log('Found');
+    } else {
+      setMessage('Code not found');
+      console.log('Not Found');
     }
   };
 
