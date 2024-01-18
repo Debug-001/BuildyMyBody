@@ -1,4 +1,7 @@
 import React from 'react'
+import { useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '~/firebase';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import banner1mob from '../img/banner1mob.png'
@@ -7,47 +10,86 @@ import frame2 from '../img/frame2.png'
 import frame3 from '../img/frame3.png'
 
 const Authenticity2 = () => {
+    const [code, setCode] = useState('');
+    const [message, setMessage] = useState('');
+    const [productDetails, setProductDetails] = useState({});
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Submitted');
+        const snapshot = await getDoc(doc(db, 'codes', code));
+        if (snapshot.exists()) {
+            setMessage('Authentication completed, product verified.');
+            setProductDetails(snapshot.data());
+            console.log('Found');
+
+            let imageContainer = document.getElementById('imageContainer');
+
+            let imageElement = document.createElement('img');
+            imageElement.src = '../img/frame3.png';
+
+            imageContainer.appendChild(imageElement);
+        } else {
+            setMessage('Code not found!  Please check your code again');
+            console.log('Not Found');
+        }
+    };
     return (
         <>
             <Navbar />
             <div>
 
                 <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <div className="input-group mb-3">
+                    <h1
+                        className="custom-heading3 text-center"
+                        style={{ color: '#ff2828', fontWeight: '900' }}
+                    >
+                        <em>Verify Your Products</em>
+                    </h1>
+                    <div className="row mt-2">
+                        <div className="col mt-3">
+                            <div className='d-flex flex-column'>
+                                <form onSubmit={handleSubmit} className='input-group mb-3 d-flex flex-column'>
+                                    <input
+                                        type="text"
+                                        className="form-control w-100"
+                                        value={code}
+                                        onChange={(e) => setCode(e.target.value)}
+                                        placeholder="Enter 14-digit code"
+                                        aria-label="Username"
+                                        aria-describedby="basic-addon1"
+                                    />
+                                    <div id='imageContainer'>
 
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Enter Your 6 Digit Code Here"
-                                    aria-label="Username"
-                                    aria-describedby="basic-addon1"
-                                />
+                                        {message && <h5>{message}</h5>}
+                                    </div>
+                                    <button type="submit" id='flash-button' className='p-2'>Verify Your Product</button>
+                                </form>
+
+
                             </div>
 
-                            <div className="input-group mb-3">
+                            {/* <div className="input-group mb-3">
 
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Email"
-                                    aria-label="Username"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Email"
+                                        aria-label="Username"
+                                        aria-describedby="basic-addon1"
+                                    />
+                                </div> */}
 
-                            <div className="input-group mb-3">
+                            {/* <div className="input-group mb-3">
 
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Mobile Number"
-                                    aria-label="Username"
-                                    aria-describedby="basic-addon1"
-                                />
-                            </div>
-                            <button id='flash-button' className='p-2'>Verify</button>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Mobile Number"
+                                        aria-label="Username"
+                                        aria-describedby="basic-addon1"
+                                    />
+                                </div> */}
+                            {/* <button id='flash-button' className='p-2'>Verify</button> */}
 
                         </div>
                         <div className="col d-none d-lg-block">
@@ -58,7 +100,7 @@ const Authenticity2 = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row d-flex flex-column justify-content-center align-items-center">
+                    <div className="row mt-1 d-flex flex-column justify-content-center align-items-center">
                         <h4>PRODUCT</h4>
                         <h3>AUTHENTICITY TIPS</h3>
                     </div>

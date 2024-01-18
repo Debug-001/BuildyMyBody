@@ -40,7 +40,7 @@ const Home = ({ data }) => {
       <WhatsHot />
       <BrandCaraousel />
       <Brand />
-      <Verify />
+      {/* <Verify /> */}
       <Testimonials />
       <Authenticity />
       <Footer />

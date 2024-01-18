@@ -3,55 +3,18 @@ import React, { useState } from 'react';
 // import banner2 from '../../img/discount-banner2.jpg';
 // import banner3 from '../../img/discount-banner3.jpg';
 import dubai from '../../img/dubai.png';
+import dubaimob from '../../img/dubaimob.png';
 
 
 const Carousel = () => {
-  const [carouselItems, setCarouselItems] = useState([
-    {
-      src: dubai,
-      alt: 'First slide',
-      active: true,
-    }
-    // {
-    //   src: banner1,
-    //   alt: 'First slide',
-    //   active: true,
-    // },
-    // {
-    //   src: banner2,
-    //   alt: 'Second slide',
-    //   active: false,
-    // },
-    // {
-    //   src: banner3,
-    //   alt: 'Third slide',
-    //   active: false,
-    // },
-  ]);
+
 
   return (
-    <section>
-      <div
-        id="carouselExampleControls3"
-        className="carousel slide "
-        data-ride="carousel"
-      >
-        <div className="carousel-inner ">
-          {carouselItems.map((item, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${item.active ? 'active' : ''}`}
-            >
-              <img
-                className="d-block w-100 carousel-discount-img rounded"
-                src={item.src}
-                alt={item.alt}
-              />
-            </div>
-          ))}
-        </div>
+    <section className='ml-1 mr-1' >
+      <div>
+        <img src={dubai} className='w-100 d-none d-lg-block' style={{ borderRadius: '10px' }} alt="" />
+        <img src={dubaimob} className='w-100 d-block d-lg-none' style={{ borderRadius: '10px' }} alt="" />
 
-        {/* </div> */}
       </div>
     </section>
   );

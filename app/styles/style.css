@@ -1146,6 +1146,11 @@ hr {
     width: 50%;
   }
 }
+@media screen and (max-width: 350px) {
+  .padding-dropdown {
+    padding: 0px;
+  }
+}
 del {
   text-decoration: line-through !important;
 }
@@ -1272,6 +1277,14 @@ p {
   font-weight: 700 !important;
 }
 
+@media (max-width: 768px) {
+  .cus-1 .cus-2:first-child {
+    display: none;
+  }
+  .cus-1 .cus-2:nth-child(2) {
+    display: block;
+  }
+}
 #mrp1 {
   font-weight: 900;
 }

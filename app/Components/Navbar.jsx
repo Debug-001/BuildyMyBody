@@ -13,6 +13,7 @@ import pre from '../img/pre.png';
 import { BsSearch } from 'react-icons/bs';
 import { FiShoppingCart } from 'react-icons/fi';
 import { RiAccountCircleLine } from "react-icons/ri";
+import { CiBarcode } from "react-icons/ci";
 import "../styles/hamburgers.css"
 // import { RiAccountCircleLine } from 'react-icons/ri';
 // import { BiCategoryAlt } from 'react-icons/bi'
@@ -29,6 +30,11 @@ const Navbar = () => {
     if (!isNavbarCollapsed) {
       setSelectedCategory(null);
     }
+  };
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const handleNavbarToggle = () => {
@@ -119,15 +125,15 @@ const Navbar = () => {
               </NavLink>
             </li>
             <div
-              className="dropdown show mt-2"
+              className="dropdown show "
               style={{ marginBottom: '0', marginRight: '0' }}
             >
               <Link
-                className=" dropdown-toggle"
+                className=" dropdown-toggle nav-link"
                 style={{
                   background: 'none',
                   color: 'white',
-                  padding: '0px',
+
                   fontWeight: '400',
                   fontSize: '1rem',
                 }}
@@ -245,15 +251,15 @@ const Navbar = () => {
               </NavLink>
             </li>
             <div
-              className="dropdown show mt-2"
+              className="dropdown show "
               style={{ marginBottom: '0', marginRight: '0' }}
             >
               <Link
-                className=" dropdown-toggle"
+                className=" dropdown-toggle nav-link"
                 style={{
                   background: 'none',
                   color: 'white',
-                  padding: '0px',
+
                   fontWeight: '400',
                   fontSize: '1rem',
                 }}
@@ -362,6 +368,32 @@ const Navbar = () => {
               </div>
             </div>
             <li className="nav-item">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle nav-link " style={{ background: 'none', border: 'none', boxShadow: 'none' }} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Authenticity
+                </button>
+                <div class="dropdown-menu padding-dropdown" aria-labelledby="dropdownMenuButton">
+                  <NavLink
+                    className={' active text-dark dropdown-item d-flex '}
+                    to="/Authenticity2"
+                    style={{ fontSize: '1rem', background: 'none' }}
+                  >
+                    Authenticate Product
+                    <span className='ml-0 ml-lg-2 ml-md-2'><CiBarcode /></span>
+                  </NavLink>
+                  <NavLink
+                    className={' active text-dark dropdown-item'}
+                    to="/certificates"
+                    style={{ fontSize: '1rem', background: 'none' }}
+                  >
+                    Certificates
+                  </NavLink>
+
+                  {/* <a class="dropdown-item" href="#">Something else here</a> */}
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
                 to="/contact"
@@ -389,11 +421,10 @@ const Navbar = () => {
                 Subscription
               </NavLink>
             </li> */}
-
-            <li className="nav-item">
+            <li>
               <NavLink
                 className={'nav-link active text-light'}
-                to="/aboutUs"
+                to="/aboutus"
                 style={{ fontSize: '1rem' }}
               >
                 About
@@ -408,15 +439,11 @@ const Navbar = () => {
                 Collection
               </NavLink>
             </li> */}
-            <li className="nav-item">
-              <NavLink
-                className={'nav-link active text-light'}
-                to="/certificates"
-                style={{ fontSize: '1rem' }}
-              >
-                Authenticity
-              </NavLink>
-            </li>
+
+
+
+
+
           </ul>
           {/* <ul className="navbar-nav nav-icon  ml-auto">
             <div className="d-flex ">
