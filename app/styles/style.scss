@@ -516,9 +516,32 @@
 }
 
 .logo_img {
-  width: 75% !important;
+  width: 30%;
 }
 
+@media screen and (max-width:1147px) {
+  .logo_img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:1120px) {
+  .logo_img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1072px) {
+  .logo_img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1010px) {
+  .logo_img {
+    width: 250%;
+  }
+}
 
 .btn-logout {
   padding: 10px 10px 10px 10px;

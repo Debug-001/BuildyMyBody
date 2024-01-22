@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {Form, Link, NavLink} from '@remix-run/react';
+import React, { useEffect, useState } from 'react';
+import { Form, Link, NavLink } from '@remix-run/react';
 import on from '../img/on.png';
 import mt from '../img/mt.jpg';
 import uni from '../img/uni.jpg';
@@ -10,14 +10,14 @@ import whey from '../img/whey.png';
 import gainer from '../img/gainer.png';
 import workout from '../img/workout.png';
 import pre from '../img/pre.png';
-import {BsSearch} from 'react-icons/bs';
-import {FiShoppingCart} from 'react-icons/fi';
-import {RiAccountCircleLine} from 'react-icons/ri';
-import {CiBarcode} from 'react-icons/ci';
+import { BsSearch } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
+import { RiAccountCircleLine } from 'react-icons/ri';
+import { CiBarcode } from 'react-icons/ci';
 import '../styles/hamburgers.css';
 // import { RiAccountCircleLine } from 'react-icons/ri';
 // import { BiCategoryAlt } from 'react-icons/bi'
-import {GiBodyBalance} from 'react-icons/gi';
+import { GiBodyBalance } from 'react-icons/gi';
 const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
@@ -57,7 +57,7 @@ const Navbar = () => {
     <>
       <nav
         className="navbar navbar-expand-lg  nav-flex"
-        style={{background: 'black'}}
+        style={{ background: 'black' }}
       >
         <div className="d-flex d-md-flex d-lg-none">
           <div className="icon-search ">
@@ -79,7 +79,7 @@ const Navbar = () => {
               <NavLink
                 to="/account"
                 id="acc-icon2"
-                // style={{ fontSize: '.9rem' }}
+              // style={{ fontSize: '.9rem' }}
               >
                 <RiAccountCircleLine size={25} />
               </NavLink>
@@ -91,7 +91,7 @@ const Navbar = () => {
           className="navbar-brand ml-lg-4 center-img d-none d-lg-block col justify-content-start"
           to="/"
         >
-          <img className="logo_img w-80 " src={imgbrand} alt="" />
+          <img className="logo_img w-80 " src={logo_replace} alt="" />
         </NavLink>
 
         <NavLink
@@ -119,27 +119,26 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`collapse navbar-collapse mx-3 mx-lg-0    ${
-            isNavbarCollapsed ? 'show' : ''
-          }`}
+          className={`collapse navbar-collapse mx-3 mx-lg-0    ${isNavbarCollapsed ? 'show' : ''
+            }`}
           id="navbarNav"
         >
           <ul
             className="navbar-nav ml-auto mr-auto col d-flex justify-content-center"
-            style={{gap: '.8rem'}}
+            style={{ gap: '.8rem' }}
           >
             <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
                 to="/"
-                style={{fontSize: '1rem'}}
+                style={{ fontSize: '1rem' }}
               >
                 Home
               </NavLink>
             </li>
             <div
               className="dropdown show "
-              style={{marginBottom: '0', marginRight: '0'}}
+              style={{ marginBottom: '0', marginRight: '0' }}
             >
               <Link
                 className=" dropdown-toggle nav-link"
@@ -178,7 +177,7 @@ const Navbar = () => {
                           }}
                         />
                         <span
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                           className="mt-2 text-center text-dark"
                         >
                           Whey Protein
@@ -197,7 +196,7 @@ const Navbar = () => {
                           }}
                         />
                         <span
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                           className="mt-2 text-center text-dark"
                         >
                           Mass Gainer
@@ -220,7 +219,7 @@ const Navbar = () => {
                         />
                         <span
                           className="text-center mt-2 text-dark"
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                         >
                           Pre/Post Workout
                         </span>
@@ -239,7 +238,7 @@ const Navbar = () => {
                         />
                         <span
                           className="text-center mt-2 text-dark"
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                         >
                           Workout Essentials
                         </span>
@@ -257,7 +256,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink
                 className={'nav-link active text-light'}
-                style={{fontSize: '1rem'}}
+                style={{ fontSize: '1rem' }}
                 to="/blogs/news"
               >
                 Blogs
@@ -265,7 +264,7 @@ const Navbar = () => {
             </li>
             <div
               className="dropdown show "
-              style={{marginBottom: '0', marginRight: '0'}}
+              style={{ marginBottom: '0', marginRight: '0' }}
             >
               <Link
                 className=" dropdown-toggle nav-link"
@@ -303,7 +302,7 @@ const Navbar = () => {
                           }}
                         />
                         <span
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                           className="mt-2 text-center text-dark"
                         >
                           {' '}
@@ -323,7 +322,7 @@ const Navbar = () => {
                           }}
                         />
                         <span
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                           className="mt-2 text-center text-dark"
                         >
                           MuscleTech
@@ -346,7 +345,7 @@ const Navbar = () => {
                         />
                         <span
                           className="text-center mt-2 text-dark"
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                         >
                           Universal
                         </span>
@@ -365,7 +364,7 @@ const Navbar = () => {
                         />
                         <span
                           className="text-center mt-2 text-dark"
-                          style={{fontWeight: 'bold', fontSize: '1rem'}}
+                          style={{ fontWeight: 'bold', fontSize: '1rem' }}
                         >
                           Cellucor
                         </span>
@@ -403,8 +402,8 @@ const Navbar = () => {
                 >
                   <NavLink
                     className={' active text-dark dropdown-item d-flex '}
-                    to="/Authenticity2"
-                    style={{fontSize: '1rem', background: 'none'}}
+                    to="/Authenticity"
+                    style={{ fontSize: '1rem', background: 'none' }}
                   >
                     Authenticate Product
                     <span className="ml-0 ml-lg-2 ml-md-2">
@@ -414,7 +413,7 @@ const Navbar = () => {
                   <NavLink
                     className={' active text-dark dropdown-item'}
                     to="/certificates"
-                    style={{fontSize: '1rem', background: 'none'}}
+                    style={{ fontSize: '1rem', background: 'none' }}
                   >
                     Certificates
                   </NavLink>
@@ -427,7 +426,7 @@ const Navbar = () => {
               <NavLink
                 className={'nav-link active text-light'}
                 to="/contact"
-                style={{fontSize: '1rem'}}
+                style={{ fontSize: '1rem' }}
               >
                 Contact
               </NavLink>
@@ -436,7 +435,7 @@ const Navbar = () => {
               <NavLink
                 className={'nav-link active text-light'}
                 to="/bmi"
-                style={{fontSize: '1rem'}}
+                style={{ fontSize: '1rem' }}
               >
                 BMI
               </NavLink>
@@ -455,7 +454,7 @@ const Navbar = () => {
               <NavLink
                 className={'nav-link active text-light'}
                 to="/aboutus"
-                style={{fontSize: '1rem'}}
+                style={{ fontSize: '1rem' }}
               >
                 About
               </NavLink>
@@ -535,12 +534,12 @@ const Navbar = () => {
       <div className="container-fluid">
         <h6
           className="text-center font-weight-bolder"
-          style={{paddingTop: '10px', fontSize: '17px'}}
+          style={{ paddingTop: '10px', fontSize: '17px' }}
         >
           {' '}
-          <GiBodyBalance size={30} style={{color: '#ff2828'}} /> Elevate your
+          <GiBodyBalance size={30} style={{ color: '#ff2828' }} /> Elevate your
           Fitness Journey with
-          <span style={{color: '#ff2828'}}>&nbsp; BuildMyBody</span>
+          <span style={{ color: '#ff2828' }}>&nbsp; BuildMyBody</span>
         </h6>
       </div>
     </>

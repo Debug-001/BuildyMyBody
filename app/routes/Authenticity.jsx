@@ -1,7 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
-import {doc, getDoc} from 'firebase/firestore';
-import {db} from '~/firebase';
+import { useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '~/firebase';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import banner1mob from '../img/banner1mob.png';
@@ -9,6 +9,7 @@ import authenticated from '../img/frame3.png';
 import frame1 from '../img/frame1.png';
 import frame2 from '../img/frame2.png';
 import frame3 from '../img/frame3.png';
+import Authenticityimg from '../img/authenticity3.jpg'
 
 const Authenticity = () => {
   const [code, setCode] = useState('');
@@ -34,7 +35,7 @@ const Authenticity = () => {
         <div className="container">
           <h1
             className="custom-heading3 text-center"
-            style={{color: '#ff2828', fontWeight: '900'}}
+            style={{ color: '#ff2828', fontWeight: '900' }}
           >
             <em>Verify Your Products</em>
           </h1>
@@ -57,9 +58,15 @@ const Authenticity = () => {
                   <div id="imageContainer">
                     {message ==
                       'Authentication completed, product verified.' && (
-                      <img src={authenticated} alt="authenticated" />
-                    )}
-                    {message && <h5>{message}</h5>}
+
+                        <img src={Authenticityimg} alt="authenticated" className='mt-3' />
+                      )}
+                    {message && <div className='mt-2'>
+                      <h3>Name : </h3>
+                      <h3>Description : </h3>
+                      <h5 className='mt-1'>{message}</h5>
+                    </div>}
+
                   </div>
                   <button type="submit" id="flash-button" className="p-2">
                     Verify Your Product
