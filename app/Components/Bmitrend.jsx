@@ -69,9 +69,9 @@ const Bmitrend = ({trendingProducts, slides, product}) => {
                 variantId={product.variants.nodes[0].id}
               />
             </div>
-            {/* <div class="card-deck">
-              <div class="card bg-primary">
-                <div class="card-body text-center flex-column">
+            {/* <div className="card-deck">
+              <div className="card bg-primary">
+                <div className="card-body text-center flex-column">
                   <img
                     src={product.variants.nodes[0].image.url}
                     alt={product.variants.nodes[0].image.altText}
