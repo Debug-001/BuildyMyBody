@@ -492,7 +492,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className="container-fluid" style={{backgroundColor:"#efefef"}}>
+      <div className="container-fluid" style={{backgroundColor:"#fff"}}>
         <h6
           className="text-center font-weight-bolder"
           style={{ paddingTop: '7px',paddingBottom:'4px', fontSize: '17px' }}
