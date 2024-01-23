@@ -8,7 +8,7 @@ import { Form, Link, NavLink } from '@remix-run/react';
 const ShopByBrands = () => {
   return (
     <>
-      <section id="shopbb" className="container">
+      <section id="shopbb" className="container mt-5 mb-5">
         <div
           className="d-flex justify-content-center mb-5 pt-5"
           style={{ flexDirection: 'column', alignItems: 'center' }}
@@ -19,7 +19,7 @@ const ShopByBrands = () => {
           <hr className="h1-hr" />
         </div>
         <div className="row">
-          <div className="col-12 col-lg-6 col-sm-6 mb-2  mb-lg-0 mb-md-0 ">
+          <div className="col-12 col-lg-6 col-sm-6 mb-2 pt-2 mb-lg-0 mb-md-0 ">
             <div className="certificate-card1 ">
               <Link to={`/products/cellucor`} className="text-center mt-4 ">
                 <img src={photo} className="w-100" alt="" />

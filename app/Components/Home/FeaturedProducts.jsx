@@ -15,7 +15,7 @@ const FeaturedProducts = ({collections}) => {
   }, []);
 
   return (
-    <section id="product-card ">
+    <section id="product-card" className='mb-5'>
       <div className="container-fluid" id="cgap">
         <div
           className="d-flex justify-content-center mb-5"

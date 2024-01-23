@@ -28,9 +28,9 @@ const BrandCaraousel = () => {
   return (
     <>
       <section id="fitness-car">
-        <div className="container-fluid pt-5 pb-5 mt-5 mb-3" >
+        <div className="container-fluid pt-5 pb-5 mt-2  mb-5" >
           <div
-            className="d-flex justify-content-center mb-5"
+            className="d-flex justify-content-center mb-5 pt-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="custom-heading3">
@@ -195,101 +195,6 @@ const BrandCaraousel = () => {
           </div>
         </div>
       </section>
-
-      {/* <section id="brand-car">
-        <div className="container-fluid">
-          <div
-            className="d-flex justify-content-center"
-            style={{flexDirection: 'column', alignItems: 'center'}}
-          >
-            <h1 className="font-weight-bold custom-heading3">
-              <em>Brands</em>
-            </h1>
-            <hr className="h1-hr" />
-          </div>
-          <div className="brands-slider">
-            <Slider
-              className="ml-lg-5 mr-lg-5"
-              asNavFor={nav1}
-              ref={slider2}
-              slidesToShow={3}
-              swipeToSlide={true}
-              focusOnSelect={true}
-              responsive={[
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true,
-                  },
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2,
-                    dots: true,
-                  },
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                  },
-                },
-              ]}
-            >
-              <div className="card  d-flex justify-content-center">
-                <img
-                  className="card-img-brand	  "
-                  src={bc1}
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card  d-flex justify-content-center">
-                <img
-                  className="card-img-brand  "
-                  src={bc2}
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card   d-flex justify-content-center">
-                <img
-                  className="card-img-brand  "
-                  src={bc3}
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card   d-flex justify-content-center">
-                <img
-                  className="card-img-brand  "
-                  src={bc4}
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card   d-flex justify-content-center">
-                <img
-                  className="card-img-brand  "
-                  src={bc5}
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card  d-flex justify-content-center">
-                <img
-                  className="card-img-brand  "
-                  src={bc6}
-                  alt="Card image cap"
-                />
-              </div>
-            </Slider>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 };

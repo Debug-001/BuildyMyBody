@@ -40,7 +40,7 @@ const Footer = () => {
 
       <div className="footer-row">
         <div className="container">
-          <p className=' pt-2 d-flex flex-lg-row flex-column justify-content-center align-items-center help-size text-center' style={{ fontWeight: 'bold' }}>Need help? Call our support team at <span className='ml-2'>+91 9494 979191</span> </p>
+          <p className=' pt-4 pb-2 d-flex flex-lg-row flex-column justify-content-center align-items-center help-size text-center' style={{ fontWeight: 'bold' }}>Need help? Call our support team at <span className='ml-2'>+91 9494 979191</span> </p>
         </div>
         <div className="container-fluid px-5">
           <div className="row ">

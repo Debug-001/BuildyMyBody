@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { useRef } from 'react';
 import bc1 from '../../img/bc1.jpg';
@@ -7,6 +7,9 @@ import bc3 from '../../img/bc3.jpg';
 import bc4 from '../../img/bc4.jpg';
 import bc5 from '../../img/bc5.jpg';
 import bc6 from '../../img/bc6.jpg';
+
+const brandImages = [bc1, bc2, bc3, bc4, bc5, bc6];
+
 const Brand = () => {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
@@ -17,8 +20,8 @@ const Brand = () => {
         setNav1(slider1.current);
         setNav2(slider2.current);
     }, []);
+
     return (
-        <div>
             <section id="brand-car">
                 <div className="container-fluid">
                     <div
@@ -67,54 +70,16 @@ const Brand = () => {
                                 },
                             ]}
                         >
-                            <div className="card  d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand	  "
-                                    src={bc1}
-                                    alt="Card image cap"
-                                />
-                            </div>
-                            <div className="card  d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand  "
-                                    src={bc2}
-                                    alt="Card image cap"
-                                />
-                            </div>
-                            <div className="card   d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand  "
-                                    src={bc3}
-                                    alt="Card image cap"
-                                />
-                            </div>
-                            <div className="card   d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand  "
-                                    src={bc4}
-                                    alt="Card image cap"
-                                />
-                            </div>
-                            <div className="card   d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand  "
-                                    src={bc5}
-                                    alt="Card image cap"
-                                />
-                            </div>
-                            <div className="card  d-flex justify-content-center">
-                                <img
-                                    className="card-img-brand  "
-                                    src={bc6}
-                                    alt="Card image cap"
-                                />
-                            </div>
+                            {brandImages.map((image, index) => (
+                                <div key={index} className="card d-flex justify-content-center">
+                                    <img className="card-img-brand" src={image} alt={`Brand ${index + 1}`} />
+                                </div>
+                            ))}
                         </Slider>
                     </div>
                 </div>
             </section>
-        </div>
-    )
-}
+    );
+};
 
-export default Brand
+export default Brand;

@@ -33,7 +33,7 @@ const WheyEssential = () => {
                     <div className="row row-cols-2 row-cols-md-2 row-cols-lg-3">
                         {tiles.map((tile) => (
                             <Link to={tile.url} className="col-12" key={tile.url}>
-                                <div className="certificate-card ">
+                                <div className="essential-card mt-5">
                                     <p className="text-center mt-4">
                                         <img src={tile.image} className="popular-img " alt="" style={{ width: '100%', }} />
                                     </p>

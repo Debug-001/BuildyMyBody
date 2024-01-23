@@ -25,7 +25,7 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products">
+      <section id="trending-products" className='pt-2'>
         <div className="container-fluid  py-5">
           <div
             className="d-flex justify-content-center mb-5"
@@ -94,8 +94,8 @@ const FlashDeals = ({ collection }) => {
                             src={product.variants.nodes[0].image?.url || ''}
                             alt={product.variants.nodes[0].image?.altText}
                           />
-                          <div style={{ position: 'absolute', marginLeft: '9rem', top: '10px' }}>
-                            <p className='pt-2' style={{ color: "#ff2828" }}>
+                          <div style={{ position: 'absolute', marginLeft: '10rem', top: '10px' }}>
+                            <p className='pt-3' style={{ color: "#ff2828", fontSize:"14px" }}>
                               {' '}
                               {calculateDiscountPercentage(
                                 product.variants.nodes[0]?.compareAtPrice?.amount ||

@@ -5,7 +5,6 @@
 }
 
 .home-btn {
-  /* color: rgb(239, 239, 239); */
   font-weight: 700;
   font-size: 1.1rem;
   background-color: #ff2828;
@@ -176,6 +175,7 @@
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-size: 100%;
+  padding-top: 1rem;
 }
 
 #product-section {
@@ -199,11 +199,22 @@
     font-size: 1.3rem;
   }
 }
+#whatshot {
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 4rem;
+  padding-top: 3rem;
+}
+
 #popular {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 5rem;
+  padding-top: 1rem;
 }
 
 .popular-img {
@@ -705,7 +716,32 @@ nav .active {
   border: #ffffff solid 2px;
 }
 
+.essential-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 2px solid rgb(237, 237, 237);
+  border-radius: 6px;
+  box-shadow: 0 10px 12px rgba(188, 188, 188, 0.2);
+}
+
+.essential-card:hover {
+  box-shadow: 0 10px 12px rgba(188, 188, 188, 0.9);
+  mix-blend-mode: multiply;
+  cursor: pointer !important;
+  transition: all 0.4s ease-in-out;
+}
+
+.certificate-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 27rem;
+  border: 2px solid rgb(237, 237, 237);
+  border-radius: 4px;
+}
+
 .certificate-card1:hover {
+  box-shadow: 0 10px 12px rgba(188, 188, 188, 0.9);
+  mix-blend-mode: multiply;
   cursor: pointer !important;
   transform: scale(1.05);
   transition: all 0.4s ease-in-out;
@@ -826,7 +862,7 @@ nav .active {
 
 .card-img-trending {
   background: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
@@ -837,7 +873,7 @@ nav .active {
 }
 
 .card-img-trending:hover {
-  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
 }
 
 .product-title {
