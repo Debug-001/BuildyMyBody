@@ -60,13 +60,13 @@ const Carousel = () => {
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-            <div style={{ padding: '22px', border: '2px solid white ', borderRadius: '35px' }}>
+            <div>
               <span className="carousel-control-prev-icon" aria-hidden="true" />
               <span className="sr-only">Previous</span>
             </div>
           </a>
           <a className="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-            <div style={{ padding: '22px', border: '2px solid white ', borderRadius: '35px' }}>
+            <div>
               <span className="carousel-control-next-icon" aria-hidden="true" />
               <span className="sr-only">Next</span>
             </div>

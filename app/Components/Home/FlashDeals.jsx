@@ -12,7 +12,6 @@ const FlashDeals = ({ collection }) => {
     return discount.toFixed(2);
   }
 
-
   const [nav1, setNav1] = useState();
   const products = collection.collection.products;
   const [nav2, setNav2] = useState();
@@ -26,7 +25,7 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products" data-aos="fade-up">
+      <section id="trending-products">
         <div className="container-fluid  py-5">
           <div
             className="d-flex justify-content-center mb-5"
@@ -95,8 +94,8 @@ const FlashDeals = ({ collection }) => {
                             src={product.variants.nodes[0].image?.url || ''}
                             alt={product.variants.nodes[0].image?.altText}
                           />
-                          <div style={{ position: 'absolute', marginLeft: '9rem', top: '20px' }}>
-                            <p style={{ color: "#ff2828" }}>
+                          <div style={{ position: 'absolute', marginLeft: '9rem', top: '10px' }}>
+                            <p className='pt-2' style={{ color: "#ff2828" }}>
                               {' '}
                               {calculateDiscountPercentage(
                                 product.variants.nodes[0]?.compareAtPrice?.amount ||

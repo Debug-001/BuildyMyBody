@@ -459,47 +459,8 @@ const Navbar = () => {
                 About
               </NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink
-                className={'nav-link active text-light'}
-                to="/collection"
-                style={{fontSize: '1rem'}}
-              >
-                Collection
-              </NavLink>
-            </li> */}
           </ul>
-          {/* <ul className="navbar-nav nav-icon  ml-auto">
-            <div className="d-flex ">
-              <div className="icon-search ">
-                <li>
-                  <NavLink to="/search">
-                    <BsSearch size={25} />
-                  </NavLink>
-                </li>
-              </div>
-              <div className="icon-cart ml-lg-3 ml-md-4 ml-sm-5 ml-5">
-                <li>
-                  <NavLink to="/cart">
-                    <FiShoppingCart size={25} />
-                  </NavLink>
-                </li>
-              </div>
-              <div className="icon-cart ml-lg-3 ml-md-4 ml-sm-5 ml-5">
-                <li>
-                  <NavLink
-                    to="/account"
-                    className={'border border-light p-2'}
-                    id="acc-icon"
-                  >
-                    Account
-                  </NavLink>
-                </li>
-              </div>
-            </div>
-          </ul> */}
         </div>
-
         <ul className="navbar-nav nav-icon  ml-auto col d-none d-lg-flex justify-content-end">
           <div className="d-flex ">
             <div className="icon-search ">
@@ -531,10 +492,10 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className="container-fluid">
+      <div className="container-fluid" style={{backgroundColor:"#efefef"}}>
         <h6
           className="text-center font-weight-bolder"
-          style={{ paddingTop: '10px', fontSize: '17px' }}
+          style={{ paddingTop: '7px',paddingBottom:'4px', fontSize: '17px' }}
         >
           {' '}
           <GiBodyBalance size={30} style={{ color: '#ff2828' }} /> Elevate your

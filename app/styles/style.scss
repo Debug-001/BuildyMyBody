@@ -444,18 +444,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .profile-btn-display {
-    // display: none;
-  }
-
-  .profile-btn-display2 {
-    // display: block;
-  }
-
-  .profile-btn-display3 {
-    // display: none;
-  }
-
   .profile-btn-display4 {
     display: block;
   }
@@ -1059,13 +1047,6 @@ a.text-light:hover,
 }
 
 @media screen and (max-width: 575px) {
-  .offers {
-    // margin-left: 10px;
-  }
-
-  // .title {
-  //   margin-left: 10px;
-  // }
 
   .pro-none {
     display: none;
@@ -1175,10 +1156,6 @@ a.text-light:hover,
 
 
 /* Apply margin-left to the div with the "move-left" class */
-.move-left {
-  // margin-left: 30px;
-  /* You can adjust the margin value as needed */
-}
 
 .carousel-item.active {
   place-items: center !important;
@@ -1188,9 +1165,6 @@ a.text-light:hover,
   padding: 0 !important;
 }
 
-// .input-group {
-//   width: 20rem;
-// }
 
 hr {
   background-color: #ff2828;
@@ -1240,14 +1214,13 @@ hr {
 .carousel-control-prev-icon {
   // color: black !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M5.25%200l-4%204%204%204%201.5-1.5-2.5-2.5%202.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  // filter: invert(1);
   mix-blend-mode: difference;
-  transform: scale(2);
+  // transform: scale(2);
 }
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000'%20viewBox='0%200%208%208'%3E%3Cpath%20d='M2.75%200l-1.5%201.5%202.5%202.5-2.5%202.5%201.5%201.5%204-4-4-4z'/%3E%3C/svg%3E");
-  filter: invert(1);
+  // filter: invert(1);
   transform: scale(1);
 }
 
@@ -2550,6 +2523,12 @@ span.num {
 .profile-clr {
   // background-color: none !important;
   // background-color: #171717;
+  background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
+  backdrop-filter: contrast(0.95);
+  color: rgb(0, 0, 0);
+}
+
+#bmi{
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
   backdrop-filter: contrast(0.95);
   color: rgb(0, 0, 0);

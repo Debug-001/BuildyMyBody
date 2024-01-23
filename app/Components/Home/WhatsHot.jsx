@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { NavLink } from '@remix-run/react';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import hot1 from '../../img/hot1.jpg';

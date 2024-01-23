@@ -175,7 +175,7 @@ const BMI = () => {
                 </div>
               </div>
               <hr className="line-hr " style={{borderColor: 'black'}} />
-              <div className="analysis flex-column " data-aos="fade-up">
+              <div className="analysis flex-column ">
                 <div
                   className="bmi-result text-dark"
                   style={{textAlign: 'center'}}
@@ -191,7 +191,7 @@ const BMI = () => {
                   </div>
                 )}
               </div>
-              <div className="container-fullwidth" data-aos="fade-up">
+              <div className="container-fullwidth" >
                 <hr className="line-hr" style={{borderColor: 'black'}} />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
@@ -240,7 +240,8 @@ const BMI = () => {
 
                   <div className="tab-content mt-3" id="myTabContent">
                     <div
-                      className="tab-pane fade show active"
+                      className="tab-pane fade
+                       show active"
                       id="recom"
                       role="tabpanel"
                       aria-labelledby="recom-tab"
@@ -293,12 +294,11 @@ const BMI = () => {
                   </div>
                 </div>
               </div>
-              <Bmitrend trendingProducts={collection} slides={4} />
+              {/* <Bmitrend trendingProducts={collection} slides={4} /> */}
             </div>
             <div
               className="col-md-4 col-lg-4"
               id="bmi-blogs"
-              data-aos="fade-up"
             >
               <h1 className="d-flex justify-content-start pt-5">
                 <em>

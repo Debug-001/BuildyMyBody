@@ -49,11 +49,11 @@ export default function Products() {
         <div className="container-fluid pb-5">
           <div className="row mt-4">
             <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none flex-column ">
-              <div style={{ marginTop: '7.7rem' }}>
-                <Bmitrend
+              <div style={{ marginTop: '6rem' }}>
+                {/* <Bmitrend
                   trendingProducts={trendingProducts.collection}
                   slides={1}
-                />
+                /> */}
               </div>
               <div className="card-filter">
                 <div className="card-content-all ">

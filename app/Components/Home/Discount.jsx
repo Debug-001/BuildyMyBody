@@ -10,11 +10,10 @@ const Carousel = () => {
 
 
   return (
-    <section className='ml-1 mr-1' >
+    <section className='p-3' >
       <div>
         <img src={dubai} className='w-100 d-none d-lg-block' style={{ borderRadius: '10px' }} alt="" />
         <img src={dubaimob} className='w-100 d-block d-lg-none' style={{ borderRadius: '10px' }} alt="" />
-
       </div>
     </section>
   );

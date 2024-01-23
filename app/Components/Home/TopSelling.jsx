@@ -13,7 +13,7 @@ const TopSelling = ({ collection }) => {
 
   return (
     <>
-      <section id="featured-section" data-aos="fade-up">
+      <section id="featured-section" >
         <div
           id="carouselExampleControls1"
           className="carousel slide"

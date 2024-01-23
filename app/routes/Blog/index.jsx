@@ -49,7 +49,7 @@ function Blog() {
             </h1>
             <hr className="h1-hr" />
           </div>
-          <div className="row no-gutters mt-5 blog-margin" data-aos="fade-up">
+          <div className="row no-gutters mt-5 blog-margin">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
               <img
                 src={blog1}

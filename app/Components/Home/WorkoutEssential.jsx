@@ -20,7 +20,7 @@ const WheyEssential = () => {
     return (
         <>
             <section id='popular' className='pb-5'>
-                <div className="container" data-aos="fade-up" id='cgap'>
+                <div className="container" id='cgap'>
                     <div
                         className="d-flex justify-content-center mb-5"
                         style={{ flexDirection: 'column', alignItems: 'center' }}

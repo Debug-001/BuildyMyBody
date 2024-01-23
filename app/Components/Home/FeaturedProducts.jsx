@@ -15,7 +15,7 @@ const FeaturedProducts = ({collections}) => {
   }, []);
 
   return (
-    <section id="product-card " data-aos="fade-up">
+    <section id="product-card ">
       <div className="container-fluid" id="cgap">
         <div
           className="d-flex justify-content-center mb-5"

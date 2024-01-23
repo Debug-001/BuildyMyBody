@@ -27,7 +27,7 @@ const Popular = () => {
   return (
     <>
       <section id='popular' className='pb-5'>
-        <div className="container-fluid" data-aos="fade-up" id='cgap'>
+        <div className="container-fluid" id='cgap'>
           <div
             className="d-flex justify-content-center mb-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}

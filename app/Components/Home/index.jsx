@@ -34,7 +34,7 @@ const Home = ({ data }) => {
       <ScrollToTop smooth color="#fff" />
       <Discount />
       <FlashDeals collection={data.flashDeals} />
-      <Offers />
+      {/* <Offers /> */}
       <WorkoutEssential />
       <ShopByBrands />
       <WhatsHot />
