@@ -17,16 +17,11 @@
 }
 
 .navbar-toggler-icon .bar {
-  /* Set the color to white */
   display: block;
   width: 25px;
-  /* Adjust the width as needed */
   height: 3px;
-  /* Adjust the height as needed */
   margin: 4px auto;
-  /* Adjust the margin as needed */
   transition: background-color 0.3s ease;
-  /* Add a transition effect */
 }
 
 /* Change the bar color on hover (optional) */
@@ -734,7 +729,6 @@ nav .active {
 .certificate-card {
   background-color: #ffffff;
   padding: 2rem;
-  width: 27rem;
   border: 2px solid rgb(237, 237, 237);
   border-radius: 4px;
 }
