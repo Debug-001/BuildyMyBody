@@ -2,6 +2,8 @@ import {Link, useLoaderData} from '@remix-run/react';
 import * as React from 'react';
 import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
+import {Fade} from 'react-awesome-reveal'
+
 
 const FeaturedProducts = ({collections}) => {
   const [nav1, setNav1] = useState();
@@ -17,6 +19,7 @@ const FeaturedProducts = ({collections}) => {
   return (
     <section id="product-card" className='mb-5'>
       <div className="container-fluid" id="cgap">
+        <Fade direction="up" triggerOnce>
         <div
           className="d-flex justify-content-center mb-5"
           style={{flexDirection: 'column', alignItems: 'center'}}
@@ -26,6 +29,7 @@ const FeaturedProducts = ({collections}) => {
           </h1>
           <hr className="h1-hr" />
         </div>
+        </Fade>
 
         <Slider
           className="ml-lg-5 mr-lg-5"

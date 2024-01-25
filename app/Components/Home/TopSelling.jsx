@@ -2,6 +2,7 @@ import { Link, useLoaderData } from '@remix-run/react';
 import { useEffect } from 'react';
 import ProductForm from '../Product/ProductForm';
 import data from '~/routes/data';
+import {Fade} from 'react-awesome-reveal'
 
 const TopSelling = ({ collection }) => {
 
@@ -23,9 +24,11 @@ const TopSelling = ({ collection }) => {
             className="d-flex justify-content-center mb-5"
             style={{ flexDirection: 'column', alignItems: 'center' }}
           >
+            <Fade direction="up">
             <h1 className="font-weight-bold custom-heading3">
               <em>Featured Products </em>
             </h1>
+            </Fade>
             <hr className="h1-hr" />
           </div>
           <div className="carousel-inner" id="featured-carousel">
