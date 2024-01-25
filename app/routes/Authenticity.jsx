@@ -73,7 +73,6 @@ const Authenticity = () => {
                   </button>
                 </form>
               </div>
-
               {/* <div className="input-group mb-3">
 
                                     <input

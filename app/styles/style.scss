@@ -15,6 +15,13 @@
   margin-top: 2px;
 }
 
+@media screen and (max-width:550px) {
+  .nav-product {
+    display: block !important;
+  }
+}
+
+
 .navbar-toggler-icon .bar {
   display: block;
   width: 25px;
@@ -202,7 +209,7 @@
   }
 }
 
-#whatshot{
+#whatshot {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;
   background-position: center;
@@ -764,7 +771,7 @@ nav .active {
   border: #ffffff solid 2px;
 }
 
-.essential-card{
+.essential-card {
   background-color: #ffffff;
   padding: 2rem;
   border: 2px solid rgb(237, 237, 237);
@@ -781,13 +788,14 @@ nav .active {
 }
 
 
-.certificate-card{
+.certificate-card {
   background-color: #ffffff;
-  padding: 2rem;
+  // padding: 2rem;
   // width: 27rem;
   border: 2px solid rgb(237, 237, 237);
   border-radius: 4px;
 }
+
 .certificate-card1:hover {
   box-shadow: 0 10px 12px rgba(188, 188, 188, 0.9);
   mix-blend-mode: multiply;
@@ -2556,7 +2564,7 @@ span.num {
   color: rgb(0, 0, 0);
 }
 
-#bmi{
+#bmi {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best_selling.png);
   backdrop-filter: contrast(0.95);
   color: rgb(0, 0, 0);
@@ -2947,13 +2955,15 @@ span.num {
 
 .panel {
   padding: 0 18px;
-  background-color: rgb(46, 46, 46);
+  background-color: aliceblue;
   display: none;
   overflow: hidden;
-  color: white;
+  color: black;
 }
 
-.section-acc-1,.section-acc-2,.section-acc-3{
+.section-acc-1,
+.section-acc-2,
+.section-acc-3 {
   // border: 2px solid rgb(0, 0, 0);
   margin-top: 1rem;
   // border-radius: 4px;
@@ -2972,10 +2982,13 @@ span.num {
   // right: 10px;
   // top: 50%;
   // transform: translateY(-50%);
-  color: #333; /* Set the initial color of the icon */
-  transition: color 0.4s ease-in-out; /* Add a transition for color change */
+  color: #333;
+  /* Set the initial color of the icon */
+  transition: color 0.4s ease-in-out;
+  /* Add a transition for color change */
 }
 
 .copied .clipboard-icon {
-  color: #00cc00; /* Set the color when copied */
+  color: #00cc00;
+  /* Set the color when copied */
 }

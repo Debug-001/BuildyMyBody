@@ -16,6 +16,11 @@
   margin-top: 2px;
 }
 
+@media screen and (max-width: 550px) {
+  .nav-product {
+    display: block !important;
+  }
+}
 .navbar-toggler-icon .bar {
   display: block;
   width: 25px;
@@ -728,7 +733,6 @@ nav .active {
 
 .certificate-card {
   background-color: #ffffff;
-  padding: 2rem;
   border: 2px solid rgb(237, 237, 237);
   border-radius: 4px;
 }
@@ -2757,13 +2761,15 @@ span.num {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .panel {
   padding: 0 18px;
-  background-color: rgb(46, 46, 46);
+  background-color: aliceblue;
   display: none;
   overflow: hidden;
-  color: white;
+  color: black;
 }
 
-.section-acc-1, .section-acc-2, .section-acc-3 {
+.section-acc-1,
+.section-acc-2,
+.section-acc-3 {
   margin-top: 1rem;
 }
 
@@ -2776,12 +2782,15 @@ span.num {
 }
 
 .clipboard-icon {
-  color: #333; /* Set the initial color of the icon */
-  transition: color 0.4s ease-in-out; /* Add a transition for color change */
+  color: #333;
+  /* Set the initial color of the icon */
+  transition: color 0.4s ease-in-out;
+  /* Add a transition for color change */
 }
 
 .copied .clipboard-icon {
-  color: #00cc00; /* Set the color when copied */
+  color: #00cc00;
+  /* Set the color when copied */
 }
 
 /*# sourceMappingURL=style.css.map */

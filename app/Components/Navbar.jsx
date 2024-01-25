@@ -14,6 +14,7 @@ import { BsSearch } from 'react-icons/bs';
 import { FiShoppingCart } from 'react-icons/fi';
 import { RiAccountCircleLine } from 'react-icons/ri';
 import { CiBarcode } from 'react-icons/ci';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/hamburgers.css';
 // import { RiAccountCircleLine } from 'react-icons/ri';
 // import { BiCategoryAlt } from 'react-icons/bi'
@@ -37,9 +38,10 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const handleNavbarToggle = () => {
-    setIsNavbarCollapsed(!isNavbarCollapsed);
-    setSelectedCategory(null);
+    setIsNavOpen(!isNavOpen);
   };
   // useEffect(() => {
   //   var hamburger = document.querySelector(".hamburger");
@@ -102,7 +104,7 @@ const Navbar = () => {
         </NavLink>
 
         <button
-          className="navbar-toggler mt-2 mt-lg-0"
+          className="navbar-toggler text-light mt-2 mt-lg-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -111,11 +113,7 @@ const Navbar = () => {
           aria-label="Toggle navigation"
           onClick={handleNavbarToggle}
         >
-          <span className="navbar-toggler-icon ">
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </span>
+          {isNavOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
         </button>
 
         <div
@@ -164,9 +162,9 @@ const Navbar = () => {
                 aria-labelledby="dropdownMenuLink"
               >
                 <div className="row">
-                  <div className="col-lg-12 col-md-6 d-flex justify-content-around">
+                  <div className="col-lg-12 col-md-6 d-flex justify-content-around nav-product">
                     <Link className="  " to="/products/whey-protein">
-                      <div className="d-flex flex-column align-items-center ">
+                      <div className="d-flex flex-lg-column flex-md-column align-items-center ">
                         <img
                           src={whey}
                           alt=""
@@ -185,7 +183,7 @@ const Navbar = () => {
                       </div>
                     </Link>
                     <Link to="/products/gainers" className="  ">
-                      <div className="d-flex flex-column align-items-center ml-lg-5 ">
+                      <div className="d-flex flex-lg-column flex-md-column align-items-center ml-lg-5 ">
                         <img
                           src={gainer}
                           alt=""
@@ -205,9 +203,9 @@ const Navbar = () => {
                     </Link>
                   </div>
 
-                  <div className="col-lg-12 col-md-6 d-flex mt-lg-2 justify-content-around">
+                  <div className="col-lg-12 col-md-6 d-flex mt-lg-2 justify-content-around nav-product">
                     <Link to="/products/pre-post-workout" className="  ">
-                      <div className="d-flex flex-column align-items-center  ">
+                      <div className="d-flex flex-lg-column flex-md-column align-items-center  ">
                         <img
                           src={pre}
                           alt=""
@@ -226,7 +224,7 @@ const Navbar = () => {
                       </div>
                     </Link>
                     <Link to="/products/workout-essentials" className="  ">
-                      <div className="d-flex flex-column align-items-center ml-lg-5">
+                      <div className="d-flex flex-lg-column flex-md-column align-items-center ml-lg-5">
                         <img
                           src={workout}
                           alt=""
@@ -492,10 +490,10 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className="container-fluid" style={{backgroundColor:"#fff"}}>
+      <div className="container-fluid" style={{ backgroundColor: "#fff" }}>
         <h6
           className="text-center font-weight-bolder"
-          style={{ paddingTop: '7px',paddingBottom:'4px', fontSize: '17px' }}
+          style={{ paddingTop: '7px', paddingBottom: '4px', fontSize: '17px' }}
         >
           {' '}
           <GiBodyBalance size={30} style={{ color: '#ff2828' }} /> Elevate your
