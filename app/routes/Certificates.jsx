@@ -25,12 +25,12 @@ function Certificates() {
           >
             Certificates
           </p>
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col ">
               <img src={certificate_img} className="w-100 p-5" alt="" />
             </div>
           </div>
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col">
               <p
                 className="text-center certificate-heading2 "
@@ -40,7 +40,7 @@ function Certificates() {
               </p>
             </div>
           </div>
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col-md-6 col-lg-3 mb-4">
               <div className="certificate-card ">
                 <p className="text-center mt-4 ">
@@ -137,7 +137,7 @@ function Certificates() {
             </div>
           </div>
 
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col-lg-8 col-md-8">
               <p
                 className="text ml-0 ml-lg-5 ml-md-5 certificate-heading2"
@@ -172,7 +172,7 @@ function Certificates() {
             </div>
           </div>
 
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col ml-0 ml-lg-5 ml-md-5 mt-5">
               <p
                 className=" certificate-heading2   "
@@ -215,7 +215,7 @@ function Certificates() {
           </div>
         </div>
 
-        <div className="container" data-aos="fade-up">
+        <div className="container">
           <div className="row flex-sm-column flex-lg-row flex-md-row">
             <div className="col-lg-4 col-md-5 d-flex flex-column ">
               {/* <button onClick={() => setSelectedCategory('All')}>All</button> */}

@@ -1,14 +1,14 @@
 import React from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import blog1 from '../img/blog-1.jpg'
-import blog2 from '../img/blog-2.jpg'
-import blog6 from '../img/blog-6.jpg'
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import blog1 from '../img/blog-1.jpg';
+import blog2 from '../img/blog-2.jpg';
+import blog6 from '../img/blog-6.jpg';
 
 // import './Blog.css';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import {AiOutlineArrowLeft} from 'react-icons/ai';
+import {AiOutlineArrowRight} from 'react-icons/ai';
 
 function Blog_2() {
   const navigate = useNavigate();
@@ -42,11 +42,11 @@ function Blog_2() {
           <div className="container">
             <div
               className="d-flex justify-content-center mb-5"
-              style={{ flexDirection: 'column', alignItems: 'center' }}
+              style={{flexDirection: 'column', alignItems: 'center'}}
             >
               <h1
                 className="font-weight-bold custom-heading3"
-                style={{ color: '#ff2828' }}
+                style={{color: '#ff2828'}}
               >
                 <em>Blogs</em>
               </h1>
@@ -92,7 +92,7 @@ function Blog_2() {
               Navratri
             </a>
           </nav> */}
-          <div className="row no-gutters mt-5 blog-margin" data-aos="fade-up">
+          <div className="row no-gutters mt-5 blog-margin">
             <div className="col-lg-6 col-sm-12 col-md-12 ">
               <img src={blog1} className="img-fluid login-img " />
             </div>
@@ -119,7 +119,7 @@ function Blog_2() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5" data-aos="fade-up">
+          <div className="row no-gutters mt-5">
             <div className="col-md-12 d-lg-none d-md-block ">
               <img src={blog6} className="img-fluid login-img " />
             </div>
@@ -150,7 +150,7 @@ function Blog_2() {
             </div>
           </div>
 
-          <div className="row no-gutters mt-5" data-aos="fade-up">
+          <div className="row no-gutters mt-5">
             <div className="col-lg-6 col-sm-12 col-md-12">
               <img src={blog2} className="img-fluid login-img" />
             </div>
@@ -177,7 +177,7 @@ function Blog_2() {
               </p>
             </div>
           </div>
-          <div className="row" data-aos="fade-up">
+          <div className="row">
             <div className="col d-flex justify-content-center blog-next-btn-flex mt-5">
               <p className="text-center">
                 {' '}
@@ -220,7 +220,7 @@ function Blog_2() {
               </p>
             </div>
           </div>
-          <div className="mt-3" data-aos="fade-up"></div>
+          <div className="mt-3"></div>
         </div>
       </div>
       <Footer />

@@ -1,12 +1,10 @@
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
 import ProductForm from '../Product/ProductForm';
 
-
-const FlashDeals = ({ collection }) => {
-
+const FlashDeals = ({collection}) => {
   function calculateDiscountPercentage(mrp, discountedPrice) {
     const discount = ((mrp - discountedPrice) / mrp) * 100;
     return discount.toFixed(2);
@@ -25,11 +23,11 @@ const FlashDeals = ({ collection }) => {
 
   return (
     <>
-      <section id="trending-products" className='pt-2'>
+      <section id="trending-products" className="pt-2">
         <div className="container-fluid  py-5">
           <div
             className="d-flex justify-content-center mb-5"
-            style={{ flexDirection: 'column', alignItems: 'center' }}
+            style={{flexDirection: 'column', alignItems: 'center'}}
           >
             <h1 className="font-weight-bold custom-heading3">
               <em>Trending Products </em>
@@ -87,19 +85,28 @@ const FlashDeals = ({ collection }) => {
                           to={`/product/${product.handle}`}
                           className="d-flex justify-content-center"
                           id="trending-card-container"
-                          style={{ position: 'relative' }}
+                          style={{position: 'relative'}}
                         >
                           <img
                             className="card-img-trending"
                             src={product.variants.nodes[0].image?.url || ''}
                             alt={product.variants.nodes[0].image?.altText}
                           />
-                          <div style={{ position: 'absolute', marginLeft: '10rem', top: '10px' }}>
-                            <p className='pt-3' style={{ color: "#ff2828", fontSize:"14px" }}>
+                          <div
+                            style={{
+                              position: 'absolute',
+                              marginLeft: '10rem',
+                              top: '10px',
+                            }}
+                          >
+                            <p
+                              className="pt-3"
+                              style={{color: '#ff2828', fontSize: '14px'}}
+                            >
                               {' '}
                               {calculateDiscountPercentage(
-                                product.variants.nodes[0]?.compareAtPrice?.amount ||
-                                0,
+                                product.variants.nodes[0]?.compareAtPrice
+                                  ?.amount || 0,
                                 product.variants.nodes[0]?.price?.amount || 0,
                               )}
                               %
@@ -112,23 +119,27 @@ const FlashDeals = ({ collection }) => {
                         <Link to={`/product/${product.handle}`}>
                           <h5
                             className="d-flex justify-content-center mt-5 text-center product-title"
-                            style={{ fontSize: '1.1rem' }}
+                            style={{fontSize: '1.1rem'}}
                           >
                             {product.title}
                           </h5>
 
-                          <p className="d-flex justify-content-center font-weight-bold mt-3">
+                          <div className="d-flex justify-content-center font-weight-bold mt-3">
                             <h4>
                               {product.variants.nodes[0].compareAtPrice && (
                                 <del className="discount-text">
-                                  ₹{product.variants.nodes[0].compareAtPrice.amount}
+                                  ₹
+                                  {
+                                    product.variants.nodes[0].compareAtPrice
+                                      .amount
+                                  }
                                 </del>
                               )}{' '}
-                              <span className='text-dark'>
+                              <span className="text-dark">
                                 ₹ {product.variants.nodes[0].price.amount}
                               </span>
                             </h4>
-                          </p>
+                          </div>
                         </Link>
                         <ProductForm
                           variantId={product.variants?.nodes[0].id}
@@ -150,7 +161,7 @@ const FlashDeals = ({ collection }) => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
     </>
   );
 };

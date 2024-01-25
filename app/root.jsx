@@ -5,7 +5,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import AOS from 'aos';
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
 import favicon from '../public/favicon.svg';
@@ -33,15 +32,11 @@ export async function loader({context}) {
 }
 
 export default function App() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"

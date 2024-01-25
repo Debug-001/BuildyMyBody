@@ -1,12 +1,12 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import blog1 from '../../img/blog-1.jpg'
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import blog1 from '../../img/blog-1.jpg';
 
 import './Blog.css';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import {AiOutlineArrowLeft} from 'react-icons/ai';
+import {AiOutlineArrowRight} from 'react-icons/ai';
 
 function Blog_food() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function Blog_food() {
   };
 
   return (
-    <div className="main-div" data-aos="fade-up">
+    <div className="main-div">
       <Navbar />
       <div className="container">
         <p className="text-center mt-3 blogs-text">BLOGS</p>
