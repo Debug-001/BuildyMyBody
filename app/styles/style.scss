@@ -15,12 +15,11 @@
   margin-top: 2px;
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   .nav-product {
     display: block !important;
   }
 }
-
 
 .navbar-toggler-icon .bar {
   display: block;
@@ -56,7 +55,7 @@
   font-weight: 700;
   font-size: 15px;
   padding: 1rem;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .shop-nav-btn:hover {
@@ -79,8 +78,6 @@
 .shop-nav-btn #shop-nav-btn2 {
   color: black;
 }
-
-
 
 .shop-nav-btn:hover #shop-nav-btn2 {
   color: white;
@@ -112,7 +109,7 @@
   font-size: 30px;
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width: 380px) {
   .product-title-size {
     font-size: 20px;
   }
@@ -148,7 +145,7 @@
 .read-more-all:hover {
   background-color: #282828;
   border: 2px solid #282828;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .read-more-all {
@@ -175,9 +172,8 @@
 #all-products-navbar li a:hover {
   color: #ff2828 !important;
   font-weight: 900;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-
 
 #featured-section {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
@@ -192,7 +188,6 @@
   background-size: 100%;
 }
 
-
 .card-content h5,
 .card-content p {
   font-weight: 700 !important;
@@ -203,7 +198,7 @@
   color: black !important;
 }
 
-@media screen and (max-width:512px) {
+@media screen and (max-width: 512px) {
   .card-content2 h2 {
     font-size: 1.3rem;
   }
@@ -242,8 +237,6 @@
   background-size: 100%;
 }
 
-
-
 .each-product-btn button {
   color: white;
   background-color: #282828;
@@ -253,9 +246,7 @@
   // width: 100%;
 }
 
-
-
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .each-product-btn {
     flex-direction: column;
   }
@@ -274,7 +265,7 @@
   color: black;
   background-color: #ffffff;
   border: 2px solid #282828;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .single-product-img {
@@ -363,14 +354,13 @@
   // }
 }
 
-@media screen and (max-width:"480px") {
+@media screen and (max-width: '480px') {
   h1 {
     font-size: 1.9rem;
   }
 }
 
 @media screen and (max-width: 510px) {
-
   .card-1 {
     margin-top: 2rem;
   }
@@ -382,7 +372,6 @@
   }
 }
 
-
 .featured-details h2 {
   /* color: #ff2828; */
   font-size: 2rem;
@@ -390,7 +379,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width:512px) {
+@media screen and (max-width: 512px) {
   .featured-details h2 {
     font-size: 1.3rem;
   }
@@ -405,7 +394,7 @@
 }
 
 .account-profile {
-  padding: .5rem;
+  padding: 0.5rem;
   border: grey 2px solid;
 }
 
@@ -501,7 +490,7 @@
   width: 25%;
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .width-input {
     width: 50%;
   }
@@ -516,25 +505,25 @@
   width: 30%;
 }
 
-@media screen and (max-width:1147px) {
+@media screen and (max-width: 1147px) {
   .logo_img {
     width: 80%;
   }
 }
 
-@media screen and (max-width:1120px) {
+@media screen and (max-width: 1120px) {
   .logo_img {
     width: 100%;
   }
 }
 
-@media screen and (max-width:1072px) {
+@media screen and (max-width: 1072px) {
   .logo_img {
     width: 100%;
   }
 }
 
-@media screen and (max-width:1010px) {
+@media screen and (max-width: 1010px) {
   .logo_img {
     width: 250%;
   }
@@ -577,7 +566,6 @@
   color: #ff2828;
   font-weight: 900;
   text-transform: capitalize;
-
 }
 
 .card-recover p {
@@ -636,7 +624,6 @@ label {
   background-repeat: no-repeat;
 }
 
-
 .custom-heading4 {
   color: #ff2828;
   font-weight: 900 !important;
@@ -659,7 +646,6 @@ label {
   font-weight: bolder;
 }
 
-
 .search-box::placeholder {
   color: #000000;
 }
@@ -671,7 +657,6 @@ input:hover {
   background-color: #fff;
   box-shadow: 0 0 0 4px rgba(0, 174, 255, 0.1);
 }
-
 
 #search-heading-text {
   font-weight: 900 !important;
@@ -691,7 +676,6 @@ input:hover {
 }
 
 #remove-product:hover {
-
   background-color: black !important;
   transition: all 0.4s ease-in-out;
   color: white !important;
@@ -787,7 +771,6 @@ nav .active {
   transition: all 0.4s ease-in-out;
 }
 
-
 .certificate-card {
   background-color: #ffffff;
   // padding: 2rem;
@@ -813,10 +796,16 @@ nav .active {
   font-size: 1.1rem;
 }
 
+#imageContainer img {
+  width: 60%;
+  mix-blend-mode: multiply;
+}
+
 #flash-button:hover {
   background-color: hsl(0, 0%, 100%) !important;
   color: rgb(0, 0, 0);
   border: #000000 solid 2px;
+  transition: all 0.25s ease-in-out;
 }
 
 .featured-details h2 {
@@ -871,11 +860,9 @@ nav .active {
   color: #282828 !important;
 }
 
-
 #myTab li a:hover {
   color: #ff2828 !important;
-  transition: all .4s ease-in-out;
-
+  transition: all 0.4s ease-in-out;
 }
 
 #myTab {
@@ -1008,7 +995,18 @@ a.text-light:hover,
   margin-top: 4.5rem;
 }
 
+#authenticity-section {
+  background: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.verify-auth-img {
+  width: 95%;
+  margin-left: 0px;
+  border-radius: 1rem;
+}
 
 #trending-products {
   background: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
@@ -1083,7 +1081,6 @@ a.text-light:hover,
 }
 
 @media screen and (max-width: 575px) {
-
   .pro-none {
     display: none;
   }
@@ -1144,9 +1141,7 @@ a.text-light:hover,
   height: 100%;
 }
 
-
 @keyframes wiggle {
-
   0%,
   100% {
     transform: translateX(0);
@@ -1188,9 +1183,6 @@ a.text-light:hover,
   display: block;
 }
 
-
-
-
 /* Apply margin-left to the div with the "move-left" class */
 
 .carousel-item.active {
@@ -1200,7 +1192,6 @@ a.text-light:hover,
 .carousel-inner {
   padding: 0 !important;
 }
-
 
 hr {
   background-color: #ff2828;
@@ -1275,13 +1266,13 @@ hr {
   width: 25%;
 }
 
-@media screen and (max-width:512px) {
+@media screen and (max-width: 512px) {
   .plus-input {
     width: 50%;
   }
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width: 350px) {
   .padding-dropdown {
     padding: 0px;
   }
@@ -1759,7 +1750,7 @@ textarea::placeholder {
   font-size: 1.1rem;
 }
 
-@media screen and (max-width:'512px') {
+@media screen and (max-width: '512px') {
   #protien-name {
     font-size: 1rem;
   }
@@ -1924,7 +1915,7 @@ span.num {
   border-radius: 10px;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   .nav-flex {
     flex-direction: row-reverse;
   }
@@ -1943,7 +1934,7 @@ span.num {
   width: 12%;
 }
 
-@media screen and (max-width:'575px') {
+@media screen and (max-width: '575px') {
   .replace-img-width {
     margin-left: 20px;
   }
@@ -1954,13 +1945,13 @@ span.num {
   // left: ;
 }
 
-@media screen and (max-width:730px) {
+@media screen and (max-width: 730px) {
   .replace-img-width {
     width: 19%;
   }
 }
 
-@media screen and (max-width:433px) {
+@media screen and (max-width: 433px) {
   .replace-img {
     width: 30%;
   }
@@ -2027,9 +2018,9 @@ span.num {
   margin-right: 25px;
 }
 
-.carousel-item>.col,
-.carousel-item>.col-sm,
-.carousel-item>.col-md {
+.carousel-item > .col,
+.carousel-item > .col-sm,
+.carousel-item > .col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -2218,7 +2209,7 @@ span.num {
   font-weight: bold;
 }
 
-@media screen and (max-width:'375px') {
+@media screen and (max-width: '375px') {
   .aboutus-heading {
     font-size: 1.19rem;
   }
@@ -2378,14 +2369,14 @@ span.num {
   // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width:'768px') {
+@media screen and (max-width: '768px') {
   .cart-item-img {
     transform: scale(1);
     height: 100%;
   }
 }
 
-@media screen and (max-width:'512px') {
+@media screen and (max-width: '512px') {
   .cart-item-img {
     // transform: scale(2);
     height: 100%;
@@ -2417,8 +2408,6 @@ span.num {
     flex-direction: column;
   }
 }
-
-
 
 .buy-button {
   border: 1px solid white;
@@ -2846,7 +2835,7 @@ span.num {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
+.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;
@@ -2880,7 +2869,7 @@ span.num {
 .all-img:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .fixed-bottom {
@@ -2932,7 +2921,6 @@ span.num {
   background-color: transparent !important;
   border: none;
 }
-
 
 // accordion css
 

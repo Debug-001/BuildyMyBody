@@ -8,7 +8,7 @@ import { FaMinus } from 'react-icons/fa6';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { IoIosArrowDown } from 'react-icons/io';
-import ClipboardJS from 'clipboard';
+// import ClipboardJS from 'clipboard';
 import { IoClipboardOutline } from 'react-icons/io5';
 
 export const meta = () => {

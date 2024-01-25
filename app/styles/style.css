@@ -754,10 +754,16 @@ nav .active {
   font-size: 1.1rem;
 }
 
+#imageContainer img {
+  width: 60%;
+  mix-blend-mode: multiply;
+}
+
 #flash-button:hover {
   background-color: hsl(0, 0%, 100%) !important;
   color: rgb(0, 0, 0);
   border: #000000 solid 2px;
+  transition: all 0.25s ease-in-out;
 }
 
 .featured-details h2 {
@@ -944,6 +950,19 @@ a.text-light:hover,
 
 .fitness-slider {
   margin-top: 4.5rem;
+}
+
+#authenticity-section {
+  background: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.verify-auth-img {
+  width: 95%;
+  margin-left: 0px;
+  border-radius: 1rem;
 }
 
 #trending-products {
