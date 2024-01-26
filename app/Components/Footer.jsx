@@ -55,16 +55,16 @@ const Footer = () => {
                     You are browsing India's one of the most recommended one stop shops for health care and fitness products. While shopping with us here you can always be sure of 100% genuine and authentic products.
                   </p>
                   <div className="footer-social-icons">
-                    <Link to="https://www.instagram.com/buildmybody.in/">
+                    <Link to="https://www.instagram.com/buildmybody.in/" target="_blank">
                       <BsInstagram className="icons" size={25} />
                     </Link>
-                    <Link to="https://www.linkedin.com/company/buildmybody™/about/">
+                    <Link to="https://www.linkedin.com/company/buildmybody™/about/" target="_blank">
                       <BiLogoLinkedin size={30} />
                     </Link>
                     {/* <Link to="/">
                       <CiTwitter size={30} />
                     </Link> */}
-                    <Link to="https://www.facebook.com/buildmybody.in">
+                    <Link to="https://www.facebook.com/buildmybody.in" target="_blank">
                       <CiFacebook size={30} />
                     </Link>
                   </div>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <Link to="/cart">
                   <p>Orders</p>
                 </Link>
-                <Link to="/blog">
+                <Link to="/blogs/news">
                   <p>Blog</p>
                 </Link>
               </div>
@@ -159,7 +159,7 @@ const Footer = () => {
           <div className="row footer-bg pb-5">
 
             <div className="col-sm-6 custom-footer2  ">
-              <p>@2023 BuildMyBody. All Rights Reserved</p>
+              <p>@2024 BuildMyBody. All Rights Reserved</p>
             </div>
             <div className="col footer-end custom-footer flex-wrap">
               <Link to="/" className="">

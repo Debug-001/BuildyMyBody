@@ -10,7 +10,18 @@ import banner2mob from '../../img/banner2mob.png.webp'
 import banner4mob from '../../img/banner4mob.png.webp'
 import banner5mob from '../../img/banner5mob.png.webp'
 import banner6mob from '../../img/banner6mob.jpg.webp'
-import banner7mob from '../../img/banner7mob.png'
+// import banner7mob from '../../img/banner7mob.png'
+import trial from '../../img/trial.png'
+import trial2 from '../../img/trial2.png'
+
+
+export const meta = () => {
+  return [
+    { title: 'BuildMyBody | Fitness Carousel' },
+    { name: 'description', content: 'Explore fitness articles and products on BuildMyBody for health and wellness tips.' },
+    { name: 'keywords', content: 'BuildMyBody, Fitness Articles, Health, Wellness, Products' },
+  ];
+};
 
 const Carousel = () => {
   return (
@@ -92,9 +103,14 @@ const Carousel = () => {
           </ol>
           <div className="carousel-inner">
 
-            <div className="carousel-item ">
+            {/* <div className="carousel-item ">
               <a href="/certificates">
                 <img className="d-block w-100" src={banner1mob} alt="First slide" />
+              </a>
+            </div> */}
+            <div className="carousel-item ">
+              <a href="/certificates">
+                <img className="d-block w-100" src={trial} alt="First slide" />
               </a>
             </div>
 
@@ -120,7 +136,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-item active">
               <a href="/products/all">
-                <img className="d-block w-100" src={banner7mob} alt="Seventh slide" />
+                <img className="d-block w-100" src={trial2} alt="Seventh slide" />
               </a>
             </div>
             <div className="carousel-item">

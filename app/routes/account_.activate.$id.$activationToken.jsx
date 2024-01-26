@@ -2,7 +2,11 @@ import { json, redirect } from '@shopify/remix-oxygen';
 import { Form, useActionData } from '@remix-run/react';
 
 export const meta = () => {
-  return [{ title: 'BuildMyBody|Activate Account' }];
+  return [
+    { title: 'BuildMyBody | Activate Account' },
+    { name: 'description', content: 'Create your password to activate your BuildMyBody account.' },
+    { name: 'keywords', content: 'BuildMyBody, Activate Account, Password' },
+  ];
 };
 
 export async function loader({ context }) {
@@ -27,12 +31,9 @@ export async function action({ request, context, params }) {
 
     const form = await request.formData();
     const password = form.has('password') ? String(form.get('password')) : null;
-    const passwordConfirm = form.has('passwordConfirm')
-      ? String(form.get('passwordConfirm'))
-      : null;
+    const passwordConfirm = form.has('passwordConfirm') ? String(form.get('passwordConfirm')) : null;
 
-    const validPasswords =
-      password && passwordConfirm && password === passwordConfirm;
+    const validPasswords = password && passwordConfirm && password === passwordConfirm;
 
     if (!validPasswords) {
       throw new Error('Passwords do not match');
@@ -74,14 +75,16 @@ export async function action({ request, context, params }) {
   }
 }
 
-export default function Activate() {
+const Activate = () => {
   const action = useActionData();
   const error = action?.error ?? null;
 
   return (
     <div className="account-activate">
-      <h1>Activate Account.</h1>
-      <p>Create your password to activate your account.</p>
+      <header>
+        <h1>Activate Account</h1>
+        <p>Create your password to activate your account.</p>
+      </header>
       <Form method="POST">
         <fieldset>
           <label htmlFor="password">Password</label>
@@ -94,7 +97,6 @@ export default function Activate() {
             aria-label="Password"
             minLength={8}
             required
-            // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus
           />
           <label htmlFor="passwordConfirm">Re-enter password</label>
@@ -118,18 +120,16 @@ export default function Activate() {
         ) : (
           <br />
         )}
-        <button
-          className="bg-primary text-contrast rounded py-2 px-4 focus:shadow-outline block w-full"
-          type="submit"
-        >
+        <button className="bg-primary text-contrast rounded py-2 px-4 focus:shadow-outline block w-full" type="submit">
           Save
         </button>
       </Form>
     </div>
   );
-}
+};
 
-// NOTE: https://shopify.dev/docs/api/storefront/latest/mutations/customeractivate
+export default Activate;
+
 const CUSTOMER_ACTIVATE_MUTATION = `#graphql
   mutation customerActivate(
     $id: ID!,

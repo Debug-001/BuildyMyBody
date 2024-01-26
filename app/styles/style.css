@@ -737,6 +737,15 @@ nav .active {
   border-radius: 4px;
 }
 
+.certificate-auth-img {
+  width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  .certificate-auth-img {
+    width: 50%;
+  }
+}
 .certificate-card1:hover {
   box-shadow: 0 10px 12px rgba(188, 188, 188, 0.9);
   mix-blend-mode: multiply;

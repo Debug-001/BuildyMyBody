@@ -1,14 +1,15 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 import blog4 from '../../img/blog-4.jpg';
 import blog6 from '../../img/blog-6.jpg';
 import Bmitrend from '../../Components/Bmitrend';
-import {useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
+import { useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
 export const meta = () => {
-  return [{title: `BuildMyBody|BMI Calculator`}];
+  return [{ title: 'BuildMyBody | BMI Calculator', description: 'Calculate your BMI and get personalized diet and workout recommendations.' }];
 };
+
 
 const COLLECTION_QUERY = `{
   collection(handle: "all") {
@@ -43,12 +44,12 @@ const COLLECTION_QUERY = `{
     }}
 }`;
 
-export async function loader({context, request}) {
-  const {collection} = await context.storefront.query(COLLECTION_QUERY);
+export async function loader({ context, request }) {
+  const { collection } = await context.storefront.query(COLLECTION_QUERY);
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
 
   // json is a Remix utility for creating application/json responses
@@ -59,14 +60,14 @@ export async function loader({context, request}) {
 }
 
 const BMI = () => {
-  const {collection} = useLoaderData();
+  const { collection } = useLoaderData();
   const [age, setAge] = useState('');
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmiResult, setBMIResult] = useState(null);
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
     switch (name) {
       case 'age':
@@ -174,25 +175,25 @@ const BMI = () => {
                   </button>
                 </div>
               </div>
-              <hr className="line-hr " style={{borderColor: 'black'}} />
+              <hr className="line-hr " style={{ borderColor: 'black' }} />
               <div className="analysis flex-column ">
                 <div
                   className="bmi-result text-dark"
-                  style={{textAlign: 'center'}}
+                  style={{ textAlign: 'center' }}
                 >
                   {' '}
                   Your Bmi is {bmiResult}
                 </div>
                 {/* {bmiResult && <div className='result'>Your BMI: {bmiResult}</div>} */}
                 {bmiResult && (
-                  <div className="result">
+                  <div className="">
                     <p>Diet Infomation:</p>
                     {getDietChart(bmiResult)}
                   </div>
                 )}
               </div>
               <div className="container-fullwidth" >
-                <hr className="line-hr" style={{borderColor: 'black'}} />
+                <hr className="line-hr" style={{ borderColor: 'black' }} />
                 <div id="bmi-tabs">
                   <ul className="nav nav-tabs mt-4" id="bmi-tab" role="tablist">
                     <li className="nav-item">
@@ -246,13 +247,13 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="recom-tab"
                     >
-                      <span style={{fontWeight: 'bold'}}>To Gain Weight:</span>
+                      <span style={{ fontWeight: 'bold' }}>To Gain Weight:</span>
                       &nbsp; Increase your calorie intake, focus on
                       nutrient-rich foods, eat consistently throughout the day,
                       include strength training in your routine, make sure to
                       get enough protein, consider incorporating healthy fats,
                       and keep track of your progress. <br /> <br />
-                      <span style={{fontWeight: 'bold'}}>To Lose Weight:</span>
+                      <span style={{ fontWeight: 'bold' }}>To Lose Weight:</span>
                       &nbsp; Decrease your calorie intake, maintain a balanced
                       diet, be mindful of portion sizes, engage in regular
                       exercise, stay hydrated, manage stress, listen to your
@@ -265,7 +266,7 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="diet-tab"
                     >
-                      <span style={{fontWeight: 'bold'}}>Diet charts</span>
+                      <span style={{ fontWeight: 'bold' }}>Diet charts</span>
                       &nbsp; are very important for beneficial results, you can
                       get your customized diet charts from your personal trainer
                       or you can dm our contacts for getting your personalized
@@ -277,14 +278,14 @@ const BMI = () => {
                       role="tabpanel"
                       aria-labelledby="work-tab"
                     >
-                      <span style={{fontWeight: 'bold'}}>For Weight Loss:</span>
+                      <span style={{ fontWeight: 'bold' }}>For Weight Loss:</span>
                       &nbsp; Combine cardio exercises like running or cycling
                       with strength training 2-3 times weekly. Aim for around
                       150 minutes of moderate-intensity cardio or 75 minutes of
                       vigorous-intensity cardio per week. Include stretching for
                       flexibility and gradually increase exercise intensity.{' '}
                       <br /> <br />
-                      <span style={{fontWeight: 'bold'}}> Muscle Gain:</span>
+                      <span style={{ fontWeight: 'bold' }}> Muscle Gain:</span>
                       Emphasize strength training using resistance exercises
                       like weightlifting. Target major muscle groups 2-3 times a
                       week, allowing adequate rest between workouts. Focus on

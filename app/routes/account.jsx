@@ -4,6 +4,9 @@ import Footer from '~/Components/Footer';
 import Navbar from '~/Components/Navbar';
 import { Link } from '@remix-run/react';
 
+export const meta = () => {
+  return [{ title: 'BuildMyBody|Account' }];
+};
 export function shouldRevalidate() {
   return true;
 }

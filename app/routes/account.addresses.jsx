@@ -212,7 +212,7 @@ export default function Addresses() {
             <h2>Addresses</h2>
             <br />
             <div>
-              <legend></legend>
+
               <ExistingAddresses
                 addresses={addresses}
                 defaultAddress={defaultAddress}

@@ -779,6 +779,16 @@ nav .active {
   border-radius: 4px;
 }
 
+.certificate-auth-img {
+  width: 80%;
+}
+
+@media screen and (max-width:767px) {
+  .certificate-auth-img {
+    width: 50%;
+  }
+}
+
 .certificate-card1:hover {
   box-shadow: 0 10px 12px rgba(188, 188, 188, 0.9);
   mix-blend-mode: multiply;
@@ -1142,6 +1152,7 @@ a.text-light:hover,
 }
 
 @keyframes wiggle {
+
   0%,
   100% {
     transform: translateX(0);
@@ -2018,9 +2029,9 @@ span.num {
   margin-right: 25px;
 }
 
-.carousel-item > .col,
-.carousel-item > .col-sm,
-.carousel-item > .col-md {
+.carousel-item>.col,
+.carousel-item>.col-sm,
+.carousel-item>.col-md {
   margin: 8px;
   height: 250px;
   mix-blend-mode: multiply;
@@ -2835,7 +2846,7 @@ span.num {
   transform: translateX(0);
 }
 
-.fil-nav .fil-nav-drop:hover > .fil-toggle::after {
+.fil-nav .fil-nav-drop:hover>.fil-toggle::after {
   /* FontAwesome chevron-right icon */
   font-family: FontAwesome;
   margin-left: 5px;

@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar';
 import buildbody from '../../img/buildbody.jpg'
+export const meta = () => {
+  return [{ title: 'BuildMyBody|Login' }];
+}
 function Login() {
   return (
     <>

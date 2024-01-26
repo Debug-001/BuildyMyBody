@@ -12,7 +12,7 @@ import ShopByBrands from './ShopByBrands';
 import Brand from './Brand';
 import Popular from './Popular';
 import WorkoutEssential from './WorkoutEssential';
-import Authenticity from './Authenticity';
+// import Authenticity from './Authenticity';
 import ScrollToTop from "react-scroll-to-top";
 import WhatsHot from './WhatsHot';
 // import Offers from './Offers';
@@ -40,7 +40,7 @@ const Home = ({ data }) => {
       <BrandCaraousel />
       <Brand />
       <Testimonials />
-      <Authenticity />
+      {/* <Authenticity /> */}
       <Footer />
     </>
   );

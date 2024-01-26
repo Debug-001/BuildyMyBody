@@ -3,6 +3,10 @@ import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 import buildbody from '../img/buildbody.jpg';
+
+export const meta = () => {
+  return [{ title: 'BuildMyBody|Register' }];
+}
 export async function loader({ context }) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {

@@ -6,13 +6,15 @@ import article1 from '../../img/article1.jpg';
 import article2 from '../../img/article2.jpg';
 import article3 from '../../img/article3.jpg';
 import article4 from '../../img/article4.jpg';
-import bc1 from '../../img/bc1.jpg';
-import bc2 from '../../img/bc2.jpg';
-import bc3 from '../../img/bc3.jpg';
-import bc4 from '../../img/bc4.jpg';
-import bc5 from '../../img/bc5.jpg';
-import bc6 from '../../img/bc6.jpg';
-// import bc7 from '../../img/bc7.jpg'
+
+
+export const meta = () => {
+  return [
+    { title: 'BuildMyBody | Fitness Articles' },
+    { name: 'description', content: 'Explore fitness articles on BuildMyBody for health and wellness tips.' },
+    { name: 'keywords', content: 'BuildMyBody, Fitness Articles, Health, Wellness' },
+  ];
+};
 
 const BrandCaraousel = () => {
   const [nav1, setNav1] = useState();

@@ -1,7 +1,11 @@
 import Footer from '~/Components/Footer';
 import Navbar from '~/Components/Navbar';
 
+export const meta = () => {
+  return [{ title: 'BuildMyBody|My Profile' }];
+}
 export default function Profile() {
+
   return (
     <>
       <Navbar />
@@ -21,7 +25,7 @@ export default function Profile() {
         <div className="row">
           <div
             className="col-md-4 col-xl-2 d-md-flex flex-column justify-content-md-center align-items-md-center"
-            style={{margin: '0 auto', textAlign: 'center'}}
+            style={{ margin: '0 auto', textAlign: 'center' }}
           >
             <img
               className="rounded-circle"

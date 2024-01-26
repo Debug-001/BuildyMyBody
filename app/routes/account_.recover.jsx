@@ -1,9 +1,12 @@
-import {json, redirect} from '@shopify/remix-oxygen';
-import {Form, Link, useActionData} from '@remix-run/react';
+import { json, redirect } from '@shopify/remix-oxygen';
+import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
 import Footer from '~/Components/Footer';
 
-export async function loader({context}) {
+export const meta = () => {
+  return [{ title: 'BuildMyBody|Recover Account' }];
+}
+export async function loader({ context }) {
   const customerAccessToken = await context.session.get('customerAccessToken');
   if (customerAccessToken) {
     return redirect('/account');
@@ -12,13 +15,13 @@ export async function loader({context}) {
   return json({});
 }
 
-export async function action({request, context}) {
-  const {storefront} = context;
+export async function action({ request, context }) {
+  const { storefront } = context;
   const form = await request.formData();
   const email = form.has('email') ? String(form.get('email')) : null;
 
   if (request.method !== 'POST') {
-    return json({error: 'Method not allowed'}, {status: 405});
+    return json({ error: 'Method not allowed' }, { status: 405 });
   }
 
   try {
@@ -26,16 +29,16 @@ export async function action({request, context}) {
       throw new Error('Please provide an email.');
     }
     await storefront.mutate(CUSTOMER_RECOVER_MUTATION, {
-      variables: {email},
+      variables: { email },
     });
 
-    return json({resetRequested: true});
+    return json({ resetRequested: true });
   } catch (error) {
     const resetRequested = false;
     if (error instanceof Error) {
-      return json({error: error.message, resetRequested}, {status: 400});
+      return json({ error: error.message, resetRequested }, { status: 400 });
     }
-    return json({error, resetRequested}, {status: 400});
+    return json({ error, resetRequested }, { status: 400 });
   }
 }
 
