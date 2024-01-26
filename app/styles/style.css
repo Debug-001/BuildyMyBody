@@ -2597,6 +2597,16 @@ span.num {
   margin: 0 auto;
 }
 
+.verify-parent {
+  position: relative;
+}
+
+.verify-child {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+}
+
 #verify {
   background-image: url(https://static1.hkrtcdn.com/mbnext/static/media/common/best-selling-desktop-be.svg);
   background-size: cover;

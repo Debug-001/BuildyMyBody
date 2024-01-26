@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '~/firebase';
-
-export const meta = () => {
-  return [
-    { title: 'BuildMyBody | Verify Your Products' },
-    {
-      name: 'description',
-      content: 'Verify your fitness products on BuildMyBody using the 14-digit code. Ensure the authenticity of your supplements. Read reviews and testimonials from customers.',
-    },
-    { name: 'keywords', content: 'BuildMyBody, Verify Products, Fitness Supplements, Code Authentication, Reviews, Testimonials, Authenticity' },
-  ];
-};
+// import verify from '../../img/verify.png'
+// export const meta = () => {
+//   return [
+//     { title: 'BuildMyBody | Verify Your Products' },
+//     {
+//       name: 'description',
+//       content: 'Verify your fitness products on BuildMyBody using the 14-digit code. Ensure the authenticity of your supplements. Read reviews and testimonials from customers.',
+//     },
+//     { name: 'keywords', content: 'BuildMyBody, Verify Products, Fitness Supplements, Code Authentication, Reviews, Testimonials, Authenticity' },
+//   ];
+// };
 
 const Verify = () => {
   const [code, setCode] = useState('');
