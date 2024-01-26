@@ -336,12 +336,12 @@ export default function Products() {
                 )}
               </Pagination>
             </div>
-            <div className="col-12 d-flex d-lg-none ">
+            {/* <div className="col-12 d-flex d-lg-none ">
               <Bmitrend
                 trendingProducts={trendingProducts.collection}
                 slides={1}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
