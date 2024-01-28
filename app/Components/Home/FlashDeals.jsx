@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import ProductForm from '../Product/ProductForm';
 import { Fade } from 'react-awesome-reveal';
+import discountsvg from '../../img/discountsvg.png'
 
 export const meta = () => {
   return [
@@ -97,30 +98,25 @@ const FlashDeals = ({ collection }) => {
                         id="trending-card-container"
                         style={{ position: 'relative' }}
                       >
-                        <img
-                          className="card-img-trending"
-                          src={product.variants.nodes[0].image?.url || ''}
-                          alt={product.variants.nodes[0].image?.altText}
-                        />
-                        <div
-                          style={{
-                            position: 'absolute',
-                            marginLeft: '10rem',
-                            top: '10px',
-                          }}
-                        >
-                          <p
-                            className="pt-3"
-                            style={{ color: '#ff2828', fontSize: '14px' }}
-                          >
-                            {' '}
-                            {calculateDiscountPercentage(
-                              product.variants.nodes[0]?.compareAtPrice
-                                ?.amount || 0,
-                              product.variants.nodes[0]?.price?.amount || 0,
-                            )}
-                            %
-                          </p>
+                        <div className='card-container'>
+                          <img
+                            className="card-img-trending"
+                            src={product.variants.nodes[0].image?.url || ''}
+                            alt={product.variants.nodes[0].image?.altText}
+                          />
+                          <div className='trending-discount' >
+                            <img src={discountsvg} className='w-100' alt="" />
+                          </div>
+                          <div className='disc' style={{ position: 'absolute', top: '30px', right: '38px' }} >
+                            <p className='text-light' style={{ fontWeight: '700', fontSize: '14px' }}>
+                              {' '}
+                              {Math.floor(calculateDiscountPercentage(
+                                product.variants.nodes[0]?.compareAtPrice?.amount || 0,
+                                product.variants.nodes[0]?.price?.amount || 0,
+                              ))}
+                              %
+                            </p>
+                          </div>
                         </div>
                       </Link>
                     </div>

@@ -99,7 +99,7 @@ export default function Products() {
                 className="d-flex justify-content-center mb-5"
                 style={{ flexDirection: 'column', alignItems: 'center' }}
               >
-                <h1 className="font-weight-bold custom-heading3">
+                <h1 className="font-weight-bold custom-heading3 text-center">
                   <em className="text-capitalize">
                     {collection.title} Products
                   </em>

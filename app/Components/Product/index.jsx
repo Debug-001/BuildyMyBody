@@ -11,6 +11,8 @@ import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
 import Protien from '../../img/protien.png';
 import { Link } from '@remix-run/react';
+import discountsvg from '../../img/discountsvg.png'
+
 
 // export const meta = () => {
 //   return [
@@ -116,9 +118,12 @@ const Product = ({ data }) => {
           <div className="container-fluid">
             <div className="row ">
               {/* image column  */}
+
               <div className="col-sm-12 col-md-12 col-lg-4 mt-5">
                 <ProductCarousal media={product.media.nodes} />
               </div>
+
+
               {/* middle column  */}
               <div className="col-sm-12 col-lg-6 col-md-12 mt-5 " style={{ padding: '0rem 1rem' }}>
                 <h2
@@ -440,7 +445,7 @@ const Product = ({ data }) => {
                       <a href="">care@buildmybody.in</a>
                       <br />
                       <span>Phone: </span>
-                      <a href="">+91 9494979191</a>
+                      <a href="">+91 8860963626</a>
                     </p>
                   </p>
                 </div>
@@ -460,13 +465,14 @@ const Product = ({ data }) => {
                   {FeaturedProductsCollection.collection.products.nodes.map(
                     (product) => (
                       <>
+
                         <Link
                           key={product.handle}
                           to={`/product/${product.handle}`}
                           className="d-flex mt-4 flex-column"
                         >
                           <div
-                            className="w-100"
+                            className="w-100 card-container"
                             style={{ maxWidth: '250px', margin: '0 auto' }}
                           >
                             <Image
@@ -478,8 +484,11 @@ const Product = ({ data }) => {
                               alt={product.title}
                               className="single-product-img"
                             />
-                            <div className="text-center" >
-                              <p style={{ color: '#ff2828' }}>
+                            <div className='all-discount' >
+                              <img src={discountsvg} className='w-100' alt="" />
+                            </div>
+                            <div className="text-center" style={{ position: 'absolute', top: '1px', right: '7px' }}>
+                              <p className='text-light' style={{ fontWeight: '700' }}>
                                 {Math.ceil(
                                   ((product.variants.nodes[0].compareAtPrice
                                     .amount -
@@ -488,7 +497,7 @@ const Product = ({ data }) => {
                                       .amount) *
                                   100,
                                 )}
-                                % off
+                                %
                               </p>
                             </div>
 
@@ -818,7 +827,7 @@ const Product = ({ data }) => {
                             className="d-flex mt-4 flex-column"
                           >
                             <div
-                              className="w-100"
+                              className="w-100 card-container"
                               style={{ maxWidth: '250px', margin: '0 auto' }}
                             >
                               <Image
@@ -830,8 +839,11 @@ const Product = ({ data }) => {
                                 alt={product.title}
                                 className="single-product-img"
                               />
-                              <div className="text-center">
-                                <p style={{ color: '#ff2828' }}>
+                              <div className='all-discount' >
+                                <img src={discountsvg} className='w-100' alt="" />
+                              </div>
+                              <div className="text-light" style={{ position: 'absolute', top: '1px', right: '7px' }}>
+                                <p style={{ fontWeight: '700' }}>
                                   {Math.ceil(
                                     ((product.variants.nodes[0].compareAtPrice
                                       .amount -
@@ -840,7 +852,7 @@ const Product = ({ data }) => {
                                         .amount) *
                                     100,
                                   )}
-                                  % off
+                                  %
                                 </p>
                               </div>
                             </div>
@@ -898,7 +910,7 @@ const Product = ({ data }) => {
                             className="d-flex mt-4 flex-column"
                           >
                             <div
-                              className="w-100"
+                              className="w-100 card-container"
                               style={{ maxWidth: '250px', margin: '0 auto' }}
                             >
                               <Image
@@ -910,8 +922,11 @@ const Product = ({ data }) => {
                                 className="single-product-img"
                                 alt={product.title}
                               />
-                              <div className="text-center">
-                                <p style={{ color: '#ff2828' }}>
+                              <div className='all-discount' >
+                                <img src={discountsvg} className='w-100' alt="" />
+                              </div>
+                              <div className="text-light" style={{ position: 'absolute', top: '2px', right: '5px' }}>
+                                <p style={{ fontWeight: '700' }}>
                                   {Math.ceil(
                                     ((product.variants.nodes[0].compareAtPrice
                                       .amount -
@@ -920,7 +935,7 @@ const Product = ({ data }) => {
                                         .amount) *
                                     100,
                                   )}
-                                  % off
+                                  %
                                 </p>
                               </div>
                             </div>

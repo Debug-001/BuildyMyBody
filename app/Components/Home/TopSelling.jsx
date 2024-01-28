@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react';
 import ProductForm from '../Product/ProductForm';
-
+import discountsvg from '../../img/discountsvg.png'
 export const meta = () => {
   return [
     { title: 'BuildMyBody | Featured Products' },
@@ -37,21 +37,28 @@ const TopSelling = ({ collection }) => {
                     className="col-md-5 col-lg-6 d-flex justify-content-center top-scale"
                     style={{ position: 'relative' }}
                   >
-                    <img
-                      className="featured-img"
-                      src={product.variants.nodes[0]?.image?.url || ''}
-                      alt={product.variants.nodes[0]?.image?.altText || ''}
-                    />
-                    <div className='featured-discount' style={{ position: 'absolute', top: '43px', marginLeft: '11rem' }}>
-                      <p style={{ color: "#ff2828" }}>
-                        {' '}
-                        {calculateDiscountPercentage(
-                          product.variants.nodes[0]?.compareAtPrice?.amount || 0,
-                          product.variants.nodes[0]?.price?.amount || 0,
-                        )}
-                        %
-                      </p>
+                    <div className='card-container'>
+                      <img
+                        className="featured-img"
+                        src={product.variants.nodes[0]?.image?.url || ''}
+                        alt={product.variants.nodes[0]?.image?.altText || ''}
+                      />
+                      <div className='featured-discount' >
+                        <img src={discountsvg} className='w-100' alt="" />
+
+                      </div>
+                      <div className='disc' style={{ position: 'absolute', top: '47px', right: '-20px' }} >
+                        <p className='text-light' style={{ fontWeight: '700', fontSize: '14px' }}>
+                          {' '}
+                          {Math.floor(calculateDiscountPercentage(
+                            product.variants.nodes[0]?.compareAtPrice?.amount || 0,
+                            product.variants.nodes[0]?.price?.amount || 0,
+                          ))}
+                          %
+                        </p>
+                      </div>
                     </div>
+
                   </Link>
                   <div className="col featured-details ">
                     <Link to={`/product/${product.handle}`}>
