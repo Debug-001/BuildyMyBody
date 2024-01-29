@@ -93,14 +93,14 @@ const Navbar = () => {
           className="navbar-brand ml-lg-4 center-img d-none d-lg-block col justify-content-start"
           to="/"
         >
-          <img className="logo_img w-80 " src={logo_replace} alt="" />
+          <img className="logo_img w-80 " src={logo_replace} alt="BuildMyBody" />
         </NavLink>
 
         <NavLink
           className="navbar-brand replace-img d-flex justify-content-center d-lg-none ml-0 ml-lg-5 ml-md-5 ml-sm-5"
           to="/"
         >
-          <img className=" replace-img-width " src={logo_replace} alt="" />
+          <img className=" replace-img-width " src={logo_replace} alt="BuildMyBody" />
         </NavLink>
 
         <button
@@ -157,8 +157,9 @@ const Navbar = () => {
                 All Products
               </Link>
 
+
               <div
-                className="dropdown-menu drop-custom"
+                className="dropdown-menu drop-custom "
                 aria-labelledby="dropdownMenuLink"
               >
                 <div className="row">
@@ -167,7 +168,7 @@ const Navbar = () => {
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ">
                         <img
                           src={whey}
-                          alt=""
+                          alt="Whey Protien"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -186,7 +187,7 @@ const Navbar = () => {
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ml-lg-5 ">
                         <img
                           src={gainer}
-                          alt=""
+                          alt="Gainers"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -208,7 +209,7 @@ const Navbar = () => {
                       <div className="d-flex flex-lg-column flex-md-column align-items-center  ">
                         <img
                           src={pre}
-                          alt=""
+                          alt="Pre/Post Workout"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -227,7 +228,7 @@ const Navbar = () => {
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ml-lg-5">
                         <img
                           src={workout}
-                          alt=""
+                          alt="Workout Essentials"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -292,7 +293,7 @@ const Navbar = () => {
                       <div className="d-flex flex-column align-items-center ">
                         <img
                           src={on}
-                          alt=""
+                          alt="On Nutrition"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -312,7 +313,7 @@ const Navbar = () => {
                       <div className="d-flex flex-column align-items-center ml-lg-5 ">
                         <img
                           src={mt}
-                          alt=""
+                          alt="MuscleTech"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -334,7 +335,7 @@ const Navbar = () => {
                       <div className="d-flex flex-column align-items-center  ">
                         <img
                           src={uni}
-                          alt=""
+                          alt="Universal"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',
@@ -353,7 +354,7 @@ const Navbar = () => {
                       <div className="d-flex flex-column align-items-center ml-lg-5">
                         <img
                           src={cl}
-                          alt=""
+                          alt="Cellucor"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',

@@ -41,7 +41,7 @@ const WheyEssential = () => {
                         <Link to={tile.url} className="col-12" key={tile.url}>
                             <div className="essential-card mt-3">
                                 <p className="text-center mt-4">
-                                    <img src={tile.image} className="popular-img" alt="" style={{ width: '100%' }} />
+                                    <img src={tile.image} className="popular-img" alt={`Image for ${tile.url}`} style={{ width: '100%' }} />
                                 </p>
                                 <div className="text-center" id='popular-txt'>
                                     <span style={{ fontWeight: 'bold' }} className="mt-2 text-dark">

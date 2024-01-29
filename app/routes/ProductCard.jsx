@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
                 className="all-img"
               />{' '}
               <div className='all-discount' >
-                <img src={discountsvg} className='w-100' alt="" />
+                <img src={discountsvg} className='w-100' alt="Discount" />
               </div>
               <div className='disc' style={{ position: 'absolute', top: '3px', right: '8px' }} >
                 <p className='text-light' style={{ fontWeight: '700', fontSize: '14px' }}>

@@ -446,7 +446,7 @@ const Product = ({ data }) => {
                               className="single-product-img"
                             />
                             <div className='all-discount' >
-                              <img src={discountsvg} className='w-100' alt="" />
+                              <img src={discountsvg} className='w-100' alt="Discount" />
                             </div>
                             <div className="text-center" style={{ position: 'absolute', top: '1px', right: '7px' }}>
                               <p className='text-light' style={{ fontWeight: '700' }}>
@@ -801,7 +801,7 @@ const Product = ({ data }) => {
                                 className="single-product-img"
                               />
                               <div className='all-discount' >
-                                <img src={discountsvg} className='w-100' alt="" />
+                                <img src={discountsvg} className='w-100' alt="Discount" />
                               </div>
                               <div className="text-light" style={{ position: 'absolute', top: '1px', right: '7px' }}>
                                 <p style={{ fontWeight: '700' }}>
@@ -884,7 +884,7 @@ const Product = ({ data }) => {
                                 alt={product.title}
                               />
                               <div className='all-discount' >
-                                <img src={discountsvg} className='w-100' alt="" />
+                                <img src={discountsvg} className='w-100' alt="Discount" />
                               </div>
                               <div className="text-light" style={{ position: 'absolute', top: '2px', right: '5px' }}>
                                 <p style={{ fontWeight: '700' }}>

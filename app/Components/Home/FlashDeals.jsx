@@ -105,7 +105,7 @@ const FlashDeals = ({ collection }) => {
                             alt={product.variants.nodes[0].image?.altText}
                           />
                           <div className='trending-discount' >
-                            <img src={discountsvg} className='w-100' alt="" />
+                            <img src={discountsvg} className='w-100' alt="Discount" />
                           </div>
                           <div className='disc' style={{ position: 'absolute', top: '30px', right: '38px' }} >
                             <p className='text-light' style={{ fontWeight: '700', fontSize: '14px' }}>

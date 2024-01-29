@@ -53,7 +53,7 @@ const Popular = () => {
                   <img
                     src={tile.image}
                     className="popular-img"
-                    alt=""
+                    alt={`Image for ${tile.title}`}
                     style={{ width: '45%' }}
                   />
                 </p>

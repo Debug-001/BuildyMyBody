@@ -48,7 +48,7 @@ const Footer = () => {
               <div className=" w-75 ">
                 <div className="footer-details company-footer1">
                   <NavLink className="" to="/">
-                    <img className="w-75 " src={imgbrand} alt="" />
+                    <img className="w-75 " src={imgbrand} alt="BuildMyBody" />
                   </NavLink>
                   {/* <img className="w-75" src={logo} alt="" /> */}
                   <p className="mt-3">
@@ -134,22 +134,22 @@ const Footer = () => {
             <div className="col">
               <ul className='d-flex flex-wrap' style={{ gap: '.8rem' }}>
                 <li>
-                  <img src={pay1} alt="" />
+                  <img src={pay1} alt="Visa" />
                 </li>
                 <li>
-                  <img src={pay2} alt="" />
+                  <img src={pay2} alt="MasterCard" />
                 </li>
                 <li>
-                  <img src={pay3} alt="" />
+                  <img src={pay3} alt="Paytm" />
                 </li>
                 <li>
-                  <img src={pay4} alt="" />
+                  <img src={pay4} alt="UPI" />
                 </li>
                 <li>
-                  <img src={pay5} alt="" />
+                  <img src={pay5} alt="FSSAI" />
                 </li>
                 <li>
-                  <img src={pay6} alt="" />
+                  <img src={pay6} alt="Secure Payment" />
                 </li>
               </ul>
             </div>

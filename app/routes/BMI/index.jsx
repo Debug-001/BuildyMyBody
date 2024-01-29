@@ -308,7 +308,7 @@ const BMI = () => {
               </h1>
 
               <a href="/blog" className="blog-img">
-                <img src={blog4} className="rounded" alt="" />
+                <img src={blog4} className="rounded" alt="Blog" />
                 <p>Increase Lifting Capacity</p>
                 <div className="text-center">
                   <a
@@ -321,7 +321,7 @@ const BMI = () => {
                 </div>
               </a>
               <a href="/blog" className="blog-img">
-                <img src={blog6} className="rounded" alt="" />
+                <img src={blog6} className="rounded" alt="Blog" />
                 <p>Rice vs Chapati</p>
                 <div className="text-center">
                   <button

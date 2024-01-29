@@ -44,7 +44,7 @@ const TopSelling = ({ collection }) => {
                         alt={product.variants.nodes[0]?.image?.altText || ''}
                       />
                       <div className='featured-discount' >
-                        <img src={discountsvg} className='w-100' alt="" />
+                        <img src={discountsvg} className='w-100' alt="Discount" />
 
                       </div>
                       <div className='disc' style={{ position: 'absolute', top: '47px', right: '-20px' }} >
