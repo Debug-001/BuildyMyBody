@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import ProductForm from '~/Components/Product/ProductForm';
 import discountsvg from '../img/discountsvg.png'
 
+
 export default function ProductCard({ product }) {
   function calculateDiscountPercentage(mrp, discountedPrice) {
     const discount = ((mrp - discountedPrice) / mrp) * 100;

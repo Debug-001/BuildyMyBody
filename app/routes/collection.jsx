@@ -39,6 +39,7 @@ import React from 'react';
 // export const meta = () => {
 //   return [{ title: 'BuildMyBody|All Products' }];
 // };
+
 export default function Collection() {
   // const { collection } = useLoaderData();
 

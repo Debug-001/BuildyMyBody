@@ -6,8 +6,9 @@ import Footer from '../Components/Footer'
 import Brand from '../Components/Home/Brand';
 import { NavLink } from '@remix-run/react';
 import Offers from '~/Components/Home/Offers';
+
 export const meta = ({ data }) => {
-  return [{ title: `BuildMyBody|${data.blog.title}` }];
+  return [{ title: `BuildMyBody | ${data.blog.title}` }];
 };
 
 export const loader = async ({ request, params, context: { storefront } }) => {

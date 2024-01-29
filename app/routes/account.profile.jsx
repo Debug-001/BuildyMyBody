@@ -9,7 +9,7 @@ import {useEffect} from 'react';
 // import Footer from '~/Components/Footer';
 
 export const meta = () => {
-  return [{title: 'BuildMyBody|Profile'}];
+  return [{title: 'BuildMyBody | Profile'}];
 };
 
 export async function loader({context}) {

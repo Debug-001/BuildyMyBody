@@ -13,17 +13,6 @@ import Protien from '../../img/protien.png';
 import { Link } from '@remix-run/react';
 import discountsvg from '../../img/discountsvg.png'
 
-
-// export const meta = () => {
-//   return [
-//     { title: `BuildMyBody | ${product.title} ` },
-//     {
-//       name: 'description',
-//       content: 'Explore popular workout essentials on BuildMyBody. Find top-quality fitness supplements for your workout routine. Shop now for the best deals.',
-//     },
-//     { name: 'keywords', content: 'BuildMyBody, Workout Essentials, Fitness Supplements, Fat Burner, CLA, Black Mamba, Enhanced Athlete, XPEL, Myodrol HSP' },
-//   ];
-// };
 const Product = ({ data }) => {
   const {
     product,
@@ -33,6 +22,7 @@ const Product = ({ data }) => {
     storeDomain,
     orderable,
   } = data;
+
 
   const [qty, setQty] = useState(1);
   const [isOpen1, setIsOpen1] = useState(false);

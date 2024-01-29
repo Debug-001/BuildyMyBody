@@ -7,7 +7,7 @@ import aboutimage from '../img/aboutimage.jpg';
 
 export const meta = () => {
   return [
-    { title: 'BuildMyBody - About Us' },
+    { title: 'BuildMyBody | About Us' },
     { name: 'description', content: 'Learn about BuildMyBody and our commitment to quality fitness supplements.' },
     { rel: 'canonical', href: 'https://buildmybody.in/about-us' },
   ];

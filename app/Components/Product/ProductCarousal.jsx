@@ -2,6 +2,9 @@ import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { MediaFile } from '@shopify/hydrogen-react';
 // import "./styles.css";
+
+
+
 const ProductCarousal = ({ media }) => {
   if (!media.length) {
     return null;

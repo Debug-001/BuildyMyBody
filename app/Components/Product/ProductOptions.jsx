@@ -5,6 +5,8 @@ import {
   useNavigation,
 } from '@remix-run/react';
 
+
+
 export default function ProductOptions({ options, selectedVariant }) {
   const { pathname, search } = useLocation();
   const [currentSearchParams] = useSearchParams();

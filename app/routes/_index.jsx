@@ -7,8 +7,8 @@ import {useStateValue} from '~/StateProvider';
 
 export function meta() {
   return [
-    {title: 'Hydrogen'},
-    {description: 'A custom storefront powered by Hydrogen'},
+    {title: 'BuildMyBody | Home'},
+    {description: 'Get the best authentic supplements delivered across India'},
   ];
 }
 export async function loader({request, context}) {
