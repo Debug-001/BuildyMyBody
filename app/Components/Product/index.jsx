@@ -23,6 +23,10 @@ const Product = ({ data }) => {
     orderable,
   } = data;
 
+  useEffect(() => {
+    document.title = `${product.title}`;
+  }, [product.title]);
+
 
   const [qty, setQty] = useState(1);
   const [isOpen1, setIsOpen1] = useState(false);
