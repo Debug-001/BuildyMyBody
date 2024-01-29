@@ -104,6 +104,8 @@ const Product = ({ data }) => {
     }
   };
 
+  const amount = selectedVariant ? selectedVariant.amount : null;
+
   return (
     <>
       <Navbar />
@@ -181,42 +183,7 @@ const Product = ({ data }) => {
                       options={product.options}
                       selectedVariant={selectedVariant}
                     />
-                    {/* <div className="d-flex w-50 mt-3 border border-dark justify-content-between p-1">
-                      <div>
-                        <button
-                          style={{ border: 'none', background: 'none' }}
-                          className="ml-4"
-                          onClick={() => {
-                            setQuantity((prevQty) =>
-                              prevQty <= 1 ? 1 : prevQty - 1,
-                            );
-                          }}
-                        >
-                          {' '}
-                          <FaMinus />
-                        </button>
-                      </div>
-                      <div className="">
-                        <span className="num">{quantity}</span>
-                      </div>
-
-                      <div>
-                        <button
-                          style={{ border: 'none', background: 'none' }}
-                          className="mr-4"
-                          onClick={() => {
-                            setQuantity((prevQty) =>
-                              prevQty >= 10 ? 10 : prevQty + 1,
-                            );
-                          }}
-                        >
-                          {' '}
-                          <FaPlus />
-                        </button>
-                      </div>
-                    </div> */}
                   </div>
-                  {/* mrp section  */}
                 </div>
                 <div className="row">
                   <div className="col">
