@@ -22,9 +22,9 @@ const WheyEssential = () => {
         { url: 'products/fat-burner', image: fat1 },
         { url: 'products/cla', image: fat2 },
         { url: 'product/innovative-laboratories-black-mamba', image: fat3 },
-        { url: 'products/enhanced-athlete', image: fat4 }, // Updated URL
-        { url: 'products/mhp-xpel', image: fat5 },
-        { url: 'products/myogenetix-myodrol-hsp', image: fat6 },
+        { url: 'products/enhanced-athlete', image: fat4 },
+        { url: 'product/mhp-xpel', image: fat5 },
+        { url: 'product/myogenetix-myodrol-hsp', image: fat6 },
     ];
 
     return (
