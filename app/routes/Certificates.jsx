@@ -9,7 +9,8 @@ import authenticity from '../img/authenticity3.jpg';
 import certificate_img from '../img/certificate_img.webp';
 
 export const meta = () => {
-  return [{ title: 'BuildMyBody | Certificates', description: 'Explore our certificates and ensure the authenticity of our products.' }];
+  return [{ title: 'BuildMyBody | Certificates',
+   description: 'Explore our certificates and ensure the authenticity of our products.' }];
 };
 
 function Certificates() {

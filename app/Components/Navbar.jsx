@@ -164,7 +164,7 @@ const Navbar = () => {
               >
                 <div className="row">
                   <div className="col-lg-12 col-md-6 d-flex justify-content-around nav-product">
-                    <Link className="  " to="/products/whey-protein">
+                    <Link className="  " to="/products/whey-protien">
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ">
                         <img
                           src={whey}
