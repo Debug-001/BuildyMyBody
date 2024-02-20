@@ -1,10 +1,31 @@
-export const meta = () => {
-  return [
-    { title: 'BuildMyBody | Customer Reviews' },
-    { name: 'description', content: 'Read customer testimonials and reviews on BuildMyBody for fitness products and supplements. Discover the experiences of customers in New Delhi, Bangalore, Noida, and more.' },
-    { name: 'keywords', content: 'BuildMyBody, Fitness Products, Supplements, Customer Reviews, Testimonials, Whey Protein, Bodybuilding' },
-  ];
-};
+import React from 'react';
+
+const testimonialsData = [
+  {
+    testimonial: "The product quality was really good and the price was also somewhat affordable. Go for the ON Nutrition Whey Protein package.",
+    overview: "Anupam Kumar, New Delhi"
+  },
+  {
+    testimonial: "All types of supplements were there that are required for my bodybuilding. Although I would suggest adding more flavor options if possible. Else everything was great.",
+    overview: "Akash Yaduvansi, Bangalore"
+  },
+  {
+    testimonial: "The ordering experience was quite easy as I order supplements on a monthly basis. Overall a good experience up till now.",
+    overview: "Rashmi Singh, Noida"
+  },
+  {
+    testimonial: "Recently they added more flavors of whey protein, and I was literally looking for the flavors option. 100% satisfied with BuildMyBody.",
+    overview: "Saket Kumar, Noida"
+  },
+  {
+    testimonial: "Decent but flavors and categories could be increased.",
+    overview: "Smith Kumar, Patna"
+  },
+  {
+    testimonial: "Ordered the ON Whey Protein and got it delivered within 3 days. Good job, guys, keep it up.",
+    overview: "Bhavya Sharma, Delhi"
+  }
+];
 
 const Testimonials = () => {
   return (
@@ -31,123 +52,34 @@ const Testimonials = () => {
             >
               {/* Carousel indicators */}
               <ol className="carousel-indicators">
-                <li
-                  data-target="#myCarousel"
-                  data-slide-to={0}
-                  className="active"
-                />
-                <li data-target="#myCarousel" data-slide-to={1} />
-                <li data-target="#myCarousel" data-slide-to={2} />
+                {testimonialsData.map((_, index) => (
+                  <li
+                    key={index}
+                    data-target="#myCarousel"
+                    data-slide-to={index}
+                    className={index === 0 ? "active" : ""}
+                  />
+                ))}
               </ol>
               {/* Wrapper for carousel items */}
               <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              The product quality was really good and the price
-                              was also somewhat affordable. Go for the ON
-                              Nutrition Whey Protein package.
-                            </p>
-                            <p className="overview">
-                              <b>Anupam Kumar</b>, New Delhi
-                            </p>
+                {testimonialsData.map((testimonial, index) => (
+                  <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                    <div className="row d-flex justify-content-center">
+                      <div className="col">
+                        <div className="media">
+                          <div className="media-body">
+                            <div className="testimonial">
+                              <p style={{ fontSize: '1.5rem' }}>{testimonial.testimonial}</p>
+                              <p className="overview">{testimonial.overview}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              All types of supplements were there that are
-                              required for my bodybuilding. Although I would
-                              suggest adding more flavor options if possible.
-                              Else everything was great.
-                            </p>
-                            <p className="overview">
-                              <b>Akash Yaduvansi</b>, Bangalore
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      {/* Add other testimonials rendering here if needed */}
                     </div>
                   </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              The ordering experience was quite easy as I order
-                              supplements on a monthly basis. Overall a good
-                              experience up till now.
-                            </p>
-                            <p className="overview">
-                              <b>Rashmi Singh</b>, Noida
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              Recently they added more flavors of whey protein,
-                              and I was literally looking for the flavors
-                              option. 100% satisfied with BuildMyBody.
-                            </p>
-                            <p className="overview">
-                              <b>Saket Kumar</b>, Noida
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              Decent but flavors and categories could be
-                              increased.
-                            </p>
-                            <p className="overview">
-                              <b>Smith Kumar</b>, Patna
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
-                      <div className="media">
-                        <div className="media-body">
-                          <div className="testimonial">
-                            <p>
-                              Ordered the ON Whey Protein and got it delivered
-                              within 3 days. Good job, guys, keep it up.
-                            </p>
-                            <p className="overview">
-                              <b>Bhavya Sharma</b>, Delhi
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

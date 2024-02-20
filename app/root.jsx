@@ -8,12 +8,14 @@ import {
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
 import favicon from '../public/favicon.svg';
-import {Seo} from '@shopify/hydrogen';
-import {useEffect} from 'react';
+import { Seo } from '@shopify/hydrogen';
+import { useEffect } from 'react';
+// import { Script } from '@shopify/hydrogen';
+
 export const links = () => {
   return [
-    {rel: 'stylesheet', href: styles},
-    {rel: 'stylesheet', href: styles2},
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: styles2 },
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -22,17 +24,18 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    {rel: 'icon', type: 'image/svg+xml', href: favicon},
+    { rel: 'icon', type: 'image/svg+xml', href: favicon },
   ];
 };
 
-export async function loader({context}) {
+export async function loader({ context }) {
   const layout = await context.storefront.query(LAYOUT_QUERY);
-  return {layout};
+  return { layout };
 }
 
 export default function App() {
   return (
+
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
@@ -59,6 +62,10 @@ export default function App() {
         <Seo />
         <Meta />
         <Links />
+        {/* <Script // Add the Script component here
+          async
+          src='https://cdn.shopify.com/extensions/12ce4341-bff5-4f7d-8c62-9b559f6407ed/inbox-170/assets/shopifyChatV1Widget.js?button_color=%23000000&amp;sc=%23FFFFFF&amp;tc=%236A6A6A&amp;i=chat_bubble&amp;t=chat_with_us&amp;p=bottom_right&amp;vp=lowest&amp;shop_id=fKc5Ik8XZiybFPoIGyFLQ6QaS670IXw4Ucd2DvtYtwE&amp;shop=buildmybody.in" type="module" defer="" async='
+        /> */}
       </head>
       <body>
         <script

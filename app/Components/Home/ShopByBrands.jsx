@@ -14,6 +14,7 @@ export const meta = () => {
 };
 
 const ShopByBrands = () => {
+
   return (
     <section id="shopbb" className="container mt-5 mb-5">
       <div

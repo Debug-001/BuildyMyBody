@@ -26,7 +26,28 @@ const BrandCaraousel = () => {
     setNav1(slider1.current);
     setNav2(slider2.current);
   }, []);
-
+  const articles = [
+    {
+      image: article1,
+      date: '10th June, 2019',
+      title: 'Fitness Hacks During Navratri'
+    },
+    {
+      image: article2,
+      date: '10th June, 2019',
+      title: 'Fitness Hacks During Navratri'
+    },
+    {
+      image: article3,
+      date: '10th June, 2019',
+      title: 'Fitness Hacks During Navratri'
+    },
+    {
+      image: article4,
+      date: '10th June, 2019',
+      title: 'Fitness Hacks During Navratri'
+    }
+  ];
   return (
     <>
       <section id="fitness-car">
@@ -92,107 +113,16 @@ const BrandCaraousel = () => {
                 },
               ]}
             >
-              <div className="card" id="articles-card">
-                <img
-                  className="card-img-articles"
-                  src={article1}
-                  alt="Card image cap"
-                />
-                <Link to="/blog" className="card-content2">
-                  <p className="mt-3">
-                    {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
-                  </p>
-                  <h2
-                    className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
-                  >
-                    Fitness Hacks During Navratri
-                  </h2>
-
-                  <Link
-                    to="#"
-                    className=" btn category-btn  d-flex justify-content-center mt-4"
-                  >
-                    Read More
+              {articles.map((article, index) => (
+                <div className="card" id="articles-card" key={index}>
+                  <img className="card-img-articles" src={article.image} alt="Card image cap" />
+                  <Link to="/blog" className="card-content2">
+                    <p className="mt-3"><em style={{ color: '#474544' }}>{article.date}</em></p>
+                    <h2 className="font-weight-bold mt-2" style={{ color: '#474544' }}>{article.title}</h2>
+                    <Link to="#" className="btn category-btn d-flex justify-content-center mt-4">Read More</Link>
                   </Link>
-                </Link>
-              </div>
-              <div className="card" id="articles-card">
-                <img
-                  className="card-img-articles"
-                  src={article2}
-                  alt="Card image cap"
-                />
-                <Link to="/blog" className="card-content2">
-                  <p className="mt-3 ">
-                    {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
-                  </p>
-                  <h2
-                    className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
-                  >
-                    Fitness Hacks During Navratri
-                  </h2>
-                  <Link
-                    to="#"
-                    className=" btn category-btn  d-flex justify-content-center mt-4"
-                  >
-                    Read More
-                  </Link>
-                </Link>
-              </div>
-              <div className="card" id="articles-card">
-                <img
-                  className="card-img-articles"
-                  src={article3}
-                  alt="Card image cap"
-                />
-                <Link to="/blog" className="card-content2">
-                  <p className="mt-3">
-                    {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
-                  </p>
-                  <h2
-                    className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
-                  >
-                    Fitness Hacks During Navratri
-                  </h2>
-                  <Link
-                    to="#"
-                    className=" btn category-btn  d-flex justify-content-center mt-4"
-                  >
-                    Read More
-                  </Link>
-                </Link>
-              </div>
-              <div className="card" id="articles-card">
-                <img
-                  className="card-img-articles"
-                  src={article4}
-                  alt="Card image cap"
-                />
-                <Link to="/blog" className="card-content2">
-                  <p className="mt-3">
-                    {' '}
-                    <em style={{ color: '#474544 ' }}>10th June, 2019</em>
-                  </p>
-                  <h2
-                    className="font-weight-bold mt-2"
-                    style={{ color: '#474544 ' }}
-                  >
-                    Fitness Hacks During Navratri
-                  </h2>
-                  <Link
-                    to="#"
-                    className=" btn category-btn  d-flex justify-content-center mt-4"
-                  >
-                    Read More
-                  </Link>
-                </Link>
-              </div>
+                </div>
+              ))}
             </Slider>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import { Link, NavLink, useLoaderData } from '@remix-run/react';
@@ -7,12 +6,9 @@ import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
 import { Pagination } from '@shopify/hydrogen';
 import { getPaginationVariables } from '@shopify/hydrogen';
-import ProductCarousal from '~/Components/Product/ProductCarousal';
-import BrandCaraousel from '~/Components/Home/BrandCaraousel';
-import TopSelling from '~/Components/Home/TopSelling';
-import FeaturedProducts from '~/Components/Home/FeaturedProducts';
-import Offers from '~/Components/Home/Offers';
-import Bmitrend from '~/Components/Bmitrend';
+
+// import { Suspense } from 'react';
+
 export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
@@ -38,10 +34,45 @@ export async function loader({ params, context, request }) {
     trendingProducts,
   });
 }
+// const BmitrendLazy = React.lazy(() => import('~/Components/Bmitrend'));
+// const ProductCarousalLazy = React.lazy(() => import('~/Components/Product/ProductCarousal'));
+// const BrandCaraouselLazy = React.lazy(() => import('~/Components/Home/BrandCaraousel'));
+// const TopSellingLazy = React.lazy(() => import('~/Components/Home/TopSelling'));
+// const FeaturedProductsLazy = React.lazy(() => import('~/Components/Home/FeaturedProducts'));
+// const OffersLazy = React.lazy(() => import('~/Components/Home/Offers'));
 
 export default function Products() {
   const { collection, trendingProducts } = useLoaderData();
-
+  const navigationItems = [
+    {
+      label: 'Protien', links: [
+        { to: '/products/whey-protien', text: 'Whey Protien' },
+        { to: '/products/whey-blend-1', text: 'Whey Blend' },
+        { to: '/products/whey-protein-isolate', text: 'Whey Protein Isolate' }
+      ]
+    },
+    {
+      label: 'Gainers', links: [
+        { to: '/products/mass-gainer', text: 'Mass Gainer' },
+        { to: '/products/weight-gainer', text: 'Weight Gainer' }
+      ]
+    },
+    {
+      label: 'Pre/Post Workout', links: [
+        { to: '/products/preworkout', text: 'Pre Workout' },
+        { to: '/products/amino-acids-bcaas', text: 'Amino Acids & BCAAs' },
+        { to: '/products/glutamine-1', text: 'Glutamine' },
+        { to: '/products/Carnitine-1', text: 'Carnitine' }
+      ]
+    },
+    {
+      label: 'Workout Essentials', links: [
+        { to: '/products/testosterone', text: 'Testosterone' },
+        { to: '/products/multivitamins-1', text: 'Multivitamins' },
+        { to: '/products/fat-burner', text: 'Fat Burner' }
+      ]
+    }
+  ];
   return (
     <>
       <Navbar />
@@ -107,19 +138,10 @@ export default function Products() {
                 <hr className="h1-hr" />
               </div>
               <div className="col mt-4">
-                <nav
-                  className="navbar navbar-expand-lg "
-                  id="all-products-navbar"
-                >
-                  <a
-                    className="navbar-brand d-flex align-items-center"
-                    href="#"
-                  >
+                <nav className="navbar navbar-expand-lg " id="all-products-navbar">
+                  <a className="navbar-brand d-flex align-items-center" href="#">
                     <FcFilledFilter size={30} />{' '}
-                    <span
-                      className="font-weight-bolder "
-                      style={{ color: 'black' }}
-                    >
+                    <span className="font-weight-bolder" style={{ color: 'black' }}>
                       Filters
                     </span>
                   </a>
@@ -140,163 +162,33 @@ export default function Products() {
                     </span>
                   </button>
 
-                  <div
-                    className="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                  >
+                  <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto mr-auto">
-                      {/* <li className="nav-item d-lg-none">
-                        <a className="nav-link" href="#">
-                          Authencity
-                        </a>
-                      </li> */}
-                      <li className="nav-item dropdown">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          href="#"
-                          id="servicesDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          Protien
-                        </a>
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="servicesDropdown"
-                        >
-                          <Link
-                            className="dropdown-item"
-                            to="/products/whey-protien"
+                      {navigationItems.map((item, index) => (
+                        <li className="nav-item dropdown" key={index}>
+                          <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            id={`servicesDropdown${index}`}
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
                           >
-                            Whey Protien
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/whey-blend-1"
+                            {item.label}
+                          </a>
+                          <div
+                            className="dropdown-menu"
+                            aria-labelledby={`servicesDropdown${index}`}
                           >
-                            Whey Blend
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/whey-protein-isolate"
-                          >
-                            Whey Protein Isolate{' '}
-                          </Link>
-                        </div>
-                      </li>
-
-                      <li className="nav-item dropdown ml-lg-3 ">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          href="#"
-                          id="servicesDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          Gainers
-                        </a>
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="servicesDropdown"
-                        >
-                          <Link
-                            className="dropdown-item"
-                            to="/products/mass-gainer"
-                          >
-                            Mass Gainer
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/weight-gainer"
-                          >
-                            Weight Gainer
-                          </Link>
-                        </div>
-                      </li>
-
-                      <li className="nav-item dropdown ml-lg-3">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          href="#"
-                          id="servicesDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          Pre/Post Workout
-                        </a>
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="servicesDropdown"
-                        >
-                          <Link
-                            className="dropdown-item"
-                            to="/products/preworkout"
-                          >
-                            Pre Workout
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/amino-acids-bcaas"
-                          >
-                            Amino Acids & BCAAs
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/glutamine-1"
-                          >
-                            Glutamine
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/Carnitine-1"
-                          >
-                            Carnitine
-                          </Link>
-                        </div>
-                      </li>
-
-                      <li className="nav-item dropdown ml-lg-3">
-                        <a
-                          className="nav-link dropdown-toggle"
-                          href="#"
-                          id="servicesDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          Workout Essentials
-                        </a>
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="servicesDropdown"
-                        >
-                          <Link
-                            className="dropdown-item"
-                            to="/products/testosterone"
-                          >
-                            Testosterone
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/multivitamins-1"
-                          >
-                            Multivitamins
-                          </Link>
-                          <Link
-                            className="dropdown-item"
-                            to="/products/fat-burner"
-                          >
-                            Fat Burner{' '}
-                          </Link>
-                        </div>
-                      </li>
+                            {item.links.map((link, subIndex) => (
+                              <Link className="dropdown-item" to={link.to} key={subIndex}>
+                                {link.text}
+                              </Link>
+                            ))}
+                          </div>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </nav>
