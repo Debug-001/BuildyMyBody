@@ -88,7 +88,7 @@ const FeaturedProducts = ({ collections }) => {
         >
           {collections.nodes.map((collection) => (
             <div className="card" style={{ width: '18rem', paddingBottom: '' }} id="cgap" key={collection.id}>
-              <Link to={`/products/${collection.handle}`}>
+              <Link to={`/products/${collection.handle}`} onClick={handleShopNowClick} >
                 <img className="card-img-top" src={collection.image?.url || ''} alt="Card image cap" />
               </Link>
               <div className="card-content">
@@ -104,12 +104,12 @@ const FeaturedProducts = ({ collections }) => {
           ))}
         </Slider>
         {loading && (
-          <div className="d-flex justify-content-center mt-4">
+          <div className="overlay">
             <Oval
               visible={true}
               height={80}
               width={80}
-              color="#4fa94d"
+              color="black"
               ariaLabel="oval-loading"
               wrapperStyle={{}}
               wrapperClass=""

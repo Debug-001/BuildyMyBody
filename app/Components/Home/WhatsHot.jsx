@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { NavLink } from '@remix-run/react';
 import 'slick-carousel/slick/slick.css';
@@ -7,6 +7,7 @@ import hot1 from '../../img/hot1.jpg';
 import hot2 from '../../img/hot2.jpg';
 import hot3 from '../../img/hot3.jpg';
 import hot4 from '../../img/hot4.jpg';
+import { Oval } from 'react-loader-spinner';
 
 export const meta = () => {
   return [
@@ -73,32 +74,54 @@ const WhatsHot = () => {
       },
     ],
   };
+  const [loading, setLoading] = useState(false); // State variable to track loading state
+
+  // Function to handle loading state
+  const handleLoading = () => {
+    setLoading(true);
+    // You can perform additional actions here, such as fetching data
+  };
 
   return (
-    <section id="whatshot" className="container pt-5 pb-5">
-      <div className="d-flex justify-content-center mb-5 text-center" style={{ flexDirection: 'column', alignItems: 'center' }}>
-        <h1 className="font-weight-bolder custom-heading4">
-          <em>Hot Selling Products</em>
-        </h1>
-        <hr className="h1-hr" />
-      </div>
-      <Slider {...settings}>
-        {productData.map((product) => (
-          <NavLink key={product.id} to={product.link}>
-            <div className="slider-item p-2 text-dark" role="listitem">
-              <img src={product.image} alt={product.title} className="w-100" />
-              <div className="mt-1">
-                <p className="h4 pt-3 font-weight-bolder">{product.title}</p>
-                <p className="h5 pt-2">{product.discount}</p>
-                <button className="btn category-btn mt-3 w-100 p-1">
-                  Shop Now
-                </button>
+    <>
+      {loading && (
+        <div className="overlay">
+          <Oval
+            visible={true}
+            height={80}
+            width={80}
+            color="#4fa94d"
+            ariaLabel="oval-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      )}
+      <section id="whatshot" className="container pt-5 pb-5">
+        <div className="d-flex justify-content-center mb-5 text-center" style={{ flexDirection: 'column', alignItems: 'center' }}>
+          <h1 className="font-weight-bolder custom-heading4">
+            <em>Hot Selling Products</em>
+          </h1>
+          <hr className="h1-hr" />
+        </div>
+        <Slider {...settings}>
+          {productData.map((product) => (
+            <NavLink key={product.id} to={product.link} onClick={handleLoading}>
+              <div className="slider-item p-2 text-dark" role="listitem">
+                <img src={product.image} alt={product.title} className="w-100" />
+                <div className="mt-1">
+                  <p className="h4 pt-3 font-weight-bolder">{product.title}</p>
+                  <p className="h5 pt-2">{product.discount}</p>
+                  <button className="btn category-btn mt-3 w-100 p-1">
+                    Shop Now
+                  </button>
+                </div>
               </div>
-            </div>
-          </NavLink>
-        ))}
-      </Slider>
-    </section>
+            </NavLink>
+          ))}
+        </Slider>
+      </section>
+    </>
   );
 };
 

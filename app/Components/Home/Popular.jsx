@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import whey from '../../img/whey.png';
 import gainer from '../../img/gainer.png';
 import workout from '../../img/workout.png';
@@ -6,6 +6,7 @@ import pre from '../../img/pre.png';
 import creatine from '../../img/creatine.png';
 import amino from '../../img/amino.png';
 import { Link } from '@remix-run/react';
+import { Oval } from 'react-loader-spinner';
 
 export const meta = () => {
   return [
@@ -32,6 +33,7 @@ const Popular = () => {
       image: workout,
     },
   ];
+  const [loading, setLoading] = useState(false); // State variable to track loading state
 
   return (
     <section id="popular" className="pb-3">
@@ -47,7 +49,12 @@ const Popular = () => {
         </div>
         <div className="row row-cols-2 row-cols-md-2 row-cols-lg-3">
           {tiles.map((tile) => (
-            <Link to={`/products/${tile.url}`} className="col" key={tile.url}>
+            <Link
+              to={`/products/${tile.url}`}
+              className="col"
+              key={tile.url}
+              onClick={() => setLoading(true)} // Set loading state to true when tile is clicked
+            >
               <div className="certificate-card mt-5 p-0 p-lg-2" style={{ borderRadius: '16px' }}>
                 <p className="text-center mt-4">
                   <img
@@ -63,6 +70,19 @@ const Popular = () => {
                   </p>
                 </div>
               </div>
+              {loading && (
+                <div className="overlay">
+                  <Oval
+                    visible={true}
+                    height={80}
+                    width={80}
+                    color="#4fa94d"
+                    ariaLabel="oval-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                  />
+                </div>
+              )}
             </Link>
           ))}
         </div>

@@ -9,6 +9,7 @@ import frame2 from '../img/frame2.png';
 import frame3 from '../img/frame3.png';
 import Authenticityimg from '../img/authenticity3.jpg';
 import verify from '../img/verify.png'
+// import { Oval } from 'react-loader-spinner';
 export const meta = () => {
   return [
     { title: 'BuildMyBody | Verify Your Products' },
@@ -24,7 +25,13 @@ const Authenticity = () => {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const [productDetails, setProductDetails] = useState({});
+  // const [loading, setLoading] = useState(false); // State variable to track loading state
 
+  // // Function to handle loading state
+  // const handleLoading = () => {
+  //   setLoading(true);
+  //   // You can perform additional actions here, such as fetching data
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -38,8 +45,23 @@ const Authenticity = () => {
     }
   };
 
+
+
   return (
     <>
+      {/* {loading && (
+        <div className="overlay">
+          <Oval
+            visible={true}
+            height={80}
+            width={80}
+            color="#4fa94d"
+            ariaLabel="oval-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      )} */}
       <Navbar />
       <section id="authenticity-section">
         <div className="container-fluid">
@@ -63,7 +85,7 @@ const Authenticity = () => {
                     aria-label="Product Code"
                     aria-describedby="flash-button"
                   />
-                  <button type="submit" id="flash-button" className="p-2 rounded">
+                  <button type="submit" id="flash-button" className="p-2 rounded" >
                     Verify Your Product
                   </button>
 
@@ -109,7 +131,7 @@ const Authenticity = () => {
                     aria-label="Product Code"
                     aria-describedby="flash-button"
                   />
-                  <button type="submit" id="flash-button" className="p-2 rounded">
+                  <button type="submit" id="flash-button" className="p-2 rounded" >
                     Verify Your Product
                   </button>
 

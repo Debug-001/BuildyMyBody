@@ -1,16 +1,8 @@
 import { Link } from '@remix-run/react';
 import ProductForm from '../Product/ProductForm';
-import discountsvg from '../../img/discountsvg.png'
-export const meta = () => {
-  return [
-    { title: 'BuildMyBody | Featured Products' },
-    {
-      name: 'description',
-      content: 'Explore the latest featured products on BuildMyBody. Find top-quality fitness products and supplements. Read reviews and testimonials from customers in New Delhi, Bangalore, Noida, and more.',
-    },
-    { name: 'keywords', content: 'BuildMyBody, Featured Products, Fitness Supplements, Reviews, Testimonials, Whey Protein, Bodybuilding' },
-  ];
-};
+import { useState } from 'react'; // Import useState hook
+import discountsvg from '../../img/discountsvg.png';
+import { Oval } from 'react-loader-spinner';
 
 const TopSelling = ({ collection }) => {
   function calculateDiscountPercentage(mrp, discountedPrice) {
@@ -18,8 +10,29 @@ const TopSelling = ({ collection }) => {
     return discount.toFixed(2);
   }
 
+  const [loading, setLoading] = useState(false); // State variable to track loading state
+
+  // Function to handle loading state
+  const handleLoading = () => {
+    setLoading(true);
+    // You can perform additional actions here, such as fetching data
+  };
+
   return (
     <>
+      {loading && (
+        <div className="overlay">
+          <Oval
+            visible={true}
+            height={80}
+            width={80}
+            color="#4fa94d"
+            ariaLabel="oval-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      )}
       <section id="featured-section">
         <div id="carouselExampleControls1" className="carousel slide" data-ride="carousel">
           <div className="d-flex justify-content-center mb-5" style={{ flexDirection: 'column', alignItems: 'center' }}>
@@ -36,6 +49,7 @@ const TopSelling = ({ collection }) => {
                     to={`/product/${product.handle}`}
                     className="col-md-5 col-lg-6 d-flex justify-content-center top-scale"
                     style={{ position: 'relative' }}
+                    onClick={handleLoading} // Call handleLoading when link is clicked
                   >
                     <div className='card-container'>
                       <img
@@ -58,7 +72,6 @@ const TopSelling = ({ collection }) => {
                         </p>
                       </div>
                     </div>
-
                   </Link>
                   <div className="col featured-details ">
                     <Link to={`/product/${product.handle}`}>

@@ -6,6 +6,8 @@ import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
 import { Pagination } from '@shopify/hydrogen';
 import { getPaginationVariables } from '@shopify/hydrogen';
+import { Oval } from 'react-loader-spinner';
+import { useState } from 'react';
 
 // import { Suspense } from 'react';
 
@@ -73,8 +75,28 @@ export default function Products() {
       ]
     }
   ];
+  const [loading, setLoading] = useState(false); // State variable to track loading state
+
+  // Function to handle loading state
+  const handleLoading = () => {
+    setLoading(true);
+    // You can perform additional actions here, such as fetching data
+  };
   return (
     <>
+      {loading && (
+        <div className="overlay">
+          <Oval
+            visible={true}
+            height={80}
+            width={80}
+            color="#4fa94d"
+            ariaLabel="oval-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      )}
       <Navbar />
       <section id="product-section">
         <div className="container-fluid pb-5">
@@ -213,7 +235,7 @@ export default function Products() {
                       </PreviousLink>
                     </div>
                     <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 mt-5">
+                      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 mt-5" onClick={handleLoading}>
                         {nodes.map((product) => (
                           <ProductCard key={product.id} product={product} />
                         ))}
