@@ -3,6 +3,7 @@ import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { Fade } from 'react-awesome-reveal';
+import { Oval } from 'react-loader-spinner';
 
 export const meta = () => {
   return [
@@ -15,6 +16,7 @@ export const meta = () => {
 const FeaturedProducts = ({ collections }) => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
+  const [loading, setLoading] = useState(false); // State variable to track loading state
   const slider1 = useRef(null);
   const slider2 = useRef(null);
 
@@ -22,6 +24,12 @@ const FeaturedProducts = ({ collections }) => {
     setNav1(slider1.current);
     setNav2(slider2.current);
   }, []);
+
+  // Function to handle "Shop now" click
+  const handleShopNowClick = () => {
+    setLoading(true); // Set loading state to true when "Shop now" is clicked
+    // Perform any additional actions (e.g., fetching data) here
+  };
 
   return (
     <section id="product-card" className="mb-5">
@@ -87,6 +95,7 @@ const FeaturedProducts = ({ collections }) => {
                 <Link
                   to={`/products/${collection.handle}`}
                   className="btn category-btn d-flex justify-content-center mt-4"
+                  onClick={handleShopNowClick} // Call handleShopNowClick when "Shop now" is clicked
                 >
                   Shop now
                 </Link>
@@ -94,6 +103,19 @@ const FeaturedProducts = ({ collections }) => {
             </div>
           ))}
         </Slider>
+        {loading && (
+          <div className="d-flex justify-content-center mt-4">
+            <Oval
+              visible={true}
+              height={80}
+              width={80}
+              color="#4fa94d"
+              ariaLabel="oval-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </div>
+        )}
       </div>
     </section>
   );
