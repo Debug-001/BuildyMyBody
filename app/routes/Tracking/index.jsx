@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 // import Protien from './public/img/protien.png'
 import protien from '../../img/protien.png'
 import authenticity from '../../img/auth.jpg'

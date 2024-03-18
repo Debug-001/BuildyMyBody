@@ -2,7 +2,7 @@ import { json } from '@shopify/remix-oxygen';
 import { Link, useLoaderData } from '@remix-run/react';
 import { Image, Pagination, getPaginationVariables } from '@shopify/hydrogen';
 import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+import Footer from '../Components/Footer/Footer'
 import Brand from '../Components/Home/Brand';
 import { NavLink } from '@remix-run/react';
 import Offers from '~/Components/Home/Offers';

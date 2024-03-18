@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
-import {BiInfoCircle} from 'react-icons/bi';
-import {FaHandHolding} from 'react-icons/fa';
-import {BsCheckSquare} from 'react-icons/bs';
+import Footer from '../../Components/Footer/Footer';
+import { BiInfoCircle } from 'react-icons/bi';
+import { FaHandHolding } from 'react-icons/fa';
+import { BsCheckSquare } from 'react-icons/bs';
 
 const Address = () => {
   const [isActive, setIsActive] = useState(false);
@@ -37,7 +37,7 @@ const Address = () => {
                 <p className="price mt-3">₹11,609</p>
               </div>
               <hr />
-              <div className="card1 mt-4" style={{width: '26.7rem'}}>
+              <div className="card1 mt-4" style={{ width: '26.7rem' }}>
                 <div className="card-body">
                   <p className="card-text">
                     <FaHandHolding />

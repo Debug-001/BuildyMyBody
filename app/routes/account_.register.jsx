@@ -1,7 +1,7 @@
 import { json, redirect } from '@shopify/remix-oxygen';
 import { Form, Link, useActionData } from '@remix-run/react';
 import Navbar from '~/Components/Navbar';
-import Footer from '~/Components/Footer';
+import Footer from '~/Components/Footer/Footer';
 import buildbody from '../img/buildbody.jpg';
 
 export const meta = () => {

@@ -3,7 +3,7 @@ import { useLoaderData } from '@remix-run/react';
 import { Image } from '@shopify/hydrogen';
 import Navbar from '~/Components/Navbar';
 import { Link } from 'react-router-dom';
-import Footer from '~/Components/Footer';
+import Footer from '~/Components/Footer/Footer';
 
 export const meta = ({ data }) => {
   return [{ title: `Hydrogen | ${data.article.title} article` }];

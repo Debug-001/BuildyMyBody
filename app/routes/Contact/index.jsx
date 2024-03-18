@@ -5,7 +5,7 @@ import { FaRegPaperPlane } from 'react-icons/fa';
 import { BiTime } from 'react-icons/bi';
 // import Social from '../Social/Social';
 // import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar';
 export const meta = () => {
   return [{ title: `BuildMyBody|Contact Us` }];

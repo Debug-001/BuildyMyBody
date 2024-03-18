@@ -1,6 +1,6 @@
 import { Form, NavLink, Outlet, useLoaderData } from '@remix-run/react';
 import { json, redirect } from '@shopify/remix-oxygen';
-import Footer from '~/Components/Footer';
+import Footer from '~/Components/Footer/Footer';
 import Navbar from '~/Components/Navbar';
 import { Link } from '@remix-run/react';
 

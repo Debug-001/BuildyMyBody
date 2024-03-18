@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
+import Footer from '../Footer/Footer';
 import Carousel from './Carousel';
 import Discount from './Discount';
 import FeaturedProducts from './FeaturedProducts';

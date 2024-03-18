@@ -1,8 +1,5 @@
-import {CartForm} from '@shopify/hydrogen';
-import {useEffect, useState} from 'react';
-
-
-
+import { CartForm } from '@shopify/hydrogen';
+import { useEffect, useState } from 'react';
 
 export default function ProductForm({
   variantId,
@@ -10,7 +7,7 @@ export default function ProductForm({
   button,
   quantity = 1,
 }) {
-  const lines = [{merchandiseId: variantId, quantity: quantity}];
+  const lines = [{ merchandiseId: variantId, quantity: quantity }];
   const [showAlert, setShowAlert] = useState(false);
 
   const showAlertAndDismiss = () => {
@@ -26,12 +23,12 @@ export default function ProductForm({
       .forEach((btn) => btn.addEventListener('click', showAlertAndDismiss));
   }, []);
   return (
-    <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{lines}}>
-      <div className="" style={{position: 'relative'}}>
+    <CartForm route="/cart" action={CartForm.ACTIONS.LinesAdd} inputs={{ lines }}>
+      <div className="" style={{ position: 'relative' }}>
         {custom ? (
           button
         ) : (
-          <button className="btn" onClick={showAlertAndDismiss}>
+          <button className="btn w-100" onClick={showAlertAndDismiss}>
             Add to Cart
           </button>
         )}
@@ -40,10 +37,10 @@ export default function ProductForm({
           <div className="fixed-bottom">
             <div
               className="alert alert-success alert-dismissible fade show"
-              style={{maxWidth: '300px'}}
+              style={{ maxWidth: '300px' }}
               role="alert"
             >
-              <p style={{fontSize: '1.4rem', fontStyle: 'normal'}}>
+              <p style={{ fontSize: '1.4rem', fontStyle: 'normal' }}>
                 Added To the Cart!
               </p>
             </div>

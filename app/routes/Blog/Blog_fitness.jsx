@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import blog1 from '../../img/blog-1.jpg';
 import blog2 from '../../img/blog-2.jpg';
 import blog3 from '../../img/blog-3.jpg';
 
 import './Blog.css';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
-import {AiOutlineArrowRight} from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function Blog_fitness() {
   const navigate = useNavigate();

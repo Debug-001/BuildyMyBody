@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Form, Link, NavLink } from '@remix-run/react';
+import React, { useState } from 'react';
+import { Link, NavLink } from '@remix-run/react';
 import on from '../img/on.png';
 import mt from '../img/mt.jpg';
 import uni from '../img/uni.jpg';
-import imgbrand from '../img/logo.png';
 import logo_replace from '../img/logo_replace.png';
 import cl from '../img/cl.jpg';
 import whey from '../img/whey.png';
@@ -16,8 +15,7 @@ import { RiAccountCircleLine } from 'react-icons/ri';
 import { CiBarcode } from 'react-icons/ci';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/hamburgers.css';
-// import { RiAccountCircleLine } from 'react-icons/ri';
-// import { BiCategoryAlt } from 'react-icons/bi'
+
 import { GiBodyBalance } from 'react-icons/gi';
 const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -43,17 +41,21 @@ const Navbar = () => {
   const handleNavbarToggle = () => {
     setIsNavOpen(!isNavOpen);
   };
-  // useEffect(() => {
-  //   var hamburger = document.querySelector(".hamburger");
-  //   const handleClick = () => {
-  //     hamburger.classList.toggle("is-active");
-  //   };
-  //   hamburger.addEventListener("click", handleClick);
 
-  //   return () => {
-  //     hamburger.removeEventListener("click", handleClick);
-  //   };
-  // }, []);
+  const iconLinks = [
+    {
+      to: '/search',
+      icon: <BsSearch size={20} />,
+    },
+    {
+      to: '/cart',
+      icon: <FiShoppingCart size={20} />,
+    },
+    {
+      to: '/account',
+      icon: <RiAccountCircleLine size={25} />,
+    },
+  ];
 
   return (
     <>
@@ -62,32 +64,17 @@ const Navbar = () => {
         style={{ background: 'black' }}
       >
         <div className="d-flex d-md-flex d-lg-none">
-          <div className="icon-search ">
-            <li>
-              <NavLink to="/search">
-                <BsSearch size={20} />
-              </NavLink>
-            </li>
-          </div>
-          <div className="icon-cart ml-3">
-            <li>
-              <NavLink to="/cart">
-                <FiShoppingCart size={20} />
-              </NavLink>
-            </li>
-          </div>
-          <div className="icon-cart ml-3">
-            <li>
-              <NavLink
-                to="/account"
-                id="acc-icon2"
-              // style={{ fontSize: '.9rem' }}
-              >
-                <RiAccountCircleLine size={25} />
-              </NavLink>
-            </li>
-          </div>
+          {iconLinks.map((icon, index) => (
+            <div key={index} className={`icon-search ${index !== 0 ? 'ml-3' : ''}`}>
+              <li>
+                <NavLink to={icon.to}>
+                  {React.cloneElement(icon.icon, { className: 'text-white' })}
+                </NavLink>
+              </li>
+            </div>
+          ))}
         </div>
+
 
         <NavLink
           className="navbar-brand ml-lg-4 center-img d-none d-lg-block col justify-content-start"
@@ -164,7 +151,7 @@ const Navbar = () => {
               >
                 <div className="row">
                   <div className="col-lg-12 col-md-6 d-flex justify-content-around nav-product">
-                    <Link className="  " to="/products/whey-protien">
+                    <Link className="" to="/products/whey-protien">
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ">
                         <img
                           src={whey}
@@ -183,7 +170,7 @@ const Navbar = () => {
                         </span>
                       </div>
                     </Link>
-                    <Link to="/products/gainers" className="  ">
+                    <Link to="/products/gainers" className="">
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ml-lg-5 ">
                         <img
                           src={gainer}
@@ -439,16 +426,6 @@ const Navbar = () => {
                 BMI
               </NavLink>
             </li>
-
-            {/* <li className="nav-item">
-              <NavLink
-                className={'nav-link active text-light'}
-                to="/subscription"
-                style={{ fontSize: '1rem' }}
-              >
-                Subscription
-              </NavLink>
-            </li> */}
             <li>
               <NavLink
                 className={'nav-link active text-light'}
@@ -461,8 +438,8 @@ const Navbar = () => {
           </ul>
         </div>
         <ul className="navbar-nav nav-icon  ml-auto col d-none d-lg-flex justify-content-end">
-          <div className="d-flex ">
-            <div className="icon-search ">
+          <div className="d-flex" >
+            <div className="icon-search">
               <li>
                 <NavLink to="/search">
                   <BsSearch size={25} />

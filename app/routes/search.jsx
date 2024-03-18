@@ -4,7 +4,7 @@ import { getPaginationVariables } from '@shopify/hydrogen';
 
 import { SearchForm, SearchResults, NoSearchResults } from '~/Components/Search';
 import Navbar from '~/Components/Navbar';
-import Footer from '~/Components/Footer';
+import Footer from '~/Components/Footer/Footer';
 
 export const meta = () => {
   return [{ title: `BuildMyBody|Search` }];

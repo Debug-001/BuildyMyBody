@@ -1,4 +1,4 @@
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
 import { Link, useLoaderData } from '@remix-run/react';
 import { json } from '@shopify/remix-oxygen';

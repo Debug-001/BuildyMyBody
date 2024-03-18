@@ -1,6 +1,6 @@
 import { AiFillCheckCircle } from 'react-icons/ai';
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer/Footer';
 import { useState } from 'react';
 import data from './data';
 import Try from './Try';
@@ -9,8 +9,10 @@ import authenticity from '../img/authenticity3.jpg';
 import certificate_img from '../img/certificate_img.webp';
 
 export const meta = () => {
-  return [{ title: 'BuildMyBody | Certificates',
-   description: 'Explore our certificates and ensure the authenticity of our products.' }];
+  return [{
+    title: 'BuildMyBody | Certificates',
+    description: 'Explore our certificates and ensure the authenticity of our products.'
+  }];
 };
 
 function Certificates() {

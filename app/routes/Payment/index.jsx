@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
-import {BiInfoCircle} from 'react-icons/bi';
-import {FaHandHolding} from 'react-icons/fa';
-import {BsChevronDown} from 'react-icons/bs';
-import {FcGoogle} from 'react-icons/fc';
-import {MdOutlineLocalOffer} from 'react-icons/md';
+import Footer from '../../Components/Footer/Footer';
+import { BiInfoCircle } from 'react-icons/bi';
+import { FaHandHolding } from 'react-icons/fa';
+import { BsChevronDown } from 'react-icons/bs';
+import { FcGoogle } from 'react-icons/fc';
+import { MdOutlineLocalOffer } from 'react-icons/md';
 
 const Payment = () => {
   const [isActive, setIsActive] = useState(false);
@@ -55,7 +55,7 @@ const Payment = () => {
               </div>
               <hr />
 
-              <div className="card1" style={{width: '26.7rem'}}>
+              <div className="card1" style={{ width: '26.7rem' }}>
                 <div className="card-body">
                   <p className="card-text">
                     <FaHandHolding />
@@ -67,7 +67,7 @@ const Payment = () => {
                 </div>
               </div>
 
-              <div className="card2" style={{width: '26.7rem'}}>
+              <div className="card2" style={{ width: '26.7rem' }}>
                 <div className="card2-body">
                   <h6 className="card-subtitle mb-2 text-muted">
                     <MdOutlineLocalOffer />{' '}
@@ -183,7 +183,7 @@ const Payment = () => {
                 </div>
                 <hr className="fhr" />
               </div>
-              <div className="card4 mx-4" style={{width: '24rem'}}>
+              <div className="card4 mx-4" style={{ width: '24rem' }}>
                 <div className="card4-body">
                   <div className="card4-text">
                     <img
@@ -201,7 +201,7 @@ const Payment = () => {
                   </a>
                 )}
               </div>
-              <div className="accordion mx-4 mt-4" style={{width: '24rem'}}>
+              <div className="accordion mx-4 mt-4" style={{ width: '24rem' }}>
                 <div className="card">
                   <div className="card-header" id="headingOne">
                     <h5 className="mb-0">

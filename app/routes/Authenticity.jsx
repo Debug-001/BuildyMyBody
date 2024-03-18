@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '~/firebase';
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
 import banner1mob from '../img/banner1mob.png';
 import frame1 from '../img/frame1.png';

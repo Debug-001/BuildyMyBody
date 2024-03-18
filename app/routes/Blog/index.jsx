@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar';
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import {AiOutlineArrowRight} from 'react-icons/ai';
-import {AiOutlineArrowLeft} from 'react-icons/ai';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 import blog1 from '../../img/blog-1.jpg';
 import blog2 from '../../img/blog-2.jpg';
 import blog3 from '../../img/blog-3.jpg';
@@ -39,11 +39,11 @@ function Blog() {
         <div className="container">
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1
               className="font-weight-bold custom-heading3"
-              style={{color: '#ff2828'}}
+              style={{ color: '#ff2828' }}
             >
               <em>Blogs</em>
             </h1>

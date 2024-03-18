@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer/Footer";
 
 export const meta = () => {
 	return [{ title: 'BuildMyBody | Privacy Policy', description: 'Read our privacy policy to understand how we collect and use your information.' }];

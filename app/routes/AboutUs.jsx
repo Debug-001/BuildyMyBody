@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import Footer from '../Components/Footer/Footer';
 import aboutinfo from '../img/aboutus-info.jpg';
 import aboutus from '../img/about-us.jpg';
 import aboutimage from '../img/aboutimage.jpg';
