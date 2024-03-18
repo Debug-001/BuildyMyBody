@@ -1,6 +1,6 @@
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import { Link, NavLink, useLoaderData } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import { json } from '@shopify/remix-oxygen';
 import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
@@ -8,8 +8,6 @@ import { Pagination } from '@shopify/hydrogen';
 import { getPaginationVariables } from '@shopify/hydrogen';
 import { Oval } from 'react-loader-spinner';
 import { useState } from 'react';
-
-// import { Suspense } from 'react';
 
 export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
@@ -101,12 +99,8 @@ export default function Products() {
       <section id="product-section">
         <div className="container-fluid pb-5">
           <div className="row mt-4">
-            <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none flex-column ">
+            {/* <div className="col-lg-3 col-md-12 d-md-none d-sm-none d-lg-flex pro-none flex-column ">
               <div style={{ marginTop: '6rem' }}>
-                {/* <Bmitrend
-                  trendingProducts={trendingProducts.collection}
-                  slides={1}
-                /> */}
               </div>
               <div className="card-filter">
                 <div className="card-content-all ">
@@ -145,9 +139,8 @@ export default function Products() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-9 col-md-12 " id="all-products">
+            </div> */}
+            <div className="col" id="all-products">
               <div
                 className="d-flex justify-content-center mb-5"
                 style={{ flexDirection: 'column', alignItems: 'center' }}
@@ -250,12 +243,6 @@ export default function Products() {
                 )}
               </Pagination>
             </div>
-            {/* <div className="col-12 d-flex d-lg-none ">
-              <Bmitrend
-                trendingProducts={trendingProducts.collection}
-                slides={1}
-              />
-            </div> */}
           </div>
         </div>
       </section>

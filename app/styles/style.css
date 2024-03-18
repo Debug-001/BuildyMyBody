@@ -464,15 +464,6 @@
   margin-top: 15px;
 }
 
-.width-input {
-  width: 25%;
-}
-
-@media screen and (max-width: 575px) {
-  .width-input {
-    width: 50%;
-  }
-}
 .empty-orders p {
   color: white;
   font-size: 1.2rem !important;

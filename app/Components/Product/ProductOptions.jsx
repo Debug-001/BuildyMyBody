@@ -35,7 +35,7 @@ export default function ProductOptions({ options, selectedVariant }) {
     : paramsWithDefaults;
 
   return (
-    <div className="d-flex justify-content-between">
+    <div className="d-flex justify-content-between flex-wrap">
       {options.map((option) => {
         if (!option.values.length) {
           return;
@@ -44,7 +44,7 @@ export default function ProductOptions({ options, selectedVariant }) {
         // get the currently selected option value
         const currentOptionVal = searchParams.get(option.name);
         return (
-          <div key={option.name} className={`second-div ${options.indexOf(option) === 1 ? 'move-left' : ''}`}>
+          <div key={option.name} className="second-div">
             <h4 className=" mb-3">{option.name}</h4>
             <div className="dropdown flavor">
               <button
