@@ -80,7 +80,7 @@ const Product = ({ data }) => {
             <div className="row ">
               {/* image column  */}
 
-              <div className="col-sm-12 col-md-12 col-lg-4 mt-5">
+              <div className="col-sm-12 col-md-12 col-lg-6 mt-5">
                 <ProductCarousal media={product.media.nodes} />
               </div>
 
