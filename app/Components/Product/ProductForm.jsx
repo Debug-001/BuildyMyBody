@@ -28,7 +28,7 @@ export default function ProductForm({
         {custom ? (
           button
         ) : (
-          <button className="btn w-100" onClick={showAlertAndDismiss}>
+          <button className="btn " onClick={showAlertAndDismiss}>
             Add to Cart
           </button>
         )}
