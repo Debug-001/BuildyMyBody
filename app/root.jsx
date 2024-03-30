@@ -1,4 +1,4 @@
-// import {useNonce} from '@shopify/hydrogen';
+import {useNonce} from '@shopify/hydrogen';
 import {defer} from '@shopify/remix-oxygen';
 import {
   Links,
@@ -15,7 +15,6 @@ import {
 import favicon from './assets/favicon.svg';
 import styles from './styles/app.css';
 import styles2 from './styles/style.css';
-// import bootstrapStyles from 'bootstrap/dist/css/bootstrap.min.css';
 import slick1 from 'slick-carousel/slick/slick.css';
 import slick2 from 'slick-carousel/slick/slick-theme.css';
 import {Script} from '@shopify/hydrogen';
@@ -24,7 +23,6 @@ export function links() {
   return [
     {rel: 'stylesheet', href: styles},
     {rel: 'stylesheet', href: styles2},
-    // {rel: 'stylesheet', href: bootstrapStyles},
     {rel: 'stylesheet', href: slick1},
     {rel: 'stylesheet', href: slick2},
     {
@@ -45,7 +43,7 @@ export function links() {
 }
 
 export default function App() {
-  // const nonce = useNonce();
+  const nonce = useNonce();
   return (
     <html lang="en">
       <head>
@@ -56,12 +54,6 @@ export default function App() {
         />
 
         <Meta />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-          crossorigin="anonymous"
-        ></link>
         <Links />
       </head>
       <body>
@@ -69,16 +61,18 @@ export default function App() {
           src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
           crossorigin="anonymous"
+          nonce={nonce}
         ></Script>
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
           crossorigin="anonymous"
+          nonce={nonce}
         ></Script>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <Outlet nonce={nonce} />
+        <ScrollRestoration nonce={nonce} />
+        <Scripts nonce={nonce} />
+        <LiveReload nonce={nonce} />
       </body>
     </html>
   );

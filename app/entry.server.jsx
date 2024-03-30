@@ -1,36 +1,21 @@
 import {RemixServer} from '@remix-run/react';
+import {
+  cartGetIdDefault,
+  cartSetIdDefault,
+  createCartHandler,
+} from '@shopify/hydrogen';
 import isbot from 'isbot';
 import {renderToReadableStream} from 'react-dom/server';
-import {createContentSecurityPolicy} from '@shopify/hydrogen';
 
-/**
- * @param {Request} request
- * @param {number} responseStatusCode
- * @param {Headers} responseHeaders
- * @param {EntryContext} remixContext
- */
 export default async function handleRequest(
   request,
   responseStatusCode,
   responseHeaders,
   remixContext,
 ) {
-  const {nonce, header, NonceProvider} = createContentSecurityPolicy({
-    styleSrc: [
-      "'self'",
-      'https://cdn.shopify.com',
-      'https://cdn.jsdelivr.net',
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-    ],
-  });
-
   const body = await renderToReadableStream(
-    <NonceProvider>
-      <RemixServer context={remixContext} url={request.url} />
-    </NonceProvider>,
+    <RemixServer context={remixContext} url={request.url} />,
     {
-      nonce,
       signal: request.signal,
       onError(error) {
         // eslint-disable-next-line no-console
@@ -45,12 +30,16 @@ export default async function handleRequest(
   }
 
   responseHeaders.set('Content-Type', 'text/html');
-  responseHeaders.set('Content-Security-Policy', header);
-
   return new Response(body, {
     headers: responseHeaders,
     status: responseStatusCode,
   });
-}
 
-/** @typedef {import('@shopify/remix-oxygen').EntryContext} EntryContext */
+  const cart = createCartHandler({
+    storefront,
+    getCartId: cartGetIdDefault(request.headers),
+    setCartId: cartSetIdDefault({
+      maxage: 60 * 60 * 24 * 365, // 1 year expiry
+    }),
+  });
+}

@@ -20,7 +20,6 @@
     "@shopify/cli-hydrogen": "^7.1.2",
     "@shopify/hydrogen": "~2024.1.4",
     "@shopify/remix-oxygen": "^2.0.3",
-    "bootstrap": "^4.6.1",
     "firebase": "^10.9.0",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
