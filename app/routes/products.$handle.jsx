@@ -88,7 +88,7 @@ export default function Products() {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <Navbar />

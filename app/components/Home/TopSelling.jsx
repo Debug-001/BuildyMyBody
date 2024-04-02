@@ -21,7 +21,7 @@ const TopSelling = ({collection}) => {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <section id="featured-section">

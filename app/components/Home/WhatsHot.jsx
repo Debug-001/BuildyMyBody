@@ -90,7 +90,7 @@ const WhatsHot = () => {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <section id="whatshot" className="container pt-5 pb-5">

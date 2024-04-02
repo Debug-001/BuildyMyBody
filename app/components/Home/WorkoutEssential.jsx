@@ -43,7 +43,7 @@ const WheyEssential = () => {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <section id="popular" className="pb-5">

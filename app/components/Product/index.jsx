@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer/Footer';
-import { FaPlus } from 'react-icons/fa6';
-import { FaMinus } from 'react-icons/fa6';
-import { ShopPayButton } from '@shopify/hydrogen-react';
-import { Image, Money } from '@shopify/hydrogen';
+import {FaPlus} from 'react-icons/fa6';
+import {FaMinus} from 'react-icons/fa6';
+import {ShopPayButton} from '@shopify/hydrogen-react';
+import {Image, Money} from '@shopify/hydrogen';
 import ProductCarousal from './ProductCarousal';
 import ProductOptions from './ProductOptions';
 import ProductForm from './ProductForm';
-import { Link } from '@remix-run/react';
-import discountsvg from '../../img/discountsvg.png'
+import {Link} from '@remix-run/react';
+import discountsvg from '../../img/discountsvg.png';
 import ProductConstants from './ProductConstants';
 
-const Product = ({ data }) => {
+const Product = ({data}) => {
   const {
     product,
     selectedVariant,
@@ -80,16 +80,18 @@ const Product = ({ data }) => {
             <div className="row ">
               {/* image column  */}
 
-              <div className="col-sm-12 col-md-12 col-lg-6 mt-5">
+              <div className="col-sm-12 col-md-12 col-lg-4 mt-5">
                 <ProductCarousal media={product.media.nodes} />
               </div>
 
-
               {/* middle column  */}
-              <div className="col-sm-12 col-lg-6 col-md-12 mt-5 " style={{ padding: '0rem 1rem' }}>
+              <div
+                className="col-sm-12 col-lg-6 col-md-12 mt-5 "
+                style={{padding: '0rem 1rem'}}
+              >
                 <h2
                   className="text-lg-left text-md-center text-sm-center product-title-size"
-                  style={{ fontWeight: '800' }}
+                  style={{fontWeight: '800'}}
                 >
                   {product.title}
                 </h2>
@@ -97,7 +99,7 @@ const Product = ({ data }) => {
                   {/* weight/flavour section  */}
                   <div className="col-lg-6 col-md-6 col-12 flex-column">
                     <div>
-                      <div className="d-flex" style={{ fontSize: '25px' }}>
+                      <div className="d-flex" style={{fontSize: '25px'}}>
                         <p className="title  ">Price:</p>
                         <span>
                           <Money
@@ -105,7 +107,7 @@ const Product = ({ data }) => {
                             data={selectedVariant.compareAtPrice}
                             className="ml-2"
                             as="del"
-                            style={{ color: '#ff2828' }}
+                            style={{color: '#ff2828'}}
                           />
                         </span>
                       </div>
@@ -116,20 +118,20 @@ const Product = ({ data }) => {
                             withoutTrailingZeros
                             data={selectedVariant.price}
                             className="ml-2"
-                            style={{ fontSize: '38px' }}
+                            style={{fontSize: '38px'}}
                           />
                         </div>
                         <div>
                           <div className="ml-1 mt-1 d-flex align-items-center ">
                             <p
-                              style={{ color: '#ff2828' }}
+                              style={{color: '#ff2828'}}
                               className="product-btn p-2"
                             >
                               {Math.ceil(
                                 ((selectedVariant.compareAtPrice.amount -
                                   selectedVariant.price.amount) /
                                   selectedVariant.compareAtPrice.amount) *
-                                100,
+                                  100,
                               )}
                               % off
                             </p>
@@ -140,7 +142,7 @@ const Product = ({ data }) => {
                     <div className="d-flex width-input mt-3 border border-dark justify-content-between p-1">
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="ml-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -158,7 +160,7 @@ const Product = ({ data }) => {
 
                       <div>
                         <button
-                          style={{ border: 'none', background: 'none' }}
+                          style={{border: 'none', background: 'none'}}
                           className="mr-4"
                           onClick={() => {
                             setQuantity((prevQty) =>
@@ -188,10 +190,8 @@ const Product = ({ data }) => {
                         />
                       </div>
 
-                      <div className="ml-0 ml-sm-2 ml-lg-2 ml-md-2 mt-2 mt-sm-0 mt-lg-0 mt-md-0" >
-
+                      <div className="ml-0 ml-sm-2 ml-lg-2 ml-md-2 mt-2 mt-sm-0 mt-lg-0 mt-md-0">
                         {orderable && (
-
                           <ShopPayButton
                             storeDomain={storeDomain}
                             variantIds={[selectedVariant?.id]}
@@ -205,7 +205,7 @@ const Product = ({ data }) => {
                   <hr className="w-100" />
                   <h4
                     className="mt-5 title font-weight-bolder"
-                    style={{ color: '#282828' }}
+                    style={{color: '#282828'}}
                   >
                     Check Delivery
                   </h4>
@@ -231,8 +231,9 @@ const Product = ({ data }) => {
                     </div>
                     <div className="mt-1">
                       <p
-                        className={`error-message ${deliverable ? 'success' : 'error'
-                          }`}
+                        className={`error-message ${
+                          deliverable ? 'success' : 'error'
+                        }`}
                       >
                         {errorMessage}
                       </p>
@@ -241,7 +242,6 @@ const Product = ({ data }) => {
                 </div>
 
                 {/* featured products section   */}
-
               </div>
               <div className="container-fluid ">
                 {/* <hr /> */}
@@ -249,14 +249,16 @@ const Product = ({ data }) => {
                   <div className="col-lg-10 " id="product-tabs">
                     <ul
                       className="nav nav-tabs mt-4 d-flex justify-content-start justify-content-lg-around justify-content-md-around w-100"
-                      style={{ background: 'black' }}
+                      style={{background: 'black'}}
                       id="myTab"
                       role="tablist"
                     >
                       {ProductConstants.tabs.map((tab, index) => (
                         <li className="nav-item" key={index}>
                           <a
-                            className={`nav-link ${index === activeTab ? 'active' : ''}`}
+                            className={`nav-link ${
+                              index === activeTab ? 'active' : ''
+                            }`}
                             id={`${tab.id}-tab`}
                             data-toggle="tab"
                             href={`#${tab.href}`}
@@ -292,19 +294,27 @@ const Product = ({ data }) => {
                               <button
                                 onClick={() => toggleDropdownCustom(index)}
                                 className="w-100 text-left p-3 mt-4"
-                                style={{ border: '1px solid transparent' }}
+                                style={{border: '1px solid transparent'}}
                               >
                                 <span className="ques-product">Question</span>
-                                <span data-title="Question" className="ml-5" data-show="">
+                                <span
+                                  data-title="Question"
+                                  className="ml-5"
+                                  data-show=""
+                                >
                                   {faq.question}
                                 </span>
                               </button>
                               {openIndex === index && (
-                                <div style={{ fontSize: '14px' }}>
+                                <div style={{fontSize: '14px'}}>
                                   <br />
                                   <br />
                                   <span className="answer-product">Answer</span>
-                                  <span data-title="Answer" className="" data-show="">
+                                  <span
+                                    data-title="Answer"
+                                    className=""
+                                    data-show=""
+                                  >
                                     <p className="mt-4">{faq.answer}</p>
                                   </span>
                                 </div>
@@ -328,7 +338,7 @@ const Product = ({ data }) => {
                     className="col-lg-2 flex-lg-column mt-0 mt-lg-5 mt-md-5 mt-sm-0 d-flex d-lg-none "
                   >
                     <h4 className="d-flex justify-content-center font-weight-bolder ">
-                      <em style={{ fontSize: '2rem' }} className="text-center">
+                      <em style={{fontSize: '2rem'}} className="text-center">
                         FEATURED PRODUCTS
                       </em>
                     </h4>
@@ -343,7 +353,7 @@ const Product = ({ data }) => {
                             >
                               <div
                                 className="w-100 card-container"
-                                style={{ maxWidth: '250px', margin: '0 auto' }}
+                                style={{maxWidth: '250px', margin: '0 auto'}}
                               >
                                 <Image
                                   data={product.variants.nodes[0].image}
@@ -354,18 +364,30 @@ const Product = ({ data }) => {
                                   alt={product.title}
                                   className="single-product-img"
                                 />
-                                <div className='all-discount' >
-                                  <img src={discountsvg} className='w-100' alt="Discount" />
+                                <div className="all-discount">
+                                  <img
+                                    src={discountsvg}
+                                    className="w-100"
+                                    alt="Discount"
+                                  />
                                 </div>
-                                <div className="text-light" style={{ position: 'absolute', top: '1px', right: '7px' }}>
-                                  <p style={{ fontWeight: '700' }}>
+                                <div
+                                  className="text-light"
+                                  style={{
+                                    position: 'absolute',
+                                    top: '1px',
+                                    right: '7px',
+                                  }}
+                                >
+                                  <p style={{fontWeight: '700'}}>
                                     {Math.ceil(
                                       ((product.variants.nodes[0].compareAtPrice
                                         .amount -
-                                        product.variants.nodes[0].price.amount) /
+                                        product.variants.nodes[0].price
+                                          .amount) /
                                         product.variants.nodes[0].compareAtPrice
                                           .amount) *
-                                      100,
+                                        100,
                                     )}
                                     %
                                   </p>
@@ -412,7 +434,7 @@ const Product = ({ data }) => {
                     className="col-lg-2 flex-lg-column mt-5 mt-lg-4 mt-md-4 mt-sm-2"
                   >
                     <h4 className="d-flex justify-content-center align-items-center font-weight-bolder  text-center">
-                      <em style={{ fontSize: '2rem' }}>RELATED PRODUCTS</em>
+                      <em style={{fontSize: '2rem'}}>RELATED PRODUCTS</em>
                     </h4>
                     <div className="custom-fl-product d-md-flex flex-lg-column ">
                       {TrendingProductsCollection.collection.products.nodes.map(
@@ -426,7 +448,7 @@ const Product = ({ data }) => {
                             >
                               <div
                                 className="w-100 card-container"
-                                style={{ maxWidth: '250px', margin: '0 auto' }}
+                                style={{maxWidth: '250px', margin: '0 auto'}}
                               >
                                 <Image
                                   data={product.variants.nodes[0].image}
@@ -437,18 +459,30 @@ const Product = ({ data }) => {
                                   className="single-product-img"
                                   alt={product.title}
                                 />
-                                <div className='all-discount' >
-                                  <img src={discountsvg} className='w-100' alt="Discount" />
+                                <div className="all-discount">
+                                  <img
+                                    src={discountsvg}
+                                    className="w-100"
+                                    alt="Discount"
+                                  />
                                 </div>
-                                <div className="text-light" style={{ position: 'absolute', top: '2px', right: '5px' }}>
-                                  <p style={{ fontWeight: '700' }}>
+                                <div
+                                  className="text-light"
+                                  style={{
+                                    position: 'absolute',
+                                    top: '2px',
+                                    right: '5px',
+                                  }}
+                                >
+                                  <p style={{fontWeight: '700'}}>
                                     {Math.ceil(
                                       ((product.variants.nodes[0].compareAtPrice
                                         .amount -
-                                        product.variants.nodes[0].price.amount) /
+                                        product.variants.nodes[0].price
+                                          .amount) /
                                         product.variants.nodes[0].compareAtPrice
                                           .amount) *
-                                      100,
+                                        100,
                                     )}
                                     %
                                   </p>
@@ -458,7 +492,7 @@ const Product = ({ data }) => {
                             <div className="d-flex justify-content-center align-items-center flex-column">
                               <p
                                 className="font-weight-bold mt-4  text-center text-dark d-flex justify-content-center align-items-center flex-column"
-                                style={{ fontSize: '.9rem' }}
+                                style={{fontSize: '.9rem'}}
                               >
                                 {product.title}
                               </p>

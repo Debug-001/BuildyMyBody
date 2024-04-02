@@ -33,7 +33,7 @@ const ShopByBrands = () => {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <section id="shopbb" className="container mt-5 mb-5">

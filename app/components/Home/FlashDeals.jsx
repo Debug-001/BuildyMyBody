@@ -49,7 +49,7 @@ const FlashDeals = ({collection}) => {
     <>
       {loading && (
         <div className="overlay">
-          <div class="loader"></div>
+          <div className="loader"></div>
         </div>
       )}
       <section id="trending-products" className="pt-2">

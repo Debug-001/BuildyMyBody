@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { MdOutlineLocalOffer } from 'react-icons/md';
-import { Link } from '@remix-run/react';
-import { CartForm } from '@shopify/hydrogen';
-import { flattenConnection, Image, Money } from '@shopify/hydrogen-react';
-import { FaPlus } from 'react-icons/fa6';
-import { FaMinus } from 'react-icons/fa6';
+import React, {useState} from 'react';
+import {MdOutlineLocalOffer} from 'react-icons/md';
+import {Link} from '@remix-run/react';
+import {CartForm} from '@shopify/hydrogen';
+import {flattenConnection, Image, Money} from '@shopify/hydrogen-react';
+import {FaPlus} from 'react-icons/fa6';
+import {FaMinus} from 'react-icons/fa6';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { IoIosArrowDown } from 'react-icons/io';
+import {IoIosArrowDown} from 'react-icons/io';
 // import ClipboardJS from 'clipboard';
-import { IoClipboardOutline } from 'react-icons/io5';
+import {IoClipboardOutline} from 'react-icons/io5';
 
 export const meta = () => {
-  return [{ title: `BuildMyBody|Cart` }];
+  return [{title: `BuildMyBody|Cart`}];
 };
 
-export function CartLineItems({ linesObj }) {
+export function CartLineItems({linesObj}) {
   const lines = flattenConnection(linesObj);
   return (
     <div className="space-y-8">
@@ -58,13 +58,15 @@ const Accordion = () => {
     });
   };
 
-
   return (
     <div>
-      <p className='pt-4' style={{ color: "ff2828" }}>Note: Copy to apply these offers at <span className='font-weight-bolder'>Checkout Page</span> above (Click To Copy) .</p>
+      <p className="pt-4" style={{color: 'ff2828'}}>
+        Note: Copy to apply these offers at{' '}
+        <span className="font-weight-bolder">Checkout Page</span> above (Click
+        To Copy) .
+      </p>
       {/* First Accordion */}
       <div className="section-acc-1">
-
         <button
           className={`accordion ${activeIndex === 0 ? 'active-acc' : ''}`}
           onClick={() => {
@@ -72,23 +74,26 @@ const Accordion = () => {
             handleCopyToClipboard('Protein30', 0); // Pass the index
           }}
         >
-          <div className='d-flex flex-column'>
-            <div className='d-flex justify-content-between align-items-center'>
+          <div className="d-flex flex-column">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <MdOutlineLocalOffer size={20} />
-                <span className="font-weight-bolder mx-1">Protein30:</span> &nbsp;30% off
-                on All Protein products sitewise
-
+                <span className="font-weight-bolder mx-1">Protein30:</span>{' '}
+                &nbsp;30% off on All Protein products sitewise
               </div>
-              <IoIosArrowDown size={30}
-                className={`arrow-icon mx-2 ${activeIndex === 0 ? 'rotate' : ''}`}
+              <IoIosArrowDown
+                size={30}
+                className={`arrow-icon mx-2 ${
+                  activeIndex === 0 ? 'rotate' : ''
+                }`}
               />
-              <IoClipboardOutline size={30}
+              <IoClipboardOutline
+                size={30}
                 className={`clipboard-icon ${copied ? 'copied' : ''}`}
               />
             </div>
 
-            <div className='mt-1'>
+            <div className="mt-1">
               {copied[0] && <span className="copied-message">Copied!</span>}
             </div>
           </div>
@@ -109,7 +114,6 @@ const Accordion = () => {
 
       {/* Second Accordion */}
       <div className="section-acc-2">
-
         <button
           className={`accordion ${activeIndex === 1 ? 'active-acc' : ''}`}
           onClick={() => {
@@ -117,20 +121,25 @@ const Accordion = () => {
             handleCopyToClipboard('Offer20', 1); // Pass the index
           }}
         >
-          <div className='d-flex flex-column'>
-            <div className='d-flex justify-content-between align-items-center'>
+          <div className="d-flex flex-column">
+            <div className="d-flex justify-content-between align-items-center">
               <div>
                 <MdOutlineLocalOffer size={20} />
-                <span className="font-weight-bolder mx-1">Offer20:</span> &nbsp;Description for the second accordion
+                <span className="font-weight-bolder mx-1">Offer20:</span>{' '}
+                &nbsp;Description for the second accordion
               </div>
-              <IoIosArrowDown size={30}
-                className={`arrow-icon mx-2 ${activeIndex === 1 ? 'rotate' : ''}`}
+              <IoIosArrowDown
+                size={30}
+                className={`arrow-icon mx-2 ${
+                  activeIndex === 1 ? 'rotate' : ''
+                }`}
               />
-              <IoClipboardOutline size={30}
+              <IoClipboardOutline
+                size={30}
                 className={`clipboard-icon ${copied ? 'copied' : ''}`}
               />
             </div>
-            <div className='mt-1'>
+            <div className="mt-1">
               {copied[1] && <span className="copied-message">Copied!</span>}
             </div>
           </div>
@@ -142,16 +151,15 @@ const Accordion = () => {
           }}
         >
           <p className="p-2">
-            Terms and conditions for the second accordion: Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eveniet aut odit minus pariatur sint
-            fugit placeat cupiditate. Explicabo, porro non!
+            Terms and conditions for the second accordion: Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Eveniet aut odit minus pariatur
+            sint fugit placeat cupiditate. Explicabo, porro non!
           </p>
         </div>
       </div>
     </div>
   );
 };
-
 
 const settings = {
   dots: true,
@@ -176,17 +184,17 @@ const settings = {
   ],
 };
 
-function ItemRemoveButton({ lineIds }) {
+function ItemRemoveButton({lineIds}) {
   return (
     <CartForm
       route="/cart"
       action={CartForm.ACTIONS.LinesRemove}
-      inputs={{ lineIds }}
+      inputs={{lineIds}}
     >
       <button
         id="remove-product"
         className="text-dark mt-4"
-        style={{ background: 'white' }}
+        style={{background: 'white'}}
         type="submit"
       >
         <p>Remove</p>
@@ -195,8 +203,8 @@ function ItemRemoveButton({ lineIds }) {
   );
 }
 
-function LineItem({ lineItem }) {
-  const { merchandise, quantity } = lineItem;
+function LineItem({lineItem}) {
+  const {merchandise, quantity} = lineItem;
   return (
     <>
       <div className="all-info  mt-5 row">
@@ -231,7 +239,7 @@ function LineItem({ lineItem }) {
           <div className="d-flex justify-content-left justify-content-lg-center justify-content-md-center ">
             <div
               className="d-flex p-2 mt-4 flex-row-reverse"
-              style={{ border: '1px solid black', borderRadius: '4px' }}
+              style={{border: '1px solid black', borderRadius: '4px'}}
             >
               <div>
                 <CartForm
@@ -248,7 +256,7 @@ function LineItem({ lineItem }) {
                   }}
                 >
                   <button
-                    style={{ border: 'none', background: 'none' }}
+                    style={{border: 'none', background: 'none'}}
                     className="ml-4"
                   >
                     {' '}
@@ -275,7 +283,7 @@ function LineItem({ lineItem }) {
                   }}
                 >
                   <button
-                    style={{ border: 'none', background: 'none' }}
+                    style={{border: 'none', background: 'none'}}
                     className="mr-4"
                   >
                     {' '}
@@ -297,7 +305,7 @@ function LineItem({ lineItem }) {
     </>
   );
 }
-export function CartSummary({ cost, checkoutUrl, collection }) {
+export function CartSummary({cost, checkoutUrl, collection}) {
   if (!checkoutUrl) return null;
   return (
     <>
