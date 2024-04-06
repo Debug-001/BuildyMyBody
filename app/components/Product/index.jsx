@@ -100,7 +100,7 @@ const Product = ({data}) => {
                   <div className="col-lg-6 col-md-6 col-12 flex-column">
                     <div>
                       <div className="d-flex" style={{fontSize: '25px'}}>
-                        <p className="title  ">Price:</p>
+                        <p className="title  ">MRP:</p>
                         <span>
                           <Money
                             withoutTrailingZeros
@@ -113,7 +113,7 @@ const Product = ({data}) => {
                       </div>
                       <h2 className="d-flex title flex-wrap ">
                         <div className="d-flex">
-                          MRP:
+                          Price:
                           <Money
                             withoutTrailingZeros
                             data={selectedVariant.price}
