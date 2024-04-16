@@ -99,18 +99,20 @@ const Product = ({data}) => {
                   {/* weight/flavour section  */}
                   <div className="col-lg-6 col-md-6 col-12 flex-column">
                     <div>
-                      <div className="d-flex" style={{fontSize: '25px'}}>
-                        <p className="title  ">MRP:</p>
-                        <span>
-                          <Money
-                            withoutTrailingZeros
-                            data={selectedVariant.compareAtPrice}
-                            className="ml-2"
-                            as="del"
-                            style={{color: '#ff2828'}}
-                          />
-                        </span>
-                      </div>
+                      {selectedVariant.compareAtPrice && (
+                        <div className="d-flex" style={{fontSize: '25px'}}>
+                          <p className="title  ">MRP:</p>
+                          <span>
+                            <Money
+                              withoutTrailingZeros
+                              data={selectedVariant.compareAtPrice}
+                              className="ml-2"
+                              as="del"
+                              style={{color: '#ff2828'}}
+                            />
+                          </span>
+                        </div>
+                      )}
                       <h2 className="d-flex title flex-wrap ">
                         <div className="d-flex">
                           Price:
@@ -121,22 +123,24 @@ const Product = ({data}) => {
                             style={{fontSize: '38px'}}
                           />
                         </div>
-                        <div>
-                          <div className="ml-1 mt-1 d-flex align-items-center ">
-                            <p
-                              style={{color: '#ff2828'}}
-                              className="product-btn p-2"
-                            >
-                              {Math.ceil(
-                                ((selectedVariant.compareAtPrice.amount -
-                                  selectedVariant.price.amount) /
-                                  selectedVariant.compareAtPrice.amount) *
-                                  100,
-                              )}
-                              % off
-                            </p>
+                        {selectedVariant.compareAtPrice && (
+                          <div>
+                            <div className="ml-1 mt-1 d-flex align-items-center ">
+                              <p
+                                style={{color: '#ff2828'}}
+                                className="product-btn p-2"
+                              >
+                                {Math.ceil(
+                                  ((selectedVariant.compareAtPrice.amount -
+                                    selectedVariant.price.amount) /
+                                    selectedVariant.compareAtPrice.amount) *
+                                    100,
+                                )}
+                                % off
+                              </p>
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </h2>
                     </div>
                     <div className="d-flex width-input mt-3 border border-dark justify-content-between p-1">
