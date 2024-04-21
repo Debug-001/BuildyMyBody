@@ -64,11 +64,11 @@ const Carousel = () => {
                 <img className="d-block w-100" src={banner7} alt="Seventh slide" />
               </a>
             </div>
-            <div className="carousel-item">
+            {/* <div className="carousel-item">
               <a href="products/enhanced-athlete">
                 <img className="d-block w-100" src={banner5} alt="Fifth slide" />
               </a>
-            </div>
+            </div> */}
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
             <div>
@@ -139,11 +139,11 @@ const Carousel = () => {
                 <img className="d-block w-100" src={trial2} alt="Seventh slide" />
               </a>
             </div>
-            <div className="carousel-item">
+            {/* <div className="carousel-item">
               <a href="products/enhanced-athlete">
                 <img className="d-block w-100" src={banner5mob} alt="Fifth slide" />
               </a>
-            </div>
+            </div> */}
 
           </div>
           <a
