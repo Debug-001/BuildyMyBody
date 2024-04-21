@@ -1,20 +1,20 @@
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
-import {Link, useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
-import {FcFilledFilter} from 'react-icons/fc';
+import { Link, useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
+import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
-import {Pagination} from '@shopify/hydrogen';
-import {getPaginationVariables} from '@shopify/hydrogen';
+import { Pagination } from '@shopify/hydrogen';
+import { getPaginationVariables } from '@shopify/hydrogen';
 
-import {useState} from 'react';
+import { useState } from 'react';
 
-export async function loader({params, context, request}) {
+export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
   });
-  const {handle} = params;
-  const {collection} = await context.storefront.query(COLLECTION_QUERY, {
+  const { handle } = params;
+  const { collection } = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       ...paginationVariables,
       handle,
@@ -24,7 +24,7 @@ export async function loader({params, context, request}) {
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
 
   // json is a Remix utility for creating application/json responses
@@ -42,38 +42,38 @@ export async function loader({params, context, request}) {
 // const OffersLazy = React.lazy(() => import('~/Components/Home/Offers'));
 
 export default function Products() {
-  const {collection, trendingProducts} = useLoaderData();
+  const { collection, trendingProducts } = useLoaderData();
   const navigationItems = [
     {
       label: 'Protien',
       links: [
-        {to: '/products/whey-protien', text: 'Whey Protien'},
-        {to: '/products/whey-blend-1', text: 'Whey Blend'},
-        {to: '/products/whey-protein-isolate', text: 'Whey Protein Isolate'},
+        { to: '/products/whey-protien', text: 'Whey Protien' },
+        { to: '/products/whey-blend-1', text: 'Whey Blend' },
+        { to: '/products/whey-protein-isolate', text: 'Whey Protein Isolate' },
       ],
     },
     {
       label: 'Gainers',
       links: [
-        {to: '/products/mass-gainer', text: 'Mass Gainer'},
-        {to: '/products/weight-gainer', text: 'Weight Gainer'},
+        { to: '/products/mass-gainer', text: 'Mass Gainer' },
+        { to: '/products/weight-gainer', text: 'Weight Gainer' },
       ],
     },
     {
       label: 'Pre/Post Workout',
       links: [
-        {to: '/products/preworkout', text: 'Pre Workout'},
-        {to: '/products/amino-acids-bcaas', text: 'Amino Acids & BCAAs'},
-        {to: '/products/glutamine-1', text: 'Glutamine'},
-        {to: '/products/Carnitine-1', text: 'Carnitine'},
+        { to: '/products/preworkout', text: 'Pre Workout' },
+        { to: '/products/amino-acids-bcaas', text: 'Amino Acids & BCAAs' },
+        { to: '/products/glutamine-1', text: 'Glutamine' },
+        { to: '/products/Carnitine-1', text: 'Carnitine' },
       ],
     },
     {
       label: 'Workout Essentials',
       links: [
-        {to: '/products/testosterone', text: 'Testosterone'},
-        {to: '/products/multivitamins-1', text: 'Multivitamins'},
-        {to: '/products/fat-burner', text: 'Fat Burner'},
+        { to: '/products/testosterone', text: 'Testosterone' },
+        { to: '/products/multivitamins-1', text: 'Multivitamins' },
+        { to: '/products/fat-burner', text: 'Fat Burner' },
       ],
     },
   ];
@@ -86,11 +86,11 @@ export default function Products() {
   };
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="overlay">
           <div className="loader"></div>
         </div>
-      )}
+      )} */}
       <Navbar />
       <section id="product-section">
         <div className="container-fluid pb-5">
@@ -139,7 +139,7 @@ export default function Products() {
             <div className="col" id="all-products">
               <div
                 className="d-flex justify-content-center mb-5"
-                style={{flexDirection: 'column', alignItems: 'center'}}
+                style={{ flexDirection: 'column', alignItems: 'center' }}
               >
                 <h1 className="font-weight-bold custom-heading3 text-center">
                   <em className="text-capitalize">
@@ -160,7 +160,7 @@ export default function Products() {
                     <FcFilledFilter size={30} />{' '}
                     <span
                       className="font-weight-bolder"
-                      style={{color: 'black'}}
+                      style={{ color: 'black' }}
                     >
                       Filters
                     </span>
@@ -225,15 +225,15 @@ export default function Products() {
                   <a
                     className="nav-link font-weight-bolder"
                     href="/certificates"
-                    style={{color: 'black', fontSize: '1.3rem'}}
+                    style={{ color: 'black', fontSize: '1.3rem' }}
                   >
                     Authenticity
                   </a>
                 </span>
               </div>
               <Pagination connection={collection.products}>
-                {({nodes, NextLink, PreviousLink, isLoading}) => (
-                  <div style={{textAlign: 'center'}}>
+                {({ nodes, NextLink, PreviousLink, isLoading }) => (
+                  <div style={{ textAlign: 'center' }}>
                     <div className="flex items-center justify-center mt-6">
                       <PreviousLink className="btn">
                         {isLoading ? 'Loading...' : 'Load previous products'}
@@ -380,7 +380,7 @@ const PRODUCT_QUERY = `#graphql
         }}
     }}
 }`;
-const seo = ({data}) => ({
+const seo = ({ data }) => ({
   title: data?.collection?.title,
   description: data?.collection?.description.substr(0, 154),
 });
@@ -388,9 +388,9 @@ export const handle = {
   seo,
 };
 
-export function meta({data}) {
+export function meta({ data }) {
   return [
-    {title: data?.collection?.title ?? 'Collection'},
-    {description: data?.collection?.description},
+    { title: data?.collection?.title ?? 'Collection' },
+    { description: data?.collection?.description },
   ];
 }

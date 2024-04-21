@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
-import {NavLink} from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import hot1 from '../../img/hot1.jpg';
@@ -10,7 +10,7 @@ import hot4 from '../../img/hot4.jpg';
 
 export const meta = () => {
   return [
-    {title: 'BuildMyBody | Hot Selling Products'},
+    { title: 'BuildMyBody | Hot Selling Products' },
     {
       name: 'description',
       content:
@@ -88,15 +88,15 @@ const WhatsHot = () => {
 
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="overlay">
           <div className="loader"></div>
         </div>
-      )}
+      )} */}
       <section id="whatshot" className="container pt-5 pb-5">
         <div
           className="d-flex justify-content-center mb-5 text-center"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="font-weight-bolder custom-heading4">
             <em>Hot Selling Products</em>

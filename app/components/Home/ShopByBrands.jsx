@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import photo from '../../img/cellu.png';
 import photo1 from '../../img/mt.png';
 import photo3 from '../../img/mp.png';
 import photo5 from '../../img/onn.png';
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 
 export const meta = () => {
   return [
-    {title: 'BuildMyBody | Shop By Brands'},
+    { title: 'BuildMyBody | Shop By Brands' },
     {
       name: 'description',
       content:
@@ -31,15 +31,15 @@ const ShopByBrands = () => {
   };
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="overlay">
           <div className="loader"></div>
         </div>
-      )}
+      )} */}
       <section id="shopbb" className="container mt-5 mb-5">
         <div
           className="d-flex justify-content-center mb-5 pt-5"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="custom-heading3">
             <em>Shop By Brands</em>

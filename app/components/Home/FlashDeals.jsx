@@ -1,14 +1,14 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import ProductForm from '../Product/ProductForm';
-import {Fade} from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import discountsvg from '../../img/discountsvg.png';
 
 export const meta = () => {
   return [
-    {title: 'BuildMyBody | Trending Products'},
+    { title: 'BuildMyBody | Trending Products' },
     {
       name: 'description',
       content:
@@ -21,7 +21,7 @@ export const meta = () => {
   ];
 };
 
-const FlashDeals = ({collection}) => {
+const FlashDeals = ({ collection }) => {
   function calculateDiscountPercentage(mrp, discountedPrice) {
     const discount = ((mrp - discountedPrice) / mrp) * 100;
     return discount.toFixed(2);
@@ -47,17 +47,17 @@ const FlashDeals = ({collection}) => {
 
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="overlay">
           <div className="loader"></div>
         </div>
-      )}
+      )} */}
       <section id="trending-products" className="pt-2">
         <div className="container-fluid py-5">
           <Fade direction="up" triggerOnce>
             <div
               className="d-flex justify-content-center mb-5"
-              style={{flexDirection: 'column', alignItems: 'center'}}
+              style={{ flexDirection: 'column', alignItems: 'center' }}
             >
               <h1 className="font-weight-bold custom-heading3">
                 <em>Trending Products</em>
@@ -116,7 +116,7 @@ const FlashDeals = ({collection}) => {
                           to={`/product/${product.handle}`}
                           className="d-flex justify-content-center"
                           id="trending-card-container"
-                          style={{position: 'relative'}}
+                          style={{ position: 'relative' }}
                           onClick={handleLoading} // Call handleLoading when link is clicked
                         >
                           <div className="card-container">
@@ -142,7 +142,7 @@ const FlashDeals = ({collection}) => {
                             >
                               <p
                                 className="text-light"
-                                style={{fontWeight: '700', fontSize: '14px'}}
+                                style={{ fontWeight: '700', fontSize: '14px' }}
                               >
                                 {' '}
                                 {Math.floor(
@@ -150,7 +150,7 @@ const FlashDeals = ({collection}) => {
                                     product.variants.nodes[0]?.compareAtPrice
                                       ?.amount || 0,
                                     product.variants.nodes[0]?.price?.amount ||
-                                      0,
+                                    0,
                                   ),
                                 )}
                                 %
@@ -163,7 +163,7 @@ const FlashDeals = ({collection}) => {
                         <Link to={`/product/${product.handle}`}>
                           <h5
                             className="d-flex justify-content-center mt-5 text-center product-title"
-                            style={{fontSize: '1.1rem'}}
+                            style={{ fontSize: '1.1rem' }}
                           >
                             {product.title}
                           </h5>

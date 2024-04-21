@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import whey from '../../img/whey.png';
 import gainer from '../../img/gainer.png';
 import workout from '../../img/workout.png';
 import pre from '../../img/pre.png';
 import creatine from '../../img/creatine.png';
 import amino from '../../img/amino.png';
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 
 export const meta = () => {
   return [
-    {title: 'BuildMyBody | Popular in Sports Nutrition'},
+    { title: 'BuildMyBody | Popular in Sports Nutrition' },
     {
       name: 'description',
       content:
@@ -25,10 +25,10 @@ export const meta = () => {
 
 const Popular = () => {
   const tiles = [
-    {title: 'Whey Protein', url: 'whey-protein', image: whey},
-    {title: 'Mass Gainer', url: 'mass-gainer-1', image: gainer},
-    {title: 'Creatine', url: 'creatine', image: creatine},
-    {title: 'Amino Acids/ BCAAs', url: 'amino-acids-bcaas-1', image: amino},
+    { title: 'Whey Protein', url: 'whey-protein', image: whey },
+    { title: 'Mass Gainer', url: 'mass-gainer-1', image: gainer },
+    { title: 'Creatine', url: 'creatine', image: creatine },
+    { title: 'Amino Acids/ BCAAs', url: 'amino-acids-bcaas-1', image: amino },
     {
       title: 'Pre/Post Workout',
       url: 'pre-post-workout',
@@ -47,7 +47,7 @@ const Popular = () => {
       <div className="container-fluid pb-5" id="cgap">
         <div
           className="d-flex justify-content-center pt-4"
-          style={{flexDirection: 'column', alignItems: 'center'}}
+          style={{ flexDirection: 'column', alignItems: 'center' }}
         >
           <h1 className="font-weight-bolder custom-heading">
             <em>Popular in Sports Nutrition</em>
@@ -64,30 +64,30 @@ const Popular = () => {
             >
               <div
                 className="certificate-card mt-5 p-0 p-lg-2"
-                style={{borderRadius: '16px'}}
+                style={{ borderRadius: '16px' }}
               >
                 <p className="text-center mt-4">
                   <img
                     src={tile.image}
                     className="popular-img"
                     alt={`Image for ${tile.title}`}
-                    style={{width: '45%'}}
+                    style={{ width: '45%' }}
                   />
                 </p>
                 <div className="text-center" id="popular-txt">
                   <p
                     className="pt-2 font-weight-bolder text-dark"
-                    style={{fontSize: '1.1rem'}}
+                    style={{ fontSize: '1.1rem' }}
                   >
                     {tile.title}
                   </p>
                 </div>
               </div>
-              {loading && (
+              {/* {loading && (
                 <div className="overlay">
                   <div className="loader"></div>
                 </div>
-              )}
+              )} */}
             </Link>
           ))}
         </div>

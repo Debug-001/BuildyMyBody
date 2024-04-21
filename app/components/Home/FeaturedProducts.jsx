@@ -1,12 +1,12 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import * as React from 'react';
-import {useEffect, useState, useRef} from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
-import {Fade} from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 export const meta = () => {
   return [
-    {title: 'BuildMyBody | Shop by Category'},
+    { title: 'BuildMyBody | Shop by Category' },
     {
       name: 'description',
       content:
@@ -19,7 +19,7 @@ export const meta = () => {
   ];
 };
 
-const FeaturedProducts = ({collections}) => {
+const FeaturedProducts = ({ collections }) => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [loading, setLoading] = useState(false); // State variable to track loading state
@@ -43,7 +43,7 @@ const FeaturedProducts = ({collections}) => {
         <Fade direction="up" triggerOnce>
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="font-weight-bold custom-heading1">
               <em>Shop by Category</em>
@@ -95,7 +95,7 @@ const FeaturedProducts = ({collections}) => {
           {collections.nodes.map((collection) => (
             <div
               className="card"
-              style={{width: '18rem', paddingBottom: ''}}
+              style={{ width: '18rem', paddingBottom: '' }}
               id="cgap"
               key={collection.id}
             >
@@ -121,11 +121,11 @@ const FeaturedProducts = ({collections}) => {
             </div>
           ))}
         </Slider>
-        {loading && (
+        {/* {loading && (
           <div className="overlay">
             <div className="loader"></div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

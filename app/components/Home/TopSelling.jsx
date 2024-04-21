@@ -1,9 +1,9 @@
-import {Link} from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import ProductForm from '../Product/ProductForm';
-import {useState} from 'react'; // Import useState hook
+import { useState } from 'react'; // Import useState hook
 import discountsvg from '../../img/discountsvg.png';
 
-const TopSelling = ({collection}) => {
+const TopSelling = ({ collection }) => {
   function calculateDiscountPercentage(mrp, discountedPrice) {
     const discount = ((mrp - discountedPrice) / mrp) * 100;
     return discount.toFixed(2);
@@ -19,11 +19,11 @@ const TopSelling = ({collection}) => {
 
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <div className="overlay">
           <div className="loader"></div>
         </div>
-      )}
+      )} */}
       <section id="featured-section">
         <div
           id="carouselExampleControls1"
@@ -32,7 +32,7 @@ const TopSelling = ({collection}) => {
         >
           <div
             className="d-flex justify-content-center mb-5"
-            style={{flexDirection: 'column', alignItems: 'center'}}
+            style={{ flexDirection: 'column', alignItems: 'center' }}
           >
             <h1 className="font-weight-bold custom-heading3">
               <em>Featured Products </em>
@@ -51,7 +51,7 @@ const TopSelling = ({collection}) => {
                   <Link
                     to={`/product/${product.handle}`}
                     className="col-md-5 col-lg-6 d-flex justify-content-center top-scale"
-                    style={{position: 'relative'}}
+                    style={{ position: 'relative' }}
                     onClick={handleLoading} // Call handleLoading when link is clicked
                   >
                     <div className="card-container">
@@ -77,7 +77,7 @@ const TopSelling = ({collection}) => {
                       >
                         <p
                           className="text-light"
-                          style={{fontWeight: '700', fontSize: '14px'}}
+                          style={{ fontWeight: '700', fontSize: '14px' }}
                         >
                           {' '}
                           {Math.floor(
