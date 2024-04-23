@@ -1,18 +1,20 @@
-import { Link } from '@remix-run/react';
+import {Link} from '@remix-run/react';
 import * as React from 'react';
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Slider from 'react-slick';
-import article1 from '../../img/article1.jpg';
-import article2 from '../../img/article2.jpg';
-import article3 from '../../img/article3.jpg';
-import article4 from '../../img/article4.jpg';
-
 
 export const meta = () => {
   return [
-    { title: 'BuildMyBody | Fitness Articles' },
-    { name: 'description', content: 'Explore fitness articles on BuildMyBody for health and wellness tips.' },
-    { name: 'keywords', content: 'BuildMyBody, Fitness Articles, Health, Wellness' },
+    {title: 'BuildMyBody | Fitness Articles'},
+    {
+      name: 'description',
+      content:
+        'Explore fitness articles on BuildMyBody for health and wellness tips.',
+    },
+    {
+      name: 'keywords',
+      content: 'BuildMyBody, Fitness Articles, Health, Wellness',
+    },
   ];
 };
 
@@ -28,33 +30,41 @@ const BrandCaraousel = () => {
   }, []);
   const articles = [
     {
-      image: article1,
-      date: '10th June, 2019',
-      title: 'Fitness Hacks During Navratri'
+      image:
+        'https://cdn.shopify.com/s/files/1/0272/0566/4803/articles/How-to-increase-lifting-capacity-blog.png?v=1580125755&width=1600&height=723&crop=center',
+      date: 'January 27, 2020',
+      title: 'How to increase lifting capacity?',
+      url: '/blogs/news/how-to-increase-lifting-capacity',
     },
     {
-      image: article2,
-      date: '10th June, 2019',
-      title: 'Fitness Hacks During Navratri'
+      image:
+        'https://cdn.shopify.com/s/files/1/0272/0566/4803/articles/breakfast_post_930_x_420.jpg?v=1600331489&width=1600&height=723&crop=center',
+      date: 'September 17, 2020',
+      title: 'Breaking The Myths About Breakfast One At A Time',
+      url: '/blogs/news/breaking-the-myths-about-breakfast-one-at-a-time',
     },
     {
-      image: article3,
-      date: '10th June, 2019',
-      title: 'Fitness Hacks During Navratri'
+      image:
+        'https://cdn.shopify.com/s/files/1/0272/0566/4803/articles/rice_vs_chapati_post_930_x_420.jpg?v=1601462664&width=1600&height=723&crop=center',
+      date: 'September 30, 2020',
+      title: 'Rice VS Chapati - Which is better?',
+      url: '/blogs/news/rice-vs-chapati-which-is-better',
     },
     {
-      image: article4,
-      date: '10th June, 2019',
-      title: 'Fitness Hacks During Navratri'
-    }
+      image:
+        'https://cdn.shopify.com/s/files/1/0272/0566/4803/articles/Fitness_Hacks_During_Navratri.jpg?v=1603090261&width=1600&height=723&crop=center',
+      date: 'October 19, 2020',
+      title: 'Fitness Hacks During Navratri',
+      url: '/blogs/news/fitness-hacks-during-navratri',
+    },
   ];
   return (
     <>
       <section id="fitness-car">
-        <div className="container-fluid pt-5 pb-5 mt-2  mb-5" >
+        <div className="container-fluid pt-5 pb-5 mt-2  mb-5">
           <div
             className="d-flex justify-content-center mb-5 pt-5"
-            style={{ flexDirection: 'column', alignItems: 'center' }}
+            style={{flexDirection: 'column', alignItems: 'center'}}
           >
             <h1 className="custom-heading3">
               <em>Fitness Articles</em>
@@ -115,11 +125,27 @@ const BrandCaraousel = () => {
             >
               {articles.map((article, index) => (
                 <div className="card" id="articles-card" key={index}>
-                  <img className="card-img-articles" src={article.image} alt="Card image cap" />
-                  <Link to="/blog" className="card-content2">
-                    <p className="mt-3"><em style={{ color: '#474544' }}>{article.date}</em></p>
-                    <h2 className="font-weight-bold mt-2" style={{ color: '#474544' }}>{article.title}</h2>
-                    <Link to="#" className="btn category-btn d-flex justify-content-center mt-4">Read More</Link>
+                  <img
+                    className="card-img-articles"
+                    src={article.image}
+                    alt="Card image cap"
+                  />
+                  <Link to={article.url} className="card-content2">
+                    <p className="mt-3">
+                      <em style={{color: '#474544'}}>{article.date}</em>
+                    </p>
+                    <h2
+                      className="font-weight-bold mt-2"
+                      style={{color: '#474544'}}
+                    >
+                      {article.title}
+                    </h2>
+                    <Link
+                      to={article.url}
+                      className="btn category-btn d-flex justify-content-center mt-4"
+                    >
+                      Read More
+                    </Link>
                   </Link>
                 </div>
               ))}
