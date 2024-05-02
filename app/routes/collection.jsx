@@ -1,24 +1,24 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
-import {Link, NavLink, useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
-import {FcFilledFilter} from 'react-icons/fc';
+import { Link, NavLink, useLoaderData } from '@remix-run/react';
+import { json } from '@shopify/remix-oxygen';
+import { FcFilledFilter } from 'react-icons/fc';
 import ProductCard from './ProductCard';
-import {Pagination} from '@shopify/hydrogen';
-import {getPaginationVariables} from '@shopify/hydrogen';
+import { Pagination } from '@shopify/hydrogen';
+import { getPaginationVariables } from '@shopify/hydrogen';
 import ProductCarousal from '~/Components/Product/ProductCarousal';
 import BrandCaraousel from '~/Components/Home/BrandCaraousel';
 import TopSelling from '~/Components/Home/TopSelling';
 import FeaturedProducts from '~/Components/Home/FeaturedProducts';
 import Offers from '~/Components/Home/Offers';
 import React from 'react';
-export async function loader({params, context, request}) {
+export async function loader({ params, context, request }) {
   const paginationVariables = getPaginationVariables(request, {
     pageBy: 4,
   });
-  const {handle} = params;
-  const {collection} = await context.storefront.query(COLLECTION_QUERY, {
+  const { handle } = params;
+  const { collection } = await context.storefront.query(COLLECTION_QUERY, {
     variables: {
       ...paginationVariables,
       handle,
@@ -27,7 +27,7 @@ export async function loader({params, context, request}) {
 
   // Handle 404s
   if (!collection) {
-    throw new Response(null, {status: 404});
+    throw new Response(null, { status: 404 });
   }
 
   // json is a Remix utility for creating application/json responses
@@ -37,11 +37,11 @@ export async function loader({params, context, request}) {
   });
 }
 export const meta = () => {
-  return [{title: 'BuildMyBody|All Products'}];
+  return [{ title: 'BuildMyBody|All Products' }];
 };
 
 export default function Collection() {
-  const {collection} = useLoaderData();
+  const { collection } = useLoaderData();
 
   return (
     <>
@@ -92,7 +92,7 @@ export default function Collection() {
 
             <div className="col-lg-9 col-md-12 " id="all-products">
               <h1
-                style={{color: '#ff2828'}}
+                style={{ color: '#ff2828' }}
                 className="d-flex justify-content-center align-items-center"
               >
                 {/* <em>{collection.title}</em> */}
@@ -140,7 +140,7 @@ export default function Collection() {
                           aria-haspopup="true"
                           aria-expanded="false"
                         >
-                          Protien
+                          Protein
                         </a>
                         <div
                           className="dropdown-menu"
@@ -150,7 +150,7 @@ export default function Collection() {
                             className="dropdown-item"
                             to="/products/whey-protien"
                           >
-                            Whey Protien
+                            Whey Protein
                           </Link>
                           <Link
                             className="dropdown-item"
@@ -394,7 +394,7 @@ const COLLECTION_QUERY = `#graphql
     }
   }
   `;
-const seo = ({data}) => ({
+const seo = ({ data }) => ({
   title: data?.collection?.title,
   description: data?.collection?.description.substr(0, 154),
 });

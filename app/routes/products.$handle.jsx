@@ -45,9 +45,9 @@ export default function Products() {
   const { collection, trendingProducts } = useLoaderData();
   const navigationItems = [
     {
-      label: 'Protien',
+      label: 'Protein',
       links: [
-        { to: '/products/whey-protien', text: 'Whey Protien' },
+        { to: '/products/whey-protien', text: 'Whey Protein' },
         { to: '/products/whey-blend-1', text: 'Whey Blend' },
         { to: '/products/whey-protein-isolate', text: 'Whey Protein Isolate' },
       ],

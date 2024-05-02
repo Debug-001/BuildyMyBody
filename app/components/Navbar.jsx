@@ -155,7 +155,7 @@ const Navbar = () => {
                       <div className="d-flex flex-lg-column flex-md-column align-items-center ">
                         <img
                           src={whey}
-                          alt="Whey Protien"
+                          alt="Whey Protein"
                           style={{
                             width: '5rem',
                             border: '1px solid transparent',

@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {Form, NavLink} from '@remix-run/react';
+import React, { useEffect, useState } from 'react';
+import { Form, NavLink } from '@remix-run/react';
 import Protien2 from '../img/protien2.png';
 import on from '../img/on.png';
 import mt from '../img//mt.jpg';
@@ -10,8 +10,8 @@ import gainer from '../img/gainer.png';
 import workout from '../img/workout.png';
 import pre from '../img/pre.png';
 
-import {BsSearch} from 'react-icons/bs';
-import {FiShoppingCart} from 'react-icons/fi';
+import { BsSearch } from 'react-icons/bs';
+import { FiShoppingCart } from 'react-icons/fi';
 const Filter = () => {
   // const [selectedCategory, setSelectedCategory] = useState(null);
   // const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
@@ -91,20 +91,20 @@ const Filter = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Protien
+                  Protein
                 </a>
                 <div
                   className="dropdown-menu fil-menu"
                   aria-labelledby="moreServicesDropdown"
                 >
                   <a className="dropdown-item" href="#">
-                    Whey Protien
+                    Whey Protein
                   </a>
                   <a className="dropdown-item" href="#">
                     Whey Blend
                   </a>
                   <a className="dropdown-item" href="#">
-                    Whey Protien Isolate{' '}
+                    Whey Protein Isolate{' '}
                   </a>
                 </div>
               </div>
